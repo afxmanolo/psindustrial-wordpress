@@ -36,7 +36,7 @@ final class Roles {
 		update_option( 'psi_schema_version', self::VERSION, false );
 	}
 	public static function map( array $caps, string $cap, int $user_id, array $args ): array {
-		if ( empty( $args[0] ) ) { return $caps; }
+		if ( ! in_array( $cap, array( 'edit_post', 'edit_attachment', 'delete_post', 'delete_attachment', 'delete_psi_producto' ), true ) || empty( $args[0] ) || ! is_scalar( $args[0] ) ) { return $caps; }
 		$post = get_post( (int) $args[0] );
 		if ( ! $post ) { return $caps; }
 		$user = get_userdata( $user_id );

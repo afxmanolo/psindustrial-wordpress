@@ -45,7 +45,7 @@ final class Media {
 		$url = wp_get_attachment_url( $id );
 		foreach ( get_posts( array( 'post_type' => array( 'page', 'psi_producto', 'wp_block' ), 'post_status' => 'any', 'numberposts' => -1 ) ) as $post ) {
 			if ( (int) get_post_thumbnail_id( $post->ID ) === $id || (int) get_post_meta( $post->ID, '_psi_hero_id', true ) === $id || in_array( $id, (array) get_post_meta( $post->ID, '_psi_gallery_ids', true ), true ) ) { return true; }
-			foreach ( (array) get_post_meta( $post->ID, '_psi_datasheets', true ) as $pdf ) { if ( (int) $pdf['attachment_id'] === $id ) { return true; } }
+			foreach ( (array) get_post_meta( $post->ID, '_psi_datasheets', true ) as $pdf ) { if ( is_array( $pdf ) && (int) ( $pdf['attachment_id'] ?? 0 ) === $id ) { return true; } }
 			if ( ( $url && str_contains( $post->post_content, $url ) ) || preg_match( '/(?:wp-image-|\"id\"\s*:\s*)' . $id . '\b/', $post->post_content ) ) { return true; }
 		}
 		foreach ( array( 'psi_categoria' => '_psi_image_id', 'psi_marca' => '_psi_logo_id' ) as $tax => $key ) {
