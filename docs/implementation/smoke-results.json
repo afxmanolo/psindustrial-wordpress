@@ -1,0 +1,225 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "test": "Active theme and plugin",
+      "passed": true
+    },
+    {
+      "test": "CPT and taxonomy contracts",
+      "passed": true
+    },
+    {
+      "test": "Administrator capabilities",
+      "passed": true
+    },
+    {
+      "test": "Create synthetic term 0",
+      "passed": true
+    },
+    {
+      "test": "Create synthetic term 1",
+      "passed": true
+    },
+    {
+      "test": "Create synthetic term 2",
+      "passed": true
+    },
+    {
+      "test": "Create synthetic term 3",
+      "passed": true
+    },
+    {
+      "test": "REST create product and relations",
+      "passed": true
+    },
+    {
+      "test": "Create synthetic Page",
+      "passed": true
+    },
+    {
+      "test": "Create synthetic media .png",
+      "passed": true
+    },
+    {
+      "test": "Create synthetic media .pdf",
+      "passed": true
+    },
+    {
+      "test": "REST persist all product fields and featured image",
+      "passed": true
+    },
+    {
+      "test": "Round trip _psi_h1",
+      "passed": true
+    },
+    {
+      "test": "Round trip _psi_primary_category_id",
+      "passed": true
+    },
+    {
+      "test": "Round trip _psi_gallery_ids",
+      "passed": true
+    },
+    {
+      "test": "Round trip _psi_datasheets",
+      "passed": true
+    },
+    {
+      "test": "Round trip _psi_videos",
+      "passed": true
+    },
+    {
+      "test": "Brand logo REST round trip",
+      "passed": true
+    },
+    {
+      "test": "Reject PDF as logo",
+      "passed": true
+    },
+    {
+      "test": "Reject image as technical PDF",
+      "passed": true
+    },
+    {
+      "test": "Reject unassigned primary category",
+      "passed": true
+    },
+    {
+      "test": "Reject multiple brands via REST",
+      "passed": true
+    },
+    {
+      "test": "Restore original brand on invalid native write",
+      "passed": true
+    },
+    {
+      "test": "Reject invalid metabox nonce",
+      "passed": true
+    },
+    {
+      "test": "Sanitize metabox and preserve absent fields",
+      "passed": true
+    },
+    {
+      "test": "Reject unsupported video host",
+      "passed": true
+    },
+    {
+      "test": "Parse approved YouTube URL",
+      "passed": true
+    },
+    {
+      "test": "Reject invalid contact setting without mutation",
+      "passed": true
+    },
+    {
+      "test": "Locate front-page.php",
+      "passed": true
+    },
+    {
+      "test": "Locate page.php",
+      "passed": true
+    },
+    {
+      "test": "Locate single-psi_producto.php",
+      "passed": true
+    },
+    {
+      "test": "Locate archive-psi_producto.php",
+      "passed": true
+    },
+    {
+      "test": "Locate taxonomy-psi_categoria.php",
+      "passed": true
+    },
+    {
+      "test": "Locate taxonomy-psi_marca.php",
+      "passed": true
+    },
+    {
+      "test": "Locate 404.php",
+      "passed": true
+    },
+    {
+      "test": "HTTP 200 http://localhost/psindustrial-wordpress/wordpress/",
+      "passed": true
+    },
+    {
+      "test": "Template marker class=\"home ",
+      "passed": true
+    },
+    {
+      "test": "HTTP 200 http://localhost/psindustrial-wordpress/wordpress/psi-smoke-eolqkkd0-page/",
+      "passed": true
+    },
+    {
+      "test": "Template marker page-id-34",
+      "passed": true
+    },
+    {
+      "test": "HTTP 200 http://localhost/psindustrial-wordpress/wordpress/producto/psi-smoke-eolqkkd0/",
+      "passed": true
+    },
+    {
+      "test": "Template marker single-psi_producto",
+      "passed": true
+    },
+    {
+      "test": "HTTP 200 http://localhost/psindustrial-wordpress/wordpress/productos/",
+      "passed": true
+    },
+    {
+      "test": "Template marker post-type-archive-psi_producto",
+      "passed": true
+    },
+    {
+      "test": "HTTP 200 http://localhost/psindustrial-wordpress/wordpress/categoria/psi-smoke-eolqkkd0-0/",
+      "passed": true
+    },
+    {
+      "test": "Template marker tax-psi_categoria",
+      "passed": true
+    },
+    {
+      "test": "HTTP 200 http://localhost/psindustrial-wordpress/wordpress/marca/psi-smoke-eolqkkd0-1/",
+      "passed": true
+    },
+    {
+      "test": "Template marker tax-psi_marca",
+      "passed": true
+    },
+    {
+      "test": "HTTP 404 http://localhost/psindustrial-wordpress/wordpress/psi-smoke-EolQKkd0-missing/",
+      "passed": true
+    },
+    {
+      "test": "Template marker error404",
+      "passed": true
+    },
+    {
+      "test": "HTTP 200 http://localhost/psindustrial-wordpress/wordpress/wp-content/uploads/2026/09/psi-smoke-EolQKkd0.pdf",
+      "passed": true
+    },
+    {
+      "test": "HTTP 403 http://localhost/psindustrial-wordpress/wordpress/.local/debug.log",
+      "passed": true
+    },
+    {
+      "test": "Anonymous cannot edit product",
+      "passed": true
+    },
+    {
+      "test": "Create temporary subscriber",
+      "passed": true
+    },
+    {
+      "test": "Subscriber cannot edit product metadata",
+      "passed": true
+    },
+    {
+      "test": "Subscriber cannot edit brand logo",
+      "passed": true
+    }
+  ]
+}
