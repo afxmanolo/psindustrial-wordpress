@@ -28,6 +28,7 @@ final class Content {
 			'map_meta_cap' => true,
 			'delete_with_user' => false,
 			'menu_icon' => 'dashicons-products',
+			'menu_position' => 6,
 			'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields', 'page-attributes' ),
 		) );
 		self::taxonomy( 'psi_categoria', true, 'categoria', 'categories' );
@@ -73,5 +74,8 @@ final class Content {
 		}
 		return $caps;
 	}
+	public static function related( int $id ): array {
+		$ids = array_map( 'absint', (array) get_post_meta( $id, '_psi_related_ids', true ) );
+		return $ids ? get_posts( array( 'post_type' => 'psi_producto', 'post_status' => 'publish', 'post__in' => $ids, 'orderby' => 'post__in', 'numberposts' => 50 ) ) : array();
+	}
 }
-

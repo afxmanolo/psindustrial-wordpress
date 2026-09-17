@@ -4,6 +4,11 @@ defined( 'ABSPATH' ) || exit;
 
 final class Plugin {
 	public static function boot(): void {
+		Roles::boot();
+		Media::boot();
+		Editorial::boot();
+		AdminList::boot();
+		TermPolicy::boot();
 		add_action( 'init', array( Content::class, 'register' ) );
 		add_action( 'init', array( Fields::class, 'register' ) );
 		add_action( 'init', array( TermEditor::class, 'register_meta' ) );
@@ -33,4 +38,3 @@ final class Plugin {
 		// Intentionally preserve all content, metadata and capabilities.
 	}
 }
-
