@@ -1,0 +1,72 @@
+entity,key,wordpress_storage,data_type,cardinality,required,default_value,validation,editable_by,seo_impact,migration_source
+product,psi_producto,wp_posts,CPT,0..N,YES,,public; nonhierarchical; show_in_rest; supports title editor excerpt thumbnail revisions custom-fields page-attributes,Gestor/Administrator,Primary route registry or /producto/{slug}/,product-master; static-product-supplement
+product,post_title,wp_posts,string,1,YES,,plain text; meaningful name,Gestor; routes Administrator,Content/publication,name + page headings approved
+product,post_content,wp_posts,blocks/html,1,YES,,allowed blocks/HTML; no scripts,Gestor; routes Administrator,Content/publication,SQL description + PHP chosen by field
+product,post_excerpt,wp_posts,string,1,NO,,plain summary,Gestor; routes Administrator,Content/publication,approved source excerpt
+product,post_name,wp_posts,string,1,YES,,unique sanitized; not canonical route decision,Gestor; routes Administrator,Content/publication,approved slug
+product,menu_order,wp_posts,integer,1,NO,0,>=0; stable tie title ID,Gestor; routes Administrator,Content/publication,approved source order
+product,post_status,wp_posts,enum,1,YES,draft,draft pending publish private trash; publish requires review,Gestor; routes Administrator,Content/publication,manifest approved state
+product,post_date,wp_posts,datetime,1,YES,import timestamp,legacy date retained separately unless approved,Gestor; routes Administrator,Content/publication,manifest
+product,_thumbnail_id,post meta,integer,1,NO,0,image attachment,Gestor/Administrator,Product image,source image selected
+product,_psi_gallery_ids,post meta,array<integer>,1,NO,[],unique image IDs; ordered; excludes featured,Gestor/Administrator,Images,ordered original relations
+product,_psi_datasheets,post meta,array<object>,1,NO,[],attachment_id PDF; label<=200; language optional; ordered,Gestor/Administrator,PDF continuity,product-media-relations + page PDF
+product,_psi_videos,post meta,array<object>,1,NO,[],provider youtube; valid video_id; title<=200,Gestor/Administrator,No invented VideoObject,three PHP embeds
+product,_psi_primary_category_id,post meta,integer,1,NO,0,0 or assigned category,Gestor/Administrator,Breadcrumb,approved navigation
+product,_psi_related_ids,post meta,array<integer>,1,NO,[],product IDs unique; no self,Gestor/Administrator,Internal links,approved explicit relationships
+product,_psi_h1,post meta,string,1,NO,,plain <=200; fallback post_title,Gestor/Administrator,Single server-side H1,page H1 reviewed
+product,_psi_hero_id,post meta,integer,1,NO,0,image attachment or0,Gestor/Administrator,Image loading/alt context,page hero approved
+product,_psi_review_state,post meta,enum,1,YES,pending,pending approved; publish gate,Gestor/Administrator,No public incomplete object,editorial approval
+product,_psi_source_keys,post meta,array<string>,1,NO,[],unique namespace keys; private,Importer/Administrator,Traceability,manifest
+product,_psi_source_hash,post meta,string,1,NO,,SHA256 of selected source+transform,Importer/Administrator,No public output,manifest
+product,_psi_legacy_date,post meta,string,1,NO,,retain original date; do not infer publication,Importer/Administrator,No automatic date SEO,productos.fecha
+taxonomy,psi_categoria,wp_terms/wp_term_taxonomy/wp_term_relationships,taxonomy,0..N,YES,,hierarchical=YES; base=/categoria/; product assignments category0..N brand0..1,Gestor/Administrator,Term archive approved,category-master
+psi_categoria,name,term native,string,1,YES,,plain required,Gestor; public hierarchy Administrator,Archive identity/content,master + static page
+psi_categoria,slug,term native,string,1,NO,,unique per taxonomy; frozen public route,Gestor; public hierarchy Administrator,Archive identity/content,master + static page
+psi_categoria,description,term native,limited HTML,1,NO,,sanitized editorial copy,Gestor; public hierarchy Administrator,Archive identity/content,master + static page
+psi_categoria,parent,term native,integer,1,NO,0,valid term/no cycles,Gestor; public hierarchy Administrator,Archive identity/content,master + static page
+psi_categoria,_psi_image_id,term meta,integer,1,NO,0,valid image attachment,Gestor/Administrator,Hide review from public/sitemap; otherwise archive,master + manifest
+psi_categoria,_psi_order,term meta,integer,1,NO,0,>=0,Gestor/Administrator,Hide review from public/sitemap; otherwise archive,master + manifest
+psi_categoria,_psi_h1,term meta,string,1,NO,,plain <=200,Gestor/Administrator,Hide review from public/sitemap; otherwise archive,master + manifest
+psi_categoria,_psi_public_state,term meta,enum,1,NO,review,review public; no native WP term draft,Gestor/Administrator,Hide review from public/sitemap; otherwise archive,master + manifest
+psi_categoria,_psi_source_keys,term meta,array<string>,1,NO,[],private namespaced IDs,Importer/Administrator,Hide review from public/sitemap; otherwise archive,master + manifest
+psi_categoria,_psi_source_hash,term meta,string,1,NO,,private SHA256,Importer/Administrator,Hide review from public/sitemap; otherwise archive,master + manifest
+taxonomy,psi_marca,wp_terms/wp_term_taxonomy/wp_term_relationships,taxonomy,0..N,YES,,hierarchical=NO; base=/marca/; product assignments category0..N brand0..1,Gestor/Administrator,Term archive approved,brand-master
+psi_marca,name,term native,string,1,YES,,plain required,Gestor; public hierarchy Administrator,Archive identity/content,master + static page
+psi_marca,slug,term native,string,1,NO,,unique per taxonomy; frozen public route,Gestor; public hierarchy Administrator,Archive identity/content,master + static page
+psi_marca,description,term native,limited HTML,1,NO,,sanitized editorial copy,Gestor; public hierarchy Administrator,Archive identity/content,master + static page
+psi_marca,parent,term native,integer,1,NO,0,always0,Gestor; public hierarchy Administrator,Archive identity/content,master + static page
+psi_marca,_psi_logo_id,term meta,integer,1,NO,0,valid image attachment,Gestor/Administrator,Hide review from public/sitemap; otherwise archive,master + manifest
+psi_marca,_psi_order,term meta,integer,1,NO,0,>=0,Gestor/Administrator,Hide review from public/sitemap; otherwise archive,master + manifest
+psi_marca,_psi_h1,term meta,string,1,NO,,plain <=200,Gestor/Administrator,Hide review from public/sitemap; otherwise archive,master + manifest
+psi_marca,_psi_public_state,term meta,enum,1,NO,review,review public; no native WP term draft,Gestor/Administrator,Hide review from public/sitemap; otherwise archive,master + manifest
+psi_marca,_psi_source_keys,term meta,array<string>,1,NO,[],private namespaced IDs,Importer/Administrator,Hide review from public/sitemap; otherwise archive,master + manifest
+psi_marca,_psi_source_hash,term meta,string,1,NO,,private SHA256,Importer/Administrator,Hide review from public/sitemap; otherwise archive,master + manifest
+page,page,wp_posts,Page,0..N,YES,,editorial collection landing contact home; native revisions,Gestor/Administrator,Own URL/intent,content-master
+page,_psi_h1,post meta,string,1,NO,,plain <=200,Gestor/Administrator,Preserve page independently,content-master + manifest
+page,_psi_hero_id,post meta,integer,1,NO,0,image attachment,Gestor/Administrator,Preserve page independently,content-master + manifest
+page,_psi_review_state,post meta,enum,1,NO,pending,pending approved,Gestor/Administrator,Preserve page independently,content-master + manifest
+page,_psi_source_keys,post meta,array<string>,1,NO,[],private namespaced keys,Importer/Administrator,Preserve page independently,content-master + manifest
+page,_psi_source_hash,post meta,string,1,NO,,private SHA256,Importer/Administrator,Preserve page independently,content-master + manifest
+page,_wp_page_template,post meta,enum,1,NO,default,only theme templates approved,Gestor/Administrator,Presentation only,layout family
+page,psi/collection,post_content block attributes,object,0..N,NO,,type product/category/brand; ordered object IDs or allowed term filter; no SQL,Gestor/Administrator,Public links and curated order,static grids -> entity keys resolved
+media,attachment,wp_posts + native attachment meta,Attachment,0..N,YES,,validated MIME bytes; no legacy derivatives copied as separate posts blindly,Gestor/Administrator,Binary URL continuity; attachment HTML not indexable,media-master usage evidence
+attachment,_psi_source_keys,post meta,array<string>,1,NO,,private keys,Importer/Administrator,No public output,media-master
+attachment,_psi_content_sha256,post meta,string,1,NO,,SHA256,Importer/Administrator,No public output,media-master
+attachment,_psi_original_name,post meta,string,1,NO,,private sanitized original label,Importer/Administrator,No public output,media-master
+seo,title/description/canonical/robots,Yoast native post/term storage,provider fields,1/object,NO,,single authority; importer adapter; no direct indexables SQL,Gestor title/description; Administrator canonical/robots,Single coherent head and sitemap,legacy SEO snapshot + approval
+settings,psi_site_settings.whatsapp_number,option,string,1,NO,,E164 validated,Gestor,One contact source,business approval; no choosing between footer variants automatically
+settings,psi_site_settings.whatsapp_message,option,string,1,NO,,plain <=1000,Gestor,One contact source,business approval; no choosing between footer variants automatically
+settings,psi_site_settings.whatsapp_enabled,option,boolean,1,NO,false,true only approved number,Gestor,One contact source,business approval; no choosing between footer variants automatically
+settings,psi_site_settings.contact_phone,option,string,1,NO,,approved public text,Gestor,One contact source,business approval; no choosing between footer variants automatically
+settings,psi_site_settings.contact_email,option,string,1,NO,,valid public address,Gestor,One contact source,business approval; no choosing between footer variants automatically
+settings,psi_site_settings.contact_address,option,string,1,NO,,verified optional,Gestor,One contact source,business approval; no choosing between footer variants automatically
+settings,psi_site_settings.mail_recipient,option,string,1,NO,,is_email; no visitor override,Administrator,One contact source,business approval; no choosing between footer variants automatically
+operations,psi_route_registry,option,object/version,1,NO,,version hash exact path/query local target primary/alias approvals; autoload=false,Administrator/importer,Reliable deployment/routes,approved manifest
+operations,psi_schema_version,option,object/version,1,NO,,integer schema version,Administrator/importer,Reliable deployment/routes,approved manifest
+operations,psi_import_lock,option,object/version,1,NO,,exclusive run owner heartbeat expiry; autoload=false,Administrator/importer,Reliable deployment/routes,approved manifest
+operations,psi_import_run_{uuid},option,object/version,1,NO,,bounded checkpoint/reservations; autoload=false; private logs outside DB,Administrator/importer,Reliable deployment/routes,approved manifest
+operations,psi_release_info,option,object/version,1,NO,,versions package checksum; no secrets,Administrator/importer,Reliable deployment/routes,approved manifest
+identity,psi_gestor,WordPress roles,role,0..N users,YES,,capabilities per14; no legacy users/hashes,Administrator,No author archive required,new authorized accounts
+page/product block,psi/datasheets,post_content block attributes,object,0..N,NO,,source=current_product uses _psi_datasheets; source=items for Page uses ordered attachment_id/label/language objects; PDF validated,Gestor/Administrator,Preserve contextual PDF links,approved content + configuration
+page/product block,psi/contact,post_content block attributes,object,0..N,NO,,no recipient or SMTP in block attributes; settings only; fixed form schema,Gestor/Administrator,Accessible contact; no duplicate URL,approved content + configuration
+page/product block,psi/whatsapp,post_content block attributes,object,0..N,NO,,context optional product key; no phone duplicated; label text only,Gestor/Administrator,One approved destination,approved content + configuration

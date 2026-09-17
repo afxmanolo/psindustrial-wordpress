@@ -1,0 +1,5 @@
+﻿referenced_path,source,line,possible_physical_match,confidence,notes
+images/dura.jpg,dura-glide-20003000-puerta.php,33,,UNKNOWN,No resolver ni renombrar automaticamente; revisar sensibilidad a mayusculas y normalizacion Unicode
+images/magic.jpg,magic-fuerza-del-operador.php,34,,UNKNOWN,No resolver ni renombrar automaticamente; revisar sensibilidad a mayusculas y normalizacion Unicode
+fichas/INFRACA-RÁPIDA-APILABLE.pdf,rapida-apilable.php,32,fichas/INFRACA-RÁPIDA-APILABLE.pdf,STRONG_INFERENCE,No resolver ni renombrar automaticamente; revisar sensibilidad a mayusculas y normalizacion Unicode
+fichas/FICHATECNICASELLOSSOLMMERS.pdf,sellos-nacionales.php,33,,UNKNOWN,No resolver ni renombrar automaticamente; revisar sensibilidad a mayusculas y normalizacion Unicode

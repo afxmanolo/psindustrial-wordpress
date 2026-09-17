@@ -1,0 +1,693 @@
+﻿product_id,product_name,php,name_exact,name_similarity,shared_image_hashes,shared_pdf_hashes,description_overlap,description_shingles,score,template
+1,AccessPRO FS1000SPEED,accesspro-fs1000speed.php,True,1.0,1,1,0.929,84,15,detalle-estatico
+1,AccessPRO FS1000SPEED,q-silent-max-eagle-3-4-hp.php,True,1.0,1,1,0.929,84,15,detalle-estatico
+1,AccessPRO FS1000SPEED,operadores-puerta-abatible.php,True,1.0,0,1,0.929,84,12,detalle-estatico
+1,AccessPRO FS1000SPEED,operadores-puerta-corrediza-residencial.php,True,1.0,0,1,0.929,84,12,detalle-estatico
+1,AccessPRO FS1000SPEED,operadores-puertas-ascendentes.php,True,1.0,0,1,0.929,84,12,detalle-estatico
+2,"Energy Series With INTELLICOREÂ® 3717 1 3/4""",energy-series-with-intellicore-37171-3-4.php,True,1.0,1,2,0.973,298,18,detalle-estatico
+2,"Energy Series With INTELLICOREÂ® 3717 1 3/4""",puertas-seccionales-industriales.php,False,0.356,1,0,0.013,298,3.712,listado-estatico
+2,"Energy Series With INTELLICOREÂ® 3717 1 3/4""",puertas-residenciales.php,False,0.306,1,0,0.0,298,3.611,detalle-estatico
+2,"Energy Series With INTELLICOREÂ® 3717 1 3/4""",puerta-de-acero-acanalado.php,False,0.286,1,0,0.01,298,3.571,detalle-estatico
+2,"Energy Series With INTELLICOREÂ® 3717 1 3/4""",industrial.php,False,0.226,1,0,0.0,298,3.453,listado-estatico
+3,NIVELADOR DE ANDÃ‰N HIDRÃULICO SERIE HP,rampas-de-anden-hidraulicas-kelley.php,False,0.949,1,1,0.556,333,9.897,detalle-estatico
+3,NIVELADOR DE ANDÃ‰N HIDRÃULICO SERIE HP,rampa-niveladora.php,False,0.357,1,0,0.0,333,3.714,listado-estatico
+3,NIVELADOR DE ANDÃ‰N HIDRÃULICO SERIE HP,equipos-y-accesorios-para-anden-de-carga.php,False,0.296,1,0,0.0,333,3.593,listado-estatico
+3,NIVELADOR DE ANDÃ‰N HIDRÃULICO SERIE HP,kelley.php,False,0.13,1,0,0.0,333,3.261,listado-marca
+4,Cortina serie 625,cortina-serie-625.php,True,1.0,1,1,0.93,100,15,detalle-estatico
+4,Cortina serie 625,cortinas-enrollables-industriales.php,False,0.486,1,0,0.0,100,3.973,listado-estatico
+4,Cortina serie 625,overhead-door.php,False,0.133,1,0,0.0,100,3.267,listado-marca
+4,Cortina serie 625,cortina-serie-620.php,False,0.941,0,0,0.0,100,1.882,detalle-estatico
+4,Cortina serie 625,serie-620.php,False,0.941,0,0,0.0,100,1.882,detalle-estatico
+5,Cortina en aluminio serie 511/521,cortina-en-aluminio-serie-511-521.php,True,1.0,1,1,1.0,69,15,detalle-estatico
+5,Cortina en aluminio serie 511/521,cortinas-enrollables-industriales.php,False,0.491,1,0,0.0,69,3.981,listado-estatico
+5,Cortina en aluminio serie 511/521,overhead-door.php,False,0.087,1,0,0.0,69,3.174,listado-marca
+5,Cortina en aluminio serie 511/521,puertas-seccionales-de-aluminio-521.php,False,0.615,0,0,0.0,69,1.231,detalle-estatico
+5,Cortina en aluminio serie 511/521,cortina-serie-610.php,False,0.6,0,0,0.0,69,1.2,detalle-estatico
+6,ColecciÃ³n Modern Steelâ„¢,coleccion-modern-steel.php,True,1.0,3,1,0.947,304,18,detalle-estatico
+6,ColecciÃ³n Modern Steelâ„¢,puertas-residenciales.php,True,1.0,0,0,0.944,304,9,detalle-estatico
+6,ColecciÃ³n Modern Steelâ„¢,overhead-door.php,False,0.229,1,0,0.0,304,3.457,listado-marca
+6,ColecciÃ³n Modern Steelâ„¢,wayne-dalton.php,False,0.176,1,0,0.0,304,3.353,listado-marca
+6,ColecciÃ³n Modern Steelâ„¢,clopay.php,False,0.143,1,0,0.0,304,3.286,listado-marca
+7,Cortina serie 620,cortina-serie-620.php,True,1.0,1,1,1.0,296,15,detalle-estatico
+7,Cortina serie 620,serie-620.php,True,1.0,0,0,1.0,296,9,detalle-estatico
+7,Cortina serie 620,cortina-serie-610.php,False,0.941,0,0,0.466,296,3.882,detalle-estatico
+7,Cortina serie 620,overhead-door.php,False,0.133,1,0,0.0,296,3.267,listado-marca
+7,Cortina serie 620,cortina-serie-600.php,False,0.941,0,0,0.071,296,1.882,detalle-estatico
+8,Thermacore serie 592,puerta-seccional-de-acero-thermacore-serie-592.php,True,1.0,1,1,1.0,283,15,detalle-estatico
+8,Thermacore serie 592,puertas-seccionales-industriales.php,False,0.41,1,0,0.0,283,3.821,listado-estatico
+8,Thermacore serie 592,overhead-door.php,False,0.303,1,0,0.0,283,3.606,listado-marca
+8,Thermacore serie 592,puertas-seccionales-de-acero-thermacore-598-uso-liviano.php,False,0.765,0,0,0.0,283,1.529,detalle-estatico
+9,ColecciÃ³n Classicâ„¢ â€“ Serie Premium,coleccion-classic.php,True,1.0,4,1,0.927,96,18,detalle-estatico
+9,ColecciÃ³n Classicâ„¢ â€“ Serie Premium,puertas-residenciales.php,True,1.0,0,0,0.927,96,9,detalle-estatico
+9,ColecciÃ³n Classicâ„¢ â€“ Serie Premium,overhead-door.php,False,0.273,1,0,0.0,96,3.545,listado-marca
+10,Cortina serie 600,cortina-serie-600.php,True,1.0,1,1,1.0,175,15,detalle-estatico
+10,Cortina serie 600,cortinas-enrollables-industriales.php,False,0.486,1,0,0.0,175,3.973,listado-estatico
+10,Cortina serie 600,centros-comerciales.php,False,0.333,1,0,0.0,175,3.667,listado-estatico
+10,Cortina serie 600,overhead-door.php,False,0.133,1,0,0.0,175,3.267,listado-marca
+10,Cortina serie 600,cortina-serie-610.php,False,0.941,0,0,0.16,175,1.882,detalle-estatico
+11,Cortina serie 630-631-634-635,cortina-serie-630.php,True,1.0,1,1,1.0,329,15,detalle-estatico
+11,Cortina serie 630-631-634-635,cortinas-enrollables-industriales.php,False,0.387,1,0,0.0,329,3.774,listado-estatico
+11,Cortina serie 630-631-634-635,overhead-door.php,False,0.095,1,0,0.0,329,3.19,listado-marca
+11,Cortina serie 630-631-634-635,cortina-serie-600.php,False,0.696,0,0,0.0,329,1.391,detalle-estatico
+11,Cortina serie 630-631-634-635,cortina-serie-610.php,False,0.696,0,0,0.0,329,1.391,detalle-estatico
+12,Operador comercial RHX,operador-comercial-rhx.php,True,1.0,1,1,1.0,592,15,detalle-estatico
+12,Operador comercial RHX,overhead-door.php,False,0.4,1,0,0.0,592,3.8,listado-marca
+12,Operador comercial RHX,operador-para-perfilados-comerciales-jst.php,False,0.815,0,0,0.115,592,1.63,detalle-estatico
+12,Operador comercial RHX,operador-para-perfilados-comerciales-sel.php,False,0.778,0,0,0.025,592,1.556,detalle-estatico
+12,Operador comercial RHX,operadores-para-puertas-de-mostrador-cdo.php,False,0.741,0,0,0.003,592,1.481,detalle-estatico
+13,Fire Rated Doors FireStarÂ® Models 700 & 700c,fire-rated-doors-firestar-models-700-700c.php,True,1.0,1,1,0.988,422,15,detalle-estatico
+13,Fire Rated Doors FireStarÂ® Models 700 & 700c,cortinas-enrollables-industriales.php,False,0.297,1,0,0.0,422,3.595,listado-estatico
+13,Fire Rated Doors FireStarÂ® Models 700 & 700c,industrial.php,False,0.24,1,0,0.0,422,3.48,listado-estatico
+13,Fire Rated Doors FireStarÂ® Models 700 & 700c,wayne-dalton.php,False,0.189,1,0,0.0,422,3.377,listado-marca
+14,Puertas Seccionales de Acero Aisladas Thermospan Â® Modelo 150,puertas-seccionales-de-acero-aisladas-thermospan-modelo-150.php,True,1.0,1,1,0.973,552,15,detalle-estatico
+14,Puertas Seccionales de Acero Aisladas Thermospan Â® Modelo 150,puertas-seccionales-de-acero-aisladas-thermospan.php,True,1.0,1,1,0.973,552,15,detalle-estatico
+14,Puertas Seccionales de Acero Aisladas Thermospan Â® Modelo 150,wayne-dalton.php,False,0.113,1,0,0.007,552,3.225,listado-marca
+14,Puertas Seccionales de Acero Aisladas Thermospan Â® Modelo 150,puertas-seccionales-de-acero-modelo-2415.php,False,0.768,0,0,0.007,552,1.535,detalle-estatico
+14,Puertas Seccionales de Acero Aisladas Thermospan Â® Modelo 150,puerta-seccional-de-acero-thermacore-serie-592.php,False,0.704,0,0,0.004,552,1.407,detalle-estatico
+15,Puertas seccionales de acero modelo 2415,puertas-seccionales-de-acero-modelo-2415.php,True,1.0,1,1,0.932,206,15,detalle-estatico
+15,Puertas seccionales de acero modelo 2415,wayne-dalton.php,False,0.154,1,0,0.01,206,3.308,listado-marca
+15,Puertas seccionales de acero modelo 2415,puertas-seccionales-de-acero-perfiles-426.php,False,0.815,0,0,0.0,206,1.63,detalle-estatico
+15,Puertas seccionales de acero modelo 2415,puertas-seccionales-de-acero-thermacore-598-uso-liviano.php,False,0.8,0,0,0.0,206,1.6,detalle-estatico
+15,Puertas seccionales de acero modelo 2415,puerta-seccional-de-acero-perfiles-418.php,False,0.795,0,0,0.0,206,1.59,detalle-estatico
+16,ColecciÃ³n Modern Steelâ„¢,coleccion-modern-steel.php,True,1.0,3,1,0.947,304,18,detalle-estatico
+16,ColecciÃ³n Modern Steelâ„¢,puertas-residenciales.php,True,1.0,0,0,0.944,304,9,detalle-estatico
+16,ColecciÃ³n Modern Steelâ„¢,overhead-door.php,False,0.229,1,0,0.0,304,3.457,listado-marca
+16,ColecciÃ³n Modern Steelâ„¢,wayne-dalton.php,False,0.176,1,0,0.0,304,3.353,listado-marca
+16,ColecciÃ³n Modern Steelâ„¢,clopay.php,False,0.143,1,0,0.0,304,3.286,listado-marca
+17,"ENERGY SERIES WITH INTELLICOREÂ® 3717 1 3/4â€³, 3720 /3724 / 3722",energy-series-with-intellicore-37171-3-4.php,True,1.0,1,2,0.973,298,18,detalle-estatico
+17,"ENERGY SERIES WITH INTELLICOREÂ® 3717 1 3/4â€³, 3720 /3724 / 3722",clopay.php,False,0.032,1,0,0.013,298,3.065,listado-marca
+17,"ENERGY SERIES WITH INTELLICOREÂ® 3717 1 3/4â€³, 3720 /3724 / 3722",energy-series-with-intellicore-3720-3724-3722.php,False,0.891,0,0,0.185,298,1.782,detalle-estatico
+17,"ENERGY SERIES WITH INTELLICOREÂ® 3717 1 3/4â€³, 3720 /3724 / 3722",puertas-seccionales-de-acero-aisladas-thermospan-modelo-150.php,False,0.33,0,0,0.279,298,0.661,detalle-estatico
+17,"ENERGY SERIES WITH INTELLICOREÂ® 3717 1 3/4â€³, 3720 /3724 / 3722",puertas-seccionales-de-acero-aisladas-thermospan.php,False,0.33,0,0,0.279,298,0.661,detalle-estatico
+18,"Puertas de acero acanalado modelos 524, 524V, 524S",puerta-de-acero-acanalado-modelos-524.php,True,1.0,1,1,0.939,478,15,detalle-estatico
+18,"Puertas de acero acanalado modelos 524, 524V, 524S",puerta-de-acero-acanalado.php,False,0.703,0,0,0.937,478,5.405,detalle-estatico
+18,"Puertas de acero acanalado modelos 524, 524V, 524S",clopay.php,False,0.111,1,0,0.0,478,3.222,listado-marca
+18,"Puertas de acero acanalado modelos 524, 524V, 524S",puertas-seccionales-de-acero-modelo-2415.php,False,0.614,0,0,0.0,478,1.227,detalle-estatico
+19,ENERGY SERIES WITH INTELLICOREÂ® 3720 /3724 / 3722,energy-series-with-intellicore-3720-3724-3722.php,True,1.0,1,1,1.0,253,15,detalle-estatico
+19,ENERGY SERIES WITH INTELLICOREÂ® 3720 /3724 / 3722,clopay.php,False,0.039,1,0,0.0,253,3.078,listado-marca
+19,ENERGY SERIES WITH INTELLICOREÂ® 3720 /3724 / 3722,energy-series-with-intellicore-37171-3-4.php,False,0.891,0,0,0.217,253,1.782,detalle-estatico
+19,ENERGY SERIES WITH INTELLICOREÂ® 3720 /3724 / 3722,puertas-seccionales-de-acero-aisladas-thermospan-modelo-150.php,False,0.346,0,0,0.241,253,0.692,detalle-estatico
+19,ENERGY SERIES WITH INTELLICOREÂ® 3720 /3724 / 3722,puertas-seccionales-de-acero-aisladas-thermospan.php,False,0.346,0,0,0.241,253,0.692,detalle-estatico
+20,ColecciÃ³n Modern Steelâ„¢,coleccion-modern-steel.php,True,1.0,3,1,0.947,304,18,detalle-estatico
+20,ColecciÃ³n Modern Steelâ„¢,puertas-residenciales.php,True,1.0,0,0,0.944,304,9,detalle-estatico
+20,ColecciÃ³n Modern Steelâ„¢,overhead-door.php,False,0.229,1,0,0.0,304,3.457,listado-marca
+20,ColecciÃ³n Modern Steelâ„¢,wayne-dalton.php,False,0.176,1,0,0.0,304,3.353,listado-marca
+20,ColecciÃ³n Modern Steelâ„¢,clopay.php,False,0.143,1,0,0.0,304,3.286,listado-marca
+21,SHELTER ABRIGO ESTACIONARIO Blue Giant,shelter-abrigo-estacionario-blue-giant.php,True,1.0,0,2,1.0,205,15,detalle-estatico
+21,SHELTER ABRIGO ESTACIONARIO Blue Giant,blue-giant.php,False,0.417,1,0,0.0,205,3.833,listado-marca
+22,RETENEDOR DE VEHICULOS ( electrico) MOD HVR303 StrongArmâ„¢,retenedor-de-vehiculos.php,True,1.0,1,1,0.978,371,15,detalle-estatico
+22,RETENEDOR DE VEHICULOS ( electrico) MOD HVR303 StrongArmâ„¢,retenedor-vehiculos-hvr303.php,False,0.705,0,0,1.0,371,5.41,detalle-estatico
+22,RETENEDOR DE VEHICULOS ( electrico) MOD HVR303 StrongArmâ„¢,retenedores-de-vehiculos.php,False,0.571,1,0,0.0,371,4.143,listado-estatico
+22,RETENEDOR DE VEHICULOS ( electrico) MOD HVR303 StrongArmâ„¢,equipos-y-accesorios-para-anden-de-carga.php,False,0.299,1,0,0.0,371,3.597,listado-estatico
+22,RETENEDOR DE VEHICULOS ( electrico) MOD HVR303 StrongArmâ„¢,blue-giant.php,False,0.127,1,0,0.0,371,3.254,listado-marca
+23,RAMPA NIVELADORA MECÃNICA BLUE GIANT,rampa-niveladora-mecanica-blue-giant.php,True,1.0,0,1,1.0,417,12,detalle-estatico
+23,RAMPA NIVELADORA MECÃNICA BLUE GIANT,rampa-niveladora.php,False,0.615,0,0,0.0,417,1.231,listado-estatico
+24,Rampas de AndÃ©n HidrÃ¡ulicas,rampas-de-anden-hidraulicas-kelley.php,True,1.0,1,1,0.908,316,15,detalle-estatico
+24,Rampas de AndÃ©n HidrÃ¡ulicas,rampas-de-anden-hidraulicas.php,True,1.0,0,0,0.0,316,5,detalle-estatico
+24,Rampas de AndÃ©n HidrÃ¡ulicas,equipos-y-accesorios-para-anden-de-carga.php,False,0.439,1,0,0.0,316,3.878,listado-estatico
+24,Rampas de AndÃ©n HidrÃ¡ulicas,rampa-niveladora.php,False,0.419,1,0,0.0,316,3.837,listado-estatico
+24,Rampas de AndÃ©n HidrÃ¡ulicas,kelley.php,False,0.121,1,0,0.0,316,3.242,listado-marca
+25,RETENEDOR DE VEHICULOS STAR4,star4-vehicle-restraint.php,True,1.0,1,1,0.969,129,15,detalle-estatico
+25,RETENEDOR DE VEHICULOS STAR4,retenedores-de-vehiculos.php,False,0.846,1,0,0.0,129,4.692,listado-estatico
+25,RETENEDOR DE VEHICULOS STAR4,kelley.php,False,0.118,1,0,0.0,129,3.235,listado-marca
+25,RETENEDOR DE VEHICULOS STAR4,retenedor-de-vehiculos.php,False,0.88,0,0,0.0,129,1.76,detalle-estatico
+25,RETENEDOR DE VEHICULOS STAR4,retenedores-de-vehiculos-automatico.php,False,0.794,0,0,0.008,129,1.587,detalle-estatico
+26,Puerta contra explosion,puerta-contra-explosion.php,True,1.0,2,1,1.0,292,18,detalle-estatico
+26,Puerta contra explosion,contra-exposion.php,True,1.0,1,0,0.0,292,8,listado-estatico
+26,Puerta contra explosion,puerta-contra-incendio.php,False,0.756,1,0,0.0,292,4.511,listado-estatico
+26,Puerta contra explosion,doorlock.php,False,0.194,1,0,0.0,292,3.387,listado-marca
+26,Puerta contra explosion,contra-incendio.php,False,0.739,0,0,0.0,292,1.478,listado-estatico
+27,Accesorios,accesorios.php,True,1.0,1,1,1.0,21,15,detalle-estatico
+27,Accesorios,receptor-para-control-vehiculos.php,False,0.341,1,0,0.0,21,3.683,listado-estatico
+27,Accesorios,doorlock.php,False,0.333,1,0,0.0,21,3.667,listado-marca
+28,Puertas blindadas,puertas-blindadas.php,True,1.0,2,2,1.0,244,21,detalle-estatico
+28,Puertas blindadas,blindadas.php,False,0.938,1,0,0.0,244,4.875,listado-estatico
+28,Puertas blindadas,puerta-contra-incendio.php,False,0.585,1,0,0.0,244,4.171,listado-estatico
+28,Puertas blindadas,centros-comerciales.php,False,0.319,1,0,0.0,244,3.638,listado-estatico
+28,Puertas blindadas,doorlock.php,False,0.16,1,0,0.0,244,3.32,listado-marca
+29,Puertas contra incendio,puertas-contra-incendio.php,True,1.0,2,2,0,0,17,detalle-estatico
+29,Puertas contra incendio,contra-incendio.php,True,1.0,1,0,0,0,8,listado-estatico
+29,Puertas contra incendio,puerta-contra-incendio.php,False,0.979,1,0,0,0,4.957,listado-estatico
+29,Puertas contra incendio,puertas-salida-emergencia.php,False,0.542,1,0,0,0,4.083,listado-estatico
+29,Puertas contra incendio,centros-comerciales.php,False,0.429,1,0,0,0,3.857,listado-estatico
+30,Puertas contra rayos x,puertas-contra-rayos-x.php,True,1.0,2,2,0.771,109,19,detalle-estatico
+30,Puertas contra rayos x,puertas-peatonales-rayos-x.php,False,0.792,1,0,0.0,109,4.583,listado-estatico
+30,Puertas contra rayos x,puertas-peatonales-hospitales.php,False,0.578,1,0,0.0,109,4.156,listado-estatico
+30,Puertas contra rayos x,doorlock.php,False,0.133,1,0,0.0,109,3.267,listado-marca
+30,Puertas contra rayos x,puerta-contra-incendio.php,False,0.739,0,0,0.0,109,1.478,listado-estatico
+31,Puerta estÃ¡ndar,puerta-estandar.php,True,1.0,2,2,0,0,17,detalle-estatico
+31,Puerta estÃ¡ndar,puertas-peatonales-estandar-y-reforzada.php,False,0.652,1,0,0,0,4.304,listado-estatico
+31,Puerta estÃ¡ndar,doorlock.php,False,0.087,1,0,0,0,3.174,listado-marca
+31,Puerta estÃ¡ndar,puerta-estandar-reforzada.php,False,0.75,0,0,0,0,1.5,detalle-estatico
+31,Puerta estÃ¡ndar,1500-revolving-door.php,False,0.71,0,0,0,0,1.419,detalle-estatico
+32,Puerta estÃ¡ndar reforzada,puerta-estandar-reforzada.php,True,1.0,2,2,0,0,17,detalle-estatico
+32,Puerta estÃ¡ndar reforzada,puertas-peatonales-estandar-y-reforzada.php,False,0.893,1,0,0,0,4.786,listado-estatico
+32,Puerta estÃ¡ndar reforzada,centros-comerciales.php,False,0.416,1,0,0,0,3.831,listado-estatico
+32,Puerta estÃ¡ndar reforzada,puertas-salida-emergencia.php,False,0.36,1,0,0,0,3.72,listado-estatico
+32,Puerta estÃ¡ndar reforzada,doorlock.php,False,0.182,1,0,0,0,3.364,listado-marca
+33,Puerta Holandesa,puerta-holandesa.php,True,1.0,2,1,1.0,176,18,detalle-estatico
+33,Puerta Holandesa,puertas-peatonales-tipo-holandesa.php,True,1.0,1,0,0.0,176,8,listado-estatico
+33,Puerta Holandesa,1500-revolving-door.php,True,1.0,0,0,0.0,176,5,detalle-estatico
+33,Puerta Holandesa,magic-fuerza-del-operador.php,True,1.0,0,0,0.0,176,5,detalle-estatico
+33,Puerta Holandesa,puertas-y-fijos-louver.php,False,0.681,1,0,0.0,176,4.362,listado-estatico
+34,Puerta para hospital,puerta-para-hospital.php,True,1.0,1,0,1.0,156,12,detalle-estatico
+34,Puerta para hospital,puerta-holandesa.php,False,0.611,0,0,0.801,156,5.222,detalle-estatico
+34,Puerta para hospital,puerta-contra-explosion.php,False,0.605,0,0,0.429,156,3.209,detalle-estatico
+34,Puerta para hospital,puertas-peatonales-hospitales.php,False,0.93,0,0,0.0,156,1.86,listado-estatico
+34,Puerta para hospital,puertas-rapidas.php,False,0.686,0,0,0.0,156,1.371,listado-estatico
+35,Puerta y fijos Louver,puerta-y-fijos-louver.php,True,1.0,2,0,1.0,193,15,detalle-estatico
+35,Puerta y fijos Louver,puertas-y-fijos-louver.php,False,0.977,0,0,0.0,193,1.953,listado-estatico
+36,Fast-Seal Â®,fast-seal-high-performance-door.php,True,1.0,0,1,0.95,322,12,detalle-estatico
+36,Fast-Seal Â®,rytec.php,False,0.286,1,0,0.0,322,3.571,listado-marca
+37,PredaDoorÂ® NXTÂ® Door,predadoor-nxt-door.php,True,1.0,0,1,1.0,129,12,detalle-estatico
+37,PredaDoorÂ® NXTÂ® Door,rytec.php,False,0.174,1,0,0.0,129,3.348,listado-marca
+38,RÃPIDA ENROLLABLE INDUSTRIAL,rapida-enrollable-industrial.php,True,1.0,2,1,0.413,465,16,detalle-estatico
+38,RÃPIDA ENROLLABLE INDUSTRIAL,rapida-apilable.php,True,1.0,0,0,0.105,465,5,detalle-estatico
+38,RÃPIDA ENROLLABLE INDUSTRIAL,infraca-quality-doors.php,False,0.286,1,0,0.0,465,3.571,listado-marca
+38,RÃPIDA ENROLLABLE INDUSTRIAL,cortina-plana.php,False,0.787,0,0,0.0,465,1.574,detalle-estatico
+38,RÃPIDA ENROLLABLE INDUSTRIAL,cortinas-enrollables-industriales.php,False,0.787,0,0,0.0,465,1.574,listado-estatico
+39,Puerta rÃ¡pida apilable,rapida-apilable.php,True,1.0,2,0,0.385,449,11,detalle-estatico
+39,Puerta rÃ¡pida apilable,infraca-quality-doors.php,False,0.207,1,0,0.0,449,3.414,listado-marca
+39,Puerta rÃ¡pida apilable,puertas-rapidas-enrollables.php,False,0.776,0,0,0.0,449,1.551,detalle-estatico
+39,Puerta rÃ¡pida apilable,puertas-rapidas.php,False,0.703,0,0,0.0,449,1.405,listado-estatico
+39,Puerta rÃ¡pida apilable,kronos-puertas-rapidas-de-sectores-modulares-autorreparable.php,False,0.667,0,0,0.0,449,1.333,detalle-estatico
+40,ROLLI ZIP Puertas rÃ¡pidas enrollables autorreparabale,rolli-zip.php,True,1.0,1,1,0.973,372,15,detalle-estatico
+40,ROLLI ZIP Puertas rÃ¡pidas enrollables autorreparabale,glg-porte-industriali.php,False,0.081,1,0,0.0,372,3.162,listado-marca
+40,ROLLI ZIP Puertas rÃ¡pidas enrollables autorreparabale,kronos-puertas-rapidas-de-sectores-modulares-autorreparable.php,False,0.732,0,0,0.194,372,1.464,detalle-estatico
+40,ROLLI ZIP Puertas rÃ¡pidas enrollables autorreparabale,puertas-rapidas-enrollables.php,False,0.675,0,0,0.0,372,1.35,detalle-estatico
+40,ROLLI ZIP Puertas rÃ¡pidas enrollables autorreparabale,puertas-enrollables-de-garage.php,False,0.61,0,0,0.0,372,1.22,detalle-estatico
+41,ALUMINA â€“ Puertas rÃ¡pidas autorreparable,kronos-puertas-rapidas-de-sectores-modulares-autorreparable.php,True,1.0,1,1,0.98,303,15,detalle-estatico
+41,ALUMINA â€“ Puertas rÃ¡pidas autorreparable,puertas-rapidas.php,False,0.576,1,0,0.0,303,4.152,listado-estatico
+41,ALUMINA â€“ Puertas rÃ¡pidas autorreparable,glg-porte-industriali.php,False,0.102,1,0,0.0,303,3.203,listado-marca
+41,ALUMINA â€“ Puertas rÃ¡pidas autorreparable,rolli-zip.php,False,0.75,0,0,0.238,303,1.5,detalle-estatico
+41,ALUMINA â€“ Puertas rÃ¡pidas autorreparable,rapida-apilable.php,False,0.667,0,0,0.0,303,1.333,detalle-estatico
+42,VertiGO,vertigo.php,True,1.0,1,0,1.0,244,12,detalle-estatico
+42,VertiGO,cortinas-enrollables-industriales.php,False,0.296,1,0,0.0,244,3.593,listado-estatico
+42,VertiGO,glg-porte-industriali.php,False,0.214,1,0,0.0,244,3.429,listado-marca
+42,VertiGO,comercial.php,False,0.625,0,0,0.0,244,1.25,listado-estatico
+42,VertiGO,equipos-y-accesorios-para-anden-de-carga.php,False,0.625,0,0,0.0,244,1.25,listado-estatico
+43,Lift Master Mod H,lift-master-mod-h.php,True,1.0,1,1,1.0,616,15,detalle-estatico
+43,Lift Master Mod H,liftmaster-modh.php,True,1.0,1,0,1.0,616,12,detalle-estatico
+43,Lift Master Mod H,lift-master.php,False,0.786,1,0,0.0,616,4.571,listado-marca
+43,Lift Master Mod H,industrial.php,False,0.385,1,0,0.0,616,3.769,listado-estatico
+43,Lift Master Mod H,operadores-puertas-seccionales-cortinas.php,False,0.187,1,0,0.0,616,3.373,listado-estatico
+44,Barreras de estacionamiento MOOVI50RM,barreras-estacionamiento-moovi50rm.php,True,1.0,1,1,0.942,52,15,detalle-estatico
+44,Barreras de estacionamiento MOOVI50RM,estacionamientos.php,False,0.566,1,0,0.0,52,4.132,listado-estatico
+44,Barreras de estacionamiento MOOVI50RM,fraccionamientos-y-condominios.php,False,0.478,1,0,0.0,52,3.955,listado-estatico
+44,Barreras de estacionamiento MOOVI50RM,centros-comerciales.php,False,0.382,1,0,0.0,52,3.764,listado-estatico
+44,Barreras de estacionamiento MOOVI50RM,blue-giant.php,False,0.255,1,0,0.0,52,3.511,listado-marca
+45,SERIE X130 Motor para cortina oculto,serie-x130-motor-para-cortina-oculto.php,True,1.0,1,1,1.0,10,11,detalle-estatico
+45,SERIE X130 Motor para cortina oculto,cortinas-enrollables-industriales.php,True,1.0,0,0,0.0,10,5,listado-estatico
+45,SERIE X130 Motor para cortina oculto,operadores-puertas-seccionales-cortinas.php,False,0.426,1,0,0.0,10,3.851,listado-estatico
+45,SERIE X130 Motor para cortina oculto,bft-resp.php,False,0.267,1,0,0.0,10,3.533,listado-estatico
+45,SERIE X130 Motor para cortina oculto,blue-giant.php,False,0.267,1,0,0.0,10,3.533,listado-marca
+46,PHOBOS N Piston Electromecanico,phobos-n-piston-electromecanico.php,True,1.0,1,1,1.0,3,11,detalle-estatico
+46,PHOBOS N Piston Electromecanico,puertas-rapidas-enrollables.php,True,1.0,0,0,0.0,3,5,detalle-estatico
+46,PHOBOS N Piston Electromecanico,operadores-para-puerta-abatible.php,False,0.29,1,0,0.0,3,3.581,listado-estatico
+46,PHOBOS N Piston Electromecanico,blue-giant.php,False,0.244,1,0,0.0,3,3.488,listado-marca
+46,PHOBOS N Piston Electromecanico,bft-resp.php,False,0.15,1,0,0.0,3,3.3,listado-estatico
+47,"P4,5-7 Piston Hidraulico para puerta abatible",p45-7-piston-hidraulico-para-puerta-abatible.php,True,1.0,1,1,1.0,34,15,detalle-estatico
+47,"P4,5-7 Piston Hidraulico para puerta abatible",puertas-rapidas-enrollables.php,True,1.0,0,0,0.0,34,5,detalle-estatico
+47,"P4,5-7 Piston Hidraulico para puerta abatible",icaro-smart.php,False,0.29,0,0,0.971,34,4.58,detalle-estatico
+47,"P4,5-7 Piston Hidraulico para puerta abatible",operadores-para-puerta-abatible.php,False,0.658,1,0,0.0,34,4.316,listado-estatico
+47,"P4,5-7 Piston Hidraulico para puerta abatible",operadores-puerta-abatible-industrial.php,False,0.658,1,0,0.0,34,4.316,listado-estatico
+48,LUX 2B y Lux GV Piston hidraulico para puerta abatible,lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php,True,1.0,1,1,1.0,6,11,detalle-estatico
+48,LUX 2B y Lux GV Piston hidraulico para puerta abatible,puertas-rapidas-enrollables.php,True,1.0,0,0,0.0,6,5,detalle-estatico
+48,LUX 2B y Lux GV Piston hidraulico para puerta abatible,operadores-para-puerta-abatible.php,False,0.588,1,0,0.0,6,4.176,listado-estatico
+48,LUX 2B y Lux GV Piston hidraulico para puerta abatible,operadores-puerta-abatible-industrial.php,False,0.588,1,0,0.0,6,4.176,listado-estatico
+48,LUX 2B y Lux GV Piston hidraulico para puerta abatible,icaro-smart.php,False,0.256,0,1,0.0,6,3.513,detalle-estatico
+49,ICARO SMART AC A2000 120,icaro-smart.php,True,1.0,1,1,1.0,51,15,detalle-estatico
+49,ICARO SMART AC A2000 120,puertas-rapidas-enrollables.php,True,1.0,0,0,0.0,51,5,detalle-estatico
+49,ICARO SMART AC A2000 120,operadores-para-puerta-corrediza-industrial.php,False,0.269,1,0,0.0,51,3.537,listado-estatico
+49,ICARO SMART AC A2000 120,lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php,False,0.256,0,1,0.0,51,3.513,detalle-estatico
+49,ICARO SMART AC A2000 120,estacionamientos.php,False,0.25,1,0,0.0,51,3.5,listado-estatico
+50,Puertas Industriales DOCKMAN,puertas-industriales-dockman.php,True,1.0,1,1,1.0,127,15,detalle-estatico
+50,Puertas Industriales DOCKMAN,puertas-seccionales-industriales.php,False,0.667,1,0,0.0,127,4.333,listado-estatico
+50,Puertas Industriales DOCKMAN,dockman.php,False,0.4,1,0,0.0,127,3.8,listado-marca
+50,Puertas Industriales DOCKMAN,puertas-rapidas.php,False,0.714,0,0,0.0,127,1.429,listado-estatico
+50,Puertas Industriales DOCKMAN,puertas-residenciales.php,False,0.612,0,0,0.0,127,1.224,detalle-estatico
+51,Labio de elevaciÃ³n mecÃ¡nico,labio-de-elevacion-mecanico-dockman.php,True,1.0,2,1,1.0,69,18,detalle-estatico
+51,Labio de elevaciÃ³n mecÃ¡nico,labio-elevacion-anden-carga.php,False,0.8,1,0,0.0,69,4.6,listado-estatico
+51,Labio de elevaciÃ³n mecÃ¡nico,equipos-y-accesorios-para-anden-de-carga.php,False,0.341,1,0,0.0,69,3.683,listado-estatico
+51,Labio de elevaciÃ³n mecÃ¡nico,dockman.php,False,0.294,1,0,0.0,69,3.588,listado-marca
+52,Sellos de AndÃ©n,sellos-de-anden.php,True,1.0,3,1,1.0,374,18,detalle-estatico
+52,Sellos de AndÃ©n,sellos-para-anden.php,False,0.812,1,0,0.0,374,4.625,listado-estatico
+52,Sellos de AndÃ©n,equipos-y-accesorios-para-anden-de-carga.php,False,0.4,1,0,0.0,374,3.8,listado-estatico
+52,Sellos de AndÃ©n,dockman.php,False,0.273,1,0,0.0,374,3.545,listado-marca
+53,Rampas de AndÃ©n HidrÃ¡ulicas,rampas-de-anden-hidraulicas.php,True,1.0,0,1,1.0,119,12,detalle-estatico
+53,Rampas de AndÃ©n HidrÃ¡ulicas,rampas-de-anden-hidraulicas-kelley.php,True,1.0,0,0,0.0,119,5,detalle-estatico
+53,Rampas de AndÃ©n HidrÃ¡ulicas,rampa-niveladora.php,False,0.419,1,0,0.0,119,3.837,listado-estatico
+53,Rampas de AndÃ©n HidrÃ¡ulicas,rampas-de-anden-mecanicas.php,False,0.808,0,0,0.496,119,3.615,detalle-estatico
+53,Rampas de AndÃ©n HidrÃ¡ulicas,dockman.php,False,0.176,1,0,0.0,119,3.353,listado-marca
+54,Cortina Plana,cortina-plana.php,True,1.0,3,1,0.975,79,18,detalle-estatico
+54,Cortina Plana,puertas-residenciales.php,False,0.353,2,0,0.0,79,6.706,detalle-estatico
+54,Cortina Plana,cortinas-enrollables-industriales.php,False,0.606,1,0,0.0,79,4.212,listado-estatico
+54,Cortina Plana,centros-comerciales.php,False,0.375,1,0,0.0,79,3.75,listado-estatico
+54,Cortina Plana,industrial.php,False,0.348,1,0,0.0,79,3.696,listado-estatico
+55,Cortina Europea,cortina-europea.php,True,1.0,3,1,1.0,68,18,detalle-estatico
+55,Cortina Europea,cortinas-enrollables-industriales.php,False,0.686,1,0,0.0,68,4.371,listado-estatico
+55,Cortina Europea,centros-comerciales.php,False,0.353,1,0,0.0,68,3.706,listado-estatico
+55,Cortina Europea,dockman.php,False,0.182,1,0,0.0,68,3.364,listado-marca
+55,Cortina Europea,cortina-plana.php,False,0.714,0,0,0.0,68,1.429,detalle-estatico
+56,Rampas de AndÃ©n MecÃ¡nicas,rampas-de-anden-mecanicas.php,True,1.0,1,1,1.0,108,15,detalle-estatico
+56,Rampas de AndÃ©n MecÃ¡nicas,rampa-niveladora.php,False,0.439,1,0,0.0,108,3.878,listado-estatico
+56,Rampas de AndÃ©n MecÃ¡nicas,rampas-de-anden-hidraulicas.php,False,0.808,0,0,0.546,108,3.615,detalle-estatico
+56,Rampas de AndÃ©n MecÃ¡nicas,dockman.php,False,0.188,1,0,0.0,108,3.375,listado-marca
+56,Rampas de AndÃ©n MecÃ¡nicas,rampas-de-anden-hidraulicas-kelley.php,False,0.808,0,0,0.0,108,1.615,detalle-estatico
+57,Puertas Seccionales de Acero Aisladas ThermospanÂ® Modelo 150,puertas-seccionales-de-acero-aisladas-thermospan-modelo-150.php,True,1.0,0,1,0.973,552,12,detalle-estatico
+57,Puertas Seccionales de Acero Aisladas ThermospanÂ® Modelo 150,puertas-seccionales-de-acero-aisladas-thermospan.php,True,1.0,0,1,0.973,552,12,detalle-estatico
+57,Puertas Seccionales de Acero Aisladas ThermospanÂ® Modelo 150,puertas-seccionales-industriales.php,False,0.505,1,0,0.007,552,4.011,listado-estatico
+57,Puertas Seccionales de Acero Aisladas ThermospanÂ® Modelo 150,index-resp.php,False,0.145,1,0,0.0,552,3.29,inicio
+57,Puertas Seccionales de Acero Aisladas ThermospanÂ® Modelo 150,puertas-seccionales-de-acero-modelo-2415.php,False,0.768,0,0,0.007,552,1.535,detalle-estatico
+58,"Puertas de acero acanalado modelos 524, 524V, 524S",puerta-de-acero-acanalado-modelos-524.php,True,1.0,1,1,0.939,478,15,detalle-estatico
+58,"Puertas de acero acanalado modelos 524, 524V, 524S",puerta-de-acero-acanalado.php,False,0.703,0,0,0.937,478,5.405,detalle-estatico
+58,"Puertas de acero acanalado modelos 524, 524V, 524S",puertas-seccionales-industriales.php,False,0.478,1,0,0.0,478,3.955,listado-estatico
+58,"Puertas de acero acanalado modelos 524, 524V, 524S",puertas-seccionales-de-acero-modelo-2415.php,False,0.614,0,0,0.0,478,1.227,detalle-estatico
+59,Puertas Industriales DOCKMAN,puertas-industriales-dockman.php,True,1.0,1,1,1.0,127,15,detalle-estatico
+59,Puertas Industriales DOCKMAN,puertas-seccionales-industriales.php,False,0.667,1,0,0.0,127,4.333,listado-estatico
+59,Puertas Industriales DOCKMAN,dockman.php,False,0.4,1,0,0.0,127,3.8,listado-marca
+59,Puertas Industriales DOCKMAN,puertas-rapidas.php,False,0.714,0,0,0.0,127,1.429,listado-estatico
+59,Puertas Industriales DOCKMAN,puertas-residenciales.php,False,0.612,0,0,0.0,127,1.224,detalle-estatico
+60,Puertas seccionales de acero modelo 2415,puertas-seccionales-de-acero-modelo-2415.php,True,1.0,1,1,0.932,206,15,detalle-estatico
+60,Puertas seccionales de acero modelo 2415,wayne-dalton.php,False,0.154,1,0,0.01,206,3.308,listado-marca
+60,Puertas seccionales de acero modelo 2415,puertas-seccionales-de-acero-perfiles-426.php,False,0.815,0,0,0.0,206,1.63,detalle-estatico
+60,Puertas seccionales de acero modelo 2415,puertas-seccionales-de-acero-thermacore-598-uso-liviano.php,False,0.8,0,0,0.0,206,1.6,detalle-estatico
+60,Puertas seccionales de acero modelo 2415,puerta-seccional-de-acero-perfiles-418.php,False,0.795,0,0,0.0,206,1.59,detalle-estatico
+61,Energy Series With INTELLICOREÂ® 3720 /3724 / 3722,energy-series-with-intellicore-3720-3724-3722.php,True,1.0,1,1,1.0,253,15,detalle-estatico
+61,Energy Series With INTELLICOREÂ® 3720 /3724 / 3722,puertas-seccionales-industriales.php,False,0.338,1,0,0.0,253,3.675,listado-estatico
+61,Energy Series With INTELLICOREÂ® 3720 /3724 / 3722,energy-series-with-intellicore-37171-3-4.php,False,0.891,0,0,0.217,253,1.782,detalle-estatico
+61,Energy Series With INTELLICOREÂ® 3720 /3724 / 3722,puertas-seccionales-de-acero-aisladas-thermospan-modelo-150.php,False,0.346,0,0,0.241,253,0.692,detalle-estatico
+61,Energy Series With INTELLICOREÂ® 3720 /3724 / 3722,puertas-seccionales-de-acero-aisladas-thermospan.php,False,0.346,0,0,0.241,253,0.692,detalle-estatico
+62,Puerta seccional de acero Thermacore serie 592,puerta-seccional-de-acero-thermacore-serie-592.php,True,1.0,1,1,1.0,283,15,detalle-estatico
+62,Puerta seccional de acero Thermacore serie 592,puertas-seccionales-industriales.php,False,0.564,1,0,0.0,283,4.128,listado-estatico
+62,Puerta seccional de acero Thermacore serie 592,overhead-door.php,False,0.271,1,0,0.0,283,3.542,listado-marca
+62,Puerta seccional de acero Thermacore serie 592,puertas-seccionales-de-acero-thermacore-598-uso-liviano.php,False,0.907,0,0,0.0,283,1.814,detalle-estatico
+62,Puerta seccional de acero Thermacore serie 592,puerta-seccional-de-acero-thermacore-593-uso-medio.php,False,0.812,0,0,0.0,283,1.625,detalle-estatico
+63,Puerta seccional de acero sin aislamiento 416 (uso muy pesado),puerta-seccional-de-acero-sin-aislamiento-416-uso-muy-pesado.php,True,1.0,0,0,1.0,245,9,detalle-estatico
+63,Puerta seccional de acero sin aislamiento 416 (uso muy pesado),puertas-seccionales-industriales.php,False,0.5,1,0,0.0,245,4.0,listado-estatico
+63,Puerta seccional de acero sin aislamiento 416 (uso muy pesado),puerta-seccional-de-acero-sin-aislamiento-424-uso-pesado.php,False,0.931,0,0,0.637,245,3.862,detalle-estatico
+63,Puerta seccional de acero sin aislamiento 416 (uso muy pesado),puertas-seccionales-de-acero-sin-aislamiento-420-uso-pesado.php,False,0.908,0,0,0.469,245,3.815,detalle-estatico
+63,Puerta seccional de acero sin aislamiento 416 (uso muy pesado),puert-seccional-de-acero-sin-aislamiento-430-uso-medio.php,False,0.904,0,0,0.486,245,3.809,detalle-estatico
+64,Puertas seccionales de acero sin aislamiento 420(uso pesado),puertas-seccionales-de-acero-sin-aislamiento-420-uso-pesado.php,True,1.0,1,1,1.0,264,15,detalle-estatico
+64,Puertas seccionales de acero sin aislamiento 420(uso pesado),puertas-seccionales-industriales.php,False,0.571,1,0,0.0,264,4.143,listado-estatico
+64,Puertas seccionales de acero sin aislamiento 420(uso pesado),puerta-seccional-de-acero-sin-aislamiento-424-uso-pesado.php,False,0.957,0,0,0.697,264,3.913,detalle-estatico
+64,Puertas seccionales de acero sin aislamiento 420(uso pesado),puerta-seccional-de-acero-sin-aislamiento-416-uso-muy-pesado.php,False,0.934,0,0,0.436,264,3.869,detalle-estatico
+64,Puertas seccionales de acero sin aislamiento 420(uso pesado),puerta-seccionabl-acero-perfiles-422-uso-pesado.php,False,0.793,0,0,0.47,264,3.586,detalle-estatico
+65,Puerta seccional de acero sin aislamiento 424 (uso pesado),puerta-seccional-de-acero-sin-aislamiento-424-uso-pesado.php,True,1.0,1,1,1.0,287,15,detalle-estatico
+65,Puerta seccional de acero sin aislamiento 424 (uso pesado),puert-seccional-de-acero-sin-aislamiento-430-uso-medio.php,False,0.919,0,1,0.436,287,6.838,detalle-estatico
+65,Puerta seccional de acero sin aislamiento 424 (uso pesado),puertas-seccionales-industriales.php,False,0.523,1,0,0.017,287,4.045,listado-estatico
+65,Puerta seccional de acero sin aislamiento 424 (uso pesado),puertas-seccionales-de-acero-sin-aislamiento-420-uso-pesado.php,False,0.957,0,0,0.641,287,3.913,detalle-estatico
+65,Puerta seccional de acero sin aislamiento 424 (uso pesado),puerta-seccional-de-acero-sin-aislamiento-416-uso-muy-pesado.php,False,0.931,0,0,0.544,287,3.862,detalle-estatico
+66,Puerta seccional de acero sin aislamiento 430 (uso medio),puert-seccional-de-acero-sin-aislamiento-430-uso-medio.php,True,1.0,1,1,1.0,272,15,detalle-estatico
+66,Puerta seccional de acero sin aislamiento 430 (uso medio),puerta-seccional-de-acero-sin-aislamiento-424-uso-pesado.php,False,0.919,0,1,0.46,272,6.838,detalle-estatico
+66,Puerta seccional de acero sin aislamiento 430 (uso medio),puertas-seccionales-industriales.php,False,0.506,1,0,0.0,272,4.011,listado-estatico
+66,Puerta seccional de acero sin aislamiento 430 (uso medio),puerta-seccional-de-acero-sin-aislamiento-416-uso-muy-pesado.php,False,0.904,0,0,0.438,272,3.809,detalle-estatico
+66,Puerta seccional de acero sin aislamiento 430 (uso medio),puerta-seccional-de-acero-perfiles-432-uso-medio.php,False,0.777,0,0,0.5,272,3.553,detalle-estatico
+67,Puertas seccionales de aluminio 521,puertas-seccionales-de-aluminio-521.php,True,1.0,1,1,1.0,164,15,detalle-estatico
+67,Puertas seccionales de aluminio 521,puertas-seccionales-industriales.php,False,0.704,1,0,0.0,164,4.407,listado-estatico
+67,Puertas seccionales de aluminio 521,puerta-seccional-de-acero-perfiles-418.php,False,0.896,0,0,0.122,164,1.791,detalle-estatico
+67,Puertas seccionales de aluminio 521,puertas-seccionales-de-acero-modelo-2415.php,False,0.72,0,0,0.0,164,1.44,detalle-estatico
+67,Puertas seccionales de aluminio 521,puertas-seccionales-de-acero-perfiles-426.php,False,0.711,0,0,0.128,164,1.421,detalle-estatico
+68,Puerta seccional de acero perfiles 418,puerta-seccional-de-acero-perfiles-418.php,True,1.0,1,1,1.0,240,15,detalle-estatico
+68,Puerta seccional de acero perfiles 418,puerta-seccionabl-acero-perfiles-422-uso-pesado.php,False,0.8,0,1,0.421,240,6.6,detalle-estatico
+68,Puerta seccional de acero perfiles 418,puertas-seccionales-industriales.php,False,0.632,1,0,0.0,240,4.263,listado-estatico
+68,Puerta seccional de acero perfiles 418,puertas-seccionales-de-acero-perfiles-426.php,False,0.911,0,0,0.421,240,3.823,detalle-estatico
+68,Puerta seccional de acero perfiles 418,puerta-seccional-de-acero-perfiles-432-uso-medio.php,False,0.837,0,0,0.421,240,3.674,detalle-estatico
+69,Puerta seccionable acero perfiles 422 (uso pesado),puerta-seccionabl-acero-perfiles-422-uso-pesado.php,True,1.0,1,1,1.0,307,15,detalle-estatico
+69,Puerta seccionable acero perfiles 422 (uso pesado),puertas-seccionales-de-acero-perfiles-426.php,False,0.787,0,0,0.883,307,5.573,detalle-estatico
+69,Puerta seccionable acero perfiles 422 (uso pesado),puerta-seccional-de-acero-perfiles-418.php,False,0.791,0,1,0.329,307,4.581,detalle-estatico
+69,Puerta seccionable acero perfiles 422 (uso pesado),puertas-seccionales-industriales.php,False,0.575,1,0,0.0,307,4.15,listado-estatico
+69,Puerta seccionable acero perfiles 422 (uso pesado),puerta-seccional-de-acero-perfiles-432-uso-medio.php,False,0.896,0,0,0.564,307,3.792,detalle-estatico
+70,Puertas seccionales de acero perfiles 426,puertas-seccionales-de-acero-perfiles-426.php,True,1.0,1,1,1.0,309,15,detalle-estatico
+70,Puertas seccionales de acero perfiles 426,puerta-seccional-de-acero-perfiles-432-uso-medio.php,False,0.87,0,1,0.56,309,6.739,detalle-estatico
+70,Puertas seccionales de acero perfiles 426,puerta-seccionabl-acero-perfiles-422-uso-pesado.php,False,0.86,0,0,0.877,309,5.72,detalle-estatico
+70,Puertas seccionales de acero perfiles 426,puertas-seccionales-industriales.php,False,0.685,1,0,0.0,309,4.37,listado-estatico
+70,Puertas seccionales de acero perfiles 426,puerta-seccional-de-acero-sin-aislamiento-424-uso-pesado.php,False,0.619,0,0,0.456,309,3.237,detalle-estatico
+71,Puerta seccional de acero perfiles 432 (uso medio),puerta-seccional-de-acero-perfiles-432-uso-medio.php,True,1.0,1,1,1.0,246,15,detalle-estatico
+71,Puerta seccional de acero perfiles 432 (uso medio),puertas-seccionales-de-acero-perfiles-426.php,False,0.831,0,1,0.703,246,6.663,detalle-estatico
+71,Puerta seccional de acero perfiles 432 (uso medio),puertas-seccionales-industriales.php,False,0.55,1,0,0.0,246,4.1,listado-estatico
+71,Puerta seccional de acero perfiles 432 (uso medio),puerta-seccionabl-acero-perfiles-422-uso-pesado.php,False,0.9,0,0,0.703,246,3.8,detalle-estatico
+71,Puerta seccional de acero perfiles 432 (uso medio),puerta-seccional-de-acero-perfiles-418.php,False,0.837,0,0,0.411,246,3.674,detalle-estatico
+72,Puerta seccional de acero Thermacore 593 (uso medio),puerta-seccional-de-acero-thermacore-593-uso-medio.php,True,1.0,1,1,1.0,125,15,detalle-estatico
+72,Puerta seccional de acero Thermacore 593 (uso medio),puerta-seccional-de-acero-thermacore-594-uso-medio.php,False,0.98,0,1,0.536,125,6.96,detalle-estatico
+72,Puerta seccional de acero Thermacore 593 (uso medio),puertas-seccionales-industriales.php,False,0.522,1,0,0.0,125,4.043,listado-estatico
+72,Puerta seccional de acero Thermacore 593 (uso medio),puerta-seccional-de-acero-thermacore-595-uso-pesado.php,False,0.931,0,0,0.232,125,1.861,detalle-estatico
+72,Puerta seccional de acero Thermacore 593 (uso medio),puerta-seccional-de-acero-thermacore-599-uso-muy-pesado.php,False,0.914,0,0,0.184,125,1.829,detalle-estatico
+73,Puerta seccional de acero Thermacore 594 (uso medio),puerta-seccional-de-acero-thermacore-594-uso-medio.php,True,1.0,1,1,1.0,94,15,detalle-estatico
+73,Puerta seccional de acero Thermacore 594 (uso medio),puerta-seccional-de-acero-thermacore-593-uso-medio.php,False,0.98,0,1,0.713,94,6.96,detalle-estatico
+73,Puerta seccional de acero Thermacore 594 (uso medio),puertas-seccionales-industriales.php,False,0.522,1,0,0.0,94,4.043,listado-estatico
+73,Puerta seccional de acero Thermacore 594 (uso medio),puerta-seccional-de-acero-thermacore-595-uso-pesado.php,False,0.931,0,0,0.309,94,1.861,detalle-estatico
+73,Puerta seccional de acero Thermacore 594 (uso medio),puerta-seccional-de-acero-thermacore-599-uso-muy-pesado.php,False,0.914,0,0,0.245,94,1.829,detalle-estatico
+74,Puerta seccional de acero thermacore 525 (uso liviano),puertas-seccionales-de-acero-thermacore-598-uso-liviano.php,True,1.0,1,0,1.0,63,12,detalle-estatico
+74,Puerta seccional de acero thermacore 525 (uso liviano),puertas-seccionales-industriales.php,False,0.524,1,0,0.0,63,4.048,listado-estatico
+74,Puerta seccional de acero thermacore 525 (uso liviano),puerta-seccional-de-acero-thermacore-595-uso-pesado.php,False,0.893,0,0,0.063,63,1.786,detalle-estatico
+74,Puerta seccional de acero thermacore 525 (uso liviano),puerta-seccional-de-acero-thermacore-593-uso-medio.php,False,0.882,0,0,0.095,63,1.765,detalle-estatico
+74,Puerta seccional de acero thermacore 525 (uso liviano),puerta-seccional-de-acero-thermacore-594-uso-medio.php,False,0.882,0,0,0.095,63,1.765,detalle-estatico
+75,Puerta seccional de acero Thermacore 599 (uso muy pesado),puerta-seccional-de-acero-thermacore-599-uso-muy-pesado.php,True,1.0,1,0,1.0,270,12,detalle-estatico
+75,Puerta seccional de acero Thermacore 599 (uso muy pesado),puertas-seccionales-industriales.php,False,0.506,1,0,0.0,270,4.011,listado-estatico
+75,Puerta seccional de acero Thermacore 599 (uso muy pesado),puerta-seccional-de-acero-thermacore-595-uso-pesado.php,False,0.943,0,0,0.178,270,1.887,detalle-estatico
+75,Puerta seccional de acero Thermacore 599 (uso muy pesado),puerta-seccional-de-acero-thermacore-593-uso-medio.php,False,0.914,0,0,0.085,270,1.829,detalle-estatico
+75,Puerta seccional de acero Thermacore 599 (uso muy pesado),puerta-seccional-de-acero-thermacore-594-uso-medio.php,False,0.914,0,0,0.085,270,1.829,detalle-estatico
+76,ICARO SMART AC A2000 120,icaro-smart.php,True,1.0,1,1,1.0,51,15,detalle-estatico
+76,ICARO SMART AC A2000 120,puertas-rapidas-enrollables.php,True,1.0,0,0,0.0,51,5,detalle-estatico
+76,ICARO SMART AC A2000 120,operadores-para-puerta-corrediza-industrial.php,False,0.269,1,0,0.0,51,3.537,listado-estatico
+76,ICARO SMART AC A2000 120,lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php,False,0.256,0,1,0.0,51,3.513,detalle-estatico
+76,ICARO SMART AC A2000 120,estacionamientos.php,False,0.25,1,0,0.0,51,3.5,listado-estatico
+77,Operador de puerta comercial RHX Â®,operador-para-perfilados-comerciales-jst.php,True,1.0,0,1,0.99,510,12,detalle-estatico
+77,Operador de puerta comercial RHX Â®,operadores-para-puerta-corrediza-industrial.php,False,0.688,1,0,0.0,510,4.375,listado-estatico
+77,Operador de puerta comercial RHX Â®,operador-para-perfilados-comerciales-sel.php,False,0.969,0,0,0.106,510,1.938,detalle-estatico
+77,Operador de puerta comercial RHX Â®,operadores-para-puertas-de-mostrador-cdo.php,False,0.938,0,0,0.0,510,1.875,detalle-estatico
+77,Operador de puerta comercial RHX Â®,operador-comercial-rhx.php,False,0.815,0,0,0.133,510,1.63,detalle-estatico
+78,Operador de puerta comercial RMX Â®,operador-para-perfilados-comerciales-sel.php,True,1.0,0,1,1.0,460,12,detalle-estatico
+78,Operador de puerta comercial RMX Â®,operadores-para-puerta-corrediza-industrial.php,False,0.688,1,0,0.0,460,4.375,listado-estatico
+78,Operador de puerta comercial RMX Â®,operador-para-perfilados-comerciales-jst.php,False,0.969,0,0,0.117,460,1.938,detalle-estatico
+78,Operador de puerta comercial RMX Â®,operadores-para-puertas-de-mostrador-cdo.php,False,0.938,0,0,0.072,460,1.875,detalle-estatico
+78,Operador de puerta comercial RMX Â®,operador-comercial-rhx.php,False,0.778,0,0,0.033,460,1.556,detalle-estatico
+79,LUX 2B y Lux GV Piston hidraulico para puerta abatible,lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php,True,1.0,1,1,1.0,6,11,detalle-estatico
+79,LUX 2B y Lux GV Piston hidraulico para puerta abatible,puertas-rapidas-enrollables.php,True,1.0,0,0,0.0,6,5,detalle-estatico
+79,LUX 2B y Lux GV Piston hidraulico para puerta abatible,operadores-para-puerta-abatible.php,False,0.588,1,0,0.0,6,4.176,listado-estatico
+79,LUX 2B y Lux GV Piston hidraulico para puerta abatible,operadores-puerta-abatible-industrial.php,False,0.588,1,0,0.0,6,4.176,listado-estatico
+79,LUX 2B y Lux GV Piston hidraulico para puerta abatible,icaro-smart.php,False,0.256,0,1,0.0,6,3.513,detalle-estatico
+80,"P4,5-7 Piston Hidraulico para puerta abatible",p45-7-piston-hidraulico-para-puerta-abatible.php,True,1.0,1,1,1.0,34,15,detalle-estatico
+80,"P4,5-7 Piston Hidraulico para puerta abatible",puertas-rapidas-enrollables.php,True,1.0,0,0,0.0,34,5,detalle-estatico
+80,"P4,5-7 Piston Hidraulico para puerta abatible",icaro-smart.php,False,0.29,0,0,0.971,34,4.58,detalle-estatico
+80,"P4,5-7 Piston Hidraulico para puerta abatible",operadores-para-puerta-abatible.php,False,0.658,1,0,0.0,34,4.316,listado-estatico
+80,"P4,5-7 Piston Hidraulico para puerta abatible",operadores-puerta-abatible-industrial.php,False,0.658,1,0,0.0,34,4.316,listado-estatico
+81,Lift Master Mod H,lift-master-mod-h.php,True,1.0,1,1,1.0,616,15,detalle-estatico
+81,Lift Master Mod H,liftmaster-modh.php,True,1.0,1,0,1.0,616,12,detalle-estatico
+81,Lift Master Mod H,lift-master.php,False,0.786,1,0,0.0,616,4.571,listado-marca
+81,Lift Master Mod H,industrial.php,False,0.385,1,0,0.0,616,3.769,listado-estatico
+81,Lift Master Mod H,operadores-puertas-seccionales-cortinas.php,False,0.187,1,0,0.0,616,3.373,listado-estatico
+82,Operador comercial RHX,operador-comercial-rhx.php,True,1.0,0,1,1.0,592,12,detalle-estatico
+82,Operador comercial RHX,operador-para-perfilados-comerciales-jst.php,False,0.815,1,0,0.115,592,4.63,detalle-estatico
+82,Operador comercial RHX,operadores-puertas-seccionales-cortinas.php,False,0.459,1,0,0.0,592,3.918,listado-estatico
+82,Operador comercial RHX,operador-para-perfilados-comerciales-sel.php,False,0.778,0,0,0.025,592,1.556,detalle-estatico
+82,Operador comercial RHX,operadores-para-puertas-de-mostrador-cdo.php,False,0.741,0,0,0.003,592,1.481,detalle-estatico
+83,SERIE X130 Motor para cortina oculto,serie-x130-motor-para-cortina-oculto.php,True,1.0,1,1,1.0,10,11,detalle-estatico
+83,SERIE X130 Motor para cortina oculto,cortinas-enrollables-industriales.php,True,1.0,0,0,0.0,10,5,listado-estatico
+83,SERIE X130 Motor para cortina oculto,operadores-puertas-seccionales-cortinas.php,False,0.426,1,0,0.0,10,3.851,listado-estatico
+83,SERIE X130 Motor para cortina oculto,bft-resp.php,False,0.267,1,0,0.0,10,3.533,listado-estatico
+83,SERIE X130 Motor para cortina oculto,blue-giant.php,False,0.267,1,0,0.0,10,3.533,listado-marca
+84,Operador de puerta comercial RMX Â®,operador-para-perfilados-comerciales-sel.php,True,1.0,1,1,1.0,460,15,detalle-estatico
+84,Operador de puerta comercial RMX Â®,operadores-puertas-seccionales-cortinas.php,False,0.62,1,0,0.0,460,4.239,listado-estatico
+84,Operador de puerta comercial RMX Â®,operador-para-perfilados-comerciales-jst.php,False,0.969,0,0,0.117,460,1.938,detalle-estatico
+84,Operador de puerta comercial RMX Â®,operadores-para-puertas-de-mostrador-cdo.php,False,0.938,0,0,0.072,460,1.875,detalle-estatico
+84,Operador de puerta comercial RMX Â®,operador-comercial-rhx.php,False,0.778,0,0,0.033,460,1.556,detalle-estatico
+85,Operador de puerta comercial CDX Â®,operadores-para-puertas-de-mostrador-cdo.php,True,1.0,1,1,1.0,314,15,detalle-estatico
+85,Operador de puerta comercial CDX Â®,operadores-puertas-seccionales-cortinas.php,False,0.62,1,0,0.0,314,4.239,listado-estatico
+85,Operador de puerta comercial CDX Â®,operador-para-perfilados-comerciales-jst.php,False,0.938,0,0,0.0,314,1.875,detalle-estatico
+85,Operador de puerta comercial CDX Â®,operador-para-perfilados-comerciales-sel.php,False,0.938,0,0,0.105,314,1.875,detalle-estatico
+85,Operador de puerta comercial CDX Â®,operador-comercial-rhx.php,False,0.741,0,0,0.006,314,1.481,detalle-estatico
+86,Operador para cortina enrrollable RSX,operador-para-cortina-enrrollable-rsx.php,True,1.0,1,1,0.986,647,15,detalle-estatico
+86,Operador para cortina enrrollable RSX,operadores-puertas-seccionales-cortinas.php,False,0.695,1,0,0.0,647,4.389,listado-estatico
+86,Operador para cortina enrrollable RSX,cortinas-enrollables-industriales.php,False,0.667,0,0,0.0,647,1.333,listado-estatico
+86,Operador para cortina enrrollable RSX,puertas-rapidas-enrollables.php,False,0.656,0,0,0.0,647,1.312,detalle-estatico
+86,Operador para cortina enrrollable RSX,operadores-para-puerta-abatible.php,False,0.647,0,0,0.0,647,1.294,listado-estatico
+87,Cortina serie 625,cortina-serie-625.php,True,1.0,1,1,0.93,100,15,detalle-estatico
+87,Cortina serie 625,cortinas-enrollables-industriales.php,False,0.486,1,0,0.0,100,3.973,listado-estatico
+87,Cortina serie 625,overhead-door.php,False,0.133,1,0,0.0,100,3.267,listado-marca
+87,Cortina serie 625,cortina-serie-620.php,False,0.941,0,0,0.0,100,1.882,detalle-estatico
+87,Cortina serie 625,serie-620.php,False,0.941,0,0,0.0,100,1.882,detalle-estatico
+88,Cortina en aluminio serie 511 / 521,cortina-en-aluminio-serie-511-521.php,True,1.0,1,1,1.0,69,15,detalle-estatico
+88,Cortina en aluminio serie 511 / 521,cortinas-enrollables-industriales.php,False,0.491,1,0,0.0,69,3.981,listado-estatico
+88,Cortina en aluminio serie 511 / 521,overhead-door.php,False,0.087,1,0,0.0,69,3.174,listado-marca
+88,Cortina en aluminio serie 511 / 521,puertas-seccionales-de-aluminio-521.php,False,0.615,0,0,0.0,69,1.231,detalle-estatico
+88,Cortina en aluminio serie 511 / 521,cortina-serie-610.php,False,0.6,0,0,0.0,69,1.2,detalle-estatico
+89,Cortina Plana,cortina-plana.php,True,1.0,3,1,0.975,79,18,detalle-estatico
+89,Cortina Plana,puertas-residenciales.php,False,0.353,2,0,0.0,79,6.706,detalle-estatico
+89,Cortina Plana,cortinas-enrollables-industriales.php,False,0.606,1,0,0.0,79,4.212,listado-estatico
+89,Cortina Plana,centros-comerciales.php,False,0.375,1,0,0.0,79,3.75,listado-estatico
+89,Cortina Plana,industrial.php,False,0.348,1,0,0.0,79,3.696,listado-estatico
+90,Cortina Europea,cortina-europea.php,True,1.0,3,1,1.0,68,18,detalle-estatico
+90,Cortina Europea,cortinas-enrollables-industriales.php,False,0.686,1,0,0.0,68,4.371,listado-estatico
+90,Cortina Europea,centros-comerciales.php,False,0.353,1,0,0.0,68,3.706,listado-estatico
+90,Cortina Europea,dockman.php,False,0.182,1,0,0.0,68,3.364,listado-marca
+90,Cortina Europea,cortina-plana.php,False,0.714,0,0,0.0,68,1.429,detalle-estatico
+91,Cortina serie 620,cortina-serie-620.php,True,1.0,1,1,1.0,296,15,detalle-estatico
+91,Cortina serie 620,serie-620.php,True,1.0,0,0,1.0,296,9,detalle-estatico
+91,Cortina serie 620,cortinas-enrollables-industriales.php,False,0.486,1,0,0.0,296,3.973,listado-estatico
+91,Cortina serie 620,cortina-serie-610.php,False,0.941,0,0,0.466,296,3.882,detalle-estatico
+91,Cortina serie 620,overhead-door.php,False,0.133,1,0,0.0,296,3.267,listado-marca
+92,Cortina serie 790 CW,cortina-serie-790-cw.php,True,1.0,1,1,1.0,385,15,detalle-estatico
+92,Cortina serie 790 CW,cortinas-enrollables-industriales.php,False,0.453,1,0,0.0,385,3.906,listado-estatico
+92,Cortina serie 790 CW,cortina-serie-600.php,False,0.811,0,0,0.008,385,1.622,detalle-estatico
+92,Cortina serie 790 CW,cortina-serie-610.php,False,0.811,0,0,0.005,385,1.622,detalle-estatico
+92,Cortina serie 790 CW,cortina-serie-620.php,False,0.811,0,0,0.0,385,1.622,detalle-estatico
+93,Cortina serie 600,cortina-serie-600.php,True,1.0,0,1,1.0,175,12,detalle-estatico
+93,Cortina serie 600,cortinas-enrollables-industriales.php,False,0.486,1,0,0.0,175,3.973,listado-estatico
+93,Cortina serie 600,centros-comerciales.php,False,0.333,1,0,0.0,175,3.667,listado-estatico
+93,Cortina serie 600,overhead-door.php,False,0.133,1,0,0.0,175,3.267,listado-marca
+93,Cortina serie 600,cortina-serie-610.php,False,0.941,0,0,0.16,175,1.882,detalle-estatico
+94,Cortina serie 630-631-634-635,cortina-serie-630.php,True,1.0,1,1,1.0,329,15,detalle-estatico
+94,Cortina serie 630-631-634-635,cortinas-enrollables-industriales.php,False,0.387,1,0,0.0,329,3.774,listado-estatico
+94,Cortina serie 630-631-634-635,overhead-door.php,False,0.095,1,0,0.0,329,3.19,listado-marca
+94,Cortina serie 630-631-634-635,cortina-serie-600.php,False,0.696,0,0,0.0,329,1.391,detalle-estatico
+94,Cortina serie 630-631-634-635,cortina-serie-610.php,False,0.696,0,0,0.0,329,1.391,detalle-estatico
+95,Cortina serie 610,cortina-serie-610.php,True,1.0,0,1,1.0,232,12,detalle-estatico
+95,Cortina serie 610,cortinas-enrollables-industriales.php,False,0.486,1,0,0.0,232,3.973,listado-estatico
+95,Cortina serie 610,cortina-serie-620.php,False,0.941,0,0,0.595,232,3.882,detalle-estatico
+95,Cortina serie 610,serie-620.php,False,0.941,0,0,0.595,232,3.882,detalle-estatico
+95,Cortina serie 610,cortina-serie-600.php,False,0.941,0,0,0.121,232,1.882,detalle-estatico
+96,Cortinas ventiladas 685,cortinas-ventiladas-685.php,True,1.0,1,1,1.0,371,15,detalle-estatico
+96,Cortinas ventiladas 685,cortinas-enrollables-industriales.php,False,0.651,1,0,0.0,371,4.302,listado-estatico
+96,Cortinas ventiladas 685,centros-comerciales.php,False,0.286,1,0,0.0,371,3.571,listado-estatico
+96,Cortinas ventiladas 685,cortina-serie-625.php,False,0.65,0,0,0.0,371,1.3,detalle-estatico
+96,Cortinas ventiladas 685,cortina-plana.php,False,0.611,0,0,0.0,371,1.222,detalle-estatico
+97,Cortina de seguridad 670,cortina-de-seguridad-670.php,True,1.0,1,1,0.943,212,15,detalle-estatico
+97,Cortina de seguridad 670,cortina-de-seguridad-671.php,False,0.958,0,1,0.887,212,8.917,detalle-estatico
+97,Cortina de seguridad 670,cortinas-enrollables-industriales.php,False,0.456,1,0,0.0,212,3.912,listado-estatico
+97,Cortina de seguridad 670,cortina-europea.php,False,0.615,0,0,0.0,212,1.231,detalle-estatico
+98,Cortina de seguridad 671,cortina-de-seguridad-671.php,True,1.0,1,1,1.0,212,15,detalle-estatico
+98,Cortina de seguridad 671,cortina-de-seguridad-670.php,False,0.958,0,1,0.83,212,8.917,detalle-estatico
+98,Cortina de seguridad 671,cortinas-enrollables-industriales.php,False,0.456,1,0,0.0,212,3.912,listado-estatico
+98,Cortina de seguridad 671,cortina-europea.php,False,0.615,0,0,0.0,212,1.231,detalle-estatico
+99,Fire Rated Doors FireStarÂ® Models 700 & 700c,fire-rated-doors-firestar-models-700-700c.php,True,1.0,1,1,0.988,422,15,detalle-estatico
+99,Fire Rated Doors FireStarÂ® Models 700 & 700c,cortinas-enrollables-industriales.php,False,0.297,1,0,0.0,422,3.595,listado-estatico
+99,Fire Rated Doors FireStarÂ® Models 700 & 700c,industrial.php,False,0.24,1,0,0.0,422,3.48,listado-estatico
+99,Fire Rated Doors FireStarÂ® Models 700 & 700c,wayne-dalton.php,False,0.189,1,0,0.0,422,3.377,listado-marca
+100,VertiGO,vertigo.php,True,1.0,1,0,1.0,244,12,detalle-estatico
+100,VertiGO,cortinas-enrollables-industriales.php,False,0.296,1,0,0.0,244,3.593,listado-estatico
+100,VertiGO,glg-porte-industriali.php,False,0.214,1,0,0.0,244,3.429,listado-marca
+100,VertiGO,comercial.php,False,0.625,0,0,0.0,244,1.25,listado-estatico
+100,VertiGO,equipos-y-accesorios-para-anden-de-carga.php,False,0.625,0,0,0.0,244,1.25,listado-estatico
+101,Fast-SealÂ® High Performance Door,fast-seal-high-performance-door.php,True,1.0,1,1,0.95,322,15,detalle-estatico
+101,Fast-SealÂ® High Performance Door,puertas-rapidas.php,False,0.203,1,0,0.0,322,3.407,listado-estatico
+102,PredaDoorÂ® NXTÂ® Door,predadoor-nxt-door.php,True,1.0,1,1,1.0,129,15,detalle-estatico
+102,PredaDoorÂ® NXTÂ® Door,puertas-rapidas.php,False,0.261,1,0,0.0,129,3.522,listado-estatico
+102,PredaDoorÂ® NXTÂ® Door,industrial.php,False,0.222,1,0,0.0,129,3.444,listado-estatico
+103,RÃPIDA ENROLLABLE INDUSTRIAL,rapida-enrollable-industrial.php,True,1.0,1,1,0.413,465,13,detalle-estatico
+103,RÃPIDA ENROLLABLE INDUSTRIAL,rapida-apilable.php,True,1.0,0,0,0.105,465,5,detalle-estatico
+103,RÃPIDA ENROLLABLE INDUSTRIAL,puertas-rapidas.php,False,0.607,1,0,0.0,465,4.214,listado-estatico
+103,RÃPIDA ENROLLABLE INDUSTRIAL,cortina-plana.php,False,0.787,0,0,0.0,465,1.574,detalle-estatico
+103,RÃPIDA ENROLLABLE INDUSTRIAL,cortinas-enrollables-industriales.php,False,0.787,0,0,0.0,465,1.574,listado-estatico
+104,RÃPIDA APILABLE,rapida-apilable.php,True,1.0,2,0,0.385,449,11,detalle-estatico
+104,RÃPIDA APILABLE,puertas-rapidas.php,False,0.465,1,0,0.0,449,3.93,listado-estatico
+104,RÃPIDA APILABLE,infraca-quality-doors.php,False,0.333,1,0,0.0,449,3.667,listado-marca
+105,ROLLI ZIP Puertas rÃ¡pidas enrollables autorreparable,rolli-zip.php,True,1.0,1,1,0.973,372,15,detalle-estatico
+105,ROLLI ZIP Puertas rÃ¡pidas enrollables autorreparable,puertas-rapidas.php,False,0.55,1,0,0.0,372,4.1,listado-estatico
+105,ROLLI ZIP Puertas rÃ¡pidas enrollables autorreparable,kronos-puertas-rapidas-de-sectores-modulares-autorreparable.php,False,0.739,0,0,0.194,372,1.477,detalle-estatico
+105,ROLLI ZIP Puertas rÃ¡pidas enrollables autorreparable,puertas-rapidas-enrollables.php,False,0.684,0,0,0.0,372,1.367,detalle-estatico
+105,ROLLI ZIP Puertas rÃ¡pidas enrollables autorreparable,puertas-enrollables-de-garage.php,False,0.617,0,0,0.0,372,1.235,detalle-estatico
+106,ALUMINA â€“ Puertas rÃ¡pidas autorreparable,kronos-puertas-rapidas-de-sectores-modulares-autorreparable.php,True,1.0,1,1,0.98,303,15,detalle-estatico
+106,ALUMINA â€“ Puertas rÃ¡pidas autorreparable,puertas-rapidas.php,False,0.576,1,0,0.0,303,4.152,listado-estatico
+106,ALUMINA â€“ Puertas rÃ¡pidas autorreparable,glg-porte-industriali.php,False,0.102,1,0,0.0,303,3.203,listado-marca
+106,ALUMINA â€“ Puertas rÃ¡pidas autorreparable,rolli-zip.php,False,0.75,0,0,0.238,303,1.5,detalle-estatico
+106,ALUMINA â€“ Puertas rÃ¡pidas autorreparable,rapida-apilable.php,False,0.667,0,0,0.0,303,1.333,detalle-estatico
+107,ColecciÃ³n Modern Steelâ„¢,coleccion-modern-steel.php,True,1.0,3,1,0.947,304,18,detalle-estatico
+107,ColecciÃ³n Modern Steelâ„¢,puertas-residenciales.php,True,1.0,0,0,0.944,304,9,detalle-estatico
+107,ColecciÃ³n Modern Steelâ„¢,puertas-de-garaje-aisladas.php,False,0.387,1,0,0.734,304,5.774,detalle-estatico
+107,ColecciÃ³n Modern Steelâ„¢,index-resp.php,False,0.375,1,0,0.007,304,3.75,inicio
+107,ColecciÃ³n Modern Steelâ„¢,residencial.php,False,0.323,1,0,0.0,304,3.645,listado-estatico
+108,ColecciÃ³n Classicâ„¢ â€“ Serie Premium,coleccion-classic.php,True,1.0,4,1,0.927,96,18,detalle-estatico
+108,ColecciÃ³n Classicâ„¢ â€“ Serie Premium,puertas-residenciales.php,True,1.0,0,0,0.927,96,9,detalle-estatico
+108,ColecciÃ³n Classicâ„¢ â€“ Serie Premium,index-resp.php,False,0.195,1,0,0.0,96,3.39,inicio
+108,ColecciÃ³n Classicâ„¢ â€“ Serie Premium,puertasresidenciales.php,False,0.157,1,0,0.0,96,3.314,listado-estatico
+109,AccessPRO FS1000SPEED,accesspro-fs1000speed.php,True,1.0,1,1,0.976,85,15,detalle-estatico
+109,AccessPRO FS1000SPEED,q-silent-max-eagle-3-4-hp.php,True,1.0,1,1,0.976,85,15,detalle-estatico
+109,AccessPRO FS1000SPEED,operadores-puerta-abatible.php,True,1.0,0,1,0.976,85,12,detalle-estatico
+109,AccessPRO FS1000SPEED,operadores-puerta-corrediza-residencial.php,True,1.0,0,1,0.976,85,12,detalle-estatico
+109,AccessPRO FS1000SPEED,operadores-puertas-ascendentes.php,True,1.0,0,1,0.976,85,12,detalle-estatico
+110,AccessPRO FS1000SPEED,accesspro-fs1000speed.php,True,1.0,1,1,0.976,85,15,detalle-estatico
+110,AccessPRO FS1000SPEED,q-silent-max-eagle-3-4-hp.php,True,1.0,1,1,0.976,85,15,detalle-estatico
+110,AccessPRO FS1000SPEED,operadores-puerta-abatible.php,True,1.0,0,1,0.976,85,12,detalle-estatico
+110,AccessPRO FS1000SPEED,operadores-puerta-corrediza-residencial.php,True,1.0,0,1,0.976,85,12,detalle-estatico
+110,AccessPRO FS1000SPEED,operadores-puertas-ascendentes.php,True,1.0,0,1,0.976,85,12,detalle-estatico
+111,PHOBOS N Piston Electromecanico,phobos-n-piston-electromecanico.php,True,1.0,1,1,1.0,3,11,detalle-estatico
+111,PHOBOS N Piston Electromecanico,puertas-rapidas-enrollables.php,True,1.0,0,0,0.0,3,5,detalle-estatico
+111,PHOBOS N Piston Electromecanico,operadores-para-puerta-abatible.php,False,0.29,1,0,0.0,3,3.581,listado-estatico
+111,PHOBOS N Piston Electromecanico,blue-giant.php,False,0.244,1,0,0.0,3,3.488,listado-marca
+111,PHOBOS N Piston Electromecanico,bft-resp.php,False,0.15,1,0,0.0,3,3.3,listado-estatico
+112,LUX 2B y Lux GV Piston hidraulico para puerta abatible,lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php,True,1.0,1,1,1.0,6,11,detalle-estatico
+112,LUX 2B y Lux GV Piston hidraulico para puerta abatible,puertas-rapidas-enrollables.php,True,1.0,0,0,0.0,6,5,detalle-estatico
+112,LUX 2B y Lux GV Piston hidraulico para puerta abatible,operadores-para-puerta-abatible.php,False,0.588,1,0,0.0,6,4.176,listado-estatico
+112,LUX 2B y Lux GV Piston hidraulico para puerta abatible,operadores-puerta-abatible-industrial.php,False,0.588,1,0,0.0,6,4.176,listado-estatico
+112,LUX 2B y Lux GV Piston hidraulico para puerta abatible,icaro-smart.php,False,0.256,0,1,0.0,6,3.513,detalle-estatico
+113,"P4,5-7 Piston Hidraulico para puerta abatible",p45-7-piston-hidraulico-para-puerta-abatible.php,True,1.0,1,1,1.0,34,15,detalle-estatico
+113,"P4,5-7 Piston Hidraulico para puerta abatible",puertas-rapidas-enrollables.php,True,1.0,0,0,0.0,34,5,detalle-estatico
+113,"P4,5-7 Piston Hidraulico para puerta abatible",icaro-smart.php,False,0.29,0,0,0.971,34,4.58,detalle-estatico
+113,"P4,5-7 Piston Hidraulico para puerta abatible",operadores-para-puerta-abatible.php,False,0.658,1,0,0.0,34,4.316,listado-estatico
+113,"P4,5-7 Piston Hidraulico para puerta abatible",operadores-puerta-abatible-industrial.php,False,0.658,1,0,0.0,34,4.316,listado-estatico
+114,AccessPRO FS1000SPEED,accesspro-fs1000speed.php,True,1.0,1,1,0.976,85,15,detalle-estatico
+114,AccessPRO FS1000SPEED,q-silent-max-eagle-3-4-hp.php,True,1.0,1,1,0.976,85,15,detalle-estatico
+114,AccessPRO FS1000SPEED,operadores-puerta-abatible.php,True,1.0,0,1,0.976,85,12,detalle-estatico
+114,AccessPRO FS1000SPEED,operadores-puerta-corrediza-residencial.php,True,1.0,0,1,0.976,85,12,detalle-estatico
+114,AccessPRO FS1000SPEED,operadores-puertas-ascendentes.php,True,1.0,0,1,0.976,85,12,detalle-estatico
+115,Puertas contra rayos x,puertas-contra-rayos-x.php,True,1.0,2,2,0.771,109,19,detalle-estatico
+115,Puertas contra rayos x,puertas-peatonales-rayos-x.php,False,0.792,1,0,0.0,109,4.583,listado-estatico
+115,Puertas contra rayos x,puertas-peatonales-hospitales.php,False,0.578,1,0,0.0,109,4.156,listado-estatico
+115,Puertas contra rayos x,doorlock.php,False,0.133,1,0,0.0,109,3.267,listado-marca
+115,Puertas contra rayos x,puerta-contra-incendio.php,False,0.739,0,0,0.0,109,1.478,listado-estatico
+116,Puertas contra incendio,puertas-contra-incendio.php,True,1.0,1,2,0,0,14,detalle-estatico
+116,Puertas contra incendio,contra-incendio.php,True,1.0,1,0,0,0,8,listado-estatico
+116,Puertas contra incendio,puerta-contra-incendio.php,False,0.979,1,0,0,0,4.957,listado-estatico
+116,Puertas contra incendio,puertas-salida-emergencia.php,False,0.542,1,0,0,0,4.083,listado-estatico
+116,Puertas contra incendio,centros-comerciales.php,False,0.429,1,0,0,0,3.857,listado-estatico
+117,Puerta contra explosion,puerta-contra-explosion.php,True,1.0,2,1,1.0,292,18,detalle-estatico
+117,Puerta contra explosion,contra-exposion.php,True,1.0,1,0,0.0,292,8,listado-estatico
+117,Puerta contra explosion,puerta-contra-incendio.php,False,0.756,1,0,0.0,292,4.511,listado-estatico
+117,Puerta contra explosion,doorlock.php,False,0.194,1,0,0.0,292,3.387,listado-marca
+117,Puerta contra explosion,contra-incendio.php,False,0.739,0,0,0.0,292,1.478,listado-estatico
+118,Puerta Blindada,puertas-blindadas.php,True,1.0,2,2,1.0,244,21,detalle-estatico
+118,Puerta Blindada,blindadas.php,True,1.0,1,0,0.0,244,8,listado-estatico
+118,Puerta Blindada,puerta-contra-incendio.php,False,0.541,1,0,0.0,244,4.081,listado-estatico
+118,Puerta Blindada,centros-comerciales.php,False,0.299,1,0,0.0,244,3.597,listado-estatico
+118,Puerta Blindada,doorlock.php,False,0.174,1,0,0.0,244,3.348,listado-marca
+119,Puerta estÃ¡ndar,puerta-estandar.php,True,1.0,1,2,0,0,14,detalle-estatico
+119,Puerta estÃ¡ndar,puertas-peatonales-estandar-y-reforzada.php,False,0.652,1,0,0,0,4.304,listado-estatico
+119,Puerta estÃ¡ndar,doorlock.php,False,0.087,1,0,0,0,3.174,listado-marca
+119,Puerta estÃ¡ndar,puerta-estandar-reforzada.php,False,0.75,0,0,0,0,1.5,detalle-estatico
+119,Puerta estÃ¡ndar,1500-revolving-door.php,False,0.71,0,0,0,0,1.419,detalle-estatico
+120,Puerta estÃ¡ndar reforzada,puerta-estandar-reforzada.php,True,1.0,1,2,0,0,14,detalle-estatico
+120,Puerta estÃ¡ndar reforzada,puertas-peatonales-estandar-y-reforzada.php,False,0.893,1,0,0,0,4.786,listado-estatico
+120,Puerta estÃ¡ndar reforzada,centros-comerciales.php,False,0.416,1,0,0,0,3.831,listado-estatico
+120,Puerta estÃ¡ndar reforzada,puertas-salida-emergencia.php,False,0.36,1,0,0,0,3.72,listado-estatico
+120,Puerta estÃ¡ndar reforzada,doorlock.php,False,0.182,1,0,0,0,3.364,listado-marca
+121,Puerta y fijos Louver,puerta-y-fijos-louver.php,True,1.0,2,0,1.0,193,15,detalle-estatico
+121,Puerta y fijos Louver,puertas-y-fijos-louver.php,False,0.977,0,0,0.0,193,1.953,listado-estatico
+122,Puerta Holandesa,puerta-holandesa.php,True,1.0,2,1,1.0,176,18,detalle-estatico
+122,Puerta Holandesa,puertas-peatonales-tipo-holandesa.php,True,1.0,1,0,0.0,176,8,listado-estatico
+122,Puerta Holandesa,1500-revolving-door.php,True,1.0,0,0,0.0,176,5,detalle-estatico
+122,Puerta Holandesa,magic-fuerza-del-operador.php,True,1.0,0,0,0.0,176,5,detalle-estatico
+122,Puerta Holandesa,puertas-y-fijos-louver.php,False,0.681,1,0,0.0,176,4.362,listado-estatico
+123,Barreras de estacionamiento MOOVI50RM,barreras-estacionamiento-moovi50rm.php,True,1.0,1,1,0.942,52,15,detalle-estatico
+123,Barreras de estacionamiento MOOVI50RM,estacionamientos.php,False,0.566,1,0,0.0,52,4.132,listado-estatico
+123,Barreras de estacionamiento MOOVI50RM,fraccionamientos-y-condominios.php,False,0.478,1,0,0.0,52,3.955,listado-estatico
+123,Barreras de estacionamiento MOOVI50RM,centros-comerciales.php,False,0.382,1,0,0.0,52,3.764,listado-estatico
+123,Barreras de estacionamiento MOOVI50RM,blue-giant.php,False,0.255,1,0,0.0,52,3.511,listado-marca
+124,ICARO SMART AC A2000 120,icaro-smart.php,True,1.0,1,1,1.0,51,15,detalle-estatico
+124,ICARO SMART AC A2000 120,puertas-rapidas-enrollables.php,True,1.0,0,0,0.0,51,5,detalle-estatico
+124,ICARO SMART AC A2000 120,operadores-para-puerta-corrediza-industrial.php,False,0.269,1,0,0.0,51,3.537,listado-estatico
+124,ICARO SMART AC A2000 120,lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php,False,0.256,0,1,0.0,51,3.513,detalle-estatico
+124,ICARO SMART AC A2000 120,estacionamientos.php,False,0.25,1,0,0.0,51,3.5,listado-estatico
+125,Barreras de estacionamiento MOOVI50RM,barreras-estacionamiento-moovi50rm.php,True,1.0,1,1,0.942,52,15,detalle-estatico
+125,Barreras de estacionamiento MOOVI50RM,estacionamientos.php,False,0.566,1,0,0.0,52,4.132,listado-estatico
+125,Barreras de estacionamiento MOOVI50RM,fraccionamientos-y-condominios.php,False,0.478,1,0,0.0,52,3.955,listado-estatico
+125,Barreras de estacionamiento MOOVI50RM,centros-comerciales.php,False,0.382,1,0,0.0,52,3.764,listado-estatico
+125,Barreras de estacionamiento MOOVI50RM,blue-giant.php,False,0.255,1,0,0.0,52,3.511,listado-marca
+126,ICARO SMART AC A2000 120,icaro-smart.php,True,1.0,1,1,1.0,51,15,detalle-estatico
+126,ICARO SMART AC A2000 120,puertas-rapidas-enrollables.php,True,1.0,0,0,0.0,51,5,detalle-estatico
+126,ICARO SMART AC A2000 120,operadores-para-puerta-corrediza-industrial.php,False,0.269,1,0,0.0,51,3.537,listado-estatico
+126,ICARO SMART AC A2000 120,lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php,False,0.256,0,1,0.0,51,3.513,detalle-estatico
+126,ICARO SMART AC A2000 120,estacionamientos.php,False,0.25,1,0,0.0,51,3.5,listado-estatico
+127,Cortina serie 600,cortina-serie-600.php,True,1.0,1,1,1.0,175,15,detalle-estatico
+127,Cortina serie 600,cortinas-enrollables-industriales.php,False,0.486,1,0,0.0,175,3.973,listado-estatico
+127,Cortina serie 600,centros-comerciales.php,False,0.333,1,0,0.0,175,3.667,listado-estatico
+127,Cortina serie 600,overhead-door.php,False,0.133,1,0,0.0,175,3.267,listado-marca
+127,Cortina serie 600,cortina-serie-610.php,False,0.941,0,0,0.16,175,1.882,detalle-estatico
+128,Cortinas ventiladas 685,cortinas-ventiladas-685.php,True,1.0,1,1,1.0,371,15,detalle-estatico
+128,Cortinas ventiladas 685,cortinas-enrollables-industriales.php,False,0.651,1,0,0.0,371,4.302,listado-estatico
+128,Cortinas ventiladas 685,centros-comerciales.php,False,0.286,1,0,0.0,371,3.571,listado-estatico
+128,Cortinas ventiladas 685,cortina-serie-625.php,False,0.65,0,0,0.0,371,1.3,detalle-estatico
+128,Cortinas ventiladas 685,cortina-plana.php,False,0.611,0,0,0.0,371,1.222,detalle-estatico
+129,Puertas blindadas,puertas-blindadas.php,True,1.0,3,2,1.0,244,21,detalle-estatico
+129,Puertas blindadas,blindadas.php,False,0.938,1,0,0.0,244,4.875,listado-estatico
+129,Puertas blindadas,puerta-contra-incendio.php,False,0.585,1,0,0.0,244,4.171,listado-estatico
+129,Puertas blindadas,centros-comerciales.php,False,0.319,1,0,0.0,244,3.638,listado-estatico
+129,Puertas blindadas,doorlock.php,False,0.16,1,0,0.0,244,3.32,listado-marca
+130,Puertas contra incendio,puertas-contra-incendio.php,True,1.0,1,2,0,0,14,detalle-estatico
+130,Puertas contra incendio,contra-incendio.php,True,1.0,1,0,0,0,8,listado-estatico
+130,Puertas contra incendio,puerta-contra-incendio.php,False,0.979,1,0,0,0,4.957,listado-estatico
+130,Puertas contra incendio,puertas-salida-emergencia.php,False,0.542,1,0,0,0,4.083,listado-estatico
+130,Puertas contra incendio,centros-comerciales.php,False,0.429,1,0,0,0,3.857,listado-estatico
+131,Puerta estÃ¡ndar,puerta-estandar.php,True,1.0,0,2,0,0,11,detalle-estatico
+131,Puerta estÃ¡ndar,puertas-salida-emergencia.php,False,0.45,1,0,0,0,3.9,listado-estatico
+131,Puerta estÃ¡ndar,centros-comerciales.php,False,0.328,1,0,0,0,3.657,listado-estatico
+131,Puerta estÃ¡ndar,puerta-estandar-reforzada.php,False,0.75,0,0,0,0,1.5,detalle-estatico
+131,Puerta estÃ¡ndar,1500-revolving-door.php,False,0.71,0,0,0,0,1.419,detalle-estatico
+132,Puerta estÃ¡ndar reforzada,puerta-estandar-reforzada.php,True,1.0,1,2,0,0,14,detalle-estatico
+132,Puerta estÃ¡ndar reforzada,puertas-peatonales-estandar-y-reforzada.php,False,0.893,1,0,0,0,4.786,listado-estatico
+132,Puerta estÃ¡ndar reforzada,centros-comerciales.php,False,0.416,1,0,0,0,3.831,listado-estatico
+132,Puerta estÃ¡ndar reforzada,puertas-salida-emergencia.php,False,0.36,1,0,0,0,3.72,listado-estatico
+132,Puerta estÃ¡ndar reforzada,doorlock.php,False,0.182,1,0,0,0,3.364,listado-marca
+133,Puerta Holandesa,puerta-holandesa.php,True,1.0,2,1,1.0,176,18,detalle-estatico
+133,Puerta Holandesa,puertas-peatonales-tipo-holandesa.php,True,1.0,1,0,0.0,176,8,listado-estatico
+133,Puerta Holandesa,1500-revolving-door.php,True,1.0,0,0,0.0,176,5,detalle-estatico
+133,Puerta Holandesa,magic-fuerza-del-operador.php,True,1.0,0,0,0.0,176,5,detalle-estatico
+133,Puerta Holandesa,puertas-y-fijos-louver.php,False,0.681,1,0,0.0,176,4.362,listado-estatico
+134,Puerta y fijos Louver,puerta-y-fijos-louver.php,True,1.0,2,0,1.0,193,15,detalle-estatico
+134,Puerta y fijos Louver,puertas-y-fijos-louver.php,False,0.977,0,0,0.0,193,1.953,listado-estatico
+135,Barreras de estacionamiento MOOVI50RM,barreras-estacionamiento-moovi50rm.php,True,1.0,1,1,0.942,52,15,detalle-estatico
+135,Barreras de estacionamiento MOOVI50RM,estacionamientos.php,False,0.566,1,0,0.0,52,4.132,listado-estatico
+135,Barreras de estacionamiento MOOVI50RM,fraccionamientos-y-condominios.php,False,0.478,1,0,0.0,52,3.955,listado-estatico
+135,Barreras de estacionamiento MOOVI50RM,centros-comerciales.php,False,0.382,1,0,0.0,52,3.764,listado-estatico
+135,Barreras de estacionamiento MOOVI50RM,blue-giant.php,False,0.255,1,0,0.0,52,3.511,listado-marca
+136,Cortina Plana,cortina-plana.php,True,1.0,3,1,0.975,79,18,detalle-estatico
+136,Cortina Plana,puertas-residenciales.php,False,0.353,2,0,0.0,79,6.706,detalle-estatico
+136,Cortina Plana,cortinas-enrollables-industriales.php,False,0.606,1,0,0.0,79,4.212,listado-estatico
+136,Cortina Plana,centros-comerciales.php,False,0.375,1,0,0.0,79,3.75,listado-estatico
+136,Cortina Plana,industrial.php,False,0.348,1,0,0.0,79,3.696,listado-estatico
+137,Cortina Europea,cortina-europea.php,True,1.0,3,1,1.0,68,18,detalle-estatico
+137,Cortina Europea,cortinas-enrollables-industriales.php,False,0.686,1,0,0.0,68,4.371,listado-estatico
+137,Cortina Europea,centros-comerciales.php,False,0.353,1,0,0.0,68,3.706,listado-estatico
+137,Cortina Europea,dockman.php,False,0.182,1,0,0.0,68,3.364,listado-marca
+137,Cortina Europea,cortina-plana.php,False,0.714,0,0,0.0,68,1.429,detalle-estatico
+138,Accesorios,accesorios.php,True,1.0,1,1,1.0,21,15,detalle-estatico
+138,Accesorios,receptor-para-control-vehiculos.php,False,0.341,1,0,0.0,21,3.683,listado-estatico
+138,Accesorios,doorlock.php,False,0.333,1,0,0.0,21,3.667,listado-marca
+139,Rampas de AndÃ©n HidrÃ¡ulicas Kelley RAMPA NIVELADORA MECÃNICA BLUE GIANT,rampas-de-anden-hidraulicas-kelley.php,False,0.648,1,1,0.908,316,11.295,detalle-estatico
+139,Rampas de AndÃ©n HidrÃ¡ulicas Kelley RAMPA NIVELADORA MECÃNICA BLUE GIANT,rampa-niveladora.php,False,0.368,1,0,0.0,316,3.736,listado-estatico
+139,Rampas de AndÃ©n HidrÃ¡ulicas Kelley RAMPA NIVELADORA MECÃNICA BLUE GIANT,equipos-y-accesorios-para-anden-de-carga.php,False,0.259,1,0,0.0,316,3.518,listado-estatico
+139,Rampas de AndÃ©n HidrÃ¡ulicas Kelley RAMPA NIVELADORA MECÃNICA BLUE GIANT,kelley.php,False,0.156,1,0,0.0,316,3.312,listado-marca
+139,Rampas de AndÃ©n HidrÃ¡ulicas Kelley RAMPA NIVELADORA MECÃNICA BLUE GIANT,rampa-niveladora-mecanica-blue-giant.php,False,0.673,0,0,0.0,316,1.346,detalle-estatico
+140,RAMPA NIVELADORA MECÃNICA BLUE GIANT,rampa-niveladora-mecanica-blue-giant.php,True,1.0,0,1,0.998,418,12,detalle-estatico
+140,RAMPA NIVELADORA MECÃNICA BLUE GIANT,rampa-niveladora.php,False,0.615,0,0,0.0,418,1.231,listado-estatico
+141,Rampas de AndÃ©n HidrÃ¡ulicas,rampas-de-anden-hidraulicas.php,True,1.0,0,1,1.0,119,12,detalle-estatico
+141,Rampas de AndÃ©n HidrÃ¡ulicas,rampas-de-anden-hidraulicas-kelley.php,True,1.0,0,0,0.0,119,5,detalle-estatico
+141,Rampas de AndÃ©n HidrÃ¡ulicas,rampa-niveladora.php,False,0.419,1,0,0.0,119,3.837,listado-estatico
+141,Rampas de AndÃ©n HidrÃ¡ulicas,rampas-de-anden-mecanicas.php,False,0.808,0,0,0.496,119,3.615,detalle-estatico
+141,Rampas de AndÃ©n HidrÃ¡ulicas,dockman.php,False,0.176,1,0,0.0,119,3.353,listado-marca
+142,Rampas de AndÃ©n MecÃ¡nicas,rampas-de-anden-mecanicas.php,True,1.0,1,1,1.0,108,15,detalle-estatico
+142,Rampas de AndÃ©n MecÃ¡nicas,rampa-niveladora.php,False,0.439,1,0,0.0,108,3.878,listado-estatico
+142,Rampas de AndÃ©n MecÃ¡nicas,rampas-de-anden-hidraulicas.php,False,0.808,0,0,0.546,108,3.615,detalle-estatico
+142,Rampas de AndÃ©n MecÃ¡nicas,dockman.php,False,0.188,1,0,0.0,108,3.375,listado-marca
+142,Rampas de AndÃ©n MecÃ¡nicas,rampas-de-anden-hidraulicas-kelley.php,False,0.808,0,0,0.0,108,1.615,detalle-estatico
+143,Labio de elevaciÃ³n mecÃ¡nico Dockman,labio-de-elevacion-mecanico-dockman.php,True,1.0,2,1,1.0,69,18,detalle-estatico
+143,Labio de elevaciÃ³n mecÃ¡nico Dockman,labio-elevacion-anden-carga.php,False,0.679,1,0,0.0,69,4.358,listado-estatico
+143,Labio de elevaciÃ³n mecÃ¡nico Dockman,dockman.php,False,0.333,1,0,0.0,69,3.667,listado-marca
+143,Labio de elevaciÃ³n mecÃ¡nico Dockman,equipos-y-accesorios-para-anden-de-carga.php,False,0.327,1,0,0.0,69,3.653,listado-estatico
+143,Labio de elevaciÃ³n mecÃ¡nico Dockman,rampas-de-anden-mecanicas.php,False,0.676,0,0,0.072,69,1.353,detalle-estatico
+144,RETENEDOR DE VEHICULOS ( electrico) MOD HVR303 StrongArmâ„¢,retenedor-de-vehiculos.php,True,1.0,1,1,0.978,371,15,detalle-estatico
+144,RETENEDOR DE VEHICULOS ( electrico) MOD HVR303 StrongArmâ„¢,retenedor-vehiculos-hvr303.php,False,0.705,0,0,1.0,371,5.41,detalle-estatico
+144,RETENEDOR DE VEHICULOS ( electrico) MOD HVR303 StrongArmâ„¢,retenedores-de-vehiculos.php,False,0.571,1,0,0.0,371,4.143,listado-estatico
+144,RETENEDOR DE VEHICULOS ( electrico) MOD HVR303 StrongArmâ„¢,equipos-y-accesorios-para-anden-de-carga.php,False,0.299,1,0,0.0,371,3.597,listado-estatico
+144,RETENEDOR DE VEHICULOS ( electrico) MOD HVR303 StrongArmâ„¢,blue-giant.php,False,0.127,1,0,0.0,371,3.254,listado-marca
+145,RETENEDOR DE VEHICULOS STAR4,star4-vehicle-restraint.php,True,1.0,1,1,0.969,129,15,detalle-estatico
+145,RETENEDOR DE VEHICULOS STAR4,retenedores-de-vehiculos.php,False,0.846,1,0,0.0,129,4.692,listado-estatico
+145,RETENEDOR DE VEHICULOS STAR4,kelley.php,False,0.118,1,0,0.0,129,3.235,listado-marca
+145,RETENEDOR DE VEHICULOS STAR4,retenedor-de-vehiculos.php,False,0.88,0,0,0.0,129,1.76,detalle-estatico
+145,RETENEDOR DE VEHICULOS STAR4,retenedores-de-vehiculos-automatico.php,False,0.794,0,0,0.008,129,1.587,detalle-estatico
+146,RETENEDORES DE VEHICULOS AUTOMATICO STRONGARMâ„¢ HVR303,retenedor-vehiculos-hvr303.php,True,1.0,1,0,0.995,373,12,detalle-estatico
+146,RETENEDORES DE VEHICULOS AUTOMATICO STRONGARMâ„¢ HVR303,retenedor-de-vehiculos.php,False,0.705,0,0,0.973,373,5.41,detalle-estatico
+146,RETENEDORES DE VEHICULOS AUTOMATICO STRONGARMâ„¢ HVR303,retenedores-de-vehiculos.php,False,0.632,1,0,0.0,373,4.263,listado-estatico
+146,RETENEDORES DE VEHICULOS AUTOMATICO STRONGARMâ„¢ HVR303,retenedores-de-vehiculos-automatico.php,False,0.835,0,0,0.0,373,1.67,detalle-estatico
+146,RETENEDORES DE VEHICULOS AUTOMATICO STRONGARMâ„¢ HVR303,star4-vehicle-restraint.php,False,0.675,0,0,0.0,373,1.35,detalle-estatico
+147,SHELTER ABRIGO ESTACIONARIO Blue Giant,shelter-abrigo-estacionario-blue-giant.php,True,1.0,1,2,1.0,205,18,detalle-estatico
+147,SHELTER ABRIGO ESTACIONARIO Blue Giant,sellos-para-anden.php,False,0.291,1,0,0.0,205,3.582,listado-estatico
+148,SELLOS PARA ANDEN â€“ SHELTER DE SOPORTE FLEXIBLE,sellos-para-anden-shelter-de-soporte-flexible.php,True,1.0,1,0,1.0,100,12,detalle-estatico
+148,SELLOS PARA ANDEN â€“ SHELTER DE SOPORTE FLEXIBLE,sellos-para-anden.php,False,0.548,1,0,0.0,100,4.097,listado-estatico
+149,Sellos de AndÃ©n,sellos-de-anden.php,True,1.0,3,1,1.0,374,18,detalle-estatico
+149,Sellos de AndÃ©n,sellos-para-anden.php,False,0.812,1,0,0.0,374,4.625,listado-estatico
+149,Sellos de AndÃ©n,equipos-y-accesorios-para-anden-de-carga.php,False,0.4,1,0,0.0,374,3.8,listado-estatico
+149,Sellos de AndÃ©n,dockman.php,False,0.273,1,0,0.0,374,3.545,listado-marca
+150,Sellos Nacionales,sellos-nacionales.php,True,1.0,4,1,0.467,276,16,detalle-estatico
+150,Sellos Nacionales,sellos-para-anden.php,False,0.529,1,0,0.0,276,4.059,listado-estatico
