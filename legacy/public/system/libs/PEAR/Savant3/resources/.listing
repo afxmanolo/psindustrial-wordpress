@@ -1,0 +1,7 @@
+drwxr-xr-x    2 1033     1034         4096 Apr 22  2014 .
+drwxr-xr-x    3 1033     1034         4096 Apr 22  2014 ..
+-rw-r--r--    1 1033     1034         3314 Apr 22  2014 Savant3_Filter_trimwhitespace.php
+-rw-r--r--    1 1033     1034         2101 Apr 22  2014 Savant3_Plugin_ahref.php
+-rw-r--r--    1 1033     1034         2285 Apr 22  2014 Savant3_Plugin_date.php
+-rw-r--r--    1 1033     1034         1149 Apr 22  2014 Savant3_Plugin_htmlAttribs.php
+-rw-r--r--    1 1033     1034         4373 Apr 22  2014 Savant3_Plugin_image.php

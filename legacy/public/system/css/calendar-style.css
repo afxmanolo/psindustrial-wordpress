@@ -1,0 +1,107 @@
+/*
+	CALENDAR CSS
+*/
+a{
+text-decoration:none;
+color:#000;
+font-weight:normal;
+}
+.calendar{		
+	width: 190px;
+	
+	font-family:arial;
+	font-size:8pt;
+/*	*/
+	margin:0px;
+	border-collapse:collapse;
+
+	
+}
+/*Header*/
+.rowHeader{
+	border: none !important;
+	padding: 0px !important;
+
+}
+.calendar .header{	
+	background-color: #F29400;
+	color:#FFFFFF;
+	
+	font-family:arial;
+	font-size:8pt;
+	padding: 0;
+	margin:0px;
+	
+}
+.calendar .header .headerMonthRows td{background-color:#F29400;}
+
+.calendar .header td,.calendar .header td{
+	border: none;
+	font-weight:bold;
+	
+	background-color: #008FD1;
+	color:#FFFFFF;
+}
+.calendar .prev_month a, .calendar .next_month a{
+	color: #FFFFFF;
+
+}
+.calendar .prev_month a img, .calendar .next_month a img{
+	border: none;
+}
+
+.calendar .prev_month{	
+	text-align: right;	
+}
+.calendar .month{
+	width: 60%;
+	
+}
+
+.calendar .next_month{
+	text-align: left;	
+}
+
+.calendar th, .calendar td{
+	padding: 2px 4px;
+	text-align:center;
+	border: 1px solid #0487EF;
+}
+
+/*Days Names*/
+.calendar th{
+	background: #0487BD;
+	/*color:#666666;*/
+	color:#fff;
+	border: 1px solid #0487EF;
+}
+/*Days*/
+.calendar td{
+	margin: 2px 1px;	
+	background: #B0E8FF;
+	color: #000000;	
+}
+/*Weekends*/
+.calendar .weekend{
+	
+}
+/*Today*/
+.calendar .today{
+	font-size:bold;
+	color:#800000;
+}
+
+/*Events*/
+.calendar .event{
+	background:#51CFEF;
+	color:#000;
+	font-weight:bold;
+}
+
+/*Disbled*/
+.calendar .disabled{
+	/*background:#fbf3e5;*/
+	background: #B0E8FF;
+	color:#fff;
+
+} 

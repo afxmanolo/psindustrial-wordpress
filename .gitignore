@@ -1,0 +1,149 @@
+# =========================================================
+# WINDOWS / OS
+# =========================================================
+
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+
+# =========================================================
+# IDE / EDITORS
+# =========================================================
+
+.idea/
+.vscode/
+*.code-workspace
+
+
+# =========================================================
+# ENVIRONMENT / SECRETS
+# =========================================================
+
+.env
+.env.*
+!.env.example
+
+**/wp-config.php
+**/wp-config-*.php
+
+*.pem
+*.key
+
+
+# =========================================================
+# DATABASE DUMPS
+# =========================================================
+
+legacy/database/*.sql
+legacy/database/*.sql.gz
+legacy/database/*.zip
+
+*.sql
+*.sql.gz
+
+
+# =========================================================
+# BACKUPS
+# =========================================================
+
+backups/
+backup/
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+
+
+# =========================================================
+# LOGS
+# =========================================================
+
+*.log
+logs/
+
+
+# =========================================================
+# WORDPRESS
+#
+# WordPress core is installed locally but not versioned.
+# Only our custom theme/plugin code will be committed.
+# =========================================================
+
+/wordpress/*
+
+!/wordpress/wp-content/
+
+/wordpress/wp-content/*
+
+!/wordpress/wp-content/themes/
+!/wordpress/wp-content/plugins/
+!/wordpress/wp-content/mu-plugins/
+
+
+# Themes: ignore everything except ours
+
+/wordpress/wp-content/themes/*
+
+!/wordpress/wp-content/themes/psindustrial/
+
+
+# Plugins: ignore everything except ours
+
+/wordpress/wp-content/plugins/*
+
+!/wordpress/wp-content/plugins/psindustrial-core/
+
+
+# MU plugins
+
+/wordpress/wp-content/mu-plugins/*
+
+!/wordpress/wp-content/mu-plugins/psindustrial-loader.php
+
+
+# =========================================================
+# WORDPRESS GENERATED CONTENT
+# =========================================================
+
+/wordpress/wp-content/uploads/
+/wordpress/wp-content/cache/
+/wordpress/wp-content/upgrade/
+/wordpress/wp-content/languages/
+/wordpress/wp-content/backups/
+/wordpress/wp-content/ai1wm-backups/
+
+
+# =========================================================
+# PHP / COMPOSER
+# =========================================================
+
+vendor/
+
+
+# =========================================================
+# NODE
+# =========================================================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# =========================================================
+# TEST OUTPUT
+# =========================================================
+
+coverage/
+.phpunit.result.cache
+
+
+# =========================================================
+# TEMP
+# =========================================================
+
+*.tmp
+*.temp
+~*

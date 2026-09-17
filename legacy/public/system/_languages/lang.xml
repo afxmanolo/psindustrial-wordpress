@@ -1,0 +1,906 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<!-- 
+	(f) femenine
+	(p) plural
+	(n) noun
+	(h) homonym
+ -->
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres" segtype="sentence" adminlang="en-us" srclang="en-us" o-tmf="abc" creationtool="XYZTool" >
+	</header>
+	<body>
+		<tu tuid='a'>
+			<tuv xml:lang="en"><seg>a</seg></tuv>
+			<tuv xml:lang="es"><seg>un</seg></tuv>
+		</tu>
+		<tu tuid='a(f)'>
+			<tuv xml:lang="en"><seg>a</seg></tuv>
+			<tuv xml:lang="es"><seg>una</seg></tuv>
+		</tu>
+		<tu tuid='a(n)'>
+			<tuv xml:lang="en"><seg>a</seg></tuv>
+			<tuv xml:lang="es"><seg>uno</seg></tuv>
+		</tu>
+		<tu tuid='access'>
+			<tuv xml:lang="en"><seg>Access</seg></tuv>
+			<tuv xml:lang="es"><seg>Entrar</seg></tuv>
+		</tu>
+		<tu tuid='access_attempts_recorded'>
+			<tuv xml:lang="en"><seg>All access attempts will be recorded for security purposes</seg></tuv>
+			<tuv xml:lang="es"><seg>Todos los intentos serán guardados por motivos de seguridad</seg></tuv>
+		</tu>
+		<tu tuid='account'>
+			<tuv xml:lang="en"><seg>Account</seg></tuv>
+			<tuv xml:lang="es"><seg>Cuenta</seg></tuv>
+		</tu>
+		<tu tuid='account_information'>
+			<tuv xml:lang="en"><seg>Account Information</seg></tuv>
+			<tuv xml:lang="es"><seg>Información de Cuenta</seg></tuv>
+		</tu>
+		<tu tuid='actions'>
+			<tuv xml:lang="en"><seg>Actions</seg></tuv>
+			<tuv xml:lang="es"><seg>Acciones</seg></tuv>
+		</tu>
+		<tu tuid='active'>
+			<tuv xml:lang="en"><seg>Active</seg></tuv>
+			<tuv xml:lang="es"><seg>Activo</seg></tuv>
+		</tu>
+		<tu tuid='add'>
+			<tuv xml:lang="en"><seg>Add</seg></tuv>
+			<tuv xml:lang="es"><seg>Agregar</seg></tuv>
+		</tu>
+		<tu tuid='added'>
+			<tuv xml:lang="en"><seg>Added</seg></tuv>
+			<tuv xml:lang="es"><seg>Agregado</seg></tuv>
+		</tu>
+		<tu tuid='added(f)'>
+			<tuv xml:lang="en"><seg>Added</seg></tuv>
+			<tuv xml:lang="es"><seg>Agregada</seg></tuv>
+		</tu>
+		<tu tuid='additional_files_will_not_be_uploaded'>
+			<tuv xml:lang="en"><seg>The additional files will not be uploaded to the server</seg></tuv>
+			<tuv xml:lang="es"><seg>Los archivos que intente cargar adicionalmente no se subirán al servidor</seg></tuv>
+		</tu>
+		<tu tuid='additional_registers_will_not_be_uploaded'>
+			<tuv xml:lang="en"><seg>The additional registers will not be uploaded to the server</seg></tuv>
+			<tuv xml:lang="es"><seg>Los registros que intente cargar adicionalmente no se subirán al servidor</seg></tuv>
+		</tu>
+		<tu tuid='address'>
+			<tuv xml:lang="en"><seg>Address</seg></tuv>
+			<tuv xml:lang="es"><seg>Domicilio</seg></tuv>
+		</tu>
+		<tu tuid='address_information'>
+			<tuv xml:lang="en"><seg>Address Information</seg></tuv>
+			<tuv xml:lang="es"><seg>Información de Domicilio</seg></tuv>
+		</tu>
+		<tu tuid='administration_panel'>
+			<tuv xml:lang="en"><seg>Administration Panel</seg></tuv>
+			<tuv xml:lang="es"><seg>Panel de Administración</seg></tuv>
+		</tu>
+		<tu tuid='all_rights_reserved'>
+			<tuv xml:lang="en"><seg>All Rights Reserved</seg></tuv>
+			<tuv xml:lang="es"><seg>Todos los derechos reservados</seg></tuv>
+		</tu>
+		<tu tuid='and'>
+			<tuv xml:lang="en"><seg>and</seg></tuv>
+			<tuv xml:lang="es"><seg>y</seg></tuv>
+		</tu>
+		<tu tuid='any_comment_contact_us_msg'>
+			<tuv xml:lang="en"><seg>Any doubt or comment, you can contact us</seg></tuv>
+			<tuv xml:lang="es"><seg>Cualquier duda o comentario, puede contactarnos</seg></tuv>
+		</tu>
+		<tu tuid='associate'>
+			<tuv xml:lang="en"><seg>Associate</seg></tuv>
+			<tuv xml:lang="es"><seg>Asociar</seg></tuv>
+		</tu>
+		<tu tuid='associated_to'>
+			<tuv xml:lang="en"><seg>Associated to</seg></tuv>
+			<tuv xml:lang="es"><seg>Asociado a</seg></tuv>
+		</tu>
+		<tu tuid='associated_to(f)'>
+			<tuv xml:lang="en"><seg>Associated to</seg></tuv>
+			<tuv xml:lang="es"><seg>Asociada a</seg></tuv>
+		</tu>
+		<tu tuid='associated_to(p)'>
+			<tuv xml:lang="en"><seg>Associated to</seg></tuv>
+			<tuv xml:lang="es"><seg>Asociados a</seg></tuv>
+		</tu>
+		<tu tuid='associated_to(pf)'>
+			<tuv xml:lang="en"><seg>Associated to</seg></tuv>
+			<tuv xml:lang="es"><seg>Asociadas a</seg></tuv>
+		</tu>
+		<tu tuid='appearance_order'>
+			<tuv xml:lang="en"><seg>Appearance Order</seg></tuv>
+			<tuv xml:lang="es"><seg>Orden de Aparición</seg></tuv>
+		</tu>
+		<tu tuid='artist'>
+			<tuv xml:lang="en"><seg>Artist</seg></tuv>
+			<tuv xml:lang="es"><seg>Artista</seg></tuv>
+		</tu>
+		<tu tuid='attribute'>
+			<tuv xml:lang="en"><seg>Attribute</seg></tuv>
+			<tuv xml:lang="es"><seg>Atributo</seg></tuv>
+		</tu>
+		<tu tuid='author'>
+			<tuv xml:lang="en"><seg>Author</seg></tuv>
+			<tuv xml:lang="es"><seg>Autor</seg></tuv>
+		</tu>
+		<tu tuid='authorized_access_only'>
+			<tuv xml:lang="en"><seg>Authorized Access Only</seg></tuv>
+			<tuv xml:lang="es"><seg>Sólo Acceso Autorizado</seg></tuv>
+		</tu>
+		<tu tuid='brand'>
+			<tuv xml:lang="en"><seg>Brand</seg></tuv>
+			<tuv xml:lang="es"><seg>Marca</seg></tuv>
+		</tu>
+		<tu tuid='cancel'>
+			<tuv xml:lang="en"><seg>Cancel</seg></tuv>
+			<tuv xml:lang="es"><seg>Cancelar</seg></tuv>
+		</tu>
+		<tu tuid='catalog'>
+			<tuv xml:lang="en"><seg>Catalog</seg></tuv>
+			<tuv xml:lang="es"><seg>Catálogo</seg></tuv>
+		</tu>
+		<tu tuid='categories'>
+			<tuv xml:lang="en"><seg>Categories</seg></tuv>
+			<tuv xml:lang="es"><seg>Categorías</seg></tuv>
+		</tu>
+		<tu tuid='category'>
+			<tuv xml:lang="en"><seg>Category</seg></tuv>
+			<tuv xml:lang="es"><seg>Categoría</seg></tuv>
+		</tu>
+		<tu tuid='clear'>
+			<tuv xml:lang="en"><seg>Clear</seg></tuv>
+			<tuv xml:lang="es"><seg>Limpiar</seg></tuv>
+		</tu>
+		<tu tuid='client'>
+			<tuv xml:lang="en"><seg>Client</seg></tuv>
+			<tuv xml:lang="es"><seg>Cliente</seg></tuv>
+		</tu>
+		<tu tuid='city'>
+			<tuv xml:lang="en"><seg>City</seg></tuv>
+			<tuv xml:lang="es"><seg>Ciudad</seg></tuv>
+		</tu>
+		<tu tuid='colors'>
+			<tuv xml:lang="en"><seg>Colors</seg></tuv>
+			<tuv xml:lang="es"><seg>Colores</seg></tuv>
+		</tu>
+		<tu tuid='confirm'>
+			<tuv xml:lang="en"><seg>Confirm</seg></tuv>
+			<tuv xml:lang="es"><seg>Confirmar</seg></tuv>
+		</tu>
+		<tu tuid='confirm_password_match_up_msg'>
+			<tuv xml:lang="en"><seg>Passwords must match up</seg></tuv>
+			<tuv xml:lang="es"><seg>Las contraseñas deben coincidir</seg></tuv>
+		</tu>
+		<tu tuid='confirm_password_required_msg'>
+			<tuv xml:lang="en"><seg>Please repeat your password</seg></tuv>
+			<tuv xml:lang="es"><seg>Por favor repita su contraseña</seg></tuv>
+		</tu>
+		<tu tuid='contact_method'>
+			<tuv xml:lang="en"><seg>Contact Method</seg></tuv>
+			<tuv xml:lang="es"><seg>Manera de Contactarlo</seg></tuv>
+		</tu>
+		<tu tuid='content'>
+			<tuv xml:lang="en"><seg>Content</seg></tuv>
+			<tuv xml:lang="es"><seg>Contenido</seg></tuv>
+		</tu>
+		<tu tuid='country'>
+			<tuv xml:lang="en"><seg>Country</seg></tuv>
+			<tuv xml:lang="es"><seg>País</seg></tuv>
+		</tu>
+		<tu tuid='create'>
+			<tuv xml:lang="en"><seg>Create</seg></tuv>
+			<tuv xml:lang="es"><seg>Crear</seg></tuv>
+		</tu>
+		<tu tuid='customer'>
+			<tuv xml:lang="en"><seg>Customer</seg></tuv>
+			<tuv xml:lang="es"><seg>Cliente</seg></tuv>
+		</tu>
+		<tu tuid='currency'>
+			<tuv xml:lang="en"><seg>Currency</seg></tuv>
+			<tuv xml:lang="es"><seg>Moneda</seg></tuv>
+		</tu>
+		<tu tuid='current_image'>
+			<tuv xml:lang="en"><seg>Current Image</seg></tuv>
+			<tuv xml:lang="es"><seg>Imagen Actual</seg></tuv>
+		</tu>
+		<tu tuid='date'>
+			<tuv xml:lang="en"><seg>Date</seg></tuv>
+			<tuv xml:lang="es"><seg>Fecha</seg></tuv>
+		</tu>
+		<tu tuid='delete'>
+			<tuv xml:lang="en"><seg>Delete</seg></tuv>
+			<tuv xml:lang="es"><seg>Eliminar</seg></tuv>
+		</tu>
+		<tu tuid='deleted'>
+			<tuv xml:lang="en"><seg>Deleted</seg></tuv>
+			<tuv xml:lang="es"><seg>Eliminado</seg></tuv>
+		</tu>
+		<tu tuid='deleted(f)'>
+			<tuv xml:lang="en"><seg>Deleted</seg></tuv>
+			<tuv xml:lang="es"><seg>Eliminada</seg></tuv>
+		</tu>
+		<tu tuid='description'>
+			<tuv xml:lang="en"><seg>Description</seg></tuv>
+			<tuv xml:lang="es"><seg>Descripción</seg></tuv>
+		</tu>
+		<tu tuid='dimension'>
+			<tuv xml:lang="en"><seg>Dimension</seg></tuv>
+			<tuv xml:lang="es"><seg>Dimensión</seg></tuv>
+		</tu>
+		<tu tuid='dimensions'>
+			<tuv xml:lang="en"><seg>Dimensions</seg></tuv>
+			<tuv xml:lang="es"><seg>Dimensiones</seg></tuv>
+		</tu>
+		<tu tuid='discount'>
+			<tuv xml:lang="en"><seg>Discount</seg></tuv>
+			<tuv xml:lang="es"><seg>Descuento</seg></tuv>
+		</tu>
+		<tu tuid='doesnt_exist'>
+			<tuv xml:lang="en"><seg>Doesn't Exists</seg></tuv>
+			<tuv xml:lang="es"><seg>No existe</seg></tuv>
+		</tu>
+		<tu tuid='dont_exist'>
+			<tuv xml:lang="en"><seg>Don't Exist</seg></tuv>
+			<tuv xml:lang="es"><seg>No existen</seg></tuv>
+		</tu>
+		<tu tuid='edit'>
+			<tuv xml:lang="en"><seg>Edit</seg></tuv>
+			<tuv xml:lang="es"><seg>Editar</seg></tuv>
+		</tu>
+		<tu tuid='email_already_chosen_msg'>
+			<tuv xml:lang="en"><seg>Email already chosen by other user. Please use another</seg></tuv>
+			<tuv xml:lang="es"><seg>Email ya elegido por otro usuario. Por favor use otro</seg></tuv>
+		</tu>
+		<tu tuid='EN_name'>
+			<tuv xml:lang="en"><seg>English</seg></tuv>
+			<tuv xml:lang="es"><seg>Inglés</seg></tuv>
+		</tu>
+		<tu tuid='english'>
+			<tuv xml:lang="en"><seg>English</seg></tuv>
+			<tuv xml:lang="es"><seg>Inglés</seg></tuv>
+		</tu>
+		<tu tuid='enter_phone_contact_method_msg'>
+			<tuv xml:lang="en"><seg>Enter a phone number or select Email as contact method</seg></tuv>
+			<tuv xml:lang="es"><seg>Ingrese un número telefónico o seleccione Email como manera de contactarlo</seg></tuv>
+		</tu>
+		<tu tuid='event'>
+			<tuv xml:lang="en"><seg>Event</seg></tuv>
+			<tuv xml:lang="es"><seg>Evento</seg></tuv>
+		</tu>
+		<tu tuid='events'>
+			<tuv xml:lang="en"><seg>Events</seg></tuv>
+			<tuv xml:lang="es"><seg>Eventos</seg></tuv>
+		</tu>
+		<tu tuid='exclusive_zone'>
+			<tuv xml:lang="en"><seg>Exclusive Zone</seg></tuv>
+			<tuv xml:lang="es"><seg>Zona Exclusiva</seg></tuv>
+		</tu>
+		<tu tuid='export_to'>
+			<tuv xml:lang="en"><seg>Export to</seg></tuv>
+			<tuv xml:lang="es"><seg>Exportar a</seg></tuv>
+		</tu>
+		<tu tuid='field'>
+			<tuv xml:lang="en"><seg>Field</seg></tuv>
+			<tuv xml:lang="es"><seg>Campo</seg></tuv>
+		</tu>
+		<tu tuid='file'>
+			<tuv xml:lang="en"><seg>File</seg></tuv>
+			<tuv xml:lang="es"><seg>Archivo</seg></tuv>
+		</tu>
+		<tu tuid='file(p)'>
+			<tuv xml:lang="en"><seg>Files</seg></tuv>
+			<tuv xml:lang="es"><seg>Archivos</seg></tuv>
+		</tu>
+		<tu tuid='finished'>
+			<tuv xml:lang="en"><seg>Finished</seg></tuv>
+			<tuv xml:lang="es"><seg>Acabado</seg></tuv>
+		</tu>
+		<tu tuid='first'>
+			<tuv xml:lang="en"><seg>First</seg></tuv>
+			<tuv xml:lang="es"><seg>Primer</seg></tuv>
+		</tu>
+		<tu tuid='first(f)'>
+			<tuv xml:lang="en"><seg>First</seg></tuv>
+			<tuv xml:lang="es"><seg>Primera</seg></tuv>
+		</tu>
+		<tu tuid='for'>
+			<tuv xml:lang="en"><seg>for</seg></tuv>
+			<tuv xml:lang="es"><seg>para</seg></tuv>
+		</tu>
+		<tu tuid='from'>
+			<tuv xml:lang="en"><seg>from</seg></tuv>
+			<tuv xml:lang="es"><seg>de</seg></tuv>
+		</tu>
+		<tu tuid='from_the'>
+			<tuv xml:lang="en"><seg>from the</seg></tuv>
+			<tuv xml:lang="es"><seg>del</seg></tuv>
+		</tu>
+		<tu tuid='first_name'>
+			<tuv xml:lang="en"><seg>First Name</seg></tuv>
+			<tuv xml:lang="es"><seg>Nombre</seg></tuv>
+		</tu>
+		<tu tuid='general_information'>
+			<tuv xml:lang="en"><seg>General Information</seg></tuv>
+			<tuv xml:lang="es"><seg>Información General</seg></tuv>
+		</tu>
+		<tu tuid='go'>
+			<tuv xml:lang="en"><seg>Go</seg></tuv>
+			<tuv xml:lang="es"><seg>Ir</seg></tuv>
+		</tu>
+		<tu tuid='go_back_to_parent_category'>
+			<tuv xml:lang="en"><seg>Go Back to Parent Category</seg></tuv>
+			<tuv xml:lang="es"><seg>Regresar a la Categoría Padre</seg></tuv>
+		</tu>
+		<tu tuid='has_been'>
+			<tuv xml:lang="en"><seg>has been</seg></tuv>
+			<tuv xml:lang="es"><seg>ha sido</seg></tuv>
+		</tu>
+		<tu tuid='home'>
+			<tuv xml:lang="en"><seg>Home</seg></tuv>
+			<tuv xml:lang="es"><seg>Inicio</seg></tuv>
+		</tu>
+		<tu tuid='hour'>
+			<tuv xml:lang="en"><seg>Hour</seg></tuv>
+			<tuv xml:lang="es"><seg>Hora</seg></tuv>
+		</tu>
+		<tu tuid='image'>
+			<tuv xml:lang="en"><seg>Image</seg></tuv>
+			<tuv xml:lang="es"><seg>Imagen</seg></tuv>
+		</tu>
+		<tu tuid='images'>
+			<tuv xml:lang="en"><seg>Images</seg></tuv>
+			<tuv xml:lang="es"><seg>Imágenes</seg></tuv>
+		</tu>
+		<tu tuid='in'>
+			<tuv xml:lang="en"><seg>in</seg></tuv>
+			<tuv xml:lang="es"><seg>en</seg></tuv>
+		</tu>
+		<tu tuid='inactive'>
+			<tuv xml:lang="en"><seg>Inactive</seg></tuv>
+			<tuv xml:lang="es"><seg>Inactivo</seg></tuv>
+		</tu>
+		<tu tuid='incorrect'>
+			<tuv xml:lang="en"><seg>Incorrect</seg></tuv>
+			<tuv xml:lang="es"><seg>Incorrecto</seg></tuv>
+		</tu>
+		<tu tuid='incorrect(f)'>
+			<tuv xml:lang="en"><seg>Incorrect</seg></tuv>
+			<tuv xml:lang="es"><seg>Incorrecta</seg></tuv>
+		</tu>
+		<tu tuid='information'>
+			<tuv xml:lang="en"><seg>Information</seg></tuv>
+			<tuv xml:lang="es"><seg>Información</seg></tuv>
+		</tu>
+		<tu tuid='integer_number_equal_greater_n_msg'>
+			<tuv xml:lang="en"><seg>must be an integer number equal or greater than {n}</seg></tuv>
+			<tuv xml:lang="es"><seg>debe ser un número entero igual o mayor a {n}</seg></tuv>
+		</tu>
+		<tu tuid='inventory'>
+			<tuv xml:lang="en"><seg>Inventory</seg></tuv>
+			<tuv xml:lang="es"><seg>Inventario</seg></tuv>
+		</tu>
+		<tu tuid='is'>
+			<tuv xml:lang="en"><seg>is</seg></tuv>
+			<tuv xml:lang="es"><seg>es</seg></tuv>
+		</tu>
+		<tu tuid='is_required_msg'>
+			<tuv xml:lang="en"><seg>is required and cannot be empty</seg></tuv>
+			<tuv xml:lang="es"><seg>es obligatorio y no puede ir vacío</seg></tuv>
+		</tu>
+		<tu tuid='is_required_msg(f)'>
+			<tuv xml:lang="en"><seg>is required and cannot be empty</seg></tuv>
+			<tuv xml:lang="es"><seg>es obligatoria y no puede ir vacía</seg></tuv>
+		</tu>
+		<tu tuid='is_required_msg(p)'>
+			<tuv xml:lang="en"><seg>are required and cannot be empty</seg></tuv>
+			<tuv xml:lang="es"><seg>son obligatorios y no pueden ir vacíos</seg></tuv>
+		</tu>
+		<tu tuid='is_required_msg(pf)'>
+			<tuv xml:lang="en"><seg>are required and cannot be empty</seg></tuv>
+			<tuv xml:lang="es"><seg>son obligatorias y no pueden ir vacías</seg></tuv>
+		</tu>
+		<tu tuid='language'>
+			<tuv xml:lang="en"><seg>Language</seg></tuv>
+			<tuv xml:lang="es"><seg>Idioma</seg></tuv>
+		</tu>
+		<tu tuid='last'>
+			<tuv xml:lang="en"><seg>Last</seg></tuv>
+			<tuv xml:lang="es"><seg>Último</seg></tuv>
+		</tu>
+		<tu tuid='last(f)'>
+			<tuv xml:lang="en"><seg>Last</seg></tuv>
+			<tuv xml:lang="es"><seg>Última</seg></tuv>
+		</tu>
+		<tu tuid='last_name'>
+			<tuv xml:lang="en"><seg>Last Name</seg></tuv>
+			<tuv xml:lang="es"><seg>Apellido(s)</seg></tuv>
+		</tu>
+		<tu tuid='line'>
+			<tuv xml:lang="en"><seg>Line</seg></tuv>
+			<tuv xml:lang="es"><seg>Línea</seg></tuv>
+		</tu>
+		<tu tuid='logout'>
+			<tuv xml:lang="en"><seg>Logout</seg></tuv>
+			<tuv xml:lang="es"><seg>Cerrar Sesión</seg></tuv>
+		</tu>
+		<tu tuid='long_description'>
+			<tuv xml:lang="en"><seg>Long Description</seg></tuv>
+			<tuv xml:lang="es"><seg>Descripción Larga</seg></tuv>
+		</tu>
+		<tu tuid='main'>
+			<tuv xml:lang="en"><seg>Main</seg></tuv>
+			<tuv xml:lang="es"><seg>Principal</seg></tuv>
+		</tu>
+		<tu tuid='main_image'>
+			<tuv xml:lang="en"><seg>Main Image</seg></tuv>
+			<tuv xml:lang="es"><seg>Imagen Principal</seg></tuv>
+		</tu>
+		<tu tuid='manage'>
+			<tuv xml:lang="en"><seg>Manage</seg></tuv>
+			<tuv xml:lang="es"><seg>Administrar</seg></tuv>
+		</tu>
+		<tu tuid='materials'>
+			<tuv xml:lang="en"><seg>Materials</seg></tuv>
+			<tuv xml:lang="es"><seg>Materiales</seg></tuv>
+		</tu>
+		<tu tuid='max_number_of_files'>
+			<tuv xml:lang="en"><seg>Maximum Number of Files</seg></tuv>
+			<tuv xml:lang="es"><seg>Número Máximo de Archivos</seg></tuv>
+		</tu>
+		<tu tuid='media_gallery'>
+			<tuv xml:lang="en"><seg>Media Gallery</seg></tuv>
+			<tuv xml:lang="es"><seg>Galería Multimedia</seg></tuv>
+		</tu>
+		<tu tuid='minute'>
+			<tuv xml:lang="en"><seg>Minute</seg></tuv>
+			<tuv xml:lang="es"><seg>Minuto</seg></tuv>
+		</tu>
+		<tu tuid='more'>
+			<tuv xml:lang="en"><seg>More</seg></tuv>
+			<tuv xml:lang="es"><seg>Más</seg></tuv>
+		</tu>
+		<tu tuid='n_characters_minimum_msg'>
+			<tuv xml:lang="en"><seg>must be {n} characters length minimum</seg></tuv>
+			<tuv xml:lang="es"><seg>debe tener mínimo {n} caracteres</seg></tuv>
+		</tu>
+		<tu tuid='name'>
+			<tuv xml:lang="en"><seg>Name</seg></tuv>
+			<tuv xml:lang="es"><seg>Nombre</seg></tuv>
+		</tu>
+		<tu tuid='new'>
+			<tuv xml:lang="en"><seg>New</seg></tuv>
+			<tuv xml:lang="es"><seg>Nuevo</seg></tuv>
+		</tu>
+		<tu tuid='new(h)'>
+			<tuv xml:lang="en"><seg>New</seg></tuv>
+			<tuv xml:lang="es"><seg>Noticia</seg></tuv>
+		</tu>
+		<tu tuid='new(f)'>
+			<tuv xml:lang="en"><seg>New</seg></tuv>
+			<tuv xml:lang="es"><seg>Nueva</seg></tuv>
+		</tu>
+		<tu tuid='news'>
+			<tuv xml:lang="en"><seg>News</seg></tuv>
+			<tuv xml:lang="es"><seg>Noticias</seg></tuv>
+		</tu>
+		<tu tuid='next'>
+			<tuv xml:lang="en"><seg>Next</seg></tuv>
+			<tuv xml:lang="es"><seg>Siguiente</seg></tuv>
+		</tu>
+		<tu tuid='no_files_assigned_to_register'>
+			<tuv xml:lang="en"><seg>There are no files assigned to this register</seg></tuv>
+			<tuv xml:lang="es"><seg>No hay archivos asignados a este registro</seg></tuv>
+		</tu>
+		<tu tuid='no_values_assigned_to_register'>
+			<tuv xml:lang="en"><seg>There are no values assigned to this register</seg></tuv>
+			<tuv xml:lang="es"><seg>No hay valores asignados a este registro</seg></tuv>
+		</tu>
+		<tu tuid='no_html_tags_msg'>
+			<tuv xml:lang="en"><seg>cannot contain HTML tags</seg></tuv>
+			<tuv xml:lang="es"><seg>no puede contener etiquetas HTML</seg></tuv>
+		</tu>
+		<tu tuid='no_html_tags_msg(p)'>
+			<tuv xml:lang="en"><seg>cannot contain HTML tags</seg></tuv>
+			<tuv xml:lang="es"><seg>no pueden contener etiquetas HTML</seg></tuv>
+		</tu>
+		<tu tuid='no_records_to_display'>
+			<tuv xml:lang="en"><seg>There are no records to display</seg></tuv>
+			<tuv xml:lang="es"><seg>No hay registros que mostrar</seg></tuv>
+		</tu>
+		<tu tuid='not_enough_information'>
+			<tuv xml:lang="en"><seg>There is not enought information</seg></tuv>
+			<tuv xml:lang="es"><seg>No hay suficiente información</seg></tuv>
+		</tu>
+		<tu tuid='not_valid_msg'>
+			<tuv xml:lang="en"><seg>is not valid</seg></tuv>
+			<tuv xml:lang="es"><seg>no es válido</seg></tuv>
+		</tu>
+		<tu tuid='not_valid_msg(f)'>
+			<tuv xml:lang="en"><seg>is not valid</seg></tuv>
+			<tuv xml:lang="es"><seg>no es válida</seg></tuv>
+		</tu>
+		<tu tuid='number'>
+			<tuv xml:lang="en"><seg>Number</seg></tuv>
+			<tuv xml:lang="es"><seg>Número</seg></tuv>
+		</tu>
+		<tu tuid='number_equal_greater_n_msg'>
+			<tuv xml:lang="en"><seg>must be a number equal or greater than {n}</seg></tuv>
+			<tuv xml:lang="es"><seg>debe ser un número igual o mayor a {n}</seg></tuv>
+		</tu>
+		<tu tuid='number_between_m_and_n_msg'>
+			<tuv xml:lang="en"><seg>must be a number between {m} and {n}</seg></tuv>
+			<tuv xml:lang="es"><seg>debe ser un número entre {m} y {n}</seg></tuv>
+		</tu>
+		<tu tuid='n-character_code_msg'>
+			<tuv xml:lang="en"><seg>must be a {n} character code</seg></tuv>
+			<tuv xml:lang="es"><seg>debe ser código de {n} caracteres</seg></tuv>
+		</tu>
+		<tu tuid='of'>
+			<tuv xml:lang="en"><seg>of</seg></tuv>
+			<tuv xml:lang="es"><seg>de</seg></tuv>
+		</tu>
+		<tu tuid='of_the'>
+			<tuv xml:lang="en"><seg>of the</seg></tuv>
+			<tuv xml:lang="es"><seg>del</seg></tuv>
+		</tu>
+		<tu tuid='order'>
+			<tuv xml:lang="en"><seg>Order</seg></tuv>
+			<tuv xml:lang="es"><seg>Orden</seg></tuv>
+		</tu>
+		<tu tuid='orders'>
+			<tuv xml:lang="en"><seg>Orders</seg></tuv>
+			<tuv xml:lang="es"><seg>Órdenes</seg></tuv>
+		</tu>
+		<tu tuid='other_language'>
+			<tuv xml:lang="en"><seg>Other Language</seg></tuv>
+			<tuv xml:lang="es"><seg>Otro Idioma</seg></tuv>
+		</tu>
+		<tu tuid='other_languages'>
+			<tuv xml:lang="en"><seg>Other Languages</seg></tuv>
+			<tuv xml:lang="es"><seg>Otros Idiomas</seg></tuv>
+		</tu>
+		<tu tuid='page'>
+			<tuv xml:lang="en"><seg>Page</seg></tuv>
+			<tuv xml:lang="es"><seg>Página</seg></tuv>
+		</tu>
+		<tu tuid='parent'>
+			<tuv xml:lang="en"><seg>Parent</seg></tuv>
+			<tuv xml:lang="es"><seg>Padre</seg></tuv>
+		</tu>
+		<tu tuid='parent_category'>
+			<tuv xml:lang="en"><seg>Parent Category</seg></tuv>
+			<tuv xml:lang="es"><seg>Categoría Padre</seg></tuv>
+		</tu>
+		<tu tuid='password'>
+			<tuv xml:lang="en"><seg>Password</seg></tuv>
+			<tuv xml:lang="es"><seg>Contraseña</seg></tuv>
+		</tu>
+		<tu tuid='password_recovery'>
+			<tuv xml:lang="en"><seg>Password Recovery</seg></tuv>
+			<tuv xml:lang="es"><seg>Recuperación de Contraseña</seg></tuv>
+		</tu>
+		<tu tuid='password_sent_msg'>
+			<tuv xml:lang="en"><seg>Your password was sent to your email</seg></tuv>
+			<tuv xml:lang="es"><seg>Su password fue enviado a su correo electrónico</seg></tuv>
+		</tu>
+		<tu tuid='personal_information'>
+			<tuv xml:lang="en"><seg>Personal Information</seg></tuv>
+			<tuv xml:lang="es"><seg>Información Personal</seg></tuv>
+		</tu>
+		<tu tuid='phone'>
+			<tuv xml:lang="en"><seg>Phone</seg></tuv>
+			<tuv xml:lang="es"><seg>Teléfono</seg></tuv>
+		</tu>
+		<tu tuid='phone_number'>
+			<tuv xml:lang="en"><seg>Phone Number</seg></tuv>
+			<tuv xml:lang="es"><seg>Teléfono</seg></tuv>
+		</tu>
+		<tu tuid='photo'>
+			<tuv xml:lang="en"><seg>Photo</seg></tuv>
+			<tuv xml:lang="es"><seg>Foto</seg></tuv>
+		</tu>
+		<tu tuid='photo(p)'>
+			<tuv xml:lang="en"><seg>Photos</seg></tuv>
+			<tuv xml:lang="es"><seg>Fotos</seg></tuv>
+		</tu>
+		<tu tuid='photogallery'>
+			<tuv xml:lang="en"><seg>Photogallery</seg></tuv>
+			<tuv xml:lang="es"><seg>Fotogalería</seg></tuv>
+		</tu>
+		<tu tuid='photogallery(p)'>
+			<tuv xml:lang="en"><seg>Photogalleries</seg></tuv>
+			<tuv xml:lang="es"><seg>Fotogalerías</seg></tuv>
+		</tu>
+		<tu tuid='previous'>
+			<tuv xml:lang="en"><seg>Previous</seg></tuv>
+			<tuv xml:lang="es"><seg>Anterior</seg></tuv>
+		</tu>
+		<tu tuid='price'>
+			<tuv xml:lang="en"><seg>Price</seg></tuv>
+			<tuv xml:lang="es"><seg>Precio</seg></tuv>
+		</tu>
+		<tu tuid='product'>
+			<tuv xml:lang="en"><seg>Product</seg></tuv>
+			<tuv xml:lang="es"><seg>Producto</seg></tuv>
+		</tu>
+		<tu tuid='product_image'>
+			<tuv xml:lang="en"><seg>Product Image</seg></tuv>
+			<tuv xml:lang="es"><seg>Imagen del Producto</seg></tuv>
+		</tu>
+		<tu tuid='profile_id'>
+			<tuv xml:lang="en"><seg>Profile ID</seg></tuv>
+			<tuv xml:lang="es"><seg>ID del Perfil</seg></tuv>
+		</tu>
+		<tu tuid='recently_created_entry'>
+			<tuv xml:lang="en"><seg>The recently created entry</seg></tuv>
+			<tuv xml:lang="es"><seg>La entrada recién creada</seg></tuv>
+		</tu>
+		<tu tuid='register'>
+			<tuv xml:lang="en"><seg>Register</seg></tuv>
+			<tuv xml:lang="es"><seg>Registrarse</seg></tuv>
+		</tu>
+		<tu tuid='register(h)'>
+			<tuv xml:lang="en"><seg>Register</seg></tuv>
+			<tuv xml:lang="es"><seg>Registro</seg></tuv>
+		</tu>
+		<tu tuid='register(h)(p)'>
+			<tuv xml:lang="en"><seg>Registers</seg></tuv>
+			<tuv xml:lang="es"><seg>Registros</seg></tuv>
+		</tu>
+		<tu tuid='related'>
+			<tuv xml:lang="en"><seg>Related</seg></tuv>
+			<tuv xml:lang="es"><seg>Relacionadas</seg></tuv>
+		</tu>
+		<tu tuid='required'>
+			<tuv xml:lang="en"><seg>Required</seg></tuv>
+			<tuv xml:lang="es"><seg>Requerido</seg></tuv>
+		</tu>
+		<tu tuid='required(f)'>
+			<tuv xml:lang="en"><seg>Required</seg></tuv>
+			<tuv xml:lang="es"><seg>Requerida</seg></tuv>
+		</tu>
+		<tu tuid='required(p)'>
+			<tuv xml:lang="en"><seg>Required</seg></tuv>
+			<tuv xml:lang="es"><seg>Requeridos</seg></tuv>
+		</tu>
+		<tu tuid='required(pf)'>
+			<tuv xml:lang="en"><seg>Required</seg></tuv>
+			<tuv xml:lang="es"><seg>Requeridas</seg></tuv>
+		</tu>
+		<tu tuid='results_per'>
+			<tuv xml:lang="en"><seg>Results per</seg></tuv>
+			<tuv xml:lang="es"><seg>Resultados por</seg></tuv>
+		</tu>
+		<tu tuid='residential_development'>
+			<tuv xml:lang="en"><seg>Residential Dev.</seg></tuv>
+			<tuv xml:lang="es"><seg>Colonia</seg></tuv>
+		</tu>
+		<tu tuid='restricted_access'>
+			<tuv xml:lang="en"><seg>Restricted Access</seg></tuv>
+			<tuv xml:lang="es"><seg>Acceso Restringido</seg></tuv>
+		</tu>
+		<tu tuid='role'>
+			<tuv xml:lang="en"><seg>Role</seg></tuv>
+			<tuv xml:lang="es"><seg>Rol</seg></tuv>
+		</tu>
+		<tu tuid='root'>
+			<tuv xml:lang="en"><seg>Root</seg></tuv>
+			<tuv xml:lang="es"><seg>Raíz</seg></tuv>
+		</tu>
+		<tu tuid='save'>
+			<tuv xml:lang="en"><seg>Save</seg></tuv>
+			<tuv xml:lang="es"><seg>Guardar</seg></tuv>
+		</tu>
+		<tu tuid='saved'>
+			<tuv xml:lang="en"><seg>Saved</seg></tuv>
+			<tuv xml:lang="es"><seg>Guardado</seg></tuv>
+		</tu>
+		<tu tuid='saved(f)'>
+			<tuv xml:lang="en"><seg>Saved</seg></tuv>
+			<tuv xml:lang="es"><seg>Guardada</seg></tuv>
+		</tu>
+		<tu tuid='search'>
+			<tuv xml:lang="en"><seg>Search</seg></tuv>
+			<tuv xml:lang="es"><seg>Buscar</seg></tuv>
+		</tu>
+		<tu tuid='second'>
+			<tuv xml:lang="en"><seg>Second</seg></tuv>
+			<tuv xml:lang="es"><seg>Segundo</seg></tuv>
+		</tu>
+		<tu tuid='select'>
+			<tuv xml:lang="en"><seg>Select</seg></tuv>
+			<tuv xml:lang="es"><seg>Seleccione</seg></tuv>
+		</tu>
+		<tu tuid='shipping_time'>
+			<tuv xml:lang="en"><seg>Shipping Time</seg></tuv>
+			<tuv xml:lang="es"><seg>Tiempo de Entrega</seg></tuv>
+		</tu>
+		<tu tuid='short_description'>
+			<tuv xml:lang="en"><seg>Short Description</seg></tuv>
+			<tuv xml:lang="es"><seg>Descripción Corta</seg></tuv>
+		</tu>
+		<tu tuid='show'>
+			<tuv xml:lang="en"><seg>Show</seg></tuv>
+			<tuv xml:lang="es"><seg>Mostrar</seg></tuv>
+		</tu>
+		<tu tuid='sincerely'>
+			<tuv xml:lang="en"><seg>Sincerely</seg></tuv>
+			<tuv xml:lang="es"><seg>Atentamente</seg></tuv>
+		</tu>
+		<tu tuid='sku'>
+			<tuv xml:lang="en"><seg>SKU</seg></tuv>
+			<tuv xml:lang="es"><seg>Código</seg></tuv>
+		</tu>
+		<tu tuid='sort_ascending'>
+			<tuv xml:lang="en"><seg>Sort Ascending</seg></tuv>
+			<tuv xml:lang="es"><seg>Orden Ascendente</seg></tuv>
+		</tu>
+		<tu tuid='sort_descending'>
+			<tuv xml:lang="en"><seg>Sort Descending</seg></tuv>
+			<tuv xml:lang="es"><seg>Orden Descendente</seg></tuv>
+		</tu>
+		<tu tuid='SP_name'>
+			<tuv xml:lang="en"><seg>Spanish</seg></tuv>
+			<tuv xml:lang="es"><seg>Español</seg></tuv>
+		</tu>
+		<tu tuid='spanish'>
+			<tuv xml:lang="en"><seg>Spanish</seg></tuv>
+			<tuv xml:lang="es"><seg>Español</seg></tuv>
+		</tu>
+		<tu tuid='state'>
+			<tuv xml:lang="en"><seg>State</seg></tuv>
+			<tuv xml:lang="es"><seg>Estado</seg></tuv>
+		</tu>
+		<tu tuid='status'>
+			<tuv xml:lang="en"><seg>Status</seg></tuv>
+			<tuv xml:lang="es"><seg>Estatus</seg></tuv>
+		</tu>
+		<tu tuid='stock'>
+			<tuv xml:lang="en"><seg>Stock</seg></tuv>
+			<tuv xml:lang="es"><seg>Existencias</seg></tuv>
+		</tu>
+		<tu tuid='street'>
+			<tuv xml:lang="en"><seg>Street</seg></tuv>
+			<tuv xml:lang="es"><seg>Calle</seg></tuv>
+		</tu>
+		<tu tuid='system_configuration'>
+			<tuv xml:lang="en"><seg>System Configuration</seg></tuv>
+			<tuv xml:lang="es"><seg>Configuración del Sistema</seg></tuv>
+		</tu>
+		<tu tuid='system_problem'>
+			<tuv xml:lang="en"><seg>There is a problem with the system, please try again. If the problem persist please notify it to the webmaster (support@servicios.com)</seg></tuv>
+			<tuv xml:lang="es"><seg>Hubo un problema con el sistema, por favor intente de nuevo. Si el problema persiste por favor notifique al webmaster (support@servicios.com)</seg></tuv>
+		</tu>
+		<tu tuid='the'>
+			<tuv xml:lang="en"><seg>The</seg></tuv>
+			<tuv xml:lang="es"><seg>El</seg></tuv>
+		</tu>
+		<tu tuid='the(f)'>
+			<tuv xml:lang="en"><seg>The</seg></tuv>
+			<tuv xml:lang="es"><seg>La</seg></tuv>
+		</tu>
+		<tu tuid='there_are_errors'>
+			<tuv xml:lang="en"><seg>There are some errors</seg></tuv>
+			<tuv xml:lang="es"><seg>Existen algunos errores</seg></tuv>
+		</tu>
+		<tu tuid='the_employee_has_been_updated'>
+			<tuv xml:lang="en"><seg>The employee has been updated</seg></tuv>
+			<tuv xml:lang="es"><seg>El colaborador ha sido actualizado</seg></tuv>
+		</tu>
+		<tu tuid='this'>
+			<tuv xml:lang="en"><seg>This</seg></tuv>
+			<tuv xml:lang="es"><seg>Este</seg></tuv>
+		</tu>
+		<tu tuid='this(f)'>
+			<tuv xml:lang="en"><seg>this</seg></tuv>
+			<tuv xml:lang="es"><seg>esta</seg></tuv>
+		</tu>
+		<tu tuid='support a maximum of'>
+			<tuv xml:lang="en"><seg>Support a Maximum of</seg></tuv>
+			<tuv xml:lang="es"><seg>Soporta un Máximo de</seg></tuv>
+		</tu>
+		<tu tuid='title'>
+			<tuv xml:lang="en"><seg>Title</seg></tuv>
+			<tuv xml:lang="es"><seg>Título</seg></tuv>
+		</tu>
+		<tu tuid='to'>
+			<tuv xml:lang="en"><seg>to</seg></tuv>
+			<tuv xml:lang="es"><seg>a</seg></tuv>
+		</tu>
+		<tu tuid='to_enter_our_site_click_link_msg'>
+			<tuv xml:lang="en"><seg>To enter our site, click the following link</seg></tuv>
+			<tuv xml:lang="es"><seg>Para acceder a nuestro sitio, haga clic en la siguiente dirección</seg></tuv>
+		</tu>
+		<tu tuid='to_the'>
+			<tuv xml:lang="en"><seg>to the</seg></tuv>
+			<tuv xml:lang="es"><seg>al</seg></tuv>
+		</tu>
+		<tu tuid='try_again'>
+			<tuv xml:lang="en"><seg>Please try again</seg></tuv>
+			<tuv xml:lang="es"><seg>Por favor intente de nuevo</seg></tuv>
+		</tu>
+		<tu tuid='unit'>
+			<tuv xml:lang="en"><seg>Unit</seg></tuv>
+			<tuv xml:lang="es"><seg>Unidad</seg></tuv>
+		</tu>
+		<tu tuid='user'>
+			<tuv xml:lang="en"><seg>User</seg></tuv>
+			<tuv xml:lang="es"><seg>Usuario</seg></tuv>
+		</tu>
+		<tu tuid='username'>
+			<tuv xml:lang="en"><seg>Username</seg></tuv>
+			<tuv xml:lang="es"><seg>Usuario</seg></tuv>
+		</tu>
+		<tu tuid='user_password_incorrect'>
+			<tuv xml:lang="en"><seg>User or Password incorrect</seg></tuv>
+			<tuv xml:lang="es"><seg>Usuario o Contraseña incorrecta</seg></tuv>
+		</tu>
+		<tu tuid='user_register'>
+			<tuv xml:lang="en"><seg>User Register</seg></tuv>
+			<tuv xml:lang="es"><seg>Registro de Usuario</seg></tuv>
+		</tu>
+		<tu tuid='valid_{n}_digit_code_msg'>
+			<tuv xml:lang="en"><seg>must be a valid {n} digit code</seg></tuv>
+			<tuv xml:lang="es"><seg>debe ser un código válido de {n} dígitos</seg></tuv>
+		</tu>
+		<tu tuid='valid_{n}_letter_code_msg'>
+			<tuv xml:lang="en"><seg>must be a valid {n} letter code</seg></tuv>
+			<tuv xml:lang="es"><seg>debe ser un código válido de {n} letras</seg></tuv>
+		</tu>
+		<tu tuid='valid_monetary_qty_msg'>
+			<tuv xml:lang="en"><seg>must be a valid monetary quantity</seg></tuv>
+			<tuv xml:lang="es"><seg>debe ser una cantidad monetaria válida</seg></tuv>
+		</tu>
+		<tu tuid='valid_integer_msg'>
+			<tuv xml:lang="en"><seg>must be a valid integer number</seg></tuv>
+			<tuv xml:lang="es"><seg>debe ser un número entero válido</seg></tuv>
+		</tu>
+		<tu tuid='valid_number_msg'>
+			<tuv xml:lang="en"><seg>must be a valid number</seg></tuv>
+			<tuv xml:lang="es"><seg>debe ser un número válido</seg></tuv>
+		</tu>
+		<tu tuid='valid_string'>
+			<tuv xml:lang="en"><seg>must be a valid string</seg></tuv>
+			<tuv xml:lang="es"><seg>debe ser una cadena válida</seg></tuv>
+		</tu>
+		<tu tuid='view'>
+			<tuv xml:lang="en"><seg>View</seg></tuv>
+			<tuv xml:lang="es"><seg>Ver</seg></tuv>
+		</tu>
+		<tu tuid='videogallery'>
+			<tuv xml:lang="en"><seg>Videogallery</seg></tuv>
+			<tuv xml:lang="es"><seg>Videogalería</seg></tuv>
+		</tu>
+		<tu tuid='volume'>
+			<tuv xml:lang="en"><seg>Volume</seg></tuv>
+			<tuv xml:lang="es"><seg>Volumen</seg></tuv>
+		</tu>
+		<tu tuid='weight'>
+			<tuv xml:lang="en"><seg>Weight</seg></tuv>
+			<tuv xml:lang="es"><seg>Peso</seg></tuv>
+		</tu>
+		<tu tuid='welcome'>
+			<tuv xml:lang="en"><seg>Welcome</seg></tuv>
+			<tuv xml:lang="es"><seg>Bienvenido</seg></tuv>
+		</tu>
+		<tu tuid='your'>
+			<tuv xml:lang="en"><seg>Your</seg></tuv>
+			<tuv xml:lang="es"><seg>Su</seg></tuv>
+		</tu>
+		<tu tuid='zip_code'>
+			<tuv xml:lang="en"><seg>Zip Code</seg></tuv>
+			<tuv xml:lang="es"><seg>Código Postal</seg></tuv>
+		</tu>
+		<tu tuid='?_confirm_add'>
+			<tuv xml:lang="en"><seg>Are you sure you want to add</seg></tuv>
+			<tuv xml:lang="es"><seg>¿Seguro que quiere agregar</seg></tuv>
+		</tu>
+		<tu tuid='?_confirm_delete'>
+			<tuv xml:lang="en"><seg>Are you sure you want to delete</seg></tuv>
+			<tuv xml:lang="es"><seg>¿Seguro que quiere eliminar</seg></tuv>
+		</tu>
+	</body>
+</tmx>

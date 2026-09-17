@@ -1,0 +1,32 @@
+.listPanel_RecordRow {
+  /*background-color: #c0c0c0;*/
+}
+
+.listPanel_RecordOddRow {
+  background-color: #f5f5f5;
+}
+
+.listPanel_HeaderRow {
+  background-color: #d0d0d0;
+}
+
+.listPanel_HeaderCell {
+  font-weight: bold;
+}
+
+.listPanel_ColumnName {
+	text-align: center;
+}
+
+.listPanel_SortingImages {
+  text-align: right;
+  height: 5px;
+}
+
+.listPanel_PagingRow {
+   background-color: #d0d0d0;
+}
+
+.listPanel_PagingCell {
+   border-top: #c0c0c0 3px double;
+}

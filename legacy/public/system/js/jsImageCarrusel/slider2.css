@@ -1,0 +1,115 @@
+/* CSS Document */
+
+#wrapp {
+
+width: 770px;
+height: 282px;
+text-align: left;
+font-size: 1.1em;
+margin: 1em auto;
+padding: 5px;
+padding-top:1px;
+color: black;
+}
+
+/* slideViewer 1.0 default styles */
+.svw {width: 50px; height: 20px; background: #fff;
+
+margin: 0; padding: 0;
+}
+.svw ul{position: relative; left: -999em;
+margin: 0; padding: 0;}
+
+.stripViewer { /* this is the DIV container for your UL of images */
+position: relative;
+overflow: hidden; 
+border: 5px solid #cccccc; /* this is the border. should have the same value for the links */
+margin: 0 0 1px 0;
+}
+.stripViewer ul { /* this is your UL of images */
+position: relative;
+left: 0;
+top: 0;
+width: 1%;
+list-style-type: none;
+
+margin: 0; padding: 0;
+}
+.stripViewer ul li { /* each image is arranged horizontally */
+float:left;
+
+margin: 0; padding: 0;
+}
+.stripTransmitter { /* this is the DIV for your transmitter (the UL generated at run time that commands the list)*/
+overflow: auto;
+width: 1%;
+
+margin: 0; padding: 0;
+}
+.stripTransmitter ul { /* the auto-generated set of links */
+position: relative;
+list-style-type: none;
+float: right;
+
+margin: 0; padding: 0;
+}
+.stripTransmitter ul li{ /* in this list too, each LI is arranged horizontally */
+width: 20px;
+float:left;
+margin: 0 1px 1px 0;
+}
+.stripTransmitter a{ /* the links. */
+font: bold 10px Verdana, Arial;
+text-align: center;
+line-height: 22px;
+background: #ffffff;
+color: #000;
+text-decoration: none;
+display: block;
+
+margin: 0; padding: 0;
+}
+.stripTransmitter a:hover { /* hover */
+background: #aaaaaa;
+color: #fff;
+
+margin: 0; padding: 0;
+}
+.stripTransmitter a.current, .stripTransmitter a.current:hover { /* current */
+background: #51CFEF;
+color: #000000;
+
+margin: 0; padding: 0;
+}
+/* end slideViewer default styles */
+
+
+
+code {
+width:93%;	
+font: normal 1em/1.3em 'Courier New', Courier, Fixed;
+color: #000;
+display: block;
+padding: 0;
+margin: 0;
+background-color: #fff;
+white-space: pre;
+overflow-x: auto;
+}
+#tooltip {
+background: #fff;
+color: #000;
+opacity: 0.75;
+border: 5px solid #cccccc;
+
+margin: 0; padding: 0;
+}
+#tooltip h3 {
+font: normal 10px Verdana; 
+margin: 0; 
+padding: 6px 2px; 
+border: 0;
+
+
+}
+

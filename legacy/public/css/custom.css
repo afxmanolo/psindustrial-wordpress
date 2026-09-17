@@ -1,0 +1,107 @@
+body { margin-top: -30px;}
+
+.header-light .navbar-nav .nav-link {
+    color: #ffffff!important;
+}
+
+.swiper {max-height: 365px;}
+
+.mt-0 {margin-top: 0px;}
+.mb-90px {margin-bottom: 90px;}
+.fs-28 {font-size: 28px;}
+.fs-30 {font-size: 30px;}
+
+.lh-19 {line-height: 19px;}
+
+footer .footer-logo img {
+    height: 100px;
+    width: auto;
+    max-height: 105px!important;
+}
+
+.text-decoration-none {text-decoration: none;}
+
+.tit-section {
+    padding-top: 110px;
+    padding-bottom: 0px;
+}
+
+.small-screen-int {
+    height: 300px !important;
+}
+.fleft {float:left}
+.whatsapp {
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:20px;
+  right:20px;
+  background-color:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:30px;
+  z-index:100;
+}
+
+.grid li img {
+    max-height: 187px;
+    height: 187px;
+    width: auto;
+}
+.section-marcas .grid li img {  max-height: none;  height: auto;}
+
+.shop-box .pt-20px{padding-top: 10px!important; line-height: 16px;}
+
+.shop-footer .fs-15 { font-size: 13px!important;}
+
+.whatsapp-icon {
+  margin-top:13px;
+}
+
+.section-marcas {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.w-13 { width: 18% !important;}
+
+.separador { border-top: #182c54 dotted 1px; width: 100%; min-height: 5px; margin-bottom: 15px;}
+
+.btn-back { background: #00394f; color: #ffffff; padding: 8px 20px; width: 100%;}
+.btn-back:hover { background:#f0f4fd; color:#00394f;}
+
+.listado {        float: left; padding: 1%;  min-height: 620px;}
+.listado-b {        float: left; padding: 1%; }
+
+.listado-link {line-height: 40px; border-bottom: 1px solid #eaeaea;}
+
+.menu-it {font-size: 15px; line-height: 18px;}
+.txtfooter {font-size: 20px;  color: white;  line-height: 24px;}
+.txtfooter span {font-size: 15px;  color: white; }
+
+.soluciones .grid li img {  max-height: 286px;  height: auto;}
+
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-vertical > .swiper-pagination-bullets {
+    bottom: 20px;}
+
+.swiper-slide-cont{padding-top: 100px;}
+
+.swiper-slide-cont .btn.btn-rounded.btn-extra-large {
+    padding: 11px 67px 11px 19px;
+}
+
+@media (max-width: 991px) {
+    .header-light .navbar-nav .nav-link { color: #182c54!important}
+    .navbar .navbar-nav .nav-item.active .nav-link, .navbar-modern-inner .navbar-nav .nav-item.active .nav-link, .navbar-full-screen-menu-inner .navbar-nav .nav-item.active .nav-link {
+    color: #182c54!important}
+    .listado { min-height: 20px;}
+    .w-13 { width: 40% !important;}
+    .section-marcas .grid li img {  max-height: 0px;  height: auto;}
+    .section-marcas   .shop-boxed .shop-box{  min-height: 100px;}
+    .grid li img {  max-height: 82px!important;  height: 82px!important;}
+    .shop-footer .fs-15 { font-size: 14px!important;}
+    .grid.xs-grid-1col li { width: 50%;  float: left;  position: relative !important;  top: 0px !important; left: 0px !important;   }
+    .shop-boxed .shop-box {  border: 1px solid #ffffff; -webkit-transition-duration: 0.4s; transition-duration: 0.4s; margin-bottom: 0;  left: 0px !important; position: relative; top: 0px !important; min-height: 200px;}
+}

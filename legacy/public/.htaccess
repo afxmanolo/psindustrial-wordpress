@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteRule ^productos/([\d]+)/([\d]+)/(.*)/$ productos.php?cmd=search&CategoriaId=$1&MarcaId=$2 [QSA,L]
+RewriteRule ^productos/categoria/([\d]+)/(.*)/$ productos.php?cmd=search&CategoriaId=$1 [QSA,L]
+RewriteRule ^productos/marca/([\d]+)/(.*)/$ productos.php?cmd=search&MarcaId=$1 [QSA,L]
+RewriteRule ^([\d]+)/producto/(.*)/$ productos.php?cmd=loadProductos&productId=$1 [QSA,L]
+RewriteRule ^([\d]+)/categoria/(.*)/$ categorias.php?cmd=search&categoriaId=$1 [QSA,L]
+ErrorDocument 404 /404.php

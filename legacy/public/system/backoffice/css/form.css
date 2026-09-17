@@ -1,0 +1,69 @@
+DL.form {
+	width: 100%;	
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+DL.form DT {
+	width: 10em;
+	float: left;
+	margin: 0;
+	border-bottom: 1px solid #e0e0e0;
+	clear: left;
+}
+
+DL.form DD {
+	margin-left: 10em;
+}
+
+DL.form DD.hint {
+	font-style: italic;
+}
+
+.frmInput {
+	border: 1px solid #c0c0c;	
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	padding: 10px;
+	padding-bottom: 10px;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+fieldset legend {
+	font-weight: bold;
+	border: 1px solid #c0c0c0;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 10px;
+}
+
+.frmInput.center {
+	text-align: center;
+}
+
+.msgerror, .error{
+	background: #fff6bf url(exclamation.png) center no-repeat;
+    background-position: 15px 50%; /* x-pos y-pos */
+    text-align: left;
+    padding: 5px 20px 5px 45px;
+    border-top: 2px solid #ffd324;
+    border-bottom: 2px solid #ffd324;
+    font-size:12px;
+	font-family:arial;
+	color:#ff0000;
+}
+
+.msgok, .success{
+	background: #E0FFBF url(icon-ok.gif) center no-repeat;
+    background-position: 15px 50%; /* x-pos y-pos */
+    text-align: left;
+    padding: 5px 20px 5px 45px;
+    border-top: 2px solid #96FF24;
+    border-bottom: 2px solid #96FF24;
+    font-size:12px;
+	font-family:arial;
+	color:#2D9F09;
+}
