@@ -1,0 +1,62 @@
+{
+  "scope": "PDF_SECURITY_REVIEW_APPROVED",
+  "approved_at": "2026-09-18",
+  "approved_by": "human decision, PS Industrial session (chat approval on feature/review-rules)",
+  "audit_source": "docs/implementation/pdf-security-review/00-summary.md",
+  "notes": "Explicit, hash-gated decisions only. No general heuristic. If a legacy file's current SHA-256 does not match source_sha256 here, no entry applies and the file uses exactly the existing safeguards (Media::file_valid()).",
+  "group_a_sanitization": [
+    {
+      "legacy_path": "system/files/images/productos/639b9801fe440dcd2179c23cca14401710c5e7e0",
+      "source_sha256": "0a7193edcd8929ac114043fcbffb8e53109ce4363f062cb269f2062ce9e1b4f8",
+      "products": ["65", "66"],
+      "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
+      "reason": "Grupo A: unico objeto /EmbeddedFile es 'High Quality.joboptions.joboptions', un ajuste de conversion de Adobe Distiller (texto plano), confirmado benigno en 02-embedded-files-analysis.md. Se autoriza copia sanitizada para WordPress; el original en /legacy permanece inmutable."
+    },
+    {
+      "legacy_path": "system/files/images/productos/7ab52eec612af22d23a62f849479371ebf1c2f22",
+      "source_sha256": "a922b6ce9f9ca80b565a3b24be27a086f555aa305db9b9135443c079d93255df",
+      "products": ["68", "69"],
+      "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
+      "reason": "Grupo A: unico objeto /EmbeddedFile es 'Rampage PDF.joboptions', ajuste de conversion de Adobe Distiller (texto plano; identico byte a byte al de 7baea774...). Se autoriza copia sanitizada; original inmutable."
+    },
+    {
+      "legacy_path": "system/files/images/productos/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+      "source_sha256": "703eb6311aaedddf3dd24a8e6b75089463317352f174f672c8d5002e3dfd574f",
+      "products": ["70", "71"],
+      "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
+      "reason": "Grupo A: unico objeto /EmbeddedFile es 'Press Quality.joboptions.joboptions', ajuste de conversion de Adobe Distiller (texto plano). Se autoriza copia sanitizada; original inmutable."
+    },
+    {
+      "legacy_path": "system/files/images/productos/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+      "source_sha256": "7e501c26a5bfc0c02da8899de34a0b6a2bef31bbb42c2124a5c3995ad803a3ee",
+      "products": ["72", "73"],
+      "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
+      "reason": "Grupo A: unico objeto /EmbeddedFile es 'Rampage PDF.joboptions', ajuste de conversion de Adobe Distiller (texto plano; identico byte a byte al de 7ab52eec...). Se autoriza copia sanitizada; original inmutable."
+    },
+    {
+      "legacy_path": "system/files/images/productos/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+      "source_sha256": "e8ac9a72e867f60aa21665abd004640f2fac4e477b025eae8b7b9a8ae7222e01",
+      "products": ["67"],
+      "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
+      "reason": "Grupo A: unico objeto /EmbeddedFile es 'Rampage PDF.joboptions' (ajustes ligeramente distintos), ajuste de conversion de Adobe Distiller (texto plano). Se autoriza copia sanitizada; original inmutable."
+    }
+  ],
+  "group_b_exception": [
+    {
+      "legacy_path": "system/files/images/productos/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+      "source_sha256": "525617851dbf6430bb53100d0fdef5a95b0a048b0bc20f3778005bb48cd788ca",
+      "products": ["77"],
+      "classification": "SAFE_PDF_FALSE_POSITIVE",
+      "reason_code": "STRUCTURALLY_VERIFIED_NO_ACTIVE_CONTENT",
+      "reason": "Grupo B: la coincidencia con la expresion de deteccion es /JS, 3 bytes de coincidencia casual dentro de un stream binario comprimido (154KB despues de la palabra clave 'stream' mas cercana). No existe ningun objeto /EmbeddedFile, /OpenAction, /AA ni /Names/JavaScript en el documento (verificado con pikepdf, recorrido estructural completo). Se autoriza como excepcion puntual gateada por este hash exacto; no es una regla general."
+    },
+    {
+      "legacy_path": "system/files/images/productos/98b07de6dca4ad402a37385c485fb6999d5c3323",
+      "source_sha256": "da92b4c85c86a66b1cae255adcb4c0b61f75d37d36ef5272696bc922cd6ca838",
+      "products": ["95"],
+      "classification": "SAFE_PDF_FALSE_POSITIVE",
+      "reason_code": "STRUCTURALLY_VERIFIED_NO_ACTIVE_CONTENT",
+      "reason": "Grupo B: la coincidencia con la expresion de deteccion es /JS, 3 bytes de coincidencia casual dentro de un stream binario comprimido (51KB despues de la palabra clave 'stream' mas cercana). No existe ningun objeto /EmbeddedFile, /OpenAction, /AA ni /Names/JavaScript en el documento (verificado con pikepdf, recorrido estructural completo). Se autoriza como excepcion puntual gateada por este hash exacto; no es una regla general."
+    }
+  ]
+}

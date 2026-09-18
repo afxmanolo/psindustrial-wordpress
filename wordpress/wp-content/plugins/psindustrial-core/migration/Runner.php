@@ -135,9 +135,24 @@ final class Runner {
    Storage::write( 'rollback-' . $run . '.json', $results ); return $results;
   } );
  }
+ /**
+  * Execution-time content validation. Kept separate from media() (which has the
+  * side-effecting sideload call) purely so it stays a small, pure, independently
+  * testable predicate — never so it can be called before the hash-drift check below.
+  *
+  * Second condition is an explicit, hash-gated authorization check, never a relaxation
+  * of the first: Media::file_valid() is called first and unmodified; the PdfApprovals
+  * fallback only ever returns true for the exact legacy_path+sha256 pairs a human
+  * approved in pdf-approvals.json (Group B), and only for application/pdf. Every other
+  * file — approved-or-not, PDF-or-not — sees exactly the prior behaviour.
+  */
+ private static function media_is_valid( string $source, string $mime, string $legacyPath ): bool {
+  if ( \PSIndustrial\Core\Media::file_valid( $source, $mime ) ) { return true; }
+  return 'application/pdf' === $mime && PdfApprovals::isApprovedFalsePositive( $legacyPath, hash_file( 'sha256', $source ) );
+ }
  private static function media( array $e ): int {
   $d = $e['data']; $source = Storage::path( $d['package_asset'] );
-  if ( ! hash_equals( $d['sha256'], hash_file( 'sha256', $source ) ) || ! \PSIndustrial\Core\Media::file_valid( $source, $d['mime'] ) ) { throw new \RuntimeException( 'MEDIA_CHANGED_OR_UNSAFE' ); }
+  if ( ! hash_equals( $d['sha256'], hash_file( 'sha256', $source ) ) || ! self::media_is_valid( $source, $d['mime'], $d['path'] ?? '' ) ) { throw new \RuntimeException( 'MEDIA_CHANGED_OR_UNSAFE' ); }
   require_once ABSPATH . 'wp-admin/includes/file.php'; require_once ABSPATH . 'wp-admin/includes/media.php'; require_once ABSPATH . 'wp-admin/includes/image.php';
   $ext = array( 'image/jpeg' => 'jpg', 'image/png' => 'png', 'image/webp' => 'webp', 'application/pdf' => 'pdf' )[ $d['mime'] ];
   $name = sanitize_file_name( pathinfo( $d['name'], PATHINFO_FILENAME ) ) . '.' . $ext;

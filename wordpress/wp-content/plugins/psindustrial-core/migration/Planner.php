@@ -14,8 +14,13 @@ final class Planner {
   Storage::guard();
   if ( ! in_array( $scope, array( 'full', 'subset' ), true ) ) { throw new \RuntimeException( 'INVALID_SCOPE' ); }
   $s = new Sources(); $d = self::decisions(); $entries = array();
-  $add = static function( string $key, string $type, array $row, string $reason ) use ( &$entries, $d, $scope, $s ): void {
-   $decision = $d['entities'][ $key ] ?? null;
+  // LOW-risk policy layer (see migration/Policy.php). Scoped to 'full' only: it never
+  // participates in the 'subset' filter below, so it cannot change subset execution,
+  // batching, or which entries a rehearsal run contains. A 'full' plan built with it
+  // still cannot be executed — Runner::batch() rejects any scope other than 'subset'.
+  $policy = 'full' === $scope ? Policy::decisions( $s, $d ) : array();
+  $add = static function( string $key, string $type, array $row, string $reason ) use ( &$entries, $d, $policy, $scope, $s ): void {
+   $decision = $d['entities'][ $key ] ?? $policy[ $key ] ?? null;
    if ( 'subset' === $scope && ! $decision && ! in_array( $key, $d['review_examples'], true ) ) { return; }
    $file = $row['legacy_php'] ?? $row['legacy_page'] ?? $row['legacy_file'] ?? $row['legacy_path'] ?? '';
    $e = array( 'manifest_version' => 1, 'entity_key' => $key, 'source_key' => $key, 'source_namespace' => explode( ':', $key )[0], 'source_type' => $type, 'content_type' => $type,
@@ -24,7 +29,9 @@ final class Planner {
     'notes' => $reason, 'row' => $row, 'data' => array(), 'dependencies' => array(), 'approval_ref' => '', 'field_ownership' => 'importer-controlled draft fields; manual edits block whole object', 'warnings' => array() );
    if ( 'LEGACY_INTERNAL' === ( $row['classification'] ?? '' ) ) { $e['action'] = 'SKIP'; $e['notes'] = 'Código interno: no se migra como contenido; archivo y evidencias preservados.'; }
    if ( $decision ) {
-    $e['approval_ref'] = 'Prompt 6: ensayo privado; subset-decisions.json:' . $key;
+    $e['approval_ref'] = 'low_rule' === ( $decision['origin'] ?? '' )
+     ? 'Política LOW automatizada (Prompt 7): migration/Policy.php:' . ( $decision['rule_id'] ?? '' ) . ':' . $key
+     : 'Prompt 6: ensayo privado; subset-decisions.json:' . $key;
     $e['decision'] = $decision; $e['action'] = $decision['action'];
     if ( ! in_array( $e['action'], array( 'MIGRATE', 'CREATE_FROM_STATIC', 'MERGE', 'SKIP', 'REVIEW' ), true ) ) { throw new \RuntimeException( 'INVALID_DECISION_ACTION' ); }
     if ( 'MERGE' === $e['action'] && ( empty( $decision['source_keys'] ) || empty( $decision['field_winners'] ) || empty( $decision['editorial_approval'] ) ) ) { $e['action'] = 'REVIEW'; $e['notes'] = 'MERGE requiere autorización editorial y ganador por campo.'; }
@@ -38,9 +45,22 @@ final class Planner {
      try {
       if ( 'media' === $type ) {
        $asset = $s->asset( $file );
+       // The integrity check below always compares against the ORIGINAL legacy file's
+       // hash ($asset['sha256'], from Sources::asset() on the /legacy/public path) —
+       // this never changes meaning, approved or not. What actually gets staged/imported
+       // is $asset['staged_path']/['staged_sha256'], which PdfApprovals may have pointed
+       // at a sanitized substitute (Group A) while this check still confirms the legacy
+       // original has not drifted from what media-master.csv recorded.
        if ( ! $asset['valid'] || ! hash_equals( $row['sha256'], $asset['sha256'] ) ) { throw new \RuntimeException( 'MEDIA_VALIDATION_OR_HASH' ); }
        $e['data'] = $asset + array( 'path' => $file, 'name' => $row['filename'] );
-       $e['data']['package_asset'] = Storage::stage_asset( Sources::safe( Storage::project() . '/legacy/public', $file ), $asset['sha256'] );
+       $e['data']['sha256'] = $asset['staged_sha256'];
+       $e['data']['package_asset'] = Storage::stage_asset( $asset['staged_path'], $asset['staged_sha256'] );
+       if ( $asset['pdf_approval'] ) {
+        $e['pdf_approval_type'] = $asset['pdf_approval']['type'];
+        $e['pdf_approval_reason'] = $asset['pdf_approval']['reason'];
+        if ( 'sanitized' === $asset['pdf_approval']['type'] ) { $e['pdf_approval_rule_id'] = $asset['pdf_approval']['rule_id']; $e['pdf_approval_sanitized_sha256'] = $asset['pdf_approval']['sha256']; }
+        else { $e['pdf_approval_classification'] = $asset['pdf_approval']['classification']; $e['pdf_approval_reason_code'] = $asset['pdf_approval']['reason_code']; }
+       }
        $e['source_keys'] = array_merge( array( $key ), array_map( static fn( $id ) => 'file:' . $id, Sources::parts( $row['file_ids'] ?? '' ) ) );
        $e['binary_aliases'] = array();
        foreach ( $decision['binary_aliases'] ?? array() as $alias ) {
@@ -70,6 +90,17 @@ final class Planner {
       $e['notes'] = $decision['reason'];
      } catch ( \Throwable $error ) { $e['action'] = 'REVIEW'; $e['notes'] = $error->getMessage(); }
     }
+   }
+   // Explainability for the LOW-risk policy layer only, and only when the proposed action
+   // actually survived the validation above (a policy MIGRATE that threw and fell back to
+   // REVIEW above must NOT be reported as a successful LOW-risk resolution). Never touches
+   // manual/subset decisions, which carry no 'origin' key.
+   if ( $decision && 'low_rule' === ( $decision['origin'] ?? '' ) && $e['action'] === $decision['action'] ) {
+    $e['notes'] = $decision['reason'];
+    $e['policy_rule_id'] = $decision['rule_id'];
+    $e['policy_reason_code'] = $decision['reason_code'];
+    $e['policy_evidence'] = $decision['evidence'];
+    $e['policy_risk'] = 'LOW';
    }
    if ( ! isset( $e['source_file_hash'] ) && $file && 'UNKNOWN' !== $file && 'media' !== $type ) {
     try { $e['source_file_hash'] = hash_file( 'sha256', Sources::safe( Storage::project() . '/legacy/public', $file ) ); } catch ( \Throwable $error ) { $e['warnings'][] = $error->getMessage(); }
