@@ -1,0 +1,333 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "Group A entry present and approved in the plan: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Group A staged bytes differ from the original (original is never used): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Group A staged bytes contain no trace of the pattern that blocked the original: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Group A staged (sanitized) bytes pass the real, unmodified Media::file_valid() alone: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Runner::media_is_valid() accepts the Group A staged bytes: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Group A staged bytes match the recorded staged_sha256 (hash-drift check passes): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Tampered staged copy no longer matches the recorded hash (Runner::media() would block it before even reaching media_is_valid()): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Group A approvals are never a Group B false-positive exception (sanitized substitute needs none): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Group A entry present and approved in the plan: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Group A staged bytes differ from the original (original is never used): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Group A staged bytes contain no trace of the pattern that blocked the original: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Group A staged (sanitized) bytes pass the real, unmodified Media::file_valid() alone: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Runner::media_is_valid() accepts the Group A staged bytes: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Group A staged bytes match the recorded staged_sha256 (hash-drift check passes): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Tampered staged copy no longer matches the recorded hash (Runner::media() would block it before even reaching media_is_valid()): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Group A approvals are never a Group B false-positive exception (sanitized substitute needs none): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Group A entry present and approved in the plan: system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Group A staged bytes differ from the original (original is never used): system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Group A staged bytes contain no trace of the pattern that blocked the original: system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Group A staged (sanitized) bytes pass the real, unmodified Media::file_valid() alone: system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Runner::media_is_valid() accepts the Group A staged bytes: system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Group A staged bytes match the recorded staged_sha256 (hash-drift check passes): system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Tampered staged copy no longer matches the recorded hash (Runner::media() would block it before even reaching media_is_valid()): system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Group A approvals are never a Group B false-positive exception (sanitized substitute needs none): system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Group A entry present and approved in the plan: system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Group A staged bytes differ from the original (original is never used): system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Group A staged bytes contain no trace of the pattern that blocked the original: system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Group A staged (sanitized) bytes pass the real, unmodified Media::file_valid() alone: system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Runner::media_is_valid() accepts the Group A staged bytes: system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Group A staged bytes match the recorded staged_sha256 (hash-drift check passes): system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Tampered staged copy no longer matches the recorded hash (Runner::media() would block it before even reaching media_is_valid()): system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Group A approvals are never a Group B false-positive exception (sanitized substitute needs none): system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Group A entry present and approved in the plan: system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Group A staged bytes differ from the original (original is never used): system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Group A staged bytes contain no trace of the pattern that blocked the original: system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Group A staged (sanitized) bytes pass the real, unmodified Media::file_valid() alone: system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Runner::media_is_valid() accepts the Group A staged bytes: system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Group A staged bytes match the recorded staged_sha256 (hash-drift check passes): system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Tampered staged copy no longer matches the recorded hash (Runner::media() would block it before even reaching media_is_valid()): system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Group A approvals are never a Group B false-positive exception (sanitized substitute needs none): system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Group B entry present and approved in the plan: system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Group B stages the ORIGINAL bytes (nothing to sanitize): system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Group B staged bytes still fail Media::file_valid() alone, unmodified: system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Runner::media_is_valid() accepts Group B via the exact-hash approval: system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Group B hash-drift check passes on the correctly staged original: system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Same Group B path, wrong hash, is not an approved false positive: system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Same Group B path with a different file's bytes\/hash is not approved: system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Group B entry present and approved in the plan: system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "Group B stages the ORIGINAL bytes (nothing to sanitize): system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "Group B staged bytes still fail Media::file_valid() alone, unmodified: system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "Runner::media_is_valid() accepts Group B via the exact-hash approval: system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "Group B hash-drift check passes on the correctly staged original: system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "Same Group B path, wrong hash, is not an approved false positive: system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "Same Group B path with a different file's bytes\/hash is not approved: system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "A Group A hash never satisfies a Group B path",
+            "passed": true
+        },
+        {
+            "test": "Synthetic fixture 'unapproved_false_positive' genuinely trips the raw regex (sanity check on the fixture itself)",
+            "passed": true
+        },
+        {
+            "test": "Synthetic fixture 'unapproved_false_positive' is rejected by the unmodified Media::file_valid()",
+            "passed": true
+        },
+        {
+            "test": "Runner::media_is_valid() still blocks unapproved fixture 'unapproved_false_positive' — no general backdoor",
+            "passed": true
+        },
+        {
+            "test": "Synthetic fixture 'dangerous_real_action' genuinely trips the raw regex (sanity check on the fixture itself)",
+            "passed": true
+        },
+        {
+            "test": "Synthetic fixture 'dangerous_real_action' is rejected by the unmodified Media::file_valid()",
+            "passed": true
+        },
+        {
+            "test": "Runner::media_is_valid() still blocks unapproved fixture 'dangerous_real_action' — no general backdoor",
+            "passed": true
+        },
+        {
+            "test": "Synthetic fixture deleted: psi-unapproved-fp-cf67786d-98d0-4b26-bc5b-35cecaee884a.pdf",
+            "passed": true
+        },
+        {
+            "test": "Synthetic fixture deleted: psi-dangerous-ef870995-34eb-493c-94dd-2c62d6f8daa1.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/13.0.Folleto-Operador-AccessPRO-FS1000-SPEED-hoja-tecnica (1).pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/13.0.Folleto-Operador-AccessPRO-FS1000-SPEED-hoja-tecnica.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/Abrigo-de-anden-BG400.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/accesorios-doorlock.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/Alumina-Technical-Specifications-15.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/BGDSHS_Brochure_Sept2014_WEB.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/cdx-commercial-operator-sellsheet.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/Clopay-3720-07.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/CMDC-0524SP-14-1.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/CMDC-3717-3718-11.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/commercial-aluminum-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/CONTRA_EXPLOSION.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/CORTINA-EUROPEA.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/CORTINA-PLANA.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/Cortina-serie-610-620.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sampled enough ordinary PDFs for a meaningful spot check (15)",
+            "passed": true
+        },
+        {
+            "test": "Non-PDF mime never consults PdfApprovals (fallback only ever applies to application\/pdf)",
+            "passed": true
+        },
+        {
+            "test": "Full plan REVIEW count is unchanged by this fix (932): the fix only affects a future Runner execution, never Planner's decisions",
+            "passed": true
+        },
+        {
+            "test": "Plan remains DRY_RUN\/VALIDATED",
+            "passed": true
+        }
+    ]
+}
