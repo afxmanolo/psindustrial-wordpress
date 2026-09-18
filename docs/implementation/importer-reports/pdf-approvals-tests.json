@@ -1,0 +1,725 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "Group A correct hash resolves to a sanitized substitute: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Group A original legacy file remains byte-identical: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Sanitized copy exists and matches its recorded hash: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Sanitized copy contains no dangerous-pattern byte sequence: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Sanitized copy passes the real, unmodified Media::file_valid(): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Group A wrong hash blocks the approval: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Sources::asset() reports valid=true for the approved original (via substitute): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Sources::asset() stages the sanitized bytes, not the original: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Sources::asset() still reports the ORIGINAL hash for the drift-detection check: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Group A correct hash resolves to a sanitized substitute: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Group A original legacy file remains byte-identical: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Sanitized copy exists and matches its recorded hash: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Sanitized copy contains no dangerous-pattern byte sequence: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Sanitized copy passes the real, unmodified Media::file_valid(): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Group A wrong hash blocks the approval: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Sources::asset() reports valid=true for the approved original (via substitute): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Sources::asset() stages the sanitized bytes, not the original: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Sources::asset() still reports the ORIGINAL hash for the drift-detection check: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Group A correct hash resolves to a sanitized substitute: system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Group A original legacy file remains byte-identical: system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Sanitized copy exists and matches its recorded hash: system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Sanitized copy contains no dangerous-pattern byte sequence: system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Sanitized copy passes the real, unmodified Media::file_valid(): system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Group A wrong hash blocks the approval: system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Sources::asset() reports valid=true for the approved original (via substitute): system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Sources::asset() stages the sanitized bytes, not the original: system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Sources::asset() still reports the ORIGINAL hash for the drift-detection check: system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Group A correct hash resolves to a sanitized substitute: system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Group A original legacy file remains byte-identical: system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Sanitized copy exists and matches its recorded hash: system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Sanitized copy contains no dangerous-pattern byte sequence: system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Sanitized copy passes the real, unmodified Media::file_valid(): system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Group A wrong hash blocks the approval: system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Sources::asset() reports valid=true for the approved original (via substitute): system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Sources::asset() stages the sanitized bytes, not the original: system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Sources::asset() still reports the ORIGINAL hash for the drift-detection check: system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Group A correct hash resolves to a sanitized substitute: system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Group A original legacy file remains byte-identical: system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Sanitized copy exists and matches its recorded hash: system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Sanitized copy contains no dangerous-pattern byte sequence: system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Sanitized copy passes the real, unmodified Media::file_valid(): system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Group A wrong hash blocks the approval: system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Sources::asset() reports valid=true for the approved original (via substitute): system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Sources::asset() stages the sanitized bytes, not the original: system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Sources::asset() still reports the ORIGINAL hash for the drift-detection check: system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Sanitization audit covers exactly the 5 Group A files",
+            "passed": true
+        },
+        {
+            "test": "Audit record status is SANITIZED_OK: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Audit record: pages preserved: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Audit record: embedded file confirmed absent: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Audit record: importer regex confirmed non-matching: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (valid_pdf_header): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (pages_preserved): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (embedded_file_absent): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_open_action): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_acroform): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_names_javascript): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_catalog_aa): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (importer_regex_no_match): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (text_extraction_equivalent): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Audit record status is SANITIZED_OK: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Audit record: pages preserved: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Audit record: embedded file confirmed absent: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Audit record: importer regex confirmed non-matching: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (valid_pdf_header): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (pages_preserved): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (embedded_file_absent): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_open_action): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_acroform): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_names_javascript): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_catalog_aa): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (importer_regex_no_match): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (text_extraction_equivalent): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Audit record status is SANITIZED_OK: system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Audit record: pages preserved: system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Audit record: embedded file confirmed absent: system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Audit record: importer regex confirmed non-matching: system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (valid_pdf_header): system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (pages_preserved): system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (embedded_file_absent): system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_open_action): system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_acroform): system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_names_javascript): system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_catalog_aa): system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (importer_regex_no_match): system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (text_extraction_equivalent): system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Audit record status is SANITIZED_OK: system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Audit record: pages preserved: system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Audit record: embedded file confirmed absent: system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Audit record: importer regex confirmed non-matching: system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (valid_pdf_header): system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (pages_preserved): system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (embedded_file_absent): system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_open_action): system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_acroform): system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_names_javascript): system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_catalog_aa): system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (importer_regex_no_match): system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (text_extraction_equivalent): system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Audit record status is SANITIZED_OK: system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Audit record: pages preserved: system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Audit record: embedded file confirmed absent: system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Audit record: importer regex confirmed non-matching: system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (valid_pdf_header): system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (pages_preserved): system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (embedded_file_absent): system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_open_action): system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_acroform): system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_names_javascript): system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_catalog_aa): system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (importer_regex_no_match): system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (text_extraction_equivalent): system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Group B approved hash resolves to the exact classification\/reason_code: system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Group B same path, wrong hash, is NOT approved: system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Sources::asset() reports valid=true under the Group B exception: system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Group B exception stages the ORIGINAL bytes (nothing to sanitize): system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Group B original bytes still trip the raw regex on their own (exception is genuinely doing work): system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Group B approved hash resolves to the exact classification\/reason_code: system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "Group B same path, wrong hash, is NOT approved: system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "Sources::asset() reports valid=true under the Group B exception: system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "Group B exception stages the ORIGINAL bytes (nothing to sanitize): system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "Group B original bytes still trip the raw regex on their own (exception is genuinely doing work): system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "A Group A hash does not accidentally satisfy a Group B path",
+            "passed": true
+        },
+        {
+            "test": "An unapproved PDF with a real \/OpenAction JavaScript action is still rejected by the unmodified check",
+            "passed": true
+        },
+        {
+            "test": "A genuinely dangerous, unapproved file never matches any approval by coincidence",
+            "passed": true
+        },
+        {
+            "test": "Synthetic dangerous-PDF fixture deleted after the check",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/13.0.Folleto-Operador-AccessPRO-FS1000-SPEED-hoja-tecnica (1).pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/13.0.Folleto-Operador-AccessPRO-FS1000-SPEED-hoja-tecnica (1).pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/13.0.Folleto-Operador-AccessPRO-FS1000-SPEED-hoja-tecnica.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/13.0.Folleto-Operador-AccessPRO-FS1000-SPEED-hoja-tecnica.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/Abrigo-de-anden-BG400.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/Abrigo-de-anden-BG400.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/accesorios-doorlock.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/accesorios-doorlock.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/Alumina-Technical-Specifications-15.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/Alumina-Technical-Specifications-15.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/BGDSHS_Brochure_Sept2014_WEB.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/BGDSHS_Brochure_Sept2014_WEB.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/cdx-commercial-operator-sellsheet.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/cdx-commercial-operator-sellsheet.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/Clopay-3720-07.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/Clopay-3720-07.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/CMDC-0524SP-14-1.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/CMDC-0524SP-14-1.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/CMDC-3717-3718-11.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/CMDC-3717-3718-11.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/commercial-aluminum-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/commercial-aluminum-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/CONTRA_EXPLOSION.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/CONTRA_EXPLOSION.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/CORTINA-EUROPEA.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/CORTINA-EUROPEA.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/CORTINA-PLANA.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/CORTINA-PLANA.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/Cortina-serie-610-620.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/Cortina-serie-610-620.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sampled enough unrelated PDFs to be a meaningful spot check (15)",
+            "passed": true
+        },
+        {
+            "test": "Full DRY RUN with PDF approvals active still changes nothing",
+            "passed": true
+        },
+        {
+            "test": "Plan remains DRY_RUN\/VALIDATED",
+            "passed": true
+        },
+        {
+            "test": "Full plan still analyzes exactly 2,399 source rows",
+            "passed": true
+        },
+        {
+            "test": "A full plan remains impossible to execute, PDF approvals included",
+            "passed": true
+        },
+        {
+            "test": "Exactly 18 target rows tracked",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: asset:system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: asset:system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: asset:system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: asset:system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: asset:system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: asset:system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: asset:system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: sql:productos:65",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: sql:productos:66",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: sql:productos:67",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: sql:productos:68",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: sql:productos:69",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: sql:productos:70",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: sql:productos:71",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: sql:productos:72",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: sql:productos:73",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: sql:productos:77",
+            "passed": true
+        },
+        {
+            "test": "Row resolved out of REVIEW: sql:productos:95",
+            "passed": true
+        },
+        {
+            "test": "Subset scope remains byte-identical with PDF approvals active",
+            "passed": true
+        }
+    ]
+}
