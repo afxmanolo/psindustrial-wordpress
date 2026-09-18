@@ -12,8 +12,10 @@ use PSIndustrial\Core\Fields;
 use PSIndustrial\Core\ProductEditor;
 use PSIndustrial\Core\TermEditor;
 use PSIndustrial\Core\Settings;
+(static function(): void {
 $posts = $terms = $users = $files = $checks = array();
 $failed = false;
+$restore_settings = false;
 $assert = static function( bool $condition, string $name ) use ( &$checks ): void {
 	$checks[] = array( 'test' => $name, 'passed' => $condition );
 	if ( ! $condition ) { throw new RuntimeException( $name ); }
@@ -39,23 +41,24 @@ try {
 		$t = wp_insert_term( $prefix . '-' . $i, $tax );
 		$assert( ! is_wp_error( $t ), 'Create synthetic term ' . $i );
 		$terms[] = array( (int) $t['term_id'], $tax );
+		update_term_meta( (int) $t['term_id'], '_psi_public_state', 'public' );
 	}
 	$category = $terms[0][0]; $brand = $terms[1][0]; $brand2 = $terms[2][0];
-	$r = $request( 'POST', '/wp/v2/psi_producto', array( 'title' => $prefix, 'content' => 'Contenido sintético de prueba.', 'status' => 'publish', 'psi_categoria' => array( $category ), 'psi_marca' => array( $brand ) ) );
+	$r = $request( 'POST', '/wp/v2/psi_producto', array( 'title' => $prefix, 'content' => 'Contenido sintético de prueba.', 'status' => 'publish', 'meta' => array( '_psi_review_state' => 'approved' ), 'psi_categoria' => array( $category ), 'psi_marca' => array( $brand ) ) );
 	$assert( 201 === $r->get_status(), 'REST create product and relations' );
 	$id = (int) $r->get_data()['id']; $posts[] = $id;
-	$fixture_page_id = wp_insert_post( array( 'post_title' => $prefix . '-page', 'post_type' => 'page', 'post_content' => 'Página sintética.', 'post_status' => 'publish' ), true );
+	$fixture_page_id = wp_insert_post( array( 'post_title' => $prefix . '-page', 'post_type' => 'page', 'post_content' => 'Página sintética.', 'post_status' => 'publish', 'meta_input' => array( '_psi_review_state' => 'approved' ) ), true );
 	$assert( ! is_wp_error( $fixture_page_id ), 'Create synthetic Page' ); $posts[] = $fixture_page_id;
 	$png = base64_decode( 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Wl6lS8AAAAASUVORK5CYII=' );
-	foreach ( array( array( '.png', 'image/png', $png ), array( '.pdf', 'application/pdf', "%PDF-1.4\n1 0 obj<</Type/Catalog>>endobj\n%%EOF" ) ) as $fixture ) {
+	foreach ( array( array( '.png', 'image/png', $png ), array( '-hero.png', 'image/png', $png ), array( '.pdf', 'application/pdf', "%PDF-1.4\n1 0 obj<</Type/Catalog>>endobj\n%%EOF" ) ) as $fixture ) {
 		$upload = wp_upload_bits( $prefix . $fixture[0], null, $fixture[2] );
 		$assert( ! $upload['error'], 'Create synthetic media ' . $fixture[0] ); $files[] = $upload['file'];
 		$aid = wp_insert_attachment( array( 'post_title' => $prefix, 'post_mime_type' => $fixture[1], 'post_status' => 'inherit' ), $upload['file'] );
 		$posts[] = $aid;
-		if ( '.png' === $fixture[0] ) { $image = $aid; } else { $pdf = $aid; }
+		if ( '.png' === $fixture[0] ) { $image = $aid; } elseif ( '-hero.png' === $fixture[0] ) { $featured = $aid; } else { $pdf = $aid; }
 	}
 	$meta = array( '_psi_h1' => 'Encabezado sintético', '_psi_primary_category_id' => $category, '_psi_gallery_ids' => array( $image ), '_psi_datasheets' => array( array( 'attachment_id' => $pdf, 'label' => 'Ficha sintética', 'language' => 'es' ) ), '_psi_videos' => array( array( 'provider' => 'youtube', 'video_id' => 'abcdefghijk', 'title' => 'Video sintético' ) ) );
-	$r = $request( 'POST', '/wp/v2/psi_producto/' . $id, array( 'meta' => $meta, 'featured_media' => $image ) );
+	$r = $request( 'POST', '/wp/v2/psi_producto/' . $id, array( 'meta' => $meta, 'featured_media' => $featured ) );
 	$assert( 200 === $r->get_status(), 'REST persist all product fields and featured image' );
 	foreach ( $meta as $key => $value ) {
 		$stored = get_post_meta( $id, $key, true );
@@ -101,15 +104,110 @@ try {
 	$assert( 403 === $r->get_status(), 'Subscriber cannot edit product metadata' );
 	$r = $request( 'POST', '/wp/v2/psi_marca/' . $brand, array( 'meta' => array( '_psi_logo_id' => 0 ) ) );
 	$assert( 403 === $r->get_status(), 'Subscriber cannot edit brand logo' );
+	// Content-admin contract: least privilege, editorial gates and immutable public routes.
+	wp_set_current_user( $admin->ID );
+	$gid = wp_insert_user( array( 'user_login' => $prefix . '-manager', 'user_pass' => wp_generate_password( 32 ), 'role' => 'psi_gestor' ) );
+	$assert( ! is_wp_error( $gid ), 'Create temporary content manager' ); $users[] = $gid;
+	wp_set_current_user( $gid );
+	foreach ( array( 'edit_psi_productos', 'publish_psi_productos', 'edit_pages', 'publish_pages', 'upload_files', 'psi_edit_media', 'psi_manage_categories', 'psi_manage_brands', 'psi_edit_contact_settings' ) as $cap ) {
+		$assert( current_user_can( $cap ), 'Manager allowed ' . $cap );
+	}
+	foreach ( array( 'manage_options', 'edit_posts', 'delete_posts', 'install_plugins', 'edit_plugins', 'edit_themes', 'edit_users', 'create_users', 'update_core', 'export', 'unfiltered_html', 'psi_manage_migration', 'psi_manage_routes', 'psi_manage_structure', 'psi_delete_categories', 'psi_delete_brands' ) as $cap ) {
+		$assert( ! current_user_can( $cap ), 'Manager denied ' . $cap );
+	}
+	$r = $request( 'POST', '/wp/v2/psi_producto/' . $id, array( 'content' => 'Updated by manager', 'meta' => array( '_psi_h1' => 'Manager title' ) ) );
+	$assert( 200 === $r->get_status(), 'Manager edits another author product' );
+	$r = $request( 'POST', '/wp/v2/pages/' . $fixture_page_id, array( 'content' => 'Updated Page by manager' ) );
+	$assert( 200 === $r->get_status(), 'Manager edits Page' );
+	$r = $request( 'POST', '/wp/v2/media/' . $image, array( 'alt_text' => 'Accessible image' ) );
+	$assert( 200 === $r->get_status(), 'Manager edits shared attachment through REST' );
+	$assert( ! current_user_can( 'delete_post', $image ) && ! current_user_can( 'delete_post', $id ), 'Manager cannot delete media or public product' );
+	$r = $request( 'DELETE', '/wp/v2/media/' . $image, array( 'force' => true ) );
+	$assert( 403 === $r->get_status(), 'REST media deletion denied' );
+	$r = $request( 'POST', '/wp/v2/psi_producto/' . $id, array( 'slug' => $prefix . '-changed' ) );
+	$assert( 403 === $r->get_status(), 'REST published product slug protected' );
+	$r = $request( 'POST', '/wp/v2/pages/' . $fixture_page_id, array( 'status' => 'draft' ) );
+	$assert( 403 === $r->get_status(), 'REST withdrawal of public Page denied' );
+	$before_slug = get_post_field( 'post_name', $id );
+	wp_update_post( array( 'ID' => $id, 'post_name' => 'changed', 'post_status' => 'draft' ) );
+	$assert( $before_slug === get_post_field( 'post_name', $id ) && 'publish' === get_post_status( $id ), 'Native write preserves public route and status' );
+	$r = $request( 'POST', '/wp/v2/psi_producto', array( 'title' => $prefix . '-unreviewed', 'content' => 'Content', 'status' => 'publish' ) );
+	$assert( 400 === $r->get_status(), 'Cannot publish before review' );
+	$r = $request( 'POST', '/wp/v2/psi_producto', array( 'title' => $prefix . '-draft', 'status' => 'draft' ) );
+	$assert( 201 === $r->get_status(), 'Manager creates incomplete draft' ); $draft = (int) $r->get_data()['id']; $posts[] = $draft;
+	$assert( current_user_can( 'delete_post', $draft ), 'Manager may delete own draft' );
+	$r = $request( 'POST', '/wp/v2/psi_producto/' . $draft, array( 'content' => 'Reviewed content', 'status' => 'publish', 'meta' => array( '_psi_review_state' => 'approved', '_psi_related_ids' => array( $id ), '_psi_hero_id' => $image ) ) );
+	$assert( 200 === $r->get_status() && 'publish' === get_post_status( $draft ), 'Manager publishes reviewed product without invented brand' );
+	$r = $request( 'POST', '/wp/v2/psi_producto/' . $draft, array( 'meta' => array( '_psi_related_ids' => array( $draft ) ) ) );
+	$assert( 400 === $r->get_status(), 'Related product cannot reference itself' );
+	$assert( false === update_post_meta( $draft, '_psi_source_keys', array( 'sql:123' ) ), 'Private source metadata protected from manager' );
+	$r = $request( 'POST', '/wp/v2/psi_categoria', array( 'name' => $prefix . '-child', 'parent' => $category, 'meta' => array( '_psi_image_id' => $image, '_psi_h1' => 'Child heading', '_psi_order' => 3 ) ) );
+	$assert( 201 === $r->get_status(), 'Manager creates child category and metadata' ); $child = (int) $r->get_data()['id']; $terms[] = array( $child, 'psi_categoria' );
+	$assert( $category === (int) get_term( $child )->parent && 'review' === get_term_meta( $child, '_psi_public_state', true ), 'Hierarchy and safe default review state' );
+	$r = $request( 'POST', '/wp/v2/psi_categoria/' . $category, array( 'parent' => $child ) );
+	$assert( 403 === $r->get_status(), 'Manager cannot move public category' );
+	$changed = wp_update_term( $category, 'psi_categoria', array( 'parent' => $child, 'description' => 'Manager description' ) );
+	$assert( ! is_wp_error( $changed ) && 0 === (int) get_term( $category )->parent && 'Manager description' === get_term( $category )->description, 'Native term write preserves public parent and saves allowed description' );
+	$r = $request( 'DELETE', '/wp/v2/psi_categoria/' . $child, array( 'force' => true ) );
+	$assert( 403 === $r->get_status(), 'Manager cannot delete terms' );
+	$r = $request( 'POST', '/wp/v2/psi_marca/' . $brand, array( 'meta' => array( '_psi_public_state' => 'review' ) ) );
+	$assert( 403 === $r->get_status(), 'Manager cannot withdraw public brand' );
+	$http( home_url( '/categoria/' . get_term( $child )->slug . '/' ), 404 );
+	wp_set_current_user( 0 );
+	$r = $request( 'GET', '/wp/v2/psi_categoria/' . $child );
+	$assert( 404 === $r->get_status(), 'Anonymous cannot read review term through REST' );
+	$r = $request( 'GET', '/wp/v2/psi_categoria', array( 'hide_empty' => false ) );
+	$assert( ! in_array( $child, array_column( $r->get_data(), 'id' ), true ), 'Anonymous REST list excludes review terms' );
+	wp_set_current_user( $gid );
+	$clean = Settings::sanitize( array( 'whatsapp_enabled' => true, 'whatsapp_number' => '+525555555555', 'whatsapp_message' => '<b>Hello</b>', 'mail_recipient' => 'unapproved@example.invalid' ) );
+	$assert( true === $clean['whatsapp_enabled'] && 'Hello' === $clean['whatsapp_message'] && $clean['mail_recipient'] === Settings::get()['mail_recipient'], 'Manager settings sanitized; private recipient protected' );
+	Settings::register();
+	$assert( 'psi_edit_contact_settings' === apply_filters( 'option_page_capability_psi_settings', 'manage_options' ), 'Settings API uses scoped permission' );
+	$original_settings = get_option( 'psi_site_settings' );
+	$original_snapshot = get_option( 'psi_contact_previous', false );
+	$restore_settings = true;
+	update_option( 'psi_site_settings', array( 'whatsapp_enabled' => true, 'whatsapp_number' => '+525555555555', 'whatsapp_message' => '<b>Local test</b>', 'mail_recipient' => 'unapproved@example.invalid' ) );
+	$assert( 'Local test' === Settings::get()['whatsapp_message'], 'Settings API stores sanitized option' );
+	$assert( str_starts_with( Settings::whatsapp_url(), 'https://wa.me/525555555555?text=Local%20test' ), 'WhatsApp URL derives from single settings source' );
+	$assert( ( $original_settings['mail_recipient'] ?? '' ) === Settings::get()['mail_recipient'], 'Option guard preserves Administrator recipient on real manager write' );
+	wp_set_current_user( $admin->ID );
+	$r = $request( 'POST', '/wp/v2/psi_categoria/' . $category, array( 'parent' => $child ) );
+	$assert( 400 === $r->get_status(), 'Administrator cannot create category cycle' );
+	$assert( false === wp_delete_attachment( $image, true ), 'Even Administrator cannot delete referenced media' );
+	$invalid_upload = \PSIndustrial\Core\Media::upload( array( 'name' => 'fake.pdf', 'tmp_name' => get_attached_file( $image ), 'error' => 0 ) );
+	$assert( ! empty( $invalid_upload['error'] ), 'MIME bytes reject fake PDF upload' );
+	$invalid_upload = \PSIndustrial\Core\Media::upload( array( 'name' => 'image.php.png', 'tmp_name' => get_attached_file( $image ), 'error' => 0 ) );
+	$assert( ! empty( $invalid_upload['error'] ), 'Reject executable double extension' );
+	$r = $request( 'POST', '/wp/v2/psi_producto/' . $id, array( 'meta' => array( '_psi_gallery_ids' => array( $featured ) ) ) );
+	$assert( 400 === $r->get_status(), 'Gallery cannot duplicate featured image' );
+	$revision = wp_save_post_revision( $id );
+	$assert( ! is_wp_error( $revision ) && $revision > 0, 'Create native revision with metadata' );
+	update_post_meta( $id, '_psi_h1', 'Changed after revision' );
+	wp_restore_post_revision( $revision );
+	$assert( 'Manager title' === get_post_meta( $id, '_psi_h1', true ), 'Restore editorial metadata from revision' );
+	$term_result = $request( 'POST', '/wp/v2/psi_categoria/' . $child, array( 'meta' => array( '_psi_public_state' => 'public' ) ) );
+	$assert( 200 === $term_result->get_status(), 'Review category can be deliberately published' );
+	wp_set_object_terms( $draft, array( $child ), 'psi_categoria' );
+	$parent_response = wp_remote_get( get_term_link( $category, 'psi_categoria' ) );
+	$child_response = wp_remote_get( get_term_link( $child, 'psi_categoria' ) );
+	$assert( ! str_contains( wp_remote_retrieve_body( $parent_response ), get_permalink( $draft ) ) && str_contains( wp_remote_retrieve_body( $child_response ), get_permalink( $draft ) ), 'Category archive excludes automatically inherited child products' );
+	$assert( false === update_post_meta( $id, '_psi_hero_id', -$image ), 'Negative image IDs are rejected rather than coerced' );
 } catch ( Throwable $e ) {
 	$failed = true; $checks[] = array( 'failure' => $e->getMessage() );
 } finally {
 	$_POST = array(); wp_set_current_user( $admin->ID ?? 0 );
-	foreach ( array_reverse( $posts ) as $pid ) { 'attachment' === get_post_type( $pid ) ? wp_delete_attachment( $pid, true ) : wp_delete_post( $pid, true ); }
+	if ( $restore_settings ) {
+		remove_filter( 'sanitize_option_psi_site_settings', array( Settings::class, 'sanitize' ) );
+		update_option( 'psi_site_settings', $original_settings );
+		if ( false === $original_snapshot ) { delete_option( 'psi_contact_previous' ); } else { update_option( 'psi_contact_previous', $original_snapshot ); }
+	}
+	foreach ( $posts as $pid ) { if ( 'attachment' !== get_post_type( $pid ) ) { wp_delete_post( $pid, true ); } }
 	foreach ( $terms as [ $tid, $tax ] ) { wp_delete_term( $tid, $tax ); }
+	foreach ( $posts as $pid ) { if ( 'attachment' === get_post_type( $pid ) ) { wp_delete_attachment( $pid, true ); } }
 	foreach ( $users as $uid ) { wp_delete_user( $uid ); }
 	foreach ( $files as $file ) { if ( is_file( $file ) ) { wp_delete_file( $file ); } }
 	delete_transient( 'psi_field_error_' . ( $admin->ID ?? 0 ) );
 }
 echo wp_json_encode( array( 'passed' => ! $failed, 'checks' => $checks ), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ) . "\n";
 exit( $failed ? 1 : 0 );
+})();

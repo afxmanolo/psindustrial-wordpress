@@ -7,6 +7,12 @@ final class Fields {
 		$id = array( 'type' => 'integer', 'minimum' => 1 );
 		return array(
 			'_psi_h1' => array( 'type' => 'string', 'default' => '', 'maxLength' => 200 ),
+			'_psi_hero_id' => array( 'type' => 'integer', 'default' => 0, 'minimum' => 0 ),
+			'_psi_review_state' => array( 'type' => 'string', 'default' => 'pending', 'enum' => array( 'pending', 'approved' ) ),
+			'_psi_related_ids' => array( 'type' => 'array', 'default' => array(), 'maxItems' => 50, 'uniqueItems' => true, 'items' => $id ),
+			'_psi_source_keys' => array( 'type' => 'array', 'default' => array(), 'uniqueItems' => true, 'items' => array( 'type' => 'string', 'pattern' => '^[a-zA-Z0-9_-]+:.+$', 'maxLength' => 250 ) ),
+			'_psi_source_hash' => array( 'type' => 'string', 'default' => '', 'pattern' => '^(?:[a-f0-9]{64})?$' ),
+			'_psi_legacy_date' => array( 'type' => 'string', 'default' => '', 'maxLength' => 100 ),
 			'_psi_primary_category_id' => array( 'type' => 'integer', 'default' => 0, 'minimum' => 0 ),
 			'_psi_gallery_ids' => array( 'type' => 'array', 'default' => array(), 'maxItems' => 50, 'uniqueItems' => true, 'items' => $id ),
 			'_psi_datasheets' => array(
@@ -31,21 +37,36 @@ final class Fields {
 	}
 	public static function register(): void {
 		foreach ( self::definitions() as $key => $schema ) {
-			register_post_meta( 'psi_producto', $key, array(
+			foreach ( array( 'psi_producto', 'page', 'attachment' ) as $type ) {
+				if ( 'page' === $type && ! in_array( $key, array( '_psi_h1', '_psi_hero_id', '_psi_review_state', '_psi_source_keys', '_psi_source_hash' ), true ) ) { continue; }
+				if ( 'attachment' === $type && '_psi_source_keys' !== $key ) { continue; }
+			register_post_meta( $type, $key, array(
 				'type' => $schema['type'],
 				'single' => true,
 				'default' => $schema['default'],
-				'revisions_enabled' => true,
-				'show_in_rest' => array( 'schema' => $schema ),
-				'auth_callback' => static fn( $allowed, $meta_key, $post_id ) => current_user_can( 'edit_post', $post_id ),
+				'revisions_enabled' => 'attachment' !== $type && ! self::private_key( $key ),
+				'show_in_rest' => self::private_key( $key ) ? false : array( 'schema' => $schema ),
+				'auth_callback' => static fn( $allowed, $meta_key, $post_id ) => current_user_can( self::private_key( $key ) ? 'psi_manage_migration' : 'edit_post', $post_id ),
 				'sanitize_callback' => static fn( $value ) => self::sanitize( $key, $value ),
 			) );
+			}
+		}
+		foreach ( array( '_psi_content_sha256', '_psi_original_name' ) as $key ) {
+			register_post_meta( 'attachment', $key, array( 'type' => 'string', 'single' => true, 'show_in_rest' => false, 'auth_callback' => static fn() => current_user_can( 'psi_manage_migration' ), 'sanitize_callback' => 'sanitize_text_field' ) );
 		}
 		add_filter( 'add_post_metadata', array( self::class, 'guard' ), 10, 5 );
 		add_filter( 'update_post_metadata', array( self::class, 'guard' ), 10, 5 );
+		add_filter( 'delete_post_metadata', static function( $check, $id, $key ) {
+			if ( ( self::private_key( $key ) && ! current_user_can( 'psi_manage_migration' ) ) || ( '_psi_review_state' === $key && in_array( get_post_status( $id ), array( 'publish', 'future' ), true ) ) ) { return false; }
+			return $check;
+		}, 10, 3 );
 		add_filter( 'rest_pre_insert_psi_producto', array( self::class, 'validate_rest' ), 10, 2 );
+		add_filter( 'rest_pre_insert_page', array( self::class, 'validate_rest' ), 10, 2 );
 		add_action( 'set_object_terms', array( self::class, 'one_brand' ), 10, 6 );
 		add_action( 'set_object_terms', array( self::class, 'clear_primary' ), 10, 4 );
+	}
+	public static function private_key( string $key ): bool {
+		return in_array( $key, array( '_psi_source_keys', '_psi_source_hash', '_psi_legacy_date', '_psi_content_sha256', '_psi_original_name' ), true );
 	}
 	public static function validate( string $key, mixed $value, int $post_id = 0 ): true|\WP_Error {
 		$schema = self::definitions()[ $key ] ?? null;
@@ -59,13 +80,17 @@ final class Fields {
 		$invalid = false;
 		if ( '_psi_gallery_ids' === $key ) {
 			foreach ( $value as $id ) {
-				$invalid = $invalid || ! wp_attachment_is_image( (int) $id );
+				$invalid = $invalid || ! Media::valid( (int) $id, 'image' );
 			}
 		}
 		if ( '_psi_datasheets' === $key ) {
 			foreach ( $value as $item ) {
-				$invalid = $invalid || 'attachment' !== get_post_type( (int) $item['attachment_id'] ) || 'application/pdf' !== get_post_mime_type( (int) $item['attachment_id'] );
+				$invalid = $invalid || ! Media::valid( (int) $item['attachment_id'], 'pdf' );
 			}
+		}
+		if ( '_psi_hero_id' === $key && (int) $value > 0 ) { $invalid = ! Media::valid( (int) $value, 'image' ); }
+		if ( '_psi_related_ids' === $key ) {
+			foreach ( $value as $id ) { $invalid = $invalid || (int) $id === $post_id || 'psi_producto' !== get_post_type( (int) $id ) || 'trash' === get_post_status( (int) $id ); }
 		}
 		if ( '_psi_primary_category_id' === $key && (int) $value > 0 ) {
 			$invalid = ! term_exists( (int) $value, 'psi_categoria' );
@@ -73,13 +98,16 @@ final class Fields {
 		return $invalid ? new \WP_Error( 'psi_invalid_relation', __( 'Seleccione medios o categorías existentes del tipo correcto.', 'psindustrial-core' ), array( 'status' => 400 ) ) : true;
 	}
 	public static function sanitize( string $key, mixed $value ): mixed {
+		if ( is_wp_error( self::validate( $key, $value ) ) ) { return $value; } // Guards reject invalid values, never coerce them into valid IDs.
+		if ( '_psi_source_keys' === $key ) { return array_values( array_unique( array_map( 'sanitize_text_field', $value ) ) ); }
+		if ( in_array( $key, array( '_psi_review_state', '_psi_source_hash', '_psi_legacy_date' ), true ) ) { return sanitize_text_field( $value ); }
 		if ( '_psi_h1' === $key ) {
 			return mb_substr( sanitize_text_field( is_scalar( $value ) ? (string) $value : '' ), 0, 200 );
 		}
-		if ( '_psi_primary_category_id' === $key ) {
+		if ( in_array( $key, array( '_psi_primary_category_id', '_psi_hero_id' ), true ) ) {
 			return absint( $value );
 		}
-		if ( '_psi_gallery_ids' === $key ) {
+		if ( in_array( $key, array( '_psi_gallery_ids', '_psi_related_ids' ), true ) ) {
 			return array_values( array_unique( array_map( 'absint', (array) $value ) ) );
 		}
 		$result = array();
@@ -96,15 +124,21 @@ final class Fields {
 		return $result;
 	}
 	public static function guard( mixed $check, int $id, string $key, mixed $value, mixed $unused ): mixed {
+		if ( self::private_key( $key ) && ! current_user_can( 'psi_manage_migration' ) ) { return false; }
+		if ( '_psi_content_sha256' === $key && ( ! is_string( $value ) || ! preg_match( '/^(?:[a-f0-9]{64})?$/D', $value ) ) ) { return false; }
+		if ( '_psi_review_state' === $key && 'approved' !== $value && in_array( get_post_status( $id ), array( 'publish', 'future' ), true ) ) { return false; }
+		if ( '_thumbnail_id' === $key && (int) $value > 0 && ( ! Media::valid( (int) $value, 'image' ) || in_array( (int) $value, (array) get_post_meta( $id, '_psi_gallery_ids', true ), true ) ) ) { return false; }
+		if ( '_psi_gallery_ids' === $key && is_array( $value ) && in_array( (int) get_post_thumbnail_id( $id ), array_map( 'intval', $value ), true ) ) { return false; }
 		if ( 'psi_producto' === get_post_type( $id ) && '_psi_primary_category_id' === $key && (int) $value && ! has_term( (int) $value, 'psi_categoria', $id ) ) {
 			return false;
 		}
-		if ( 'psi_producto' === get_post_type( $id ) && isset( self::definitions()[ $key ] ) && is_wp_error( self::validate( $key, $value, $id ) ) ) {
+		if ( in_array( get_post_type( $id ), array( 'psi_producto', 'page', 'attachment' ), true ) && isset( self::definitions()[ $key ] ) && is_wp_error( self::validate( $key, $value, $id ) ) ) {
 			return false;
 		}
 		return $check;
 	}
 	public static function validate_rest( mixed $prepared, \WP_REST_Request $request ): mixed {
+		if ( is_wp_error( $prepared ) ) { return $prepared; }
 		foreach ( (array) $request->get_param( 'meta' ) as $key => $value ) {
 			if ( isset( self::definitions()[ $key ] ) ) {
 				$result = self::validate( $key, $value, (int) $request['id'] );

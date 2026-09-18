@@ -1,0 +1,7 @@
+{
+  "php_files": 40,
+  "php_lint": "PASS",
+  "javascript_files": 2,
+  "javascript_syntax": "PASS",
+  "debug_log_bytes_after": 4973
+}

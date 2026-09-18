@@ -1,0 +1,73 @@
+{
+    "run_id": "b69b080d-9480-44dd-84c2-e56f0ddd07d7",
+    "mode": "FULL_DRY_RUN",
+    "database": "psindustrial_wp_dev",
+    "database_unchanged": true,
+    "database_before": {
+        "posts": "e1f11ecbf88fd30faadb3f816ee6e97fc5fb04d8612c76b9d9381e5d59b796ab",
+        "postmeta": "382b5ef3781dc54457c664bf948e7371d8af309529ee69ee56e5ca6ef19d07be",
+        "terms": "c908cdeacd24ee022deeab1a21179b9f6c9cf10c469f50b1e8e3e918bde26b2a",
+        "termmeta": "8ede9045ff6830a93dd9f1595ca87bddf088d312334e7b04b64f012b11a43c8e",
+        "term_taxonomy": "b9b0e09001a7e9b595717305fa09dee381114157dc333fab1ce06609b6c65e98",
+        "term_relationships": "1b58462d4ff4b03e6ff79815b8b11615cca50cb20c69eb33f919e13d25c65198",
+        "options": "99f359d3003be1a6ae7cc0e25f006f39114ff55900b76ca4a8b2ea7d9e7be915",
+        "users": "7665b4496cd9c94494eb257c82b6f341228dde8e8bcfc5a5ff39298b9042352d",
+        "usermeta": "ea9c07ed5c3d5dc2aafcc04ba1ce38ef1ada4d68bf95959a7b9e9ab3244744ca"
+    },
+    "database_after": {
+        "posts": "e1f11ecbf88fd30faadb3f816ee6e97fc5fb04d8612c76b9d9381e5d59b796ab",
+        "postmeta": "382b5ef3781dc54457c664bf948e7371d8af309529ee69ee56e5ca6ef19d07be",
+        "terms": "c908cdeacd24ee022deeab1a21179b9f6c9cf10c469f50b1e8e3e918bde26b2a",
+        "termmeta": "8ede9045ff6830a93dd9f1595ca87bddf088d312334e7b04b64f012b11a43c8e",
+        "term_taxonomy": "b9b0e09001a7e9b595717305fa09dee381114157dc333fab1ce06609b6c65e98",
+        "term_relationships": "1b58462d4ff4b03e6ff79815b8b11615cca50cb20c69eb33f919e13d25c65198",
+        "options": "99f359d3003be1a6ae7cc0e25f006f39114ff55900b76ca4a8b2ea7d9e7be915",
+        "users": "7665b4496cd9c94494eb257c82b6f341228dde8e8bcfc5a5ff39298b9042352d",
+        "usermeta": "ea9c07ed5c3d5dc2aafcc04ba1ce38ef1ada4d68bf95959a7b9e9ab3244744ca"
+    },
+    "elapsed_seconds": 4.794,
+    "summary": {
+        "total": 2399,
+        "actions": {
+            "REVIEW": 1949,
+            "UNCHANGED": 15,
+            "SKIP": 435
+        },
+        "types": {
+            "media": {
+                "REVIEW": 1523,
+                "UNCHANGED": 8
+            },
+            "category": {
+                "UNCHANGED": 2,
+                "REVIEW": 36
+            },
+            "brand": {
+                "UNCHANGED": 1,
+                "REVIEW": 11
+            },
+            "product": {
+                "REVIEW": 163,
+                "UNCHANGED": 2
+            },
+            "static_product": {
+                "REVIEW": 31,
+                "UNCHANGED": 1
+            },
+            "page": {
+                "REVIEW": 181,
+                "SKIP": 435,
+                "UNCHANGED": 1
+            },
+            "missing_media": {
+                "REVIEW": 4
+            }
+        }
+    },
+    "media_validation": {
+        "VALID_BYTES_REQUIRES_APPROVAL": 1390,
+        "REVIEW_TYPE_LIMIT_OR_HASH": 130,
+        "EXTERNAL_VIDEO_METADATA_ONLY": 3
+    },
+    "full_execution_performed": false
+}
