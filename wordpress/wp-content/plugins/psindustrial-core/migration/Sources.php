@@ -89,7 +89,20 @@ final class Sources {
   $extension = strtolower( pathinfo( $relative, PATHINFO_EXTENSION ) );
   $exts = array( 'image/jpeg' => array( 'jpg', 'jpeg', 'jpe' ), 'image/png' => array( 'png' ), 'image/webp' => array( 'webp' ), 'application/pdf' => array( 'pdf' ) );
   if ( $extension && ! in_array( $extension, $exts[ $mime ] ?? array(), true ) ) { $valid = false; }
-  return array( 'mime' => $mime, 'sha256' => hash_file( 'sha256', $path ), 'size' => filesize( $path ), 'valid' => $valid );
+  $sha256 = hash_file( 'sha256', $path );
+  $result = array( 'mime' => $mime, 'sha256' => $sha256, 'size' => filesize( $path ), 'valid' => $valid, 'staged_path' => $path, 'staged_sha256' => $sha256, 'pdf_approval' => null );
+  // Explicit, hash-gated human decisions only (docs/implementation/pdf-security-review/).
+  // Never consulted for non-PDF assets; resolves to null for every path/hash not in that
+  // literal, human-approved list, in which case behaviour is completely unchanged.
+  if ( 'application/pdf' === $mime ) {
+   $approval = PdfApprovals::resolve( $relative, $sha256 );
+   if ( $approval ) {
+    $result['pdf_approval'] = $approval;
+    if ( 'sanitized' === $approval['type'] ) { $result['valid'] = true; $result['staged_path'] = $approval['source_path']; $result['staged_sha256'] = $approval['sha256']; }
+    elseif ( 'exception' === $approval['type'] ) { $result['valid'] = true; }
+   }
+  }
+  return $result;
  }
  public function content( string $file ): array {
   $path = self::safe( Storage::project() . '/legacy/public', $file );
