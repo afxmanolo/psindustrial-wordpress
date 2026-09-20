@@ -24,7 +24,7 @@ final class Planner {
   // Checked BEFORE the LOW-risk policy layer so an explicit human decision always takes
   // precedence over a generic inference, though in practice the two never overlap --
   // Policy already excludes every multi-record canonical group and every empty/test id.
-  $editorial = 'full' === $scope ? EditorialDecisions::decisions( $s, $policy ) : array();
+  $editorial = 'full' === $scope ? EditorialDecisions::decisions( $s, $policy, $d ) : array();
   $add = static function( string $key, string $type, array $row, string $reason ) use ( &$entries, $d, $editorial, $policy, $scope, $s ): void {
    $decision = $d['entities'][ $key ] ?? $editorial[ $key ] ?? $policy[ $key ] ?? null;
    if ( 'subset' === $scope && ! $decision && ! in_array( $key, $d['review_examples'], true ) ) { return; }
@@ -163,6 +163,11 @@ final class Planner {
   $plan = array( 'manifest_version' => 1, 'transform_version' => self::VERSION, 'run_id' => $run, 'scope' => $scope, 'environment_id' => Storage::hash( array( home_url(), DB_NAME ) ), 'created_at' => gmdate( 'c' ), 'mode' => 'DRY_RUN', 'status' => 'VALIDATED', 'cursor' => 0, 'sources' => $s->fingerprints, 'decisions_hash' => Storage::hash( $d ), 'entries' => array_values( $ordered ), 'results' => array() );
   $plan['plan_hash'] = self::digest( $plan ); $plan['summary'] = self::summary( $plan['entries'] );
   Storage::write( 'run-' . $run . '.json', $plan );
+  // Retention runs only AFTER the new snapshot is safely persisted, so housekeeping can
+  // never delete history before this run's own copy is confirmed on disk. Never allowed to
+  // fail a valid DRY RUN: a housekeeping problem is reported (Storage::retain_recent_runs()
+  // logs it) and surfaced here for callers/tests, never thrown.
+  try { $plan['retention'] = Storage::retain_recent_runs(); } catch ( \Throwable $error ) { $plan['retention'] = array( 'kept' => null, 'deleted' => array(), 'failed' => array(), 'error' => $error->getMessage() ); }
   return $plan;
  }
  public static function digest( array $plan ): string {

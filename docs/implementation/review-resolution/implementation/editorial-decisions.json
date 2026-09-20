@@ -1,64 +1,321 @@
 {
-  "scope": "EDITORIAL_DECISIONS_APPROVED",
-  "approved_at": "2026-09-20",
-  "approved_by": "human decision, PS Industrial session (chat approval on feature/review-resolution): Q02 = Opcion B, Q06 = Opcion A (2026-09-18); Q01 = Opcion A, Q04 = Opcion B (2026-09-20), per docs/implementation/review-resolution/decision-questionnaire.md",
-  "notes": "Explicit, closed-list human decisions only. This file declares WHICH groups/records are approved and WHY; it never hardcodes a computed winner, a media union or an order — those are derived deterministically at build time by migration/EditorialDecisions.php from fields that already exist in docs/migration/*.csv and the legacy SQL catalog (fecha), so this file cannot drift from its source data and never duplicates it. If a legacy_product_id listed here no longer exists in product-master.csv, or a canonical_candidate_group's membership on disk no longer matches the ids listed here exactly, EditorialDecisions.php refuses that one group/entry (KEEP_REVIEW) rather than improvise. Q01 and Q04 are POLICY-LEVEL switches, not curated id lists: which exact pages/records they apply to is itself derived from existing evidence (content-master.csv classification, category-master.csv/brand-master.csv legacy_page links, static-product-supplement.csv) every run, never hardcoded here.",
-  "q02_identity_merge": {
-    "decision_id": "Q02",
-    "option": "B",
-    "question": "docs/implementation/review-resolution/decision-questionnaire.md#q02",
-    "rule": "Consolidar cada grupo de identidad equivalente (26 grupos verificados en 03-identity-groups.md: mismo canonical_candidate_group, cero contradiccion de PDF, categoria y marca identicas) en un unico producto WordPress. Ganador = registro con la fecha SQL (productos.fecha) mas antigua; empate resuelto por legacy_product_id ascendente. Imagen principal = primera imagen del ganador. Union de imagenes/PDF deduplicada por SHA-256 real (Sources::asset), nunca por nombre de archivo. Los registros perdedores quedan SKIP citando al ganador. Ningun grupo Q03 (fusion editorial, 27 grupos, distinto de este listado) se toca aqui.",
-    "editorial_approval": "Q02-OPTION-B-2026-09-18: consolidar 26 productos duplicados por identidad equivalente; unir fotos unicas por hash; imagen principal = primera del registro mas antiguo.",
-    "groups": [
-      { "group_key": "accesorios.php", "legacy_product_ids": ["27", "138"] },
-      { "group_key": "coleccion-classic.php", "legacy_product_ids": ["9", "108"] },
-      { "group_key": "cortina-serie-620.php", "legacy_product_ids": ["7", "91"] },
-      { "group_key": "cortina-serie-625.php", "legacy_product_ids": ["4", "87"] },
-      { "group_key": "cortina-serie-630.php", "legacy_product_ids": ["11", "94"] },
-      { "group_key": "energy-series-with-intellicore-3720-3724-3722.php", "legacy_product_ids": ["19", "61"] },
-      { "group_key": "fire-rated-doors-firestar-models-700-700c.php", "legacy_product_ids": ["13", "99"] },
-      { "group_key": "kronos-puertas-rapidas-de-sectores-modulares-autorreparable.php", "legacy_product_ids": ["41", "106"] },
-      { "group_key": "operador-comercial-rhx.php", "legacy_product_ids": ["12", "82"] },
-      { "group_key": "phobos-n-piston-electromecanico.php", "legacy_product_ids": ["46", "111"] },
-      { "group_key": "predadoor-nxt-door.php", "legacy_product_ids": ["37", "102"] },
-      { "group_key": "puerta-contra-explosion.php", "legacy_product_ids": ["26", "117"] },
-      { "group_key": "puerta-de-acero-acanalado-modelos-524.php", "legacy_product_ids": ["18", "58"] },
-      { "group_key": "puertas-contra-rayos-x.php", "legacy_product_ids": ["30", "115"] },
-      { "group_key": "puertas-industriales-dockman.php", "legacy_product_ids": ["50", "59"] },
-      { "group_key": "puertas-seccionales-de-acero-modelo-2415.php", "legacy_product_ids": ["15", "60"] },
-      { "group_key": "rampa-niveladora-mecanica-blue-giant.php", "legacy_product_ids": ["23", "140"] },
-      { "group_key": "rampas-de-anden-hidraulicas.php", "legacy_product_ids": ["53", "141"] },
-      { "group_key": "rampas-de-anden-mecanicas.php", "legacy_product_ids": ["56", "142"] },
-      { "group_key": "rapida-enrollable-industrial.php", "legacy_product_ids": ["38", "103"] },
-      { "group_key": "retenedor-de-vehiculos.php", "legacy_product_ids": ["22", "144"] },
-      { "group_key": "sellos-de-anden.php", "legacy_product_ids": ["52", "149"] },
-      { "group_key": "serie-x130-motor-para-cortina-oculto.php", "legacy_product_ids": ["45", "83"] },
-      { "group_key": "shelter-abrigo-estacionario-blue-giant.php", "legacy_product_ids": ["21", "147"] },
-      { "group_key": "star4-vehicle-restraint.php", "legacy_product_ids": ["25", "145"] },
-      { "group_key": "vertigo.php", "legacy_product_ids": ["42", "100"] }
-    ]
-  },
-  "q06_incomplete_or_test_records": {
-    "decision_id": "Q06",
-    "option": "A",
-    "question": "docs/implementation/review-resolution/decision-questionnaire.md#q06",
-    "rule": "Excluir (SKIP) los registros SQL 151-164 (nombre vacio) y 165 ('Prueba') del catalogo migrable: no son productos comerciales reales. Su media asociada (product-media-relations.csv) sigue este mismo destino SOLO cuando ese medio no tiene ningun otro propietario valido (otro producto, pagina o termino) en el modelo aprobado; si lo tiene, se preserva para ese propietario y no se toca aqui. No se crea nunca un producto vacio.",
-    "editorial_approval": "Q06-OPTION-A-2026-09-18: excluir los 14 registros vacios y 'Prueba'; conservar cualquier medio que tambien pertenezca a otra entidad.",
-    "legacy_product_ids": ["151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162", "163", "164", "165"],
-    "reason_code": "INCOMPLETE_OR_TEST_LEGACY_RECORD"
-  },
-  "q01_page_ownership": {
-    "decision_id": "Q01",
-    "option": "A",
-    "question": "docs/implementation/review-resolution/decision-questionnaire.md#q01",
-    "rule": "El contenido de una pagina legacy que reexpresa directamente un producto, una categoria o una marca pertenece a esa entidad canonica; no se crea una Page independiente para ella. Aplica UNICAMENTE cuando la correspondencia pagina-a-entidad-canonica es inequivoca segun evidencia ya documentada: content-master.csv classification=PRODUCT_PAGE con related_product_ids (resuelto a un unico grupo canonico, sea un ganador Q02 o un producto singleton ya aprobado por R-P01), o CATEGORY_PAGE/BRAND_PAGE cuyo legacy_file coincide con exactamente un legacy_page de category-master.csv/brand-master.csv, y ese termino ya esta aprobado por R-T01/R-T03. Cualquier pagina sin propietario unico y ya aprobado (grupos editoriales Q03 de multiples productos, categorias en conflicto D06, paginas sin owner documentado) queda KEEP_REVIEW, sin inventar un propietario. Esta es una decision de PROPIEDAD DE CONTENIDO, no de URL: no se crean redirects ni se decide el permalink final aqui (ver q01-q04-url-mapping.csv para la trazabilidad que la futura fase de URLs necesitara).",
-    "editorial_approval": "Q01-OPTION-A-2026-09-20: el contenido pertenece a la entidad canonica (producto/categoria/marca); no se crean Pages duplicadas; los medios exclusivos de esas paginas se reasignan a la entidad cuando el modelo actual tiene un campo legitimo para ellos (galeria/PDF de producto via la union pagina+SQL ya existente en product-master.csv, imagen de categoria via image_file_id, logo de marca via el campo logo); donde no existe un campo legitimo (categorias/marcas solo admiten una imagen, no galeria), el medio adicional permanece sin decision propia en vez de inventar un destino."
-  },
-  "q04_static_products": {
-    "decision_id": "Q04",
-    "option": "B",
-    "question": "docs/implementation/review-resolution/decision-questionnaire.md#q04",
-    "rule": "Las 31 fichas de static-product-supplement.csv (mas la ya migrada en el ensayo) son productos reales sin categoria ni marca asignada en el catalogo legacy. Se convierten en psi_producto en borrador, con su contenido, imagenes y PDF propios (misma union pagina+SQL por SHA-256 que Q02), pero SIN categoria ni marca: no se deduce ninguna de las dos por nombre de archivo, menu, cercania semantica u otra ficha parecida. La pagina PRODUCT_PAGE del mismo archivo (sin related_product_ids, ya verificado 1:1 con este listado) no se crea como Page independiente: su contenido es exactamente el del nuevo producto.",
-    "editorial_approval": "Q04-OPTION-B-2026-09-20: convertir las 31 fichas estaticas en productos reales en borrador, sin inventar categoria ni marca; sin doble enumeracion con su Page equivalente."
-  }
+    "scope": "EDITORIAL_DECISIONS_APPROVED",
+    "approved_at": "2026-09-22",
+    "approved_by": "human decision, PS Industrial session (chat approval on feature/review-resolution): Q02 = Opcion B, Q06 = Opcion A (2026-09-18); Q01 = Opcion A, Q04 = Opcion B (2026-09-20), per docs/implementation/review-resolution/decision-questionnaire.md; Q07 = Opcion A, Q10 (26/33/25), Q11 (4 casos), Q13 (2026-09-22)",
+    "notes": "Explicit, closed-list human decisions only. This file declares WHICH groups/records are approved and WHY; it never hardcodes a computed winner, a media union or an order — those are derived deterministically at build time by migration/EditorialDecisions.php from fields that already exist in docs/migration/*.csv and the legacy SQL catalog (fecha), so this file cannot drift from its source data and never duplicates it. If a legacy_product_id listed here no longer exists in product-master.csv, or a canonical_candidate_group's membership on disk no longer matches the ids listed here exactly, EditorialDecisions.php refuses that one group/entry (KEEP_REVIEW) rather than improvise. Q01 and Q04 are POLICY-LEVEL switches, not curated id lists: which exact pages/records they apply to is itself derived from existing evidence (content-master.csv classification, category-master.csv/brand-master.csv legacy_page links, static-product-supplement.csv) every run, never hardcoded here.",
+    "q02_identity_merge": {
+        "decision_id": "Q02",
+        "option": "B",
+        "question": "docs/implementation/review-resolution/decision-questionnaire.md#q02",
+        "rule": "Consolidar cada grupo de identidad equivalente (26 grupos verificados en 03-identity-groups.md: mismo canonical_candidate_group, cero contradiccion de PDF, categoria y marca identicas) en un unico producto WordPress. Ganador = registro con la fecha SQL (productos.fecha) mas antigua; empate resuelto por legacy_product_id ascendente. Imagen principal = primera imagen del ganador. Union de imagenes/PDF deduplicada por SHA-256 real (Sources::asset), nunca por nombre de archivo. Los registros perdedores quedan SKIP citando al ganador. Ningun grupo Q03 (fusion editorial, 27 grupos, distinto de este listado) se toca aqui.",
+        "editorial_approval": "Q02-OPTION-B-2026-09-18: consolidar 26 productos duplicados por identidad equivalente; unir fotos unicas por hash; imagen principal = primera del registro mas antiguo.",
+        "groups": [
+            {
+                "group_key": "accesorios.php",
+                "legacy_product_ids": [
+                    "27",
+                    "138"
+                ]
+            },
+            {
+                "group_key": "coleccion-classic.php",
+                "legacy_product_ids": [
+                    "9",
+                    "108"
+                ]
+            },
+            {
+                "group_key": "cortina-serie-620.php",
+                "legacy_product_ids": [
+                    "7",
+                    "91"
+                ]
+            },
+            {
+                "group_key": "cortina-serie-625.php",
+                "legacy_product_ids": [
+                    "4",
+                    "87"
+                ]
+            },
+            {
+                "group_key": "cortina-serie-630.php",
+                "legacy_product_ids": [
+                    "11",
+                    "94"
+                ]
+            },
+            {
+                "group_key": "energy-series-with-intellicore-3720-3724-3722.php",
+                "legacy_product_ids": [
+                    "19",
+                    "61"
+                ]
+            },
+            {
+                "group_key": "fire-rated-doors-firestar-models-700-700c.php",
+                "legacy_product_ids": [
+                    "13",
+                    "99"
+                ]
+            },
+            {
+                "group_key": "kronos-puertas-rapidas-de-sectores-modulares-autorreparable.php",
+                "legacy_product_ids": [
+                    "41",
+                    "106"
+                ]
+            },
+            {
+                "group_key": "operador-comercial-rhx.php",
+                "legacy_product_ids": [
+                    "12",
+                    "82"
+                ]
+            },
+            {
+                "group_key": "phobos-n-piston-electromecanico.php",
+                "legacy_product_ids": [
+                    "46",
+                    "111"
+                ]
+            },
+            {
+                "group_key": "predadoor-nxt-door.php",
+                "legacy_product_ids": [
+                    "37",
+                    "102"
+                ]
+            },
+            {
+                "group_key": "puerta-contra-explosion.php",
+                "legacy_product_ids": [
+                    "26",
+                    "117"
+                ]
+            },
+            {
+                "group_key": "puerta-de-acero-acanalado-modelos-524.php",
+                "legacy_product_ids": [
+                    "18",
+                    "58"
+                ]
+            },
+            {
+                "group_key": "puertas-contra-rayos-x.php",
+                "legacy_product_ids": [
+                    "30",
+                    "115"
+                ]
+            },
+            {
+                "group_key": "puertas-industriales-dockman.php",
+                "legacy_product_ids": [
+                    "50",
+                    "59"
+                ]
+            },
+            {
+                "group_key": "puertas-seccionales-de-acero-modelo-2415.php",
+                "legacy_product_ids": [
+                    "15",
+                    "60"
+                ]
+            },
+            {
+                "group_key": "rampa-niveladora-mecanica-blue-giant.php",
+                "legacy_product_ids": [
+                    "23",
+                    "140"
+                ]
+            },
+            {
+                "group_key": "rampas-de-anden-hidraulicas.php",
+                "legacy_product_ids": [
+                    "53",
+                    "141"
+                ]
+            },
+            {
+                "group_key": "rampas-de-anden-mecanicas.php",
+                "legacy_product_ids": [
+                    "56",
+                    "142"
+                ]
+            },
+            {
+                "group_key": "rapida-enrollable-industrial.php",
+                "legacy_product_ids": [
+                    "38",
+                    "103"
+                ]
+            },
+            {
+                "group_key": "retenedor-de-vehiculos.php",
+                "legacy_product_ids": [
+                    "22",
+                    "144"
+                ]
+            },
+            {
+                "group_key": "sellos-de-anden.php",
+                "legacy_product_ids": [
+                    "52",
+                    "149"
+                ]
+            },
+            {
+                "group_key": "serie-x130-motor-para-cortina-oculto.php",
+                "legacy_product_ids": [
+                    "45",
+                    "83"
+                ]
+            },
+            {
+                "group_key": "shelter-abrigo-estacionario-blue-giant.php",
+                "legacy_product_ids": [
+                    "21",
+                    "147"
+                ]
+            },
+            {
+                "group_key": "star4-vehicle-restraint.php",
+                "legacy_product_ids": [
+                    "25",
+                    "145"
+                ]
+            },
+            {
+                "group_key": "vertigo.php",
+                "legacy_product_ids": [
+                    "42",
+                    "100"
+                ]
+            }
+        ]
+    },
+    "q06_incomplete_or_test_records": {
+        "decision_id": "Q06",
+        "option": "A",
+        "question": "docs/implementation/review-resolution/decision-questionnaire.md#q06",
+        "rule": "Excluir (SKIP) los registros SQL 151-164 (nombre vacio) y 165 ('Prueba') del catalogo migrable: no son productos comerciales reales. Su media asociada (product-media-relations.csv) sigue este mismo destino SOLO cuando ese medio no tiene ningun otro propietario valido (otro producto, pagina o termino) en el modelo aprobado; si lo tiene, se preserva para ese propietario y no se toca aqui. No se crea nunca un producto vacio.",
+        "editorial_approval": "Q06-OPTION-A-2026-09-18: excluir los 14 registros vacios y 'Prueba'; conservar cualquier medio que tambien pertenezca a otra entidad.",
+        "legacy_product_ids": [
+            "151",
+            "152",
+            "153",
+            "154",
+            "155",
+            "156",
+            "157",
+            "158",
+            "159",
+            "160",
+            "161",
+            "162",
+            "163",
+            "164",
+            "165"
+        ],
+        "reason_code": "INCOMPLETE_OR_TEST_LEGACY_RECORD"
+    },
+    "q01_page_ownership": {
+        "decision_id": "Q01",
+        "option": "A",
+        "question": "docs/implementation/review-resolution/decision-questionnaire.md#q01",
+        "rule": "El contenido de una pagina legacy que reexpresa directamente un producto, una categoria o una marca pertenece a esa entidad canonica; no se crea una Page independiente para ella. Aplica UNICAMENTE cuando la correspondencia pagina-a-entidad-canonica es inequivoca segun evidencia ya documentada: content-master.csv classification=PRODUCT_PAGE con related_product_ids (resuelto a un unico grupo canonico, sea un ganador Q02 o un producto singleton ya aprobado por R-P01), o CATEGORY_PAGE/BRAND_PAGE cuyo legacy_file coincide con exactamente un legacy_page de category-master.csv/brand-master.csv, y ese termino ya esta aprobado por R-T01/R-T03. Cualquier pagina sin propietario unico y ya aprobado (grupos editoriales Q03 de multiples productos, categorias en conflicto D06, paginas sin owner documentado) queda KEEP_REVIEW, sin inventar un propietario. Esta es una decision de PROPIEDAD DE CONTENIDO, no de URL: no se crean redirects ni se decide el permalink final aqui (ver q01-q04-url-mapping.csv para la trazabilidad que la futura fase de URLs necesitara).",
+        "editorial_approval": "Q01-OPTION-A-2026-09-20: el contenido pertenece a la entidad canonica (producto/categoria/marca); no se crean Pages duplicadas; los medios exclusivos de esas paginas se reasignan a la entidad cuando el modelo actual tiene un campo legitimo para ellos (galeria/PDF de producto via la union pagina+SQL ya existente en product-master.csv, imagen de categoria via image_file_id, logo de marca via el campo logo); donde no existe un campo legitimo (categorias/marcas solo admiten una imagen, no galeria), el medio adicional permanece sin decision propia en vez de inventar un destino."
+    },
+    "q04_static_products": {
+        "decision_id": "Q04",
+        "option": "B",
+        "question": "docs/implementation/review-resolution/decision-questionnaire.md#q04",
+        "rule": "Las 31 fichas de static-product-supplement.csv (mas la ya migrada en el ensayo) son productos reales sin categoria ni marca asignada en el catalogo legacy. Se convierten en psi_producto en borrador, con su contenido, imagenes y PDF propios (misma union pagina+SQL por SHA-256 que Q02), pero SIN categoria ni marca: no se deduce ninguna de las dos por nombre de archivo, menu, cercania semantica u otra ficha parecida. La pagina PRODUCT_PAGE del mismo archivo (sin related_product_ids, ya verificado 1:1 con este listado) no se crea como Page independiente: su contenido es exactamente el del nuevo producto.",
+        "editorial_approval": "Q04-OPTION-B-2026-09-20: convertir las 31 fichas estaticas en productos reales en borrador, sin inventar categoria ni marca; sin doble enumeracion con su Page equivalente."
+    },
+    "q07_landings": {
+        "decision_id": "Q07",
+        "option": "A",
+        "question": "docs/implementation/review-resolution/decision-questionnaire.md#q07",
+        "rule": "Las 9 paginas de gama/landing (content-master.csv classification=SEO_LANDING) se conservan como WordPress Page en borrador, con su propio contenido extraido de su legacy_php. Solo se les asocia un medio cuando la relacion es demostrable y no le quita propiedad a un producto/categoria/marca con relacion mas fuerte (PRODUCT_PAGE/CATEGORY_PAGE/BRAND_PAGE, o relacion SQL via product-media-relations.csv): exclusivo de la landing, o compartido solo con otras landings hermanas. Cualquier otro medio referenciado por la pagina queda sin decision aqui (ownership contradictorio -> KEEP_REVIEW).",
+        "editorial_approval": "Q07-OPTION-A-2026-09-22: conservar las 9 landings como Page borrador; no copiar contenido de productos; medios solo cuando la relacion es exclusiva o compartida unicamente con otras landings.",
+        "pages": [
+            "cortinas-enrollables-de-aluminio.php",
+            "operadores-puerta-abatible.php",
+            "operadores-puerta-corrediza-residencial.php",
+            "operadores-puertas-ascendentes.php",
+            "puertas-de-garaje-aisladas.php",
+            "puertas-enrollables-de-garage.php",
+            "puertas-rapidas-enrollables.php",
+            "puertas-residenciales.php",
+            "tiras-plasticas-hawaianas.php"
+        ]
+    },
+    "q10_category_cleanup": {
+        "decision_id": "Q10",
+        "question": "docs/implementation/review-resolution/decision-questionnaire.md#q10",
+        "notes": "Tres decisiones independientes por legacy_id explicito; nunca se fusiona por coincidencia de nombre.",
+        "categories": {
+            "26": {
+                "action": "SKIP",
+                "reason_code": "SUPERSEDED_LEGACY_RECORD_NO_OWN_EVIDENCE",
+                "reason": "Q10: categoria 26 ('Puertas contra incendio') es un registro sobrante del panel legacy: 0 productos la referencian, sin legacy_page propia, sin evidencia de navegacion publica. Se conserva su ID para trazabilidad; no se fusiona con la 33 por compartir nombre."
+            },
+            "33": {
+                "action": "MIGRATE",
+                "reason_code": "CONFIRMED_CATEGORY_WITH_OWN_PAGE",
+                "reason": "Q10: categoria 33 ('Puertas contra incendio') se conserva: tiene pagina propia (contra-incendio.php) y productos reales (29, 116) que la referencian. Excluida hasta ahora del registro de conflicto D06 (Policy::CATEGORY_CONFLICT_PRODUCTS) unicamente por compartir nombre con la 26; esta decision autoriza explicitamente su migracion sin tocar la 26."
+            },
+            "25": {
+                "action": "SKIP",
+                "reason_code": "NO_LEGITIMATE_USE_BEYOND_Q06",
+                "reason": "Q10: categoria 25 ('Bumpers, semaforos y cepillos para rampa niveladora') no tiene legacy_page, ni evidencia de navegacion frontend (parent_frontend_evidence vacio, frontend_product_links=0), ni productos validos: sus 14 referencias son exactamente los 15 registros vacios/prueba excluidos por Q06 (IDs 151-164). Sin ningun otro uso legitimo documentado, se excluye junto con ellos."
+            }
+        }
+    },
+    "q11_missing_media": {
+        "decision_id": "Q11",
+        "question": "docs/implementation/review-resolution/decision-questionnaire.md#q11",
+        "notes": "Cada uno de los 4 casos es un problema distinto; ver docs/implementation/review-resolution/11-missing-media.md. Ninguno bloquea la migracion de su producto/pagina propietaria (eso depende de otras causas, algunas fuera de alcance de esta fase, p.ej. el conflicto de marca del producto 150).",
+        "cases": [
+            {
+                "referenced_path": "fichas/INFRACA-RÁPIDA-APILABLE.pdf",
+                "resolution": "RESOLVED_REFERENCE_ENCODING",
+                "resolved_path": "fichas/INFRACA-RÁPIDA-APILABLE.pdf",
+                "resolved_sha256": "3cbecd21575cd3a16b2fe19c06211f899ac091ffe65912adc39cf06da2659d0b",
+                "evidence": "El archivo referenciado y el archivo en disco son visualmente identicos pero difieren en la normalizacion Unicode de la 'A' con tilde (NFC en disco, NFD en la referencia). Prueba independiente de identidad (no por parecido de nombre): el SHA-256 del archivo en disco coincide exactamente con el original SQL ya vinculado a los productos 39/104 (system/files/images/productos/ad6778fc..., product-media-relations.csv, usage_type=PDF_USED|ORIGINAL), y media-master.csv ya registraba este mismo cruce en su propio campo duplicate_paths antes de esta fase.",
+                "reason_code": "RESOLVED_REFERENCE_ENCODING"
+            },
+            {
+                "referenced_path": "fichas/FICHATECNICASELLOSSOLMMERS.pdf",
+                "resolution": "RESOLVED_BY_SQL_PDF_HASH_MATCH",
+                "resolved_path": "fichas/FICHATECNICASELLOSSOLMMER S.pdf",
+                "resolved_sha256": "cd285d83185641f354dfe46f4a8584978feb184c0ecba72cda056074da7b6502",
+                "evidence": "NO se resuelve por parecido con fichas/SELLOSSOLMMER.pdf (hash distinto, documento distinto). Se resuelve por evidencia binaria independiente: el producto 150 tiene DOS PDF originales vinculados por SQL (product-media-relations.csv, product_id=150): file_id 1293 (hash 397f9ab3...) y file_id 1294 (hash cd285d83...). media-master.csv ya registraba, en su propio campo duplicate_paths (establecido en una fase anterior, no ahora), que file_id 1293 es byte-identico a fichas/SELLOSSOLMMER.pdf y que file_id 1294 es byte-identico a fichas/FICHATECNICASELLOSSOLMMER S.pdf (con espacio). La referencia rota del HTML (fichas/FICHATECNICASELLOSSOLMMERS.pdf, sin espacio) ya figuraba ademas en la columna technical_pdf de este mismo producto. La cadena de evidencia -- SHA-256 mas relacion SQL/PMR ya existente -- identifica el archivo con espacio como el documento correcto; SELLOSSOLMMER.pdf sigue siendo un documento distinto y no resuelve nada.",
+                "reason_code": "RESOLVED_BY_SQL_PDF_HASH_MATCH"
+            },
+            {
+                "referenced_path": "images/dura.jpg",
+                "resolution": "MISSING_SOURCE_FILE",
+                "resolved_path": null,
+                "resolved_sha256": null,
+                "evidence": "No existe ningun archivo fisico ni variante en el arbol legacy. No se fabrica reemplazo ni se busca una imagen semanticamente parecida.",
+                "reason_code": "MISSING_SOURCE_FILE"
+            },
+            {
+                "referenced_path": "images/magic.jpg",
+                "resolution": "MISSING_SOURCE_FILE",
+                "resolved_path": null,
+                "resolved_sha256": null,
+                "evidence": "No existe ningun archivo fisico ni variante en el arbol legacy. No se fabrica reemplazo ni se busca una imagen semanticamente parecida.",
+                "reason_code": "MISSING_SOURCE_FILE"
+            }
+        ]
+    },
+    "q13_binary_alias": {
+        "decision_id": "Q13",
+        "question": "docs/implementation/review-resolution/decision-questionnaire.md#q13",
+        "rule": "Cualquier ruta legacy que una decision ya aprobada (manual, del ensayo) declare como binary_alias de otra entidad ganadora permanece, por si misma, como un SKIP explicito -- nunca un segundo attachment del mismo contenido. La identidad binaria (SHA-256) ya la verifica Planner::build() al construir la entidad ganadora (BINARY_ALIAS_NOT_IDENTICAL si no coincidiera); esta regla no reverifica ese hash ni inventa una lista propia: lee subset-decisions.json (Planner::decisions()), la misma fuente ya aprobada.",
+        "reason_code": "DUPLICATE_OF_ALREADY_MIGRATED_ASSET"
+    }
 }

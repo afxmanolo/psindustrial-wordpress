@@ -103,10 +103,19 @@ use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Runner};
   $staticFiles = array_column( $s->rows['static-product-supplement.csv'], 'legacy_php' );
   $assert( ! in_array( 'accesspro-fs1000speed.php', $staticFiles, true ), 'Sanity: a known Q03 group file is not also a static_product candidate' );
 
-  // ============================================================== missing media -> KEEP_REVIEW, not improvised
+  // ============================================================== missing OPTIONAL media never blocks the entity
+  // Updated by Q05 -> Q07/Q10/Q11/Q13 phase: Q11 explicitly separates "this one image is
+  // genuinely missing" (images/dura.jpg, images/magic.jpg — see
+  // tests/q11-missing-media.php) from "this product cannot proceed". Before Q11 existed,
+  // media_union() had no way to drop a single known-missing path and refused the whole
+  // union, so these two legitimately stayed REVIEW; now they correctly proceed as drafts
+  // with an empty gallery, never a fabricated replacement.
   foreach ( array( 'dura-glide-20003000-puerta.php', 'magic-fuerza-del-operador.php' ) as $file ) {
    $e2 = $get( 'static:' . $file );
-   $assert( 'REVIEW' === $e2['action'] && null === ( $e2['decision']['decision_id'] ?? null ), "Static product with a documented missing-media reference stays REVIEW, not improvised: $file" );
+   $assert( 'CREATE_FROM_STATIC' === $e2['action'] && 'Q04' === ( $e2['decision']['decision_id'] ?? null ), "Static product with only a documented missing-media reference proceeds as a draft: $file" );
+   $assert( array() === $e2['data']['images'], "Its gallery excludes only the missing image, never fabricates a replacement: $file" );
+   $missing = $get( 'missing:images/' . ( str_starts_with( $file, 'dura' ) ? 'dura' : 'magic' ) . '.jpg' );
+   $assert( 'REVIEW' === $missing['action'] && 'Q11' === $missing['decision']['decision_id'], "The missing reference itself stays separately, explicitly tracked as REVIEW: $file" );
   }
 
   $export( 'q04-static-products-tests.json', array( 'passed' => true, 'checks' => $checks ) );

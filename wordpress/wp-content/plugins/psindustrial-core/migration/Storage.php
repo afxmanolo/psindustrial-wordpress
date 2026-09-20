@@ -48,6 +48,53 @@ final class Storage {
   $line = array( 'run_id' => $run, 'timestamp' => gmdate( 'c' ), 'entity' => $key, 'action' => $action, 'result' => $result, 'message' => $message );
   if ( false === file_put_contents( self::path( 'log-' . $run . '.jsonl' ), wp_json_encode( $line ) . "\n", FILE_APPEND | LOCK_EX ) ) { throw new \RuntimeException( 'LOG_WRITE_FAILED' ); }
  }
+ /**
+  * Deletes old run-*.json DRY RUN snapshots beyond the most recent $keep, so the private
+  * directory cannot silently grow to hundreds of megabytes again (each snapshot is a full,
+  * reproducible copy of a Planner::build() result; nothing reads an old one back -- see
+  * migration/Planner.php's own call site, right after it writes the snapshot it just built,
+  * never before). Touches ONLY plain files directly inside $dir whose name matches
+  * ^run-[uuid-chars]+\.json$ exactly: never identity-*.json (real WordPress object
+  * tracking), backup-*.json / backup-uploads-* (rollback safety data), log-*.jsonl (audit
+  * trail), asset-*.bin (staged binaries), writer.lock, or anything else -- including a
+  * file that merely starts with "run-" but has a different shape (wrong extension, a
+  * symlink, a directory sharing the name). A delete failure (permission denied, the
+  * candidate turned out not to be deletable, ...) is reported in the return value, never
+  * thrown: a valid DRY RUN must never fail just because housekeeping could not clean up.
+  * @param string|null $dir Override for tests only; production always uses self::root().
+  * @param callable|null $unlink Override for tests only, to deterministically exercise the
+  *        delete-failure path without relying on OS-specific permission tricks; production
+  *        always uses the real unlink(). Signature: fn(string $path): bool.
+  * @return array{kept:int,deleted:string[],failed:string[]}
+  */
+ public static function retain_recent_runs( int $keep = 30, ?string $dir = null, ?callable $unlink = null ): array {
+  $base = $dir ?? self::root();
+  $unlink ??= static fn( string $path ): bool => @unlink( $path );
+  $baseReal = realpath( $base );
+  if ( ! $baseReal ) { return array( 'kept' => 0, 'deleted' => array(), 'failed' => array() ); }
+  $baseReal = rtrim( wp_normalize_path( $baseReal ), '/' );
+  $candidates = array();
+  foreach ( scandir( $base ) ?: array() as $name ) {
+   if ( ! preg_match( '/^run-[a-zA-Z0-9-]+\.json$/D', $name ) ) { continue; } // strict: only exact snapshot filenames, nothing merely similar.
+   $full = $base . '/' . $name;
+   if ( is_link( $full ) ) { continue; } // never follow/delete a symlink or reparse point.
+   $real = realpath( $full );
+   // Must resolve to a plain file directly inside $base -- rejects a same-named directory
+   // and (defense in depth) anything a crafted name might have tried to escape to.
+   if ( ! $real || ! is_file( $real ) || dirname( wp_normalize_path( $real ) ) !== $baseReal ) { continue; }
+   $candidates[] = array( 'name' => $name, 'path' => $real, 'mtime' => filemtime( $real ) ?: 0 );
+  }
+  // Newest first: modification time descending, filename descending as a deterministic
+  // tiebreak for equal timestamps -- never relies on scandir()'s own, OS-dependent order.
+  usort( $candidates, static fn( $a, $b ) => $b['mtime'] <=> $a['mtime'] ?: strcmp( $b['name'], $a['name'] ) );
+  $toDelete = array_slice( $candidates, max( 0, $keep ) );
+  $deleted = array(); $failed = array();
+  foreach ( $toDelete as $c ) {
+   if ( $unlink( $c['path'] ) ) { $deleted[] = $c['name']; } else { $failed[] = $c['name']; }
+  }
+  if ( $failed ) { error_log( 'psindustrial-core: retain_recent_runs could not delete ' . count( $failed ) . ' old run snapshot(s): ' . implode( ', ', $failed ) ); }
+  return array( 'kept' => count( $candidates ) - count( $deleted ), 'deleted' => $deleted, 'failed' => $failed );
+ }
  public static function locked( callable $callback ): mixed {
   self::guard(); $handle = fopen( self::path( 'writer.lock' ), 'c' );
   if ( ! $handle || ! flock( $handle, LOCK_EX | LOCK_NB ) ) { if ( $handle ) { fclose( $handle ); } throw new \RuntimeException( 'WRITER_BUSY' ); }
