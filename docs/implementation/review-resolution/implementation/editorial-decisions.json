@@ -1,8 +1,8 @@
 {
   "scope": "EDITORIAL_DECISIONS_APPROVED",
-  "approved_at": "2026-09-18",
-  "approved_by": "human decision, PS Industrial session (chat approval on feature/review-resolution): Q02 = Opcion B, Q06 = Opcion A, per docs/implementation/review-resolution/decision-questionnaire.md",
-  "notes": "Explicit, closed-list human decisions only. This file declares WHICH groups/records are approved and WHY; it never hardcodes a computed winner, a media union or an order — those are derived deterministically at build time by migration/EditorialDecisions.php from fields that already exist in docs/migration/*.csv and the legacy SQL catalog (fecha), so this file cannot drift from its source data and never duplicates it. If a legacy_product_id listed here no longer exists in product-master.csv, or a canonical_candidate_group's membership on disk no longer matches the ids listed here exactly, EditorialDecisions.php refuses that one group/entry (KEEP_REVIEW) rather than improvise.",
+  "approved_at": "2026-09-20",
+  "approved_by": "human decision, PS Industrial session (chat approval on feature/review-resolution): Q02 = Opcion B, Q06 = Opcion A (2026-09-18); Q01 = Opcion A, Q04 = Opcion B (2026-09-20), per docs/implementation/review-resolution/decision-questionnaire.md",
+  "notes": "Explicit, closed-list human decisions only. This file declares WHICH groups/records are approved and WHY; it never hardcodes a computed winner, a media union or an order — those are derived deterministically at build time by migration/EditorialDecisions.php from fields that already exist in docs/migration/*.csv and the legacy SQL catalog (fecha), so this file cannot drift from its source data and never duplicates it. If a legacy_product_id listed here no longer exists in product-master.csv, or a canonical_candidate_group's membership on disk no longer matches the ids listed here exactly, EditorialDecisions.php refuses that one group/entry (KEEP_REVIEW) rather than improvise. Q01 and Q04 are POLICY-LEVEL switches, not curated id lists: which exact pages/records they apply to is itself derived from existing evidence (content-master.csv classification, category-master.csv/brand-master.csv legacy_page links, static-product-supplement.csv) every run, never hardcoded here.",
   "q02_identity_merge": {
     "decision_id": "Q02",
     "option": "B",
@@ -46,5 +46,19 @@
     "editorial_approval": "Q06-OPTION-A-2026-09-18: excluir los 14 registros vacios y 'Prueba'; conservar cualquier medio que tambien pertenezca a otra entidad.",
     "legacy_product_ids": ["151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162", "163", "164", "165"],
     "reason_code": "INCOMPLETE_OR_TEST_LEGACY_RECORD"
+  },
+  "q01_page_ownership": {
+    "decision_id": "Q01",
+    "option": "A",
+    "question": "docs/implementation/review-resolution/decision-questionnaire.md#q01",
+    "rule": "El contenido de una pagina legacy que reexpresa directamente un producto, una categoria o una marca pertenece a esa entidad canonica; no se crea una Page independiente para ella. Aplica UNICAMENTE cuando la correspondencia pagina-a-entidad-canonica es inequivoca segun evidencia ya documentada: content-master.csv classification=PRODUCT_PAGE con related_product_ids (resuelto a un unico grupo canonico, sea un ganador Q02 o un producto singleton ya aprobado por R-P01), o CATEGORY_PAGE/BRAND_PAGE cuyo legacy_file coincide con exactamente un legacy_page de category-master.csv/brand-master.csv, y ese termino ya esta aprobado por R-T01/R-T03. Cualquier pagina sin propietario unico y ya aprobado (grupos editoriales Q03 de multiples productos, categorias en conflicto D06, paginas sin owner documentado) queda KEEP_REVIEW, sin inventar un propietario. Esta es una decision de PROPIEDAD DE CONTENIDO, no de URL: no se crean redirects ni se decide el permalink final aqui (ver q01-q04-url-mapping.csv para la trazabilidad que la futura fase de URLs necesitara).",
+    "editorial_approval": "Q01-OPTION-A-2026-09-20: el contenido pertenece a la entidad canonica (producto/categoria/marca); no se crean Pages duplicadas; los medios exclusivos de esas paginas se reasignan a la entidad cuando el modelo actual tiene un campo legitimo para ellos (galeria/PDF de producto via la union pagina+SQL ya existente en product-master.csv, imagen de categoria via image_file_id, logo de marca via el campo logo); donde no existe un campo legitimo (categorias/marcas solo admiten una imagen, no galeria), el medio adicional permanece sin decision propia en vez de inventar un destino."
+  },
+  "q04_static_products": {
+    "decision_id": "Q04",
+    "option": "B",
+    "question": "docs/implementation/review-resolution/decision-questionnaire.md#q04",
+    "rule": "Las 31 fichas de static-product-supplement.csv (mas la ya migrada en el ensayo) son productos reales sin categoria ni marca asignada en el catalogo legacy. Se convierten en psi_producto en borrador, con su contenido, imagenes y PDF propios (misma union pagina+SQL por SHA-256 que Q02), pero SIN categoria ni marca: no se deduce ninguna de las dos por nombre de archivo, menu, cercania semantica u otra ficha parecida. La pagina PRODUCT_PAGE del mismo archivo (sin related_product_ids, ya verificado 1:1 con este listado) no se crea como Page independiente: su contenido es exactamente el del nuevo producto.",
+    "editorial_approval": "Q04-OPTION-B-2026-09-20: convertir las 31 fichas estaticas en productos reales en borrador, sin inventar categoria ni marca; sin doble enumeracion con su Page equivalente."
   }
 }

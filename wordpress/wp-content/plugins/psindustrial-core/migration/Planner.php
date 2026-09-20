@@ -24,7 +24,7 @@ final class Planner {
   // Checked BEFORE the LOW-risk policy layer so an explicit human decision always takes
   // precedence over a generic inference, though in practice the two never overlap --
   // Policy already excludes every multi-record canonical group and every empty/test id.
-  $editorial = 'full' === $scope ? EditorialDecisions::decisions( $s ) : array();
+  $editorial = 'full' === $scope ? EditorialDecisions::decisions( $s, $policy ) : array();
   $add = static function( string $key, string $type, array $row, string $reason ) use ( &$entries, $d, $editorial, $policy, $scope, $s ): void {
    $decision = $d['entities'][ $key ] ?? $editorial[ $key ] ?? $policy[ $key ] ?? null;
    if ( 'subset' === $scope && ! $decision && ! in_array( $key, $d['review_examples'], true ) ) { return; }
