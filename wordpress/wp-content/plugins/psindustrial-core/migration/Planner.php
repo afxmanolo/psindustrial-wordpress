@@ -19,8 +19,14 @@ final class Planner {
   // batching, or which entries a rehearsal run contains. A 'full' plan built with it
   // still cannot be executed — Runner::batch() rejects any scope other than 'subset'.
   $policy = 'full' === $scope ? Policy::decisions( $s, $d ) : array();
-  $add = static function( string $key, string $type, array $row, string $reason ) use ( &$entries, $d, $policy, $scope, $s ): void {
-   $decision = $d['entities'][ $key ] ?? $policy[ $key ] ?? null;
+  // Explicit human editorial decisions (Q02, Q06 -- see migration/EditorialDecisions.php).
+  // Same 'full'-only scoping guarantee as Policy: never seen by 'subset' execution.
+  // Checked BEFORE the LOW-risk policy layer so an explicit human decision always takes
+  // precedence over a generic inference, though in practice the two never overlap --
+  // Policy already excludes every multi-record canonical group and every empty/test id.
+  $editorial = 'full' === $scope ? EditorialDecisions::decisions( $s ) : array();
+  $add = static function( string $key, string $type, array $row, string $reason ) use ( &$entries, $d, $editorial, $policy, $scope, $s ): void {
+   $decision = $d['entities'][ $key ] ?? $editorial[ $key ] ?? $policy[ $key ] ?? null;
    if ( 'subset' === $scope && ! $decision && ! in_array( $key, $d['review_examples'], true ) ) { return; }
    $file = $row['legacy_php'] ?? $row['legacy_page'] ?? $row['legacy_file'] ?? $row['legacy_path'] ?? '';
    $e = array( 'manifest_version' => 1, 'entity_key' => $key, 'source_key' => $key, 'source_namespace' => explode( ':', $key )[0], 'source_type' => $type, 'content_type' => $type,
@@ -29,9 +35,11 @@ final class Planner {
     'notes' => $reason, 'row' => $row, 'data' => array(), 'dependencies' => array(), 'approval_ref' => '', 'field_ownership' => 'importer-controlled draft fields; manual edits block whole object', 'warnings' => array() );
    if ( 'LEGACY_INTERNAL' === ( $row['classification'] ?? '' ) ) { $e['action'] = 'SKIP'; $e['notes'] = 'Código interno: no se migra como contenido; archivo y evidencias preservados.'; }
    if ( $decision ) {
-    $e['approval_ref'] = 'low_rule' === ( $decision['origin'] ?? '' )
+    $e['approval_ref'] = 'editorial_decision' === ( $decision['origin'] ?? '' )
+     ? 'Decisión editorial humana (' . ( $decision['decision_id'] ?? '' ) . '): migration/EditorialDecisions.php; docs/implementation/review-resolution/implementation/editorial-decisions.json:' . $key
+     : ( 'low_rule' === ( $decision['origin'] ?? '' )
      ? 'Política LOW automatizada (Prompt 7): migration/Policy.php:' . ( $decision['rule_id'] ?? '' ) . ':' . $key
-     : 'Prompt 6: ensayo privado; subset-decisions.json:' . $key;
+     : 'Prompt 6: ensayo privado; subset-decisions.json:' . $key );
     $e['decision'] = $decision; $e['action'] = $decision['action'];
     if ( ! in_array( $e['action'], array( 'MIGRATE', 'CREATE_FROM_STATIC', 'MERGE', 'SKIP', 'REVIEW' ), true ) ) { throw new \RuntimeException( 'INVALID_DECISION_ACTION' ); }
     if ( 'MERGE' === $e['action'] && ( empty( $decision['source_keys'] ) || empty( $decision['field_winners'] ) || empty( $decision['editorial_approval'] ) ) ) { $e['action'] = 'REVIEW'; $e['notes'] = 'MERGE requiere autorización editorial y ganador por campo.'; }

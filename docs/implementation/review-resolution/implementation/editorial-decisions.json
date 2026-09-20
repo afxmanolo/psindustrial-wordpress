@@ -1,0 +1,50 @@
+{
+  "scope": "EDITORIAL_DECISIONS_APPROVED",
+  "approved_at": "2026-09-18",
+  "approved_by": "human decision, PS Industrial session (chat approval on feature/review-resolution): Q02 = Opcion B, Q06 = Opcion A, per docs/implementation/review-resolution/decision-questionnaire.md",
+  "notes": "Explicit, closed-list human decisions only. This file declares WHICH groups/records are approved and WHY; it never hardcodes a computed winner, a media union or an order — those are derived deterministically at build time by migration/EditorialDecisions.php from fields that already exist in docs/migration/*.csv and the legacy SQL catalog (fecha), so this file cannot drift from its source data and never duplicates it. If a legacy_product_id listed here no longer exists in product-master.csv, or a canonical_candidate_group's membership on disk no longer matches the ids listed here exactly, EditorialDecisions.php refuses that one group/entry (KEEP_REVIEW) rather than improvise.",
+  "q02_identity_merge": {
+    "decision_id": "Q02",
+    "option": "B",
+    "question": "docs/implementation/review-resolution/decision-questionnaire.md#q02",
+    "rule": "Consolidar cada grupo de identidad equivalente (26 grupos verificados en 03-identity-groups.md: mismo canonical_candidate_group, cero contradiccion de PDF, categoria y marca identicas) en un unico producto WordPress. Ganador = registro con la fecha SQL (productos.fecha) mas antigua; empate resuelto por legacy_product_id ascendente. Imagen principal = primera imagen del ganador. Union de imagenes/PDF deduplicada por SHA-256 real (Sources::asset), nunca por nombre de archivo. Los registros perdedores quedan SKIP citando al ganador. Ningun grupo Q03 (fusion editorial, 27 grupos, distinto de este listado) se toca aqui.",
+    "editorial_approval": "Q02-OPTION-B-2026-09-18: consolidar 26 productos duplicados por identidad equivalente; unir fotos unicas por hash; imagen principal = primera del registro mas antiguo.",
+    "groups": [
+      { "group_key": "accesorios.php", "legacy_product_ids": ["27", "138"] },
+      { "group_key": "coleccion-classic.php", "legacy_product_ids": ["9", "108"] },
+      { "group_key": "cortina-serie-620.php", "legacy_product_ids": ["7", "91"] },
+      { "group_key": "cortina-serie-625.php", "legacy_product_ids": ["4", "87"] },
+      { "group_key": "cortina-serie-630.php", "legacy_product_ids": ["11", "94"] },
+      { "group_key": "energy-series-with-intellicore-3720-3724-3722.php", "legacy_product_ids": ["19", "61"] },
+      { "group_key": "fire-rated-doors-firestar-models-700-700c.php", "legacy_product_ids": ["13", "99"] },
+      { "group_key": "kronos-puertas-rapidas-de-sectores-modulares-autorreparable.php", "legacy_product_ids": ["41", "106"] },
+      { "group_key": "operador-comercial-rhx.php", "legacy_product_ids": ["12", "82"] },
+      { "group_key": "phobos-n-piston-electromecanico.php", "legacy_product_ids": ["46", "111"] },
+      { "group_key": "predadoor-nxt-door.php", "legacy_product_ids": ["37", "102"] },
+      { "group_key": "puerta-contra-explosion.php", "legacy_product_ids": ["26", "117"] },
+      { "group_key": "puerta-de-acero-acanalado-modelos-524.php", "legacy_product_ids": ["18", "58"] },
+      { "group_key": "puertas-contra-rayos-x.php", "legacy_product_ids": ["30", "115"] },
+      { "group_key": "puertas-industriales-dockman.php", "legacy_product_ids": ["50", "59"] },
+      { "group_key": "puertas-seccionales-de-acero-modelo-2415.php", "legacy_product_ids": ["15", "60"] },
+      { "group_key": "rampa-niveladora-mecanica-blue-giant.php", "legacy_product_ids": ["23", "140"] },
+      { "group_key": "rampas-de-anden-hidraulicas.php", "legacy_product_ids": ["53", "141"] },
+      { "group_key": "rampas-de-anden-mecanicas.php", "legacy_product_ids": ["56", "142"] },
+      { "group_key": "rapida-enrollable-industrial.php", "legacy_product_ids": ["38", "103"] },
+      { "group_key": "retenedor-de-vehiculos.php", "legacy_product_ids": ["22", "144"] },
+      { "group_key": "sellos-de-anden.php", "legacy_product_ids": ["52", "149"] },
+      { "group_key": "serie-x130-motor-para-cortina-oculto.php", "legacy_product_ids": ["45", "83"] },
+      { "group_key": "shelter-abrigo-estacionario-blue-giant.php", "legacy_product_ids": ["21", "147"] },
+      { "group_key": "star4-vehicle-restraint.php", "legacy_product_ids": ["25", "145"] },
+      { "group_key": "vertigo.php", "legacy_product_ids": ["42", "100"] }
+    ]
+  },
+  "q06_incomplete_or_test_records": {
+    "decision_id": "Q06",
+    "option": "A",
+    "question": "docs/implementation/review-resolution/decision-questionnaire.md#q06",
+    "rule": "Excluir (SKIP) los registros SQL 151-164 (nombre vacio) y 165 ('Prueba') del catalogo migrable: no son productos comerciales reales. Su media asociada (product-media-relations.csv) sigue este mismo destino SOLO cuando ese medio no tiene ningun otro propietario valido (otro producto, pagina o termino) en el modelo aprobado; si lo tiene, se preserva para ese propietario y no se toca aqui. No se crea nunca un producto vacio.",
+    "editorial_approval": "Q06-OPTION-A-2026-09-18: excluir los 14 registros vacios y 'Prueba'; conservar cualquier medio que tambien pertenezca a otra entidad.",
+    "legacy_product_ids": ["151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162", "163", "164", "165"],
+    "reason_code": "INCOMPLETE_OR_TEST_LEGACY_RECORD"
+  }
+}
