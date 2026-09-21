@@ -66,3 +66,7 @@ Pendiente de aprobación visual: proporción del banner y sidebar, columnas/foto
 ## Aprobación y navegación posterior (2026-09-21)
 
 El usuario aprobó la apariencia general. No se rediseñaron single, catálogo, sidebar ni footer. Se completaron navegación y enlaces respetando las restricciones públicas de los términos. La validación vigente es **111/111**, descrita en [Navegación y destinos pendientes](navigation-validation.md); reemplaza los pendientes de navegación y la cifra de pruebas de la revisión visual anterior. La aprobación editorial de destinos sigue pendiente. El frontend se integra mediante el commit expresamente autorizado, sin push.
+
+## Estructura global y Home (2026-09-21)
+
+El sistema visual aprobado se comparte ahora globalmente sin cambiar la composición del catálogo. Home y validación nueva se documentan en [Auditoría Home/global](home-global-audit.md). Los assets históricos de portada son una excepción explícitamente autorizada a la separación anterior de contenido/Media Library: sólo reproducen la composición visual demostrada, sin modificar taxonomías ni asociaciones editoriales.

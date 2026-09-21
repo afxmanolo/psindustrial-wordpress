@@ -41,7 +41,7 @@ function catalog_contact_url(): string {
 
 /** Invalid placeholder links and unpublished entities are not public navigation. */
 add_filter( 'wp_nav_menu_objects', static function( array $items, $args ): array {
-	if ( ! is_catalog() || ! in_array( $args->theme_location ?? '', array( 'primary', 'catalog_sidebar', 'brand_sidebar' ), true ) ) { return $items; }
+	if ( ! in_array( $args->theme_location ?? '', array( 'primary', 'catalog_sidebar', 'brand_sidebar' ), true ) ) { return $items; }
 	return array_values( array_filter( $items, static function( $item ) {
 		if ( ! $item->url || '#' === $item->url ) { return false; }
 		if ( 'taxonomy' === $item->type && in_array( $item->object, array( 'psi_categoria', 'psi_marca' ), true ) ) { return 'public' === get_term_meta( $item->object_id, '_psi_public_state', true ); }

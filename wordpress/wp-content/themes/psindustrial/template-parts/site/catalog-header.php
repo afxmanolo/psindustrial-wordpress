@@ -11,7 +11,7 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'depth' => 2 ) ); ?>
 		<?php else : ?>
             <ul>
-                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Inicio', 'psindustrial' ); ?></a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"<?php if ( is_front_page() ) : ?> aria-current="page"<?php endif; ?>><?php esc_html_e( 'Inicio', 'psindustrial' ); ?></a></li>
                 <?php $about = \PSIndustrial\Theme\published_page_url( 'nosotros' ); ?>
                 <li><?php if ( $about ) : ?><a href="<?php echo esc_url( $about ); ?>"><?php esc_html_e( 'Nosotros', 'psindustrial' ); ?></a><?php else : ?><span class="navigation-pending" aria-disabled="true"><?php esc_html_e( 'Nosotros', 'psindustrial' ); ?></span><?php endif; ?></li>
                 <li class="menu-item-has-children">

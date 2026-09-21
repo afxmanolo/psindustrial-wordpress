@@ -6,7 +6,7 @@
 	button.hidden = false;
 	const mobile = window.matchMedia('(max-width: 991px)');
 	const disclosures = [];
-	if (document.body.classList.contains('psi-catalog')) {
+	if (document.body.classList.contains('psi-site')) {
 		nav.querySelectorAll('li').forEach((item, index) => {
 			const list = item.querySelector(':scope > .sub-menu');
 			const link = item.querySelector(':scope > a');

@@ -17,6 +17,8 @@ add_action( 'after_setup_theme', static function() {
 } );
 
 add_filter( 'body_class', static function( array $classes ): array {
+	$classes[] = 'psi-site';
+	if ( is_front_page() || is_catalog() ) { $classes[] = 'psi-has-hero'; }
 	if ( is_catalog() ) { $classes[] = 'psi-catalog'; }
 	return $classes;
 } );
