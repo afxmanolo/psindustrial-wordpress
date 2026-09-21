@@ -6,7 +6,7 @@
  * docs/implementation/importer-reports/. */
 if ( PHP_SAPI !== 'cli' ) { http_response_code( 404 ); exit; }
 require dirname( __DIR__, 4 ) . '/wp-load.php';
-use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Runner};
+use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Runner,Identity};
 (static function(): void {
  $checks = array();
  $assert = static function( bool $value, string $label ) use ( &$checks ): void { $checks[] = array( 'test' => $label, 'passed' => $value ); if ( ! $value ) { throw new RuntimeException( $label ); } };
@@ -31,7 +31,7 @@ use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Runner};
   $e = $get( 'static:1500-revolving-door.php' );
   $assert( 'CREATE_FROM_STATIC' === $e['action'] && 'Q04' === $e['decision']['decision_id'], '1500-revolving-door.php approved as CREATE_FROM_STATIC under Q04' );
   $assert( 'psi_producto' === $e['target_type'], 'Target type is psi_producto, not a Page' );
-  $assert( 'CREATE' === $e['planned_result'], 'Planned result is a draft creation (Runner::apply() always writes post_status=draft for new posts; Identity::set(_psi_review_state,"pending") follows immediately -- never publish)' );
+  $assert( Identity::find( $e ) > 0 && 'psi_producto' === get_post_type( Identity::find( $e ) ) && 'UNCHANGED' === Identity::prediction( $e ), 'Q04 identity exists as a product, with unchanged imported snapshot and no recreation' );
 
   // ============================================================== no category / no brand automatica
   // Excludes the one static_product already migrated in the earlier ensayo (a MANUAL,

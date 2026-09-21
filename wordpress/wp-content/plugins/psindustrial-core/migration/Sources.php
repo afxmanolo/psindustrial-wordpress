@@ -4,6 +4,13 @@ defined( 'ABSPATH' ) || exit;
 
 /** Read-only, bounded readers. PHP and SQL input are never evaluated. */
 final class Sources {
+ public const DATASHEET_BUTTON_PATH = 'images/verficha.png';
+ public const DATASHEET_BUTTON_SHA256 = '3f5aeebc29765caddc907536949a7c1802341f1771394b26a5d63c6ab9cfaf0f';
+ /** Visually verified UI button, with 86 legacy anchor uses. Never classify by filename alone. */
+ public static function is_ui_asset( string $key ): bool {
+  if ( 'asset:' . self::DATASHEET_BUTTON_PATH !== $key ) { return false; }
+  return hash_equals( self::DATASHEET_BUTTON_SHA256, hash_file( 'sha256', self::safe( Storage::project() . '/legacy/public', self::DATASHEET_BUTTON_PATH ) ) );
+ }
  public const FILES = array( 'product-master.csv', 'category-master.csv', 'brand-master.csv', 'content-master.csv', 'media-master.csv', 'product-media-relations.csv', 'static-product-supplement.csv', 'canonical-candidate-groups.csv', 'media-usage-evidence.csv', 'missing-media-references.csv', 'page-source-evidence.json' );
  public array $rows = array();
  public array $fingerprints = array();

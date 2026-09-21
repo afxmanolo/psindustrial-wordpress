@@ -182,7 +182,7 @@
             "passed": true
         },
         {
-            "test": "Sanitization audit covers exactly the 5 Group A files",
+            "test": "Sanitization audit covers the 5 original Group A files plus 10 added under Q05 (15 total)",
             "passed": true
         },
         {
@@ -446,6 +446,526 @@
             "passed": true
         },
         {
+            "test": "Audit record status is SANITIZED_OK: fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: pages preserved: fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: embedded file confirmed absent: fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: importer regex confirmed non-matching: fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (valid_pdf_header): fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (pages_preserved): fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (embedded_file_absent): fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_open_action): fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_acroform): fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_names_javascript): fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_catalog_aa): fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (importer_regex_no_match): fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (text_extraction_equivalent): fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record status is SANITIZED_OK: fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: pages preserved: fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: embedded file confirmed absent: fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: importer regex confirmed non-matching: fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (valid_pdf_header): fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (pages_preserved): fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (embedded_file_absent): fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_open_action): fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_acroform): fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_names_javascript): fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_catalog_aa): fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (importer_regex_no_match): fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (text_extraction_equivalent): fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record status is SANITIZED_OK: fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: pages preserved: fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: embedded file confirmed absent: fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: importer regex confirmed non-matching: fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (valid_pdf_header): fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (pages_preserved): fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (embedded_file_absent): fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_open_action): fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_acroform): fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_names_javascript): fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_catalog_aa): fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (importer_regex_no_match): fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (text_extraction_equivalent): fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record status is SANITIZED_OK: fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: pages preserved: fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: embedded file confirmed absent: fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: importer regex confirmed non-matching: fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (valid_pdf_header): fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (pages_preserved): fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (embedded_file_absent): fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_open_action): fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_acroform): fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_names_javascript): fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_catalog_aa): fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (importer_regex_no_match): fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (text_extraction_equivalent): fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record status is SANITIZED_OK: fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: pages preserved: fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: embedded file confirmed absent: fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: importer regex confirmed non-matching: fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (valid_pdf_header): fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (pages_preserved): fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (embedded_file_absent): fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_open_action): fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_acroform): fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_names_javascript): fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_catalog_aa): fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (importer_regex_no_match): fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (text_extraction_equivalent): fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record status is SANITIZED_OK: fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: pages preserved: fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: embedded file confirmed absent: fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: importer regex confirmed non-matching: fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (valid_pdf_header): fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (pages_preserved): fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (embedded_file_absent): fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_open_action): fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_acroform): fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_names_javascript): fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_catalog_aa): fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (importer_regex_no_match): fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (text_extraction_equivalent): fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record status is SANITIZED_OK: fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: pages preserved: fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: embedded file confirmed absent: fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: importer regex confirmed non-matching: fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (valid_pdf_header): fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (pages_preserved): fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (embedded_file_absent): fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_open_action): fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_acroform): fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_names_javascript): fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_catalog_aa): fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (importer_regex_no_match): fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (text_extraction_equivalent): fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record status is SANITIZED_OK: fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: pages preserved: fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: embedded file confirmed absent: fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: importer regex confirmed non-matching: fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (valid_pdf_header): fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (pages_preserved): fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (embedded_file_absent): fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_open_action): fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_acroform): fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_names_javascript): fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_catalog_aa): fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (importer_regex_no_match): fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (text_extraction_equivalent): fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record status is SANITIZED_OK: fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: pages preserved: fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: embedded file confirmed absent: fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: importer regex confirmed non-matching: fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (valid_pdf_header): fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (pages_preserved): fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (embedded_file_absent): fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_open_action): fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_acroform): fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_names_javascript): fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_catalog_aa): fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (importer_regex_no_match): fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (text_extraction_equivalent): fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record status is SANITIZED_OK: fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: pages preserved: fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: embedded file confirmed absent: fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "Audit record: importer regex confirmed non-matching: fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (valid_pdf_header): fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (pages_preserved): fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (embedded_file_absent): fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_open_action): fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_acroform): fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_names_javascript): fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (no_catalog_aa): fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (importer_regex_no_match): fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "No sanitization validation check was relaxed to a failure being ignored (text_extraction_equivalent): fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
             "test": "Group B approved hash resolves to the exact classification\/reason_code: system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
             "passed": true
         },
@@ -558,38 +1078,6 @@
             "passed": true
         },
         {
-            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/Clopay-3720-07.pdf",
-            "passed": true
-        },
-        {
-            "test": "An unrelated PDF always stages its own original bytes: fichas\/Clopay-3720-07.pdf",
-            "passed": true
-        },
-        {
-            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/CMDC-0524SP-14-1.pdf",
-            "passed": true
-        },
-        {
-            "test": "An unrelated PDF always stages its own original bytes: fichas\/CMDC-0524SP-14-1.pdf",
-            "passed": true
-        },
-        {
-            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/CMDC-3717-3718-11.pdf",
-            "passed": true
-        },
-        {
-            "test": "An unrelated PDF always stages its own original bytes: fichas\/CMDC-3717-3718-11.pdf",
-            "passed": true
-        },
-        {
-            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/commercial-aluminum-door-systems-brochure.pdf",
-            "passed": true
-        },
-        {
-            "test": "An unrelated PDF always stages its own original bytes: fichas\/commercial-aluminum-door-systems-brochure.pdf",
-            "passed": true
-        },
-        {
             "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/CONTRA_EXPLOSION.pdf",
             "passed": true
         },
@@ -614,11 +1102,43 @@
             "passed": true
         },
         {
-            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/Cortina-serie-610-620.pdf",
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/Fast-Seal_LIT020520_ES-2.pdf",
             "passed": true
         },
         {
-            "test": "An unrelated PDF always stages its own original bytes: fichas\/Cortina-serie-610-620.pdf",
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/Fast-Seal_LIT020520_ES-2.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/FICHATECNICASELLOSSOLMMER S.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/FICHATECNICASELLOSSOLMMER S.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/fireking-fire-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/fireking-fire-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/Folleto-de-Cortina-Enrollable-Wayne-Dalton-Firestar-700-2.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/Folleto-de-Cortina-Enrollable-Wayne-Dalton-Firestar-700-2.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF never receives a pdf_approval by accident: fichas\/INFRACA-RAPIDA-ENROLLABLE.pdf",
+            "passed": true
+        },
+        {
+            "test": "An unrelated PDF always stages its own original bytes: fichas\/INFRACA-RAPIDA-ENROLLABLE.pdf",
             "passed": true
         },
         {

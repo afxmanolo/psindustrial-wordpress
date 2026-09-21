@@ -87,6 +87,7 @@ final class Planner {
         $e['warnings'][] = 'Borrador: revisar extracción, títulos, tablas y enlaces antes de publicar; SEO/rutas sin activar.';
         $e['data']['categories'] = $decision['categories'] ?? array(); $e['data']['brand'] = $decision['brand'] ?? '';
         $e['data']['images'] = $decision['images'] ?? array(); $e['data']['pdfs'] = $decision['pdfs'] ?? array();
+        foreach ( array( 'images','pdfs' ) as $field ) { $e['data'][ $field ] = array_values( array_filter( $e['data'][ $field ], static fn( $assetKey ) => ! Sources::is_ui_asset( $assetKey ) ) ); }
         $e['data']['videos'] = $decision['videos'] ?? array();
         if ( ! $e['data']['brand'] && 'page' !== $type ) { $e['warnings'][] = 'Sin marca: no inferir fabricante.'; }
         $e['dependencies'] = array_merge( $e['data']['categories'], $e['data']['brand'] ? array( $e['data']['brand'] ) : array(), $e['data']['images'], $e['data']['pdfs'] );
@@ -127,6 +128,7 @@ final class Planner {
     }
    }
    $e['target_type'] = match ( $type ) { 'category' => 'psi_categoria', 'brand' => 'psi_marca', 'product', 'static_product' => 'psi_producto', 'media' => 'attachment', default => 'page' };
+   if ( 'media' === $type && Sources::is_ui_asset( $key ) ) { $e['action'] = 'SKIP'; $e['classification'] = 'UI_ONLY_ASSET'; $e['notes'] = 'Verified path + SHA-256: theme PDF button, never editorial media. Existing attachment retained.'; }
    $e['planned_result'] = in_array( $e['action'], array( 'SKIP', 'REVIEW' ), true ) ? $e['action'] : Identity::prediction( $e );
    if ( ! in_array( $e['action'], array( 'SKIP','REVIEW' ), true ) ) { $e['wordpress_id'] = Identity::find( $e ); }
    if ( 'product' === $type ) { $e['relationship_evidence'] = array( 'category_confidence' => $row['category_confidence'], 'brand_confidence' => $row['brand_confidence'], 'candidate_brand' => $row['brand_id'], 'evidence' => $row['source_of_relationship'] ); }

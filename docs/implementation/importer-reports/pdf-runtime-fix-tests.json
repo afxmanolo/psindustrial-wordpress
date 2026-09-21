@@ -1,0 +1,169 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "Group A entry present in fresh plan: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Group A staged bytes differ from the legacy original (never imported as-is): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Group A staged_sha256 legitimately differs from row (original) sha256: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Group A original_source_integrity passes on unmodified entry: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Group A staged_artifact_integrity passes on unmodified entry: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Tampered row.sha256 correctly fails original_source_integrity: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Tampering ONLY row.sha256 never affects staged_artifact_integrity (checks stay independent): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Tampering ONLY data.sha256 never affects original_source_integrity (checks stay independent): system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Tampered data.sha256 correctly fails staged_artifact_integrity: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Group A entry present in fresh plan: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Group A staged bytes differ from the legacy original (never imported as-is): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Group A staged_sha256 legitimately differs from row (original) sha256: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Group A original_source_integrity passes on unmodified entry: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Group A staged_artifact_integrity passes on unmodified entry: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Tampered row.sha256 correctly fails original_source_integrity: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Tampering ONLY row.sha256 never affects staged_artifact_integrity (checks stay independent): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Tampering ONLY data.sha256 never affects original_source_integrity (checks stay independent): system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Tampered data.sha256 correctly fails staged_artifact_integrity: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Group B entry present in fresh plan: system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Group B staged_sha256 equals row (original) sha256 (nothing sanitized): system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Group B both integrity checks pass: system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Group B entry present in fresh plan: system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "Group B staged_sha256 equals row (original) sha256 (nothing sanitized): system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "Group B both integrity checks pass: system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "Approved Group B exact path+hash+message: rejection cleared",
+            "passed": true
+        },
+        {
+            "test": "A non-matching, unrelated WordPress error is never cleared, even with an otherwise-approved file",
+            "passed": true
+        },
+        {
+            "test": "tmp_name content no longer matching the approved hash is never cleared, even with a matching tmp_name identity and exact message",
+            "passed": true
+        },
+        {
+            "test": "Same Group B path, wrong hash: rejection NOT cleared",
+            "passed": true
+        },
+        {
+            "test": "Hash approved for a DIFFERENT path\/type (Group A) does not clear this rejection",
+            "passed": true
+        },
+        {
+            "test": "Sanity: that combination is genuinely not a Group B exception",
+            "passed": true
+        },
+        {
+            "test": "Real dangerous PDF bytes are never an approved exception for any path",
+            "passed": true
+        },
+        {
+            "test": "Real \/OpenAction \/JS PDF: rejection NOT cleared even with a matching tmp_name",
+            "passed": true
+        },
+        {
+            "test": "A different tmp_name (any other upload) is returned completely untouched",
+            "passed": true
+        },
+        {
+            "test": "A file with no error is returned completely untouched (nothing to override)",
+            "passed": true
+        },
+        {
+            "test": "Probe filter installed at the same hook+priority Runner::media() uses",
+            "passed": true
+        },
+        {
+            "test": "Simulated failure propagated as expected",
+            "passed": true
+        },
+        {
+            "test": "Filter removed via finally even though the protected block threw",
+            "passed": true
+        },
+        {
+            "test": "Runner::media() itself brackets media_handle_sideload() with add_filter\/try\/finally\/remove_filter on the same hook+priority",
+            "passed": true
+        },
+        {
+            "test": "Media::upload() still registered, unmodified, on wp_handle_upload_prefilter",
+            "passed": true
+        },
+        {
+            "test": "Media::upload() still registered, unmodified, on wp_handle_sideload_prefilter",
+            "passed": true
+        },
+        {
+            "test": "Full plan REVIEW count stable\/reproducible with both fixes active",
+            "passed": true
+        }
+    ]
+}

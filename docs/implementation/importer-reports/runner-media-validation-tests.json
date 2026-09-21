@@ -246,11 +246,11 @@
             "passed": true
         },
         {
-            "test": "Synthetic fixture deleted: psi-unapproved-fp-cf67786d-98d0-4b26-bc5b-35cecaee884a.pdf",
+            "test": "Synthetic fixture deleted: psi-unapproved-fp-81a3985f-1c7b-4f16-844a-1b819d8e2f89.pdf",
             "passed": true
         },
         {
-            "test": "Synthetic fixture deleted: psi-dangerous-ef870995-34eb-493c-94dd-2c62d6f8daa1.pdf",
+            "test": "Synthetic fixture deleted: psi-dangerous-8107b532-2f92-48ca-b5f7-8d42ad01cc4a.pdf",
             "passed": true
         },
         {
@@ -282,22 +282,6 @@
             "passed": true
         },
         {
-            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/Clopay-3720-07.pdf",
-            "passed": true
-        },
-        {
-            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/CMDC-0524SP-14-1.pdf",
-            "passed": true
-        },
-        {
-            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/CMDC-3717-3718-11.pdf",
-            "passed": true
-        },
-        {
-            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/commercial-aluminum-door-systems-brochure.pdf",
-            "passed": true
-        },
-        {
             "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/CONTRA_EXPLOSION.pdf",
             "passed": true
         },
@@ -310,7 +294,23 @@
             "passed": true
         },
         {
-            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/Cortina-serie-610-620.pdf",
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/Fast-Seal_LIT020520_ES-2.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/FICHATECNICASELLOSSOLMMER S.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/fireking-fire-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/Folleto-de-Cortina-Enrollable-Wayne-Dalton-Firestar-700-2.pdf",
+            "passed": true
+        },
+        {
+            "test": "Ordinary, unrelated PDF: media_is_valid() outcome identical to plain Media::file_valid(): fichas\/INFRACA-RAPIDA-ENROLLABLE.pdf",
             "passed": true
         },
         {
@@ -322,7 +322,7 @@
             "passed": true
         },
         {
-            "test": "Full plan REVIEW count is unchanged by this fix (932): the fix only affects a future Runner execution, never Planner's decisions",
+            "test": "Full plan REVIEW count is stable\/reproducible across rebuilds with this fix active",
             "passed": true
         },
         {

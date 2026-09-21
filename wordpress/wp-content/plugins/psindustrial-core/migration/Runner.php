@@ -315,8 +315,14 @@ final class Runner {
     if ( $images ) { if ( false === set_post_thumbnail( $id, $images[0] ) && (int) get_post_thumbnail_id( $id ) !== $images[0] ) { throw new \RuntimeException( 'THUMBNAIL_WRITE_FAILED' ); } }
     else { delete_post_thumbnail( $id ); }
     Identity::set( $e, $id, '_psi_gallery_ids', array_slice( $images, 1 ) );
-    $pdfs = array(); foreach ( $data['pdfs'] as $key ) { $pdfs[] = array( 'attachment_id' => self::dependency( $key, $plan ), 'label' => basename( substr( $key, 6 ) ), 'language' => '' ); }
-    Identity::set( $e, $id, '_psi_datasheets', $pdfs ); Identity::set( $e, $id, '_psi_videos', $data['videos'] );
+    $pdfs = array(); $pdfLegacyPaths = array();
+    foreach ( $data['pdfs'] as $key ) {
+     $attId = self::dependency( $key, $plan );
+     $pdfs[] = array( 'attachment_id' => $attId, 'label' => basename( substr( $key, 6 ) ), 'language' => '' );
+     $pdfLegacyPaths[ $attId ] = substr( $key, 6 );
+    }
+    self::write_approved_datasheets( $e, $id, $pdfs, $pdfLegacyPaths );
+    Identity::set( $e, $id, '_psi_videos', $data['videos'] );
    }
   }
   if ( 'attachment' !== $e['target_type'] ) { Identity::set( $e, $id, '_psi_source_hash', $e['source_hash'] ); }
@@ -1220,6 +1226,75 @@ final class Runner {
   $file['error'] = '';
   return $file;
  }
+
+ /**
+  * Narrowly-scoped override for the SAME architectural gap as approved_sideload_override()
+  * above, in a DIFFERENT code path: `Fields::guard()` (hooked to add_post_metadata/
+  * update_post_metadata, includes/Fields.php) validates `_psi_datasheets` via
+  * `Media::valid()` → `Media::file_valid()` — the raw /JS-pattern scan, with no
+  * PdfApprovals awareness — every time the field is written, not only at upload time.
+  * Confirmed directly: `Media::valid()` on an already-created, already-legitimate Group B
+  * attachment still returns false, so `Fields::guard()` rejects the write and
+  * `Identity::set()` throws `METADATA_WRITE_REJECTED:_psi_datasheets` — surfaced to the
+  * plan as the generic `OBJECT_OPERATION_FAILED` (safe_error() masking the lowercase key
+  * name), discovered during the first real recovery execution (see
+  * docs/implementation/full-local-import/21-recovery-execution-result.md).
+  *
+  * Never disables or relaxes `Fields::guard()`/`Media::valid()` themselves — every OTHER
+  * write of every OTHER field, by every OTHER caller (admin UI, REST API, any other
+  * migration entity), is completely unaffected. Re-verifies, from scratch, on every single
+  * invocation:
+  *  (a) this is the EXACT post id this Identity::set() call is writing for THIS entity —
+  *      never any other write, anywhere else, during the same request;
+  *  (b) the meta key is exactly `_psi_datasheets`;
+  *  (c) Fields::guard()'s own chain actually rejected this write ($check===false) —
+  *      nothing to override when the value was already accepted for its own reasons, and
+  *      never touches a $check some earlier filter already set to something other than
+  *      false;
+  *  (d) EVERY attachment_id in the value being written is either already `Media::valid()`
+  *      on its own merits (a Group A sanitized substitute, or any ordinary attachment —
+  *      left entirely to the normal, unmodified guard chain, never re-approved here), or a
+  *      PDF whose CURRENT on-disk bytes hash to an exact, path-matched PdfApprovals Group B
+  *      exception (`PdfApprovals::isApprovedFalsePositive()`, the exact same predicate
+  *      `media_is_valid()`/`approved_sideload_override()` already use — never a new or
+  *      looser rule). A single non-approved attachment_id anywhere in the array leaves the
+  *      ENTIRE write rejected, exactly as `Media::valid()` alone would — never partially
+  *      overridden, never approved by proximity to an approved one.
+  * @param array<int,string> $pdfLegacyPaths attachment_id => legacy relative path, for
+  *        every PDF THIS entity is about to associate — built by the caller from its own
+  *        already-resolved dependency list, never guessed or derived from stored postmeta.
+  */
+ public static function write_approved_datasheets( array $e, int $id, array $pdfs, array $pdfLegacyPaths ): void {
+  Storage::guard();
+    // Installed only around this one Identity::set() call, for this one post id, removed
+    // immediately after in `finally` — see approved_datasheets_override()'s own docblock
+    // for why this exists and what it does and does not approve.
+    $datasheetsOverride = static fn( $check, $objectId, $metaKey, $metaValue ) => self::approved_datasheets_override( $check, $objectId, $metaKey, $metaValue, $id, $pdfLegacyPaths );
+    add_filter( 'add_post_metadata', $datasheetsOverride, 20, 4 );
+    add_filter( 'update_post_metadata', $datasheetsOverride, 20, 4 );
+    try {
+     Identity::set( $e, $id, '_psi_datasheets', $pdfs );
+    } finally {
+     remove_filter( 'add_post_metadata', $datasheetsOverride, 20, 4 );
+     remove_filter( 'update_post_metadata', $datasheetsOverride, 20, 4 );
+    }
+  if ( get_post_meta( $id, '_psi_datasheets', true ) !== $pdfs ) { throw new \RuntimeException( 'DATASHEETS_READBACK_FAILED' ); }
+ }
+
+ private static function approved_datasheets_override( mixed $check, int $objectId, string $metaKey, mixed $metaValue, int $expectedPostId, array $pdfLegacyPaths ): mixed {
+  if ( false !== $check || $objectId !== $expectedPostId || '_psi_datasheets' !== $metaKey || ! is_array( $metaValue ) ) { return $check; }
+  if ( ! current_user_can( 'psi_manage_migration' ) || ! current_user_can( 'edit_post', $objectId ) || is_wp_error( rest_validate_value_from_schema( $metaValue, \PSIndustrial\Core\Fields::definitions()['_psi_datasheets'] ) ) ) { return $check; }
+  foreach ( $metaValue as $item ) {
+   $attId = (int) ( is_array( $item ) ? ( $item['attachment_id'] ?? 0 ) : 0 );
+   if ( \PSIndustrial\Core\Media::valid( $attId, 'pdf' ) ) { continue; } // already fine on its own merits -- never re-checked via PdfApprovals.
+   $legacyPath = $pdfLegacyPaths[ $attId ] ?? null;
+   $file = $legacyPath ? get_attached_file( $attId ) : false;
+   if ( ! $legacyPath || 'application/pdf' !== get_post_mime_type( $attId ) || ! $file || ! is_file( $file ) || ! PdfApprovals::isApprovedFalsePositive( $legacyPath, hash_file( 'sha256', $file ) ) ) { return $check; }
+  }
+  // null resumes the native metadata write. true would short-circuit it WITHOUT saving.
+  return null;
+ }
+
  private static function media( array $e ): int {
   $d = $e['data']; $source = Storage::path( $d['package_asset'] );
   if ( ! hash_equals( $d['sha256'], hash_file( 'sha256', $source ) ) || ! self::media_is_valid( $source, $d['mime'], $d['path'] ?? '' ) ) { throw new \RuntimeException( 'MEDIA_CHANGED_OR_UNSAFE' ); }

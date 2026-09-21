@@ -16542,7 +16542,63 @@
             "passed": true
         },
         {
-            "test": "The 15 already-approved subset objects remain UNCHANGED regardless of the policy layer",
+            "test": "Subset identity still present and unchanged: asset:fichas\/puerta-420.pdf",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present and unchanged: asset:images\/2025-08-21_11h53_44.png",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present and unchanged: asset:images\/piso.jpg",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present and unchanged: asset:images\/puerta-420.jpg",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present and unchanged: asset:images\/puerta-420t.png",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present and unchanged: asset:images\/sectional-steel-door-416.jpg",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present and unchanged: asset:images\/tg.png",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present and unchanged: asset:system\/files\/images\/categorias\/59ca6b73479b3fcde81f96439976896bad94b750",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present and unchanged: category:1",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present and unchanged: category:8",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present and unchanged: brand:1",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present and unchanged: sql:productos:63",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present and unchanged: sql:productos:64",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present and unchanged: static:automatismos-para-cancelas-cubic.php",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present and unchanged: php:nosotros.php",
             "passed": true
         },
         {
@@ -16790,42 +16846,6 @@
             "passed": true
         },
         {
-            "test": "policy_rule_id is always a real, registered rule: asset:images\/bft.png",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:images\/bft.png",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:images\/bft.png",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:images\/blue.png",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:images\/blue.png",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:images\/blue.png",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:images\/clopay.png",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:images\/clopay.png",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:images\/clopay.png",
-            "passed": true
-        },
-        {
             "test": "policy_rule_id is always a real, registered rule: asset:images\/contact-03.jpg",
             "passed": true
         },
@@ -16886,30 +16906,6 @@
             "passed": true
         },
         {
-            "test": "policy_rule_id is always a real, registered rule: asset:images\/dockman.png",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:images\/dockman.png",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:images\/dockman.png",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:images\/door.png",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:images\/door.png",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:images\/door.png",
-            "passed": true
-        },
-        {
             "test": "policy_rule_id is always a real, registered rule: asset:images\/equipos-accesorios-anden-carga.jpeg",
             "passed": true
         },
@@ -16919,18 +16915,6 @@
         },
         {
             "test": "A surviving policy decision is traceable in approval_ref: asset:images\/equipos-accesorios-anden-carga.jpeg",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:images\/glg-porte-industriali.png",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:images\/glg-porte-industriali.png",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:images\/glg-porte-industriali.png",
             "passed": true
         },
         {
@@ -16967,42 +16951,6 @@
         },
         {
             "test": "A surviving policy decision is traceable in approval_ref: asset:images\/industrial-home.jpg",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:images\/infraca.png",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:images\/infraca.png",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:images\/infraca.png",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:images\/kelley.png",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:images\/kelley.png",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:images\/kelley.png",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:images\/lift-master.png",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:images\/lift-master.png",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:images\/lift-master.png",
             "passed": true
         },
         {
@@ -17138,18 +17086,6 @@
             "passed": true
         },
         {
-            "test": "policy_rule_id is always a real, registered rule: asset:images\/rytec.png",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:images\/rytec.png",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:images\/rytec.png",
-            "passed": true
-        },
-        {
             "test": "policy_rule_id is always a real, registered rule: asset:images\/salida-emergencia.png",
             "passed": true
         },
@@ -17159,18 +17095,6 @@
         },
         {
             "test": "A surviving policy decision is traceable in approval_ref: asset:images\/salida-emergencia.png",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:images\/wayne-dayton.png",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:images\/wayne-dayton.png",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:images\/wayne-dayton.png",
             "passed": true
         },
         {
@@ -23738,42 +23662,6 @@
             "passed": true
         },
         {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/0184eae287e99a553941e98f9ff70f71139ed643",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/0184eae287e99a553941e98f9ff70f71139ed643",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/0184eae287e99a553941e98f9ff70f71139ed643",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/0d4439f5ba46973f404b8a9eaf3c6ed102faad54",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/0d4439f5ba46973f404b8a9eaf3c6ed102faad54",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/0d4439f5ba46973f404b8a9eaf3c6ed102faad54",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/158ffcb904bc82f2a7d2ec143de37e00730d04bd",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/158ffcb904bc82f2a7d2ec143de37e00730d04bd",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/158ffcb904bc82f2a7d2ec143de37e00730d04bd",
-            "passed": true
-        },
-        {
             "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/25a52045f95f6d8635d30d19530ca56f26020262",
             "passed": true
         },
@@ -23786,222 +23674,6 @@
             "passed": true
         },
         {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/393bf5523829b0a76434527d0737623ed3951b63",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/393bf5523829b0a76434527d0737623ed3951b63",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/393bf5523829b0a76434527d0737623ed3951b63",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/3ba01a39dd2e04651a35a7f2a8c2aab034f58f33",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/3ba01a39dd2e04651a35a7f2a8c2aab034f58f33",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/3ba01a39dd2e04651a35a7f2a8c2aab034f58f33",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/3d3f8a7b58fad15cba55a19e1f7dcbd97e37ab41",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/3d3f8a7b58fad15cba55a19e1f7dcbd97e37ab41",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/3d3f8a7b58fad15cba55a19e1f7dcbd97e37ab41",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/41081b9e7f1bbdd04b5550ad18403fe44052b75e",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/41081b9e7f1bbdd04b5550ad18403fe44052b75e",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/41081b9e7f1bbdd04b5550ad18403fe44052b75e",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/41fac25bf3c4f3389882019d1f274fd418b8facb",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/41fac25bf3c4f3389882019d1f274fd418b8facb",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/41fac25bf3c4f3389882019d1f274fd418b8facb",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/43d4232e7c8e46a381f607bdcb65a691c4321389",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/43d4232e7c8e46a381f607bdcb65a691c4321389",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/43d4232e7c8e46a381f607bdcb65a691c4321389",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/4c235320c6c73cff73a7e701b74b8e5fd0417378",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/4c235320c6c73cff73a7e701b74b8e5fd0417378",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/4c235320c6c73cff73a7e701b74b8e5fd0417378",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/6ca19dacd9993636b6638cf308a1c4490bb0af98",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/6ca19dacd9993636b6638cf308a1c4490bb0af98",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/6ca19dacd9993636b6638cf308a1c4490bb0af98",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/7c5b21262bddc72229429752adac241d7198c038",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/7c5b21262bddc72229429752adac241d7198c038",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/7c5b21262bddc72229429752adac241d7198c038",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/8ca911b748068c9bef002de96ef743ecefb9886b",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/8ca911b748068c9bef002de96ef743ecefb9886b",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/8ca911b748068c9bef002de96ef743ecefb9886b",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/9022847e37c72e9a2de76dcdf7c2e22b08cf6cb0",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/9022847e37c72e9a2de76dcdf7c2e22b08cf6cb0",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/9022847e37c72e9a2de76dcdf7c2e22b08cf6cb0",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/a15d5cd1cf67dc7a304a8ebe8c9e28a866e7eda2",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/a15d5cd1cf67dc7a304a8ebe8c9e28a866e7eda2",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/a15d5cd1cf67dc7a304a8ebe8c9e28a866e7eda2",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/b0c2e45b23cfd147f3f8bbf7f05a34104ff032f8",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/b0c2e45b23cfd147f3f8bbf7f05a34104ff032f8",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/b0c2e45b23cfd147f3f8bbf7f05a34104ff032f8",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/b365a092cbf80ef1af6e99fc3cddc76b0ceb8112",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/b365a092cbf80ef1af6e99fc3cddc76b0ceb8112",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/b365a092cbf80ef1af6e99fc3cddc76b0ceb8112",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/bf4d3b2ae60542c4ed05927730f7cc762263f31c",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/bf4d3b2ae60542c4ed05927730f7cc762263f31c",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/bf4d3b2ae60542c4ed05927730f7cc762263f31c",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/c46d19fe3eb462f51d4f636a3a4719ea6e8922c5",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/c46d19fe3eb462f51d4f636a3a4719ea6e8922c5",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/c46d19fe3eb462f51d4f636a3a4719ea6e8922c5",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/c8f93030259cd6eb5436a8b4dc88516a8a82cf03",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/c8f93030259cd6eb5436a8b4dc88516a8a82cf03",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/c8f93030259cd6eb5436a8b4dc88516a8a82cf03",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/cbc5bbf8df505223c1069122842fed702f8be8d8",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/cbc5bbf8df505223c1069122842fed702f8be8d8",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/cbc5bbf8df505223c1069122842fed702f8be8d8",
-            "passed": true
-        },
-        {
             "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/cfae2414005ec241e35e2be9039da54013a231e9",
             "passed": true
         },
@@ -24011,54 +23683,6 @@
         },
         {
             "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/cfae2414005ec241e35e2be9039da54013a231e9",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/dea67750c58a9beeb1e4bf0140e4b97863635cfa",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/dea67750c58a9beeb1e4bf0140e4b97863635cfa",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/dea67750c58a9beeb1e4bf0140e4b97863635cfa",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/ed615bddda8aa301e393e1768b31a2d694243038",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/ed615bddda8aa301e393e1768b31a2d694243038",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/ed615bddda8aa301e393e1768b31a2d694243038",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/categorias\/f843a4b04170cefcd1c70500fdf0f79819e89148",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/categorias\/f843a4b04170cefcd1c70500fdf0f79819e89148",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/categorias\/f843a4b04170cefcd1c70500fdf0f79819e89148",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/productos\/0026e2b69ea6b2f5307ae424596371c7610f2fd8",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/productos\/0026e2b69ea6b2f5307ae424596371c7610f2fd8",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/productos\/0026e2b69ea6b2f5307ae424596371c7610f2fd8",
             "passed": true
         },
         {
@@ -24086,18 +23710,6 @@
             "passed": true
         },
         {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/productos\/0a1a154b062113c629a1f2b1c58638408479ba39",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/productos\/0a1a154b062113c629a1f2b1c58638408479ba39",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/productos\/0a1a154b062113c629a1f2b1c58638408479ba39",
-            "passed": true
-        },
-        {
             "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/productos\/0e8c380b91a59986427b2a5f2b70fd16a2980099",
             "passed": true
         },
@@ -24107,18 +23719,6 @@
         },
         {
             "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/productos\/0e8c380b91a59986427b2a5f2b70fd16a2980099",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/productos\/13e3c3675402a845e35768698348384af696499f",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/productos\/13e3c3675402a845e35768698348384af696499f",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/productos\/13e3c3675402a845e35768698348384af696499f",
             "passed": true
         },
         {
@@ -24266,18 +23866,6 @@
             "passed": true
         },
         {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/productos\/72df998778c03bc863d043d89ff44bd56b0095ab",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/productos\/72df998778c03bc863d043d89ff44bd56b0095ab",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/productos\/72df998778c03bc863d043d89ff44bd56b0095ab",
-            "passed": true
-        },
-        {
             "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
             "passed": true
         },
@@ -24338,18 +23926,6 @@
             "passed": true
         },
         {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/productos\/a7febe38bfa295bb6907789a9d0f008c6319b962",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/productos\/a7febe38bfa295bb6907789a9d0f008c6319b962",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/productos\/a7febe38bfa295bb6907789a9d0f008c6319b962",
-            "passed": true
-        },
-        {
             "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/productos\/ae385af43a5d1494c0f807d48c05b5b3c3576afe",
             "passed": true
         },
@@ -24359,18 +23935,6 @@
         },
         {
             "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/productos\/ae385af43a5d1494c0f807d48c05b5b3c3576afe",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: asset:system\/files\/images\/productos\/cd8dcba8c3cdd3597f73eff14285d6e0c759fda1",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: asset:system\/files\/images\/productos\/cd8dcba8c3cdd3597f73eff14285d6e0c759fda1",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: asset:system\/files\/images\/productos\/cd8dcba8c3cdd3597f73eff14285d6e0c759fda1",
             "passed": true
         },
         {
@@ -24534,258 +24098,6 @@
             "passed": true
         },
         {
-            "test": "policy_rule_id is always a real, registered rule: category:2",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:2",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:2",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:3",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:3",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:3",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:4",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:4",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:4",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:5",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:5",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:5",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:6",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:6",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:6",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:7",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:7",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:7",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:9",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:9",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:9",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:10",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:10",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:10",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:11",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:11",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:11",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:12",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:12",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:12",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:13",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:13",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:13",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:14",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:14",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:14",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:16",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:16",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:16",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:17",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:17",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:17",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:18",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:18",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:18",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:19",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:19",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:19",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:20",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:20",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:20",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:21",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:21",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:21",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:22",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:22",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:22",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:23",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:23",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:23",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:24",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:24",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:24",
-            "passed": true
-        },
-        {
             "test": "policy_rule_id is always a real, registered rule: category:27",
             "passed": true
         },
@@ -24810,66 +24122,6 @@
             "passed": true
         },
         {
-            "test": "policy_rule_id is always a real, registered rule: category:29",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:29",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:29",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:30",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:30",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:30",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:31",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:31",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:31",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:32",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:32",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:32",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:34",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:34",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:34",
-            "passed": true
-        },
-        {
             "test": "policy_rule_id is always a real, registered rule: category:35",
             "passed": true
         },
@@ -24882,222 +24134,6 @@
             "passed": true
         },
         {
-            "test": "policy_rule_id is always a real, registered rule: category:36",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:36",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:36",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:37",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:37",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:37",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:38",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:38",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:38",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: category:39",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: category:39",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: category:39",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: brand:2",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: brand:2",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: brand:2",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: brand:3",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: brand:3",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: brand:3",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: brand:4",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: brand:4",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: brand:4",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: brand:5",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: brand:5",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: brand:5",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: brand:6",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: brand:6",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: brand:6",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: brand:7",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: brand:7",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: brand:7",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: brand:8",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: brand:8",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: brand:8",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: brand:9",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: brand:9",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: brand:9",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: brand:10",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: brand:10",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: brand:10",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: brand:11",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: brand:11",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: brand:11",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: brand:12",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: brand:12",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: brand:12",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:34",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:34",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:34",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:65",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:65",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:65",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:66",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:66",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:66",
-            "passed": true
-        },
-        {
             "test": "policy_rule_id is always a real, registered rule: sql:productos:67",
             "passed": true
         },
@@ -25107,210 +24143,6 @@
         },
         {
             "test": "A surviving policy decision is traceable in approval_ref: sql:productos:67",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:68",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:68",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:68",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:69",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:69",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:69",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:70",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:70",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:70",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:71",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:71",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:71",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:72",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:72",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:72",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:73",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:73",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:73",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:74",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:74",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:74",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:75",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:75",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:75",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:77",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:77",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:77",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:85",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:85",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:85",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:86",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:86",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:86",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:92",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:92",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:92",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:95",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:95",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:95",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:97",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:97",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:97",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:98",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:98",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:98",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:146",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:146",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:146",
-            "passed": true
-        },
-        {
-            "test": "policy_rule_id is always a real, registered rule: sql:productos:148",
-            "passed": true
-        },
-        {
-            "test": "Explainability fields are always complete together: sql:productos:148",
-            "passed": true
-        },
-        {
-            "test": "A surviving policy decision is traceable in approval_ref: sql:productos:148",
             "passed": true
         },
         {
@@ -25378,7 +24210,199 @@
             "passed": true
         },
         {
-            "test": "No MERGE appears anywhere in the full plan; this phase implements none",
+            "test": "Every MERGE has explicit editorial authority: sql:productos:1",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:4",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:5",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:6",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:7",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:9",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:10",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:11",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:12",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:13",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:14",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:15",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:17",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:18",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:19",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:21",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:22",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:23",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:24",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:25",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:26",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:27",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:28",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:30",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:33",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:35",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:37",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:38",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:39",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:41",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:42",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:43",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:44",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:45",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:46",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:47",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:48",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:49",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:51",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:52",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:53",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:54",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:55",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:56",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:62",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:78",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:96",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:101",
+            "passed": true
+        },
+        {
+            "test": "Every MERGE has explicit editorial authority: sql:productos:105",
             "passed": true
         },
         {

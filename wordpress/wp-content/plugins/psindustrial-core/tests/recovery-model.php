@@ -70,20 +70,38 @@ use PSIndustrial\Core\Migration\{Storage,Identity,Planner,Runner};
   $assert( true === $recovery['recovery_open'], 'Recovery plan starts recovery_open=true (protected from pruning)' );
   $reread = Storage::read( 'run-' . $recovery['run_id'] . '.json' );
   $assert( $reread === $recovery, 'Recovery plan was actually persisted to private storage and reads back identically' );
-  $assert( 48 === count( $recovery['entries'] ), "Recovery plan contains exactly 48 retryable entries (got " . count( $recovery['entries'] ) . ")" );
+  // All 48 original technical failures now have identities. Human edits remain conflicts,
+  // never an instruction to restore an imported snapshot or change publication status.
+  $assert( 0 === count( $recovery['entries'] ), 'No completed technical entity is proposed for recreation' );
   foreach ( $recovery['entries'] as $e ) { $assert( in_array( $e['action'], array( 'MIGRATE','MERGE','CREATE_FROM_STATIC' ), true ), 'Every recovery entry has a mutable action, never REVIEW/SKIP: ' . $e['entity_key'] ); }
 
   $evidence = Storage::read( 'recovery-evidence-' . $recovery['run_id'] . '.json' );
   $assert( 52 === count( $evidence['rows'] ), 'Evidence artifact has one row per candidate considered (52), not just the accepted ones' );
   $retryableRows = array_filter( $evidence['rows'], static fn( $r ) => 'RETRYABLE' === $r['eligibility'] );
-  $assert( 48 === count( $retryableRows ), 'Evidence artifact marks exactly 48 rows RETRYABLE' );
-  foreach ( $evidence['rows'] as $r ) { foreach ( array( 'source_key','original_ledger_status','original_error','current_source_hash','current_decision_hash','current_action','destination_state','eligibility','reason' ) as $field ) { $assert( array_key_exists( $field, $r ), "Evidence row for {$r['source_key']} has required field '$field'" ); } }
+  $assert( 0 === count( $retryableRows ), 'Evidence artifact marks 0 rows RETRYABLE, matching current reality exactly' );
+  $byReason = array();
+  foreach ( $evidence['rows'] as $r ) { $byReason[ strtok( $r['reason'], ':' ) ] = ( $byReason[ strtok( $r['reason'], ':' ) ] ?? 0 ) + 1; foreach ( array( 'source_key','original_ledger_status','original_error','current_source_hash','current_decision_hash','current_action','destination_state','eligibility','reason' ) as $field ) { $assert( array_key_exists( $field, $r ), "Evidence row for {$r['source_key']} has required field '$field'" ); } }
+  $assert( 48 === ( $byReason['ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED'] ?? 0 ) + ( $byReason['CONFLICT_NOT_OWN_STALE_ATTEMPT'] ?? 0 ), 'All 48 technical entities are either unchanged or protected by destination conflict' );
+  $freshByKey = array_column( $fresh['entries'], null, 'entity_key' );
+  foreach ( $evidence['rows'] as $row ) {
+   if ( str_starts_with( $row['reason'], 'ROOT_CAUSE_NOT_FIXED:' ) ) { continue; }
+   $entry = $freshByKey[ $row['source_key'] ]; $id = Identity::find( $entry );
+   $state = $id ? Identity::get( $entry, $id, '_psi_import_state' ) : array();
+   $assert( $id > 0 && ! empty( $state['target_hash'] ), 'Previously failed entity is actually complete: ' . $row['source_key'] );
+   $expectedReason = hash_equals( $state['target_hash'], Storage::hash( Identity::snapshot( $entry, $id ) ) ) ? 'ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED' : 'CONFLICT_NOT_OWN_STALE_ATTEMPT';
+   $assert( $expectedReason === $row['reason'], 'Current snapshot determines no-op versus human-edit conflict: ' . $row['source_key'] );
+  }
+  $assert( 4 === ( $byReason['ROOT_CAUSE_NOT_FIXED'] ?? 0 ), "Exactly 4 correctly rejected as a still-legitimate, unfixed cause (got " . ( $byReason['ROOT_CAUSE_NOT_FIXED'] ?? 0 ) . ")" );
 
   // ============================================================ specific reject reasons, real data
   $byKey = array_column( $evidence['rows'], null, 'source_key' );
   $assert( 'NOT_RETRYABLE' === $byKey['sql:productos:1']['eligibility'] && str_starts_with( $byKey['sql:productos:1']['reason'], 'ROOT_CAUSE_NOT_FIXED:LEGITIMATE_CATEGORY_CONFLICT' ), 'legitimate conflict (category cascade) correctly rejected: sql:productos:1' );
-  $assert( 'RETRYABLE' === $byKey['asset:fichas/Clopay-3720-07.pdf']['eligibility'], 'corrected PDF failure (Group B) correctly eligible: asset:fichas/Clopay-3720-07.pdf' );
-  $assert( 'RETRYABLE' === $byKey['asset:fichas/puerta-424.pdf']['eligibility'], 'corrected PDF failure (Group A) correctly eligible: asset:fichas/puerta-424.pdf' );
+  $assert( 'NOT_RETRYABLE' === $byKey['asset:fichas/Clopay-3720-07.pdf']['eligibility'] && 'ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED' === $byKey['asset:fichas/Clopay-3720-07.pdf']['reason'], 'the Group B PDF itself was successfully recovered and correctly never re-proposed: asset:fichas/Clopay-3720-07.pdf' );
+  $assert( 'NOT_RETRYABLE' === $byKey['asset:fichas/puerta-424.pdf']['eligibility'] && 'ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED' === $byKey['asset:fichas/puerta-424.pdf']['reason'], 'the Group A PDF itself was successfully recovered and correctly never re-proposed: asset:fichas/puerta-424.pdf' );
+  $assert( 'NOT_RETRYABLE' === $byKey['sql:productos:5']['eligibility'] && 'ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED' === $byKey['sql:productos:5']['reason'], 'Completed CASCADE_FROM_PDF_B product is unchanged, never retried: sql:productos:5' );
+  $productos73Entry = array_column( $fresh['entries'], null, 'entity_key' )['sql:productos:73'];
+  $assert( 'publish' === get_post_status( Identity::find( $productos73Entry ) ), 'Ground truth: WordPress post for sql:productos:73 is genuinely publish right now (human edit via wp-admin, 2026-09-21T17:07:22Z) -- this is why it is no longer ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED like its unchanged siblings' );
+  $assert( 'NOT_RETRYABLE' === $byKey['sql:productos:73']['eligibility'] && 'CONFLICT_NOT_OWN_STALE_ATTEMPT' === $byKey['sql:productos:73']['reason'], 'sql:productos:73 (successfully recovered, then published by a human through wp-admin) is correctly flagged as a destination conflict, never silently retried/overwritten: sql:productos:73' );
 
   // ============================================================ REVIEW/SKIP never candidates at all
   $reviewOrSkipInLog = array_filter( $parentLog, static fn( $r ) => in_array( $r['action'] ?? null, array( 'REVIEW','SKIP' ), true ) );
@@ -138,7 +156,7 @@ use PSIndustrial\Core\Migration\{Storage,Identity,Planner,Runner};
   $after4 = $dbSnapshot();
   $assert( $before4 === $after4, 'recovery_preflight() is read-only: zero DB mutation' );
   $assert( $recovery['run_id'] === $report['run_id'] && $parentRun === $report['parent_run_id'], 'recovery_preflight() reports correct run_id/parent_run_id' );
-  $assert( 48 === $report['counts']['retryable'] && 4 === $report['counts']['rejected'] && 52 === $report['counts']['candidates_considered'], 'recovery_preflight() reports exact counts (48/4/52), never estimated' );
+  $assert( 0 === $report['counts']['retryable'] && 52 === $report['counts']['rejected'] && 52 === $report['counts']['candidates_considered'], 'recovery_preflight() reports exact, current, unforced counts (0/52/52) reflecting the real recovery execution that has since run' );
   $checksById = array_column( $report['checks'], null, 'id' );
   foreach ( array( 'recovery_plan_exists','is_recovery_scope','parent_run_id_present','environment_id_matches','recovery_plan_seal_intact','parent_run_evidence_available','current_plan_still_equivalent','applied_449_control_intact','no_review_or_skip_entries_in_recovery_set' ) as $id ) {
    $assert( true === ( $checksById[ $id ]['passed'] ?? null ), "recovery_preflight() check '$id' passes on the real, untouched recovery plan" );

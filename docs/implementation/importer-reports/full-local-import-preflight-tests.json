@@ -1,0 +1,4252 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "Planner::build('full') mutates nothing",
+            "passed": true
+        },
+        {
+            "test": "All canonical entities still accounted for",
+            "passed": true
+        },
+        {
+            "test": "1,534 original SKIP plus one explicit UI_ONLY_ASSET reclassification",
+            "passed": true
+        },
+        {
+            "test": "339 pending REVIEW preserved",
+            "passed": true
+        },
+        {
+            "test": "No planning errors",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/13.0.Folleto-Operador-AccessPRO-FS1000-SPEED-hoja-tecnica.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/13.0.Folleto-Operador-AccessPRO-FS1000-SPEED-hoja-tecnica.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Abrigo-de-anden-BG400.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Abrigo-de-anden-BG400.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/accesorios-doorlock.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/accesorios-doorlock.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Alumina-Technical-Specifications-15.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Alumina-Technical-Specifications-15.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/BGDSHS_Brochure_Sept2014_WEB.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/BGDSHS_Brochure_Sept2014_WEB.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/cdx-commercial-operator-sellsheet.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/cdx-commercial-operator-sellsheet.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Clopay-3720-07.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Clopay-3720-07.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/CMDC-0524SP-14-1.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/CMDC-0524SP-14-1.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/CMDC-3717-3718-11.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/CMDC-3717-3718-11.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/commercial-aluminum-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/commercial-aluminum-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/CONTRA_EXPLOSION.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/CONTRA_EXPLOSION.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/CORTINA-EUROPEA.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/CORTINA-EUROPEA.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/CORTINA-PLANA.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/CORTINA-PLANA.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Cortina-serie-610-620.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Cortina-serie-610-620.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Fast-Seal_LIT020520_ES-2.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Fast-Seal_LIT020520_ES-2.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/fireking-fire-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/fireking-fire-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Folleto-de-Cortina-Enrollable-Wayne-Dalton-Firestar-700-2.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Folleto-de-Cortina-Enrollable-Wayne-Dalton-Firestar-700-2.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/INFRACA-RAPIDA-ENROLLABLE.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/INFRACA-RAPIDA-ENROLLABLE.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/INFRACA-RÁPIDA-APILABLE.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/INFRACA-RÁPIDA-APILABLE.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Kelley-Hydraulic-Dock-Leveler-Brochure_web.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Kelley-Hydraulic-Dock-Leveler-Brochure_web.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Kelley-Vehicle-Restraint-Brochure_web.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Kelley-Vehicle-Restraint-Brochure_web.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Lift-Master-H-Sell-Sheet-Spanish.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Lift-Master-H-Sell-Sheet-Spanish.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/lisos.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/lisos.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/M-28R.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/M-28R.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Minidock.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Minidock.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/moovi50rm.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/moovi50rm.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/operador-cortina.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/operador-cortina.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Operador-RHX-Folleto-comercial-para-cortina.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Operador-RHX-Folleto-comercial-para-cortina.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/pistones-electromecanicos-phobos.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/pistones-electromecanicos-phobos.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/pistones-hidraulicos-lux.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/pistones-hidraulicos-lux.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/pistones-hidraulicos-p457.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/pistones-hidraulicos-p457.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Predadoor_NXT_LIT020720_ES.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Predadoor_NXT_LIT020720_ES.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/puerta-420.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/puerta-420.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Puerta-Blindada1.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Puerta-Blindada1.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Puerta-Holandesa-Door-Lock.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Puerta-Holandesa-Door-Lock.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Puerta-Rayos-X-fabricación.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Puerta-Rayos-X-fabricación.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Puertas-Rayosx-folleto.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Puertas-Rayosx-folleto.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Rampas-Hidraulicas.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Rampas-Hidraulicas.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Rampas-mecánicas.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Rampas-mecánicas.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Retenedor-de-vehiculos-automatico.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Retenedor-de-vehiculos-automatico.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/rhx-commercial-operator-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/rhx-commercial-operator-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/rmx-commercial-operator-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/rmx-commercial-operator-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/rolling-service-doors-600-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/rolling-service-doors-600-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/rolling-service-doors-625-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/rolling-service-doors-625-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/rolling-sheet-doors-790-780-770-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/rolling-sheet-doors-790-780-770-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/rolling-steel-doors-610-620-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/rolling-steel-doors-610-620-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Rollizip-Technical-Specifications-15.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Rollizip-Technical-Specifications-15.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/RSIDENCIAL-SERIE-PREMIUM.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/RSIDENCIAL-SERIE-PREMIUM.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/sectional-steel-door-2415-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/sectional-steel-door-2415-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/sectional-steel-door-model-150-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/sectional-steel-door-model-150-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/sectional-thermacore-doors-592-599-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/sectional-thermacore-doors-592-599-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/security-grilles-670-671-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/security-grilles-670-671-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/security-grilles-670-671-brochure1.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/security-grilles-670-671-brochure1.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/security-grilles-681-685-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/security-grilles-681-685-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Sellos-de-anden-BrochureW.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Sellos-de-anden-BrochureW.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/SERIE-X130.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/SERIE-X130.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/SPA_U-Series_Mechanical_Dock_Leveler.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/SPA_U-Series_Mechanical_Dock_Leveler.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/StrongArm_HVR303_Brochure_Spanish.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/StrongArm_HVR303_Brochure_Spanish.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:fichas\/Ventana-blindad-y-pasa-documentos.pdf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:fichas\/Ventana-blindad-y-pasa-documentos.pdf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/2012-10-11_1235.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/2012-10-11_1235.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/2018-04-04_1153-300x234.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/2018-04-04_1153-300x234.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/2025-08-21_11h53_44.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/2025-08-21_11h53_44.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/2025-08-21_12h27_43.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/2025-08-21_12h27_43.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/2025-08-21_16h18_34.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/2025-08-21_16h18_34.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/acanalada.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/acanalada.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/accesorios.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/accesorios.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/access.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/access.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/accesspro.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/accesspro.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/aisladas.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/aisladas.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/alumina-1.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/alumina-1.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/apilable.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/apilable.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/apilable2.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/apilable2.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/banner1.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/banner1.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/banner2.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/banner2.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/banner3.jpeg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/banner3.jpeg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/banner3.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/banner3.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/banner4.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/banner4.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/bft.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/bft.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/bix.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/bix.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/blindada.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/blindada.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/blindada3.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/blindada3.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/blindadas.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/blindadas.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/blue.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/blue.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/clopay.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/clopay.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/com.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/com.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/comercial.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/comercial.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/construccion.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/construccion.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/contact-03.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/contact-03.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/contact-04.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/contact-04.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/contact.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/contact.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/cortina-620.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/cortina-620.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/cortina-670.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/cortina-670.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/cortina-670t.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/cortina-670t.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/cortina-671.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/cortina-671.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/cortina-671t.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/cortina-671t.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/cortina-685.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/cortina-685.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/cortina-aluminio.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/cortina-aluminio.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/cortina.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/cortina.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/cortina2.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/cortina2.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/cortinas.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/cortinas.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/cortina_europea.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/cortina_europea.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/cross-3e.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/cross-3e.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/cross18.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/cross18.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/Cuadros_cortos_y_largos.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/Cuadros_cortos_y_largos.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/dab.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/dab.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/demoprod.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/demoprod.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/demoresidencial.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/demoresidencial.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/detalle_de_cuadros.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/detalle_de_cuadros.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/detalle_plana.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/detalle_plana.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/detector.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/detector.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/Ditec-reset-imagen.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/Ditec-reset-imagen.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/ditecc.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/ditecc.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/dockman.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/dockman.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/dod.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/dod.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/door.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/door.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/energy.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/energy.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/energy2.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/energy2.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/enrollable.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/enrollable.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/enrollable2.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/enrollable2.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/equipos-accesorios-anden-carga.jpeg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/equipos-accesorios-anden-carga.jpeg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/europea.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/europea.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/explo.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/explo.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/fast.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/fast.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/fasts.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/fasts.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/fire-rated-door-630.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/fire-rated-door-630.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/fire-rated.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/fire-rated.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/fire-ratedt.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/fire-ratedt.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/forma.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/forma.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/fotoceldas.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/fotoceldas.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/fotos_a_cuadros.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/fotos_a_cuadros.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/glg-porte-industriali.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/glg-porte-industriali.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/holandesa.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/holandesa.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/home-bg-01.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/home-bg-01.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/home-comercial.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/home-comercial.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/hospital.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/hospital.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/Icaro.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/Icaro.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/industrial-brown-sectional-steel-model-424-432.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/industrial-brown-sectional-steel-model-424-432.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/industrial-home.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/industrial-home.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/industrial32.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/industrial32.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/infraca.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/infraca.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/kelley.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/kelley.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/labio.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/labio.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/lan.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/lan.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/lan7.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/lan7.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/lazo.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/lazo.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/lift-master.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/lift-master.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/lift.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/lift.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/lin2.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/lin2.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/liso_rayas.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/liso_rayas.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/louver1.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/louver1.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/louver2.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/louver2.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/lux2b.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/lux2b.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/minidock.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/minidock.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/model-426-white-finish-insulated.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/model-426-white-finish-insulated.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/modern-steel-1.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/modern-steel-1.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/modern-steel-2.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/modern-steel-2.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/moovi50rm.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/moovi50rm.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/M_DockLeveler.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/M_DockLeveler.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/ocx.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/ocx.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/p4.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/p4.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/p457.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/p457.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/pas.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/pas.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/phob.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/phob.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/phobos-piston.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/phobos-piston.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/piso.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/piso.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/porte-rapide-vertigo-500x500.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/porte-rapide-vertigo-500x500.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/preda.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/preda.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/proy1.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/proy1.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/proy2.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/proy2.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/proy3.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/proy3.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/proy4.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/proy4.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/proy5.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/proy5.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/proy6.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/proy6.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta-418.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta-418.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta-418t.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta-418t.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta-420.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta-420.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta-420t.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta-420t.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta-422t.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta-422t.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta-430.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta-430.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta-430t.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta-430t.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta-432.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta-432.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta-holandesa.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta-holandesa.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta-infraca.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta-infraca.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta-infraca02.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta-infraca02.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta-metalica-hospital.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta-metalica-hospital.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta-metalica-hospital.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta-metalica-hospital.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta432.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta432.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta593.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta593.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta593t.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta593t.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta594.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta594.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta594t.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta594t.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta595t.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta595t.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta598t.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta598t.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puerta599.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puerta599.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/puertaboom.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/puertaboom.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/PuertasIncendios.jpeg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/PuertasIncendios.jpeg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/qik.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/qik.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/quienes-int.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/quienes-int.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/quienes1.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/quienes1.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/rampah.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/rampah.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/rampak.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/rampak.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/rampam.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/rampam.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/rayos.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/rayos.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/residencial-2.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/residencial-2.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/residencial.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/residencial.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/retenedor.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/retenedor.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/revolving.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/revolving.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/rhx-operator.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/rhx-operator.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/rhx.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/rhx.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/rmx.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/rmx.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/Rolli-Zip-1.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/Rolli-Zip-1.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/rolli.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/rolli.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/rolling-service-door-625-wide.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/rolling-service-door-625-wide.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/rolling-service-doors-610.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/rolling-service-doors-610.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/rolling-sheet-770-2.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/rolling-sheet-770-2.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/rsx.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/rsx.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/rytec.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/rytec.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/salida-emergencia.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/salida-emergencia.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/sectional-steel-door-416.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/sectional-steel-door-416.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/sectional-steel-door-model-2415.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/sectional-steel-door-model-2415.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/sectional-steel-models-422-426.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/sectional-steel-models-422-426.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/sectional-steel-thermacore-door-592.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/sectional-steel-thermacore-door-592.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/sector.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/sector.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/sector1.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/sector1.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/sello.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/sello.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/sellos.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/sellos.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/semaforo.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/semaforo.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/serie-600.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/serie-600.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/seriex130.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/seriex130.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/serie_600.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/serie_600.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/serie_790_001.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/serie_790_001.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/silent.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/silent.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/smart.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/smart.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/splus.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/splus.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/sprint.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/sprint.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/star100.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/star100.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/star4.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/star4.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/Stationary-shelter.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/Stationary-shelter.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/STRONGARMHVR303.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/STRONGARMHVR303.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/t424.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/t424.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/tg.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/tg.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/thermacore-sectional-door-593-wide.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/thermacore-sectional-door-593-wide.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/thomp.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/thomp.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/tpr.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/tpr.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/traffic.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/traffic.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/upper.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/upper.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/vista_sello.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/vista_sello.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/wayne-dayton.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/wayne-dayton.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/windload-thermacore-525-wide.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/windload-thermacore-525-wide.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/x130.png",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/x130.png",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/xel5.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/xel5.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:images\/zen.jpg",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:images\/zen.jpg",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/0026e2b69ea6b2f5307ae424596371c7610f2fd8",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/0026e2b69ea6b2f5307ae424596371c7610f2fd8",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/0184eae287e99a553941e98f9ff70f71139ed643",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/0184eae287e99a553941e98f9ff70f71139ed643",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/0d4439f5ba46973f404b8a9eaf3c6ed102faad54",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/0d4439f5ba46973f404b8a9eaf3c6ed102faad54",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/158ffcb904bc82f2a7d2ec143de37e00730d04bd",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/158ffcb904bc82f2a7d2ec143de37e00730d04bd",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/25a52045f95f6d8635d30d19530ca56f26020262",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/25a52045f95f6d8635d30d19530ca56f26020262",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/393bf5523829b0a76434527d0737623ed3951b63",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/393bf5523829b0a76434527d0737623ed3951b63",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/3ba01a39dd2e04651a35a7f2a8c2aab034f58f33",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/3ba01a39dd2e04651a35a7f2a8c2aab034f58f33",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/3d3f8a7b58fad15cba55a19e1f7dcbd97e37ab41",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/3d3f8a7b58fad15cba55a19e1f7dcbd97e37ab41",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/41081b9e7f1bbdd04b5550ad18403fe44052b75e",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/41081b9e7f1bbdd04b5550ad18403fe44052b75e",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/41fac25bf3c4f3389882019d1f274fd418b8facb",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/41fac25bf3c4f3389882019d1f274fd418b8facb",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/43d4232e7c8e46a381f607bdcb65a691c4321389",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/43d4232e7c8e46a381f607bdcb65a691c4321389",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/4c235320c6c73cff73a7e701b74b8e5fd0417378",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/4c235320c6c73cff73a7e701b74b8e5fd0417378",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/59ca6b73479b3fcde81f96439976896bad94b750",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/59ca6b73479b3fcde81f96439976896bad94b750",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/6ca19dacd9993636b6638cf308a1c4490bb0af98",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/6ca19dacd9993636b6638cf308a1c4490bb0af98",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/7c5b21262bddc72229429752adac241d7198c038",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/7c5b21262bddc72229429752adac241d7198c038",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/8ca911b748068c9bef002de96ef743ecefb9886b",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/8ca911b748068c9bef002de96ef743ecefb9886b",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/9022847e37c72e9a2de76dcdf7c2e22b08cf6cb0",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/9022847e37c72e9a2de76dcdf7c2e22b08cf6cb0",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/a15d5cd1cf67dc7a304a8ebe8c9e28a866e7eda2",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/a15d5cd1cf67dc7a304a8ebe8c9e28a866e7eda2",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/b0c2e45b23cfd147f3f8bbf7f05a34104ff032f8",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/b0c2e45b23cfd147f3f8bbf7f05a34104ff032f8",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/b365a092cbf80ef1af6e99fc3cddc76b0ceb8112",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/b365a092cbf80ef1af6e99fc3cddc76b0ceb8112",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/ba3f2923d733855f1d109ba12330647b866a3383",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/ba3f2923d733855f1d109ba12330647b866a3383",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/bf4d3b2ae60542c4ed05927730f7cc762263f31c",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/bf4d3b2ae60542c4ed05927730f7cc762263f31c",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/c46d19fe3eb462f51d4f636a3a4719ea6e8922c5",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/c46d19fe3eb462f51d4f636a3a4719ea6e8922c5",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/c8f93030259cd6eb5436a8b4dc88516a8a82cf03",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/c8f93030259cd6eb5436a8b4dc88516a8a82cf03",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/cbc5bbf8df505223c1069122842fed702f8be8d8",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/cbc5bbf8df505223c1069122842fed702f8be8d8",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/cfae2414005ec241e35e2be9039da54013a231e9",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/cfae2414005ec241e35e2be9039da54013a231e9",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/dea67750c58a9beeb1e4bf0140e4b97863635cfa",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/dea67750c58a9beeb1e4bf0140e4b97863635cfa",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/ed615bddda8aa301e393e1768b31a2d694243038",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/ed615bddda8aa301e393e1768b31a2d694243038",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/categorias\/f843a4b04170cefcd1c70500fdf0f79819e89148",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/categorias\/f843a4b04170cefcd1c70500fdf0f79819e89148",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/0026e2b69ea6b2f5307ae424596371c7610f2fd8",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/0026e2b69ea6b2f5307ae424596371c7610f2fd8",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/041a0efde5e5212d3aae023a37bd508f96f03295",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/041a0efde5e5212d3aae023a37bd508f96f03295",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/0486010282e4b5e4164ef8bb0576b0e931ddc9ed",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/0486010282e4b5e4164ef8bb0576b0e931ddc9ed",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/06d1ac8df445fdad9cabf6a632e3c4363258b6ee",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/06d1ac8df445fdad9cabf6a632e3c4363258b6ee",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/0a1a154b062113c629a1f2b1c58638408479ba39",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/0a1a154b062113c629a1f2b1c58638408479ba39",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/0b26a7b20dd4d467cf9a57c9a5cba26cafbf6203",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/0b26a7b20dd4d467cf9a57c9a5cba26cafbf6203",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/0d4439f5ba46973f404b8a9eaf3c6ed102faad54",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/0d4439f5ba46973f404b8a9eaf3c6ed102faad54",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/0dff9191d2ec6cb7124c0438858de83fb11ccdf7",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/0dff9191d2ec6cb7124c0438858de83fb11ccdf7",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/0e8c380b91a59986427b2a5f2b70fd16a2980099",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/0e8c380b91a59986427b2a5f2b70fd16a2980099",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/13e3c3675402a845e35768698348384af696499f",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/13e3c3675402a845e35768698348384af696499f",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/178b1ba338c75e76a62f9528efc0c0d4fc58398a",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/178b1ba338c75e76a62f9528efc0c0d4fc58398a",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/20ec2b66b713306ac6d2d213bcce8d6810712eef",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/20ec2b66b713306ac6d2d213bcce8d6810712eef",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/23d0316980d95f4f7ece95dd33a74b151eadb1bf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/23d0316980d95f4f7ece95dd33a74b151eadb1bf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/2783c1d2e280b095bb433d882e864c0662d21e01",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/2783c1d2e280b095bb433d882e864c0662d21e01",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/27cdd31e50801b69ed83a04dbdac5674d1078906",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/27cdd31e50801b69ed83a04dbdac5674d1078906",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/28d0e02a9ce0d2231f7b91d5d433cfbcb159b04c",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/28d0e02a9ce0d2231f7b91d5d433cfbcb159b04c",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/2c006fdef8fe51071aae29b8947fc2d51d1b6c71",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/2c006fdef8fe51071aae29b8947fc2d51d1b6c71",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/2dba2794d3274a4845e24aa81c28cf40da541f62",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/2dba2794d3274a4845e24aa81c28cf40da541f62",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/2e6986f34adf7b7e075a57a4f73cac501d03c59d",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/2e6986f34adf7b7e075a57a4f73cac501d03c59d",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/2f667c1e185b0ea47b093da526c2d552145b739e",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/2f667c1e185b0ea47b093da526c2d552145b739e",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/37cb85d2747bda7e0195e84c2b086452e745c35f",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/37cb85d2747bda7e0195e84c2b086452e745c35f",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/3806105dd3593a3b306a1ca89e55ce41b47f83a7",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/3806105dd3593a3b306a1ca89e55ce41b47f83a7",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/3d2afaf79288b7dc59b91253693d2e7c5bb079ed",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/3d2afaf79288b7dc59b91253693d2e7c5bb079ed",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/3e24e1170a5ccb8ff7ac68f087a19a9be61e799c",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/3e24e1170a5ccb8ff7ac68f087a19a9be61e799c",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/4008a0704b50eb6ada4e7733d8a9dc5c331e0163",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/4008a0704b50eb6ada4e7733d8a9dc5c331e0163",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/409f71ca3285abac3be915562bf8925f557e16b0",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/409f71ca3285abac3be915562bf8925f557e16b0",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/480de804a97c7cc053d671704d026ceb6d7854d1",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/480de804a97c7cc053d671704d026ceb6d7854d1",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/4c235320c6c73cff73a7e701b74b8e5fd0417378",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/4c235320c6c73cff73a7e701b74b8e5fd0417378",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/4df9bc1c4c87a18cd1155164b3216ce053ae18ee",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/4df9bc1c4c87a18cd1155164b3216ce053ae18ee",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/596d0d25e474bb84a449cda4680a73db1491f809",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/596d0d25e474bb84a449cda4680a73db1491f809",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/59ca6b73479b3fcde81f96439976896bad94b750",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/59ca6b73479b3fcde81f96439976896bad94b750",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/5ebb1b9e7cdf30669798fa316af64842a73c5a56",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/5ebb1b9e7cdf30669798fa316af64842a73c5a56",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/5f90d35f71ae101ed088c67403da1540d91d1192",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/5f90d35f71ae101ed088c67403da1540d91d1192",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/626b58db888990c04a7f855e6c03da8fa9fe5460",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/626b58db888990c04a7f855e6c03da8fa9fe5460",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/67ace3fa64437d6138ff566381ad2b6103667427",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/67ace3fa64437d6138ff566381ad2b6103667427",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/67d4a229ade458e06d088099546a7185387b2fd3",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/67d4a229ade458e06d088099546a7185387b2fd3",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/70e2bb241375fb73400925ead25cfba2d93a8ebf",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/70e2bb241375fb73400925ead25cfba2d93a8ebf",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/72df998778c03bc863d043d89ff44bd56b0095ab",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/72df998778c03bc863d043d89ff44bd56b0095ab",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/85f5ef81d1ffa0cfcefdd5914c8d6d54a6bc3c4b",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/85f5ef81d1ffa0cfcefdd5914c8d6d54a6bc3c4b",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/8ffd98efe5201d900181b34107af50002abe8ed8",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/8ffd98efe5201d900181b34107af50002abe8ed8",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/a55fa2df012da03804394e857fc5e09ed6a69191",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/a55fa2df012da03804394e857fc5e09ed6a69191",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/a7febe38bfa295bb6907789a9d0f008c6319b962",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/a7febe38bfa295bb6907789a9d0f008c6319b962",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/ae385af43a5d1494c0f807d48c05b5b3c3576afe",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/ae385af43a5d1494c0f807d48c05b5b3c3576afe",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/bd6521c004c07b7eb1e6b29f1cfe3cc0d4ceb3cc",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/bd6521c004c07b7eb1e6b29f1cfe3cc0d4ceb3cc",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/cd8dcba8c3cdd3597f73eff14285d6e0c759fda1",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/cd8dcba8c3cdd3597f73eff14285d6e0c759fda1",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/d0c290fb090b8236400c0131456b035b9199b02c",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/d0c290fb090b8236400c0131456b035b9199b02c",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/d113f473f3aa6186e6cce3296aebc45f1a266b9d",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/d113f473f3aa6186e6cce3296aebc45f1a266b9d",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/d3cd08acf2731eb29b0227a3957ab09ffc55e38c",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/d3cd08acf2731eb29b0227a3957ab09ffc55e38c",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/d408fb7a83adf1cd66a9048080210be3b617cb29",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/d408fb7a83adf1cd66a9048080210be3b617cb29",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/dbf978defab57f25bca7206c939b17e9c1b8749d",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/dbf978defab57f25bca7206c939b17e9c1b8749d",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/e18f93b233e92c3c13b45b7654d4712f4748fe8b",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/e18f93b233e92c3c13b45b7654d4712f4748fe8b",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/e255e142299e7b62e25690084deb0bb49408f332",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/e255e142299e7b62e25690084deb0bb49408f332",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/e4c215da7672e0ff5d8c7c6b12eaa6e027b73969",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/e4c215da7672e0ff5d8c7c6b12eaa6e027b73969",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/e6d8a9c021af46599e25526f7afa2c9689eba705",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/e6d8a9c021af46599e25526f7afa2c9689eba705",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/e7a01529a67d2e176caece591f7981360e4805ff",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/e7a01529a67d2e176caece591f7981360e4805ff",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/ec069aaf1b98181850d5f11ac0069b719063f855",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/ec069aaf1b98181850d5f11ac0069b719063f855",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/ee96e92f6242ded7c0f5a641fb68712863cda941",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/ee96e92f6242ded7c0f5a641fb68712863cda941",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/f02304a5117f7e8cc52916b2995eee7d5cd3bdf7",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/f02304a5117f7e8cc52916b2995eee7d5cd3bdf7",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/f3eecd701088dbca1956b577ef1de1c1762edced",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/f3eecd701088dbca1956b577ef1de1c1762edced",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/f6cfac4e319cc287a0162f1cf3eab1791a61bed2",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/f6cfac4e319cc287a0162f1cf3eab1791a61bed2",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: asset:system\/files\/images\/productos\/fce70ded3bd3b58293eed84c658aedaa60d10a2e",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: asset:system\/files\/images\/productos\/fce70ded3bd3b58293eed84c658aedaa60d10a2e",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:1",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:1",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:2",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:2",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:3",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:3",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:4",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:4",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:5",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:5",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:6",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:6",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:7",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:7",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:8",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:8",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:9",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:9",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:10",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:10",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:11",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:11",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:12",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:12",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:13",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:13",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:14",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:14",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:16",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:16",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:17",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:17",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:18",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:18",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:19",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:19",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:20",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:20",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:21",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:21",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:22",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:22",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:23",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:23",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:24",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:24",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:27",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:27",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:28",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:28",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:29",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:29",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:30",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:30",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:31",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:31",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:32",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:32",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:33",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:33",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:34",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:34",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:35",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:35",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:36",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:36",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: category:39",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: category:39",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: brand:1",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: brand:1",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: brand:2",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: brand:2",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: brand:3",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: brand:3",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: brand:4",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: brand:4",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: brand:5",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: brand:5",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: brand:6",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: brand:6",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: brand:7",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: brand:7",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: brand:8",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: brand:8",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: brand:9",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: brand:9",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: brand:10",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: brand:10",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: brand:11",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: brand:11",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: brand:12",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: brand:12",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:4",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:4",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:5",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:5",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:6",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:6",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:7",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:7",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:9",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:9",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:10",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:10",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:11",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:11",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:12",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:12",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:13",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:13",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:14",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:14",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:15",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:15",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:17",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:17",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:18",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:18",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:19",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:19",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:21",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:21",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:22",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:22",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:23",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:23",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:24",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:24",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:25",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:25",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:26",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:26",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:27",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:27",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:28",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:28",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:30",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:30",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:33",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:33",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:34",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:34",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:35",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:35",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:37",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:37",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:38",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:38",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:39",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:39",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:41",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:41",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:42",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:42",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:43",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:43",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:44",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:44",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:45",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:45",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:49",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:49",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:51",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:51",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:52",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:52",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:53",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:53",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:54",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:54",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:55",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:55",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:56",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:56",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:62",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:62",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:63",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:63",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:64",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:64",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:65",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:65",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:66",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:66",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:67",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:67",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:68",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:68",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:69",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:69",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:70",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:70",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:71",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:71",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:72",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:72",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:73",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:74",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:74",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:75",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:75",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:77",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:77",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:78",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:78",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:85",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:85",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:86",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:86",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:92",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:92",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:95",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:95",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:96",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:96",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:97",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:97",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:98",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:98",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:101",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:101",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:105",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:105",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:146",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:146",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: sql:productos:148",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: sql:productos:148",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:1500-revolving-door.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:1500-revolving-door.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:automatismos-para-cancelas-cubic.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:automatismos-para-cancelas-cubic.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:bix-al-antena-externa-433-mhz.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:bix-al-antena-externa-433-mhz.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:com-programadores-digitales-y-rotativos.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:com-programadores-digitales-y-rotativos.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:cross-3e.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:cross-3e.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:detector-de-masas-max-eagle.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:detector-de-masas-max-eagle.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:ditec-neos-y-neos.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:ditec-neos-y-neos.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:dod-automatizacion-compacto-y-potente-para-portones-seccionales-correderos-y-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:dod-automatizacion-compacto-y-potente-para-portones-seccionales-correderos-y-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:dura-glide-20003000-puerta.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:dura-glide-20003000-puerta.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:fotoceldas.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:fotoceldas.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:gol-transmisores-de-cuatro-canales.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:gol-transmisores-de-cuatro-canales.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:lab-4-fotocelulas-de-rayos-infrarrojos.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:lab-4-fotocelulas-de-rayos-infrarrojos.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:lab-9-detectores-de-volumen-de-metal-loop.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:lab-9-detectores-de-volumen-de-metal-loop.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:lan-4-sistema-de-teclado-con-combinacion-digital.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:lan-4-sistema-de-teclado-con-combinacion-digital.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:lan-7-sistema-de-mando-de-proximidad-de-tarjetas-con-tecnologia-transponder.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:lan-7-sistema-de-mando-de-proximidad-de-tarjetas-con-tecnologia-transponder.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:light-communication-system-lcs.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:light-communication-system-lcs.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:luxo-robusto-e-incansable-para-servicios-intensivos-para-hojas-de-hasta-5-m.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:luxo-robusto-e-incansable-para-servicios-intensivos-para-hojas-de-hasta-5-m.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:magic-fuerza-del-operador.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:magic-fuerza-del-operador.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:pas-sensores-volumetricos.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:pas-sensores-volumetricos.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:puerta-seccional-de-acero-thermacore-595-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:puerta-seccional-de-acero-thermacore-595-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:qik-barreras-automaticas-de-hasta-58-m.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:qik-barreras-automaticas-de-hasta-58-m.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:retenedores-de-vehiculos-automatico.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:retenedores-de-vehiculos-automatico.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:sector-puertas-rapidas-enrollables-de-sectores-intercambiables-y-contrapesos.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:sector-puertas-rapidas-enrollables-de-sectores-intercambiables-y-contrapesos.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:sector-reset.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:sector-reset.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:sg-onixx-600.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:sg-onixx-600.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:smart-puertas-rapidas-enrollables-de-sectores-intercambiables-con-motor-externo.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:smart-puertas-rapidas-enrollables-de-sectores-intercambiables-con-motor-externo.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:sprint-automatizaciones-para-puertas-peatonales-pequenas-dimensiones.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:sprint-automatizaciones-para-puertas-peatonales-pequenas-dimensiones.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:star1000-receptor-comercial.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:star1000-receptor-comercial.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:traffic.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:traffic.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:upper-up8e-barreras-automaticas-de-hasta-8-m.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:upper-up8e-barreras-automaticas-de-hasta-8-m.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:wel-aotmatizacion-de-puertas-peatonales-pequena-y-robusta.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:wel-aotmatizacion-de-puertas-peatonales-pequena-y-robusta.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: static:xel-5-selector-de-llave.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: static:xel-5-selector-de-llave.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: php:contacto.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: php:contacto.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: php:nosotros.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: php:nosotros.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: php:operadores-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: php:operadores-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: php:operadores-puerta-corrediza-residencial.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: php:operadores-puerta-corrediza-residencial.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: php:operadores-puertas-ascendentes.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: php:operadores-puertas-ascendentes.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: php:puertas-rapidas-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: php:puertas-rapidas-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "Existing identity never recreated: php:puertas-residenciales.php",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED is backed by real identity and snapshot: php:puertas-residenciales.php",
+            "passed": true
+        },
+        {
+            "test": "preflight_full_local() mutates nothing",
+            "passed": true
+        },
+        {
+            "test": "Pre-flight on the current real plan: OK ()",
+            "passed": true
+        },
+        {
+            "test": "No blockers on the current real plan",
+            "passed": true
+        },
+        {
+            "test": "Pre-flight check passes: plan_exists ()",
+            "passed": true
+        },
+        {
+            "test": "Pre-flight check passes: plan_scope_full ()",
+            "passed": true
+        },
+        {
+            "test": "Pre-flight check passes: plan_status_valid ()",
+            "passed": true
+        },
+        {
+            "test": "Pre-flight check passes: environment_id_matches ()",
+            "passed": true
+        },
+        {
+            "test": "Pre-flight check passes: transform_version_matches ()",
+            "passed": true
+        },
+        {
+            "test": "Pre-flight check passes: plan_seal_intact ()",
+            "passed": true
+        },
+        {
+            "test": "Pre-flight check passes: manual_decisions_unchanged ()",
+            "passed": true
+        },
+        {
+            "test": "Pre-flight check passes: source_hashes_current ()",
+            "passed": true
+        },
+        {
+            "test": "Pre-flight check passes: actions_within_known_set ()",
+            "passed": true
+        },
+        {
+            "test": "Pre-flight check passes: no_error_entries (0 entr(y\/ies) already carry action=ERROR.)",
+            "passed": true
+        },
+        {
+            "test": "Pre-flight check passes: review_counted (339 REVIEW entries will be preserved untouched (walked over, never applied).)",
+            "passed": true
+        },
+        {
+            "test": "Pre-flight check passes: legacy_source_files_exist ()",
+            "passed": true
+        },
+        {
+            "test": "Pre-flight check passes: staged_media_assets_valid ()",
+            "passed": true
+        },
+        {
+            "test": "Pre-flight check passes: pdf_approvals_current ()",
+            "passed": true
+        },
+        {
+            "test": "Pre-flight runs exactly its documented 14 checks",
+            "passed": true
+        },
+        {
+            "test": "MIGRATE+MERGE+CREATE_FROM_STATIC (525) === planned CREATE+UPDATE+UNCHANGED+CONFLICT (525) -- MERGE is real, just folded into the same top-line bucket as MIGRATE\/CREATE_FROM_STATIC",
+            "passed": true
+        },
+        {
+            "test": "MERGE = 49 (25 Q02 + 24 Q03), fully counted on its own inside `counts`, never silently absorbed without a trace",
+            "passed": true
+        },
+        {
+            "test": "REVIEW and SKIP already match 1:1 between both views (no rollup ambiguity for these two)",
+            "passed": true
+        },
+        {
+            "test": "Wrong environment_id -> blocked (this is the operational form of \"full + production\/staging -> DENY\": WP_ENVIRONMENT_TYPE\/DB_NAME are fixed wp-config constants that cannot be flipped within one PHP process, but a plan carrying a mismatched environment_id is exactly what a plan built on a different install\/DB looks like, and this is the actual mechanism Storage::guard()+this check use to refuse it)",
+            "passed": true
+        },
+        {
+            "test": "Tampered plan (altered after build) -> plan_seal_intact blocked",
+            "passed": true
+        },
+        {
+            "test": "A valid subset plan is blocked by full-local preflight on scope alone",
+            "passed": true
+        },
+        {
+            "test": "An entry with action=ERROR blocks pre-flight, attributed to its own dedicated check",
+            "passed": true
+        },
+        {
+            "test": "ERROR is a recognised action value, not caught by the generic unknown-action check",
+            "passed": true
+        },
+        {
+            "test": "An entry with an action outside {MIGRATE,MERGE,CREATE_FROM_STATIC,SKIP,REVIEW} blocks pre-flight",
+            "passed": true
+        },
+        {
+            "test": "Sanity: at least one staged, MIGRATE-approved media entry exists in the real plan",
+            "passed": true
+        },
+        {
+            "test": "A media entry pointing at a non-staged\/missing package_asset blocks pre-flight",
+            "passed": true
+        },
+        {
+            "test": "A PDF-approval-carrying entry pointing at a non-existent legacy file blocks pre-flight on pdf_approvals_current",
+            "passed": true
+        },
+        {
+            "test": "The real current full plan was never passed to batch_full_local_resolved_only() in this test file -- results is empty",
+            "passed": true
+        },
+        {
+            "test": "End to end: zero database mutation across this entire preflight-only test file",
+            "passed": true
+        }
+    ],
+    "baseline": {
+        "REVIEW": 339,
+        "UNCHANGED": 510,
+        "SKIP": 1535,
+        "CONFLICT": 11,
+        "CREATE": 4
+    },
+    "preflight_counts": {
+        "total": 2399,
+        "REVIEW": 339,
+        "MIGRATE": 444,
+        "SKIP": 1535,
+        "MERGE": 49,
+        "CREATE_FROM_STATIC": 32
+    }
+}

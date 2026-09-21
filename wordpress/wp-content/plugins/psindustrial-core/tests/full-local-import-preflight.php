@@ -6,7 +6,7 @@
  * never written back to disk under the real run_id. */
 if ( PHP_SAPI !== 'cli' ) { http_response_code( 404 ); exit; }
 require dirname( __DIR__, 4 ) . '/wp-load.php';
-use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Runner};
+use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Runner,Identity};
 (static function(): void {
  $checks = array();
  $assert = static function( bool $value, string $label ) use ( &$checks ): void { $checks[] = array( 'test' => $label, 'passed' => $value ); if ( ! $value ) { throw new RuntimeException( $label ); } };
@@ -22,14 +22,17 @@ use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Runner};
   $after = array( 'posts' => (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->posts}" ), 'terms' => (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->terms}" ) );
   $assert( $before === $after, 'Planner::build(\'full\') mutates nothing' );
 
-  $baseline = array( 'total' => 2399, 'UNCHANGED' => 15, 'SKIP' => 1534, 'CREATE' => 511, 'REVIEW' => 339 );
-  $assert( count( $plan['entries'] ) === $baseline['total'], 'TOTAL = 2.399' );
-  $assert( ( $plan['summary']['actions']['UNCHANGED'] ?? 0 ) === $baseline['UNCHANGED'], 'UNCHANGED = 15' );
-  $assert( ( $plan['summary']['actions']['SKIP'] ?? 0 ) === $baseline['SKIP'], 'SKIP = 1.534' );
-  $assert( ( $plan['summary']['actions']['CREATE'] ?? 0 ) === $baseline['CREATE'], 'CREATE (planned_result, folds in MERGE -- see below) = 511' );
-  $assert( ( $plan['summary']['actions']['REVIEW'] ?? 0 ) === $baseline['REVIEW'], 'REVIEW = 339' );
-  $assert( ! isset( $plan['summary']['actions']['ERROR'] ), 'ERROR = 0 (the key is absent, not zero -- a fresh plan never has action=ERROR, only a partially-EXECUTED one could)' );
-  $assert( ! isset( $plan['summary']['actions']['UPDATE'] ) && ! isset( $plan['summary']['actions']['CONFLICT'] ), 'Sanity: with only the 15 pre-existing subset objects in this DB, nothing yet predicts UPDATE/CONFLICT -- every mutable entry is fresh CREATE' );
+  $baseline = array( 'total' => 2399, 'SKIP' => 1535, 'REVIEW' => 339 );
+  $assert( count( $plan['entries'] ) === $baseline['total'], 'All canonical entities still accounted for' );
+  $assert( ( $plan['summary']['actions']['SKIP'] ?? 0 ) === $baseline['SKIP'], '1,534 original SKIP plus one explicit UI_ONLY_ASSET reclassification' );
+  $assert( ( $plan['summary']['actions']['REVIEW'] ?? 0 ) === $baseline['REVIEW'], '339 pending REVIEW preserved' );
+  $assert( ! isset( $plan['summary']['actions']['ERROR'] ), 'No planning errors' );
+  foreach ( $plan['entries'] as $entry ) {
+   if ( in_array( $entry['action'], array( 'SKIP','REVIEW' ), true ) ) { continue; }
+   $id = Identity::find( $entry );
+   if ( $id ) { $assert( 'CREATE' !== $entry['planned_result'], 'Existing identity never recreated: ' . $entry['entity_key'] ); }
+   if ( 'UNCHANGED' === $entry['planned_result'] ) { $assert( $id > 0 && 'UNCHANGED' === Identity::prediction( $entry ), 'UNCHANGED is backed by real identity and snapshot: ' . $entry['entity_key'] ); }
+  }
 
   $report = Runner::preflight_full_local( $plan['run_id'], $plan );
   $after2 = array( 'posts' => (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->posts}" ), 'terms' => (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->terms}" ) );
@@ -47,8 +50,8 @@ use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Runner};
   // or 'UNCHANGED' (already applied, matching hash) -- never anything else right now (no
   // UPDATE/CONFLICT exist yet in this DB) -- so the two views must reconcile exactly:
   $mutableByDecision = ( $report['counts']['MIGRATE'] ?? 0 ) + ( $report['counts']['MERGE'] ?? 0 ) + ( $report['counts']['CREATE_FROM_STATIC'] ?? 0 );
-  $mutableByPlannedResult = ( $plan['summary']['actions']['CREATE'] ?? 0 ) + ( $plan['summary']['actions']['UNCHANGED'] ?? 0 );
-  $assert( $mutableByDecision === $mutableByPlannedResult, "MIGRATE+MERGE+CREATE_FROM_STATIC ($mutableByDecision) === planned CREATE+UNCHANGED ($mutableByPlannedResult) -- MERGE is real, just folded into the same top-line bucket as MIGRATE/CREATE_FROM_STATIC" );
+  $mutableByPlannedResult = array_sum( array_intersect_key( $plan['summary']['actions'], array_flip( array( 'CREATE','UPDATE','UNCHANGED','CONFLICT' ) ) ) );
+  $assert( $mutableByDecision === $mutableByPlannedResult, "MIGRATE+MERGE+CREATE_FROM_STATIC ($mutableByDecision) === planned CREATE+UPDATE+UNCHANGED+CONFLICT ($mutableByPlannedResult) -- MERGE is real, just folded into the same top-line bucket as MIGRATE/CREATE_FROM_STATIC" );
   $assert( 49 === ( $report['counts']['MERGE'] ?? 0 ), 'MERGE = 49 (25 Q02 + 24 Q03), fully counted on its own inside `counts`, never silently absorbed without a trace' );
   $assert( ( $report['counts']['REVIEW'] ?? 0 ) === $baseline['REVIEW'] && ( $report['counts']['SKIP'] ?? 0 ) === $baseline['SKIP'], 'REVIEW and SKIP already match 1:1 between both views (no rollup ambiguity for these two)' );
 

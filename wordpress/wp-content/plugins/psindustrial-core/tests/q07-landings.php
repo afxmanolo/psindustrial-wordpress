@@ -4,7 +4,7 @@
  * (DRY RUN) and inspects the resulting plan. */
 if ( PHP_SAPI !== 'cli' ) { http_response_code( 404 ); exit; }
 require dirname( __DIR__, 4 ) . '/wp-load.php';
-use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Runner};
+use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Runner,Identity};
 (static function(): void {
  $checks = array();
  $assert = static function( bool $value, string $label ) use ( &$checks ): void { $checks[] = array( 'test' => $label, 'passed' => $value ); if ( ! $value ) { throw new RuntimeException( $label ); } };
@@ -34,7 +34,13 @@ use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Runner};
    $e = $get( 'php:' . $file );
    $assert( 'MIGRATE' === $e['action'] && 'Q07' === $e['decision']['decision_id'], "Landing approved as a Page: $file" );
    $assert( 'page' === $e['target_type'], "Target type is page, never psi_producto/psi_categoria/psi_marca: $file" );
-   $assert( 'CREATE' === $e['planned_result'], "Planned result is a draft creation (Runner::apply() always writes post_status=draft for a new post; _psi_review_state=pending follows immediately -- never publish): $file" );
+   $id = Identity::find( $e );
+   if ( $id ) {
+    $assert( 'page' === get_post_type( $id ) && in_array( Identity::prediction( $e ), array( 'UNCHANGED','CONFLICT' ), true ), "Existing landing identity is a Page; human edits block overwrite: $file" );
+   } else {
+    $collision = get_page_by_path( $e['data']['slug'], OBJECT, 'page' );
+    $assert( 'CONFLICT' === $e['planned_result'] && $collision && ( get_post_meta( $collision->ID, '_psi_import_identity', true )['entity_key'] ?? '' ) !== $e['entity_key'], "Unimported landing remains an evidenced slug collision, never silently merged: $file" );
+   }
    $assert( '' !== trim( wp_strip_all_tags( $e['data']['content'] ) ), "Landing content preserved (non-empty extracted body), own text never copied from a product: $file" );
    $assert( '' !== ( $e['legacy_url'] ?? '' ), "Legacy URL mapping present on the landing entry: $file" );
   }

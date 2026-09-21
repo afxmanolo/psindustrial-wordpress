@@ -48,7 +48,7 @@ use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Runner};
   $loser = $get( 'sql:productos:87' );
   $assert( 'MERGE' === $winner['action'] && 'Q02' === $winner['decision']['decision_id'], 'Pure-duplicate group: winner (oldest, id 4) action is MERGE' );
   $assert( 'SKIP' === $loser['action'] && 'Q02' === $loser['decision']['decision_id'], 'Pure-duplicate group: loser (id 87) action is SKIP' );
-  $assert( 2 === count( $winner['data']['images'] ), 'Pure-duplicate group: image union deduplicated to 2 (not 3 raw, not 6 across both members): count=' . count( $winner['data']['images'] ) );
+  $assert( array( 'asset:images/rolling-service-door-625-wide.jpg' ) === $winner['data']['images'], 'Pure duplicate retains its actual photo exactly once; the second former image was the UI button' );
   $assert( in_array( 'asset:images/rolling-service-door-625-wide.jpg', $winner['data']['images'], true ), 'Pure-duplicate group: union keeps the winning path of the duplicate pair' );
   $assert( ! in_array( 'asset:system/files/images/productos/0dd525f64a0290377628938328d07d21668c7f22', $winner['data']['images'], true ), 'Duplicate binary image -> only one survives the union (the other path is dropped, not both kept)' );
   $s = new Sources();
@@ -70,7 +70,7 @@ use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Runner};
   $assert( 'MERGE' === $winner2['action'], 'Complementary-photos group: winner (id 7) action is MERGE' );
   $assert( 'SKIP' === $loser2['action'], 'Complementary-photos group: loser (id 91) action is SKIP' );
   $assert( in_array( 'asset:system/files/images/productos/0b26a7b20dd4d467cf9a57c9a5cba26cafbf6203', $winner2['data']['images'], true ), 'Complementary-photos group: union of unique photos includes the loser\'s distinct image' );
-  $assert( 3 === count( $winner2['data']['images'] ), 'Complementary-photos group: union has 3 unique images (2 shared + 1 contributed only by the loser)' );
+  $assert( 2 === count( $winner2['data']['images'] ) && ! in_array( 'asset:images/verficha.png', $winner2['data']['images'], true ), 'Complementary-photos union retains both real photos, excluding only the verified UI button' );
 
   // --- MERGE self-consistency: field_winners all point to the winner; source_keys cover
   // every merged legacy id; editorial_approval present (Planner::build() itself would
