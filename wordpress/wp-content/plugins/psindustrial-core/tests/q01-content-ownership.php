@@ -94,10 +94,22 @@ use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Runner};
   }
 
   // ============================================================== owner ambiguo -> KEEP_REVIEW
-  // A Q03 editorial-merge group (4 related_product_ids, NOT a Q02 identity group): which
-  // of the 4 is canonical is not this phase's call.
-  $ambiguousProductPage = $get( 'php:accesspro-fs1000speed.php' );
-  $assert( 'REVIEW' === $ambiguousProductPage['action'] && null === ( $ambiguousProductPage['decision']['decision_id'] ?? null ), 'Q03 multi-product page (ambiguous owner) is left untouched, KEEP_REVIEW' );
+  // accesspro-fs1000speed.php (4 related_product_ids) was a Q03 editorial-merge group with
+  // no approved owner when this suite was first written -- Q03-GLOBAL now approves it (see
+  // tests/q03-multi-category.php), so Q01's OWN existing ownership logic correctly retires
+  // this page too, citing the Q03 winner. This is the intended, improved behaviour, not a
+  // regression: verified here to confirm Q01 reuses Q03's decision rather than needing any
+  // change of its own (task instruction: no second ownership implementation).
+  $nowResolvedProductPage = $get( 'php:accesspro-fs1000speed.php' );
+  $assert( 'SKIP' === $nowResolvedProductPage['action'] && 'Q01' === ( $nowResolvedProductPage['decision']['decision_id'] ?? null ), 'accesspro-fs1000speed.php now retires via Q01, citing the Q03-GLOBAL winner (sql:productos:1)' );
+  $assert( str_contains( $nowResolvedProductPage['decision']['reason'], 'sql:productos:1' ), 'Page\'s own reason cites the actual Q03 winner as owner' );
+  // puertas-contra-incendio.php remains a genuine example of "no decision here": Q03-GLOBAL
+  // approved this group too, but its winner refuses (no extractable static body on this
+  // specific legacy page, regardless of which of its 3 SQL rows would be chosen -- see
+  // tests/q03-multi-category.php) -- so Q01 correctly finds no MERGE winner to cite and
+  // leaves the page exactly as it always was.
+  $stillAmbiguousProductPage = $get( 'php:puertas-contra-incendio.php' );
+  $assert( 'REVIEW' === $stillAmbiguousProductPage['action'] && null === ( $stillAmbiguousProductPage['decision']['decision_id'] ?? null ), 'puertas-contra-incendio.php (Q03-GLOBAL approved, but its winner has no extractable content) is left untouched, KEEP_REVIEW' );
   // A category page shared by two categories (27 and 28): no single-owner target.
   $ambiguousCatPage = $get( 'php:puertas-peatonales-estandar-y-reforzada.php' );
   $assert( 'REVIEW' === $ambiguousCatPage['action'] && null === ( $ambiguousCatPage['decision']['decision_id'] ?? null ), 'A page shared by two categories is left untouched, KEEP_REVIEW' );

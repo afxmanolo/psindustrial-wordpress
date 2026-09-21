@@ -3,12 +3,14 @@ namespace PSIndustrial\Core\Migration;
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Explicit, auditable, human-approved editorial decisions — Q01, Q02, Q04 and Q06 only.
+ * Explicit, auditable, human-approved editorial decisions — Q01, Q02, Q03, Q04, Q06, Q07,
+ * Q10, Q11 and Q13 only.
  *
  * This is NOT a heuristic. It is deliberately separate from Policy.php (general LOW-risk
  * inference from evidence patterns) and from PdfApprovals.php (per-file PDF security
- * decisions). This class answers exactly four closed, human-approved questions from
- * docs/implementation/review-resolution/decision-questionnaire.md:
+ * decisions). This class answers exactly nine closed, human-approved questions from
+ * docs/implementation/review-resolution/decision-questionnaire.md and
+ * docs/implementation/review-resolution/q03-decision-questionnaire.md:
  *
  *  - Q01 (option A): a legacy page that directly reexpresses a product/category/brand
  *    belongs to that canonical entity; no separate Page is created for it. Applies ONLY
@@ -32,7 +34,20 @@ defined( 'ABSPATH' ) || exit;
  *    165 "Prueba") from the migratable catalog, preserving any of their associated media
  *    that also belongs to a different, valid entity.
  *
- * No other REVIEW cause (Q03, Q05, Q07-Q13, any MEDIUM/HIGH rule) is answered here.
+ *  - Q03 (option A, per group): 27 canonical_candidate_group editorial-merge groups, four
+ *    related but separately-approved decisions. Q03-GLOBAL (16 groups): one product, the
+ *    UNION of every category demonstrated across its members (never a single winner's
+ *    scalar) — never determines a primary/breadcrumb/SEO category, deliberately left for a
+ *    future SEO phase. Q03-A (7 groups): same mechanism where no category ever diverges;
+ *    the documented, more complete/correct title is used verbatim (never rewritten or
+ *    synthesized). Q03-B/C/D (3 groups: Modern Steel, LiftMaster/Blue Giant, Thermospan):
+ *    identity consolidates, but brand is explicitly FORCED unresolved — each is a
+ *    pre-existing, documented D03/Q09 brand conflict, never re-litigated here. Q03-E
+ *    (Kelley, partial): only 2 of its 3 members consolidate; the third (id 3, already
+ *    excluded by Policy::CATEGORY_CONFLICT_PRODUCTS) gets no decision at all and stays
+ *    exactly as it was.
+ *
+ * No other REVIEW cause (Q05, Q08, Q09, Q12, any MEDIUM/HIGH rule) is answered here.
  * Absence of a decision changes nothing: the source stays REVIEW exactly as before this
  * class existed. Never writes anything, never touches WordPress content or the database,
  * never calls Runner. Consulted by Planner only for scope === 'full', exactly like Policy
@@ -79,6 +94,7 @@ final class EditorialDecisions {
  public static function decisions( Sources $s, array $policy = array(), array $manual = array() ): array {
   $out = array();
   self::q02( $s, $out );
+  self::q03( $s, $out );
   self::q01( $s, $policy, $out );
   self::q04( $s, $out );
   self::q06( $s, $out );
@@ -235,6 +251,192 @@ final class EditorialDecisions {
   }
  }
 
+ /** Q03. Four related but independently-approved decisions (see the class docblock and
+  *  docs/implementation/review-resolution/q03-decision-questionnaire.md). editorial-
+  *  decisions.json declares WHICH groups/ids are approved plus the handful of genuinely
+  *  editorial judgment calls no algorithm can derive (a documented title preference, a
+  *  forced brand-unresolved status, Kelley's exact id split) -- everything else (winner,
+  *  category union, media union, description-conflict status) is re-derived every run from
+  *  product-master.csv and the legacy SQL catalog, exactly like q02(). */
+ private static function q03( Sources $s, array &$out ): void {
+  $data = self::data()['q03_group_consolidation'] ?? null;
+  if ( ! $data ) { return; }
+  $byId = array();
+  foreach ( $s->rows['product-master.csv'] as $r ) { $byId[ $r['legacy_product_id'] ] = $r; }
+  $mediaRows = array();
+  foreach ( $s->rows['media-master.csv'] as $r ) { $mediaRows[ $r['legacy_path'] ] = $r; }
+
+  foreach ( $data['global_multi_category']['groups'] as $g ) {
+   self::q03_consolidate( $s, $byId, $mediaRows, $g['group_key'], $g['legacy_product_ids'], null, false, 'Q03-GLOBAL', $data['global_multi_category']['editorial_approval'], true, $out );
+  }
+  foreach ( $data['name_consolidation']['groups'] as $g ) {
+   self::q03_consolidate( $s, $byId, $mediaRows, $g['group_key'], $g['legacy_product_ids'], $g['canonical_title_source_id'] ?? null, false, 'Q03-A', $data['name_consolidation']['editorial_approval'], true, $out );
+  }
+  foreach ( $data['brand_unresolved_groups'] as $g ) {
+   self::q03_consolidate( $s, $byId, $mediaRows, $g['group_key'], $g['legacy_product_ids'], null, true, $g['id'], $g['notes'], true, $out );
+  }
+  $k = $data['kelley_partial'];
+  self::q03_consolidate( $s, $byId, $mediaRows, $k['group_key'], $k['consolidate_ids'], $k['canonical_title_source_id'] ?? null, true, $k['id'], $k['notes'], false, $out );
+ }
+
+ /** Shared consolidation core for all four Q03 sub-decisions. $requireExactMembership=true
+  *  verifies $memberIds is the group's ENTIRE live membership (the same drift check q02()
+  *  applies to its own 26 groups); false (Kelley only) verifies each given id individually
+  *  still belongs to the group but allows other live members (id 3) to exist outside
+  *  $memberIds, completely untouched -- no decision of any kind is produced for them here.
+  *  Returns the winner's entity key, or null if the group was refused (drift, invalid media,
+  *  or an undocumented field contradiction with no safe default) -- KEEP_REVIEW in every
+  *  refusal case, never a partial or improvised decision. */
+ private static function q03_consolidate( Sources $s, array $byId, array $mediaRows, string $groupKey, array $memberIds, ?string $titlePreferenceId, bool $forceUnresolvedBrand, string $qId, string $editorialApproval, bool $requireExactMembership, array &$out ): ?string {
+  $members = array();
+  foreach ( $memberIds as $id ) {
+   if ( ! isset( $byId[ $id ] ) || $byId[ $id ]['canonical_candidate_group'] !== $groupKey ) { return null; }
+   $members[] = $byId[ $id ];
+  }
+  if ( count( $members ) < 2 ) { return null; }
+
+  // Every member of a Q03 group shares the SAME legacy_php (that is what canonical_
+  // candidate_group means) -- so Planner's own static-content extraction is identical no
+  // matter which id ends up winner. Pre-checking it HERE, before writing anything, matters
+  // because a winner that later fails Planner's own NO_STATIC_EDITORIAL_BODY guard would
+  // otherwise still have already put its losing siblings into SKIP "already consolidated
+  // into $winnerKey" -- silently losing every one of them (SKIP + a winner stuck in REVIEW)
+  // instead of leaving the whole group safely in REVIEW. Refusing the WHOLE group up front,
+  // exactly like an invalid media asset already does below, is the only safe option.
+  $extracted = $s->content( $groupKey );
+  if ( '' === trim( wp_strip_all_tags( $extracted['body'] ?? '' ) ) ) { return null; }
+
+  if ( $requireExactMembership ) {
+   // Read the STRING legacy_product_id from each row's own value, never from $byId's array
+   // key -- PHP silently casts a numeric-string array key to a real int, which would make
+   // this strict comparison against the JSON-decoded (always-string) $memberIds fail for
+   // every group, every time.
+   $liveIds = array();
+   foreach ( $byId as $r ) { if ( $r['canonical_candidate_group'] === $groupKey ) { $liveIds[] = $r['legacy_product_id']; } }
+   sort( $liveIds ); $approvedSorted = $memberIds; sort( $approvedSorted );
+   if ( $liveIds !== $approvedSorted ) { return null; }
+  }
+
+  // Description field-selection (task section 3): oldest-by-fecha within the pool of
+  // NON-EMPTY members if any exist at all -- an empty-description sibling is never
+  // preferred over a populated one merely for being the oldest SQL row (section 4) -- further
+  // narrowed to the JSON's documented title preference, but ONLY when that id is itself in
+  // the non-empty pool (a title preference can never reintroduce an empty winner).
+  $entries = array();
+  foreach ( $members as $m ) {
+   $id = $m['legacy_product_id'];
+   $entries[] = array( 'id' => $id, 'row' => $m, 'value' => trim( $s->catalog['productos'][ $id ]['descripcion'] ?? '' ), 'fecha' => $s->catalog['productos'][ $id ]['fecha'] ?? '' );
+  }
+  usort( $entries, static fn( $a, $b ) => $a['fecha'] <=> $b['fecha'] ?: ( (int) $a['id'] <=> (int) $b['id'] ) );
+  $desc = self::q03_field_select( $entries );
+
+  $nonEmptyPool = array_values( array_filter( $entries, static fn( $e ) => '' !== $e['value'] ) );
+  $winnerEntry = ( $nonEmptyPool ?: $entries )[0];
+  if ( $titlePreferenceId ) {
+   foreach ( ( $nonEmptyPool ?: $entries ) as $e ) { if ( (string) $e['id'] === (string) $titlePreferenceId ) { $winnerEntry = $e; break; } }
+  }
+  $winner = $winnerEntry['row'];
+  $winnerId = $winner['legacy_product_id'];
+  $winnerKey = 'sql:productos:' . $winnerId;
+
+  // Media union across ALL consolidating members (never the winner alone), same technique
+  // and same fail-closed behaviour as q02()'s own media_union() calls.
+  $imgKeys = self::media_union( $s, $mediaRows, $members, 'images' );
+  if ( null === $imgKeys ) { return null; }
+  $pdfKeys = self::media_union( $s, $mediaRows, $members, 'technical_pdf' );
+  if ( null === $pdfKeys ) { return null; }
+
+  // Category union across ALL members, never the winner's scalar alone -- the entire point
+  // of Q03-GLOBAL; a harmless no-op union of a single value for groups with no real
+  // divergence (Q03-A/B/C/D and Kelley).
+  $catUnion = array();
+  foreach ( $members as $m ) { foreach ( Sources::parts( $m['category_id'] ?? '' ) as $c ) { $catUnion[ $c ] = true; } }
+  $catIds = array_keys( $catUnion ); sort( $catIds, SORT_NUMERIC );
+  $categoryKeys = array_map( static fn( $c ) => 'category:' . $c, $catIds );
+
+  // Brand: forced unresolved regardless of what value-agreement would otherwise suggest --
+  // either the caller already knows this group is Q09-adjacent (Q03-B/C/D/E), OR ANY member
+  // id is independently listed in Policy::BRAND_CONFLICT_PRODUCTS (the same D03 register
+  // R-P01 itself already excludes on, verbatim from manual-decisions-required.md) -- this
+  // second, automatic check is what catches a group like MOOVI (barreras-estacionamiento-
+  // moovi50rm.php), whose own brand_id values happen to agree with each other but whose
+  // documented external link evidence ("BlueGiant frente a BFT") already contradicts that
+  // agreement; relying only on a manually-set flag per call already missed this once. A
+  // genuine VALUE contradiction discovered live on a group with no such flag (never observed
+  // across this phase's approved groups, but checked defensively, same principle as the
+  // media fail-closed check above) refuses the whole group rather than pick a side.
+  $brand = ''; $brandStatus = 'NONE'; $brandReasonCode = null;
+  $policyFlagged = array_intersect( array_map( static fn( $m ) => $m['legacy_product_id'], $members ), Policy::brand_conflict_products() );
+  if ( $forceUnresolvedBrand || $policyFlagged ) {
+   $brandStatus = 'BRAND_UNRESOLVED_Q09'; $brandReasonCode = 'BRAND_UNRESOLVED_Q09';
+  } else {
+   $brandVals = array();
+   foreach ( $members as $m ) { $b = trim( $m['brand_id'] ?? '' ); if ( '' !== $b && '0' !== $b ) { $brandVals[ $b ] = true; } }
+   if ( count( $brandVals ) > 1 ) { return null; } // undocumented brand contradiction -> KEEP_REVIEW, never guess.
+   if ( 1 === count( $brandVals ) ) { $brand = 'brand:' . array_key_first( $brandVals ); $brandStatus = 'ASSIGNED'; }
+  }
+
+  foreach ( array_merge( $imgKeys, $pdfKeys ) as $assetKey ) {
+   if ( isset( $out[ $assetKey ] ) ) { continue; } // already decided (shared static asset, e.g. another Q03 group's sibling PDF).
+   $out[ $assetKey ] = array(
+    'action' => 'MIGRATE',
+    'reason' => "$qId: parte de la union de medios de $groupKey (ganador $winnerKey); ver docs/implementation/review-resolution/implementation/22-q03-multi-category.md.",
+    'origin' => 'editorial_decision', 'decision_id' => 'Q03', 'decision_sub_id' => $qId,
+   );
+  }
+
+  $sourceKeys = array_map( static fn( $m ) => 'sql:productos:' . $m['legacy_product_id'], $members );
+  $out[ $winnerKey ] = array(
+   'action' => 'MERGE',
+   'source_keys' => $sourceKeys,
+   'field_winners' => array_fill_keys( self::MERGE_FIELDS, $winnerKey ),
+   'editorial_approval' => $editorialApproval,
+   'categories' => $categoryKeys,
+   'brand' => $brand,
+   'images' => $imgKeys,
+   'pdfs' => $pdfKeys,
+   'videos' => array(),
+   'reason' => "$qId: $groupKey consolidado (identidad ganadora $winnerKey" . ( $titlePreferenceId && (string) $titlePreferenceId === (string) $winnerId ? ', titulo preferido ya documentado' : '' ) . "); categorias=" . implode( '|', $catIds ) . "; marca=$brandStatus; descripcion=" . $desc['status'] . '.',
+   'origin' => 'editorial_decision', 'decision_id' => 'Q03', 'decision_sub_id' => $qId,
+   'reason_code' => 'PRODUCT_IDENTITY_RESOLVED',
+   'field_provenance' => array(
+    'title_source_id' => $winnerId,
+    'category_union' => $catIds,
+    'brand_status' => $brandStatus,
+    'brand_reason_code' => $brandReasonCode,
+    'description' => array(
+     'status' => $desc['status'], 'source_id' => $desc['source_id'],
+     'candidates' => array_map( static fn( $e ) => array( 'id' => $e['id'], 'fecha' => $e['fecha'], 'empty' => '' === $e['value'], 'hash' => '' === $e['value'] ? null : hash( 'sha256', $e['value'] ) ), $entries ),
+    ),
+   ),
+  );
+  foreach ( $members as $m ) {
+   $id = $m['legacy_product_id'];
+   if ( (string) $id === (string) $winnerId ) { continue; }
+   $out[ 'sql:productos:' . $id ] = array(
+    'action' => 'SKIP',
+    'reason' => "$qId: identidad consolidada en $winnerKey ($groupKey); no se crea como producto independiente.",
+    'origin' => 'editorial_decision', 'decision_id' => 'Q03', 'decision_sub_id' => $qId,
+   );
+  }
+  return $winnerKey;
+ }
+
+ /** Generic 3-way field policy (task section 3): all non-empty values identical, or only one
+  *  member has a value at all -> AGREED, use it; every member empty -> EMPTY, nothing to
+  *  use; two or more genuinely DIFFERENT non-empty values -> CONFLICT, never synthesized,
+  *  never concatenated, never resolved by picking the longer one. $entries must already be
+  *  fecha-ordered; ties broken by legacy id ascending, matching every other tie-break in
+  *  this class. */
+ private static function q03_field_select( array $entries ): array {
+  $nonEmpty = array_values( array_filter( $entries, static fn( $e ) => '' !== $e['value'] ) );
+  if ( ! $nonEmpty ) { return array( 'status' => 'EMPTY', 'value' => '', 'source_id' => null ); }
+  $distinct = array();
+  foreach ( $nonEmpty as $e ) { $distinct[ $e['value'] ] = true; }
+  if ( 1 === count( $distinct ) ) { return array( 'status' => 'AGREED', 'value' => $nonEmpty[0]['value'], 'source_id' => $nonEmpty[0]['id'] ); }
+  return array( 'status' => 'CONFLICT', 'value' => null, 'source_id' => null );
+ }
+
  /**
   * Q01. Two independent sub-problems, both gated on an unambiguous, already-approved
   * owner: (a) product pages -- retire the page, and where the owner is a Policy R-P01
@@ -251,14 +453,28 @@ final class EditorialDecisions {
   foreach ( $s->rows['product-master.csv'] as $r ) { $byId[ $r['legacy_product_id'] ] = $r; }
   $mediaRows = array();
   foreach ( $s->rows['media-master.csv'] as $r ) { $mediaRows[ $r['legacy_path'] ] = $r; }
-  $q02Groups = array();
-  foreach ( self::data()['q02_identity_merge']['groups'] as $g ) { $q02Groups[ $g['group_key'] ] = true; }
+  // Groups with an already-approved multi-record winner elsewhere in $out: Q02's 26, plus
+  // Q03's (GLOBAL/A/B/C/D/E, including Kelley by its group_key even though only 2 of its 3
+  // members actually consolidate). The search below always re-confirms an ACTUAL MERGE
+  // entity exists in $out before touching anything -- this list only says which groups are
+  // WORTH checking, never that they succeeded; a group whose consolidation failed this run
+  // (e.g. an invalid media asset) is correctly left REVIEW here too, exactly as Q02 always
+  // was, never assumed from this list alone.
+  $mergeGroups = array();
+  foreach ( self::data()['q02_identity_merge']['groups'] as $g ) { $mergeGroups[ $g['group_key'] ] = true; }
+  $q03Data = self::data()['q03_group_consolidation'] ?? null;
+  if ( $q03Data ) {
+   foreach ( $q03Data['global_multi_category']['groups'] as $g ) { $mergeGroups[ $g['group_key'] ] = true; }
+   foreach ( $q03Data['name_consolidation']['groups'] as $g ) { $mergeGroups[ $g['group_key'] ] = true; }
+   foreach ( $q03Data['brand_unresolved_groups'] as $g ) { $mergeGroups[ $g['group_key'] ] = true; }
+   $mergeGroups[ $q03Data['kelley_partial']['group_key'] ] = true;
+  }
 
   // ---- (a) PRODUCT_PAGE with related_product_ids: the page is redundant with a product
-  // that already exists (or will, via Q02) and claims this exact file as its content
-  // source. Multi-id pages whose ids are NOT a single Q02 group are Q03 editorial-merge
-  // territory (which of several candidates is canonical is not this phase's call) and are
-  // deliberately left untouched.
+  // that already exists (or will, via Q02 or Q03) and claims this exact file as its content
+  // source. Multi-id pages whose ids are NOT a single Q02/Q03 group are still-unresolved
+  // editorial-merge territory (which of several candidates is canonical is not this phase's
+  // call) and are deliberately left untouched.
   foreach ( $s->rows['content-master.csv'] as $r ) {
    if ( 'PRODUCT_PAGE' !== ( $r['classification'] ?? '' ) ) { continue; }
    $ids = Sources::parts( $r['related_product_ids'] ?? '' );
@@ -269,14 +485,16 @@ final class EditorialDecisions {
    $group = array_key_first( $groups );
    $pageKey = 'php:' . $r['legacy_file'];
 
-   if ( isset( $q02Groups[ $group ] ) ) {
-    // Q02 already fully owns this file's content AND media via its own winner (Q02's own
-    // union already reads the same product-master.csv images/technical_pdf columns this
-    // method would otherwise enrich with) — find that winner among $out, don't redecide it.
+   if ( isset( $mergeGroups[ $group ] ) ) {
+    // Q02 or Q03 already fully owns this file's content AND media via its own winner (both
+    // read the same product-master.csv images/technical_pdf columns this method would
+    // otherwise enrich with) — find that winner among $out, don't redecide it. For a Q03-E
+    // (Kelley) page, $ids includes id 3 too; the loop below finds the actual MERGE winner
+    // (id 24) among them regardless — id 3 itself never gets touched by this.
     $winnerKey = null;
     foreach ( $ids as $id ) { $k = 'sql:productos:' . $id; if ( isset( $out[ $k ] ) && 'MERGE' === ( $out[ $k ]['action'] ?? '' ) ) { $winnerKey = $k; break; } }
-    if ( ! $winnerKey ) { continue; } // Q02 didn't actually resolve this group this run (e.g. an invalid union asset) -> stay REVIEW, consistent with Q02's own refusal.
-    $out[ $pageKey ] = array( 'action' => 'SKIP', 'reason' => "Q01: contenido de $group ya es propiedad de $winnerKey (Q02); no se crea Page independiente.", 'origin' => 'editorial_decision', 'decision_id' => 'Q01' );
+    if ( ! $winnerKey ) { continue; } // Consolidation didn't actually resolve this group this run (e.g. an invalid union asset) -> stay REVIEW, consistent with its own refusal.
+    $out[ $pageKey ] = array( 'action' => 'SKIP', 'reason' => "Q01: contenido de $group ya es propiedad de $winnerKey; no se crea Page independiente.", 'origin' => 'editorial_decision', 'decision_id' => 'Q01' );
     continue;
    }
 

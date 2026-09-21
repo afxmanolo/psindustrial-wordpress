@@ -44,6 +44,11 @@ final class Policy {
  // R-G02 LOW subset only. SEO_LANDING is MEDIUM risk (09-proposed-rules.md) and is excluded.
  private const LOW_PAGE_CLASSIFICATIONS = array( 'INSTITUTIONAL_PAGE', 'CONTACT_PAGE' );
 
+ /** Read-only accessor for the same D03 brand-conflict register R-P01 already excludes
+  *  itself on (line ~140 below) -- lets another consulting class (EditorialDecisions::q03())
+  *  defer to this single source of truth instead of re-transcribing or re-judging the list. */
+ public static function brand_conflict_products(): array { return self::BRAND_CONFLICT_PRODUCTS; }
+
  /** Rule registry: metadata for documentation/audit only. Never used to make a decision. */
  public const RULES = array(
   'R-T01' => array( 'source_type' => 'category', 'reason_code' => 'R01_AUTHORIZATION_ONLY', 'description' => 'Categoría con padre SQL confirmado, fuera del registro de conflicto D06. No asigna productos.' ),

@@ -1,0 +1,97 @@
+canonical_entity,field,selected_value_source,other_sources,conflict,decision,notes
+sql:productos:1,name/title,1,109|110|114,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:1,categories,1|109|110|114,,"NO (union deliberada)","union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:1,brand,brand:1,1|109|110|114,NO,ASSIGNED,
+sql:productos:1,description,"(ninguno, todas vacias o en conflicto)",1|109|110|114,YES,CONFLICT,"No sintetizado; ver candidatos en el propio decision.field_provenance del plan"
+sql:productos:10,name/title,10,93|127,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:10,categories,10|93|127,,"NO (union deliberada)","union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:10,brand,brand:1,10|93|127,NO,ASSIGNED,
+sql:productos:10,description,"(ninguno, todas vacias o en conflicto)",10|93|127,YES,CONFLICT,"No sintetizado; ver candidatos en el propio decision.field_provenance del plan"
+sql:productos:28,name/title,28,118|129,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:28,categories,28|118|129,,"NO (union deliberada)","union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:28,brand,brand:6,28|118|129,NO,ASSIGNED,
+sql:productos:28,description,"(ninguno, todas vacias o en conflicto)",28|118|129,YES,CONFLICT,"No sintetizado; ver candidatos en el propio decision.field_provenance del plan"
+sql:productos:33,name/title,33,122|133,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:33,categories,33|122|133,,"NO (union deliberada)","union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:33,brand,brand:6,33|122|133,NO,ASSIGNED,
+sql:productos:33,description,33,122|133,NO,AGREED,
+sql:productos:35,name/title,35,121|134,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:35,categories,35|121|134,,"NO (union deliberada)","union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:35,brand,brand:6,35|121|134,NO,ASSIGNED,
+sql:productos:35,description,35,121|134,NO,AGREED,
+sql:productos:44,name/title,44,123|125|135,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:44,categories,44|123|125|135,,"NO (union deliberada)","union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:44,brand,(ninguna),44|123|125|135,"YES (Q09 pendiente)",BRAND_UNRESOLVED_Q09,BRAND_UNRESOLVED_Q09
+sql:productos:44,description,44,123|125|135,NO,AGREED,
+sql:productos:47,name/title,47,80|113,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:47,categories,47|80|113,,"NO (union deliberada)","union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:47,brand,brand:12,47|80|113,NO,ASSIGNED,
+sql:productos:47,description,"(ninguno, todas vacias o en conflicto)",47|80|113,YES,CONFLICT,"No sintetizado; ver candidatos en el propio decision.field_provenance del plan"
+sql:productos:48,name/title,48,79|112,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:48,categories,48|79|112,,"NO (union deliberada)","union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:48,brand,brand:12,48|79|112,NO,ASSIGNED,
+sql:productos:48,description,"(ninguno, todas vacias o en conflicto)",48|79|112,YES,CONFLICT,"No sintetizado; ver candidatos en el propio decision.field_provenance del plan"
+sql:productos:49,name/title,49,76|124|126,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:49,categories,49|76|124|126,,"NO (union deliberada)","union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:49,brand,brand:12,49|76|124|126,NO,ASSIGNED,
+sql:productos:49,description,"(ninguno, todas vacias o en conflicto)",49|76|124|126,YES,CONFLICT,"No sintetizado; ver candidatos en el propio decision.field_provenance del plan"
+sql:productos:54,name/title,54,89|136,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:54,categories,54|89|136,,"NO (union deliberada)","union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:54,brand,brand:10,54|89|136,NO,ASSIGNED,
+sql:productos:54,description,54,89|136,NO,AGREED,
+sql:productos:55,name/title,55,90|137,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:55,categories,55|90|137,,"NO (union deliberada)","union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:55,brand,brand:10,55|90|137,NO,ASSIGNED,
+sql:productos:55,description,55,90|137,NO,AGREED,
+sql:productos:78,name/title,78,84,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:78,categories,78|84,,"NO (union deliberada)","union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:78,brand,brand:1,78|84,NO,ASSIGNED,
+sql:productos:78,description,"(ninguno, todas vacias o en conflicto)",78|84,YES,CONFLICT,"No sintetizado; ver candidatos en el propio decision.field_provenance del plan"
+sql:productos:96,name/title,96,128,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:96,categories,96|128,,"NO (union deliberada)","union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:96,brand,brand:1,96|128,NO,ASSIGNED,
+sql:productos:96,description,96,128,NO,AGREED,
+sql:productos:17,name/title,17,2,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:17,categories,2|17,,NO,"union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:17,brand,brand:3,2|17,NO,ASSIGNED,
+sql:productos:17,description,2,17,NO,AGREED,
+sql:productos:5,name/title,5,88,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:5,categories,5|88,,NO,"union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:5,brand,brand:1,5|88,NO,ASSIGNED,
+sql:productos:5,description,5,88,NO,AGREED,
+sql:productos:62,name/title,62,8,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:62,categories,8|62,,NO,"union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:62,brand,brand:1,8|62,NO,ASSIGNED,
+sql:productos:62,description,8,62,NO,AGREED,
+sql:productos:101,name/title,101,36,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:101,categories,36|101,,NO,"union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:101,brand,brand:7,36|101,NO,ASSIGNED,
+sql:productos:101,description,36,101,NO,AGREED,
+sql:productos:39,name/title,39,104,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:39,categories,39|104,,NO,"union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:39,brand,brand:8,39|104,NO,ASSIGNED,
+sql:productos:39,description,39,104,NO,AGREED,
+sql:productos:105,name/title,105,40,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:105,categories,40|105,,NO,"union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:105,brand,brand:9,40|105,NO,ASSIGNED,
+sql:productos:105,description,"(ninguno, todas vacias o en conflicto)",40|105,YES,CONFLICT,"No sintetizado; ver candidatos en el propio decision.field_provenance del plan"
+sql:productos:51,name/title,51,143,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:51,categories,51|143,,NO,"union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:51,brand,brand:10,51|143,NO,ASSIGNED,
+sql:productos:51,description,51,143,NO,AGREED,
+sql:productos:6,name/title,6,16|20|107,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:6,categories,6|16|20|107,,NO,"union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:6,brand,(ninguna),6|16|20|107,"YES (Q09 pendiente)",BRAND_UNRESOLVED_Q09,BRAND_UNRESOLVED_Q09
+sql:productos:6,description,6,16|20|107,NO,AGREED,
+sql:productos:43,name/title,43,81,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:43,categories,43|81,,NO,"union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:43,brand,(ninguna),43|81,"YES (Q09 pendiente)",BRAND_UNRESOLVED_Q09,BRAND_UNRESOLVED_Q09
+sql:productos:43,description,43,81,NO,AGREED,
+sql:productos:14,name/title,14,57,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:14,categories,14|57,,NO,"union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:14,brand,(ninguna),14|57,"YES (Q09 pendiente)",BRAND_UNRESOLVED_Q09,BRAND_UNRESOLVED_Q09
+sql:productos:14,description,"(ninguno, todas vacias o en conflicto)",14|57,YES,CONFLICT,"No sintetizado; ver candidatos en el propio decision.field_provenance del plan"
+sql:productos:24,name/title,24,139,NO,"title_source_id documentado en editorial-decisions.json (o ganador natural si no hay preferencia)",
+sql:productos:24,categories,24|139,,NO,"union de category_id de TODOS los miembros","Q03-GLOBAL: union real; otros: union de un solo valor (sin divergencia)"
+sql:productos:24,brand,(ninguna),24|139,"YES (Q09 pendiente)",BRAND_UNRESOLVED_Q09,BRAND_UNRESOLVED_Q09
+sql:productos:24,description,24,139,NO,AGREED,

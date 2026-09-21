@@ -1,7 +1,7 @@
 {
     "scope": "EDITORIAL_DECISIONS_APPROVED",
-    "approved_at": "2026-09-22",
-    "approved_by": "human decision, PS Industrial session (chat approval on feature/review-resolution): Q02 = Opcion B, Q06 = Opcion A (2026-09-18); Q01 = Opcion A, Q04 = Opcion B (2026-09-20), per docs/implementation/review-resolution/decision-questionnaire.md; Q07 = Opcion A, Q10 (26/33/25), Q11 (4 casos), Q13 (2026-09-22)",
+    "approved_at": "2026-09-21",
+    "approved_by": "human decision, PS Industrial session (chat approval on feature/review-resolution): Q02 = Opcion B, Q06 = Opcion A (2026-09-18); Q01 = Opcion A, Q04 = Opcion B (2026-09-20), per docs/implementation/review-resolution/decision-questionnaire.md; Q07 = Opcion A, Q10 (26/33/25), Q11 (4 casos), Q13 (2026-09-22); Q03-GLOBAL = Opcion A, Q03-A = Opcion A, Q03-B = Opcion A, Q03-C = Opcion A, Q03-D = Opcion A (conflicto de descripcion preservado), Q03-E = Opcion A solo para ids 24+139 (id=3 KEEP_REVIEW) (2026-09-21), per docs/implementation/review-resolution/q03-decision-questionnaire.md",
     "notes": "Explicit, closed-list human decisions only. This file declares WHICH groups/records are approved and WHY; it never hardcodes a computed winner, a media union or an order — those are derived deterministically at build time by migration/EditorialDecisions.php from fields that already exist in docs/migration/*.csv and the legacy SQL catalog (fecha), so this file cannot drift from its source data and never duplicates it. If a legacy_product_id listed here no longer exists in product-master.csv, or a canonical_candidate_group's membership on disk no longer matches the ids listed here exactly, EditorialDecisions.php refuses that one group/entry (KEEP_REVIEW) rather than improvise. Q01 and Q04 are POLICY-LEVEL switches, not curated id lists: which exact pages/records they apply to is itself derived from existing evidence (content-master.csv classification, category-master.csv/brand-master.csv legacy_page links, static-product-supplement.csv) every run, never hardcoded here.",
     "q02_identity_merge": {
         "decision_id": "Q02",
@@ -317,5 +317,263 @@
         "question": "docs/implementation/review-resolution/decision-questionnaire.md#q13",
         "rule": "Cualquier ruta legacy que una decision ya aprobada (manual, del ensayo) declare como binary_alias de otra entidad ganadora permanece, por si misma, como un SKIP explicito -- nunca un segundo attachment del mismo contenido. La identidad binaria (SHA-256) ya la verifica Planner::build() al construir la entidad ganadora (BINARY_ALIAS_NOT_IDENTICAL si no coincidiera); esta regla no reverifica ese hash ni inventa una lista propia: lee subset-decisions.json (Planner::decisions()), la misma fuente ya aprobada.",
         "reason_code": "DUPLICATE_OF_ALREADY_MIGRATED_ASSET"
+    },
+    "q03_group_consolidation": {
+        "decision_id": "Q03",
+        "question": "docs/implementation/review-resolution/q03-decision-questionnaire.md",
+        "notes": "Reconstruido desde el plan vivo (Planner::build('full')), no desde conteos historicos -- ver docs/implementation/review-resolution/q03-analysis/. El ganador, la union de categorias/medios y el estado de conflicto del campo descripcion NUNCA se guardan aqui: se re-derivan en cada build desde product-master.csv y el catalogo SQL (fecha, descripcion), exactamente igual que Q02. Lo unico que este archivo declara son las decisiones que SI son juicio editorial y no se pueden derivar mecanicamente: que grupos estan aprobados, la preferencia de titulo documentado de los 7 grupos Q03-A, que Q03-B/C/D quedan sin marca, y el reparto exacto ids-a-consolidar/id-a-KEEP_REVIEW de Q03-E.",
+        "global_multi_category": {
+            "id": "Q03-GLOBAL",
+            "option": "A",
+            "rule": "Para cada uno de los 16 grupos listados (misma entidad, misma marca, PDFs e imagenes compatibles, unica diferencia relevante = categoria, verificado individualmente en docs/implementation/review-resolution/q03-analysis/02-category-only-groups.md): un unico psi_producto, con la UNION de todas las categorias legacy demostradas entre sus miembros (nunca la categoria escalar de un solo ganador). No se determina primary category / breadcrumb / SEO primary taxonomy -- queda explicitamente pendiente para la futura fase SEO (ver q03-analysis/03-multi-category-policy.md).",
+            "editorial_approval": "Q03-GLOBAL-OPTION-A-2026-09-21: un producto WordPress, varias categorias psi_categoria, cuando el legacy demuestra presencia real en varias secciones.",
+            "groups": [
+                {
+                    "group_key": "accesspro-fs1000speed.php",
+                    "legacy_product_ids": [
+                        "1",
+                        "109",
+                        "110",
+                        "114"
+                    ]
+                },
+                {
+                    "group_key": "cortina-serie-600.php",
+                    "legacy_product_ids": [
+                        "10",
+                        "93",
+                        "127"
+                    ]
+                },
+                {
+                    "group_key": "puertas-blindadas.php",
+                    "legacy_product_ids": [
+                        "28",
+                        "118",
+                        "129"
+                    ]
+                },
+                {
+                    "group_key": "puertas-contra-incendio.php",
+                    "legacy_product_ids": [
+                        "29",
+                        "116",
+                        "130"
+                    ]
+                },
+                {
+                    "group_key": "puerta-estandar.php",
+                    "legacy_product_ids": [
+                        "31",
+                        "119",
+                        "131"
+                    ]
+                },
+                {
+                    "group_key": "puerta-estandar-reforzada.php",
+                    "legacy_product_ids": [
+                        "32",
+                        "120",
+                        "132"
+                    ]
+                },
+                {
+                    "group_key": "puerta-holandesa.php",
+                    "legacy_product_ids": [
+                        "33",
+                        "122",
+                        "133"
+                    ]
+                },
+                {
+                    "group_key": "puerta-y-fijos-louver.php",
+                    "legacy_product_ids": [
+                        "35",
+                        "121",
+                        "134"
+                    ]
+                },
+                {
+                    "group_key": "barreras-estacionamiento-moovi50rm.php",
+                    "legacy_product_ids": [
+                        "44",
+                        "123",
+                        "125",
+                        "135"
+                    ]
+                },
+                {
+                    "group_key": "p45-7-piston-hidraulico-para-puerta-abatible.php",
+                    "legacy_product_ids": [
+                        "47",
+                        "80",
+                        "113"
+                    ]
+                },
+                {
+                    "group_key": "lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php",
+                    "legacy_product_ids": [
+                        "48",
+                        "79",
+                        "112"
+                    ]
+                },
+                {
+                    "group_key": "icaro-smart.php",
+                    "legacy_product_ids": [
+                        "49",
+                        "76",
+                        "124",
+                        "126"
+                    ]
+                },
+                {
+                    "group_key": "cortina-plana.php",
+                    "legacy_product_ids": [
+                        "54",
+                        "89",
+                        "136"
+                    ]
+                },
+                {
+                    "group_key": "cortina-europea.php",
+                    "legacy_product_ids": [
+                        "55",
+                        "90",
+                        "137"
+                    ]
+                },
+                {
+                    "group_key": "operador-para-perfilados-comerciales-sel.php",
+                    "legacy_product_ids": [
+                        "78",
+                        "84"
+                    ]
+                },
+                {
+                    "group_key": "cortinas-ventiladas-685.php",
+                    "legacy_product_ids": [
+                        "96",
+                        "128"
+                    ]
+                }
+            ]
+        },
+        "name_consolidation": {
+            "id": "Q03-A",
+            "option": "A",
+            "rule": "Para cada uno de los 7 grupos listados (sin ninguna categoria en disputa; unica diferencia = redaccion del nombre, cosmetica o casi): un unico psi_producto. El titulo canonico es el titulo YA DOCUMENTADO (nunca reescrito ni sintetizado) del registro mas completo/correcto; donde ningun registro es preferible el ganador natural (mas antiguo con descripcion no vacia) decide. Nunca se introduce un fabricante no confirmado en el titulo ni se agregan modelos no respaldados por un registro legacy ya existente.",
+            "editorial_approval": "Q03-A-OPTION-A-2026-09-21: consolidar los 7 grupos de variante de nombre; titulo = el mas completo/correcto ya documentado, sin reescritura libre.",
+            "groups": [
+                {
+                    "group_key": "energy-series-with-intellicore-37171-3-4.php",
+                    "legacy_product_ids": [
+                        "2",
+                        "17"
+                    ],
+                    "canonical_title_source_id": "17",
+                    "notes": "Titulo mas completo ya documentado (anade 3720/3724/3722); descripcion SQL identica en ambos miembros, ningun contenido se pierde al preferirlo."
+                },
+                {
+                    "group_key": "cortina-en-aluminio-serie-511-521.php",
+                    "legacy_product_ids": [
+                        "5",
+                        "88"
+                    ],
+                    "notes": "Diferencia puramente de espaciado (\"511/521\" vs \"511 / 521\"); sin preferencia editorial, se usa el ganador natural (mas antiguo, descripcion identica)."
+                },
+                {
+                    "group_key": "puerta-seccional-de-acero-thermacore-serie-592.php",
+                    "legacy_product_ids": [
+                        "8",
+                        "62"
+                    ],
+                    "canonical_title_source_id": "62",
+                    "notes": "Titulo mas completo ya documentado (prefijo descriptivo), coincide con el titulo de la pagina dependiente; descripcion SQL identica."
+                },
+                {
+                    "group_key": "fast-seal-high-performance-door.php",
+                    "legacy_product_ids": [
+                        "36",
+                        "101"
+                    ],
+                    "canonical_title_source_id": "101",
+                    "notes": "Titulo mas completo ya documentado, coincide con el titulo de la pagina dependiente; descripcion SQL identica."
+                },
+                {
+                    "group_key": "rapida-apilable.php",
+                    "legacy_product_ids": [
+                        "39",
+                        "104"
+                    ],
+                    "notes": "El ganador natural (mas antiguo, descripcion identica) ya es el titulo mas completo/correcto documentado; sin override necesario."
+                },
+                {
+                    "group_key": "rolli-zip.php",
+                    "legacy_product_ids": [
+                        "40",
+                        "105"
+                    ],
+                    "canonical_title_source_id": "105",
+                    "notes": "Correccion de errata ya documentada en el propio registro legacy (\"autorreparable\" vs \"autorreparabale\"); no se reescribe libremente, se usa el registro que ya trae la ortografia correcta. La descripcion SQL difiere levemente entre ambos miembros (ver q03-field-provenance.csv); no se sintetiza."
+                },
+                {
+                    "group_key": "labio-de-elevacion-mecanico-dockman.php",
+                    "legacy_product_ids": [
+                        "51",
+                        "143"
+                    ],
+                    "canonical_title_source_id": "51",
+                    "notes": "Q03-A7: Dockman no se introduce en el TITULO aunque si esta confirmado como marca (brand_id=10, brand_confidence=CONFIRMED en el registro ganador) -- se asigna via taxonomia, nunca repetido en el texto libre del nombre, igual que el resto de los grupos de este lote. Titulo neutral = \"Labio de elevacion mecanico\"."
+                }
+            ]
+        },
+        "brand_unresolved_groups": [
+            {
+                "id": "Q03-B",
+                "group_key": "coleccion-modern-steel.php",
+                "legacy_product_ids": [
+                    "6",
+                    "16",
+                    "20",
+                    "107"
+                ],
+                "brand_status": "BRAND_UNRESOLVED_Q09",
+                "notes": "Identidad confirmada (nombre/descripcion/imagenes/PDF identicos en los 4 registros); marca en disputa de tres vias (Overhead Door/Wayne Dalton/Clopay, las tres a confianza WEAK_INFERENCE) -- documentado en manual-decisions-required.md antes de esta fase. No se elige ninguna; Q09 sigue pendiente."
+            },
+            {
+                "id": "Q03-C",
+                "group_key": "lift-master-mod-h.php",
+                "legacy_product_ids": [
+                    "43",
+                    "81"
+                ],
+                "brand_status": "BRAND_UNRESOLVED_Q09",
+                "notes": "Identidad confirmada (nombre/descripcion/imagenes/PDF identicos); brand_id apunta a LiftMaster (WEAK_INFERENCE) pero el titulo de la pagina dependiente trae \"Blue Giant\" -- documentado en manual-decisions-required.md antes de esta fase. No se asigna ninguna marca; Q09 sigue pendiente."
+            },
+            {
+                "id": "Q03-D",
+                "group_key": "puertas-seccionales-de-acero-aisladas-thermospan-modelo-150.php",
+                "legacy_product_ids": [
+                    "14",
+                    "57"
+                ],
+                "brand_status": "BRAND_UNRESOLVED_Q09",
+                "notes": "Identidad probable (nombre casi identico, imagenes/PDF compatibles); texto libre mezcla referencias a Wayne Dalton y Clopay -- documentado en manual-decisions-required.md antes de esta fase (\"14/57 texto Wayne y Clopay\"). No se busco una fuente publica canonica inequivoca adicional para la descripcion en esta fase (fuera de alcance); el campo descripcion queda marcado CONTENT_FIELD_REVIEW en vez de sintetizarse. No se asigna marca; Q09 sigue pendiente."
+            }
+        ],
+        "kelley_partial": {
+            "id": "Q03-E",
+            "group_key": "rampas-de-anden-hidraulicas-kelley.php",
+            "consolidate_ids": [
+                "24",
+                "139"
+            ],
+            "keep_review_ids": [
+                "3"
+            ],
+            "canonical_title_source_id": "24",
+            "notes": "id=139 comparte descripcion/imagenes/PDF con id=24 (identidad Kelley confirmada); su titulo incluye literalmente el nombre de otro producto ya migrado por separado (Q02, rampa-niveladora-mecanica-blue-giant.php, ids 23/140) -- tratado como error de copiar/pegar en el campo de nombre, nunca como una segunda identidad. Titulo canonico = el de id=24, tal cual, sin transformacion heuristica del texto de id=139. id=3 (\"NIVELADOR DE ANDEN HIDRAULICO SERIE HP\") tiene descripcion propia y categoria (7, Residenciales) fuera de la rama de sus supuestos hermanos; Policy::CATEGORY_CONFLICT_PRODUCTS=[3] ya lo excluye de resolucion automatica -- esta fase no lo desactiva, lo confirma. Marca no asignada: id=139 esta ademas en Policy::BRAND_CONFLICT_PRODUCTS; aunque id=24 por si solo tendria evidencia fuerte de marca Kelley, se deja sin resolver por prudencia, fuera del alcance de Q09."
+        }
     }
 }
