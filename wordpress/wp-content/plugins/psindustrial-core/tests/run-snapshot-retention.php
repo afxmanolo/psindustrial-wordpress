@@ -88,16 +88,86 @@ use PSIndustrial\Core\Migration\Storage;
   $assert( ! in_array( basename( $activePath ), $r['deleted'], true ), 'Run activo nunca aparece en la lista de eliminados' );
   $assert( 30 === count( glob( $dir . '/run-0*.json' ) ), 'Los 40 candidatos normales se recortan a 30 exactamente igual, sin que el run activo consuma uno de esos 30 cupos' );
 
-  // A COMPLETE run (finished, or a plan that was built but never started) is NOT protected --
-  // only the specific in-progress signal (status=RUNNING) is. This is the control proving the
-  // exclusion is genuinely status-based, not merely "any file with valid-looking JSON".
+  // A COMPLETE run with NO results at all (finished with nothing recorded, or a plan that
+  // was built but never started -- VALIDATED) is NOT protected -- only specific signals
+  // (RUNNING, an unresolved FAILED/CONFLICT result, or an explicit open marker, all tested
+  // below) are. This is the control proving the exclusion is genuinely signal-based, not
+  // merely "any file with valid-looking JSON" or "any COMPLETE status at all".
   $dir = $mk( array() );
   $completePath = $dir . '/run-22222222-kkkk-kkkk-kkkk-kkkkkkkkkkkk.json';
   file_put_contents( $completePath, wp_json_encode( array( 'status' => 'COMPLETE', 'cursor' => 999 ) ) );
   touch( $completePath, time() - 999999 );
   for ( $i = 0; $i < 30; ++$i ) { $p = $dir . '/run-' . sprintf( '%08d', $i ) . '-llll-llll-llll-llllllllllll.json'; file_put_contents( $p, wp_json_encode( array( 'status' => 'VALIDATED' ) ) ); touch( $p, time() - ( 1000 - $i ) ); }
   $r = Storage::retain_recent_runs( 30, $dir );
-  $assert( in_array( basename( $completePath ), $r['deleted'], true ), 'Un run COMPLETE (o cualquier estado que no sea RUNNING), si es el mas antiguo, SI se elimina normalmente -- solo RUNNING esta protegido' );
+  $assert( in_array( basename( $completePath ), $r['deleted'], true ), 'Un run COMPLETE sin resultados pendientes, si es el mas antiguo, SI se elimina normalmente' );
+
+  // ============================================================== COMPLETE + fallo retryable sin resolver -> protegido
+  // The 2026-09-21 pruning incident in one line: this exact shape (COMPLETE, real FAILED
+  // results still needing a retry) is precisely what retain_recent_runs() failed to protect
+  // before this fix. See docs/implementation/full-local-import/17-run-snapshot-incident.md.
+  $dir = $mk( array() );
+  $failedPath = $dir . '/run-55555555-pppp-pppp-pppp-pppppppppppp.json';
+  file_put_contents( $failedPath, wp_json_encode( array( 'status' => 'COMPLETE', 'results' => array( array( 'entity_key' => 'asset:x.pdf', 'status' => 'FAILED' ), array( 'entity_key' => 'sql:productos:1', 'status' => 'APPLIED' ) ) ) ) );
+  touch( $failedPath, time() - 999999 );
+  for ( $i = 0; $i < 40; ++$i ) { $p = $dir . '/run-' . sprintf( '%08d', $i ) . '-qqqq-qqqq-qqqq-qqqqqqqqqqqq.json'; file_put_contents( $p, wp_json_encode( array( 'status' => 'VALIDATED' ) ) ); touch( $p, time() - ( 1000 - $i ) ); }
+  $r = Storage::retain_recent_runs( 30, $dir );
+  $assert( is_file( $failedPath ), 'COMPLETE con un FAILED sin resolver sobrevive pese a ser el archivo mas antiguo' );
+  $assert( ! in_array( basename( $failedPath ), $r['deleted'], true ), 'COMPLETE con FAILED nunca aparece en la lista de eliminados' );
+
+  // ============================================================== COMPLETE + conflicto editorial sin resolver -> protegido
+  $dir = $mk( array() );
+  $conflictPath = $dir . '/run-66666666-rrrr-rrrr-rrrr-rrrrrrrrrrrr.json';
+  file_put_contents( $conflictPath, wp_json_encode( array( 'status' => 'COMPLETE', 'results' => array( array( 'entity_key' => 'category:37', 'status' => 'CONFLICT' ) ) ) ) );
+  touch( $conflictPath, time() - 999999 );
+  for ( $i = 0; $i < 35; ++$i ) { $p = $dir . '/run-' . sprintf( '%08d', $i ) . '-ssss-ssss-ssss-ssssssssssss.json'; file_put_contents( $p, wp_json_encode( array( 'status' => 'VALIDATED' ) ) ); touch( $p, time() - ( 1000 - $i ) ); }
+  $r = Storage::retain_recent_runs( 30, $dir );
+  $assert( ! in_array( basename( $conflictPath ), $r['deleted'], true ), 'COMPLETE con CONFLICT sin resolver protegido segun la misma politica que FAILED' );
+
+  // ============================================================== CLOSED/ARCHIVED -> vuelve a ser podable
+  // The ONLY way out of protection: an explicit closure marker, never merely the passage of
+  // time or a later rebuild no longer surfacing the same failures.
+  $dir = $mk( array() );
+  $closedPath = $dir . '/run-77777777-tttt-tttt-tttt-tttttttttttt.json';
+  file_put_contents( $closedPath, wp_json_encode( array( 'status' => 'COMPLETE', 'closed_at' => gmdate( 'c' ), 'results' => array( array( 'entity_key' => 'asset:x.pdf', 'status' => 'FAILED' ) ) ) ) );
+  touch( $closedPath, time() - 999999 );
+  for ( $i = 0; $i < 30; ++$i ) { $p = $dir . '/run-' . sprintf( '%08d', $i ) . '-uuuu-uuuu-uuuu-uuuuuuuuuuuu.json'; file_put_contents( $p, wp_json_encode( array( 'status' => 'VALIDATED' ) ) ); touch( $p, time() - ( 1000 - $i ) ); }
+  $r = Storage::retain_recent_runs( 30, $dir );
+  $assert( in_array( basename( $closedPath ), $r['deleted'], true ), 'closed_at explicito devuelve el run a retencion normal AUNQUE conserve resultados FAILED sin resolver' );
+
+  // ============================================================== recovery_open explicito -> protegido aunque no tenga FAILED/CONFLICT
+  $dir = $mk( array() );
+  $recoveryPath = $dir . '/run-88888888-vvvv-vvvv-vvvv-vvvvvvvvvvvv.json';
+  file_put_contents( $recoveryPath, wp_json_encode( array( 'status' => 'VALIDATED', 'scope' => 'recovery', 'recovery_open' => true ) ) );
+  touch( $recoveryPath, time() - 999999 );
+  for ( $i = 0; $i < 30; ++$i ) { $p = $dir . '/run-' . sprintf( '%08d', $i ) . '-wwww-wwww-wwww-wwwwwwwwwwww.json'; file_put_contents( $p, wp_json_encode( array( 'status' => 'VALIDATED' ) ) ); touch( $p, time() - ( 1000 - $i ) ); }
+  $r = Storage::retain_recent_runs( 30, $dir );
+  $assert( ! in_array( basename( $recoveryPath ), $r['deleted'], true ), 'recovery_open=true protegido explicitamente, independientemente de status/results' );
+
+  // ============================================================== viejo run protegido, fuera del top 30 por edad -> preservado
+  $dir = $mk( array() );
+  $oldProtected = $dir . '/run-00000001-xxxx-xxxx-xxxx-xxxxxxxxxxxx.json';
+  file_put_contents( $oldProtected, wp_json_encode( array( 'status' => 'COMPLETE', 'results' => array( array( 'entity_key' => 'a', 'status' => 'FAILED' ) ) ) ) );
+  touch( $oldProtected, time() - 99999999 ); // far, far older than every other candidate.
+  for ( $i = 0; $i < 30; ++$i ) { $p = $dir . '/run-' . sprintf( '%08d', $i + 1 ) . '-yyyy-yyyy-yyyy-yyyyyyyyyyyy.json'; file_put_contents( $p, wp_json_encode( array( 'status' => 'VALIDATED' ) ) ); touch( $p, time() - ( 1000 - $i ) ); }
+  $r = Storage::retain_recent_runs( 30, $dir );
+  $assert( is_file( $oldProtected ), 'Run protegido, mucho mas viejo que los 30 normales, sobrevive sin ocupar uno de los 30 cupos' );
+  $assert( ! in_array( basename( $oldProtected ), $r['deleted'], true ), 'Run protegido viejo nunca en la lista de eliminados' );
+  $assert( 30 === count( glob( $dir . '/run-*yyyy-yyyy-yyyy-yyyyyyyyyyyy.json' ) ), 'Los 30 normales sobreviven intactos junto al protegido viejo (el protegido no consume uno de sus cupos)' );
+
+  // ============================================================== 100 runs + varios protegidos -> conserva 30 normales + todos los protegidos
+  $dir = $mk( array() );
+  $protectedNames = array();
+  for ( $i = 0; $i < 5; ++$i ) {
+   $p = $dir . '/run-protect' . $i . '-zzzz-zzzz-zzzz-zzzzzzzzzzzz.json';
+   file_put_contents( $p, wp_json_encode( array( 'status' => 'COMPLETE', 'results' => array( array( 'entity_key' => 'a', 'status' => 'FAILED' ) ) ) ) );
+   touch( $p, time() - 999999 - $i ); // all old, would normally be pruned first.
+   $protectedNames[] = basename( $p );
+  }
+  for ( $i = 0; $i < 100; ++$i ) { $p = $dir . '/run-' . sprintf( '%08d', $i ) . '-aaab-aaab-aaab-aaabaaabaaab.json'; file_put_contents( $p, wp_json_encode( array( 'status' => 'VALIDATED' ) ) ); touch( $p, time() - ( 1000 - $i ) ); }
+  $r = Storage::retain_recent_runs( 30, $dir );
+  foreach ( $protectedNames as $pn ) { $assert( is_file( $dir . '/' . $pn ), "Protegido superviviente entre 100 normales: $pn" ); $assert( ! in_array( $pn, $r['deleted'], true ), "Protegido nunca en la lista de eliminados: $pn" ); }
+  $assert( 30 === count( glob( $dir . '/run-000*.json' ) ), '100 runs normales + 5 protegidos -> exactamente 30 normales sobreviven (los protegidos no consumen cupos)' );
+  $assert( 70 === count( $r['deleted'] ), '100 normales + 5 protegidos -> se eliminan exactamente 70 normales, ninguno protegido' );
 
   // A run-*.json whose content is not valid JSON (or has no 'status' at all) must default to
   // NORMAL eligibility, never be treated as protected by accident.

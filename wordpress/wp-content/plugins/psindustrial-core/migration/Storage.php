@@ -82,14 +82,9 @@ final class Storage {
    // Must resolve to a plain file directly inside $base -- rejects a same-named directory
    // and (defense in depth) anything a crafted name might have tried to escape to.
    if ( ! $real || ! is_file( $real ) || dirname( wp_normalize_path( $real ) ) !== $baseReal ) { continue; }
-   // A run actively mid-execution is never a deletion candidate at all, regardless of age --
-   // it is excluded from the pool entirely, not merely sorted to the front: a long-paused,
-   // resumable full-local run must survive any number of unrelated Planner::build() calls in
-   // the meantime (each one is a retention trigger). Runner::batch()/batch_full_local_
-   // resolved_only() persist status='RUNNING' on every write while cursor < count(entries),
-   // and only ever set 'COMPLETE' once truly done -- a plan that was merely built and never
-   // started is 'VALIDATED', still eligible for normal age-based retention like any other.
-   if ( self::run_in_progress( $real ) ) { continue; }
+   // A protected run is never a deletion candidate at all, regardless of age -- excluded
+   // from the pool entirely, not merely sorted to the front. See run_protected() below.
+   if ( self::run_protected( $real ) ) { continue; }
    $candidates[] = array( 'name' => $name, 'path' => $real, 'mtime' => filemtime( $real ) ?: 0 );
   }
   // Newest first: modification time descending, filename descending as a deterministic
@@ -103,15 +98,41 @@ final class Storage {
   if ( $failed ) { error_log( 'psindustrial-core: retain_recent_runs could not delete ' . count( $failed ) . ' old run snapshot(s): ' . implode( ', ', $failed ) ); }
   return array( 'kept' => count( $candidates ) - count( $deleted ), 'deleted' => $deleted, 'failed' => $failed );
  }
- /** True only for a plan snapshot whose OWN persisted status is 'RUNNING' -- never throws,
-  *  never treats a malformed/foreign/test-fixture file as protected (fails toward normal
-  *  retention eligibility, the same conservative default the rest of this method already
-  *  uses for anything it cannot positively identify). */
- private static function run_in_progress( string $path ): bool {
+ /**
+  * A run snapshot is protected from pruning whenever discarding it would throw away
+  * evidence still operationally needed -- not only while actively executing. Generalized
+  * after the 2026-09-21 pruning incident (see
+  * docs/implementation/full-local-import/17-run-snapshot-incident.md): a COMPLETE run can
+  * still need its snapshot while it carries unresolved FAILED/CONFLICT results a future
+  * retry/recovery might depend on, or while explicitly marked open (a recovery plan still
+  * tracking its parent). Checked in this order:
+  *
+  *  1. `closed_at` set -> NOT protected, unconditionally. An explicit closure always wins
+  *     over every other signal below -- this is the ONLY way a run stops being protected;
+  *     age/mtime alone never overrides protection, and nothing here re-derives "resolved"
+  *     from current state on its own.
+  *  2. `status === 'RUNNING'` -> protected (the original, narrower check this generalizes).
+  *  3. `recovery_open` truthy -> protected (a recovery plan mid-flight, or a parent run a
+  *     recovery still references).
+  *  4. `status === 'COMPLETE'` AND any `results[].status` is `FAILED` or `CONFLICT` ->
+  *     protected (unresolved technical failures or conflicts a retry/recovery might need).
+  *
+  *  Never throws, never treats a malformed/foreign/test-fixture file as protected -- fails
+  *  toward normal retention eligibility, the same conservative default this method already
+  *  used for anything it cannot positively identify.
+  */
+ private static function run_protected( string $path ): bool {
   $raw = @file_get_contents( $path );
   if ( false === $raw ) { return false; }
   $data = json_decode( $raw, true );
-  return is_array( $data ) && 'RUNNING' === ( $data['status'] ?? null );
+  if ( ! is_array( $data ) ) { return false; }
+  if ( ! empty( $data['closed_at'] ) ) { return false; }
+  if ( 'RUNNING' === ( $data['status'] ?? null ) ) { return true; }
+  if ( ! empty( $data['recovery_open'] ) ) { return true; }
+  if ( 'COMPLETE' === ( $data['status'] ?? null ) ) {
+   foreach ( $data['results'] ?? array() as $r ) { if ( in_array( $r['status'] ?? null, array( 'FAILED','CONFLICT' ), true ) ) { return true; } }
+  }
+  return false;
  }
  /**
   * Full logical backup of every plugin/WordPress table (schema + rows), private JSON, never

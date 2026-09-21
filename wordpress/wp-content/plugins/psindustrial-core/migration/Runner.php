@@ -8,6 +8,12 @@ final class Runner {
   *  batch_full_local_resolved_only() for a 'subset' plan. Neither phrase authorizes the
   *  other's scope; see migration/Runner.php's own checks below, not this string alone. */
  private const FULL_CONFIRMATION = 'IMPORTAR FULL LOCAL RESUELTO';
+ /** Distinct from both other phrases by construction -- retry_failed_resolved_only() never
+  *  accepts either of them, and neither of them is ever accepted by retry_failed_resolved_only()'s
+  *  own check below. A retry is a materially different, smaller-blast-radius operation
+  *  (only the pre-identified retry set, never a full cursor walk) and gets its own explicit
+  *  human confirmation rather than reusing a phrase approved for a different scope. */
+ private const RETRY_CONFIRMATION = 'REINTENTAR FALLOS RESUELTOS';
  /** Defensive sanity ceiling only -- not a tuning knob. The real limit on any single HTTP
   *  request is $limit/time-budget below; this just refuses to even attempt a plan whose
   *  mutable-entry count is wildly outside anything this project's actual catalogue could
@@ -242,9 +248,8 @@ final class Runner {
   if ( in_array( $e['action'], array( 'SKIP','REVIEW' ), true ) ) { $result['status'] = 'SKIP' === $e['action'] ? 'SKIPPED' : 'BLOCKED'; $result['result'] = $e['action']; return $result; }
   if ( isset( $e['source_file_hash'] ) && ! hash_equals( $e['source_file_hash'], hash_file( 'sha256', Sources::safe( Storage::project() . '/legacy/public', $e['legacy_file'] ) ) ) ) { throw new \RuntimeException( 'PHP_SOURCE_CHANGED_REPLAN' ); }
   if ( 'media' === $e['source_type'] ) {
-   foreach ( array_merge( array( $e['legacy_file'] ), $e['binary_aliases'] ?? array() ) as $path ) {
-    if ( ! hash_equals( $e['data']['sha256'], hash_file( 'sha256', Sources::safe( Storage::project() . '/legacy/public', $path ) ) ) ) { throw new \RuntimeException( 'MEDIA_CHANGED_REPLAN' ); }
-   }
+   $integrity = self::media_integrity( $e );
+   if ( ! $integrity['original_source_integrity'] || ! $integrity['staged_artifact_integrity'] ) { throw new \RuntimeException( 'MEDIA_CHANGED_REPLAN' ); }
   }
   foreach ( $e['dependencies'] as $dep ) {
    $dependency = array_values( array_filter( $plan['entries'], static fn( $v ) => $v['entity_key'] === $dep ) )[0] ?? null;
@@ -347,6 +352,528 @@ final class Runner {
    Storage::write( 'rollback-' . $run . '.json', $results ); return $results;
   } );
  }
+
+ /**
+  * Root causes recognised as "fixed" and therefore eligible for retry. Deliberately a
+  * closed allowlist, never inferred from the FAILED message string alone (safe_error() may
+  * have already masked it) -- retry_root_cause() below always re-derives the real cause
+  * from the entity's own dependency graph and the two fixed checks, exactly like the
+  * post-import classification that produced this same set of names.
+  */
+ private const RETRYABLE_ROOT_CAUSES = array( 'DIRECT_PDF_A', 'DIRECT_PDF_B', 'CASCADE_FROM_PDF_A', 'CASCADE_FROM_PDF_B' );
+
+ /**
+  * Read-only. Re-derives WHY a FAILED entity failed -- never by pattern-matching the
+  * stored, possibly-safe_error()-masked notes string.
+  *
+  * For a direct media entry: re-runs media_integrity() (any genuine CURRENT drift, on
+  * either half, is a fresh problem -- 'OTHER', never assumed retryable). Once both halves
+  * pass -- which both fixes now guarantee for anything either bug used to block -- WHICH
+  * bug (if either) originally blocked it is read from pdf_approval_type, a STABLE, plan-time
+  * fact set once by Planner::build() ('sanitized'=Group A, 'exception'=Group B, absent for
+  * an ordinary asset never gated by either approval path). It is deliberately never
+  * re-derived from media_is_valid()/file_valid() here: after the fix, an ordinary,
+  * never-blocked asset (a ordinary product photo, say) passes those exactly the same way an
+  * approved Group B exception does, so re-deriving from them would misclassify every
+  * ordinary dependency as a fixed bug.
+  *
+  * Everything else is classified by walking its own declared `dependencies` and asking the
+  * same question recursively one level down (a cascade's cause is its dependency's cause).
+  * Returns one of RETRYABLE_ROOT_CAUSES, 'LEGITIMATE_CATEGORY_CONFLICT',
+  * 'LEGITIMATE_SLUG_COLLISION', 'OK' (this entity/dependency was never a problem at all),
+  * or 'OTHER' (never silently defaults an unrecognised shape to retryable).
+  */
+ public static function retry_root_cause( array $entry, array $plan ): string {
+  if ( 'media' === $entry['source_type'] ) {
+   try { $integrity = self::media_integrity( $entry ); } catch ( \Throwable $e ) { return 'OTHER'; }
+   if ( ! $integrity['original_source_integrity'] || ! $integrity['staged_artifact_integrity'] ) { return 'OTHER'; } // genuine current drift on either half -- not either historical bug, needs a fresh look.
+   $type = $entry['pdf_approval_type'] ?? null;
+   if ( 'sanitized' === $type ) { return 'DIRECT_PDF_A'; }
+   if ( 'exception' === $type ) { return 'DIRECT_PDF_B'; }
+   return 'OK'; // no PDF approval involved at all -- an ordinary asset, never blocked by either bug.
+  }
+  $hitsA = false; $hitsB = false; $hitsLegitimate = false; $hitsOther = false;
+  foreach ( $entry['dependencies'] ?? array() as $dep ) {
+   $depEntry = null;
+   foreach ( $plan['entries'] as $e ) { if ( $e['entity_key'] === $dep ) { $depEntry = $e; break; } }
+   if ( ! $depEntry ) { $hitsOther = true; continue; }
+   $depCause = in_array( $depEntry['source_type'], array( 'media' ), true ) ? self::retry_root_cause( $depEntry, $plan ) : ( 'CONFLICT' === Identity::prediction( $depEntry ) ? 'LEGITIMATE_SLUG_COLLISION' : 'OK' );
+   match ( true ) {
+    'DIRECT_PDF_A' === $depCause => $hitsA = true,
+    'DIRECT_PDF_B' === $depCause => $hitsB = true,
+    'LEGITIMATE_SLUG_COLLISION' === $depCause => $hitsLegitimate = true,
+    'OK' === $depCause => null,
+    default => $hitsOther = true,
+   };
+  }
+  if ( $hitsOther || ( $hitsLegitimate && ( $hitsA || $hitsB ) ) ) { return 'OTHER'; } // mixed/unknown cause -- never silently classified as safe.
+  if ( $hitsLegitimate ) { return 'LEGITIMATE_CATEGORY_CONFLICT'; }
+  if ( $hitsA ) { return 'CASCADE_FROM_PDF_A'; }
+  if ( $hitsB ) { return 'CASCADE_FROM_PDF_B'; }
+  return 'OK'; // none of this entity's own dependencies carry a recognised cause -- it was never actually blocked by anything this classifier understands.
+ }
+
+ /**
+  * Read-only. Whether ONE originally-FAILED entity is safe to retry right now, re-checking
+  * every condition fresh against current state -- never trusting the original run's stored
+  * result. `$freshPlan` must be a plan just built by Planner::build('full') (the caller
+  * builds it once and reuses it across every entity, never per-entity, for a consistent
+  * snapshot). Returns ['eligible'=>bool, 'reason'=>string, 'fresh_entry'=>array|null].
+  */
+ public static function retry_eligibility( array $originalEntry, array $originalResult, array $freshPlan ): array {
+  if ( 'FAILED' !== ( $originalResult['status'] ?? null ) ) { return array( 'eligible' => false, 'reason' => 'NOT_FAILED_IN_ORIGINAL_RUN', 'fresh_entry' => null ); }
+  $key = $originalEntry['entity_key'];
+  $freshEntry = null;
+  foreach ( $freshPlan['entries'] as $e ) { if ( $e['entity_key'] === $key ) { $freshEntry = $e; break; } }
+  if ( ! $freshEntry ) { return array( 'eligible' => false, 'reason' => 'MISSING_FROM_FRESH_PLAN', 'fresh_entry' => null ); }
+  if ( ! in_array( $freshEntry['action'], array( 'MIGRATE','MERGE','CREATE_FROM_STATIC' ), true ) ) { return array( 'eligible' => false, 'reason' => 'FRESH_ACTION_NOT_MUTABLE:' . $freshEntry['action'], 'fresh_entry' => $freshEntry ); }
+  if ( $freshEntry['source_hash'] !== $originalEntry['source_hash'] ) { return array( 'eligible' => false, 'reason' => 'SOURCE_CHANGED_SINCE_FIRST_RUN', 'fresh_entry' => $freshEntry ); }
+  if ( $freshEntry['decision_hash'] !== $originalEntry['decision_hash'] ) { return array( 'eligible' => false, 'reason' => 'DECISION_CHANGED_SINCE_FIRST_RUN', 'fresh_entry' => $freshEntry ); }
+  $cause = self::retry_root_cause( $freshEntry, $freshPlan );
+  if ( ! in_array( $cause, self::RETRYABLE_ROOT_CAUSES, true ) ) { return array( 'eligible' => false, 'reason' => 'ROOT_CAUSE_NOT_FIXED:' . $cause, 'fresh_entry' => $freshEntry ); }
+  $prediction = Identity::prediction( $freshEntry );
+  if ( 'UNCHANGED' === $prediction ) { return array( 'eligible' => false, 'reason' => 'ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED', 'fresh_entry' => $freshEntry ); }
+  if ( 'CONFLICT' === $prediction ) {
+   // Distinguish THIS run's own aborted, never-completed attempt (safe -- apply() will
+   // simply overwrite its stale INTENT journal with a fresh one, exactly as any first
+   // attempt would) from a genuinely new or pre-existing conflict (never safe to retry
+   // blindly). Never trusts the ledger's own claim alone: also re-confirms no WordPress
+   // object actually exists.
+   $id = Identity::find( $freshEntry );
+   $ledger = Storage::read( Identity::ledger( $freshEntry ) );
+   // Compared against the ORIGINAL run this FAILED result actually came from
+   // ($originalResult['run_id'], set by process_entry() on every result) -- never
+   // $freshPlan['run_id'], which is a brand-new, unrelated id from THIS rebuild and would
+   // never match any real ledger, silently rejecting every genuinely-retryable stale attempt.
+   $ownStaleAttempt = ! $id && $ledger && 'INTENT' === ( $ledger['status'] ?? null ) && empty( $ledger['wordpress_id'] ) && ( $ledger['run_id'] ?? null ) === ( $originalResult['run_id'] ?? null );
+   if ( ! $ownStaleAttempt ) { return array( 'eligible' => false, 'reason' => 'CONFLICT_NOT_OWN_STALE_ATTEMPT', 'fresh_entry' => $freshEntry ); }
+   return array( 'eligible' => true, 'reason' => 'RETRYABLE_FAILED_ATTEMPT_STALE_INTENT_LEDGER', 'fresh_entry' => $freshEntry );
+  }
+  return array( 'eligible' => true, 'reason' => 'CLEAN_RETRY_' . $prediction, 'fresh_entry' => $freshEntry );
+ }
+
+ /**
+  * Read-only. Never mutates anything -- safe to call at any time, including long before a
+  * retry is authorized. Reuses preflight_full_local()'s own 14 checks in full (a retry is
+  * meaningless if the underlying plan/environment/backup/source/PDF-approval state it
+  * would build on is not itself sound) and adds the retry-specific ones: the original run
+  * must be COMPLETE, and the exact retry set is computed and reported by exact count, never
+  * estimated.
+  */
+ public static function retry_preflight( string $run ): array {
+  $plan = Storage::read( 'run-' . $run . '.json' );
+  $base = self::preflight_full_local( $run, $plan );
+  $checks = $base['checks']; $blockers = $base['blockers'];
+  $add = static function( string $id, bool $passed, string $detail = '' ) use ( &$checks, &$blockers ): void {
+   $checks[] = array( 'id' => $id, 'passed' => $passed, 'detail' => $detail );
+   if ( ! $passed ) { $blockers[] = $id; }
+  };
+  if ( ! $plan ) { return array( 'run_id' => $run, 'ok' => false, 'checks' => $checks, 'blockers' => $blockers, 'counts' => array() ); }
+
+  $completeOk = 'COMPLETE' === ( $plan['status'] ?? null );
+  $add( 'original_run_complete', $completeOk, $completeOk ? '' : 'status=' . ( $plan['status'] ?? 'null' ) . ' (retry requires a COMPLETE first run).' );
+  $backupOk = ! empty( $plan['backup']['database'] ?? null ) && is_file( Storage::path( $plan['backup']['database'] ) );
+  $add( 'post_first_import_backup_available', $backupOk, $backupOk ? '' : 'No verifiable backup-<run>.json on disk for this run.' );
+  $alreadyRetried = 'COMPLETE' === ( $plan['retry']['status'] ?? null );
+  $add( 'retry_not_already_complete', ! $alreadyRetried, $alreadyRetried ? 'A retry for this run already completed; see plan[retry].' : '' );
+
+  $counts = array( 'retryable' => 0, 'non_retryable_conflict' => 0, 'already_applied' => 0, 'review' => 0, 'skip' => 0, 'other_excluded' => 0 );
+  $retrySet = array(); $excluded = array();
+
+  if ( $completeOk ) {
+   $fresh = Planner::build( 'full' );
+   foreach ( $plan['results'] as $r ) {
+    if ( 'BLOCKED' === $r['status'] ) { ++$counts['review']; continue; }
+    if ( 'SKIPPED' === $r['status'] ) { ++$counts['skip']; continue; }
+    if ( 'UNCHANGED' === $r['status'] || 'APPLIED' === $r['status'] ) { ++$counts['already_applied']; continue; }
+    if ( 'FAILED' !== $r['status'] ) { continue; } // CONFLICT (the original 10): counted separately below, never in this per-result loop's buckets.
+    $originalEntry = null;
+    foreach ( $plan['entries'] as $e ) { if ( $e['entity_key'] === $r['entity_key'] ) { $originalEntry = $e; break; } }
+    $verdict = self::retry_eligibility( $originalEntry, $r, $fresh );
+    if ( $verdict['eligible'] ) { ++$counts['retryable']; $retrySet[] = $r['entity_key']; }
+    else {
+     $reasonPrefix = strtok( $verdict['reason'], ':' );
+     if ( in_array( $reasonPrefix, array( 'CONFLICT_NOT_OWN_STALE_ATTEMPT','ROOT_CAUSE_NOT_FIXED' ), true ) ) { ++$counts['non_retryable_conflict']; }
+     else { ++$counts['other_excluded']; }
+     $excluded[ $r['entity_key'] ] = $verdict['reason'];
+    }
+   }
+   foreach ( $plan['results'] as $r ) { if ( 'CONFLICT' === $r['status'] ) { ++$counts['non_retryable_conflict']; } } // the original 10 -- proven legitimate slug collisions this same session, never retried.
+  }
+
+  $ok = empty( $blockers );
+  return array(
+   'run_id' => $run, 'ok' => $ok, 'checks' => $checks, 'blockers' => $blockers, 'counts' => $counts,
+   'retry_set' => $retrySet, 'excluded' => $excluded, 'environment' => $base['environment'] ?? array(),
+  );
+ }
+
+ /**
+  * Mutating. Requires its OWN, distinct confirmation phrase -- never RETRY_CONFIRMATION
+  * accepted by the other two batch entry points, and vice versa. Operates ONLY on the exact
+  * retry set retry_preflight() computes (rebuilt fresh here, under the same lock, never
+  * trusted from a stale caller-supplied list) -- never a cursor walk over the whole plan.
+  * Never rewrites the original run's own `results`/`cursor`/`status` (that history is
+  * immutable once written); progress lives entirely under the new `plan['retry']` key,
+  * exactly like `plan['backup']` was added without disturbing anything else on the plan.
+  * Processes direct media causes before cascades that depend on them (a cascade's own
+  * dependency check in process_entry()/apply() requires its dependency to already resolve
+  * to UNCHANGED/UPDATE) by sorting DIRECT_* causes first within the retry set.
+  */
+ public static function retry_failed_resolved_only( string $run, string $confirmation, int $limit = 25 ): array {
+  Storage::guard();
+  if ( self::RETRY_CONFIRMATION !== $confirmation ) { throw new \RuntimeException( 'EXPLICIT_RETRY_CONFIRMATION_REQUIRED' ); }
+  return Storage::locked( static function() use ( $run, $limit ): array {
+   $plan = Storage::read( 'run-' . $run . '.json' );
+   if ( ! $plan || 'full' !== ( $plan['scope'] ?? null ) || 'COMPLETE' !== ( $plan['status'] ?? null ) || ! hash_equals( $plan['environment_id'], Storage::hash( array( home_url(), DB_NAME ) ) ) ) { throw new \RuntimeException( 'VALID_COMPLETE_FULL_PLAN_REQUIRED' ); }
+   if ( empty( $plan['backup']['database'] ?? null ) || ! is_file( Storage::path( $plan['backup']['database'] ) ) ) { throw new \RuntimeException( 'BACKUP_MISSING_FOR_RETRY' ); }
+   if ( 'COMPLETE' === ( $plan['retry']['status'] ?? null ) ) { return $plan; }
+
+   $report = self::retry_preflight( $run );
+   if ( ! $report['ok'] ) { throw new \RuntimeException( 'RETRY_PREFLIGHT_FAILED:' . implode( ',', $report['blockers'] ) ); }
+
+   $fresh = Planner::build( 'full' );
+   // apply()'s journal/_psi_import_state attribution must point at the ORIGINAL run being
+   // retried, never at Planner::build()'s own fresh, ephemeral run_id -- entries/dependency
+   // resolution still come entirely from $fresh (current reality), only the run identity
+   // written into each retried object's own audit trail is corrected here.
+   $fresh['run_id'] = $run;
+   $freshByKey = array_column( $fresh['entries'], null, 'entity_key' );
+   $order = array( 'DIRECT_PDF_A' => 0, 'DIRECT_PDF_B' => 0, 'CASCADE_FROM_PDF_A' => 1, 'CASCADE_FROM_PDF_B' => 1 );
+   $set = $report['retry_set'];
+   usort( $set, static function( $a, $b ) use ( $freshByKey, $fresh, $order ): int {
+    return ( $order[ self::retry_root_cause( $freshByKey[ $a ], $fresh ) ] ?? 2 ) <=> ( $order[ self::retry_root_cause( $freshByKey[ $b ], $fresh ) ] ?? 2 );
+   } );
+
+   $retry = $plan['retry'] ?? array( 'retry_id' => wp_generate_uuid4(), 'based_on_plan_hash' => $plan['plan_hash'], 'created_at' => gmdate( 'c' ), 'set' => $set, 'cursor' => 0, 'status' => 'RUNNING', 'results' => array() );
+   if ( ( $retry['set'] ?? array() ) !== $set ) { throw new \RuntimeException( 'RETRY_SET_CHANGED_SINCE_FIRST_BUILD' ); } // sealed on first call, exactly like the plan's own entries.
+   $retry['status'] = 'RUNNING';
+
+   $start = microtime( true ); $done = 0; $media = 0;
+   while ( $retry['cursor'] < count( $retry['set'] ) && $done < min( 100, max( 1, $limit ) ) && $media < 20 && microtime( true ) - $start < 20 ) {
+    $key = $retry['set'][ $retry['cursor'] ];
+    $entry = $freshByKey[ $key ];
+    try {
+     // Re-verify eligibility one more time, immediately before mutating -- state may have
+     // shifted between preflight and this exact entity's turn within the same run (an
+     // earlier retried dependency in THIS pass, or, defensively, anything else).
+     $originalResult = null; foreach ( $plan['results'] as $r ) { if ( $r['entity_key'] === $key ) { $originalResult = $r; break; } }
+     $originalEntry = null; foreach ( $plan['entries'] as $e ) { if ( $e['entity_key'] === $key ) { $originalEntry = $e; break; } }
+     $verdict = self::retry_eligibility( $originalEntry, $originalResult, $fresh );
+     if ( ! $verdict['eligible'] ) { throw new \RuntimeException( 'NO_LONGER_ELIGIBLE:' . $verdict['reason'] ); }
+     $id = self::apply( $entry, $fresh );
+     $result = array( 'entity_key' => $key, 'status' => 'APPLIED', 'wordpress_id' => $id, 'retried_at' => gmdate( 'c' ) );
+    } catch ( \Throwable $error ) {
+     if ( self::is_fatal( $error ) ) { $retry['status'] = 'RUNNING'; $plan['retry'] = $retry; Storage::write( 'run-' . $run . '.json', $plan ); throw $error; }
+     $result = array( 'entity_key' => $key, 'status' => 'FAILED', 'wordpress_id' => 0, 'notes' => self::safe_error( $error->getMessage() ), 'retried_at' => gmdate( 'c' ) );
+    }
+    $retry['results'][] = $result; ++$retry['cursor']; ++$done; if ( 'media' === $entry['source_type'] ) { ++$media; }
+    Storage::log( $run, $key, 'RETRY', $result['status'], $result['notes'] ?? '' );
+    $plan['retry'] = $retry; Storage::write( 'run-' . $run . '.json', $plan );
+   }
+   if ( $retry['cursor'] === count( $retry['set'] ) ) { $retry['status'] = 'COMPLETE'; }
+   $plan['retry'] = $retry; Storage::write( 'run-' . $run . '.json', $plan );
+   return $plan;
+  } );
+ }
+
+ /**
+  * ============================================================================
+  * RECOVERY — for when a parent run's OWN run-<id>.json snapshot no longer exists (pruned,
+  * lost, or otherwise unavailable), so retry_preflight()/retry_failed_resolved_only() above
+  * (which read plan['results'] from that exact file) cannot operate on it at all. Never
+  * reconstructs or fabricates that missing file — see
+  * docs/implementation/full-local-import/17-run-snapshot-incident.md for the incident this
+  * responds to. Builds a NEW, independently-sealed plan instead, evidenced exclusively by
+  * what survives: log-<parentRun>.jsonl (parse_run_log(), never pruned — a different
+  * filename shape entirely), per-entity identity-<token>.json ledgers, and a freshly-built
+  * CURRENT full plan. Markdown/CSV documentation is read by humans, never by this code.
+  * ============================================================================
+  */
+ private const RECOVERY_REASON_SNAPSHOT_PRUNED = 'ORIGINAL_RUN_SNAPSHOT_PRUNED';
+
+ /**
+  * Read-only. Parses log-<run>.jsonl — the per-entity, append-only audit trail Storage::log()
+  * writes for EVERY entity batch()/batch_full_local_resolved_only() processes, success or
+  * not (never only the ones that succeeded): one JSON line per entity, `{run_id, timestamp,
+  * entity, action, result, message}`. Unlike run-<id>.json (a single aggregated snapshot,
+  * the thing Storage::retain_recent_runs() prunes), this filename never matches that
+  * pattern and is never touched by it. Throws PARENT_RUN_LOG_NOT_FOUND rather than
+  * returning an empty/partial result if the log itself is also gone — recovery must never
+  * silently proceed on zero evidence.
+  * @return array<string,array{run_id:string,timestamp:string,entity:string,action:string,result:string,message:string}> keyed by entity_key.
+  */
+ public static function parse_run_log( string $run ): array {
+  if ( ! preg_match( '/^[a-zA-Z0-9-]+$/D', $run ) ) { throw new \RuntimeException( 'INVALID_RUN_ID' ); }
+  $path = Storage::path( 'log-' . $run . '.jsonl' );
+  if ( ! is_file( $path ) ) { throw new \RuntimeException( 'PARENT_RUN_LOG_NOT_FOUND' ); }
+  $handle = fopen( $path, 'r' );
+  if ( ! $handle ) { throw new \RuntimeException( 'PARENT_RUN_LOG_UNREADABLE' ); }
+  $byKey = array();
+  try {
+   while ( false !== ( $line = fgets( $handle ) ) ) {
+    $line = trim( $line ); if ( '' === $line ) { continue; }
+    $row = json_decode( $line, true );
+    if ( ! is_array( $row ) || ! isset( $row['entity'] ) ) { continue; } // tolerate one malformed line, never abort the whole parse.
+    $byKey[ $row['entity'] ] = $row; // append-only log; last line for a key wins (defensive — entities are normally logged exactly once per run).
+   }
+  } finally { fclose( $handle ); }
+  return $byKey;
+ }
+
+ private static function recovery_digest( array $plan ): string {
+  return Storage::hash( array_intersect_key( $plan, array_flip( array( 'manifest_version','transform_version','run_id','scope','parent_run_id','recovery_reason','environment_id','created_at','entries' ) ) ) );
+ }
+
+ /**
+  * Read-only. The control proving recovery never silently touches what the parent run
+  * already successfully applied: every entity_key the parent log recorded with
+  * `result=CREATE` (i.e. actually APPLIED — see process_entry(), which sets
+  * `$result['result'] = $prediction` and `$prediction` is only ever 'CREATE' for a brand
+  * new object, as every one of these was) must resolve to `Identity::prediction()===
+  * UNCHANGED` against a freshly-built current plan. Returns the list of any that do NOT —
+  * empty means the control passed. Never partial: checks every applied entity_key the log
+  * contains, not a sample.
+  */
+ public static function applied_control_violations( array $parentLog, array $freshPlan ): array {
+  $freshByKey = array_column( $freshPlan['entries'], null, 'entity_key' );
+  $violations = array();
+  foreach ( $parentLog as $key => $row ) {
+   if ( 'CREATE' !== ( $row['result'] ?? null ) ) { continue; }
+   $entry = $freshByKey[ $key ] ?? null;
+   if ( ! $entry ) { $violations[ $key ] = 'MISSING_FROM_CURRENT_PLAN'; continue; }
+   $prediction = Identity::prediction( $entry );
+   if ( 'UNCHANGED' !== $prediction ) { $violations[ $key ] = 'UNEXPECTED_' . $prediction; }
+  }
+  return $violations;
+ }
+
+ /**
+  * Mutating (private storage only — never touches WordPress/the database, the same
+  * "building/sealing a plan is safe" category Planner::build() itself already belongs to).
+  * Locked for extra safety since this does a multi-step read-decide-write sequence a
+  * concurrent real execution could otherwise interleave with.
+  *
+  * Candidate source is EXCLUSIVELY: parse_run_log($parentRun) (which entity_keys the parent
+  * run actually recorded `result=ERROR` for — never inferred from anything else) plus a
+  * freshly-built current full plan (current entries/dependencies/hashes) plus each
+  * candidate's own surviving identity ledger. Every candidate must independently prove ALL
+  * of: same source_key (it IS the key), current action identical to what the parent log
+  * recorded (never silently different — an editorial/classification change since the
+  * parent run is disqualifying, not something to paper over), action still mutable
+  * (never REVIEW/SKIP), root cause in the fixed-bug allowlist (retry_root_cause() — real
+  * cascade/legitimate-conflict/OTHER classification, never approximate), destination not
+  * already applied elsewhere (UNCHANGED excluded) and not a genuine conflict distinct from
+  * this exact parent run's own aborted attempt (Identity::prediction()+ledger cross-check,
+  * exactly like retry_eligibility() above — recovery never invents a looser rule for the
+  * same question). Anything that cannot prove every one of these is recorded as
+  * NOT_RETRYABLE with its specific reason, never silently dropped.
+  *
+  * Produces and seals a NEW, independent plan (`scope=recovery`, fresh `run_id`, own
+  * `plan_hash`) linked to its parent via `parent_run_id`/`recovery_reason` — never
+  * resurrects or overwrites run-<parentRun>.json, which stays absent. `recovery_open=true`
+  * so Storage::run_protected() shields this new plan from the exact same pruning that
+  * caused the incident it exists to recover from, until close_run() explicitly closes it.
+  * Also writes a dedicated machine-readable evidence artifact
+  * (`recovery-evidence-<recoveryRunId>.json`) — one row per candidate considered, whether
+  * accepted or rejected, with its full reasoning; documentation may reflect this, never
+  * substitute for it.
+  */
+ /**
+  * Read-only. The equivalence gate for ONE recovery candidate — extracted from
+  * build_recovery_retry_plan() so every rejection path (action changed, not mutable, root
+  * cause not a fixed bug, already applied, genuine conflict) is independently testable with
+  * synthetic fixtures, not only reachable through a full real recovery build. `$logRow` is
+  * the candidate's own line from parse_run_log($parentRun) (never anything else — this
+  * method takes it as a parameter precisely so a test can hand it a deliberately-altered
+  * copy without touching any real file). Returns the full evidence row shape used by
+  * recovery-evidence-<id>.json; `eligibility` is 'RETRYABLE' only when every check passed.
+  */
+ public static function recovery_candidate_eligibility( string $key, array $logRow, array $freshPlan, string $parentRun ): array {
+  $row = array(
+   'source_key' => $key, 'original_ledger_status' => null, 'original_error' => $logRow['message'] ?? '',
+   'current_source_hash' => null, 'current_decision_hash' => null, 'current_action' => null,
+   'destination_state' => null, 'eligibility' => 'NOT_RETRYABLE', 'reason' => 'UNKNOWN',
+  );
+  $freshByKey = array_column( $freshPlan['entries'], null, 'entity_key' );
+  $freshEntry = $freshByKey[ $key ] ?? null;
+  if ( ! $freshEntry ) { $row['reason'] = 'MISSING_FROM_CURRENT_PLAN'; return $row; }
+  $row['current_source_hash'] = $freshEntry['source_hash']; $row['current_decision_hash'] = $freshEntry['decision_hash']; $row['current_action'] = $freshEntry['action'];
+
+  if ( ( $logRow['action'] ?? null ) !== $freshEntry['action'] ) { $row['reason'] = 'ACTION_CHANGED_SINCE_ORIGINAL_RUN:' . ( $logRow['action'] ?? 'null' ) . '->' . $freshEntry['action']; return $row; }
+  if ( ! in_array( $freshEntry['action'], array( 'MIGRATE','MERGE','CREATE_FROM_STATIC' ), true ) ) { $row['reason'] = 'ACTION_NOT_MUTABLE:' . $freshEntry['action']; return $row; }
+
+  $ledger = Storage::read( Identity::ledger( $freshEntry ) );
+  $row['original_ledger_status'] = $ledger['status'] ?? null;
+
+  $cause = self::retry_root_cause( $freshEntry, $freshPlan );
+  if ( ! in_array( $cause, self::RETRYABLE_ROOT_CAUSES, true ) ) { $row['reason'] = 'ROOT_CAUSE_NOT_FIXED:' . $cause; return $row; }
+
+  $prediction = Identity::prediction( $freshEntry );
+  $row['destination_state'] = $prediction;
+  if ( 'UNCHANGED' === $prediction ) { $row['reason'] = 'ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED'; return $row; }
+  if ( 'CONFLICT' === $prediction ) {
+   $id = Identity::find( $freshEntry );
+   $ownStaleAttempt = ! $id && $ledger && 'INTENT' === ( $ledger['status'] ?? null ) && empty( $ledger['wordpress_id'] ) && ( $ledger['run_id'] ?? null ) === $parentRun;
+   if ( ! $ownStaleAttempt ) { $row['reason'] = 'CONFLICT_NOT_OWN_STALE_ATTEMPT'; return $row; }
+  }
+
+  $row['eligibility'] = 'RETRYABLE'; $row['reason'] = 'root_cause=' . $cause;
+  return $row;
+ }
+
+ public static function build_recovery_retry_plan( string $parentRun ): array {
+  Storage::guard();
+  return Storage::locked( static function() use ( $parentRun ): array {
+   $parentLog = self::parse_run_log( $parentRun ); // throws PARENT_RUN_LOG_NOT_FOUND — never fabricated.
+   $fresh = Planner::build( 'full' );
+
+   $controlViolations = self::applied_control_violations( $parentLog, $fresh );
+   if ( $controlViolations ) { throw new \RuntimeException( 'APPLIED_CONTROL_VIOLATED:' . implode( ',', array_keys( $controlViolations ) ) ); }
+
+   $failedKeys = array();
+   foreach ( $parentLog as $key => $row ) { if ( 'ERROR' === ( $row['result'] ?? null ) ) { $failedKeys[] = $key; } }
+   sort( $failedKeys ); // deterministic order, independent of jsonl append order.
+
+   $freshByKey = array_column( $fresh['entries'], null, 'entity_key' );
+   $entries = array(); $evidence = array();
+   foreach ( $failedKeys as $key ) {
+    $evalRow = self::recovery_candidate_eligibility( $key, $parentLog[ $key ], $fresh, $parentRun );
+    $evidence[] = $evalRow;
+    if ( 'RETRYABLE' === $evalRow['eligibility'] ) { $entries[] = $freshByKey[ $key ]; }
+   }
+
+   $recoveryRunId = wp_generate_uuid4();
+   $plan = array(
+    'manifest_version' => 1, 'transform_version' => Planner::VERSION,
+    'run_id' => $recoveryRunId, 'scope' => 'recovery',
+    'parent_run_id' => $parentRun, 'recovery_reason' => self::RECOVERY_REASON_SNAPSHOT_PRUNED,
+    'environment_id' => $fresh['environment_id'], 'created_at' => gmdate( 'c' ),
+    'status' => 'VALIDATED', 'mode' => 'RECOVERY_CANDIDATE', 'cursor' => 0,
+    'entries' => $entries, 'results' => array(), 'recovery_open' => true,
+    'post_first_import_backup' => null,
+    'evidence_summary' => array( 'candidates_considered' => count( $failedKeys ), 'retryable' => count( $entries ), 'rejected' => count( $failedKeys ) - count( $entries ) ),
+   );
+   $plan['plan_hash'] = self::recovery_digest( $plan );
+   Storage::write( 'run-' . $recoveryRunId . '.json', $plan );
+   Storage::write( 'recovery-evidence-' . $recoveryRunId . '.json', array( 'parent_run_id' => $parentRun, 'recovery_run_id' => $recoveryRunId, 'generated_at' => gmdate( 'c' ), 'rows' => $evidence ) );
+   return $plan;
+  } );
+ }
+
+ /**
+  * Read-only, never mutates anything — safe to call at any time. Reports exactly what
+  * 18-recovery-preflight.md's checklist demands: whether recovery is possible, exact
+  * retryable/rejected counts, blockers, whether parent-run evidence is available, whether
+  * the candidate set is still equivalent to current reality, and whether the NEW
+  * post-first-import backup real execution would require is present yet (it is never taken
+  * by this method — see build_recovery_retry_plan()'s own docblock and
+  * 19-recovery-preflight.md for why that stays a separate, explicit, human-authorized step).
+  */
+ public static function recovery_preflight( string $recoveryRun ): array {
+  $plan = Storage::read( 'run-' . $recoveryRun . '.json' );
+  $checks = array(); $blockers = array();
+  $add = static function( string $id, bool $passed, string $detail = '' ) use ( &$checks, &$blockers ): void {
+   $checks[] = array( 'id' => $id, 'passed' => $passed, 'detail' => $detail );
+   if ( ! $passed ) { $blockers[] = $id; }
+  };
+  $add( 'recovery_plan_exists', (bool) $plan, $plan ? '' : "No run-$recoveryRun.json found." );
+  if ( ! $plan ) { return array( 'run_id' => $recoveryRun, 'ok' => false, 'checks' => $checks, 'blockers' => $blockers, 'counts' => array() ); }
+
+  $add( 'is_recovery_scope', 'recovery' === ( $plan['scope'] ?? null ), 'scope=' . ( $plan['scope'] ?? 'null' ) );
+  $add( 'parent_run_id_present', ! empty( $plan['parent_run_id'] ), '' );
+  $envOk = isset( $plan['environment_id'] ) && hash_equals( $plan['environment_id'], Storage::hash( array( home_url(), DB_NAME ) ) );
+  $add( 'environment_id_matches', $envOk, $envOk ? '' : 'Plan was built for a different WordPress install/DB.' );
+
+  $sealOk = false;
+  try { $sealOk = hash_equals( $plan['plan_hash'] ?? '', self::recovery_digest( $plan ) ); } catch ( \Throwable $e ) { $sealOk = false; }
+  $add( 'recovery_plan_seal_intact', $sealOk, '' );
+
+  $parentLog = null;
+  try { $parentLog = self::parse_run_log( $plan['parent_run_id'] ?? '' ); } catch ( \Throwable $e ) {}
+  $add( 'parent_run_evidence_available', null !== $parentLog, null !== $parentLog ? '' : 'log-' . ( $plan['parent_run_id'] ?? '?' ) . '.jsonl not found — parent evidence gone.' );
+
+  $fresh = Planner::build( 'full' );
+  $freshByKey = array_column( $fresh['entries'], null, 'entity_key' );
+  $stillEquivalent = true; $drift = array();
+  foreach ( $plan['entries'] as $e ) {
+   $now = $freshByKey[ $e['entity_key'] ] ?? null;
+   if ( ! $now || $now['source_hash'] !== $e['source_hash'] || $now['decision_hash'] !== $e['decision_hash'] || $now['action'] !== $e['action'] ) { $stillEquivalent = false; $drift[] = $e['entity_key']; }
+  }
+  $add( 'current_plan_still_equivalent', $stillEquivalent, $stillEquivalent ? '' : 'Drifted since recovery plan was built: ' . implode( ',', array_slice( $drift, 0, 10 ) ) );
+
+  $controlViolations = $parentLog ? self::applied_control_violations( $parentLog, $fresh ) : array( '(parent log unavailable)' => 'CANNOT_VERIFY' );
+  $add( 'applied_449_control_intact', empty( $controlViolations ), $controlViolations ? ( count( $controlViolations ) . ' violation(s): ' . implode( ',', array_slice( array_keys( $controlViolations ), 0, 10 ) ) ) : '' );
+
+  $reviewSkipUntouched = true;
+  foreach ( $plan['entries'] as $e ) { if ( in_array( $e['action'], array( 'REVIEW','SKIP' ), true ) ) { $reviewSkipUntouched = false; break; } }
+  $add( 'no_review_or_skip_entries_in_recovery_set', $reviewSkipUntouched, '' );
+
+  $backupOk = ! empty( $plan['post_first_import_backup'] ?? null ) && is_file( Storage::path( $plan['post_first_import_backup'] ) );
+  $add( 'new_post_first_import_backup_present', $backupOk, $backupOk ? '' : 'A NEW backup taken AFTER the 449 already-applied objects is required before real execution; none recorded on this recovery plan yet.' );
+
+  $ok = empty( $blockers );
+  return array(
+   'run_id' => $recoveryRun, 'parent_run_id' => $plan['parent_run_id'] ?? null, 'ok' => $ok,
+   'checks' => $checks, 'blockers' => $blockers,
+   'counts' => array( 'retryable' => count( $plan['entries'] ), 'rejected' => $plan['evidence_summary']['rejected'] ?? null, 'candidates_considered' => $plan['evidence_summary']['candidates_considered'] ?? null ),
+   'new_backup_required' => true, 'new_backup_present' => $backupOk,
+  );
+ }
+
+ /**
+  * Mutating (private storage only). The ONLY way a protected run stops being protected
+  * (Storage::run_protected()) — explicit, human-authorized, never inferred from current
+  * state on its own. Intended for once a recovery's retryables are all resolved and any
+  * remaining conflicts have been explicitly transferred to REVIEW/editorial handling
+  * outside this mechanism — this method itself does not verify that judgement call, only
+  * records that a human made it.
+  */
+ public static function close_run( string $run, string $confirmation ): array {
+  if ( 'CERRAR RUN RESUELTO' !== $confirmation ) { throw new \RuntimeException( 'EXPLICIT_CONFIRMATION_REQUIRED' ); }
+  Storage::guard();
+  return Storage::locked( static function() use ( $run ): array {
+   $plan = Storage::read( 'run-' . $run . '.json' );
+   if ( ! $plan ) { throw new \RuntimeException( 'RUN_NOT_FOUND' ); }
+   $plan['closed_at'] = gmdate( 'c' ); $plan['recovery_open'] = false;
+   Storage::write( 'run-' . $run . '.json', $plan );
+   return $plan;
+  } );
+ }
+
+ /**
+  * Pure, side-effect-free predicate for the two DISTINCT integrity checks process_entry()
+  * enforces on every media entry before ever reaching apply()/media_handle_sideload() --
+  * kept separate, exactly like media_is_valid() below, so both halves stay independently
+  * testable and neither can silently stand in for the other.
+  *
+  * $e['data']['sha256'] is the STAGED hash: Planner::build() overwrites it with the
+  * sanitized substitute's hash for a Group A PdfApprovals approval, so comparing it against
+  * the legacy original is wrong by construction for exactly those approvals -- that
+  * substitution was this check's original bug.
+  *
+  * original_source_integrity: every legacy path (primary + binary aliases) on
+  * /legacy/public must still match $e['row']['sha256'], the ORIGINAL hash Planner recorded
+  * from media-master.csv and already verified once against this same path at plan-build
+  * time (Planner::build()'s own MEDIA_VALIDATION_OR_HASH / BINARY_ALIAS_NOT_IDENTICAL
+  * checks). Never compared against the staged/sanitized hash.
+  *
+  * staged_artifact_integrity: the artifact that will actually be uploaded -- the sanitized
+  * substitute for a Group A approval, or the original bytes for everything else -- must
+  * still match ITS OWN staged hash in private storage. A Group A substitute legitimately
+  * differs from the legacy original; that is by design, never drift, and is never checked
+  * against the original hash above. The legacy original itself is never imported for a
+  * Group A approval -- only ever read here, to confirm it has not silently drifted.
+  * @return array{original_source_integrity:bool,staged_artifact_integrity:bool}
+  */
+ private static function media_integrity( array $e ): array {
+  $originalOk = true;
+  foreach ( array_merge( array( $e['legacy_file'] ), $e['binary_aliases'] ?? array() ) as $path ) {
+   if ( ! hash_equals( $e['row']['sha256'], hash_file( 'sha256', Sources::safe( Storage::project() . '/legacy/public', $path ) ) ) ) { $originalOk = false; break; }
+  }
+  $stagedOk = hash_equals( $e['data']['sha256'], hash_file( 'sha256', Storage::path( $e['data']['package_asset'] ) ) );
+  return array( 'original_source_integrity' => $originalOk, 'staged_artifact_integrity' => $stagedOk );
+ }
  /**
   * Execution-time content validation. Kept separate from media() (which has the
   * side-effecting sideload call) purely so it stays a small, pure, independently
@@ -362,6 +889,31 @@ final class Runner {
   if ( \PSIndustrial\Core\Media::file_valid( $source, $mime ) ) { return true; }
   return 'application/pdf' === $mime && PdfApprovals::isApprovedFalsePositive( $legacyPath, hash_file( 'sha256', $source ) );
  }
+ /**
+  * Narrowly-scoped override for the SECOND, independent validation WordPress itself runs
+  * during media_handle_sideload() (Media::upload(), on wp_handle_sideload_prefilter) — the
+  * generic, always-on filter that protects every upload/sideload in the whole install,
+  * including the admin UI, and knows nothing about PdfApprovals' Group B exceptions.
+  *
+  * Never disables or relaxes Media::file_valid()/Media::upload() itself, never whitelists by
+  * filename: re-verifies, from scratch, on every single invocation --
+  *  (a) this is the EXACT temp file Runner::media() just created for THIS entity ($tmp),
+  *      never any other file mid-upload elsewhere in the request;
+  *  (b) Media::upload() actually rejected it (nothing to override otherwise);
+  *  (c) the source bytes still match the hash Runner::media() already re-verified above;
+  *  (d) it is a PDF with an exact-hash, path-matched PdfApprovals Group B exception --
+  *      never Group A (a sanitized substitute already passes Media::file_valid() alone; see
+  *      media_is_valid()'s own docblock), never an unapproved file, never a real threat.
+  * Only then clears the rejection; otherwise returns $file untouched, including any other
+  * error Media::upload() itself set.
+  */
+ private static function approved_sideload_override( array $file, string $tmp, string $source, array $d ): array {
+  if ( ( $file['tmp_name'] ?? '' ) !== $tmp || empty( $file['error'] ) ) { return $file; }
+  if ( ! hash_equals( $d['sha256'], hash_file( 'sha256', $source ) ) ) { return $file; }
+  if ( 'application/pdf' !== $d['mime'] || ! PdfApprovals::isApprovedFalsePositive( $d['path'] ?? '', hash_file( 'sha256', $source ) ) ) { return $file; }
+  $file['error'] = '';
+  return $file;
+ }
  private static function media( array $e ): int {
   $d = $e['data']; $source = Storage::path( $d['package_asset'] );
   if ( ! hash_equals( $d['sha256'], hash_file( 'sha256', $source ) ) || ! self::media_is_valid( $source, $d['mime'], $d['path'] ?? '' ) ) { throw new \RuntimeException( 'MEDIA_CHANGED_OR_UNSAFE' ); }
@@ -371,7 +923,18 @@ final class Runner {
   $tmp = wp_tempnam( $name, Storage::root() );
   try {
    if ( ! copy( $source, $tmp ) ) { throw new \RuntimeException( 'MEDIA_COPY_FAILED' ); }
-   $id = media_handle_sideload( array( 'name' => $name, 'tmp_name' => $tmp ), 0, null, array( 'post_title' => sanitize_text_field( $d['name'] ) ) );
+   // Installed only around this one sideload call, for this one temp file, and removed
+   // immediately after in `finally` regardless of outcome -- never affects any other upload,
+   // concurrent or later, on this or any other request. Priority 20 (after Media::upload()'s
+   // default 10) so it only ever runs AFTER and reacts to a rejection Media::upload() itself
+   // already produced; it never runs first and never hides Media::upload() from anything.
+   $override = static fn( array $file ): array => self::approved_sideload_override( $file, $tmp, $source, $d );
+   add_filter( 'wp_handle_sideload_prefilter', $override, 20 );
+   try {
+    $id = media_handle_sideload( array( 'name' => $name, 'tmp_name' => $tmp ), 0, null, array( 'post_title' => sanitize_text_field( $d['name'] ) ) );
+   } finally {
+    remove_filter( 'wp_handle_sideload_prefilter', $override, 20 );
+   }
    if ( is_wp_error( $id ) ) { throw new \RuntimeException( 'MEDIA_SIDELOAD_FAILED' ); }
    Identity::set( $e, $id, '_psi_content_sha256', $d['sha256'] ); Identity::set( $e, $id, '_psi_original_name', $d['name'] ); return $id;
   } finally { if ( is_file( $tmp ) ) { wp_delete_file( $tmp ); } }
