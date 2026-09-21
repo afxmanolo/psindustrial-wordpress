@@ -15,6 +15,7 @@ final class Plugin {
 		ProductEditor::boot();
 		TermEditor::boot();
 		Settings::boot();
+		Contact::boot();
 	}
 	public static function activate(): void {
 		Content::register();

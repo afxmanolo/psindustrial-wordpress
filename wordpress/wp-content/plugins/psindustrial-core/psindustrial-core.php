@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 define( 'PSINDUSTRIAL_CORE_VERSION', '0.4.0' );
 define( 'PSINDUSTRIAL_CORE_FILE', __FILE__ );
 
-foreach ( array( 'Plugin', 'Content', 'Fields', 'ProductEditor', 'TermEditor', 'Settings', 'Roles', 'Media', 'Editorial', 'AdminList', 'TermPolicy' ) as $class ) {
+foreach ( array( 'Plugin', 'Content', 'Fields', 'ProductEditor', 'TermEditor', 'Settings', 'Roles', 'Media', 'Editorial', 'AdminList', 'TermPolicy', 'Contact' ) as $class ) {
 	require_once __DIR__ . '/includes/' . $class . '.php';
 }
 foreach ( array( 'Storage', 'Sources', 'Identity', 'PdfApprovals', 'EditorialDecisions', 'Policy', 'Planner', 'Runner', 'Admin' ) as $class ) {

@@ -1,0 +1,48 @@
+/* Institutional composition from nosotros.php/contacto.php/politica-privacidad.php. */
+.institutional-main { padding:0; overflow-wrap:anywhere; }
+.institutional-hero { position:relative; min-height:480px; padding:110px 15px 0; display:grid; align-items:center; text-align:center; color:white; background:var(--psi-primary) url('../images/banner1.jpg') center top / cover no-repeat; }
+.institutional-hero::before { content:''; position:absolute; inset:0; opacity:.5; background:linear-gradient(to right top,#004b6d,#22236d,#232348,#222226,#232323); }
+.institutional-hero .psi-container { position:relative; }
+.institutional-hero h1 { max-width:800px; margin:auto; color:white; font-size:60.8px; line-height:1.1; font-weight:700; letter-spacing:-.5px; }
+.institutional-eyebrow { font-size:17px; line-height:20px; text-transform:uppercase; letter-spacing:2px; opacity:.6; margin:0 0 15px; }
+.institutional-body { padding-top:90px; padding-bottom:160px; }
+.about-institutional { display:grid; grid-template-columns:6fr 4fr; gap:11.9%; align-items:center; padding-inline:65px; }
+.about-institutional > img { display:block; width:100%; height:auto; border-radius:5px; }
+.about-institutional h2 { font-size:16px; line-height:24px; text-transform:uppercase; letter-spacing:1px; font-weight:600; margin:0 0 15px; }
+.about-institutional p { margin:0 0 35px; }
+.about-lead { color:var(--psi-primary); font-size:18px; line-height:22px; font-weight:500; }
+.psi-site .institutional-button { display:inline-flex; align-items:center; justify-content:center; gap:15px; border:0; background:var(--psi-primary); color:white; border-radius:4px; font-size:14px; font-weight:600; padding:15px 25px; cursor:pointer; }
+.contact-institutional { display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:8.333%; align-items:center; }
+.contact-eyebrow { color:var(--psi-accent); font-size:15px; line-height:24px; text-transform:uppercase; letter-spacing:1px; font-weight:600; margin:0 0 15px; }
+.contact-details > h2 { color:var(--psi-primary); font-size:45px; line-height:50px; letter-spacing:-1px; margin:0 0 50px; }
+.contact-detail { display:flex; gap:15px; align-items:flex-start; margin-top:35px; font-size:15px; line-height:25px; }
+.contact-detail > img { width:80px; height:80px; flex-shrink:0; }
+.contact-detail > div { min-width:0; }
+.contact-detail h3 { font-size:18px; color:var(--psi-primary); margin:0 0 5px; line-height:25px; }
+.contact-detail p { margin:0; }
+.contact-detail address { font-style:normal; }
+.institutional-form { border-radius:10px; padding:14%; box-shadow:0 0 50px #00000014; min-width:0; }
+.institutional-form h2 { color:var(--psi-primary); font-size:30px; line-height:35px; letter-spacing:-1px; margin:0 0 30px; }
+.institutional-form label { display:block; font-size:14px; color:var(--psi-primary); }
+.institutional-form input:not([type=hidden]), .institutional-form textarea { font:inherit; font-size:15px; width:100%; min-width:0; padding:10px 0; border:0; border-bottom:1px solid #d9d9d9; border-radius:0; background:transparent; color:var(--psi-primary); margin-bottom:20px; }
+.institutional-form textarea { resize:vertical; min-height:100px; }
+.institutional-form .institutional-button { width:100%; margin:5px 0 20px; }
+.contact-privacy { font-size:13px; line-height:22px; margin:0 0 12px; }
+.contact-honeypot { position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden; }
+.contact-result { border-left:3px solid var(--psi-accent); padding:10px; margin-bottom:20px; font-size:14px; line-height:24px; }
+.privacy-copy h2 { font-size:24px; color:var(--psi-primary); }
+@media(max-width:991px) {
+ .institutional-hero { min-height:300px; padding:40px 0; }
+ .institutional-body { padding-top:60px; padding-bottom:120px; }
+ .about-institutional, .contact-institutional { grid-template-columns:1fr; gap:40px; padding-inline:15px; }
+ .about-institutional > img { max-width:600px; margin:auto; }
+ .institutional-form { padding:40px; }
+}
+@media(max-width:575px) {
+ .institutional-hero { min-height:260px; }
+ .institutional-hero h1 { font-size:32px; }
+ .contact-details > h2 { font-size:32px; line-height:38px; }
+ .institutional-form { padding:25px 20px; }
+ .contact-detail { gap:12px; }
+ .contact-detail > img { width:60px; height:60px; }
+}

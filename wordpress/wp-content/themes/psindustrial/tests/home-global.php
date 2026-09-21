@@ -45,7 +45,7 @@ $archive = wp_remote_retrieve_body( wp_remote_get( get_post_type_archive_link( '
 $check( str_contains( $archive, 'assets/css/global.css' ) && str_contains( $archive, 'assets/css/catalog.css' ) && ! str_contains( $archive, 'assets/js/home.js' ), 'Catalog does not load slider or Home styles' );
 $check( ! str_contains( $html, 'vendors.min.js' ) && ! str_contains( $html, 'swiper.js' ) && ! str_contains( $html, 'recaptcha/api.js' ), 'No legacy framework or tracking dependencies copied' );
 // Render the existing draft Page in memory; never publish or mutate it.
-$page = get_page_by_path( 'nosotros' );
+$page = get_posts( array( 'post_type' => 'page', 'post_status' => 'any', 'numberposts' => 1, 'post__not_in' => array_filter( array_map( static fn( $slug ) => get_page_by_path( $slug )?->ID, array( 'nosotros', 'contacto', 'politica-privacidad' ) ) ) ) )[0];
 $q = new WP_Query( array( 'page_id' => $page->ID, 'post_status' => 'any' ) );
 $GLOBALS['wp_query'] = $GLOBALS['wp_the_query'] = $q;
 ob_start(); include get_theme_file_path( 'page.php' ); $page_html = ob_get_clean();
