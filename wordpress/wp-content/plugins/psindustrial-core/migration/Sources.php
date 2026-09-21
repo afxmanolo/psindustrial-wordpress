@@ -19,6 +19,22 @@ final class Sources {
   foreach ( array( 'legacy/database/psindustrial_db.sql', 'legacy/public/puerta34_administrador.sql', 'docs/seo/url-master.csv' ) as $file ) {
    $this->fingerprints[ $file ] = hash_file( 'sha256', self::safe( Storage::project(), $file ) );
   }
+  // EditorialDecisions.php/PdfApprovals.php read these three directly (never through $this->
+  // rows), so a full-scope plan's REVIEW/MIGRATE/MERGE decisions depend on their content
+  // without it ever entering the hash coverage above -- meaning SOURCE_CHANGED_REPLAN
+  // (Runner::batch()) could not previously detect an edit to any of them between plan-build
+  // and execution. Fingerprinted here, the existing check covers them for free, with no new
+  // logic in Runner. editorial-decisions.json and pdf-approvals.json are both REQUIRED (Q02/
+  // Q03/etc. and the PDF exception path throw without them); sanitization-audit.json is
+  // OPTIONAL, matching PdfApprovals::auditRecords()'s own tolerance for it being absent.
+  foreach ( array(
+   'docs/implementation/review-resolution/implementation/editorial-decisions.json',
+   'docs/implementation/pdf-security-review/pdf-approvals.json',
+  ) as $file ) {
+   $this->fingerprints[ $file ] = hash_file( 'sha256', self::safe( Storage::project(), $file ) );
+  }
+  try { $this->fingerprints['docs/implementation/pdf-security-review/sanitization-audit.json'] = hash_file( 'sha256', self::safe( Storage::project(), 'docs/implementation/pdf-security-review/sanitization-audit.json' ) ); }
+  catch ( \Throwable $e ) { /* optional: absent means no Group A substitute available yet, exactly as PdfApprovals itself already tolerates. */ }
   $this->catalog = self::sql_catalog( self::safe( Storage::project(), 'legacy/public/puerta34_administrador.sql' ) );
   if ( count( $this->catalog['productos'] ?? array() ) !== count( $this->rows['product-master.csv'] ) ) { throw new \RuntimeException( 'SQL_CANONICAL_COVERAGE_CHANGED' ); }
  }

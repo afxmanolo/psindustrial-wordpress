@@ -82,6 +82,14 @@ final class Storage {
    // Must resolve to a plain file directly inside $base -- rejects a same-named directory
    // and (defense in depth) anything a crafted name might have tried to escape to.
    if ( ! $real || ! is_file( $real ) || dirname( wp_normalize_path( $real ) ) !== $baseReal ) { continue; }
+   // A run actively mid-execution is never a deletion candidate at all, regardless of age --
+   // it is excluded from the pool entirely, not merely sorted to the front: a long-paused,
+   // resumable full-local run must survive any number of unrelated Planner::build() calls in
+   // the meantime (each one is a retention trigger). Runner::batch()/batch_full_local_
+   // resolved_only() persist status='RUNNING' on every write while cursor < count(entries),
+   // and only ever set 'COMPLETE' once truly done -- a plan that was merely built and never
+   // started is 'VALIDATED', still eligible for normal age-based retention like any other.
+   if ( self::run_in_progress( $real ) ) { continue; }
    $candidates[] = array( 'name' => $name, 'path' => $real, 'mtime' => filemtime( $real ) ?: 0 );
   }
   // Newest first: modification time descending, filename descending as a deterministic
@@ -94,6 +102,67 @@ final class Storage {
   }
   if ( $failed ) { error_log( 'psindustrial-core: retain_recent_runs could not delete ' . count( $failed ) . ' old run snapshot(s): ' . implode( ', ', $failed ) ); }
   return array( 'kept' => count( $candidates ) - count( $deleted ), 'deleted' => $deleted, 'failed' => $failed );
+ }
+ /** True only for a plan snapshot whose OWN persisted status is 'RUNNING' -- never throws,
+  *  never treats a malformed/foreign/test-fixture file as protected (fails toward normal
+  *  retention eligibility, the same conservative default the rest of this method already
+  *  uses for anything it cannot positively identify). */
+ private static function run_in_progress( string $path ): bool {
+  $raw = @file_get_contents( $path );
+  if ( false === $raw ) { return false; }
+  $data = json_decode( $raw, true );
+  return is_array( $data ) && 'RUNNING' === ( $data['status'] ?? null );
+ }
+ /**
+  * Full logical backup of every plugin/WordPress table (schema + rows), private JSON, never
+  * Git/webroot. Promoted from what was previously ad-hoc inline code duplicated only inside
+  * tests/importer.php's subset rehearsal into a single reusable method, so the full-local
+  * execution path (migration/Runner.php) can require the exact same, already-proven
+  * mechanism automatically rather than reimplementing or skipping it. Sufficient for this
+  * project's actual scale (a local dev install, at most a few thousand rows even after a
+  * full import) without adding a new dependency (no mysqldump shell-out, no new binary/path
+  * risk) -- see docs/implementation/full-local-import/06-rollback-strategy.md for why a
+  * heavier mechanism was considered and not adopted.
+  * @return string the written backup-<runId>.json filename.
+  */
+ public static function backup_database( string $runId ): string {
+  self::guard();
+  if ( ! preg_match( '/^[a-zA-Z0-9-]+$/D', $runId ) ) { throw new \RuntimeException( 'INVALID_RUN_ID' ); }
+  global $wpdb;
+  $backup = array( 'database' => DB_NAME, 'run_id' => $runId, 'time' => gmdate( 'c' ), 'tables' => array() );
+  foreach ( $wpdb->get_col( 'SHOW TABLES' ) as $table ) {
+   // Only this install's own prefixed tables, and only a strict identifier shape -- never a
+   // table name that could smuggle SQL via string concatenation below.
+   if ( ! preg_match( '/^[A-Za-z0-9_]+$/D', $table ) || ! str_starts_with( $table, $wpdb->prefix ) ) { throw new \RuntimeException( 'BACKUP_TABLE_NOT_ALLOWED' ); }
+   $backup['tables'][ $table ] = array( 'schema' => $wpdb->get_row( 'SHOW CREATE TABLE `' . $table . '`', ARRAY_N )[1], 'rows' => $wpdb->get_results( 'SELECT * FROM `' . $table . '`', ARRAY_A ) );
+  }
+  $name = 'backup-' . $runId . '.json';
+  self::write( $name, $backup );
+  return $name;
+ }
+ /**
+  * Full recursive copy of the WordPress uploads directory into private storage, alongside
+  * backup_database(). Same promotion as backup_database() -- previously only inline test
+  * code. Rejects any symlink encountered rather than silently following or skipping it.
+  * @return string the destination directory name (backup-uploads-<runId>), relative to
+  *         Storage::root().
+  */
+ public static function backup_uploads( string $runId ): string {
+  self::guard();
+  if ( ! preg_match( '/^[a-zA-Z0-9-]+$/D', $runId ) ) { throw new \RuntimeException( 'INVALID_RUN_ID' ); }
+  $upload = wp_get_upload_dir()['basedir'];
+  $dirName = 'backup-uploads-' . $runId;
+  $destination = self::root() . '/' . $dirName;
+  if ( is_dir( $upload ) ) {
+   foreach ( new \RecursiveIteratorIterator( new \RecursiveDirectoryIterator( $upload, \FilesystemIterator::SKIP_DOTS ) ) as $file ) {
+    if ( $file->isLink() ) { throw new \RuntimeException( 'BACKUP_SYMLINK_REJECTED' ); }
+    if ( ! $file->isFile() ) { continue; }
+    $to = $destination . '/' . substr( $file->getPathname(), strlen( $upload ) + 1 );
+    wp_mkdir_p( dirname( $to ) );
+    if ( ! copy( $file->getPathname(), $to ) ) { throw new \RuntimeException( 'BACKUP_UPLOAD_FAILED' ); }
+   }
+  }
+  return $dirName;
  }
  public static function locked( callable $callback ): mixed {
   self::guard(); $handle = fopen( self::path( 'writer.lock' ), 'c' );

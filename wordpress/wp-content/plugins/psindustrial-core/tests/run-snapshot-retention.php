@@ -73,6 +73,42 @@ use PSIndustrial\Core\Migration\Storage;
   sort( $survivorIndices );
   $assert( range( 70, 99 ) === $survivorIndices, '100 runs -> los 30 supervivientes son exactamente los 30 mas recientes (i=70..99)' );
 
+  // ============================================================== run activo (status=RUNNING) nunca se elimina, sin importar su antiguedad
+  // A full-local-resolved-only import can legitimately span many separate admin-UI batch
+  // calls; between them, an unrelated Planner::build() (a fresh dry-run preview, or simply
+  // this test suite itself, which builds dozens of plans per session) must never be able to
+  // evict the paused run's own snapshot just because 30+ newer files now exist.
+  $dir = $mk( array() );
+  $activePath = $dir . '/run-11111111-iiii-iiii-iiii-iiiiiiiiiiii.json';
+  file_put_contents( $activePath, wp_json_encode( array( 'status' => 'RUNNING', 'cursor' => 200 ) ) );
+  touch( $activePath, time() - 999999 ); // far older than every other candidate below.
+  for ( $i = 0; $i < 40; ++$i ) { $p = $dir . '/run-' . sprintf( '%08d', $i ) . '-jjjj-jjjj-jjjj-jjjjjjjjjjjj.json'; file_put_contents( $p, wp_json_encode( array( 'status' => 'VALIDATED' ) ) ); touch( $p, time() - ( 1000 - $i ) ); }
+  $r = Storage::retain_recent_runs( 30, $dir );
+  $assert( is_file( $activePath ), 'Run activo (RUNNING) sobrevive pese a ser el archivo mas antiguo del directorio' );
+  $assert( ! in_array( basename( $activePath ), $r['deleted'], true ), 'Run activo nunca aparece en la lista de eliminados' );
+  $assert( 30 === count( glob( $dir . '/run-0*.json' ) ), 'Los 40 candidatos normales se recortan a 30 exactamente igual, sin que el run activo consuma uno de esos 30 cupos' );
+
+  // A COMPLETE run (finished, or a plan that was built but never started) is NOT protected --
+  // only the specific in-progress signal (status=RUNNING) is. This is the control proving the
+  // exclusion is genuinely status-based, not merely "any file with valid-looking JSON".
+  $dir = $mk( array() );
+  $completePath = $dir . '/run-22222222-kkkk-kkkk-kkkk-kkkkkkkkkkkk.json';
+  file_put_contents( $completePath, wp_json_encode( array( 'status' => 'COMPLETE', 'cursor' => 999 ) ) );
+  touch( $completePath, time() - 999999 );
+  for ( $i = 0; $i < 30; ++$i ) { $p = $dir . '/run-' . sprintf( '%08d', $i ) . '-llll-llll-llll-llllllllllll.json'; file_put_contents( $p, wp_json_encode( array( 'status' => 'VALIDATED' ) ) ); touch( $p, time() - ( 1000 - $i ) ); }
+  $r = Storage::retain_recent_runs( 30, $dir );
+  $assert( in_array( basename( $completePath ), $r['deleted'], true ), 'Un run COMPLETE (o cualquier estado que no sea RUNNING), si es el mas antiguo, SI se elimina normalmente -- solo RUNNING esta protegido' );
+
+  // A run-*.json whose content is not valid JSON (or has no 'status' at all) must default to
+  // NORMAL eligibility, never be treated as protected by accident.
+  $dir = $mk( array() );
+  $garbagePath = $dir . '/run-33333333-mmmm-mmmm-mmmm-mmmmmmmmmmmm.json';
+  file_put_contents( $garbagePath, 'not valid json at all' );
+  touch( $garbagePath, time() - 999999 );
+  for ( $i = 0; $i < 30; ++$i ) { $p = $dir . '/run-' . sprintf( '%08d', $i ) . '-nnnn-nnnn-nnnn-nnnnnnnnnnnn.json'; file_put_contents( $p, wp_json_encode( array( 'status' => 'VALIDATED' ) ) ); touch( $p, time() - ( 1000 - $i ) ); }
+  $r = Storage::retain_recent_runs( 30, $dir );
+  $assert( in_array( basename( $garbagePath ), $r['deleted'], true ), 'Contenido no-JSON/sin status nunca se trata como protegido: elegible para retencion normal' );
+
   // ============================================================== identity/backup/decisions files preservados
   $dir = $mk( array(
    'identity-abc123.json' => time() - 999999,
