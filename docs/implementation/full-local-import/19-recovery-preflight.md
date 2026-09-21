@@ -1,33 +1,51 @@
-# Recovery pre-flight — ejecución real, sin mutación
+# Recovery pre-flight — resultado final, sin mutación
 
 Continúa de [18-recovery-retry-design.md](18-recovery-retry-design.md). **No se ejecutó
-ningún reintento real.** Ambas llamadas de esta página (`build_recovery_retry_plan()` y
-`recovery_preflight()`) se ejecutaron de verdad, en vivo, contra el estado local actual —
-confirmado sin mutación de `wp_posts`/`wp_terms` antes/después de cada una.
+ningún reintento real sobre las 48 entradas del recovery plan.** Toda llamada de esta página
+se ejecutó de verdad, en vivo, contra el estado local actual — confirmado sin mutación de
+`wp_posts`/`wp_terms` antes/después de cada una (incluida `verify_backup_restorable()`, que
+sólo muta una base de datos temporal propia, creada y eliminada en el mismo proceso).
 
-## Construcción real del plan de recuperación
-
-```php
-Runner::build_recovery_retry_plan( '2e0c1248-8d56-4d92-a33b-c17e37b2732e' );
-```
+## 1. Construcción del recovery plan (sin cambios desde el primer intento)
 
 ```
 recovery_run_id: 9c492018-cc99-4548-ac37-aed5d73688c1
 parent_run_id:   2e0c1248-8d56-4d92-a33b-c17e37b2732e
-recovery_reason: ORIGINAL_RUN_SNAPSHOT_PRUNED
-
-candidates_considered: 52
-retryable:             48
-rejected:               4
+candidates_considered: 52 · retryable: 48 · rejected: 4
 ```
 
-Coincide exactamente con [13-pdf-runtime-failures.md](13-pdf-runtime-failures.md) — no por
-reutilizar ese documento como fuente (el código nunca lo lee), sino porque ambos parten,
-independientemente, de la misma evidencia real (el log superviviente + el estado actual).
-Confirmado sin mutación de WordPress; el plan y su evidencia se escribieron en
-`run-9c492018-....json` / `recovery-evidence-9c492018-....json`, privados, fuera de Git.
+## 2. Backup post-primera-importación — creado y validado en vivo
 
-## Pre-flight real
+```php
+Runner::create_post_first_import_backup(
+  '2e0c1248-8d56-4d92-a33b-c17e37b2732e', '9c492018-cc99-4548-ac37-aed5d73688c1'
+);
+```
+
+```
+backup_id: postimport-41111c84-e2cd-49e2-8cac-aef08d2438cb
+created_at: 2026-09-21T16:19:07+00:00
+parent_run_completion_time: 2026-09-21T07:57:16+00:00   (created_at > completion: OK)
+db_name: psindustrial_wp_dev
+uploads_backup_manifest: 1.061 archivos con hash SHA-256 individual
+private_evidence_manifest: 3 archivos (log del run padre, recovery plan, evidencia del recovery)
+restore_verified: true
+```
+
+**Primer intento de restauración real: falló** —
+`SCHEMA_RESTORE_FAILED:psi_wp_comments:Invalid default value for 'comment_date'`. Causa
+real, no un defecto del backup: una conexión MySQL nueva usa por defecto
+`STRICT_TRANS_TABLES,NO_ZERO_DATE,...`, que rechaza el valor histórico de WordPress core
+para `comment_date` (`'0000-00-00 00:00:00'`). WordPress mismo resuelve esto quitando esos
+modos de su **propia** sesión al conectar (`wpdb::set_sql_mode()`, núcleo de WordPress, no
+algo de este proyecto). Corregido leyendo `$wpdb->get_var('SELECT @@SESSION.sql_mode')`
+(sólo lectura sobre la conexión ya existente) y aplicando ese mismo valor a la conexión
+temporal antes de restaurar — replica cómo WordPress ya opera siempre, no relaja ninguna
+validación propia. **Segundo intento: `restorable=true`, 12 tablas restauradas, 0 tablas
+esenciales faltantes, 0 discrepancias de conteo de filas.** 0 bases de datos temporales
+remanentes tras la verificación (confirmado).
+
+## 3. Pre-flight real, final
 
 ```php
 Runner::recovery_preflight( '9c492018-cc99-4548-ac37-aed5d73688c1' );
@@ -37,7 +55,7 @@ Runner::recovery_preflight( '9c492018-cc99-4548-ac37-aed5d73688c1' );
 {
     "run_id": "9c492018-cc99-4548-ac37-aed5d73688c1",
     "parent_run_id": "2e0c1248-8d56-4d92-a33b-c17e37b2732e",
-    "ok": false,
+    "ok": true,
     "checks": [
         { "id": "recovery_plan_exists", "passed": true },
         { "id": "is_recovery_scope", "passed": true, "detail": "scope=recovery" },
@@ -48,58 +66,42 @@ Runner::recovery_preflight( '9c492018-cc99-4548-ac37-aed5d73688c1' );
         { "id": "current_plan_still_equivalent", "passed": true },
         { "id": "applied_449_control_intact", "passed": true },
         { "id": "no_review_or_skip_entries_in_recovery_set", "passed": true },
-        { "id": "new_post_first_import_backup_present", "passed": false,
-          "detail": "A NEW backup taken AFTER the 449 already-applied objects is required before real execution; none recorded on this recovery plan yet." }
+        { "id": "new_post_first_import_backup_present", "passed": true },
+        { "id": "db_name_matches", "passed": true, "detail": "manifest=psindustrial_wp_dev actual=psindustrial_wp_dev" },
+        { "id": "db_dump_hash_current", "passed": true },
+        { "id": "uploads_backup_hashes_current", "passed": true },
+        { "id": "private_evidence_hashes_current", "passed": true },
+        { "id": "created_after_parent_completion", "passed": true },
+        { "id": "backup_restore_verified", "passed": true }
     ],
-    "blockers": ["new_post_first_import_backup_present"],
+    "blockers": [],
     "counts": { "retryable": 48, "rejected": 4, "candidates_considered": 52 },
     "new_backup_required": true,
-    "new_backup_present": false
+    "new_backup_present": true
 }
 ```
 
-## Lectura del resultado
+**16/16 comprobaciones en verde. `ok=true`. Cero bloqueadores. Números sin forzar** —
+idénticos a la primera construcción del plan, coherente con
+[13-pdf-runtime-failures.md](13-pdf-runtime-failures.md).
 
-| Pregunta del punto 18 | Respuesta |
-|---|---|
-| ¿Recovery posible? | **No todavía** — `ok=false`, un único bloqueador. |
-| Conteo exacto retryable | **48** |
-| Conteo exacto rejected | **4** |
-| Bloqueadores | `new_post_first_import_backup_present` — únicamente éste. |
-| ¿Evidencia del run padre disponible? | **Sí** — `log-2e0c1248-....jsonl` íntegro, verificado. |
-| ¿Equivalencia con el plan actual? | **Sí** — las 48 entradas siguen teniendo `source_hash`/`decision_hash`/`action` idénticos a cuando se construyó el plan de recuperación. |
-| ¿Backup nuevo requerido? | **Sí, explícitamente** — y **no está presente**: correcto, porque no se generó (instrucción explícita de no prepararlo si eso implica preparar la ejecución real). |
+## Control de los 449 y REVIEW/SKIP — sin cambios, verificados de nuevo
 
-`ok=false` es, por tanto, **el resultado correcto** — exactamente como anticipaba el punto
-18 de la tarea: sin ese backup nuevo, no hay base segura para preservar los 449 objetos ya
-migrados si algo saliera mal durante un futuro reintento real.
+`applied_449_control_intact=true`: las 449 entidades `result=CREATE` del log original
+siguen prediciendo `UNCHANGED`, sin excepción. `no_review_or_skip_entries_in_recovery_set=true`:
+ninguna de las 48 tiene `action` REVIEW/SKIP.
 
-## Control de los 449 — verificado explícitamente, no asumido
+## Qué falta antes de una ejecución real
 
-`applied_449_control_intact = true`: las 449 entidades que el log original registra como
-`result=CREATE` predicen `UNCHANGED` en el plan actual, sin excepción. Ninguna aparece como
-`CREATE`/`UPDATE`/`MERGE` inesperado — si alguna lo hiciera, `recovery_preflight()` lo
-reportaría como violación explícita en este mismo check, y por separado
-`build_recovery_retry_plan()` habría abortado por completo antes de construir nada
-(`APPLIED_CONTROL_VIOLATED`).
+1. **Autorización humana explícita** para invocar `Runner::batch_recovery()` con la frase
+   `'REINTENTAR RECOVERY LOCAL'` — no otorgada en esta fase; el ejecutor existe, está
+   probado (96 comprobaciones en `tests/batch-recovery-model.php`, contra fixtures
+   sintéticos seguros) y el pre-flight real está en verde, pero **no se invocó contra las
+   48 entradas reales**.
+2. Revisión humana del conjunto exacto de 48 (tabla completa en
+   [13-pdf-runtime-failures.md](13-pdf-runtime-failures.md)).
 
-## REVIEW/SKIP — confirmado fuera
-
-`no_review_or_skip_entries_in_recovery_set = true`: ninguna de las 48 entradas del plan de
-recuperación tiene `action` REVIEW o SKIP — estructuralmente imposible por diseño
-(`recovery_candidate_eligibility()` las rechaza en el paso 3), verificado aquí como control
-adicional sobre el plan ya construido.
-
-## Qué falta antes de una ejecución real futura
-
-1. Backup nuevo de la base de datos **posterior** a los 449 ya migrados (nunca reutilizar el
-   backup pre-primera-ejecución) — no generado en esta fase.
-2. Autorización humana explícita, con su propia frase de confirmación (aún no diseñada ni
-   solicitada — el mecanismo de ejecución real del recovery plan no se implementó en esta
-   fase; sólo construcción + pre-flight, según lo pedido).
-3. Revisión humana del conjunto exacto de 48 antes de autorizar nada.
-
-**Ningún reintento se ejecutó. Ninguna base de datos se mutó más allá de las lecturas
-documentadas. Ninguna publicación, staging o producción.**
+**Ningún reintento real se ejecutó. Ninguna base de datos real se mutó. Ninguna
+publicación, staging o producción.**
 
 Continúa en [20-retention-lifecycle.md](20-retention-lifecycle.md).

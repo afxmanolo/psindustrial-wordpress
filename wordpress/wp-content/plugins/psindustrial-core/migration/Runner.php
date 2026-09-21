@@ -14,6 +14,13 @@ final class Runner {
   *  (only the pre-identified retry set, never a full cursor walk) and gets its own explicit
   *  human confirmation rather than reusing a phrase approved for a different scope. */
  private const RETRY_CONFIRMATION = 'REINTENTAR FALLOS RESUELTOS';
+ /** Distinct from every other phrase in this class by construction -- a recovery plan
+  *  (scope=recovery) is its own materially different operation (only its own sealed
+  *  entries, never a full/subset cursor walk, built from a parent run whose own snapshot
+  *  is gone) and gets its own explicit human confirmation. batch_recovery() below accepts
+  *  ONLY this phrase and ONLY a scope=recovery plan; none of FULL_CONFIRMATION/
+  *  RETRY_CONFIRMATION/this phrase is ever interchangeable with either other. */
+ private const RECOVERY_CONFIRMATION = 'REINTENTAR RECOVERY LOCAL';
  /** Defensive sanity ceiling only -- not a tuning knob. The real limit on any single HTTP
   *  request is $limit/time-budget below; this just refuses to even attempt a plan whose
   *  mutable-entry count is wildly outside anything this project's actual catalogue could
@@ -809,15 +816,19 @@ final class Runner {
   foreach ( $plan['entries'] as $e ) { if ( in_array( $e['action'], array( 'REVIEW','SKIP' ), true ) ) { $reviewSkipUntouched = false; break; } }
   $add( 'no_review_or_skip_entries_in_recovery_set', $reviewSkipUntouched, '' );
 
-  $backupOk = ! empty( $plan['post_first_import_backup'] ?? null ) && is_file( Storage::path( $plan['post_first_import_backup'] ) );
-  $add( 'new_post_first_import_backup_present', $backupOk, $backupOk ? '' : 'A NEW backup taken AFTER the 449 already-applied objects is required before real execution; none recorded on this recovery plan yet.' );
+  $manifest = ! empty( $plan['post_first_import_backup'] ?? null ) ? Storage::read( $plan['post_first_import_backup'] ) : null;
+  $add( 'new_post_first_import_backup_present', (bool) $manifest, $manifest ? '' : 'A NEW backup taken AFTER the 449 already-applied objects is required before real execution; none recorded on this recovery plan yet.' );
+  if ( $manifest ) {
+   foreach ( self::verify_backup_integrity( $manifest ) as $id => $c ) { $add( $id, $c['passed'], $c['detail'] ); }
+   $add( 'backup_restore_verified', ! empty( $manifest['restore_verified'] ), ! empty( $manifest['restore_verified'] ) ? '' : 'The backup DB dump was not confirmed restorable (verify_backup_restorable() at creation time), or that check failed.' );
+  }
 
   $ok = empty( $blockers );
   return array(
    'run_id' => $recoveryRun, 'parent_run_id' => $plan['parent_run_id'] ?? null, 'ok' => $ok,
    'checks' => $checks, 'blockers' => $blockers,
    'counts' => array( 'retryable' => count( $plan['entries'] ), 'rejected' => $plan['evidence_summary']['rejected'] ?? null, 'candidates_considered' => $plan['evidence_summary']['candidates_considered'] ?? null ),
-   'new_backup_required' => true, 'new_backup_present' => $backupOk,
+   'new_backup_required' => true, 'new_backup_present' => (bool) $manifest,
   );
  }
 
@@ -837,6 +848,292 @@ final class Runner {
    if ( ! $plan ) { throw new \RuntimeException( 'RUN_NOT_FOUND' ); }
    $plan['closed_at'] = gmdate( 'c' ); $plan['recovery_open'] = false;
    Storage::write( 'run-' . $run . '.json', $plan );
+   return $plan;
+  } );
+ }
+
+ /**
+  * Post-first-import backup — deliberately separate from the `plan['backup']` taken
+  * automatically before the FIRST mutation of the parent run (which reflects state BEFORE
+  * the 449 already-applied objects existed and must never be reused as if it protected
+  * them). Captures CURRENT state, plus the specific private importer evidence a recovery
+  * depends on, under one manifest with per-file SHA-256 — never "the file exists" alone.
+  * Reuses Storage::backup_database()/backup_uploads() verbatim (same proven dump logic, a
+  * fresh id) rather than reimplementing it.
+  */
+ public static function create_post_first_import_backup( string $parentRunId, string $recoveryRunId ): array {
+  Storage::guard();
+  return Storage::locked( static function() use ( $parentRunId, $recoveryRunId ): array {
+   $parentLog = self::parse_run_log( $parentRunId ); // throws if gone — never backs up without knowing what it protects.
+   $lastTimestamp = null;
+   foreach ( $parentLog as $row ) { $ts = $row['timestamp'] ?? null; if ( $ts && ( null === $lastTimestamp || $ts > $lastTimestamp ) ) { $lastTimestamp = $ts; } }
+   if ( ! $lastTimestamp ) { throw new \RuntimeException( 'PARENT_RUN_COMPLETION_TIME_UNKNOWN' ); }
+
+   $recoveryPlan = Storage::read( 'run-' . $recoveryRunId . '.json' );
+   if ( ! $recoveryPlan || 'recovery' !== ( $recoveryPlan['scope'] ?? null ) || ( $recoveryPlan['parent_run_id'] ?? null ) !== $parentRunId ) { throw new \RuntimeException( 'VALID_RECOVERY_PLAN_REQUIRED' ); }
+
+   $backupId = 'postimport-' . wp_generate_uuid4();
+   $dbDumpName = Storage::backup_database( $backupId );
+   $uploadsDirName = Storage::backup_uploads( $backupId );
+
+   $hashTree = static function( string $absoluteDir ): array {
+    $out = array();
+    if ( ! is_dir( $absoluteDir ) ) { return $out; }
+    foreach ( new \RecursiveIteratorIterator( new \RecursiveDirectoryIterator( $absoluteDir, \FilesystemIterator::SKIP_DOTS ) ) as $file ) {
+     if ( $file->isLink() ) { continue; }
+     $rel = ltrim( str_replace( wp_normalize_path( $absoluteDir ), '', wp_normalize_path( $file->getPathname() ) ), '/' );
+     $out[ $rel ] = hash_file( 'sha256', $file->getPathname() );
+    }
+    ksort( $out );
+    return $out;
+   };
+   $uploadsManifest = $hashTree( Storage::root() . '/' . $uploadsDirName );
+
+   $evidenceDirName = 'backup-evidence-' . $backupId;
+   $evidenceDir = Storage::root() . '/' . $evidenceDirName;
+   if ( ! wp_mkdir_p( $evidenceDir ) ) { throw new \RuntimeException( 'PRIVATE_STORAGE_UNAVAILABLE' ); }
+   foreach ( array( 'log-' . $parentRunId . '.jsonl', 'run-' . $recoveryRunId . '.json', 'recovery-evidence-' . $recoveryRunId . '.json' ) as $name ) {
+    $src = Storage::path( $name );
+    if ( ! is_file( $src ) ) { throw new \RuntimeException( 'RECOVERY_EVIDENCE_MISSING_FOR_BACKUP:' . $name ); }
+    if ( ! copy( $src, $evidenceDir . '/' . $name ) ) { throw new \RuntimeException( 'EVIDENCE_BACKUP_COPY_FAILED:' . $name ); }
+   }
+   $evidenceManifest = $hashTree( $evidenceDir );
+
+   $manifest = array(
+    'backup_id' => $backupId, 'created_at' => gmdate( 'c' ),
+    'parent_run_id' => $parentRunId, 'recovery_run_id' => $recoveryRunId,
+    'parent_run_completion_time' => $lastTimestamp,
+    'db_name' => DB_NAME,
+    'db_dump_path' => $dbDumpName, 'db_dump_sha256' => hash_file( 'sha256', Storage::path( $dbDumpName ) ),
+    'uploads_backup_path' => $uploadsDirName, 'uploads_backup_manifest' => $uploadsManifest, 'uploads_backup_manifest_sha256' => Storage::hash( $uploadsManifest ),
+    'private_evidence_backup_path' => $evidenceDirName, 'private_evidence_manifest' => $evidenceManifest, 'private_evidence_manifest_sha256' => Storage::hash( $evidenceManifest ),
+   );
+   $manifestName = 'postimport-backup-' . $backupId . '.json';
+   Storage::write( $manifestName, $manifest ); // written once before the restore test, so verify_backup_restorable() reads the SAME on-disk manifest it is validating.
+
+   // Restore-validated once, here, at creation time — never re-run on every preflight call
+   // (recovery_preflight() only re-checks the RECORDED result's presence + current file
+   // hashes, which stays fast/cheap/repeatable). A failed or inconclusive restore test is
+   // recorded honestly, never silently discarded or retried into a false pass.
+   $restoreResult = self::verify_backup_restorable( $backupId );
+   $manifest['restore_verification'] = $restoreResult;
+   $manifest['restore_verified'] = (bool) ( $restoreResult['restorable'] ?? false );
+   $manifest['restore_verified_at'] = gmdate( 'c' );
+   Storage::write( $manifestName, $manifest );
+
+   $recoveryPlan['post_first_import_backup'] = $manifestName;
+   Storage::write( 'run-' . $recoveryRunId . '.json', $recoveryPlan );
+
+   return $manifest;
+  } );
+ }
+
+ /**
+  * Re-verifies a post-first-import backup's manifest against CURRENT on-disk bytes — never
+  * "the file exists" alone. Returns the SAME shape recovery_preflight() needs directly.
+  */
+ public static function verify_backup_integrity( array $manifest ): array {
+  $checks = array();
+  $add = static function( string $id, bool $passed, string $detail = '' ) use ( &$checks ): void { $checks[ $id ] = array( 'passed' => $passed, 'detail' => $detail ); };
+  $add( 'db_name_matches', ( $manifest['db_name'] ?? null ) === DB_NAME, 'manifest=' . ( $manifest['db_name'] ?? 'null' ) . ' actual=' . DB_NAME );
+  $dbPath = ( $manifest['db_dump_path'] ?? '' ) ? Storage::path( $manifest['db_dump_path'] ) : null;
+  $dbHashOk = $dbPath && is_file( $dbPath ) && hash_equals( $manifest['db_dump_sha256'] ?? '', hash_file( 'sha256', $dbPath ) );
+  $add( 'db_dump_hash_current', $dbHashOk, $dbHashOk ? '' : 'db_dump_path missing or hash no longer matches manifest.' );
+  $uploadsDir = ( $manifest['uploads_backup_path'] ?? '' ) ? Storage::root() . '/' . $manifest['uploads_backup_path'] : null;
+  $uploadsOk = true;
+  foreach ( $manifest['uploads_backup_manifest'] ?? array() as $rel => $sha ) {
+   $p = $uploadsDir . '/' . $rel;
+   if ( ! is_file( $p ) || ! hash_equals( $sha, hash_file( 'sha256', $p ) ) ) { $uploadsOk = false; break; }
+  }
+  $add( 'uploads_backup_hashes_current', $uploadsOk, $uploadsOk ? '' : 'At least one uploads backup file missing or changed since the manifest was written.' );
+  $evidenceDir = ( $manifest['private_evidence_backup_path'] ?? '' ) ? Storage::root() . '/' . $manifest['private_evidence_backup_path'] : null;
+  $evidenceOk = true;
+  foreach ( $manifest['private_evidence_manifest'] ?? array() as $rel => $sha ) {
+   $p = $evidenceDir . '/' . $rel;
+   if ( ! is_file( $p ) || ! hash_equals( $sha, hash_file( 'sha256', $p ) ) ) { $evidenceOk = false; break; }
+  }
+  $add( 'private_evidence_hashes_current', $evidenceOk, $evidenceOk ? '' : 'At least one private evidence backup file missing or changed since the manifest was written.' );
+  $completionOk = ! empty( $manifest['created_at'] ) && ! empty( $manifest['parent_run_completion_time'] ) && $manifest['created_at'] > $manifest['parent_run_completion_time'];
+  $add( 'created_after_parent_completion', $completionOk, $completionOk ? '' : 'backup created_at is not after the parent run own completion time.' );
+  return $checks;
+ }
+
+ /**
+  * Restore-validates a post-first-import backup by ACTUALLY restoring its DB dump into a
+  * freshly-created, uniquely-named TEMPORARY database — never psindustrial_wp_dev, never
+  * any pre-existing database. Uses raw mysqli (never `new wpdb(...)`, whose own failed-
+  * connection path can call wp_die() and halt the whole request) for every temp-database
+  * operation, so a connection or restore failure returns a normal, catchable result instead
+  * of a bare failure this method could not report cleanly. The global $wpdb / DB_NAME
+  * connection is never redirected, never written to, never read from here beyond its own
+  * `$wpdb->prefix` property. The temp database is always dropped in `finally` — on success,
+  * on a reported failure, or on a thrown exception — and only the exact database this call
+  * itself created.
+  *
+  * If any step cannot be done unambiguously safely (unreadable/tampered dump, connection
+  * failure, unsafe table/database name), returns restorable=false with a specific reason —
+  * never guesses, never leaves a partially-created temp database behind.
+  */
+ public static function verify_backup_restorable( string $backupId ): array {
+  Storage::guard();
+  $manifest = Storage::read( 'postimport-backup-' . $backupId . '.json' );
+  if ( ! $manifest ) { return array( 'restorable' => false, 'reason' => 'MANIFEST_NOT_FOUND' ); }
+  $dbPath = ( $manifest['db_dump_path'] ?? '' ) ? Storage::path( $manifest['db_dump_path'] ) : null;
+  if ( ! $dbPath || ! is_file( $dbPath ) || ! hash_equals( $manifest['db_dump_sha256'] ?? '', hash_file( 'sha256', $dbPath ) ) ) { return array( 'restorable' => false, 'reason' => 'DB_DUMP_HASH_MISMATCH_OR_MISSING' ); }
+  $dbBackup = Storage::read( $manifest['db_dump_path'] );
+  if ( ! $dbBackup || empty( $dbBackup['tables'] ) ) { return array( 'restorable' => false, 'reason' => 'DB_DUMP_UNREADABLE_OR_EMPTY' ); }
+  if ( ! defined( 'DB_USER' ) || ! defined( 'DB_PASSWORD' ) || ! defined( 'DB_HOST' ) ) { return array( 'restorable' => false, 'reason' => 'DB_CREDENTIALS_UNAVAILABLE' ); }
+
+  $tempDbName = 'psi_recovery_verify_' . substr( preg_replace( '/[^a-z0-9]/', '', strtolower( $backupId ) ), 0, 24 );
+  if ( ! preg_match( '/^psi_recovery_verify_[a-z0-9]{1,24}$/D', $tempDbName ) || 0 === strcasecmp( $tempDbName, DB_NAME ) ) { return array( 'restorable' => false, 'reason' => 'REFUSING_UNSAFE_TEMP_DB_NAME' ); }
+
+  global $wpdb;
+  $prefix = $wpdb->prefix; // read-only property access on the ALREADY-connected global — never a new query or a redirect of it.
+  // WordPress's own connection deliberately runs with STRICT_TRANS_TABLES/NO_ZERO_DATE/
+  // ONLY_FULL_GROUP_BY removed from sql_mode (wpdb::set_sql_mode(), core behaviour on
+  // every WordPress install, not a project-specific relaxation) precisely because WordPress
+  // core's own schema — e.g. wp_comments.comment_date's zero-date default — predates strict
+  // mode. Read-only: only reads $wpdb's OWN current session value, to replicate it on the
+  // temp connection below; never alters the main connection's mode or anything else about it.
+  $wordpressSqlMode = $wpdb->get_var( 'SELECT @@SESSION.sql_mode' );
+  $host = DB_HOST; $port = null;
+  if ( str_contains( $host, ':' ) ) { [ $host, $port ] = explode( ':', $host, 2 ); }
+
+  $created = false; $mysqli = null;
+  try {
+   $mysqli = @mysqli_connect( $host, DB_USER, DB_PASSWORD, '', $port ? (int) $port : 3306 );
+   if ( ! $mysqli ) { return array( 'restorable' => false, 'reason' => 'TEMP_CONNECTION_FAILED:' . mysqli_connect_error() ); }
+   if ( $wordpressSqlMode && ! mysqli_query( $mysqli, "SET SESSION sql_mode = '" . mysqli_real_escape_string( $mysqli, $wordpressSqlMode ) . "'" ) ) { return array( 'restorable' => false, 'reason' => 'SQL_MODE_ALIGNMENT_FAILED:' . mysqli_error( $mysqli ) ); }
+   if ( ! mysqli_query( $mysqli, 'CREATE DATABASE IF NOT EXISTS `' . $tempDbName . '`' ) ) { return array( 'restorable' => false, 'reason' => 'TEMP_DATABASE_CREATE_FAILED:' . mysqli_error( $mysqli ) ); }
+   $created = true;
+   if ( ! mysqli_select_db( $mysqli, $tempDbName ) ) { return array( 'restorable' => false, 'reason' => 'TEMP_DATABASE_SELECT_FAILED:' . mysqli_error( $mysqli ) ); }
+
+   $restoredTables = array(); $rowCounts = array();
+   foreach ( $dbBackup['tables'] as $table => $data ) {
+    if ( ! preg_match( '/^[A-Za-z0-9_]+$/D', $table ) ) { return array( 'restorable' => false, 'reason' => 'UNSAFE_TABLE_NAME_IN_DUMP:' . $table ); }
+    if ( ! mysqli_query( $mysqli, $data['schema'] ) ) { return array( 'restorable' => false, 'reason' => 'SCHEMA_RESTORE_FAILED:' . $table . ':' . mysqli_error( $mysqli ) ); }
+    foreach ( $data['rows'] as $row ) {
+     $colList = '`' . implode( '`,`', array_keys( $row ) ) . '`';
+     $valuesList = implode( ',', array_map( static fn( $v ) => null === $v ? 'NULL' : "'" . mysqli_real_escape_string( $mysqli, (string) $v ) . "'", array_values( $row ) ) );
+     if ( ! mysqli_query( $mysqli, "INSERT INTO `$table` ($colList) VALUES ($valuesList)" ) ) { return array( 'restorable' => false, 'reason' => 'ROW_RESTORE_FAILED:' . $table . ':' . mysqli_error( $mysqli ) ); }
+    }
+    $restoredTables[] = $table;
+    $countResult = mysqli_query( $mysqli, "SELECT COUNT(*) c FROM `$table`" );
+    $rowCounts[ $table ] = array( 'expected' => count( $data['rows'] ), 'actual' => $countResult ? (int) mysqli_fetch_assoc( $countResult )['c'] : -1 );
+   }
+
+   $essential = array( $prefix . 'posts', $prefix . 'postmeta', $prefix . 'terms', $prefix . 'term_taxonomy', $prefix . 'options', $prefix . 'users' );
+   $missingEssential = array_values( array_diff( $essential, $restoredTables ) );
+   $countMismatch = array();
+   foreach ( $rowCounts as $t => $c ) { if ( $c['expected'] !== $c['actual'] ) { $countMismatch[ $t ] = $c; } }
+
+   return array(
+    'restorable' => empty( $missingEssential ) && empty( $countMismatch ),
+    'temp_database' => $tempDbName, 'tables_restored' => count( $restoredTables ),
+    'missing_essential_tables' => $missingEssential, 'row_count_mismatches' => $countMismatch,
+   );
+  } finally {
+   if ( $mysqli ) {
+    if ( $created ) { mysqli_query( $mysqli, 'DROP DATABASE IF EXISTS `' . $tempDbName . '`' ); }
+    mysqli_close( $mysqli );
+   }
+  }
+ }
+
+ /**
+  * The individual-entry re-validation + apply step for ONE sealed recovery entry —
+  * extracted from batch_recovery() so this logic is independently testable against an
+  * explicit, caller-supplied $freshPlan, never requiring the recovery plan's own seal to be
+  * broken to simulate drift (breaking `entries` — one of the fields plan_hash actually
+  * covers — would correctly reject the WHOLE plan at the seal check, before ever reaching
+  * this per-entry logic; drift is about $sealedEntry vs. a DIFFERENT, freshly-built
+  * reality, never about mutating the sealed entry itself).
+  *
+  * Throws (never returns a "failed" status itself) on: the entity missing from
+  * $freshPlan, source_hash/decision_hash/action differing from $sealedEntry (drifted since
+  * the recovery plan was sealed), or a destination CONFLICT that is not this exact
+  * $parentRunId's own stale INTENT-ledger attempt. The caller (batch_recovery()) turns any
+  * non-fatal throw here into a CONFLICT result for this one entity, never altering any
+  * other entry's identity or the sealed list itself.
+  *
+  * An entity Identity::prediction()s as UNCHANGED (already applied — by an earlier batch of
+  * this same run, by a prior complete run of it, or by anything else) is recorded UNCHANGED
+  * and apply() is never called — the idempotency guarantee for re-running this same
+  * recovery to completion, or resuming it after an interruption, never duplicates anything.
+  */
+ private static function recovery_process_entry( array $sealedEntry, array $freshPlan, string $parentRunId ): array {
+  $key = $sealedEntry['entity_key'];
+  $current = array_column( $freshPlan['entries'], null, 'entity_key' )[ $key ] ?? null;
+  if ( ! $current ) { throw new \RuntimeException( 'ENTITY_MISSING_FROM_CURRENT_STATE' ); }
+  if ( $current['source_hash'] !== $sealedEntry['source_hash'] ) { throw new \RuntimeException( 'SOURCE_CHANGED_SINCE_RECOVERY_SEALED' ); }
+  if ( $current['decision_hash'] !== $sealedEntry['decision_hash'] ) { throw new \RuntimeException( 'DECISION_CHANGED_SINCE_RECOVERY_SEALED' ); }
+  if ( $current['action'] !== $sealedEntry['action'] ) { throw new \RuntimeException( 'ACTION_CHANGED_SINCE_RECOVERY_SEALED' ); }
+
+  $prediction = Identity::prediction( $current );
+  if ( 'UNCHANGED' === $prediction ) {
+   return array( 'entity_key' => $key, 'status' => 'UNCHANGED', 'wordpress_id' => Identity::find( $current ), 'processed_at' => gmdate( 'c' ) );
+  }
+  if ( 'CONFLICT' === $prediction ) {
+   $id = Identity::find( $current );
+   $ledger = Storage::read( Identity::ledger( $current ) );
+   $ownStaleAttempt = ! $id && $ledger && 'INTENT' === ( $ledger['status'] ?? null ) && empty( $ledger['wordpress_id'] ) && ( $ledger['run_id'] ?? null ) === $parentRunId;
+   if ( ! $ownStaleAttempt ) { throw new \RuntimeException( 'DESTINATION_EDITED_SINCE_RECOVERY_SEALED' ); }
+  }
+  $wpId = self::apply( $current, $freshPlan );
+  return array( 'entity_key' => $key, 'status' => 'APPLIED', 'wordpress_id' => $wpId, 'processed_at' => gmdate( 'c' ) );
+ }
+
+ /**
+  * Executor for a `scope=recovery` plan — accepts ONLY RECOVERY_CONFIRMATION, ONLY a
+  * `scope=recovery` plan; neither FULL_CONFIRMATION nor RETRY_CONFIRMATION is ever accepted
+  * here, and this phrase is never accepted by batch()/batch_full_local_resolved_only()/
+  * retry_failed_resolved_only(). Walks the plan's OWN sealed `entries` (fixed at
+  * build_recovery_retry_plan() time, proven by plan_hash) strictly by `cursor` — batch 1 is
+  * entries[0..19], batch 2 is [20..39], etc. for a limit of 20; NEVER recomputes which
+  * entities belong in the set (that would repeat the exact RETRY_SET_CHANGED_SINCE_FIRST_BUILD
+  * defect this executor exists to avoid: an entity a prior batch already applied would drop
+  * out of any freshly-recomputed eligibility set, since it is now UNCHANGED).
+  *
+  * Delegates each entry to recovery_process_entry() (see its own docblock for the
+  * individual-entry drift/idempotency contract) and turns any non-fatal throw into a
+  * CONFLICT result for that one entity, never altering the sealed list or any other entry.
+  */
+ public static function batch_recovery( string $recoveryRun, string $confirmation, int $limit = 20 ): array {
+  Storage::guard();
+  if ( self::RECOVERY_CONFIRMATION !== $confirmation ) { throw new \RuntimeException( 'EXPLICIT_RECOVERY_CONFIRMATION_REQUIRED' ); }
+  return Storage::locked( static function() use ( $recoveryRun, $limit ): array {
+   $plan = Storage::read( 'run-' . $recoveryRun . '.json' );
+   if ( ! $plan || 'recovery' !== ( $plan['scope'] ?? null ) || ! in_array( $plan['status'] ?? null, array( 'VALIDATED','RUNNING','COMPLETE' ), true ) || ! hash_equals( $plan['environment_id'], Storage::hash( array( home_url(), DB_NAME ) ) ) ) { throw new \RuntimeException( 'VALID_RECOVERY_PLAN_REQUIRED' ); }
+   if ( 'COMPLETE' === $plan['status'] ) { return $plan; }
+   if ( ! hash_equals( $plan['plan_hash'] ?? '', self::recovery_digest( $plan ) ) ) { throw new \RuntimeException( 'RECOVERY_PLAN_SEAL_BROKEN' ); }
+
+   $report = self::recovery_preflight( $recoveryRun );
+   if ( ! $report['ok'] ) { throw new \RuntimeException( 'RECOVERY_PREFLIGHT_FAILED:' . implode( ',', $report['blockers'] ) ); }
+
+   // Dependency-resolution substrate ONLY — never used to decide which entities are in
+   // scope (that stays fixed by $plan['entries']/cursor below) or their processing order.
+   $fresh = Planner::build( 'full' ); $fresh['run_id'] = $recoveryRun;
+
+   $plan['status'] = 'RUNNING'; $plan['mode'] = 'EXECUTE_RECOVERY';
+   $start = microtime( true ); $done = 0; $media = 0;
+   while ( $plan['cursor'] < count( $plan['entries'] ) && $done < min( 20, max( 1, $limit ) ) && $media < 20 && microtime( true ) - $start < 20 ) {
+    $sealedEntry = $plan['entries'][ $plan['cursor'] ];
+    $key = $sealedEntry['entity_key'];
+    try {
+     $result = self::recovery_process_entry( $sealedEntry, $fresh, $plan['parent_run_id'] ?? '' );
+    } catch ( \Throwable $error ) {
+     if ( self::is_fatal( $error ) ) { $plan['status'] = 'RUNNING'; Storage::write( 'run-' . $recoveryRun . '.json', $plan ); throw $error; }
+     // Every non-fatal individual-entry problem — drift, destination conflict, a WordPress
+     // write rejection — surfaces uniformly as CONFLICT: never alters any other sealed
+     // entry's identity or position, only this one entity's own outcome.
+     $result = array( 'entity_key' => $key, 'status' => 'CONFLICT', 'wordpress_id' => 0, 'notes' => self::safe_error( $error->getMessage() ), 'processed_at' => gmdate( 'c' ) );
+    }
+    $plan['results'][] = $result; ++$plan['cursor']; ++$done; if ( 'media' === $sealedEntry['source_type'] ) { ++$media; }
+    Storage::log( $recoveryRun, $key, 'RECOVERY', $result['status'], $result['notes'] ?? '' );
+    Storage::write( 'run-' . $recoveryRun . '.json', $plan );
+   }
+   if ( $plan['cursor'] === count( $plan['entries'] ) ) { $plan['status'] = 'COMPLETE'; }
+   Storage::write( 'run-' . $recoveryRun . '.json', $plan );
    return $plan;
   } );
  }
@@ -899,16 +1196,25 @@ final class Runner {
   * filename: re-verifies, from scratch, on every single invocation --
   *  (a) this is the EXACT temp file Runner::media() just created for THIS entity ($tmp),
   *      never any other file mid-upload elsewhere in the request;
-  *  (b) Media::upload() actually rejected it (nothing to override otherwise);
-  *  (c) the source bytes still match the hash Runner::media() already re-verified above;
+  *  (b) the error is the EXACT, specific "not allowed" message Media::upload() itself
+  *      sets for a failed Media::file_valid() call — the same translation call, so it can
+  *      never drift out of sync with that string — never any other error WordPress's own
+  *      pipeline might have set for an unrelated reason (disk full, permissions, a
+  *      different filter entirely); an unrecognised error is left untouched;
+  *  (c) the bytes actually being sent RIGHT NOW ($file['tmp_name']'s own current content,
+  *      not merely $source, in case anything touched the temp file between Runner::media()'s
+  *      copy() and this filter running) hash to the exact value Runner::media() already
+  *      re-verified above;
   *  (d) it is a PDF with an exact-hash, path-matched PdfApprovals Group B exception --
   *      never Group A (a sanitized substitute already passes Media::file_valid() alone; see
   *      media_is_valid()'s own docblock), never an unapproved file, never a real threat.
-  * Only then clears the rejection; otherwise returns $file untouched, including any other
-  * error Media::upload() itself set.
+  * Only then clears the rejection; otherwise returns $file completely untouched.
   */
  private static function approved_sideload_override( array $file, string $tmp, string $source, array $d ): array {
   if ( ( $file['tmp_name'] ?? '' ) !== $tmp || empty( $file['error'] ) ) { return $file; }
+  $expectedError = __( 'Archivo no permitido: use JPG, PNG o WebP hasta 10 MB (máximo 8000 px y 40 megapíxeles), o PDF hasta 20 MB sin contenido activo detectado.', 'psindustrial-core' );
+  if ( $file['error'] !== $expectedError ) { return $file; } // a different WordPress error is never ours to clear.
+  if ( ! is_file( $tmp ) || ! hash_equals( $d['sha256'], hash_file( 'sha256', $tmp ) ) ) { return $file; } // the bytes actually about to be sent, not merely $source.
   if ( ! hash_equals( $d['sha256'], hash_file( 'sha256', $source ) ) ) { return $file; }
   if ( 'application/pdf' !== $d['mime'] || ! PdfApprovals::isApprovedFalsePositive( $d['path'] ?? '', hash_file( 'sha256', $source ) ) ) { return $file; }
   $file['error'] = '';

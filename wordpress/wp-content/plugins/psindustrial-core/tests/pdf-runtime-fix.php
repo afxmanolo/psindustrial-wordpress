@@ -82,18 +82,39 @@ use PSIndustrial\Core\Migration\{Storage,Sources,PdfApprovals,Planner,Runner};
   }
 
   // ============================================== BUG 2: approved_sideload_override()
+  $bPath = $groupB[0]; $bEntry = $entries[ 'asset:' . $bPath ];
+  $bSource = Storage::path( $bEntry['data']['package_asset'] );
+  $bData = array( 'sha256' => $bEntry['data']['sha256'], 'mime' => 'application/pdf', 'path' => $bPath );
+  // $tmp must genuinely carry the real Group B bytes -- the hardened override now hashes
+  // tmp_name's OWN current content (never trusts $source alone), so a placeholder file would
+  // legitimately (and correctly) fail the check meant to catch exactly this kind of drift.
   $tmp = sys_get_temp_dir() . '/psi-override-test-' . wp_generate_uuid4() . '.pdf';
-  file_put_contents( $tmp, 'placeholder' ); // never sideloaded -- only tmp_name identity matters below.
+  copy( $bSource, $tmp );
+  $exactExpectedError = __( 'Archivo no permitido: use JPG, PNG o WebP hasta 10 MB (máximo 8000 px y 40 megapíxeles), o PDF hasta 20 MB sin contenido activo detectado.', 'psindustrial-core' );
   try {
-   $bPath = $groupB[0]; $bEntry = $entries[ 'asset:' . $bPath ];
-   $bSource = Storage::path( $bEntry['data']['package_asset'] );
-   $bData = array( 'sha256' => $bEntry['data']['sha256'], 'mime' => 'application/pdf', 'path' => $bPath );
-
-   // "PDF-B path + hash aprobado -> sideload permitido": WordPress rejected it (error set);
-   // the override, seeing the exact tmp_name + matching hash + approved exception, clears it.
-   $rejected = array( 'tmp_name' => $tmp, 'error' => 'Archivo no permitido: ...' );
+   // "PDF-B path + hash aprobado -> sideload permitido": WordPress rejected it with the
+   // EXACT expected message (error set); the override, seeing the exact tmp_name + that
+   // exact message + the real tmp bytes matching + an approved exception, clears it.
+   $rejected = array( 'tmp_name' => $tmp, 'error' => $exactExpectedError );
    $result = $call( 'approved_sideload_override', array( $rejected, $tmp, $bSource, $bData ) );
-   $assert( '' === $result['error'], 'Approved Group B exact path+hash: rejection cleared' );
+   $assert( '' === $result['error'], 'Approved Group B exact path+hash+message: rejection cleared' );
+
+   // "el error debe ser exactamente el esperado -> bloqueado si es otro": a DIFFERENT
+   // WordPress error (disk full, permissions, anything else) on the SAME tmp_name/hash/
+   // approval must never be cleared -- this is never ours to override.
+   $unrelatedError = array( 'tmp_name' => $tmp, 'error' => 'Some unrelated WordPress upload error.' );
+   $resultUnrelated = $call( 'approved_sideload_override', array( $unrelatedError, $tmp, $bSource, $bData ) );
+   $assert( 'Some unrelated WordPress upload error.' === $resultUnrelated['error'], 'A non-matching, unrelated WordPress error is never cleared, even with an otherwise-approved file' );
+
+   // "hash de tmp_name alterado -> bloqueado": if the actual bytes about to be sent no
+   // longer match (even though $source itself is untouched), the override must not fire.
+   $driftedTmp = sys_get_temp_dir() . '/psi-override-drifted-' . wp_generate_uuid4() . '.pdf';
+   file_put_contents( $driftedTmp, 'these are not the approved bytes' );
+   $driftedRejected = array( 'tmp_name' => $driftedTmp, 'error' => $exactExpectedError );
+   try {
+    $resultDrifted = $call( 'approved_sideload_override', array( $driftedRejected, $driftedTmp, $bSource, $bData ) );
+    $assert( $exactExpectedError === $resultDrifted['error'], 'tmp_name content no longer matching the approved hash is never cleared, even with a matching tmp_name identity and exact message' );
+   } finally { @unlink( $driftedTmp ); }
 
    // "mismo path + hash distinto -> bloqueado"
    $wrongHashData = array( 'sha256' => str_repeat( 'c', 64 ), 'mime' => 'application/pdf', 'path' => $bPath );
