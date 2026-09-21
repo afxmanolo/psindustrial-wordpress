@@ -273,6 +273,11 @@ Do not introduce abstractions without a clear purpose.
 
 Preserve frontend behavior unless the change is intentional.
 
+The PS Industrial frontend must preserve the legacy site's visual identity,
+structure and composition with high fidelity. Modernizing implementation does
+not mean redesigning. Significant visual changes must be justified and approved
+before implementation.
+
 
 # Current Project Phase
 

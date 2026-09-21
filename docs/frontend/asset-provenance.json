@@ -1,0 +1,58 @@
+[
+  {
+    "source": "legacy/public/images/banner1.jpg",
+    "theme_asset": "assets/images/banner1.jpg",
+    "classification": "IDENTITY",
+    "sha256": "4bc014975343535716668557e35bb56c8da81ffd1902d59cb4eea9408826e162",
+    "bytes": 338220,
+    "exact_copy": true
+  },
+  {
+    "source": "legacy/public/images/logo-white@2x.png",
+    "theme_asset": "assets/images/logo-white@2x.png",
+    "classification": "IDENTITY",
+    "sha256": "3fd00017ec40ba08f9c4a5dd4ef05be7729251725ffa8d8f26c2a6197704bfda",
+    "bytes": 12547,
+    "exact_copy": true
+  },
+  {
+    "source": "legacy/public/images/logo-black-big@2x.png",
+    "theme_asset": "assets/images/logo-black-big@2x.png",
+    "classification": "IDENTITY",
+    "sha256": "29a2e836da1bbca95dc8bceb9d23709a21bb355a74210cc611edc4347adcb41f",
+    "bytes": 16721,
+    "exact_copy": true
+  },
+  {
+    "source": "legacy/public/images/demo-marketing-footer-dot.svg",
+    "theme_asset": "assets/images/demo-marketing-footer-dot.svg",
+    "classification": "UI",
+    "sha256": "d57f8b5a7b9abe6a54664527368f30ccf1acd10660bfe78a0d33e647e0c5b336",
+    "bytes": 342,
+    "exact_copy": true
+  },
+  {
+    "source": "legacy/public/fonts/feather.woff",
+    "theme_asset": "assets/fonts/feather.woff",
+    "classification": "UI",
+    "sha256": "ef3c47cb702e040372a3a4bce66d5e0ecc46c56325ec40f8c00b91da0d1d3f46",
+    "bytes": 29500,
+    "exact_copy": true
+  },
+  {
+    "source": "legacy/public/images/verficha.png",
+    "theme_asset": "assets/images/ver-ficha-tecnica.png",
+    "classification": "UI_ONLY_ASSET",
+    "sha256": "3f5aeebc29765caddc907536949a7c1802341f1771394b26a5d63c6ab9cfaf0f",
+    "bytes": 5135,
+    "exact_copy": true
+  },
+  {
+    "source": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+    "theme_asset": "assets/fonts/inter-latin.woff2",
+    "classification": "LEGACY_FONT_SELF_HOSTED",
+    "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "license": "assets/fonts/Inter-OFL.txt",
+    "source_css": "legacy/public/css/marketing.css: Inter family; latin WOFF2 obtained from Google Fonts CSS"
+  }
+]

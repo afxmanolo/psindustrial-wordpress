@@ -1,2 +1,1 @@
-<?php defined( 'ABSPATH' ) || exit; require __DIR__ . '/archive.php';
-
+<?php defined( 'ABSPATH' ) || exit; get_template_part( 'template-parts/catalog' );

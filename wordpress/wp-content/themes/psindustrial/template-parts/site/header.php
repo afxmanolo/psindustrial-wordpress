@@ -1,4 +1,5 @@
 <?php defined( 'ABSPATH' ) || exit; ?>
+<?php if ( \PSIndustrial\Theme\is_catalog() ) { get_template_part( 'template-parts/site/catalog-header' ); return; } ?>
 <header class="site-header shell">
 	<a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
 	<button class="nav-toggle" type="button" hidden aria-controls="site-navigation" aria-expanded="true"><?php esc_html_e( 'Menú', 'psindustrial' ); ?></button>
