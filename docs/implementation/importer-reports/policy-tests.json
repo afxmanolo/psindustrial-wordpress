@@ -16542,63 +16542,63 @@
             "passed": true
         },
         {
-            "test": "Subset identity still present and unchanged: asset:fichas\/puerta-420.pdf",
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:fichas\/puerta-420.pdf",
             "passed": true
         },
         {
-            "test": "Subset identity still present and unchanged: asset:images\/2025-08-21_11h53_44.png",
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/2025-08-21_11h53_44.png",
             "passed": true
         },
         {
-            "test": "Subset identity still present and unchanged: asset:images\/piso.jpg",
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/piso.jpg",
             "passed": true
         },
         {
-            "test": "Subset identity still present and unchanged: asset:images\/puerta-420.jpg",
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/puerta-420.jpg",
             "passed": true
         },
         {
-            "test": "Subset identity still present and unchanged: asset:images\/puerta-420t.png",
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/puerta-420t.png",
             "passed": true
         },
         {
-            "test": "Subset identity still present and unchanged: asset:images\/sectional-steel-door-416.jpg",
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/sectional-steel-door-416.jpg",
             "passed": true
         },
         {
-            "test": "Subset identity still present and unchanged: asset:images\/tg.png",
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/tg.png",
             "passed": true
         },
         {
-            "test": "Subset identity still present and unchanged: asset:system\/files\/images\/categorias\/59ca6b73479b3fcde81f96439976896bad94b750",
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:system\/files\/images\/categorias\/59ca6b73479b3fcde81f96439976896bad94b750",
             "passed": true
         },
         {
-            "test": "Subset identity still present and unchanged: category:1",
+            "test": "Subset identity still present, prediction=UNCHANGED: category:1",
             "passed": true
         },
         {
-            "test": "Subset identity still present and unchanged: category:8",
+            "test": "Subset identity still present, prediction=UNCHANGED: category:8",
             "passed": true
         },
         {
-            "test": "Subset identity still present and unchanged: brand:1",
+            "test": "Subset identity still present, prediction=UNCHANGED: brand:1",
             "passed": true
         },
         {
-            "test": "Subset identity still present and unchanged: sql:productos:63",
+            "test": "Subset identity still present, prediction=UNCHANGED: sql:productos:63",
             "passed": true
         },
         {
-            "test": "Subset identity still present and unchanged: sql:productos:64",
+            "test": "Subset identity still present, prediction=UNCHANGED: sql:productos:64",
             "passed": true
         },
         {
-            "test": "Subset identity still present and unchanged: static:automatismos-para-cancelas-cubic.php",
+            "test": "Subset identity still present, prediction=UNCHANGED: static:automatismos-para-cancelas-cubic.php",
             "passed": true
         },
         {
-            "test": "Subset identity still present and unchanged: php:nosotros.php",
+            "test": "Subset identity still present, prediction=CONFLICT: php:nosotros.php",
             "passed": true
         },
         {

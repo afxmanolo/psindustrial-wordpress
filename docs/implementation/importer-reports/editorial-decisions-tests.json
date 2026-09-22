@@ -1,5 +1,5 @@
 {
-    "passed": false,
+    "passed": true,
     "checks": [
         {
             "test": "Two full DRY RUNs change nothing in the database",
@@ -678,9 +678,824 @@
             "passed": true
         },
         {
-            "test": "Pure-duplicate group: image union deduplicated to 2 (not 3 raw, not 6 across both members): count=1",
-            "passed": false
+            "test": "Pure duplicate retains its actual photo exactly once; the second former image was the UI button",
+            "passed": true
+        },
+        {
+            "test": "Pure-duplicate group: union keeps the winning path of the duplicate pair",
+            "passed": true
+        },
+        {
+            "test": "Duplicate binary image -> only one survives the union (the other path is dropped, not both kept)",
+            "passed": true
+        },
+        {
+            "test": "Independent proof: the two paths really are byte-identical (this is why they collapse to one)",
+            "passed": true
+        },
+        {
+            "test": "Identical PDF -> only one survives the union: sql:productos:4",
+            "passed": true
+        },
+        {
+            "test": "Featured image is the first image of the oldest record (by productos.fecha)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:7",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:91",
+            "passed": true
+        },
+        {
+            "test": "Complementary-photos group: winner (id 7) action is MERGE",
+            "passed": true
+        },
+        {
+            "test": "Complementary-photos group: loser (id 91) action is SKIP",
+            "passed": true
+        },
+        {
+            "test": "Complementary-photos group: union of unique photos includes the loser's distinct image",
+            "passed": true
+        },
+        {
+            "test": "Complementary-photos union retains both real photos, excluding only the verified UI button",
+            "passed": true
+        },
+        {
+            "test": "field_winners['name'] points to the winner itself: sql:productos:4",
+            "passed": true
+        },
+        {
+            "test": "field_winners['content'] points to the winner itself: sql:productos:4",
+            "passed": true
+        },
+        {
+            "test": "field_winners['categories'] points to the winner itself: sql:productos:4",
+            "passed": true
+        },
+        {
+            "test": "field_winners['brand'] points to the winner itself: sql:productos:4",
+            "passed": true
+        },
+        {
+            "test": "field_winners['images'] points to the winner itself: sql:productos:4",
+            "passed": true
+        },
+        {
+            "test": "field_winners['pdfs'] points to the winner itself: sql:productos:4",
+            "passed": true
+        },
+        {
+            "test": "field_winners['videos'] points to the winner itself: sql:productos:4",
+            "passed": true
+        },
+        {
+            "test": "editorial_approval is present: sql:productos:4",
+            "passed": true
+        },
+        {
+            "test": "source_keys includes the winner itself: sql:productos:4",
+            "passed": true
+        },
+        {
+            "test": "field_winners['name'] points to the winner itself: sql:productos:7",
+            "passed": true
+        },
+        {
+            "test": "field_winners['content'] points to the winner itself: sql:productos:7",
+            "passed": true
+        },
+        {
+            "test": "field_winners['categories'] points to the winner itself: sql:productos:7",
+            "passed": true
+        },
+        {
+            "test": "field_winners['brand'] points to the winner itself: sql:productos:7",
+            "passed": true
+        },
+        {
+            "test": "field_winners['images'] points to the winner itself: sql:productos:7",
+            "passed": true
+        },
+        {
+            "test": "field_winners['pdfs'] points to the winner itself: sql:productos:7",
+            "passed": true
+        },
+        {
+            "test": "field_winners['videos'] points to the winner itself: sql:productos:7",
+            "passed": true
+        },
+        {
+            "test": "editorial_approval is present: sql:productos:7",
+            "passed": true
+        },
+        {
+            "test": "source_keys includes the winner itself: sql:productos:7",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:50",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:59",
+            "passed": true
+        },
+        {
+            "test": "Group with an invalid union asset: winner stays plain REVIEW, no Q02 decision at all",
+            "passed": true
+        },
+        {
+            "test": "Group with an invalid union asset: loser is NOT silently SKIPped (no data loss without a completed merge)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:1",
+            "passed": true
+        },
+        {
+            "test": "Q03 editorial-merge group member untouched by Q02: sql:productos:1",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:109",
+            "passed": true
+        },
+        {
+            "test": "Q03 editorial-merge group member untouched by Q02: sql:productos:109",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:110",
+            "passed": true
+        },
+        {
+            "test": "Q03 editorial-merge group member untouched by Q02: sql:productos:110",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:114",
+            "passed": true
+        },
+        {
+            "test": "Q03 editorial-merge group member untouched by Q02: sql:productos:114",
+            "passed": true
+        },
+        {
+            "test": "editorial-decisions.json declares exactly 26 Q02 groups",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: accesorios.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: accesorios.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: accesorios.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: coleccion-classic.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: coleccion-classic.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: coleccion-classic.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: cortina-serie-620.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: cortina-serie-620.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: cortina-serie-620.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: cortina-serie-625.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: cortina-serie-625.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: cortina-serie-625.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: cortina-serie-630.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: cortina-serie-630.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: cortina-serie-630.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: energy-series-with-intellicore-3720-3724-3722.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: energy-series-with-intellicore-3720-3724-3722.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: energy-series-with-intellicore-3720-3724-3722.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: fire-rated-doors-firestar-models-700-700c.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: fire-rated-doors-firestar-models-700-700c.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: fire-rated-doors-firestar-models-700-700c.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: kronos-puertas-rapidas-de-sectores-modulares-autorreparable.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: kronos-puertas-rapidas-de-sectores-modulares-autorreparable.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: kronos-puertas-rapidas-de-sectores-modulares-autorreparable.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: operador-comercial-rhx.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: operador-comercial-rhx.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: operador-comercial-rhx.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: phobos-n-piston-electromecanico.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: phobos-n-piston-electromecanico.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: phobos-n-piston-electromecanico.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: predadoor-nxt-door.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: predadoor-nxt-door.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: predadoor-nxt-door.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: puerta-contra-explosion.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: puerta-contra-explosion.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: puerta-contra-explosion.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: puerta-de-acero-acanalado-modelos-524.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: puerta-de-acero-acanalado-modelos-524.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: puerta-de-acero-acanalado-modelos-524.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: puertas-contra-rayos-x.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: puertas-contra-rayos-x.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: puertas-contra-rayos-x.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: puertas-industriales-dockman.php",
+            "passed": true
+        },
+        {
+            "test": "Untouched group member stays REVIEW: sql:productos:50",
+            "passed": true
+        },
+        {
+            "test": "Untouched group member stays REVIEW: sql:productos:59",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: puertas-seccionales-de-acero-modelo-2415.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: puertas-seccionales-de-acero-modelo-2415.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: puertas-seccionales-de-acero-modelo-2415.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: rampa-niveladora-mecanica-blue-giant.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: rampa-niveladora-mecanica-blue-giant.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: rampa-niveladora-mecanica-blue-giant.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: rampas-de-anden-hidraulicas.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: rampas-de-anden-hidraulicas.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: rampas-de-anden-hidraulicas.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: rampas-de-anden-mecanicas.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: rampas-de-anden-mecanicas.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: rampas-de-anden-mecanicas.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: rapida-enrollable-industrial.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: rapida-enrollable-industrial.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: rapida-enrollable-industrial.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: retenedor-de-vehiculos.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: retenedor-de-vehiculos.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: retenedor-de-vehiculos.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: sellos-de-anden.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: sellos-de-anden.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: sellos-de-anden.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: serie-x130-motor-para-cortina-oculto.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: serie-x130-motor-para-cortina-oculto.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: serie-x130-motor-para-cortina-oculto.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: shelter-abrigo-estacionario-blue-giant.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: shelter-abrigo-estacionario-blue-giant.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: shelter-abrigo-estacionario-blue-giant.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: star4-vehicle-restraint.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: star4-vehicle-restraint.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: star4-vehicle-restraint.php",
+            "passed": true
+        },
+        {
+            "test": "Group is all-or-nothing for Q02, never partially decided: vertigo.php",
+            "passed": true
+        },
+        {
+            "test": "Exactly one MERGE winner: vertigo.php",
+            "passed": true
+        },
+        {
+            "test": "All other members are SKIP: vertigo.php",
+            "passed": true
+        },
+        {
+            "test": "Every approved group accounted for exactly once",
+            "passed": true
+        },
+        {
+            "test": "A large majority of the 26 groups fully resolve (25 merged, 1 untouched by an unrelated blocker)",
+            "passed": true
+        },
+        {
+            "test": "editorial-decisions.json declares exactly 15 Q06 ids (151-164 + 165)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:151",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record SKIP: sql:productos:151",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record decision is Q06: sql:productos:151",
+            "passed": true
+        },
+        {
+            "test": "No empty product is ever created: sql:productos:151",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:152",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record SKIP: sql:productos:152",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record decision is Q06: sql:productos:152",
+            "passed": true
+        },
+        {
+            "test": "No empty product is ever created: sql:productos:152",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:153",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record SKIP: sql:productos:153",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record decision is Q06: sql:productos:153",
+            "passed": true
+        },
+        {
+            "test": "No empty product is ever created: sql:productos:153",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:154",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record SKIP: sql:productos:154",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record decision is Q06: sql:productos:154",
+            "passed": true
+        },
+        {
+            "test": "No empty product is ever created: sql:productos:154",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:155",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record SKIP: sql:productos:155",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record decision is Q06: sql:productos:155",
+            "passed": true
+        },
+        {
+            "test": "No empty product is ever created: sql:productos:155",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:156",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record SKIP: sql:productos:156",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record decision is Q06: sql:productos:156",
+            "passed": true
+        },
+        {
+            "test": "No empty product is ever created: sql:productos:156",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:157",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record SKIP: sql:productos:157",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record decision is Q06: sql:productos:157",
+            "passed": true
+        },
+        {
+            "test": "No empty product is ever created: sql:productos:157",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:158",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record SKIP: sql:productos:158",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record decision is Q06: sql:productos:158",
+            "passed": true
+        },
+        {
+            "test": "No empty product is ever created: sql:productos:158",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:159",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record SKIP: sql:productos:159",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record decision is Q06: sql:productos:159",
+            "passed": true
+        },
+        {
+            "test": "No empty product is ever created: sql:productos:159",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:160",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record SKIP: sql:productos:160",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record decision is Q06: sql:productos:160",
+            "passed": true
+        },
+        {
+            "test": "No empty product is ever created: sql:productos:160",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:161",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record SKIP: sql:productos:161",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record decision is Q06: sql:productos:161",
+            "passed": true
+        },
+        {
+            "test": "No empty product is ever created: sql:productos:161",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:162",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record SKIP: sql:productos:162",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record decision is Q06: sql:productos:162",
+            "passed": true
+        },
+        {
+            "test": "No empty product is ever created: sql:productos:162",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:163",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record SKIP: sql:productos:163",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record decision is Q06: sql:productos:163",
+            "passed": true
+        },
+        {
+            "test": "No empty product is ever created: sql:productos:163",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:164",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record SKIP: sql:productos:164",
+            "passed": true
+        },
+        {
+            "test": "Empty legacy record decision is Q06: sql:productos:164",
+            "passed": true
+        },
+        {
+            "test": "No empty product is ever created: sql:productos:164",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:165",
+            "passed": true
+        },
+        {
+            "test": "ID 165 (\"Prueba\") is SKIP under Q06",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:system\/files\/images\/productos\/3795fc76a4c3c0133fecce131dcac2542c18e980",
+            "passed": true
+        },
+        {
+            "test": "Media exclusively owned by a Q06 record is SKIP",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:system\/files\/images\/productos\/1bc8deceeea60e7d404142cf859897e4e36ccc86",
+            "passed": true
+        },
+        {
+            "test": "Media shared with a valid (non-Q06) entity is never touched by Q06",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:images\/accesorio-1.jpeg",
+            "passed": true
+        },
+        {
+            "test": "A binary duplicate of a Q06-exclusive image, itself unreferenced by any product, is preserved (not SKIPped by resemblance)",
+            "passed": true
+        },
+        {
+            "test": "Every Q06 product decision is within the approved 15 ids: sql:productos:151",
+            "passed": true
+        },
+        {
+            "test": "Every Q06 product decision is within the approved 15 ids: sql:productos:152",
+            "passed": true
+        },
+        {
+            "test": "Every Q06 product decision is within the approved 15 ids: sql:productos:153",
+            "passed": true
+        },
+        {
+            "test": "Every Q06 product decision is within the approved 15 ids: sql:productos:154",
+            "passed": true
+        },
+        {
+            "test": "Every Q06 product decision is within the approved 15 ids: sql:productos:155",
+            "passed": true
+        },
+        {
+            "test": "Every Q06 product decision is within the approved 15 ids: sql:productos:156",
+            "passed": true
+        },
+        {
+            "test": "Every Q06 product decision is within the approved 15 ids: sql:productos:157",
+            "passed": true
+        },
+        {
+            "test": "Every Q06 product decision is within the approved 15 ids: sql:productos:158",
+            "passed": true
+        },
+        {
+            "test": "Every Q06 product decision is within the approved 15 ids: sql:productos:159",
+            "passed": true
+        },
+        {
+            "test": "Every Q06 product decision is within the approved 15 ids: sql:productos:160",
+            "passed": true
+        },
+        {
+            "test": "Every Q06 product decision is within the approved 15 ids: sql:productos:161",
+            "passed": true
+        },
+        {
+            "test": "Every Q06 product decision is within the approved 15 ids: sql:productos:162",
+            "passed": true
+        },
+        {
+            "test": "Every Q06 product decision is within the approved 15 ids: sql:productos:163",
+            "passed": true
+        },
+        {
+            "test": "Every Q06 product decision is within the approved 15 ids: sql:productos:164",
+            "passed": true
+        },
+        {
+            "test": "Every Q06 product decision is within the approved 15 ids: sql:productos:165",
+            "passed": true
+        },
+        {
+            "test": "Exactly 15 Q06 product decisions (15)",
+            "passed": true
+        },
+        {
+            "test": "Q06 media decisions within the documented bound of 16 (16)",
+            "passed": true
         }
-    ],
-    "error": "Pure-duplicate group: image union deduplicated to 2 (not 3 raw, not 6 across both members): count=1"
+    ]
 }

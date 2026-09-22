@@ -4062,10 +4062,6 @@
             "passed": true
         },
         {
-            "test": "UNCHANGED is backed by real identity and snapshot: php:nosotros.php",
-            "passed": true
-        },
-        {
             "test": "Existing identity never recreated: php:operadores-puerta-abatible.php",
             "passed": true
         },
@@ -4236,9 +4232,9 @@
     ],
     "baseline": {
         "REVIEW": 339,
-        "UNCHANGED": 510,
+        "UNCHANGED": 509,
         "SKIP": 1535,
-        "CONFLICT": 11,
+        "CONFLICT": 12,
         "CREATE": 4
     },
     "preflight_counts": {

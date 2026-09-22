@@ -1,10 +1,10 @@
 {
     "manifest_version": 1,
     "transform_version": "1.0.0",
-    "run_id": "c1f783bd-7311-4523-9216-b8e3e3bf0969",
+    "run_id": "fcb4b7e5-d367-4c51-9838-f52309842d6c",
     "scope": "full",
     "environment_id": "76989ec9c283b0d2ce7c5b26a91ddee7b2c247efd5bed3f32e4663502a461efc",
-    "created_at": "2026-09-21T19:16:20+00:00",
+    "created_at": "2026-09-22T00:21:27+00:00",
     "mode": "DRY_RUN",
     "status": "VALIDATED",
     "cursor": 0,
@@ -27,14 +27,14 @@
         "docs\/implementation\/pdf-security-review\/pdf-approvals.json": "1671edc5ab1eefbd43bf6e65358a922039739fea9e77a2a4ac5bbe10d1e0f54c",
         "docs\/implementation\/pdf-security-review\/sanitization-audit.json": "aab5f5253a1b13c4c2417d2644496310985932b61b0d7139c02067bc411ca0c1"
     },
-    "plan_hash": "f756064527ccdae657197ed2919eab9b69a23ab6f716a37dbe34323971420e8a",
+    "plan_hash": "ef2c5a78805688361b9cd5bee3fe8a8d8e94fc03a49e8573448ea7bb13d4cc37",
     "summary": {
         "total": 2399,
         "actions": {
             "REVIEW": 339,
-            "UNCHANGED": 510,
+            "UNCHANGED": 509,
             "SKIP": 1535,
-            "CONFLICT": 11,
+            "CONFLICT": 12,
             "CREATE": 4
         },
         "types": {
@@ -64,8 +64,8 @@
             "page": {
                 "SKIP": 587,
                 "REVIEW": 15,
-                "UNCHANGED": 7,
-                "CONFLICT": 8
+                "UNCHANGED": 6,
+                "CONFLICT": 9
             },
             "missing_media": {
                 "REVIEW": 2,
@@ -59601,7 +59601,7 @@
             "source_hash": "8cf38ff927015599381db0771af7ff71bcc4ea3eea91d7879f2e7413dfc46bd9",
             "decision_hash": "a36b704163ff2f5a19beaf37f8802ac130427450245a3c3cdd19d492797b46b9",
             "target_type": "page",
-            "planned_result": "UNCHANGED"
+            "planned_result": "CONFLICT"
         },
         {
             "manifest_version": 1,

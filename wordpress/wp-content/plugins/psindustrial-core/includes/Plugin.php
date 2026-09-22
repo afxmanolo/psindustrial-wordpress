@@ -16,6 +16,7 @@ final class Plugin {
 		TermEditor::boot();
 		Settings::boot();
 		Contact::boot();
+		LegacyUrls::boot();
 	}
 	public static function activate(): void {
 		Content::register();

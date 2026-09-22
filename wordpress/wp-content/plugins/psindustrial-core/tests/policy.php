@@ -113,7 +113,17 @@ use PSIndustrial\Core\Migration\{Storage,Sources,Policy,Planner,Runner,Admin,Ide
   $full = Planner::build( 'full' );
   $assert( 'DRY_RUN' === $full['mode'] && 'VALIDATED' === $full['status'], 'Full plan remains DRY_RUN/VALIDATED, never executed' );
   $assert( 2399 === count( $full['entries'] ), 'Full plan still analyzes exactly 2,399 source rows' );
-  foreach ( $subset['entries'] as $e ) { if ( in_array( $e['action'], array( 'SKIP','REVIEW' ), true ) ) { continue; } $assert( Identity::find( $e ) > 0 && 'UNCHANGED' === Identity::prediction( $e ), 'Subset identity still present and unchanged: ' . $e['entity_key'] ); }
+  // php:nosotros.php is the one legitimate exception: it was published on this branch
+  // (docs/frontend/institutional-frontend.md, explicitly authorized) after this suite's
+  // original baseline was set, so its live snapshot (post_status included) no longer
+  // matches the recorded target_hash -- Identity::prediction() correctly reports CONFLICT
+  // for it, exactly like any other human/authorized edit since migration. Still present,
+  // never lost; just no longer byte-identical to its pre-publish state.
+  foreach ( $subset['entries'] as $e ) {
+   if ( in_array( $e['action'], array( 'SKIP','REVIEW' ), true ) ) { continue; }
+   $expected = ( 'php:nosotros.php' === $e['entity_key'] ) ? 'CONFLICT' : 'UNCHANGED';
+   $assert( Identity::find( $e ) > 0 && $expected === Identity::prediction( $e ), 'Subset identity still present, prediction=' . $expected . ': ' . $e['entity_key'] );
+  }
   $assert( $full['summary']['actions']['REVIEW'] < 1949, 'Policy measurably reduces REVIEW below the pre-policy baseline of 1,949' );
   $assert( ( $full['summary']['actions']['SKIP'] ?? 0 ) >= 435 + 846, 'SKIP grows by at least the R-M02+R-M03 media count on top of the 435 pre-existing internal SKIPs' );
   foreach ( $full['entries'] as $e ) {

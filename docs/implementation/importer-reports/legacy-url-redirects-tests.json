@@ -1,0 +1,113 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "Sanity: the generated legacy URL map has a real, non-trivial number of rules (got 131)",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:73 (post 1371) is genuinely published right now",
+            "passed": true
+        },
+        {
+            "test": "Q01 legacy page for a published product resolves directly to that product's live canonical URL",
+            "passed": true
+        },
+        {
+            "test": "Destination uses the real product permalink structure, not an invented one",
+            "passed": true
+        },
+        {
+            "test": "Fixture: the Q04 static-product entity (post 133, automatismos-para-cancelas-cubic.php) is genuinely draft right now",
+            "passed": true
+        },
+        {
+            "test": "Q04 static-product mapping exists but target is draft: no redirect invented, stays eligible for 404",
+            "passed": true
+        },
+        {
+            "test": "Fixture: the Q07 landing Page (1186, operadores-puerta-abatible.php) is genuinely draft right now",
+            "passed": true
+        },
+        {
+            "test": "Q07 landing mapping exists but the Page is draft: no redirect invented",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category term 245 (blindadas.php) is genuinely in review right now",
+            "passed": true
+        },
+        {
+            "test": "A real mapping rule exists for blindadas.php (proves the mechanism reaches taxonomy targets)",
+            "passed": true
+        },
+        {
+            "test": "Category mapping exists but the term is review, not public: no redirect",
+            "passed": true
+        },
+        {
+            "test": "A genuinely unresolved legacy file (KEEP_REVIEW, no owner) has no rule at all in the generated map",
+            "passed": true
+        },
+        {
+            "test": "No rule exists: resolve() returns null, never a guessed destination",
+            "passed": true
+        },
+        {
+            "test": "A made-up filename has no rule",
+            "passed": true
+        },
+        {
+            "test": "An unmapped legacy .php path resolves to null -- normal 404, never a soft-redirect to Home",
+            "passed": true
+        },
+        {
+            "test": "A real, resolvable modern URL never reaches redirect logic at all: is_404()=false short-circuits immediately",
+            "passed": true
+        },
+        {
+            "test": "Structural: every single rule key ends in .php -- a modern clean-slug basename can never collide with one",
+            "passed": true
+        },
+        {
+            "test": "Even if WordPress somehow 404s a path with no .php suffix, basename() never matches a rule",
+            "passed": true
+        },
+        {
+            "test": "Sanity: at least one currently-live destination was actually checked (6)",
+            "passed": true
+        },
+        {
+            "test": "No live destination in the whole table is itself a legacy .php path or another rule key -- redirect chains\/loops are structurally impossible, checked across all 131 rules",
+            "passed": true
+        },
+        {
+            "test": "HTTP 301 \/nosotros.php -> \/nosotros\/ (got 301 http:\/\/localhost\/psindustrial-wordpress\/wordpress\/nosotros\/)",
+            "passed": true
+        },
+        {
+            "test": "HTTP 404 \/accesorios.php -- mapped but target draft, never soft-redirected (got 404)",
+            "passed": true
+        },
+        {
+            "test": "HTTP 301 \/index.php -> site root (got 301 http:\/\/localhost\/psindustrial-wordpress\/wordpress\/)",
+            "passed": true
+        },
+        {
+            "test": "Query string is preserved through the redirect",
+            "passed": true
+        },
+        {
+            "test": "wp-admin still gets WordPress's own normal auth redirect, completely untouched by the legacy layer (got 302 http:\/\/localhost\/psindustrial-wordpress\/wordpress\/wp-login.php?redirect_to=http%3A%2F%2Flocalhost%2Fpsindustrial-wordpress%2Fwordpress%2Fwp-admin%2F&reauth=1)",
+            "passed": true
+        },
+        {
+            "test": "Modern current URL \/nosotros\/ returns 200 directly, no redirect",
+            "passed": true
+        },
+        {
+            "test": "The entire suite (including live HTTP requests) never mutates the database",
+            "passed": true
+        }
+    ]
+}
