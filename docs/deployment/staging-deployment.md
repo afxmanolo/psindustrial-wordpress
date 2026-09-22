@@ -3,6 +3,11 @@
 Hosting compartido (Hepsia), FTP, **sin SSH garantizado**. Este documento es el
 procedimiento; no se ha ejecutado ningún paso contra staging todavía.
 
+El despliegue de código (theme + plugin) está automatizado vía GitHub Actions — ver
+[`ci-cd-pipeline.md`](ci-cd-pipeline.md). Este documento cubre lo que el pipeline
+deliberadamente NO automatiza: base de datos, uploads, permalinks, HTTPS, noindex, mail,
+cache, rollback.
+
 ## 0. Qué se despliega
 
 - `wp-content/themes/psindustrial` (sin `node_modules`/caches — no existen, no hay build step)
