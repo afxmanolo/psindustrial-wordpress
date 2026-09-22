@@ -1,5 +1,5 @@
 {
-    "passed": false,
+    "passed": true,
     "checks": [
         {
             "test": "PHP 8.4 and dedicated local database",
@@ -62,29 +62,240 @@
             "passed": true
         },
         {
-            "test": "Batch advances persistent cursor 1",
+            "test": "Parent-child hierarchy preserved",
             "passed": true
         },
         {
-            "test": "Batch advances persistent cursor 2",
+            "test": "Brand logo attachment ID associated",
             "passed": true
         },
         {
-            "test": "Batch advances persistent cursor 3",
+            "test": "Extensionless verified category image attached",
             "passed": true
         },
         {
-            "test": "Batch advances persistent cursor 4",
+            "test": "Canonical product category and brand relationships",
             "passed": true
         },
         {
-            "test": "Batch advances persistent cursor 5",
+            "test": "Featured image and gallery remain separate attachment IDs",
             "passed": true
         },
         {
-            "test": "First subset completes without failures\/conflicts",
-            "passed": false
+            "test": "PDF validated and associated",
+            "passed": true
+        },
+        {
+            "test": "Identical PDF binary retains original file ID and alias without second upload",
+            "passed": true
+        },
+        {
+            "test": "PDF bytes unchanged",
+            "passed": true
+        },
+        {
+            "test": "Static product stays without inferred brand",
+            "passed": true
+        },
+        {
+            "test": "Institutional content uses Page",
+            "passed": true
+        },
+        {
+            "test": "Unpublished rehearsal sql:productos:63",
+            "passed": true
+        },
+        {
+            "test": "Unpublished rehearsal sql:productos:64",
+            "passed": true
+        },
+        {
+            "test": "Unpublished rehearsal static:automatismos-para-cancelas-cubic.php",
+            "passed": true
+        },
+        {
+            "test": "php:nosotros.php was legitimately published in its own later, authorized phase (docs\/frontend\/institutional-frontend.md) -- still present, correctly no longer draft",
+            "passed": true
+        },
+        {
+            "test": "Contradictory and test SQL rows remain REVIEW without entities",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:fichas\/puerta-420.pdf",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/2025-08-21_11h53_44.png",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/piso.jpg",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/puerta-420.jpg",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/puerta-420t.png",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/sectional-steel-door-416.jpg",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/tg.png",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:system\/files\/images\/categorias\/59ca6b73479b3fcde81f96439976896bad94b750",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: category:1",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: category:8",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: brand:1",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: sql:productos:63",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: sql:productos:64",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: static:automatismos-para-cancelas-cubic.php",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=CONFLICT: php:nosotros.php",
+            "passed": true
+        },
+        {
+            "test": "Changed source produces update instead of duplicate",
+            "passed": true
+        },
+        {
+            "test": "Synthetic fixture uses real APIs",
+            "passed": true
+        },
+        {
+            "test": "Changed source updates existing identity",
+            "passed": true
+        },
+        {
+            "test": "Human changes block automatic overwrite",
+            "passed": true
+        },
+        {
+            "test": "Conflict preserves human edit during execution",
+            "passed": true
+        },
+        {
+            "test": "Failure recorded at intent",
+            "passed": true
+        },
+        {
+            "test": "Interrupted object cannot duplicate at intent",
+            "passed": true
+        },
+        {
+            "test": "Failure recorded at object",
+            "passed": true
+        },
+        {
+            "test": "Interrupted object cannot duplicate at object",
+            "passed": true
+        },
+        {
+            "test": "Failure recorded at relations",
+            "passed": true
+        },
+        {
+            "test": "Interrupted object cannot duplicate at relations",
+            "passed": true
+        },
+        {
+            "test": "Controlled rollback removes untouched creations only",
+            "passed": true
+        },
+        {
+            "test": "Gestor cannot plan or execute migration",
+            "passed": true
+        },
+        {
+            "test": "Valid nonce does not bypass Gestor capability restriction",
+            "passed": true
+        },
+        {
+            "test": "Writer lease released",
+            "passed": true
+        },
+        {
+            "test": "Concurrent writer rejected by file lock",
+            "passed": true
+        },
+        {
+            "test": "Synthetic approved merge retains multiple source identities in one object",
+            "passed": true
+        },
+        {
+            "test": "CSV duplicate headers rejected",
+            "passed": true
+        },
+        {
+            "test": "CSV wrong field count rejected",
+            "passed": true
+        },
+        {
+            "test": "CSV BOM, quotes, commas and multiline parsed",
+            "passed": true
+        },
+        {
+            "test": "PDF spoof rejected by bytes and MIME",
+            "passed": true
+        },
+        {
+            "test": "Active PDF rejected",
+            "passed": true
+        },
+        {
+            "test": "Full real import explicitly blocked",
+            "passed": true
+        },
+        {
+            "test": "Modified plan seal rejected",
+            "passed": true
+        },
+        {
+            "test": "Individual failure does not cancel following valid entity",
+            "passed": true
+        },
+        {
+            "test": "Authenticated admin screen renders default DRY RUN",
+            "passed": true
+        },
+        {
+            "test": "HTTP administrative action rejects CSRF",
+            "passed": true
+        },
+        {
+            "test": "HTTP admin-post generates subset plan without CLI",
+            "passed": true
+        },
+        {
+            "test": "HTTP administrative batch advances without CLI or persistent workers",
+            "passed": true
         }
-    ],
-    "error": "First subset completes without failures\/conflicts"
+    ]
 }

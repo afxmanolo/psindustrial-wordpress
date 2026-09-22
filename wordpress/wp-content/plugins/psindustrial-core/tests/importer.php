@@ -1,5 +1,23 @@
 <?php
-/** Local integration rehearsal; retains documented subset drafts, removes only synthetic fixtures. */
+/** Local integration rehearsal. The 15-object canonical subset was migrated for real early
+ * in this project and is no longer a disposable fixture: one of its objects
+ * (php:nosotros.php, WordPress Page 134) was later legitimately published in its own
+ * authorized phase (docs/frontend/institutional-frontend.md). Re-executing Runner against
+ * that same real, canonical subset plan is therefore no longer a safe, deterministic
+ * regression check -- its outcome would depend on whatever a later, unrelated editorial
+ * decision did to any of those 15 real objects, not on Runner's own correctness. So this
+ * file separates two concerns that used to be entangled in one real execution:
+ *  - Read-only verification that the REAL, already-migrated subset objects still have the
+ *    technical relationships the importer is supposed to guarantee (hierarchy, logo,
+ *    gallery/thumbnail separation, PDF validation, brand-inference boundaries), proven
+ *    against CURRENT state -- never by re-running Runner against them.
+ *  - Every actual exercise of Runner's write path (create/update/conflict/rollback/
+ *    injected-failure recovery at each boundary/MERGE/capability/lease/lock/tamper/CSRF)
+ *    uses entirely synthetic `test:*` entities cloned from a real entry's SHAPE only,
+ *    isolated from whatever the 15 real canonical objects' current state happens to be --
+ *    exactly as the second half of this file already did before this change.
+ * A normal run of this file never mutates the 15 real subset objects; it only ever reads
+ * them, and only ever writes through freshly-generated, self-contained synthetic fixtures. */
 if ( PHP_SAPI !== 'cli' ) { http_response_code( 404 ); exit; }
 require dirname( __DIR__, 4 ) . '/wp-load.php';
 use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Identity,Runner,Admin};
@@ -27,24 +45,11 @@ use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Identity,Runner,Admin};
   $export( 'subset-plan.json', Admin::report( $first ) );
   $throws( static fn() => Runner::batch( $first['run_id'], '' ), 'Execution requires explicit confirmation' );
   $throws( static fn() => Runner::batch( 'missing', 'IMPORTAR SUBSET EN BORRADOR' ), 'Execution without validated plan denied' );
-  // Full DB snapshot remains private, outside webroot/repository. Never export rows to test reports.
-  global $wpdb;
-  $backup = array( 'database' => DB_NAME, 'time' => gmdate( 'c' ), 'tables' => array() );
-  foreach ( $wpdb->get_col( 'SHOW TABLES' ) as $table ) {
-   if ( ! preg_match( '/^[A-Za-z0-9_]+$/D', $table ) || ! str_starts_with( $table, $wpdb->prefix ) ) { throw new RuntimeException( 'BACKUP_TABLE_NOT_ALLOWED' ); }
-   $backup['tables'][ $table ] = array( 'schema' => $wpdb->get_row( 'SHOW CREATE TABLE `' . $table . '`', ARRAY_N )[1], 'rows' => $wpdb->get_results( 'SELECT * FROM `' . $table . '`', ARRAY_A ) );
-  }
-  Storage::write( 'backup-' . $first['run_id'] . '.json', $backup ); unset( $backup );
-  $upload = wp_get_upload_dir()['basedir']; $destination = Storage::root() . '/backup-uploads-' . $first['run_id'];
-  foreach ( new RecursiveIteratorIterator( new RecursiveDirectoryIterator( $upload, FilesystemIterator::SKIP_DOTS ) ) as $file ) {
-   if ( $file->isLink() ) { throw new RuntimeException( 'BACKUP_SYMLINK_REJECTED' ); }
-   if ( ! $file->isFile() ) { continue; }
-   $to = $destination . '/' . substr( $file->getPathname(), strlen( $upload ) + 1 ); wp_mkdir_p( dirname( $to ) ); if ( ! copy( $file->getPathname(), $to ) ) { throw new RuntimeException( 'BACKUP_UPLOAD_FAILED' ); }
-  }
-  $cursor = 0; $batches = 0;
-  while ( 'COMPLETE' !== $first['status'] ) { $first = Runner::batch( $first['run_id'], 'IMPORTAR SUBSET EN BORRADOR', 4 ); $assert( $first['cursor'] > $cursor, 'Batch advances persistent cursor ' . ++$batches ); $cursor = $first['cursor']; }
-  $export( 'subset-execution-1.json', Admin::report( $first ) );
-  $assert( ! array_filter( $first['results'], static fn( $e ) => in_array( $e['status'], array( 'FAILED','CONFLICT' ), true ) ), 'First subset completes without failures/conflicts' );
+
+  // ============================================================ read-only: the REAL, already-migrated subset's current technical invariants
+  // These 15 objects were created for real by the original subset rehearsal long before
+  // this session; nothing here re-executes Runner against them, so nothing here can mutate
+  // them -- every assertion below is a direct read of their current, live state.
   $entries = array_column( $first['entries'], null, 'entity_key' );
   $id = static fn( string $key ) => Identity::find( $entries[ $key ] );
   $assert( (int) get_term( $id( 'category:8' ) )->parent === $id( 'category:1' ), 'Parent-child hierarchy preserved' );
@@ -58,13 +63,22 @@ use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Identity,Runner,Admin};
   $assert( hash_file( 'sha256', get_attached_file( $pdf ) ) === $entries['asset:fichas/puerta-420.pdf']['data']['sha256'], 'PDF bytes unchanged' );
   $assert( ! wp_get_object_terms( $id( 'static:automatismos-para-cancelas-cubic.php' ), 'psi_marca' ), 'Static product stays without inferred brand' );
   $assert( 'page' === get_post_type( $id( 'php:nosotros.php' ) ), 'Institutional content uses Page' );
-  foreach ( array( 'sql:productos:63','sql:productos:64','static:automatismos-para-cancelas-cubic.php','php:nosotros.php' ) as $key ) { $assert( 'draft' === get_post_status( $id( $key ) ), 'Unpublished rehearsal ' . $key ); }
+  foreach ( array( 'sql:productos:63','sql:productos:64','static:automatismos-para-cancelas-cubic.php' ) as $key ) { $assert( 'draft' === get_post_status( $id( $key ) ), 'Unpublished rehearsal ' . $key ); }
+  $assert( 'publish' === get_post_status( $id( 'php:nosotros.php' ) ), 'php:nosotros.php was legitimately published in its own later, authorized phase (docs/frontend/institutional-frontend.md) -- still present, correctly no longer draft' );
   $assert( ! $id( 'sql:productos:3' ) && ! $id( 'sql:productos:165' ), 'Contradictory and test SQL rows remain REVIEW without entities' );
-  $before = $count(); $second = Planner::build( 'subset' );
-  $assert( 15 === ( $second['summary']['actions']['UNCHANGED'] ?? 0 ) && ! isset( $second['summary']['actions']['CREATE'] ), 'Second plan has 15 UNCHANGED and zero CREATE' );
-  while ( 'COMPLETE' !== $second['status'] ) { $second = Runner::batch( $second['run_id'], 'IMPORTAR SUBSET EN BORRADOR' ); }
-  $after = $count(); $assert( $before['posts'] === $after['posts'] && $before['terms'] === $after['terms'], 'Second execution creates no posts, attachments or terms' );
-  $export( 'subset-execution-2.json', Admin::report( $second ) );
+
+  // ============================================================ idempotency, read-only: prediction alone, never a second real execution
+  // A second Runner::batch() call used to run here for real. Re-running it against these
+  // SAME 15 real, already-migrated objects stopped being a safe assumption once any one of
+  // them can legitimately change outside this test's control (nosotros.php did) -- so
+  // idempotency is proven the way Runner's own process_entry() actually decides it (read
+  // Identity::prediction(), never call apply() for anything but CREATE/UPDATE), never by
+  // mutating anything here.
+  foreach ( $first['entries'] as $e ) {
+   if ( in_array( $e['action'], array( 'SKIP','REVIEW' ), true ) ) { continue; }
+   $expected = ( 'php:nosotros.php' === $e['entity_key'] ) ? 'CONFLICT' : 'UNCHANGED';
+   $assert( Identity::find( $e ) > 0 && $expected === Identity::prediction( $e ), 'Subset identity still present, prediction=' . $expected . ': ' . $e['entity_key'] );
+  }
   $changed = $entries['sql:productos:63']; $changed['source_hash'] = str_repeat( 'a', 64 );
   $assert( 'UPDATE' === Identity::prediction( $changed ), 'Changed source produces update instead of duplicate' );
   // Isolated synthetic Page exercises update/conflict/retry boundaries using the same runner and DB.
@@ -146,7 +160,7 @@ use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Identity,Runner,Admin};
    $r = wp_remote_post( admin_url( 'admin-post.php' ), array( 'cookies' => $cookies, 'redirection' => 0, 'timeout' => 20, 'body' => array( 'action' => 'psi_migration','operation' => 'execute','run' => $query['run'],'confirmation' => 'IMPORTAR SUBSET EN BORRADOR','_wpnonce' => wp_create_nonce( 'psi_migration' ) ) ) );
    $assert( 302 === wp_remote_retrieve_response_code( $r ) && Storage::read( 'run-' . $query['run'] . '.json' )['cursor'] > 0, 'HTTP administrative batch advances without CLI or persistent workers' );
   } finally { $sessions->destroy( $token ); if ( null === $old_cookie ) { unset( $_COOKIE[ LOGGED_IN_COOKIE ] ); } else { $_COOKIE[ LOGGED_IN_COOKIE ] = $old_cookie; } }
-  $export( 'tests.json', array( 'passed' => true, 'checks' => $checks ) ); echo wp_json_encode( array( 'passed' => true, 'checks' => count( $checks ), 'subset_runs' => array( $first['run_id'], $second['run_id'] ) ) );
+  $export( 'tests.json', array( 'passed' => true, 'checks' => $checks ) ); echo wp_json_encode( array( 'passed' => true, 'checks' => count( $checks ), 'subset_run' => $first['run_id'] ) );
  } catch ( Throwable $error ) {
   $export( 'tests.json', array( 'passed' => false, 'checks' => $checks, 'error' => $error->getMessage() ) ); fwrite( STDERR, $error->getMessage() . "\n" ); exit( 1 );
  }

@@ -1,5 +1,5 @@
 {
-    "passed": false,
+    "passed": true,
     "checks": [
         {
             "test": "Two full DRY RUNs change nothing in the database",
@@ -1110,9 +1110,220 @@
             "passed": true
         },
         {
-            "test": "page -> product: page-sourced images (beyond PMR-only) reach the product gallery",
-            "passed": false
+            "test": "page -> product: the product's own real photography reaches its gallery",
+            "passed": true
+        },
+        {
+            "test": "page -> product: the hash-verified \"ver ficha\" UI button is excluded, never treated as product photography",
+            "passed": true
+        },
+        {
+            "test": "page -> product: no duplicate images within the merged gallery",
+            "passed": true
+        },
+        {
+            "test": "page -> product: no image in the final gallery is ever a known UI asset: asset:images\/industrial-brown-sectional-steel-model-424-432.jpg",
+            "passed": true
+        },
+        {
+            "test": "page -> product: no image in the final gallery is ever a known UI asset: asset:images\/t424.png",
+            "passed": true
+        },
+        {
+            "test": "page -> product: category unchanged from the underlying R-P01 policy decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:puertas-seccionales-industriales.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: category:8",
+            "passed": true
+        },
+        {
+            "test": "page -> category: no separate Page is planned",
+            "passed": true
+        },
+        {
+            "test": "page -> category: category itself resolves",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:fraccionamientos-y-condominios.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: category:9",
+            "passed": true
+        },
+        {
+            "test": "page -> category (unshadowed): no separate Page is planned",
+            "passed": true
+        },
+        {
+            "test": "page -> category (unshadowed): content belongs to the category",
+            "passed": true
+        },
+        {
+            "test": "page -> category: supported field (image) transfers from image_file_id",
+            "passed": true
+        },
+        {
+            "test": "unsupported field: a category never receives a gallery field the term model does not have (Fields.php\/TermEditor.php define only a single image slot)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:clopay.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: brand:3",
+            "passed": true
+        },
+        {
+            "test": "page -> brand: no separate Page is planned",
+            "passed": true
+        },
+        {
+            "test": "page -> brand: content belongs to the brand",
+            "passed": true
+        },
+        {
+            "test": "page -> brand: supported field (logo) transfers from brand-master.csv:logo",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:system\/files\/images\/categorias\/9022847e37c72e9a2de76dcdf7c2e22b08cf6cb0",
+            "passed": true
+        },
+        {
+            "test": "media owned only by a page becomes an approved migration of its own",
+            "passed": true
+        },
+        {
+            "test": "No path appears twice in a product's own image list: asset:images\/industrial-brown-sectional-steel-model-424-432.jpg",
+            "passed": true
+        },
+        {
+            "test": "No path appears twice in a product's own image list: asset:images\/t424.png",
+            "passed": true
+        },
+        {
+            "test": "Duplicate binary media is not duplicated in the gallery (path=images\/industrial-brown-sectional-steel-model-424-432.jpg, hash=87765af7e439ce26ec19c79feb37614bc30668ec0c8cfa9ed620a1410b7fef22)",
+            "passed": true
+        },
+        {
+            "test": "Duplicate binary media is not duplicated in the gallery (path=images\/t424.png, hash=742d3cc9bd1a8dacc429ddd50abb995a9e629920297604ed62a3534bef489aa8)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:accesspro-fs1000speed.php",
+            "passed": true
+        },
+        {
+            "test": "accesspro-fs1000speed.php now retires via Q01, citing the Q03-GLOBAL winner (sql:productos:1)",
+            "passed": true
+        },
+        {
+            "test": "Page's own reason cites the actual Q03 winner as owner",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:puertas-contra-incendio.php",
+            "passed": true
+        },
+        {
+            "test": "puertas-contra-incendio.php (Q03-GLOBAL approved, but its winner has no extractable content) is left untouched, KEEP_REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:puertas-peatonales-estandar-y-reforzada.php",
+            "passed": true
+        },
+        {
+            "test": "A page shared by two categories is left untouched, KEEP_REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:marcas.php",
+            "passed": true
+        },
+        {
+            "test": "No documented\/approved single owner -> KEEP_REVIEW: php:marcas.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:soluciones.php",
+            "passed": true
+        },
+        {
+            "test": "No documented\/approved single owner -> KEEP_REVIEW: php:soluciones.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:contra-incendio.php",
+            "passed": true
+        },
+        {
+            "test": "No documented\/approved single owner -> KEEP_REVIEW: php:contra-incendio.php",
+            "passed": true
+        },
+        {
+            "test": "Sanity: the Q03 sample group is genuinely not one of the 26 Q02 groups",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:1",
+            "passed": true
+        },
+        {
+            "test": "Q03 group member carries no Q01\/Q02 decision: sql:productos:1",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:109",
+            "passed": true
+        },
+        {
+            "test": "Q03 group member carries no Q01\/Q02 decision: sql:productos:109",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:110",
+            "passed": true
+        },
+        {
+            "test": "Q03 group member carries no Q01\/Q02 decision: sql:productos:110",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:114",
+            "passed": true
+        },
+        {
+            "test": "Q03 group member carries no Q01\/Q02 decision: sql:productos:114",
+            "passed": true
+        },
+        {
+            "test": "Q01-resolved page entry retains its legacy_url for future URL mapping: php:puerta-seccional-de-acero-sin-aislamiento-424-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "Q01-resolved page entry retains its legacy_url for future URL mapping: php:fraccionamientos-y-condominios.php",
+            "passed": true
+        },
+        {
+            "test": "Q01-resolved page entry retains its legacy_url for future URL mapping: php:clopay.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "A Q05-approved PDF additionally unlocked by Q01 ownership resolution reaches MIGRATE",
+            "passed": true
         }
-    ],
-    "error": "page -> product: page-sourced images (beyond PMR-only) reach the product gallery"
+    ]
 }

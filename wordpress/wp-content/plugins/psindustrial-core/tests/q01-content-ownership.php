@@ -45,7 +45,19 @@ use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Runner};
   $assert( 'SKIP' === $page['action'] && 'Q01' === $page['decision']['decision_id'], 'page -> product: no separate Page is planned' );
   $assert( 'MIGRATE' === $product['action'] && 'Q01' === $product['decision']['decision_id'], 'page -> product: content belongs to the product (unambiguous)' );
   $assert( in_array( 'asset:fichas/puerta-424.pdf', $product['data']['pdfs'], true ), 'page -> product: page-sourced PDF reaches the product gallery' );
-  $assert( count( $product['data']['images'] ) >= 3, 'page -> product: page-sourced images (beyond PMR-only) reach the product gallery' );
+  // Read-only investigation (2026-09-21): product-master.csv's own images column for
+  // product 65 is "industrial-brown-...432.jpg|t424.png|verficha.png|system/files/.../596d...".
+  // media_union() (EditorialDecisions.php) drops the 4th (a known Q11 missing-media
+  // exclusion) and validates the rest by SHA-256; Planner.php's own later, general filter
+  // (Sources::is_ui_asset(), the hash-verified "ver ficha" datasheet-button icon) then drops
+  // verficha.png from EVERY entity's images/pdfs, not just this one. So ">=3" was never a
+  // real invariant -- it silently counted a UI button as product photography, from before
+  // that filter existed. The correct guarantee is semantic: the real photos are present,
+  // the known UI asset is gone, and the general exclusion rule actually held here too.
+  $assert( in_array( 'asset:images/industrial-brown-sectional-steel-model-424-432.jpg', $product['data']['images'], true ) && in_array( 'asset:images/t424.png', $product['data']['images'], true ), 'page -> product: the product\'s own real photography reaches its gallery' );
+  $assert( ! in_array( 'asset:images/verficha.png', $product['data']['images'], true ), 'page -> product: the hash-verified "ver ficha" UI button is excluded, never treated as product photography' );
+  $assert( count( $product['data']['images'] ) === count( array_unique( $product['data']['images'] ) ), 'page -> product: no duplicate images within the merged gallery' );
+  foreach ( $product['data']['images'] as $imageKey ) { $assert( ! Sources::is_ui_asset( $imageKey ), 'page -> product: no image in the final gallery is ever a known UI asset: ' . $imageKey ); }
   $assert( array( 'category:8' ) === $product['data']['categories'], 'page -> product: category unchanged from the underlying R-P01 policy decision' );
 
   // ============================================================== page -> category (unambiguous)
