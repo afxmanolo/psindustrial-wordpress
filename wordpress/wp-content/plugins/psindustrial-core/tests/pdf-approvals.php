@@ -58,7 +58,10 @@ use PSIndustrial\Core\Media;
 
   // Pages preserved and validation suite green, per the sanitizer's own audit record.
   $audit = json_decode( file_get_contents( Sources::safe( Storage::project(), 'docs/implementation/pdf-security-review/sanitization-audit.json' ) ), true, 16, JSON_THROW_ON_ERROR );
-  $assert( 5 === count( $audit['records'] ), 'Sanitization audit covers exactly the 5 Group A files' );
+  // 5 original Group A files + 10 added under Q05 (9 byte-identical twins reusing an
+  // already-approved hash at a new legacy_path, 1 new file needing its own sanitization).
+  // See tests/q05-pdf-resolution.php for the Q05-specific assertions on those 10.
+  $assert( 15 === count( $audit['records'] ), 'Sanitization audit covers the 5 original Group A files plus 10 added under Q05 (15 total)' );
   foreach ( $audit['records'] as $r ) {
    $assert( 'SANITIZED_OK' === $r['status'], 'Audit record status is SANITIZED_OK: ' . $r['source_legacy_path'] );
    $assert( $r['pages_before'] === $r['pages_after'], 'Audit record: pages preserved: ' . $r['source_legacy_path'] );
@@ -114,12 +117,16 @@ use PSIndustrial\Core\Media;
   $assert( ! is_file( $tmp ), 'Synthetic dangerous-PDF fixture deleted after the check' );
 
   // The exception/substitution mechanism never touches any OTHER file's validity —
-  // spot-check a handful of ordinary, unrelated PDFs from media-master.csv.
+  // spot-check a handful of ordinary, unrelated PDFs from media-master.csv. "Unrelated"
+  // is checked via PdfApprovals::resolve() itself (not a hardcoded path list): this file
+  // only knows the original 7 Group A/B paths, but pdf-approvals.json now also carries
+  // the 32 entries added under Q05 (tests/q05-pdf-resolution.php covers those directly).
   $s = new Sources();
   $sampleOther = 0;
   foreach ( $s->rows['media-master.csv'] as $row ) {
    if ( 'application/pdf' !== ( $row['detected_type'] ?? '' ) ) { continue; }
    if ( isset( $groupA[ $row['legacy_path'] ] ) || isset( $groupB[ $row['legacy_path'] ] ) ) { continue; }
+   if ( null !== PdfApprovals::resolve( $row['legacy_path'], $row['sha256'] ) ) { continue; } // approved elsewhere (e.g. Q05) -- not "unrelated".
    $asset = $s->asset( $row['legacy_path'] );
    $assert( null === $asset['pdf_approval'], 'An unrelated PDF never receives a pdf_approval by accident: ' . $row['legacy_path'] );
    $assert( $asset['staged_path'] === Sources::safe( Storage::project() . '/legacy/public', $row['legacy_path'] ) && $asset['staged_sha256'] === $asset['sha256'], 'An unrelated PDF always stages its own original bytes: ' . $row['legacy_path'] );

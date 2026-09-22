@@ -1,0 +1,138 @@
+{
+    "passed": 33,
+    "failed": 0,
+    "checks": [
+        {
+            "test": "Home HTTP 200",
+            "passed": true
+        },
+        {
+            "test": "Unique landmark/heading: header",
+            "passed": true
+        },
+        {
+            "test": "Unique landmark/heading: main",
+            "passed": true
+        },
+        {
+            "test": "Unique landmark/heading: footer",
+            "passed": true
+        },
+        {
+            "test": "Unique landmark/heading: h1",
+            "passed": true
+        },
+        {
+            "test": "Four verified legacy slides",
+            "passed": true
+        },
+        {
+            "test": "Native slider controls available for enhancement",
+            "passed": true
+        },
+        {
+            "test": "Pause control",
+            "passed": true
+        },
+        {
+            "test": "Twelve historical brand logos, no term publication required",
+            "passed": true
+        },
+        {
+            "test": "Historical visual logos do not expose review taxonomy routes",
+            "passed": true
+        },
+        {
+            "test": "Seven legacy commercial families",
+            "passed": true
+        },
+        {
+            "test": "Alternating family composition preserved",
+            "passed": true
+        },
+        {
+            "test": "Verified Home content, no invented marketing sections",
+            "passed": true
+        },
+        {
+            "test": "No mojibake in historical Home text",
+            "passed": true
+        },
+        {
+            "test": "No empty or placeholder URLs",
+            "passed": true
+        },
+        {
+            "test": "Only first hero is LCP priority, never lazy",
+            "passed": true
+        },
+        {
+            "test": "All images have dimensions and alt attributes",
+            "passed": true
+        },
+        {
+            "test": "Home artwork has responsive source metadata",
+            "passed": true
+        },
+        {
+            "test": "All rendered theme images exist",
+            "passed": true
+        },
+        {
+            "test": "Hero CTA uses real WP archive",
+            "passed": true
+        },
+        {
+            "test": "Hero CTA uses real WP archive",
+            "passed": true
+        },
+        {
+            "test": "Hero CTA uses real WP archive",
+            "passed": true
+        },
+        {
+            "test": "Hero CTA uses real WP archive",
+            "passed": true
+        },
+        {
+            "test": "Approved shell reused globally",
+            "passed": true
+        },
+        {
+            "test": "Red footer CTA retained",
+            "passed": true
+        },
+        {
+            "test": "Home loads shared + Home CSS only",
+            "passed": true
+        },
+        {
+            "test": "Catalog does not load slider or Home styles",
+            "passed": true
+        },
+        {
+            "test": "No legacy framework or tracking dependencies copied",
+            "passed": true
+        },
+        {
+            "test": "Existing Page uses global shell without rebuilding its content",
+            "passed": true
+        },
+        {
+            "test": "Non-hero Page has readable standalone header",
+            "passed": true
+        },
+        {
+            "test": "No PHP diagnostics",
+            "passed": true
+        },
+        {
+            "test": "Human publication untouched",
+            "passed": true
+        },
+        {
+            "test": "All content and taxonomy tables unchanged",
+            "passed": true
+        }
+    ]
+}

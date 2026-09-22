@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T15:34:52Z",
+  "generated_at": "2026-09-18T20:45:09Z",
   "sanitizer_version": "1.0.0",
   "sanitized_dir": "C:\\laragon\\psindustrial-importer-private\\pdf-sanitized",
   "records": [
@@ -8,7 +8,7 @@
       "source_sha256_approved": "0a7193edcd8929ac114043fcbffb8e53109ce4363f062cb269f2062ce9e1b4f8",
       "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
       "sanitizer_version": "1.0.0",
-      "generated_at": "2026-09-18T15:34:50Z",
+      "generated_at": "2026-09-18T20:45:07Z",
       "source_sha256_actual": "0a7193edcd8929ac114043fcbffb8e53109ce4363f062cb269f2062ce9e1b4f8",
       "pages_before": 4,
       "pages_after": 4,
@@ -28,7 +28,7 @@
       },
       "status": "SANITIZED_OK",
       "sanitized_file": "0a7193edcd8929ac114043fcbffb8e53109ce4363f062cb269f2062ce9e1b4f8.pdf",
-      "sanitized_sha256": "ae76c56ca73e651ccbe23ed9baef28d46ac370b9e561980c8e789375601402d8",
+      "sanitized_sha256": "5a4392c52053e6427bb70c41ff58d387107be39e85f540632c6ec14c26f31345",
       "size_before": 815558,
       "size_after": 789792
     },
@@ -37,7 +37,7 @@
       "source_sha256_approved": "a922b6ce9f9ca80b565a3b24be27a086f555aa305db9b9135443c079d93255df",
       "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
       "sanitizer_version": "1.0.0",
-      "generated_at": "2026-09-18T15:34:51Z",
+      "generated_at": "2026-09-18T20:45:07Z",
       "source_sha256_actual": "a922b6ce9f9ca80b565a3b24be27a086f555aa305db9b9135443c079d93255df",
       "pages_before": 4,
       "pages_after": 4,
@@ -57,7 +57,7 @@
       },
       "status": "SANITIZED_OK",
       "sanitized_file": "a922b6ce9f9ca80b565a3b24be27a086f555aa305db9b9135443c079d93255df.pdf",
-      "sanitized_sha256": "d6512f0db00a08fd9c3bfcc584ef21ff98a458e875eb96145d2e4fa42a01ed3e",
+      "sanitized_sha256": "fe4f7800e13c51b810f82a6f67c1f2f7d0b7013729d1194aff48b195a5889b79",
       "size_before": 953747,
       "size_after": 942631
     },
@@ -66,7 +66,7 @@
       "source_sha256_approved": "703eb6311aaedddf3dd24a8e6b75089463317352f174f672c8d5002e3dfd574f",
       "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
       "sanitizer_version": "1.0.0",
-      "generated_at": "2026-09-18T15:34:51Z",
+      "generated_at": "2026-09-18T20:45:07Z",
       "source_sha256_actual": "703eb6311aaedddf3dd24a8e6b75089463317352f174f672c8d5002e3dfd574f",
       "pages_before": 4,
       "pages_after": 4,
@@ -86,7 +86,7 @@
       },
       "status": "SANITIZED_OK",
       "sanitized_file": "703eb6311aaedddf3dd24a8e6b75089463317352f174f672c8d5002e3dfd574f.pdf",
-      "sanitized_sha256": "25a6843d1b9d70eb138f5a136d36101dfdf1b8b2b8aef7cb0b7350521bbb230e",
+      "sanitized_sha256": "e4fa7b213a9ee211940edd44fe147d3db38f3c256308429f21f208e1b32f02c3",
       "size_before": 738042,
       "size_after": 732214
     },
@@ -95,7 +95,7 @@
       "source_sha256_approved": "7e501c26a5bfc0c02da8899de34a0b6a2bef31bbb42c2124a5c3995ad803a3ee",
       "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
       "sanitizer_version": "1.0.0",
-      "generated_at": "2026-09-18T15:34:51Z",
+      "generated_at": "2026-09-18T20:45:08Z",
       "source_sha256_actual": "7e501c26a5bfc0c02da8899de34a0b6a2bef31bbb42c2124a5c3995ad803a3ee",
       "pages_before": 4,
       "pages_after": 4,
@@ -115,7 +115,7 @@
       },
       "status": "SANITIZED_OK",
       "sanitized_file": "7e501c26a5bfc0c02da8899de34a0b6a2bef31bbb42c2124a5c3995ad803a3ee.pdf",
-      "sanitized_sha256": "de3deae63cc711cf363cc1fc8091b78ac1c1ec3cb71e1763a74db7c1f73b2422",
+      "sanitized_sha256": "2e4a29b1fae6792ea3058e582618def36a6da5c034a22e82a6980be53e75578d",
       "size_before": 1583405,
       "size_after": 1521295
     },
@@ -124,7 +124,7 @@
       "source_sha256_approved": "e8ac9a72e867f60aa21665abd004640f2fac4e477b025eae8b7b9a8ae7222e01",
       "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
       "sanitizer_version": "1.0.0",
-      "generated_at": "2026-09-18T15:34:51Z",
+      "generated_at": "2026-09-18T20:45:08Z",
       "source_sha256_actual": "e8ac9a72e867f60aa21665abd004640f2fac4e477b025eae8b7b9a8ae7222e01",
       "pages_before": 12,
       "pages_after": 12,
@@ -144,9 +144,299 @@
       },
       "status": "SANITIZED_OK",
       "sanitized_file": "e8ac9a72e867f60aa21665abd004640f2fac4e477b025eae8b7b9a8ae7222e01.pdf",
-      "sanitized_sha256": "417c96f755b10b9b49c44311040d89a19d9070f99c1ff28dcd8c225b99689454",
+      "sanitized_sha256": "4654441205820a8e5f3387c41d2353849663b82a2b5519f58e4f56c453d477c5",
       "size_before": 4255039,
       "size_after": 4244717
+    },
+    {
+      "source_legacy_path": "fichas/puerta-424.pdf",
+      "source_sha256_approved": "0a7193edcd8929ac114043fcbffb8e53109ce4363f062cb269f2062ce9e1b4f8",
+      "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
+      "sanitizer_version": "1.0.0",
+      "generated_at": "2026-09-18T20:45:08Z",
+      "source_sha256_actual": "0a7193edcd8929ac114043fcbffb8e53109ce4363f062cb269f2062ce9e1b4f8",
+      "pages_before": 4,
+      "pages_after": 4,
+      "removed_embedded_names": [
+        "High Quality.joboptions.joboptions"
+      ],
+      "validation": {
+        "valid_pdf_header": true,
+        "pages_preserved": true,
+        "embedded_file_absent": true,
+        "no_open_action": true,
+        "no_acroform": true,
+        "no_names_javascript": true,
+        "no_catalog_aa": true,
+        "importer_regex_no_match": true,
+        "text_extraction_equivalent": true
+      },
+      "status": "SANITIZED_OK",
+      "sanitized_file": "0a7193edcd8929ac114043fcbffb8e53109ce4363f062cb269f2062ce9e1b4f8.pdf",
+      "sanitized_sha256": "5a4392c52053e6427bb70c41ff58d387107be39e85f540632c6ec14c26f31345",
+      "size_before": 815558,
+      "size_after": 789792
+    },
+    {
+      "source_legacy_path": "fichas/puerta-430.pdf",
+      "source_sha256_approved": "0a7193edcd8929ac114043fcbffb8e53109ce4363f062cb269f2062ce9e1b4f8",
+      "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
+      "sanitizer_version": "1.0.0",
+      "generated_at": "2026-09-18T20:45:08Z",
+      "source_sha256_actual": "0a7193edcd8929ac114043fcbffb8e53109ce4363f062cb269f2062ce9e1b4f8",
+      "pages_before": 4,
+      "pages_after": 4,
+      "removed_embedded_names": [
+        "High Quality.joboptions.joboptions"
+      ],
+      "validation": {
+        "valid_pdf_header": true,
+        "pages_preserved": true,
+        "embedded_file_absent": true,
+        "no_open_action": true,
+        "no_acroform": true,
+        "no_names_javascript": true,
+        "no_catalog_aa": true,
+        "importer_regex_no_match": true,
+        "text_extraction_equivalent": true
+      },
+      "status": "SANITIZED_OK",
+      "sanitized_file": "0a7193edcd8929ac114043fcbffb8e53109ce4363f062cb269f2062ce9e1b4f8.pdf",
+      "sanitized_sha256": "5a4392c52053e6427bb70c41ff58d387107be39e85f540632c6ec14c26f31345",
+      "size_before": 815558,
+      "size_after": 789792
+    },
+    {
+      "source_legacy_path": "fichas/puerta-seccional-418.pdf",
+      "source_sha256_approved": "a922b6ce9f9ca80b565a3b24be27a086f555aa305db9b9135443c079d93255df",
+      "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
+      "sanitizer_version": "1.0.0",
+      "generated_at": "2026-09-18T20:45:08Z",
+      "source_sha256_actual": "a922b6ce9f9ca80b565a3b24be27a086f555aa305db9b9135443c079d93255df",
+      "pages_before": 4,
+      "pages_after": 4,
+      "removed_embedded_names": [
+        "Rampage PDF.joboptions"
+      ],
+      "validation": {
+        "valid_pdf_header": true,
+        "pages_preserved": true,
+        "embedded_file_absent": true,
+        "no_open_action": true,
+        "no_acroform": true,
+        "no_names_javascript": true,
+        "no_catalog_aa": true,
+        "importer_regex_no_match": true,
+        "text_extraction_equivalent": true
+      },
+      "status": "SANITIZED_OK",
+      "sanitized_file": "a922b6ce9f9ca80b565a3b24be27a086f555aa305db9b9135443c079d93255df.pdf",
+      "sanitized_sha256": "fe4f7800e13c51b810f82a6f67c1f2f7d0b7013729d1194aff48b195a5889b79",
+      "size_before": 953747,
+      "size_after": 942631
+    },
+    {
+      "source_legacy_path": "fichas/puerta-seccional-422.pdf",
+      "source_sha256_approved": "a922b6ce9f9ca80b565a3b24be27a086f555aa305db9b9135443c079d93255df",
+      "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
+      "sanitizer_version": "1.0.0",
+      "generated_at": "2026-09-18T20:45:08Z",
+      "source_sha256_actual": "a922b6ce9f9ca80b565a3b24be27a086f555aa305db9b9135443c079d93255df",
+      "pages_before": 4,
+      "pages_after": 4,
+      "removed_embedded_names": [
+        "Rampage PDF.joboptions"
+      ],
+      "validation": {
+        "valid_pdf_header": true,
+        "pages_preserved": true,
+        "embedded_file_absent": true,
+        "no_open_action": true,
+        "no_acroform": true,
+        "no_names_javascript": true,
+        "no_catalog_aa": true,
+        "importer_regex_no_match": true,
+        "text_extraction_equivalent": true
+      },
+      "status": "SANITIZED_OK",
+      "sanitized_file": "a922b6ce9f9ca80b565a3b24be27a086f555aa305db9b9135443c079d93255df.pdf",
+      "sanitized_sha256": "fe4f7800e13c51b810f82a6f67c1f2f7d0b7013729d1194aff48b195a5889b79",
+      "size_before": 953747,
+      "size_after": 942631
+    },
+    {
+      "source_legacy_path": "fichas/puerta-seccional-426.pdf",
+      "source_sha256_approved": "703eb6311aaedddf3dd24a8e6b75089463317352f174f672c8d5002e3dfd574f",
+      "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
+      "sanitizer_version": "1.0.0",
+      "generated_at": "2026-09-18T20:45:08Z",
+      "source_sha256_actual": "703eb6311aaedddf3dd24a8e6b75089463317352f174f672c8d5002e3dfd574f",
+      "pages_before": 4,
+      "pages_after": 4,
+      "removed_embedded_names": [
+        "Press Quality.joboptions.joboptions"
+      ],
+      "validation": {
+        "valid_pdf_header": true,
+        "pages_preserved": true,
+        "embedded_file_absent": true,
+        "no_open_action": true,
+        "no_acroform": true,
+        "no_names_javascript": true,
+        "no_catalog_aa": true,
+        "importer_regex_no_match": true,
+        "text_extraction_equivalent": true
+      },
+      "status": "SANITIZED_OK",
+      "sanitized_file": "703eb6311aaedddf3dd24a8e6b75089463317352f174f672c8d5002e3dfd574f.pdf",
+      "sanitized_sha256": "e4fa7b213a9ee211940edd44fe147d3db38f3c256308429f21f208e1b32f02c3",
+      "size_before": 738042,
+      "size_after": 732214
+    },
+    {
+      "source_legacy_path": "fichas/puerta-seccional-432.pdf",
+      "source_sha256_approved": "703eb6311aaedddf3dd24a8e6b75089463317352f174f672c8d5002e3dfd574f",
+      "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
+      "sanitizer_version": "1.0.0",
+      "generated_at": "2026-09-18T20:45:08Z",
+      "source_sha256_actual": "703eb6311aaedddf3dd24a8e6b75089463317352f174f672c8d5002e3dfd574f",
+      "pages_before": 4,
+      "pages_after": 4,
+      "removed_embedded_names": [
+        "Press Quality.joboptions.joboptions"
+      ],
+      "validation": {
+        "valid_pdf_header": true,
+        "pages_preserved": true,
+        "embedded_file_absent": true,
+        "no_open_action": true,
+        "no_acroform": true,
+        "no_names_javascript": true,
+        "no_catalog_aa": true,
+        "importer_regex_no_match": true,
+        "text_extraction_equivalent": true
+      },
+      "status": "SANITIZED_OK",
+      "sanitized_file": "703eb6311aaedddf3dd24a8e6b75089463317352f174f672c8d5002e3dfd574f.pdf",
+      "sanitized_sha256": "e4fa7b213a9ee211940edd44fe147d3db38f3c256308429f21f208e1b32f02c3",
+      "size_before": 738042,
+      "size_after": 732214
+    },
+    {
+      "source_legacy_path": "fichas/puerta-thermacore-593.pdf",
+      "source_sha256_approved": "7e501c26a5bfc0c02da8899de34a0b6a2bef31bbb42c2124a5c3995ad803a3ee",
+      "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
+      "sanitizer_version": "1.0.0",
+      "generated_at": "2026-09-18T20:45:08Z",
+      "source_sha256_actual": "7e501c26a5bfc0c02da8899de34a0b6a2bef31bbb42c2124a5c3995ad803a3ee",
+      "pages_before": 4,
+      "pages_after": 4,
+      "removed_embedded_names": [
+        "Rampage PDF.joboptions"
+      ],
+      "validation": {
+        "valid_pdf_header": true,
+        "pages_preserved": true,
+        "embedded_file_absent": true,
+        "no_open_action": true,
+        "no_acroform": true,
+        "no_names_javascript": true,
+        "no_catalog_aa": true,
+        "importer_regex_no_match": true,
+        "text_extraction_equivalent": true
+      },
+      "status": "SANITIZED_OK",
+      "sanitized_file": "7e501c26a5bfc0c02da8899de34a0b6a2bef31bbb42c2124a5c3995ad803a3ee.pdf",
+      "sanitized_sha256": "2e4a29b1fae6792ea3058e582618def36a6da5c034a22e82a6980be53e75578d",
+      "size_before": 1583405,
+      "size_after": 1521295
+    },
+    {
+      "source_legacy_path": "fichas/puerta-thermacore-594.pdf",
+      "source_sha256_approved": "7e501c26a5bfc0c02da8899de34a0b6a2bef31bbb42c2124a5c3995ad803a3ee",
+      "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
+      "sanitizer_version": "1.0.0",
+      "generated_at": "2026-09-18T20:45:08Z",
+      "source_sha256_actual": "7e501c26a5bfc0c02da8899de34a0b6a2bef31bbb42c2124a5c3995ad803a3ee",
+      "pages_before": 4,
+      "pages_after": 4,
+      "removed_embedded_names": [
+        "Rampage PDF.joboptions"
+      ],
+      "validation": {
+        "valid_pdf_header": true,
+        "pages_preserved": true,
+        "embedded_file_absent": true,
+        "no_open_action": true,
+        "no_acroform": true,
+        "no_names_javascript": true,
+        "no_catalog_aa": true,
+        "importer_regex_no_match": true,
+        "text_extraction_equivalent": true
+      },
+      "status": "SANITIZED_OK",
+      "sanitized_file": "7e501c26a5bfc0c02da8899de34a0b6a2bef31bbb42c2124a5c3995ad803a3ee.pdf",
+      "sanitized_sha256": "2e4a29b1fae6792ea3058e582618def36a6da5c034a22e82a6980be53e75578d",
+      "size_before": 1583405,
+      "size_after": 1521295
+    },
+    {
+      "source_legacy_path": "fichas/puerta-521.pdf",
+      "source_sha256_approved": "e8ac9a72e867f60aa21665abd004640f2fac4e477b025eae8b7b9a8ae7222e01",
+      "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
+      "sanitizer_version": "1.0.0",
+      "generated_at": "2026-09-18T20:45:08Z",
+      "source_sha256_actual": "e8ac9a72e867f60aa21665abd004640f2fac4e477b025eae8b7b9a8ae7222e01",
+      "pages_before": 12,
+      "pages_after": 12,
+      "removed_embedded_names": [
+        "Rampage PDF.joboptions"
+      ],
+      "validation": {
+        "valid_pdf_header": true,
+        "pages_preserved": true,
+        "embedded_file_absent": true,
+        "no_open_action": true,
+        "no_acroform": true,
+        "no_names_javascript": true,
+        "no_catalog_aa": true,
+        "importer_regex_no_match": true,
+        "text_extraction_equivalent": true
+      },
+      "status": "SANITIZED_OK",
+      "sanitized_file": "e8ac9a72e867f60aa21665abd004640f2fac4e477b025eae8b7b9a8ae7222e01.pdf",
+      "sanitized_sha256": "4654441205820a8e5f3387c41d2353849663b82a2b5519f58e4f56c453d477c5",
+      "size_before": 4255039,
+      "size_after": 4244717
+    },
+    {
+      "source_legacy_path": "fichas/puerta-thermacore-595.pdf",
+      "source_sha256_approved": "8e4b232791099c29a4616cae17d42ee1c8c9637af06f83e25a640505a91026b2",
+      "sanitization_rule_id": "PDF-SANITIZE-EMBEDDEDFILE-V1",
+      "sanitizer_version": "1.0.0",
+      "generated_at": "2026-09-18T20:45:08Z",
+      "source_sha256_actual": "8e4b232791099c29a4616cae17d42ee1c8c9637af06f83e25a640505a91026b2",
+      "pages_before": 4,
+      "pages_after": 4,
+      "removed_embedded_names": [
+        "Rampage PDF.joboptions"
+      ],
+      "validation": {
+        "valid_pdf_header": true,
+        "pages_preserved": true,
+        "embedded_file_absent": true,
+        "no_open_action": true,
+        "no_acroform": true,
+        "no_names_javascript": true,
+        "no_catalog_aa": true,
+        "importer_regex_no_match": true,
+        "text_extraction_equivalent": true
+      },
+      "status": "SANITIZED_OK",
+      "sanitized_file": "8e4b232791099c29a4616cae17d42ee1c8c9637af06f83e25a640505a91026b2.pdf",
+      "sanitized_sha256": "cf2b8b823229dc4054e9496157dfe1ee7041fa3e151e07b94629efb95711bd21",
+      "size_before": 1912736,
+      "size_after": 1838356
     }
   ]
 }

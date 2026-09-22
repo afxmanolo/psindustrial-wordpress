@@ -1,0 +1,97 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "Two full DRY RUNs change nothing in the database",
+            "passed": true
+        },
+        {
+            "test": "A full plan remains impossible to execute, Q10 included",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: category:26",
+            "passed": true
+        },
+        {
+            "test": "Category 26 (nameless duplicate, 0 products, no page) is SKIP",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: category:33",
+            "passed": true
+        },
+        {
+            "test": "Category 33 (own page, real products) is kept",
+            "passed": true
+        },
+        {
+            "test": "Category 33 parent resolved correctly (parent_legacy_id=5), same logic as R-T01",
+            "passed": true
+        },
+        {
+            "test": "Category 33 receives its own image_file_id, same mechanism as Q01",
+            "passed": true
+        },
+        {
+            "test": "Sanity: 26 and 33 really do share the exact same name in the source data",
+            "passed": true
+        },
+        {
+            "test": "Same name, opposite actions: proves the decision is keyed by legacy_id, never by name",
+            "passed": true
+        },
+        {
+            "test": "Neither reason describes a merge of the two ids",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: category:25",
+            "passed": true
+        },
+        {
+            "test": "Category 25 (only referenced by the 14 Q06 empty\/test records, no page, no frontend evidence) is SKIP",
+            "passed": true
+        },
+        {
+            "test": "Sanity: category 25 genuinely has no legacy_page",
+            "passed": true
+        },
+        {
+            "test": "Sanity: category 25 genuinely has zero frontend product links",
+            "passed": true
+        },
+        {
+            "test": "Sanity: category 25's only product references are exactly the 14 Q06 empty ids, nothing else",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: category:1",
+            "passed": true
+        },
+        {
+            "test": "A category with real public use, not in Q10's approved list, is never touched by Q10",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:system\/files\/images\/categorias\/ba3f2923d733855f1d109ba12330647b866a3383",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: category:25",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: category:26",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: category:33",
+            "passed": true
+        },
+        {
+            "test": "A meaningful number of Q10 rows checked for stability (4)",
+            "passed": true
+        }
+    ]
+}

@@ -154,7 +154,20 @@ def structural_scan(pdf: pikepdf.Pdf) -> dict:
     }
 
 
-def sanitize_one(entry: dict, dry_run: bool) -> dict:
+def sanitize_one(entry: dict, dry_run: bool, cache: dict[str, dict] | None = None) -> dict:
+    """`cache` maps an already-processed approved_sha256 to its finished SANITIZED_OK
+    record. Several group_a_sanitization entries can legitimately share the same
+    source_sha256 (Q05: a byte-identical file reached via both a static page path and a
+    SQL-derived system/files/images/productos/<hash> path for the same product). Each
+    such entry still gets its OWN hash verification below -- a wrong "twin" claim is
+    still caught -- but the actual pikepdf open/modify/save/validate work, and the
+    content-addressed SANITIZED_DIR / f"{approved_sha256}.pdf" output file, happen at
+    most ONCE per unique hash. This matters because pikepdf.save() is not guaranteed
+    byte-for-byte deterministic across separate runs on identical input (internal object
+    ordering/xref can differ): re-sanitizing the same content a second time and
+    overwriting the same shared output file left every EARLIER record's sanitized_sha256
+    silently stale (PdfApprovals::resolve() then correctly, safely refused it) -- caching
+    by hash removes the redundant re-save entirely, rather than tolerating the race."""
     legacy_path = entry["legacy_path"]
     approved_sha256 = entry["source_sha256"]
     # legacy_path is always POSIX-style ("a/b/c"); join it segment by segment so it
@@ -185,7 +198,8 @@ def sanitize_one(entry: dict, dry_run: bool) -> dict:
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
     }
 
-    # 1) Verify source exists and its hash matches the approved hash EXACTLY.
+    # 1) Verify source exists and its hash matches the approved hash EXACTLY. Always done
+    # per-entry, even for a cache hit: proves THIS legacy_path really is what it claims.
     if not source_full.is_file():
         record.update(status="KEEP_REVIEW", failure_reason="SOURCE_FILE_NOT_FOUND")
         return record
@@ -193,6 +207,11 @@ def sanitize_one(entry: dict, dry_run: bool) -> dict:
     record["source_sha256_actual"] = current_sha256
     if current_sha256 != approved_sha256:
         record.update(status="KEEP_REVIEW", failure_reason="SOURCE_HASH_MISMATCH_APPROVAL_DOES_NOT_APPLY")
+        return record
+
+    if cache is not None and approved_sha256 in cache:
+        cached = cache[approved_sha256]
+        record.update({k: v for k, v in cached.items() if k not in ("source_legacy_path", "source_sha256_approved", "generated_at")})
         return record
 
     # 2) Open read-only; never write back to source_full.
@@ -291,9 +310,12 @@ def main() -> int:
         return 1
 
     results = []
+    cache: dict[str, dict] = {}
     for entry in approvals["group_a_sanitization"]:
-        rec = sanitize_one(entry, args.dry_run)
+        rec = sanitize_one(entry, args.dry_run, cache)
         results.append(rec)
+        if rec["status"] == "SANITIZED_OK" and entry["source_sha256"] not in cache:
+            cache[entry["source_sha256"]] = rec
         print(f"{entry['legacy_path']}: {rec['status']}" + (f" ({rec.get('failure_reason')})" if rec.get("failure_reason") else ""))
 
     if not args.dry_run:

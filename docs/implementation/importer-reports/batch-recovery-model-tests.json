@@ -1,0 +1,389 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "Fixture: found 48 real, currently-UNCHANGED entity_keys to build a safe synthetic plan from",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/13.0.Folleto-Operador-AccessPRO-FS1000-SPEED-hoja-tecnica.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Abrigo-de-anden-BG400.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/accesorios-doorlock.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Alumina-Technical-Specifications-15.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/BGDSHS_Brochure_Sept2014_WEB.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/cdx-commercial-operator-sellsheet.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Clopay-3720-07.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/CMDC-0524SP-14-1.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/CMDC-3717-3718-11.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/commercial-aluminum-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/CONTRA_EXPLOSION.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/CORTINA-EUROPEA.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/CORTINA-PLANA.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Cortina-serie-610-620.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Fast-Seal_LIT020520_ES-2.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/fireking-fire-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Folleto-de-Cortina-Enrollable-Wayne-Dalton-Firestar-700-2.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/INFRACA-RAPIDA-ENROLLABLE.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/INFRACA-RÁPIDA-APILABLE.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Kelley-Hydraulic-Dock-Leveler-Brochure_web.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Kelley-Vehicle-Restraint-Brochure_web.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Lift-Master-H-Sell-Sheet-Spanish.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/lisos.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/M-28R.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Minidock.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/moovi50rm.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/operador-cortina.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Operador-RHX-Folleto-comercial-para-cortina.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/pistones-electromecanicos-phobos.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/pistones-hidraulicos-lux.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/pistones-hidraulicos-p457.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Predadoor_NXT_LIT020720_ES.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/puerta-420.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Puerta-Blindada1.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Puerta-Holandesa-Door-Lock.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Puerta-Rayos-X-fabricación.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Puertas-Rayosx-folleto.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Rampas-Hidraulicas.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): asset:fichas\/Rampas-mecánicas.pdf",
+            "passed": true
+        },
+        {
+            "test": "batch_recovery() DENIES a scope=full run_id outright: VALID_RECOVERY_PLAN_REQUIRED",
+            "passed": true
+        },
+        {
+            "test": "The scope=full DENY attempt never touched the database",
+            "passed": true
+        },
+        {
+            "test": "Wrong\/other-scope confirmation phrase rejected: 'IMPORTAR FULL LOCAL RESUELTO'",
+            "passed": true
+        },
+        {
+            "test": "Wrong\/other-scope confirmation phrase rejected: 'REINTENTAR FALLOS RESUELTOS'",
+            "passed": true
+        },
+        {
+            "test": "Wrong\/other-scope confirmation phrase rejected: 'wrong phrase entirely'",
+            "passed": true
+        },
+        {
+            "test": "Batch 1 (all-UNCHANGED fixture) never mutates the database",
+            "passed": true
+        },
+        {
+            "test": "Batch 1: cursor=20, status=RUNNING",
+            "passed": true
+        },
+        {
+            "test": "Batch 1: all 20 results are UNCHANGED (no-op, already applied)",
+            "passed": true
+        },
+        {
+            "test": "Batch 2 never mutates the database",
+            "passed": true
+        },
+        {
+            "test": "Batch 2: cursor=40, status=RUNNING",
+            "passed": true
+        },
+        {
+            "test": "Batch 2: 40 cumulative results",
+            "passed": true
+        },
+        {
+            "test": "Sealed entries list is byte-identical after batch 2 -- never recomputed (the RETRY_SET_CHANGED_SINCE_FIRST_BUILD defect this executor was built to avoid)",
+            "passed": true
+        },
+        {
+            "test": "Batch 3 never mutates the database",
+            "passed": true
+        },
+        {
+            "test": "Batch 3: cursor=48, status=COMPLETE (20+20+8)",
+            "passed": true
+        },
+        {
+            "test": "Batch 3: 48 cumulative results, matching entry count exactly",
+            "passed": true
+        },
+        {
+            "test": "Sealed entries list still byte-identical at COMPLETE",
+            "passed": true
+        },
+        {
+            "test": "Re-running a COMPLETE recovery run never mutates the database",
+            "passed": true
+        },
+        {
+            "test": "Re-running a COMPLETE recovery run is a pure no-op: same cursor, same status, same 48 results, no duplicates",
+            "passed": true
+        },
+        {
+            "test": "A non-drifted sibling entry is unaffected, still its own normal outcome: asset:fichas\/13.0.Folleto-Operador-AccessPRO-FS1000-SPEED-hoja-tecnica.pdf",
+            "passed": true
+        },
+        {
+            "test": "A non-drifted sibling entry is unaffected, still its own normal outcome: asset:fichas\/Abrigo-de-anden-BG400.pdf",
+            "passed": true
+        },
+        {
+            "test": "The drifted entry itself throws, precisely labelled: SOURCE_CHANGED_SINCE_RECOVERY_SEALED",
+            "passed": true
+        },
+        {
+            "test": "A non-drifted sibling entry is unaffected, still its own normal outcome: asset:fichas\/Alumina-Technical-Specifications-15.pdf",
+            "passed": true
+        },
+        {
+            "test": "A non-drifted sibling entry is unaffected, still its own normal outcome: asset:fichas\/BGDSHS_Brochure_Sept2014_WEB.pdf",
+            "passed": true
+        },
+        {
+            "test": "Neither the drifted entry nor its siblings mutate the database",
+            "passed": true
+        },
+        {
+            "test": "decision_hash drift precisely labelled: DECISION_CHANGED_SINCE_RECOVERY_SEALED",
+            "passed": true
+        },
+        {
+            "test": "action drift precisely labelled: ACTION_CHANGED_SINCE_RECOVERY_SEALED",
+            "passed": true
+        },
+        {
+            "test": "Entity absent from current state precisely labelled: ENTITY_MISSING_FROM_CURRENT_STATE",
+            "passed": true
+        },
+        {
+            "test": "None of the decision\/action\/missing drift probes mutate the database",
+            "passed": true
+        },
+        {
+            "test": "Real recovery plan sealed entries count is exactly 48",
+            "passed": true
+        },
+        {
+            "test": "Legitimate category-conflict cascade never in the sealed real recovery set: sql:productos:1",
+            "passed": true
+        },
+        {
+            "test": "Legitimate category-conflict cascade never in the sealed real recovery set: sql:productos:46",
+            "passed": true
+        },
+        {
+            "test": "Legitimate category-conflict cascade never in the sealed real recovery set: sql:productos:47",
+            "passed": true
+        },
+        {
+            "test": "Legitimate category-conflict cascade never in the sealed real recovery set: sql:productos:48",
+            "passed": true
+        },
+        {
+            "test": "Legitimate slug collision never in the sealed real recovery set: category:37",
+            "passed": true
+        },
+        {
+            "test": "Legitimate slug collision never in the sealed real recovery set: category:38",
+            "passed": true
+        },
+        {
+            "test": "Legitimate slug collision never in the sealed real recovery set: php:index.php",
+            "passed": true
+        },
+        {
+            "test": "A real REVIEW entity never in the sealed real recovery set",
+            "passed": true
+        },
+        {
+            "test": "A real SKIP entity never in the sealed real recovery set",
+            "passed": true
+        },
+        {
+            "test": "Backup dated before the parent run completion: DENY",
+            "passed": true
+        },
+        {
+            "test": "Backup with an altered recorded hash vs. the real file: DENY",
+            "passed": true
+        },
+        {
+            "test": "Backup manifest declaring the wrong database name: DENY",
+            "passed": true
+        },
+        {
+            "test": "Real, untampered backup manifest: PASS on 'db_name_matches'",
+            "passed": true
+        },
+        {
+            "test": "Real, untampered backup manifest: PASS on 'db_dump_hash_current'",
+            "passed": true
+        },
+        {
+            "test": "Real, untampered backup manifest: PASS on 'uploads_backup_hashes_current'",
+            "passed": true
+        },
+        {
+            "test": "Real, untampered backup manifest: PASS on 'private_evidence_hashes_current'",
+            "passed": true
+        },
+        {
+            "test": "Real, untampered backup manifest: PASS on 'created_after_parent_completion'",
+            "passed": true
+        },
+        {
+            "test": "Real backup manifest records restore_verified=true (from the real verify_backup_restorable() run at creation time)",
+            "passed": true
+        }
+    ]
+}

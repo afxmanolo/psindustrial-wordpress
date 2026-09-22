@@ -1,0 +1,225 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "0 runs -> no-op",
+            "passed": true
+        },
+        {
+            "test": "10 runs -> no elimina nada",
+            "passed": true
+        },
+        {
+            "test": "10 runs still on disk",
+            "passed": true
+        },
+        {
+            "test": "30 runs -> no elimina nada",
+            "passed": true
+        },
+        {
+            "test": "31 runs -> elimina exactamente 1",
+            "passed": true
+        },
+        {
+            "test": "31 runs -> elimina el mas antiguo (i=0), no uno arbitrario: run-00000000-cccc-cccc-cccc-cccccccccccc.json",
+            "passed": true
+        },
+        {
+            "test": "El archivo eliminado ya no existe en disco",
+            "passed": true
+        },
+        {
+            "test": "100 runs -> elimina 70, conserva 30",
+            "passed": true
+        },
+        {
+            "test": "100 runs -> exactamente 30 archivos run-*.json en disco tras la limpieza",
+            "passed": true
+        },
+        {
+            "test": "100 runs -> los 30 supervivientes son exactamente los 30 mas recientes (i=70..99)",
+            "passed": true
+        },
+        {
+            "test": "Run activo (RUNNING) sobrevive pese a ser el archivo mas antiguo del directorio",
+            "passed": true
+        },
+        {
+            "test": "Run activo nunca aparece en la lista de eliminados",
+            "passed": true
+        },
+        {
+            "test": "Los 40 candidatos normales se recortan a 30 exactamente igual, sin que el run activo consuma uno de esos 30 cupos",
+            "passed": true
+        },
+        {
+            "test": "Un run COMPLETE sin resultados pendientes, si es el mas antiguo, SI se elimina normalmente",
+            "passed": true
+        },
+        {
+            "test": "COMPLETE con un FAILED sin resolver sobrevive pese a ser el archivo mas antiguo",
+            "passed": true
+        },
+        {
+            "test": "COMPLETE con FAILED nunca aparece en la lista de eliminados",
+            "passed": true
+        },
+        {
+            "test": "COMPLETE con CONFLICT sin resolver protegido segun la misma politica que FAILED",
+            "passed": true
+        },
+        {
+            "test": "closed_at explicito devuelve el run a retencion normal AUNQUE conserve resultados FAILED sin resolver",
+            "passed": true
+        },
+        {
+            "test": "recovery_open=true protegido explicitamente, independientemente de status\/results",
+            "passed": true
+        },
+        {
+            "test": "Run protegido, mucho mas viejo que los 30 normales, sobrevive sin ocupar uno de los 30 cupos",
+            "passed": true
+        },
+        {
+            "test": "Run protegido viejo nunca en la lista de eliminados",
+            "passed": true
+        },
+        {
+            "test": "Los 30 normales sobreviven intactos junto al protegido viejo (el protegido no consume uno de sus cupos)",
+            "passed": true
+        },
+        {
+            "test": "Protegido superviviente entre 100 normales: run-protect0-zzzz-zzzz-zzzz-zzzzzzzzzzzz.json",
+            "passed": true
+        },
+        {
+            "test": "Protegido nunca en la lista de eliminados: run-protect0-zzzz-zzzz-zzzz-zzzzzzzzzzzz.json",
+            "passed": true
+        },
+        {
+            "test": "Protegido superviviente entre 100 normales: run-protect1-zzzz-zzzz-zzzz-zzzzzzzzzzzz.json",
+            "passed": true
+        },
+        {
+            "test": "Protegido nunca en la lista de eliminados: run-protect1-zzzz-zzzz-zzzz-zzzzzzzzzzzz.json",
+            "passed": true
+        },
+        {
+            "test": "Protegido superviviente entre 100 normales: run-protect2-zzzz-zzzz-zzzz-zzzzzzzzzzzz.json",
+            "passed": true
+        },
+        {
+            "test": "Protegido nunca en la lista de eliminados: run-protect2-zzzz-zzzz-zzzz-zzzzzzzzzzzz.json",
+            "passed": true
+        },
+        {
+            "test": "Protegido superviviente entre 100 normales: run-protect3-zzzz-zzzz-zzzz-zzzzzzzzzzzz.json",
+            "passed": true
+        },
+        {
+            "test": "Protegido nunca en la lista de eliminados: run-protect3-zzzz-zzzz-zzzz-zzzzzzzzzzzz.json",
+            "passed": true
+        },
+        {
+            "test": "Protegido superviviente entre 100 normales: run-protect4-zzzz-zzzz-zzzz-zzzzzzzzzzzz.json",
+            "passed": true
+        },
+        {
+            "test": "Protegido nunca en la lista de eliminados: run-protect4-zzzz-zzzz-zzzz-zzzzzzzzzzzz.json",
+            "passed": true
+        },
+        {
+            "test": "100 runs normales + 5 protegidos -> exactamente 30 normales sobreviven (los protegidos no consumen cupos)",
+            "passed": true
+        },
+        {
+            "test": "100 normales + 5 protegidos -> se eliminan exactamente 70 normales, ninguno protegido",
+            "passed": true
+        },
+        {
+            "test": "Contenido no-JSON\/sin status nunca se trata como protegido: elegible para retencion normal",
+            "passed": true
+        },
+        {
+            "test": "Con 35 run + 5 archivos de otro tipo, se eliminan exactamente 5 (solo run-*.json de mas)",
+            "passed": true
+        },
+        {
+            "test": "Archivo protegido preservado: identity-abc123.json",
+            "passed": true
+        },
+        {
+            "test": "Archivo protegido preservado: backup-xyz789.json",
+            "passed": true
+        },
+        {
+            "test": "Archivo protegido preservado: log-run1.jsonl",
+            "passed": true
+        },
+        {
+            "test": "Archivo protegido preservado: asset-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.bin",
+            "passed": true
+        },
+        {
+            "test": "Archivo protegido preservado: writer.lock",
+            "passed": true
+        },
+        {
+            "test": "Nombre parecido pero invalido, preservado: run-.json",
+            "passed": true
+        },
+        {
+            "test": "Nombre parecido pero invalido, nunca en la lista de eliminados: run-.json",
+            "passed": true
+        },
+        {
+            "test": "Nombre parecido pero invalido, preservado: runXYZ.json",
+            "passed": true
+        },
+        {
+            "test": "Nombre parecido pero invalido, nunca en la lista de eliminados: runXYZ.json",
+            "passed": true
+        },
+        {
+            "test": "Nombre parecido pero invalido, preservado: run-abc123.txt",
+            "passed": true
+        },
+        {
+            "test": "Nombre parecido pero invalido, nunca en la lista de eliminados: run-abc123.txt",
+            "passed": true
+        },
+        {
+            "test": "Nombre parecido pero invalido, preservado: notrun-abc123.json",
+            "passed": true
+        },
+        {
+            "test": "Nombre parecido pero invalido, nunca en la lista de eliminados: notrun-abc123.json",
+            "passed": true
+        },
+        {
+            "test": "Orden estable: elimina exactamente 2 de 32 con timestamps identicos",
+            "passed": true
+        },
+        {
+            "test": "Orden estable: la misma fijacion produce la misma eleccion de eliminados con timestamps identicos",
+            "passed": true
+        },
+        {
+            "test": "Fallo de delete: se reporta en failed, no en deleted",
+            "passed": true
+        },
+        {
+            "test": "Fallo de delete: ningun archivo se perdio realmente (el unlink simulado nunca se ejecuto de verdad)",
+            "passed": true
+        },
+        {
+            "test": "Fallo de delete: retain_recent_runs() retorna normalmente, nunca lanza",
+            "passed": true
+        },
+        {
+            "test": "Un fallo mas grave (excepcion) en el mecanismo de borrado: comportamiento documentado como responsabilidad de Planner::build(), no de retain_recent_runs() en si (threw=yes)",
+            "passed": true
+        }
+    ]
+}

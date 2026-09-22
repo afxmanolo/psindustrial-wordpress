@@ -4,6 +4,13 @@ defined( 'ABSPATH' ) || exit;
 
 /** Read-only, bounded readers. PHP and SQL input are never evaluated. */
 final class Sources {
+ public const DATASHEET_BUTTON_PATH = 'images/verficha.png';
+ public const DATASHEET_BUTTON_SHA256 = '3f5aeebc29765caddc907536949a7c1802341f1771394b26a5d63c6ab9cfaf0f';
+ /** Visually verified UI button, with 86 legacy anchor uses. Never classify by filename alone. */
+ public static function is_ui_asset( string $key ): bool {
+  if ( 'asset:' . self::DATASHEET_BUTTON_PATH !== $key ) { return false; }
+  return hash_equals( self::DATASHEET_BUTTON_SHA256, hash_file( 'sha256', self::safe( Storage::project() . '/legacy/public', self::DATASHEET_BUTTON_PATH ) ) );
+ }
  public const FILES = array( 'product-master.csv', 'category-master.csv', 'brand-master.csv', 'content-master.csv', 'media-master.csv', 'product-media-relations.csv', 'static-product-supplement.csv', 'canonical-candidate-groups.csv', 'media-usage-evidence.csv', 'missing-media-references.csv', 'page-source-evidence.json' );
  public array $rows = array();
  public array $fingerprints = array();
@@ -19,6 +26,22 @@ final class Sources {
   foreach ( array( 'legacy/database/psindustrial_db.sql', 'legacy/public/puerta34_administrador.sql', 'docs/seo/url-master.csv' ) as $file ) {
    $this->fingerprints[ $file ] = hash_file( 'sha256', self::safe( Storage::project(), $file ) );
   }
+  // EditorialDecisions.php/PdfApprovals.php read these three directly (never through $this->
+  // rows), so a full-scope plan's REVIEW/MIGRATE/MERGE decisions depend on their content
+  // without it ever entering the hash coverage above -- meaning SOURCE_CHANGED_REPLAN
+  // (Runner::batch()) could not previously detect an edit to any of them between plan-build
+  // and execution. Fingerprinted here, the existing check covers them for free, with no new
+  // logic in Runner. editorial-decisions.json and pdf-approvals.json are both REQUIRED (Q02/
+  // Q03/etc. and the PDF exception path throw without them); sanitization-audit.json is
+  // OPTIONAL, matching PdfApprovals::auditRecords()'s own tolerance for it being absent.
+  foreach ( array(
+   'docs/implementation/review-resolution/implementation/editorial-decisions.json',
+   'docs/implementation/pdf-security-review/pdf-approvals.json',
+  ) as $file ) {
+   $this->fingerprints[ $file ] = hash_file( 'sha256', self::safe( Storage::project(), $file ) );
+  }
+  try { $this->fingerprints['docs/implementation/pdf-security-review/sanitization-audit.json'] = hash_file( 'sha256', self::safe( Storage::project(), 'docs/implementation/pdf-security-review/sanitization-audit.json' ) ); }
+  catch ( \Throwable $e ) { /* optional: absent means no Group A substitute available yet, exactly as PdfApprovals itself already tolerates. */ }
   $this->catalog = self::sql_catalog( self::safe( Storage::project(), 'legacy/public/puerta34_administrador.sql' ) );
   if ( count( $this->catalog['productos'] ?? array() ) !== count( $this->rows['product-master.csv'] ) ) { throw new \RuntimeException( 'SQL_CANONICAL_COVERAGE_CHANGED' ); }
  }

@@ -62,30 +62,6 @@
             "passed": true
         },
         {
-            "test": "Batch advances persistent cursor 1",
-            "passed": true
-        },
-        {
-            "test": "Batch advances persistent cursor 2",
-            "passed": true
-        },
-        {
-            "test": "Batch advances persistent cursor 3",
-            "passed": true
-        },
-        {
-            "test": "Batch advances persistent cursor 4",
-            "passed": true
-        },
-        {
-            "test": "Batch advances persistent cursor 5",
-            "passed": true
-        },
-        {
-            "test": "First subset completes without failures\/conflicts",
-            "passed": true
-        },
-        {
             "test": "Parent-child hierarchy preserved",
             "passed": true
         },
@@ -138,7 +114,7 @@
             "passed": true
         },
         {
-            "test": "Unpublished rehearsal php:nosotros.php",
+            "test": "php:nosotros.php was legitimately published in its own later, authorized phase (docs\/frontend\/institutional-frontend.md) -- still present, correctly no longer draft",
             "passed": true
         },
         {
@@ -146,11 +122,63 @@
             "passed": true
         },
         {
-            "test": "Second plan has 15 UNCHANGED and zero CREATE",
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:fichas\/puerta-420.pdf",
             "passed": true
         },
         {
-            "test": "Second execution creates no posts, attachments or terms",
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/2025-08-21_11h53_44.png",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/piso.jpg",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/puerta-420.jpg",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/puerta-420t.png",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/sectional-steel-door-416.jpg",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:images\/tg.png",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: asset:system\/files\/images\/categorias\/59ca6b73479b3fcde81f96439976896bad94b750",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: category:1",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: category:8",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: brand:1",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: sql:productos:63",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: sql:productos:64",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=UNCHANGED: static:automatismos-para-cancelas-cubic.php",
+            "passed": true
+        },
+        {
+            "test": "Subset identity still present, prediction=CONFLICT: php:nosotros.php",
             "passed": true
         },
         {

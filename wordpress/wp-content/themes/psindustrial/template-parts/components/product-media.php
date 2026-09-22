@@ -1,27 +1,15 @@
 <?php
 defined( 'ABSPATH' ) || exit;
-$gallery = get_post_meta( get_the_ID(), '_psi_gallery_ids', true );
-$pdfs = get_post_meta( get_the_ID(), '_psi_datasheets', true );
-$videos = get_post_meta( get_the_ID(), '_psi_videos', true );
+$pdfs = \PSIndustrial\Theme\product_datasheets( get_the_ID() );
 ?>
-<?php if ( is_array( $gallery ) && $gallery ) : ?>
-<section aria-label="<?php esc_attr_e( 'Galería del producto', 'psindustrial' ); ?>" class="product-grid">
-<?php foreach ( $gallery as $id ) { echo wp_get_attachment_image( (int) $id, 'large' ); } ?>
-</section>
+<?php if ( $pdfs ) : ?>
+<div class="product-datasheets" aria-label="<?php esc_attr_e( 'Fichas técnicas', 'psindustrial' ); ?>">
+	<?php foreach ( $pdfs as $index => $pdf ) : ?>
+	<a class="datasheet-button" href="<?php echo esc_url( $pdf['url'] ); ?>" target="_blank" rel="noopener">
+		<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/ver-ficha-tecnica.png' ) ); ?>" width="247" height="59" alt="<?php esc_attr_e( 'Ver ficha técnica', 'psindustrial' ); ?>">
+		<?php if ( count( $pdfs ) > 1 ) : ?><span><?php echo esc_html( $pdf['label'] ?: sprintf( __( 'Documento técnico %d', 'psindustrial' ), $index + 1 ) ); ?></span><?php endif; ?>
+		<span class="screen-reader-text"><?php esc_html_e( 'PDF, se abre en una pestaña nueva', 'psindustrial' ); ?></span>
+	</a>
+	<?php endforeach; ?>
+</div>
 <?php endif; ?>
-<?php if ( is_array( $pdfs ) && $pdfs ) : ?>
-<section><h2><?php esc_html_e( 'Fichas técnicas', 'psindustrial' ); ?></h2><ul>
-<?php foreach ( $pdfs as $pdf ) : ?>
-	<?php $url = wp_get_attachment_url( (int) $pdf['attachment_id'] ); ?>
-	<?php if ( $url ) : ?><li><a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $pdf['label'] ?: __( 'Descargar ficha PDF', 'psindustrial' ) ); ?></a> (PDF)</li><?php endif; ?>
-<?php endforeach; ?>
-</ul></section>
-<?php endif; ?>
-<?php if ( is_array( $videos ) && $videos ) : ?>
-<section><h2><?php esc_html_e( 'Videos', 'psindustrial' ); ?></h2><ul>
-<?php foreach ( $videos as $video ) : ?>
-<li><a href="<?php echo esc_url( 'https://www.youtube.com/watch?v=' . rawurlencode( $video['video_id'] ) ); ?>" rel="noopener"><?php echo esc_html( $video['title'] ?: __( 'Ver video', 'psindustrial' ) ); ?></a></li>
-<?php endforeach; ?>
-</ul></section>
-<?php endif; ?>
-

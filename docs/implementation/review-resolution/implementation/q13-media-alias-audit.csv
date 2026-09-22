@@ -1,0 +1,2 @@
+winner_entity_key,winner_legacy_path,alias_legacy_path,alias_action,sha256,notes
+asset:fichas/puerta-420.pdf,fichas/puerta-420.pdf,system/files/images/productos/9856266836c012c90673224e9379a1a7f4b32389,SKIP,932c44b3440fe52b0a4a097d1dda45adf7bc37d67b5a84753bb6c3526ceb33ff,"Q13: contenido identico (SHA-256, ya verificado por Planner al construir asset:fichas/puerta-420.pdf) a una ruta ya migrada; no se crea un segundo attachment. Ruta conservada como alias auditable."

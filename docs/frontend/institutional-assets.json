@@ -1,0 +1,56 @@
+{
+  "quienes-int.jpg": {
+    "source": "legacy/public/images/quienes-int.jpg",
+    "sha256": "2d518c8bd06e7eeaf543e2dbbbe4dec2da46f9c47b4d4144bd8e3911a16c9bc0",
+    "variants": [
+      {
+        "file": "assets/images/institutional/quienes-int-480.webp",
+        "width": 480,
+        "height": 462,
+        "sha256": "0d0f48d320c84a762e1e24b7d5f93906cc014992a30bba45f158b9461daafd58"
+      },
+      {
+        "file": "assets/images/institutional/quienes-int-800.webp",
+        "width": 800,
+        "height": 770,
+        "sha256": "0f0abbe07e4e7ca05c71d6746adaee41f5b4b66dc35e32c7dd7a316af00a1e49"
+      }
+    ]
+  },
+  "contact.jpg": {
+    "source": "legacy/public/images/contact.jpg",
+    "sha256": "bd569132c7c7f7887e32dd58e26a047dead91941a4e85772a36e0414e9486bf8",
+    "variants": [
+      {
+        "file": "assets/images/institutional/contact-160.webp",
+        "width": 160,
+        "height": 160,
+        "sha256": "46d20addb442bb0352a520f1e0aecf6dd835cd38b853648d8a072b67fccf8afc"
+      }
+    ]
+  },
+  "contact-03.jpg": {
+    "source": "legacy/public/images/contact-03.jpg",
+    "sha256": "05269a4403ac1ae68888f096f6501fef6072d9bc8b8c6348e6fb8a70f754d836",
+    "variants": [
+      {
+        "file": "assets/images/institutional/contact-03-160.webp",
+        "width": 160,
+        "height": 160,
+        "sha256": "7b98192883e48377a477bd21ad34e64cadf0a890139ba470604e2e0bf556d985"
+      }
+    ]
+  },
+  "contact-04.jpg": {
+    "source": "legacy/public/images/contact-04.jpg",
+    "sha256": "fcfdc63baba3ce3c2afc7ef1b85b504ca4333ade6a680af3acf8f56f6b6e62ed",
+    "variants": [
+      {
+        "file": "assets/images/institutional/contact-04-160.webp",
+        "width": 160,
+        "height": 160,
+        "sha256": "db664113f893fdcedbedf5180437f796faa1d623cc05aff2f5d66073f33a2bdd"
+      }
+    ]
+  }
+}

@@ -19,8 +19,14 @@ final class Planner {
   // batching, or which entries a rehearsal run contains. A 'full' plan built with it
   // still cannot be executed — Runner::batch() rejects any scope other than 'subset'.
   $policy = 'full' === $scope ? Policy::decisions( $s, $d ) : array();
-  $add = static function( string $key, string $type, array $row, string $reason ) use ( &$entries, $d, $policy, $scope, $s ): void {
-   $decision = $d['entities'][ $key ] ?? $policy[ $key ] ?? null;
+  // Explicit human editorial decisions (Q02, Q06 -- see migration/EditorialDecisions.php).
+  // Same 'full'-only scoping guarantee as Policy: never seen by 'subset' execution.
+  // Checked BEFORE the LOW-risk policy layer so an explicit human decision always takes
+  // precedence over a generic inference, though in practice the two never overlap --
+  // Policy already excludes every multi-record canonical group and every empty/test id.
+  $editorial = 'full' === $scope ? EditorialDecisions::decisions( $s, $policy, $d ) : array();
+  $add = static function( string $key, string $type, array $row, string $reason ) use ( &$entries, $d, $editorial, $policy, $scope, $s ): void {
+   $decision = $d['entities'][ $key ] ?? $editorial[ $key ] ?? $policy[ $key ] ?? null;
    if ( 'subset' === $scope && ! $decision && ! in_array( $key, $d['review_examples'], true ) ) { return; }
    $file = $row['legacy_php'] ?? $row['legacy_page'] ?? $row['legacy_file'] ?? $row['legacy_path'] ?? '';
    $e = array( 'manifest_version' => 1, 'entity_key' => $key, 'source_key' => $key, 'source_namespace' => explode( ':', $key )[0], 'source_type' => $type, 'content_type' => $type,
@@ -29,9 +35,11 @@ final class Planner {
     'notes' => $reason, 'row' => $row, 'data' => array(), 'dependencies' => array(), 'approval_ref' => '', 'field_ownership' => 'importer-controlled draft fields; manual edits block whole object', 'warnings' => array() );
    if ( 'LEGACY_INTERNAL' === ( $row['classification'] ?? '' ) ) { $e['action'] = 'SKIP'; $e['notes'] = 'Código interno: no se migra como contenido; archivo y evidencias preservados.'; }
    if ( $decision ) {
-    $e['approval_ref'] = 'low_rule' === ( $decision['origin'] ?? '' )
+    $e['approval_ref'] = 'editorial_decision' === ( $decision['origin'] ?? '' )
+     ? 'Decisión editorial humana (' . ( $decision['decision_id'] ?? '' ) . '): migration/EditorialDecisions.php; docs/implementation/review-resolution/implementation/editorial-decisions.json:' . $key
+     : ( 'low_rule' === ( $decision['origin'] ?? '' )
      ? 'Política LOW automatizada (Prompt 7): migration/Policy.php:' . ( $decision['rule_id'] ?? '' ) . ':' . $key
-     : 'Prompt 6: ensayo privado; subset-decisions.json:' . $key;
+     : 'Prompt 6: ensayo privado; subset-decisions.json:' . $key );
     $e['decision'] = $decision; $e['action'] = $decision['action'];
     if ( ! in_array( $e['action'], array( 'MIGRATE', 'CREATE_FROM_STATIC', 'MERGE', 'SKIP', 'REVIEW' ), true ) ) { throw new \RuntimeException( 'INVALID_DECISION_ACTION' ); }
     if ( 'MERGE' === $e['action'] && ( empty( $decision['source_keys'] ) || empty( $decision['field_winners'] ) || empty( $decision['editorial_approval'] ) ) ) { $e['action'] = 'REVIEW'; $e['notes'] = 'MERGE requiere autorización editorial y ganador por campo.'; }
@@ -79,6 +87,7 @@ final class Planner {
         $e['warnings'][] = 'Borrador: revisar extracción, títulos, tablas y enlaces antes de publicar; SEO/rutas sin activar.';
         $e['data']['categories'] = $decision['categories'] ?? array(); $e['data']['brand'] = $decision['brand'] ?? '';
         $e['data']['images'] = $decision['images'] ?? array(); $e['data']['pdfs'] = $decision['pdfs'] ?? array();
+        foreach ( array( 'images','pdfs' ) as $field ) { $e['data'][ $field ] = array_values( array_filter( $e['data'][ $field ], static fn( $assetKey ) => ! Sources::is_ui_asset( $assetKey ) ) ); }
         $e['data']['videos'] = $decision['videos'] ?? array();
         if ( ! $e['data']['brand'] && 'page' !== $type ) { $e['warnings'][] = 'Sin marca: no inferir fabricante.'; }
         $e['dependencies'] = array_merge( $e['data']['categories'], $e['data']['brand'] ? array( $e['data']['brand'] ) : array(), $e['data']['images'], $e['data']['pdfs'] );
@@ -119,6 +128,7 @@ final class Planner {
     }
    }
    $e['target_type'] = match ( $type ) { 'category' => 'psi_categoria', 'brand' => 'psi_marca', 'product', 'static_product' => 'psi_producto', 'media' => 'attachment', default => 'page' };
+   if ( 'media' === $type && Sources::is_ui_asset( $key ) ) { $e['action'] = 'SKIP'; $e['classification'] = 'UI_ONLY_ASSET'; $e['notes'] = 'Verified path + SHA-256: theme PDF button, never editorial media. Existing attachment retained.'; }
    $e['planned_result'] = in_array( $e['action'], array( 'SKIP', 'REVIEW' ), true ) ? $e['action'] : Identity::prediction( $e );
    if ( ! in_array( $e['action'], array( 'SKIP','REVIEW' ), true ) ) { $e['wordpress_id'] = Identity::find( $e ); }
    if ( 'product' === $type ) { $e['relationship_evidence'] = array( 'category_confidence' => $row['category_confidence'], 'brand_confidence' => $row['brand_confidence'], 'candidate_brand' => $row['brand_id'], 'evidence' => $row['source_of_relationship'] ); }
@@ -155,6 +165,11 @@ final class Planner {
   $plan = array( 'manifest_version' => 1, 'transform_version' => self::VERSION, 'run_id' => $run, 'scope' => $scope, 'environment_id' => Storage::hash( array( home_url(), DB_NAME ) ), 'created_at' => gmdate( 'c' ), 'mode' => 'DRY_RUN', 'status' => 'VALIDATED', 'cursor' => 0, 'sources' => $s->fingerprints, 'decisions_hash' => Storage::hash( $d ), 'entries' => array_values( $ordered ), 'results' => array() );
   $plan['plan_hash'] = self::digest( $plan ); $plan['summary'] = self::summary( $plan['entries'] );
   Storage::write( 'run-' . $run . '.json', $plan );
+  // Retention runs only AFTER the new snapshot is safely persisted, so housekeeping can
+  // never delete history before this run's own copy is confirmed on disk. Never allowed to
+  // fail a valid DRY RUN: a housekeeping problem is reported (Storage::retain_recent_runs()
+  // logs it) and surfaced here for callers/tests, never thrown.
+  try { $plan['retention'] = Storage::retain_recent_runs(); } catch ( \Throwable $error ) { $plan['retention'] = array( 'kept' => null, 'deleted' => array(), 'failed' => array(), 'error' => $error->getMessage() ); }
   return $plan;
  }
  public static function digest( array $plan ): string {

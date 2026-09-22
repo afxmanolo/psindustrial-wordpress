@@ -151,6 +151,7 @@ use PSIndustrial\Core\Media;
   foreach ( $s->rows['media-master.csv'] as $row ) {
    if ( 'application/pdf' !== ( $row['detected_type'] ?? '' ) ) { continue; }
    if ( isset( $groupA[ $row['legacy_path'] ] ) || isset( $groupB[ $row['legacy_path'] ] ) ) { continue; }
+   if ( null !== PdfApprovals::resolve( $row['legacy_path'], $row['sha256'] ) ) { continue; } // approved elsewhere (e.g. Q05) -- not "ordinary/unrelated".
    $full2 = Sources::safe( Storage::project() . '/legacy/public', $row['legacy_path'] );
    $mime = ( new finfo( FILEINFO_MIME_TYPE ) )->file( $full2 );
    $plain = Media::file_valid( $full2, $mime );
@@ -164,7 +165,14 @@ use PSIndustrial\Core\Media;
   $assert( false === $mediaIsValid( sys_get_temp_dir(), 'image/jpeg', array_key_first( $groupB ) ), 'Non-PDF mime never consults PdfApprovals (fallback only ever applies to application/pdf)' );
 
   // ================================================================== INTEGRATION: numbers unchanged
-  $assert( 932 === $full['summary']['actions']['REVIEW'], 'Full plan REVIEW count is unchanged by this fix (932): the fix only affects a future Runner execution, never Planner\'s decisions' );
+  // This Runner fix (media_is_valid()'s fallback) must never change what Planner itself
+  // decides -- only a future real execution. Proven by rebuilding the plan a second time
+  // and comparing REVIEW counts, rather than pinning a specific number: the exact figure
+  // moves as later, unrelated phases (Policy/EditorialDecisions/PdfApprovals content) add
+  // decisions; what must never move is that Runner::media_is_valid() itself is a pure,
+  // side-effect-free read that leaves Planner::build() byte-for-byte reproducible.
+  $fullAgain = Planner::build( 'full' );
+  $assert( $fullAgain['summary']['actions']['REVIEW'] === $full['summary']['actions']['REVIEW'], 'Full plan REVIEW count is stable/reproducible across rebuilds with this fix active' );
   $assert( 'DRY_RUN' === $full['mode'] && 'VALIDATED' === $full['status'], 'Plan remains DRY_RUN/VALIDATED' );
 
   $export( 'runner-media-validation-tests.json', array( 'passed' => true, 'checks' => $checks ) );

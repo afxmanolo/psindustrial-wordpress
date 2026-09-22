@@ -1,0 +1,459 @@
+{
+    "passed": 111,
+    "failed": 0,
+    "samples": {
+        "1371": "published / Group A / no brand",
+        "1360": "Group B / one PDF / one image",
+        "1354": "gallery / multiple PDFs",
+        "1359": "multiple assigned categories",
+        "133": "Q04 / no PDF / no brand",
+        "1171": "no images / no PDF",
+        "1110": "six images"
+    },
+    "checks": [
+        {
+            "test": "Navigation archive uses native archive permalink",
+            "passed": true
+        },
+        {
+            "test": "Only real public taxonomy/archive destinations; REVIEW excluded",
+            "passed": true
+        },
+        {
+            "test": "1371: product and unique H1",
+            "passed": true
+        },
+        {
+            "test": "1371: sidebar and menu have no placeholder links",
+            "passed": true
+        },
+        {
+            "test": "1371: dropdown contains server-rendered links without JS",
+            "passed": true
+        },
+        {
+            "test": "1371: every sidebar entry is a link",
+            "passed": true
+        },
+        {
+            "test": "1371: gallery count",
+            "passed": true
+        },
+        {
+            "test": "1371: PDF count",
+            "passed": true
+        },
+        {
+            "test": "1371: actual PDF destination 0",
+            "passed": true
+        },
+        {
+            "test": "1371: theme UI button 0",
+            "passed": true
+        },
+        {
+            "test": "1371: single PDF without filename",
+            "passed": true
+        },
+        {
+            "test": "1371: no empty focusable links",
+            "passed": true
+        },
+        {
+            "test": "1371: no PHP error output",
+            "passed": true
+        },
+        {
+            "test": "1360: product and unique H1",
+            "passed": true
+        },
+        {
+            "test": "1360: sidebar and menu have no placeholder links",
+            "passed": true
+        },
+        {
+            "test": "1360: dropdown contains server-rendered links without JS",
+            "passed": true
+        },
+        {
+            "test": "1360: every sidebar entry is a link",
+            "passed": true
+        },
+        {
+            "test": "1360: gallery count",
+            "passed": true
+        },
+        {
+            "test": "1360: PDF count",
+            "passed": true
+        },
+        {
+            "test": "1360: actual PDF destination 0",
+            "passed": true
+        },
+        {
+            "test": "1360: theme UI button 0",
+            "passed": true
+        },
+        {
+            "test": "1360: single PDF without filename",
+            "passed": true
+        },
+        {
+            "test": "1360: no empty focusable links",
+            "passed": true
+        },
+        {
+            "test": "1360: no PHP error output",
+            "passed": true
+        },
+        {
+            "test": "1354: product and unique H1",
+            "passed": true
+        },
+        {
+            "test": "1354: sidebar and menu have no placeholder links",
+            "passed": true
+        },
+        {
+            "test": "1354: dropdown contains server-rendered links without JS",
+            "passed": true
+        },
+        {
+            "test": "1354: every sidebar entry is a link",
+            "passed": true
+        },
+        {
+            "test": "1354: gallery count",
+            "passed": true
+        },
+        {
+            "test": "1354: PDF count",
+            "passed": true
+        },
+        {
+            "test": "1354: actual PDF destination 0",
+            "passed": true
+        },
+        {
+            "test": "1354: theme UI button 0",
+            "passed": true
+        },
+        {
+            "test": "1354: actual PDF destination 1",
+            "passed": true
+        },
+        {
+            "test": "1354: theme UI button 1",
+            "passed": true
+        },
+        {
+            "test": "1354: no empty focusable links",
+            "passed": true
+        },
+        {
+            "test": "1354: no PHP error output",
+            "passed": true
+        },
+        {
+            "test": "1359: product and unique H1",
+            "passed": true
+        },
+        {
+            "test": "1359: sidebar and menu have no placeholder links",
+            "passed": true
+        },
+        {
+            "test": "1359: dropdown contains server-rendered links without JS",
+            "passed": true
+        },
+        {
+            "test": "1359: every sidebar entry is a link",
+            "passed": true
+        },
+        {
+            "test": "1359: gallery count",
+            "passed": true
+        },
+        {
+            "test": "1359: PDF count",
+            "passed": true
+        },
+        {
+            "test": "1359: actual PDF destination 0",
+            "passed": true
+        },
+        {
+            "test": "1359: theme UI button 0",
+            "passed": true
+        },
+        {
+            "test": "1359: single PDF without filename",
+            "passed": true
+        },
+        {
+            "test": "1359: no empty focusable links",
+            "passed": true
+        },
+        {
+            "test": "1359: no PHP error output",
+            "passed": true
+        },
+        {
+            "test": "133: product and unique H1",
+            "passed": true
+        },
+        {
+            "test": "133: sidebar and menu have no placeholder links",
+            "passed": true
+        },
+        {
+            "test": "133: dropdown contains server-rendered links without JS",
+            "passed": true
+        },
+        {
+            "test": "133: every sidebar entry is a link",
+            "passed": true
+        },
+        {
+            "test": "133: gallery count",
+            "passed": true
+        },
+        {
+            "test": "133: PDF count",
+            "passed": true
+        },
+        {
+            "test": "133: no empty focusable links",
+            "passed": true
+        },
+        {
+            "test": "133: no PHP error output",
+            "passed": true
+        },
+        {
+            "test": "1171: product and unique H1",
+            "passed": true
+        },
+        {
+            "test": "1171: sidebar and menu have no placeholder links",
+            "passed": true
+        },
+        {
+            "test": "1171: dropdown contains server-rendered links without JS",
+            "passed": true
+        },
+        {
+            "test": "1171: every sidebar entry is a link",
+            "passed": true
+        },
+        {
+            "test": "1171: gallery count",
+            "passed": true
+        },
+        {
+            "test": "1171: PDF count",
+            "passed": true
+        },
+        {
+            "test": "1171: no empty focusable links",
+            "passed": true
+        },
+        {
+            "test": "1171: no PHP error output",
+            "passed": true
+        },
+        {
+            "test": "1110: product and unique H1",
+            "passed": true
+        },
+        {
+            "test": "1110: sidebar and menu have no placeholder links",
+            "passed": true
+        },
+        {
+            "test": "1110: dropdown contains server-rendered links without JS",
+            "passed": true
+        },
+        {
+            "test": "1110: every sidebar entry is a link",
+            "passed": true
+        },
+        {
+            "test": "1110: gallery count",
+            "passed": true
+        },
+        {
+            "test": "1110: PDF count",
+            "passed": true
+        },
+        {
+            "test": "1110: actual PDF destination 0",
+            "passed": true
+        },
+        {
+            "test": "1110: theme UI button 0",
+            "passed": true
+        },
+        {
+            "test": "1110: single PDF without filename",
+            "passed": true
+        },
+        {
+            "test": "1110: no empty focusable links",
+            "passed": true
+        },
+        {
+            "test": "1110: no PHP error output",
+            "passed": true
+        },
+        {
+            "test": "Native assigned menu omits placeholder and draft destinations without changing menu data",
+            "passed": true
+        },
+        {
+            "test": "Human publication remains publish",
+            "passed": true
+        },
+        {
+            "test": "Known UI image excluded at presentation boundary",
+            "passed": true
+        },
+        {
+            "test": "Duplicate IDs, PDF, UI image and invalid ID excluded without DB writes",
+            "passed": true
+        },
+        {
+            "test": "PDF presentation rejects image, UI, unknown attachment and duplicate ID",
+            "passed": true
+        },
+        {
+            "test": "Only approved video provider and valid ID rendered (in-memory fixture)",
+            "passed": true
+        },
+        {
+            "test": "1371: real PDF HTTP 200 and PDF MIME",
+            "passed": true
+        },
+        {
+            "test": "1360: real PDF HTTP 200 and PDF MIME",
+            "passed": true
+        },
+        {
+            "test": "1354: real PDF HTTP 200 and PDF MIME",
+            "passed": true
+        },
+        {
+            "test": "1354: real PDF HTTP 200 and PDF MIME",
+            "passed": true
+        },
+        {
+            "test": "1359: approved existing taxonomy relationships render",
+            "passed": true
+        },
+        {
+            "test": "1360: approved existing taxonomy relationships render",
+            "passed": true
+        },
+        {
+            "test": "psi_categoria: exact active sidebar destination uses native term URL",
+            "passed": true
+        },
+        {
+            "test": "psi_categoria: approved destination automatically available without stored menu changes",
+            "passed": true
+        },
+        {
+            "test": "psi_categoria: actual related products use shared cards",
+            "passed": true
+        },
+        {
+            "test": "psi_categoria: product belongs to queried term 1371",
+            "passed": true
+        },
+        {
+            "test": "psi_categoria: product belongs to queried term 1368",
+            "passed": true
+        },
+        {
+            "test": "psi_categoria: product belongs to queried term 1369",
+            "passed": true
+        },
+        {
+            "test": "psi_categoria: product belongs to queried term 1370",
+            "passed": true
+        },
+        {
+            "test": "psi_categoria: product belongs to queried term 1362",
+            "passed": true
+        },
+        {
+            "test": "psi_categoria: product belongs to queried term 1363",
+            "passed": true
+        },
+        {
+            "test": "psi_marca: exact active sidebar destination uses native term URL",
+            "passed": true
+        },
+        {
+            "test": "psi_marca: approved destination automatically available without stored menu changes",
+            "passed": true
+        },
+        {
+            "test": "psi_marca: actual related products use shared cards",
+            "passed": true
+        },
+        {
+            "test": "psi_marca: product belongs to queried term 1367",
+            "passed": true
+        },
+        {
+            "test": "psi_marca: product belongs to queried term 1360",
+            "passed": true
+        },
+        {
+            "test": "psi_marca: product belongs to queried term 1148",
+            "passed": true
+        },
+        {
+            "test": "psi_marca: product belongs to queried term 1144",
+            "passed": true
+        },
+        {
+            "test": "psi_marca: product belongs to queried term 1141",
+            "passed": true
+        },
+        {
+            "test": "psi_marca: product belongs to queried term 1110",
+            "passed": true
+        },
+        {
+            "test": "psi_categoria: public HTTP respects existing approval policy",
+            "passed": true
+        },
+        {
+            "test": "psi_marca: public HTTP respects existing approval policy",
+            "passed": true
+        },
+        {
+            "test": "Catalog grid with 12 real products (private draft preview)",
+            "passed": true
+        },
+        {
+            "test": "Public archive HTTP 200",
+            "passed": true
+        },
+        {
+            "test": "Public archive includes published product, excludes draft",
+            "passed": true
+        },
+        {
+            "test": "Catalog visual system does not alter Home",
+            "passed": true
+        },
+        {
+            "test": "All posts, metadata and taxonomy tables unchanged",
+            "passed": true
+        }
+    ]
+}

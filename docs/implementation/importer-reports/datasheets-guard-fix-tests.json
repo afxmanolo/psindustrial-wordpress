@@ -1,0 +1,69 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "Fixture: the real Group B attachment (commercial-aluminum-door-systems-brochure.pdf) exists",
+            "passed": true
+        },
+        {
+            "test": "Sanity: this Group B attachment still fails Media::valid() alone (the bug this fix addresses)",
+            "passed": true
+        },
+        {
+            "test": "Fixture: a real Group A (sanitized) attachment exists",
+            "passed": true
+        },
+        {
+            "test": "Sanity: the Group A attachment already passes Media::valid() alone (sanitized bytes)",
+            "passed": true
+        },
+        {
+            "test": "Fixture: an ordinary image attachment exists",
+            "passed": true
+        },
+        {
+            "test": "Group B exact attachment + exact legacy path + approval: override returns null to perform the native write",
+            "passed": true
+        },
+        {
+            "test": "Same attachment, path that does not match its own approval: BLOCK (returns original $check, false)",
+            "passed": true
+        },
+        {
+            "test": "An attachment with no real PdfApprovals entry for that path: BLOCK",
+            "passed": true
+        },
+        {
+            "test": "Real dangerous PDF bytes are never an approved exception for the Group B path",
+            "passed": true
+        },
+        {
+            "test": "Group A (sanitized) attachment: override returns null to perform the native write purely via Media::valid(), never touches PdfApprovals",
+            "passed": true
+        },
+        {
+            "test": "A different post id (any other write in flight): completely untouched, original $check returned",
+            "passed": true
+        },
+        {
+            "test": "A different meta key (e.g. _psi_gallery_ids): completely untouched",
+            "passed": true
+        },
+        {
+            "test": "$check already true (nothing rejected): returned as-is, never re-evaluated",
+            "passed": true
+        },
+        {
+            "test": "Fields::validate() still calls the real, unmodified Media::valid() for _psi_datasheets -- never relaxed",
+            "passed": true
+        },
+        {
+            "test": "Fields.php itself never references PdfApprovals -- the override lives entirely in Runner.php, scoped to the migration path only",
+            "passed": true
+        },
+        {
+            "test": "Full plan REVIEW count stable\/reproducible with this fix active",
+            "passed": true
+        }
+    ]
+}

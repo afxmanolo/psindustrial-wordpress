@@ -1,0 +1,225 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "A full plan remains impossible to execute, Q03-B\/C\/D included",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:6",
+            "passed": true
+        },
+        {
+            "test": "coleccion-modern-steel.php: id 6 is the single consolidated product",
+            "passed": true
+        },
+        {
+            "test": "Modern Steel: brand is explicitly empty, never Overhead Door\/Wayne Dalton\/Clopay",
+            "passed": true
+        },
+        {
+            "test": "Modern Steel: field_provenance records BRAND_UNRESOLVED_Q09",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:6",
+            "passed": true
+        },
+        {
+            "test": "Modern Steel id 6 is not stranded in plain REVIEW (the product is not duplicated just because the brand is unknown)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:16",
+            "passed": true
+        },
+        {
+            "test": "Modern Steel id 16 is not stranded in plain REVIEW (the product is not duplicated just because the brand is unknown)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:20",
+            "passed": true
+        },
+        {
+            "test": "Modern Steel id 20 is not stranded in plain REVIEW (the product is not duplicated just because the brand is unknown)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:107",
+            "passed": true
+        },
+        {
+            "test": "Modern Steel id 107 is not stranded in plain REVIEW (the product is not duplicated just because the brand is unknown)",
+            "passed": true
+        },
+        {
+            "test": "Modern Steel: exactly one winner, three absorbed siblings (winners=1 losers=3)",
+            "passed": true
+        },
+        {
+            "test": "Sanity: Modern Steel genuinely has 3+ distinct brand_id values across its members",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:43",
+            "passed": true
+        },
+        {
+            "test": "lift-master-mod-h.php: id 43 is the single consolidated product",
+            "passed": true
+        },
+        {
+            "test": "LiftMaster: brand is explicitly empty, never LiftMaster nor Blue Giant",
+            "passed": true
+        },
+        {
+            "test": "LiftMaster: field_provenance records BRAND_UNRESOLVED_Q09",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:81",
+            "passed": true
+        },
+        {
+            "test": "id 81 absorbed into id 43, no independent product",
+            "passed": true
+        },
+        {
+            "test": "Sanity: the page's own title evidence (Blue Giant) is untouched, still readable from content-master.csv",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:14",
+            "passed": true
+        },
+        {
+            "test": "puertas-seccionales-de-acero-aisladas-thermospan-modelo-150.php: id 14 is the single consolidated product",
+            "passed": true
+        },
+        {
+            "test": "Thermospan: brand is explicitly empty, never Wayne Dalton nor Clopay",
+            "passed": true
+        },
+        {
+            "test": "Thermospan: field_provenance records BRAND_UNRESOLVED_Q09",
+            "passed": true
+        },
+        {
+            "test": "Thermospan: description genuinely differs between id 14 and id 57 -> CONFLICT, not silently picked",
+            "passed": true
+        },
+        {
+            "test": "Thermospan: CONFLICT never claims a single winning description source",
+            "passed": true
+        },
+        {
+            "test": "Thermospan: the decision's own reason text records the description conflict",
+            "passed": true
+        },
+        {
+            "test": "Thermospan: identity STILL consolidates despite the field conflict -- the two are separate axes",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:57",
+            "passed": true
+        },
+        {
+            "test": "id 57 absorbed into id 14, no independent product",
+            "passed": true
+        },
+        {
+            "test": "Sanity: the two descriptions genuinely differ in the source data",
+            "passed": true
+        },
+        {
+            "test": "Sanity: both are non-empty (a real conflict, not an empty-vs-populated case)",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/lisos.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/liso_rayas.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/modern-steel-1.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/modern-steel-2.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:system\/files\/images\/productos\/0d4439f5ba46973f404b8a9eaf3c6ed102faad54",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:system\/files\/images\/productos\/d113f473f3aa6186e6cce3296aebc45f1a266b9d",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:6",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:16",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:20",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:107",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/Lift-Master-H-Sell-Sheet-Spanish.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/lift.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:43",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:81",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/sectional-steel-door-model-150-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/thomp.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:system\/files\/images\/productos\/bd6521c004c07b7eb1e6b29f1cfe3cc0d4ceb3cc",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:system\/files\/images\/productos\/d0c290fb090b8236400c0131456b035b9199b02c",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:14",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:57",
+            "passed": true
+        },
+        {
+            "test": "A meaningful number of Q03-B\/C\/D rows checked for stability (20)",
+            "passed": true
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "Two full DRY RUNs change nothing in the database",
+            "passed": true
+        },
+        {
+            "test": "A full plan remains impossible to execute, Q13 included",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:fichas\/puerta-420.pdf",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:system\/files\/images\/productos\/9856266836c012c90673224e9379a1a7f4b32389",
+            "passed": true
+        },
+        {
+            "test": "Winner (fichas\/puerta-420.pdf) reaches MIGRATE as the sole logical attachment",
+            "passed": true
+        },
+        {
+            "test": "Second legacy path (binary-identical) is SKIP, never a second attachment",
+            "passed": true
+        },
+        {
+            "test": "Independent proof: the two legacy paths really are byte-identical (SHA-256)",
+            "passed": true
+        },
+        {
+            "test": "The alias path is recorded on the winning entity's own binary_aliases (auditable trail)",
+            "passed": true
+        },
+        {
+            "test": "The alias's own SKIP reason cites which entity it is an alias of",
+            "passed": true
+        },
+        {
+            "test": "Sanity: found an unrelated PDF path to use as a negative control",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:system\/files\/images\/productos\/06bfd8e22a88d66d31acea15164a009c18912ca2",
+            "passed": true
+        },
+        {
+            "test": "An unrelated media path (no declared binary_alias relationship) never receives a Q13 decision",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:system\/files\/images\/productos\/9856266836c012c90673224e9379a1a7f4b32389",
+            "passed": true
+        },
+        {
+            "test": "At least the one known Q13 row checked for stability (got 1)",
+            "passed": true
+        }
+    ]
+}

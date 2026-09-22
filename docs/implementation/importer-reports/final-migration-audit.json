@@ -1,0 +1,794 @@
+{
+    "status": "BLOCKED_BINARY_DUPLICATES",
+    "counts": {
+        "psi_producto": 101,
+        "migrated_psi_producto": 100,
+        "page": 7,
+        "migrated_page": 7,
+        "attachment": 362,
+        "migrated_attachment": 359,
+        "application/pdf": 81,
+        "image/jpeg": 207,
+        "image/png": 74,
+        "psi_categoria": 34,
+        "psi_marca": 12
+    },
+    "identity_duplicates": [],
+    "binary_duplicate_groups": 52,
+    "binary_extra_attachments": 58,
+    "duplicates_preexist_this_task": true,
+    "binary_duplicates": {
+        "5a4392c52053e6427bb70c41ff58d387107be39e85f540632c6ec14c26f31345": [
+            {
+                "id": 1349,
+                "source_key": "asset:system/files/images/productos/639b9801fe440dcd2179c23cca14401710c5e7e0",
+                "file": "2026/09/639b9801fe440dcd2179c23cca14401710c5e7e0.pdf",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 1336,
+                "source_key": "asset:fichas/puerta-424.pdf",
+                "file": "2026/09/puerta-424.pdf",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 1337,
+                "source_key": "asset:fichas/puerta-430.pdf",
+                "file": "2026/09/puerta-430.pdf",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "fe4f7800e13c51b810f82a6f67c1f2f7d0b7013729d1194aff48b195a5889b79": [
+            {
+                "id": 1350,
+                "source_key": "asset:system/files/images/productos/7ab52eec612af22d23a62f849479371ebf1c2f22",
+                "file": "2026/09/7ab52eec612af22d23a62f849479371ebf1c2f22.pdf",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 1338,
+                "source_key": "asset:fichas/puerta-seccional-418.pdf",
+                "file": "2026/09/puerta-seccional-418.pdf",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 1339,
+                "source_key": "asset:fichas/puerta-seccional-422.pdf",
+                "file": "2026/09/puerta-seccional-422.pdf",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "2e4a29b1fae6792ea3058e582618def36a6da5c034a22e82a6980be53e75578d": [
+            {
+                "id": 1351,
+                "source_key": "asset:system/files/images/productos/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+                "file": "2026/09/7baea774c5fc4abe3735d40fdf16e84f1e3521ef.pdf",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 1342,
+                "source_key": "asset:fichas/puerta-thermacore-593.pdf",
+                "file": "2026/09/puerta-thermacore-593.pdf",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 1343,
+                "source_key": "asset:fichas/puerta-thermacore-594.pdf",
+                "file": "2026/09/puerta-thermacore-594.pdf",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "da92b4c85c86a66b1cae255adcb4c0b61f75d37d36ef5272696bc922cd6ca838": [
+            {
+                "id": 1353,
+                "source_key": "asset:system/files/images/productos/98b07de6dca4ad402a37385c485fb6999d5c3323",
+                "file": "2026/09/98b07de6dca4ad402a37385c485fb6999d5c3323.pdf",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 1330,
+                "source_key": "asset:fichas/Cortina-serie-610-620.pdf",
+                "file": "2026/09/Cortina-serie-610-620.pdf",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "e4fa7b213a9ee211940edd44fe147d3db38f3c256308429f21f208e1b32f02c3": [
+            {
+                "id": 1347,
+                "source_key": "asset:system/files/images/productos/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+                "file": "2026/09/3af12bf12f61eda51a19d1e8af3cefc05878f484.pdf",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 1340,
+                "source_key": "asset:fichas/puerta-seccional-426.pdf",
+                "file": "2026/09/puerta-seccional-426.pdf",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 1341,
+                "source_key": "asset:fichas/puerta-seccional-432.pdf",
+                "file": "2026/09/puerta-seccional-432.pdf",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "525617851dbf6430bb53100d0fdef5a95b0a048b0bc20f3778005bb48cd788ca": [
+            {
+                "id": 1348,
+                "source_key": "asset:system/files/images/productos/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+                "file": "2026/09/3e620ed84c43c5de234ae437f58f7083e93f6b8d.pdf",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 1345,
+                "source_key": "asset:fichas/rhx-commercial-operator-brochure.pdf",
+                "file": "2026/09/rhx-commercial-operator-brochure.pdf",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "e0b0fcc5f64da11a8ac90554bd19936b55a66cdf3f12636921ee060234034732": [
+            {
+                "id": 1108,
+                "source_key": "asset:system/files/images/productos/fce70ded3bd3b58293eed84c658aedaa60d10a2e",
+                "file": "2026/09/fce70ded3bd3b58293eed84c658aedaa60d10a2e.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 958,
+                "source_key": "asset:images/puerta594.jpg",
+                "file": "2026/09/puerta594.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "0a52c0c24f7a2c24d62f3a2e9f272ab42daa35225e2284325469c1ada3e08b84": [
+            {
+                "id": 1105,
+                "source_key": "asset:system/files/images/productos/f02304a5117f7e8cc52916b2995eee7d5cd3bdf7",
+                "file": "2026/09/f02304a5117f7e8cc52916b2995eee7d5cd3bdf7.pdf",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 819,
+                "source_key": "asset:fichas/rolling-sheet-doors-790-780-770-brochure.pdf",
+                "file": "2026/09/rolling-sheet-doors-790-780-770-brochure.pdf",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "4f4c7200a1d2b415cd91c00c6997d98ac25e5929d70eeebed2a60360be9d60ca": [
+            {
+                "id": 1106,
+                "source_key": "asset:system/files/images/productos/f3eecd701088dbca1956b577ef1de1c1762edced",
+                "file": "2026/09/f3eecd701088dbca1956b577ef1de1c1762edced.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 962,
+                "source_key": "asset:images/puerta599.jpg",
+                "file": "2026/09/puerta599.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "35ba5a171ddc615b665e1bc0e9b1eb238f8dc798a8d56ef804c29c8273171d64": [
+            {
+                "id": 1102,
+                "source_key": "asset:system/files/images/productos/e7a01529a67d2e176caece591f7981360e4805ff",
+                "file": "2026/09/e7a01529a67d2e176caece591f7981360e4805ff.pdf",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 825,
+                "source_key": "asset:fichas/security-grilles-670-671-brochure.pdf",
+                "file": "2026/09/security-grilles-670-671-brochure.pdf",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 826,
+                "source_key": "asset:fichas/security-grilles-670-671-brochure1.pdf",
+                "file": "2026/09/security-grilles-670-671-brochure1.pdf",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "c8774b96d0370cd808267857940e635c603e1c74735a3c7d7c9619e233449bf4": [
+            {
+                "id": 1103,
+                "source_key": "asset:system/files/images/productos/ec069aaf1b98181850d5f11ac0069b719063f855",
+                "file": "2026/09/ec069aaf1b98181850d5f11ac0069b719063f855.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 988,
+                "source_key": "asset:images/sectional-steel-models-422-426.jpg",
+                "file": "2026/09/sectional-steel-models-422-426.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "42aea6f642e345465fe276fb67ffa4fb3c721e5e0e133fbe279b6b9f0ca5b64b": [
+            {
+                "id": 1098,
+                "source_key": "asset:system/files/images/productos/e18f93b233e92c3c13b45b7654d4712f4748fe8b",
+                "file": "2026/09/e18f93b233e92c3c13b45b7654d4712f4748fe8b.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 863,
+                "source_key": "asset:images/cortina-670.jpg",
+                "file": "2026/09/cortina-670.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "ab12459a93c9f40a62edea1a44db215f841e677016b8ff42cfe25589882cff1d": [
+            {
+                "id": 1099,
+                "source_key": "asset:system/files/images/productos/e255e142299e7b62e25690084deb0bb49408f332",
+                "file": "2026/09/e255e142299e7b62e25690084deb0bb49408f332.pdf",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 790,
+                "source_key": "asset:fichas/cdx-commercial-operator-sellsheet.pdf",
+                "file": "2026/09/cdx-commercial-operator-sellsheet.pdf",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "abdc2ffadc9ee3b0f411da925350004e16a6c6daa293922c6dba6252a1227b0b": [
+            {
+                "id": 1100,
+                "source_key": "asset:system/files/images/productos/e4c215da7672e0ff5d8c7c6b12eaa6e027b73969",
+                "file": "2026/09/e4c215da7672e0ff5d8c7c6b12eaa6e027b73969.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 1016,
+                "source_key": "asset:images/windload-thermacore-525-wide.jpg",
+                "file": "2026/09/windload-thermacore-525-wide.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "e99ec942cdc228c7287461cf8f96223169f02c2bc5b39fc0c62e63eff69f67aa": [
+            {
+                "id": 1096,
+                "source_key": "asset:system/files/images/productos/d408fb7a83adf1cd66a9048080210be3b617cb29",
+                "file": "2026/09/d408fb7a83adf1cd66a9048080210be3b617cb29.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 983,
+                "source_key": "asset:images/rolling-sheet-770-2.jpg",
+                "file": "2026/09/rolling-sheet-770-2.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "4a3fcd0fa5e0abb158dba62b7d67cef2a74dc07a72ef248776d87319fd5c4871": [
+            {
+                "id": 1097,
+                "source_key": "asset:system/files/images/productos/dbf978defab57f25bca7206c939b17e9c1b8749d",
+                "file": "2026/09/dbf978defab57f25bca7206c939b17e9c1b8749d.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 947,
+                "source_key": "asset:images/puerta-430.jpg",
+                "file": "2026/09/puerta-430.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "4caab5a59cda64741a1cb23d894a9a988a079bf0f77ead35f63f7b07774dd2e4": [
+            {
+                "id": 1091,
+                "source_key": "asset:system/files/images/productos/bd6521c004c07b7eb1e6b29f1cfe3cc0d4ceb3cc",
+                "file": "2026/09/bd6521c004c07b7eb1e6b29f1cfe3cc0d4ceb3cc.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 938,
+                "source_key": "asset:images/proy1.jpg",
+                "file": "2026/09/proy1.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "894e073f2f592ce614409e721a476908c7e8c7f88c419f57fd60dfd95fe078e1": [
+            {
+                "id": 1090,
+                "source_key": "asset:system/files/images/productos/ae385af43a5d1494c0f807d48c05b5b3c3576afe",
+                "file": "2026/09/ae385af43a5d1494c0f807d48c05b5b3c3576afe.png",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 906,
+                "source_key": "asset:images/hospital.png",
+                "file": "2026/09/hospital.png",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "df6e4d54f77fa4527b06c1990b7b57730b04d736ce30f252b7b802701692780d": [
+            {
+                "id": 1086,
+                "source_key": "asset:system/files/images/productos/85f5ef81d1ffa0cfcefdd5914c8d6d54a6bc3c4b",
+                "file": "2026/09/85f5ef81d1ffa0cfcefdd5914c8d6d54a6bc3c4b.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 930,
+                "source_key": "asset:images/ocx.jpg",
+                "file": "2026/09/ocx.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "87765af7e439ce26ec19c79feb37614bc30668ec0c8cfa9ed620a1410b7fef22": [
+            {
+                "id": 1077,
+                "source_key": "asset:system/files/images/productos/596d0d25e474bb84a449cda4680a73db1491f809",
+                "file": "2026/09/596d0d25e474bb84a449cda4680a73db1491f809.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 908,
+                "source_key": "asset:images/industrial-brown-sectional-steel-model-424-432.jpg",
+                "file": "2026/09/industrial-brown-sectional-steel-model-424-432.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "2a3c939c1e128390a1d877946f9c381b92ad14b14460a491e13084c5adcff95b": [
+            {
+                "id": 1078,
+                "source_key": "asset:system/files/images/productos/59ca6b73479b3fcde81f96439976896bad94b750",
+                "file": "2026/09/59ca6b73479b3fcde81f96439976896bad94b750-1.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 130,
+                "source_key": "asset:system/files/images/categorias/59ca6b73479b3fcde81f96439976896bad94b750",
+                "file": "2026/09/59ca6b73479b3fcde81f96439976896bad94b750.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "b4168948c8f7b418f2caba3888b19c8d05c2c34dcedd58f236c573e24291ada3": [
+            {
+                "id": 1079,
+                "source_key": "asset:system/files/images/productos/5ebb1b9e7cdf30669798fa316af64842a73c5a56",
+                "file": "2026/09/5ebb1b9e7cdf30669798fa316af64842a73c5a56.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 956,
+                "source_key": "asset:images/puerta593.jpg",
+                "file": "2026/09/puerta593.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "89985092a942575637985f370ee8ff7215e9107e90db9931af2bd85f2d7bf301": [
+            {
+                "id": 1080,
+                "source_key": "asset:system/files/images/productos/5f90d35f71ae101ed088c67403da1540d91d1192",
+                "file": "2026/09/5f90d35f71ae101ed088c67403da1540d91d1192.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 955,
+                "source_key": "asset:images/puerta432.jpg",
+                "file": "2026/09/puerta432.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "1fb702a59192aea787c25c42aebfcb6f4394eb29ddd0693a1fbd9b86d0771003": [
+            {
+                "id": 1075,
+                "source_key": "asset:system/files/images/productos/4c235320c6c73cff73a7e701b74b8e5fd0417378",
+                "file": "2026/09/4c235320c6c73cff73a7e701b74b8e5fd0417378-1.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 1031,
+                "source_key": "asset:system/files/images/categorias/4c235320c6c73cff73a7e701b74b8e5fd0417378",
+                "file": "2026/09/4c235320c6c73cff73a7e701b74b8e5fd0417378.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "9d8bb264b4b6dba4870fbfaea37201594d459635f4552dec8f7feccf575f46ca": [
+            {
+                "id": 1072,
+                "source_key": "asset:system/files/images/productos/4008a0704b50eb6ada4e7733d8a9dc5c331e0163",
+                "file": "2026/09/4008a0704b50eb6ada4e7733d8a9dc5c331e0163.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 857,
+                "source_key": "asset:images/comercial.jpg",
+                "file": "2026/09/comercial.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "722ad71a1cc774af2fe4069c6ee850c6a5f73681009c127a45757a0d55fe3103": [
+            {
+                "id": 1068,
+                "source_key": "asset:system/files/images/productos/37cb85d2747bda7e0195e84c2b086452e745c35f",
+                "file": "2026/09/37cb85d2747bda7e0195e84c2b086452e745c35f.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 977,
+                "source_key": "asset:images/rhx.jpg",
+                "file": "2026/09/rhx.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "5a19083d5e1a942448ee11a6595a29727a0efcfc3de56abdff04513eff926e46": [
+            {
+                "id": 1067,
+                "source_key": "asset:system/files/images/productos/2f667c1e185b0ea47b093da526c2d552145b739e",
+                "file": "2026/09/2f667c1e185b0ea47b093da526c2d552145b739e.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 126,
+                "source_key": "asset:images/puerta-420.jpg",
+                "file": "2026/09/puerta-420.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "5f5712484f7538876fdebcd0d5b2777c946437dc1c4eef8a08dc5a8ed4f91455": [
+            {
+                "id": 1066,
+                "source_key": "asset:system/files/images/productos/2e6986f34adf7b7e075a57a4f73cac501d03c59d",
+                "file": "2026/09/2e6986f34adf7b7e075a57a4f73cac501d03c59d.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 878,
+                "source_key": "asset:images/demoresidencial.jpg",
+                "file": "2026/09/demoresidencial.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "c6c8e430f7c06ecd7061bfa0d6f002ed72b5aa7f67860c1dd5d31fa462976c1a": [
+            {
+                "id": 1062,
+                "source_key": "asset:system/files/images/productos/27cdd31e50801b69ed83a04dbdac5674d1078906",
+                "file": "2026/09/27cdd31e50801b69ed83a04dbdac5674d1078906.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 925,
+                "source_key": "asset:images/model-426-white-finish-insulated.jpg",
+                "file": "2026/09/model-426-white-finish-insulated.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "197b793185a90868231a4c73798ba10cfc59098b45b65a87746b6592e2772146": [
+            {
+                "id": 1059,
+                "source_key": "asset:system/files/images/productos/20ec2b66b713306ac6d2d213bcce8d6810712eef",
+                "file": "2026/09/20ec2b66b713306ac6d2d213bcce8d6810712eef.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 984,
+                "source_key": "asset:images/rsx.jpg",
+                "file": "2026/09/rsx.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "12af3a14a4078ab10daf9cca236e715ba768271eeb8b7fa77450f8910744fb3b": [
+            {
+                "id": 1060,
+                "source_key": "asset:system/files/images/productos/23d0316980d95f4f7ece95dd33a74b151eadb1bf",
+                "file": "2026/09/23d0316980d95f4f7ece95dd33a74b151eadb1bf.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 865,
+                "source_key": "asset:images/cortina-671.jpg",
+                "file": "2026/09/cortina-671.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "c71388fb2ac3029f52c22b3510679e2b6676ea8174ccab9bb2548b5765046b59": [
+            {
+                "id": 1054,
+                "source_key": "asset:system/files/images/productos/0d4439f5ba46973f404b8a9eaf3c6ed102faad54",
+                "file": "2026/09/0d4439f5ba46973f404b8a9eaf3c6ed102faad54-1.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 1022,
+                "source_key": "asset:system/files/images/categorias/0d4439f5ba46973f404b8a9eaf3c6ed102faad54",
+                "file": "2026/09/0d4439f5ba46973f404b8a9eaf3c6ed102faad54.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 939,
+                "source_key": "asset:images/proy2.jpg",
+                "file": "2026/09/proy2.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "62dfa5a8e3cf2325c2d82039cc507f28ed32ab7f9490ad423befdec2d4cc46c6": [
+            {
+                "id": 1056,
+                "source_key": "asset:system/files/images/productos/0e8c380b91a59986427b2a5f2b70fd16a2980099",
+                "file": "2026/09/0e8c380b91a59986427b2a5f2b70fd16a2980099.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 944,
+                "source_key": "asset:images/puerta-418.jpg",
+                "file": "2026/09/puerta-418.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "b88c0421334b4f965417ad715785a32900fb021b8cf40dda8fa72b9691b582c9": [
+            {
+                "id": 1051,
+                "source_key": "asset:system/files/images/productos/06d1ac8df445fdad9cabf6a632e3c4363258b6ee",
+                "file": "2026/09/06d1ac8df445fdad9cabf6a632e3c4363258b6ee.pdf",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 803,
+                "source_key": "asset:fichas/operador-cortina.pdf",
+                "file": "2026/09/operador-cortina.pdf",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "dbd9c7c5a3bf40665b34284850f2c715f6ef3f389a37ae39593045a37354910c": [
+            {
+                "id": 1049,
+                "source_key": "asset:system/files/images/productos/041a0efde5e5212d3aae023a37bd508f96f03295",
+                "file": "2026/09/041a0efde5e5212d3aae023a37bd508f96f03295.png",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 1006,
+                "source_key": "asset:images/STRONGARMHVR303.png",
+                "file": "2026/09/STRONGARMHVR303.png",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "c650f63900096ba087b9ab072b9b891e7adf4c130e05e3f44075e8e2281c72a9": [
+            {
+                "id": 1045,
+                "source_key": "asset:system/files/images/categorias/dea67750c58a9beeb1e4bf0140e4b97863635cfa",
+                "file": "2026/09/dea67750c58a9beeb1e4bf0140e4b97863635cfa.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 937,
+                "source_key": "asset:images/preda.jpg",
+                "file": "2026/09/preda.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "f85e98c7edf85101addaf8f60f05ab50e6469335f717a0148b6017d1693146a2": [
+            {
+                "id": 1046,
+                "source_key": "asset:system/files/images/categorias/ed615bddda8aa301e393e1768b31a2d694243038",
+                "file": "2026/09/ed615bddda8aa301e393e1768b31a2d694243038.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 913,
+                "source_key": "asset:images/labio.jpg",
+                "file": "2026/09/labio.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "09d077c8876f38349dde9500268d023f8b276cc875400f4149a9b7a372fb5a3a": [
+            {
+                "id": 1048,
+                "source_key": "asset:system/files/images/productos/0026e2b69ea6b2f5307ae424596371c7610f2fd8",
+                "file": "2026/09/0026e2b69ea6b2f5307ae424596371c7610f2fd8-1.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 1020,
+                "source_key": "asset:system/files/images/categorias/0026e2b69ea6b2f5307ae424596371c7610f2fd8",
+                "file": "2026/09/0026e2b69ea6b2f5307ae424596371c7610f2fd8.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "58403b51ea56f2414d970722afece2c97602b6b5f46dce9321f1a685f7e02258": [
+            {
+                "id": 1041,
+                "source_key": "asset:system/files/images/categorias/c46d19fe3eb462f51d4f636a3a4719ea6e8922c5",
+                "file": "2026/09/c46d19fe3eb462f51d4f636a3a4719ea6e8922c5.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 897,
+                "source_key": "asset:images/fire-rated.jpg",
+                "file": "2026/09/fire-rated.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "1f009fd1cc71d72d73ae15534011635a10e29f60cb81cddfc851698a9f4bbd25": [
+            {
+                "id": 1043,
+                "source_key": "asset:system/files/images/categorias/cbc5bbf8df505223c1069122842fed702f8be8d8",
+                "file": "2026/09/cbc5bbf8df505223c1069122842fed702f8be8d8.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 918,
+                "source_key": "asset:images/lift.jpg",
+                "file": "2026/09/lift.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "28e4334631dce49d435714ae24d03684a2f9b205f361818c59211a3de24deb89": [
+            {
+                "id": 1035,
+                "source_key": "asset:system/files/images/categorias/9022847e37c72e9a2de76dcdf7c2e22b08cf6cb0",
+                "file": "2026/09/9022847e37c72e9a2de76dcdf7c2e22b08cf6cb0.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 965,
+                "source_key": "asset:images/qik.jpg",
+                "file": "2026/09/qik.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "6dd17d39f01303d60d7a7fe041d16584605151bd3c85e9113c492c736bc27936": [
+            {
+                "id": 1036,
+                "source_key": "asset:system/files/images/categorias/a15d5cd1cf67dc7a304a8ebe8c9e28a866e7eda2",
+                "file": "2026/09/a15d5cd1cf67dc7a304a8ebe8c9e28a866e7eda2.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 1012,
+                "source_key": "asset:images/upper.jpg",
+                "file": "2026/09/upper.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "f7c39471f5716bf9257f321e174de72bae3ca41660ae72811da95d599995b443": [
+            {
+                "id": 1038,
+                "source_key": "asset:system/files/images/categorias/b365a092cbf80ef1af6e99fc3cddc76b0ceb8112",
+                "file": "2026/09/b365a092cbf80ef1af6e99fc3cddc76b0ceb8112.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 1003,
+                "source_key": "asset:images/star100.jpg",
+                "file": "2026/09/star100.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "d12a22736b30faa534cd0f9d8914ac8851486ff97d6ce705ff88f5f566a0ff45": [
+            {
+                "id": 1034,
+                "source_key": "asset:system/files/images/categorias/8ca911b748068c9bef002de96ef743ecefb9886b",
+                "file": "2026/09/8ca911b748068c9bef002de96ef743ecefb9886b.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 974,
+                "source_key": "asset:images/retenedor.jpg",
+                "file": "2026/09/retenedor.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "0199d85a0628fcfe8be52eb76468a541ed5af57bb1711e1119b61b32d3426e0d": [
+            {
+                "id": 1032,
+                "source_key": "asset:system/files/images/categorias/6ca19dacd9993636b6638cf308a1c4490bb0af98",
+                "file": "2026/09/6ca19dacd9993636b6638cf308a1c4490bb0af98.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 853,
+                "source_key": "asset:images/blindadas.jpg",
+                "file": "2026/09/blindadas.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "6425586a90c49adf93ea64128d234cfc567062d6cbbd3ca325692474f902d188": [
+            {
+                "id": 1027,
+                "source_key": "asset:system/files/images/categorias/3d3f8a7b58fad15cba55a19e1f7dcbd97e37ab41",
+                "file": "2026/09/3d3f8a7b58fad15cba55a19e1f7dcbd97e37ab41.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 869,
+                "source_key": "asset:images/cortina.jpg",
+                "file": "2026/09/cortina.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "0f140512ff050cae8344d3c8916f7959220e55dfebebcb7e9f4f7e1a462ec698": [
+            {
+                "id": 1029,
+                "source_key": "asset:system/files/images/categorias/41fac25bf3c4f3389882019d1f274fd418b8facb",
+                "file": "2026/09/41fac25bf3c4f3389882019d1f274fd418b8facb.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 950,
+                "source_key": "asset:images/puerta-holandesa.jpg",
+                "file": "2026/09/puerta-holandesa.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "a5a6d2f9d55c82d4a61d10a953dfc02092056a23382445cc496a35e16e66dc7b": [
+            {
+                "id": 1030,
+                "source_key": "asset:system/files/images/categorias/43d4232e7c8e46a381f607bdcb65a691c4321389",
+                "file": "2026/09/43d4232e7c8e46a381f607bdcb65a691c4321389.png",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 832,
+                "source_key": "asset:images/2012-10-11_1235.png",
+                "file": "2026/09/2012-10-11_1235.png",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "5138524a5977f7ee7ae4087883ada8d285337f3c9893ccf901fda41228297a43": [
+            {
+                "id": 1023,
+                "source_key": "asset:system/files/images/categorias/158ffcb904bc82f2a7d2ec143de37e00730d04bd",
+                "file": "2026/09/158ffcb904bc82f2a7d2ec143de37e00730d04bd.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 969,
+                "source_key": "asset:images/rampak.jpg",
+                "file": "2026/09/rampak.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "5c387080f1adb199666ebbb9993bb04091fa641db6ef94fd586b3e9328e8e99b": [
+            {
+                "id": 1025,
+                "source_key": "asset:system/files/images/categorias/393bf5523829b0a76434527d0737623ed3951b63",
+                "file": "2026/09/393bf5523829b0a76434527d0737623ed3951b63.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 975,
+                "source_key": "asset:images/revolving.jpg",
+                "file": "2026/09/revolving.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "a8f42eccb24686ed83b3c05800b19a0c33cbf08e106597011e22cc22b0b8f831": [
+            {
+                "id": 1026,
+                "source_key": "asset:system/files/images/categorias/3ba01a39dd2e04651a35a7f2a8c2aab034f58f33",
+                "file": "2026/09/3ba01a39dd2e04651a35a7f2a8c2aab034f58f33.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 963,
+                "source_key": "asset:images/puertaboom.jpg",
+                "file": "2026/09/puertaboom.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ],
+        "627780d68a82c656dd32bf0404b6bb7bade1696cb9dfb49a60063d1c3d10e222": [
+            {
+                "id": 1021,
+                "source_key": "asset:system/files/images/categorias/0184eae287e99a553941e98f9ff70f71139ed643",
+                "file": "2026/09/0184eae287e99a553941e98f9ff70f71139ed643.jpg",
+                "present_in_pre_repair_backup": true
+            },
+            {
+                "id": 993,
+                "source_key": "asset:images/sellos.jpg",
+                "file": "2026/09/sellos.jpg",
+                "present_in_pre_repair_backup": true
+            }
+        ]
+    },
+    "remaining_ui_product_associations": [],
+    "human_post_1371_status": "publish",
+    "note": "Previous audit compared _psi_source_hash (source record hash), not actual file SHA-256. No binary deduplication performed in this task.",
+    "approved_pdf_groups": {
+        "A": 14,
+        "B": 13
+    },
+    "approved_pdf_errors": []
+}
