@@ -41,6 +41,24 @@ Yoast Free sigue siendo una decisión pendiente de autorización, no bloqueante:
 description/OG/schema básico pueden implementarse igual de forma nativa en
 `psindustrial-core` si se prefiere no añadir la dependencia.
 
+## Yoast — configuración mínima preparada (no instalado todavía, 2026-09-21)
+
+El sitio debe seguir funcionando idéntico si Yoast está desactivado — confirmado: nada en
+el theme/plugin depende de su presencia. Cuando se autorice instalarlo:
+
+| Ajuste | Valor mínimo previsto | Motivo |
+|---|---|---|
+| Canonical | Automático de Yoast, sin override | El theme ya no imprime uno propio (`08-seo-architecture.md`); Yoast pasa a ser la única fuente — evita la duplicación que el diseño prohíbe explícitamente |
+| Meta description | Plantilla por tipo (`%%excerpt%%` para producto/página; fallback a los primeros ~155 caracteres del contenido) | Sin redactar copy editorial nuevo en esta fase — sólo el mecanismo técnico |
+| Titles | Reusar el patrón nativo actual (`%%title%% %%sep%% %%sitename%%`) | Continuidad visual con lo ya aprobado; Yoast sustituye el `title-tag` nativo sin cambiar el resultado |
+| Open Graph | Activar módulo básico; imagen por defecto = logo del sitio | Sin imágenes OG por producto todavía (trabajo editorial posterior) |
+| Schema | Graph básico WordPress/Organization + WebPage automático de Yoast; sin Product schema hasta tener datos de precio/disponibilidad reales | Evita declarar schema.org/Product con datos incompletos o inventados |
+| XML sitemap | Activar el de Yoast, desactivar el nativo de WordPress vía el propio ajuste de Yoast (evita dos sitemaps compitiendo) | Yoast permite excluir CPT/taxonomías todavía no públicos; el nativo no |
+| robots.txt / noindex | Sin cambios — sigue leyendo `blog_public` como hoy | Yoast respeta ese ajuste, no lo sustituye |
+
+Redirects: no se activa el módulo de redirects de Yoast — ya cubierto por `LegacyUrls`
+(psindustrial-core), evita dos mecanismos de redirect divergentes.
+
 ## Performance — comprobación rápida, sin cambios de diseño
 
 No se tocó CSS/JS/imágenes del frontend aprobado. Las imágenes institucionales/home ya usan
