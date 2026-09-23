@@ -74,7 +74,7 @@
             "passed": true
         },
         {
-            "test": "Sanity: at least one currently-live destination was actually checked (6)",
+            "test": "Sanity: at least one currently-live destination was actually checked (18)",
             "passed": true
         },
         {

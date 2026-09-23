@@ -73,7 +73,9 @@ use PSIndustrial\Core\Migration\{Storage,Sources,Planner,Identity,Runner,Admin};
   // them can legitimately change outside this test's control (nosotros.php did) -- so
   // idempotency is proven the way Runner's own process_entry() actually decides it (read
   // Identity::prediction(), never call apply() for anything but CREATE/UPDATE), never by
-  // mutating anything here.
+  // mutating anything here. Editorial-only term metadata (_psi_public_state,
+  // _psi_brand_home_order, e.g. BrandsMigration on brand:1) no longer counts as drift here:
+  // Identity::snapshot() excludes it (migration/Identity.php EDITORIAL_META_KEYS).
   foreach ( $first['entries'] as $e ) {
    if ( in_array( $e['action'], array( 'SKIP','REVIEW' ), true ) ) { continue; }
    $expected = ( 'php:nosotros.php' === $e['entity_key'] ) ? 'CONFLICT' : 'UNCHANGED';

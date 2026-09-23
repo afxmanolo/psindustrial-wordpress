@@ -15,6 +15,22 @@ final class Identity {
    add_filter( $op . '_' . $type . '_metadata', static function( $check, $id, $key ) { return str_starts_with( $key, '_psi_import_' ) && ! current_user_can( 'psi_manage_migration' ) ? false : $check; }, 10, 3 );
   } }
  }
+ /**
+  * Editorial/presentational metadata: legitimately changed by a human after import, on the
+  * project's own terms, never by re-running the importer -- must never make
+  * prediction() report CONFLICT for an object nothing has actually mutated the CONTENT of.
+  * Verified empirically (2026-09-23, docs/implementation/full-local-import/ note on
+  * BrandsMigration), never assumed: both _psi_public_state and _psi_brand_home_order had
+  * to be excluded together before a live snapshot matched its recorded target_hash again --
+  * neither alone was sufficient, so both are named here, explicitly.
+  *
+  * Deliberately narrow and explicit, never a blanket "_psi_* is presentational" rule: every
+  * OTHER _psi_* key stays part of identity, on purpose. In particular _psi_logo_id is never
+  * added here -- which image actually represents a term is CONTENT, not presentation
+  * (exactly like a product's _psi_datasheets/gallery), so a human changing it must keep
+  * producing CONFLICT, the same protection every other content field already gets.
+  */
+ private const EDITORIAL_META_KEYS = array( '_psi_public_state', '_psi_brand_home_order' );
  public static function term( array $e ): bool { return in_array( $e['target_type'], array( 'psi_categoria','psi_marca' ), true ); }
  public static function get( array $e, int $id, string $key ): mixed { return self::term( $e ) ? get_term_meta( $id, $key, true ) : get_post_meta( $id, $key, true ); }
  public static function set( array $e, int $id, string $key, mixed $value ): void {
@@ -43,7 +59,7 @@ final class Identity {
    if ( 'attachment' === $e['target_type'] ) { $file = get_attached_file( $id ); $value['file_hash'] = $file && is_file( $file ) ? hash_file( 'sha256', $file ) : 'MISSING'; }
   }
   $value['meta'] = array();
-  foreach ( $meta as $key => $values ) { if ( ! str_starts_with( $key, '_psi_import_' ) && ( str_starts_with( $key, '_psi_' ) || in_array( $key, array( '_thumbnail_id','_wp_attachment_image_alt','_wp_attached_file' ), true ) ) ) { $value['meta'][ $key ] = array_map( 'maybe_unserialize', $values ); } }
+  foreach ( $meta as $key => $values ) { if ( ! str_starts_with( $key, '_psi_import_' ) && ! in_array( $key, self::EDITORIAL_META_KEYS, true ) && ( str_starts_with( $key, '_psi_' ) || in_array( $key, array( '_thumbnail_id','_wp_attachment_image_alt','_wp_attached_file' ), true ) ) ) { $value['meta'][ $key ] = array_map( 'maybe_unserialize', $values ); } }
   ksort( $value['meta'] ); return $value;
  }
  public static function prediction( array $e ): string {

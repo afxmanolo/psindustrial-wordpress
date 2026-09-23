@@ -27,7 +27,7 @@ $slides = array(
  </section>
  <section class="home-brands" aria-labelledby="home-brands-title"><div class="psi-container">
   <h2 id="home-brands-title"><?php esc_html_e( 'Marcas', 'psindustrial' ); ?></h2><p><?php esc_html_e( 'Trabajamos con los mejores de la industria.', 'psindustrial' ); ?></p>
-  <ul class="home-brand-grid"><?php foreach ( $data['brands'] as $brand ) : ?><li><?php echo \PSIndustrial\Theme\home_image( $brand['image'], $brand['name'], '(min-width: 992px) 180px, 45vw' ); ?></li><?php endforeach; ?></ul>
+  <ul class="home-brand-grid"><?php foreach ( \PSIndustrial\Theme\home_brands() as $brand ) : ?><li><a href="<?php echo esc_url( $brand['link'] ); ?>"><?php echo \PSIndustrial\Theme\home_image( $brand['image'], $brand['name'], '(min-width: 992px) 180px, 45vw' ); ?></a></li><?php endforeach; ?></ul>
  </div></section>
  <section class="home-products" aria-labelledby="home-products-title">
   <div class="home-products-heading psi-container"><h2 id="home-products-title"><?php esc_html_e( 'Conoce nuestros Productos', 'psindustrial' ); ?></h2></div>
