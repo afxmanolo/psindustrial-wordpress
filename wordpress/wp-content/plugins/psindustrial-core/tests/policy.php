@@ -118,7 +118,10 @@ use PSIndustrial\Core\Migration\{Storage,Sources,Policy,Planner,Runner,Admin,Ide
   // original baseline was set, so its live snapshot (post_status included) no longer
   // matches the recorded target_hash -- Identity::prediction() correctly reports CONFLICT
   // for it, exactly like any other human/authorized edit since migration. Still present,
-  // never lost; just no longer byte-identical to its pre-publish state.
+  // never lost; just no longer byte-identical to its pre-publish state. Editorial-only term
+  // metadata (_psi_public_state, _psi_brand_home_order, e.g. BrandsMigration on brand:1) no
+  // longer counts as drift: Identity::snapshot() excludes it (migration/Identity.php
+  // EDITORIAL_META_KEYS).
   foreach ( $subset['entries'] as $e ) {
    if ( in_array( $e['action'], array( 'SKIP','REVIEW' ), true ) ) { continue; }
    $expected = ( 'php:nosotros.php' === $e['entity_key'] ) ? 'CONFLICT' : 'UNCHANGED';

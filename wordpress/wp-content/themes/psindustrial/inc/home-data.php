@@ -102,56 +102,10 @@ function home_data(): array {
 				'pattern' => true,
 			),
 		),
-		'brands' => array(
-			array(
-				'name' => 'Overhead Door',
-				'image' => 'tg.png',
-			),
-			array(
-				'name' => 'Wayne Dalton',
-				'image' => 'wayne-dayton.png',
-			),
-			array(
-				'name' => 'Clopay',
-				'image' => 'clopay.png',
-			),
-			array(
-				'name' => 'Blue Giant',
-				'image' => 'blue.png',
-			),
-			array(
-				'name' => 'Kelley',
-				'image' => 'kelley.png',
-			),
-			array(
-				'name' => 'Doorlock',
-				'image' => 'door.png',
-			),
-			array(
-				'name' => 'Rytec',
-				'image' => 'rytec.png',
-			),
-			array(
-				'name' => 'Infraca Quality Doors',
-				'image' => 'infraca.png',
-			),
-			array(
-				'name' => 'GLG Porter Industriali',
-				'image' => 'glg-porte-industriali.png',
-			),
-			array(
-				'name' => 'Dockman',
-				'image' => 'dockman.png',
-			),
-			array(
-				'name' => 'LiftMaster',
-				'image' => 'lift-master.png',
-			),
-			array(
-				'name' => 'BFT',
-				'image' => 'bft.png',
-			),
-		),
+		// 'brands' is no longer a static list here -- see home_brands() in
+		// home-presentation.php, sourced live from psi_marca terms. The WebP variants
+		// below stay: home_brands() still resolves each term's logo to one of these exact
+		// keys (by attachment filename), so the same pre-optimized images keep rendering.
 		'assets' => array(
 			'banner1.jpg' => array(
 				'width' => 1920,

@@ -37,17 +37,27 @@ use PSIndustrial\Core\Migration\{Storage,Identity,Planner,Runner};
   $syntheticEntries = array_map( static fn( $k ) => $freshByKey[ $k ], $unchangedKeys );
   foreach ( $syntheticEntries as $e ) { $assert( 'UNCHANGED' === Identity::prediction( $e ), 'Sanity: every fixture entry genuinely predicts UNCHANGED right now (nothing this suite does can mutate anything): ' . $e['entity_key'] ); }
 
-  // Uses the REAL parent_run_id (its log-<id>.jsonl genuinely exists, and its real 449
-  // applied entities are genuinely UNCHANGED right now) so recovery_preflight() -- which
-  // batch_recovery() itself always calls first -- can actually pass; this suite is testing
-  // the EXECUTOR's batching/cursor/idempotency/drift behaviour, not preflight's own parent-
-  // evidence gate (already covered by tests/recovery-model.php). The synthetic ENTRIES
-  // themselves (not the parent reference) are what make each fixture plan safe to execute.
-  $buildSyntheticPlan = static function( array $entries ) use ( $fresh, $realParentRun ): array {
+  // A synthetic parent run whose own log claims ONLY these same 48 real-but-currently-
+  // UNCHANGED entities as CREATE'd -- gives recovery_preflight() a real, resolvable parent
+  // log (parent_run_evidence_available) without coupling applied_449_control_intact to the
+  // REAL parent run's full ~449-entity set, which can legitimately drift for real,
+  // evidence-based reasons entirely outside this suite's control (e.g. php:nosotros.php's
+  // authorized publish) -- not a bug, but re-checking entities this suite never touches and
+  // cannot control was never this suite's job (that gate is covered, on the REAL parent run,
+  // by tests/recovery-model.php). These 48 are already independently verified UNCHANGED
+  // immediately above, so the check still means something.
+  $syntheticParentRun = wp_generate_uuid4();
+  foreach ( $syntheticEntries as $e ) { Storage::log( $syntheticParentRun, $e['entity_key'], $e['action'], 'CREATE' ); }
+
+  // The synthetic ENTRIES themselves (not the parent reference) are what make each fixture
+  // plan safe to execute; this suite is testing the EXECUTOR's batching/cursor/idempotency/
+  // drift behaviour, not preflight's own parent-evidence gate (already covered by
+  // tests/recovery-model.php).
+  $buildSyntheticPlan = static function( array $entries ) use ( $fresh, $syntheticParentRun ): array {
    $runId = wp_generate_uuid4();
    $plan = array(
     'manifest_version' => 1, 'transform_version' => Planner::VERSION, 'run_id' => $runId, 'scope' => 'recovery',
-    'parent_run_id' => $realParentRun, 'recovery_reason' => 'TEST_FIXTURE', 'environment_id' => $fresh['environment_id'],
+    'parent_run_id' => $syntheticParentRun, 'recovery_reason' => 'TEST_FIXTURE', 'environment_id' => $fresh['environment_id'],
     'created_at' => gmdate( 'c' ), 'status' => 'VALIDATED', 'mode' => 'RECOVERY_CANDIDATE', 'cursor' => 0,
     'entries' => $entries, 'results' => array(), 'recovery_open' => true, 'post_first_import_backup' => null,
     'evidence_summary' => array( 'candidates_considered' => count( $entries ), 'retryable' => count( $entries ), 'rejected' => 0 ),

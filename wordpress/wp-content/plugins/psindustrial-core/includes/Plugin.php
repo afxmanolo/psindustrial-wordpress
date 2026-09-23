@@ -17,6 +17,8 @@ final class Plugin {
 		Settings::boot();
 		Contact::boot();
 		LegacyUrls::boot();
+		BrandsMigration::boot();
+		IdentityHashRebaseline::boot();
 	}
 	public static function activate(): void {
 		Content::register();
