@@ -1,27 +1,24 @@
 name: CI/CD
 
-# develop -> Staging environment, main -> production environment. Deploys only the code
-# (theme + plugin, tests/ excluded) via FTP, never the database or uploads -- those stay a
-# separate, human-supervised procedure (docs/deployment/staging-deployment.md), matching
-# AGENTS.md's own rule against synchronizing the database automatically.
+# develop -> Staging
+# main -> production
 #
-# The full local regression suite (27 test files) cannot run in a fresh CI runner: it is
-# guarded by Storage::guard() to the exact local psindustrial_wp_dev database built up
-# across this whole project's history, and every assertion is coupled to that specific,
-# organically-accumulated state. It stays a required LOCAL gate before pushing; this
-# workflow's own gate is what CAN be reproduced statelessly: PHP syntax across every file
-# and a real, successful build of the exact package that would be deployed.
+# Deploys only custom code:
+# - psindustrial theme
+# - psindustrial-core plugin
 #
-# Both the Staging and production GitHub Environments require a manual reviewer approval
-# before their deploy job runs (configured on the repo, not in this file) and restrict
-# which branch may deploy to them -- so pushing this workflow does not, by itself, deploy
-# anything; a human must approve each run in the Actions tab first.
+# Database and uploads remain human-supervised.
 
 on:
   push:
-    branches: [develop, main]
+    branches:
+      - develop
+      - main
+
   pull_request:
-    branches: [develop, main]
+    branches:
+      - develop
+      - main
 
 permissions:
   contents: read
@@ -30,29 +27,43 @@ jobs:
   lint:
     name: PHP lint
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v7.0.1
+
       - uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # 2.37.2
         with:
-          php-version: '8.4'
+          php-version: "8.4"
           extensions: zip
+
       - name: Lint theme
-        run: find wordpress/wp-content/themes/psindustrial -name '*.php' -print0 | xargs -0 -n1 php -l
+        run: |
+          find wordpress/wp-content/themes/psindustrial \
+            -name '*.php' -print0 |
+          xargs -0 -n1 php -l
+
       - name: Lint plugin
-        run: find wordpress/wp-content/plugins/psindustrial-core -name '*.php' -print0 | xargs -0 -n1 php -l
+        run: |
+          find wordpress/wp-content/plugins/psindustrial-core \
+            -name '*.php' -print0 |
+          xargs -0 -n1 php -l
 
   build:
     name: Build deploy package
     needs: lint
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v7.0.1
+
       - uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # 2.37.2
         with:
-          php-version: '8.4'
+          php-version: "8.4"
           extensions: zip
+
       - name: Build package from this exact commit
         run: php tools/staging-package/build.php "${{ github.sha }}"
+
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: deploy-package
@@ -64,53 +75,86 @@ jobs:
     needs: build
     if: github.event_name == 'push' && github.ref == 'refs/heads/develop'
     runs-on: ubuntu-latest
-    environment: Staging # requires manual approval + restricted to develop, configured on the repo
+
+    environment:
+      name: Staging
+      url: https://st.puertasyserviciosindustriales.com/
+
     steps:
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           name: deploy-package
           path: dist/staging/
+
       - name: Locate and extract the package
         run: |
           zip_file=$(find dist/staging -maxdepth 1 -name '*.zip' | head -n1)
           echo "Deploying $zip_file"
           mkdir -p deploy-extracted
           unzip -q "$zip_file" -d deploy-extracted
-      - name: Deploy wp-content over FTP
+
+      - name: Deploy PS Industrial theme
         uses: SamKirkland/FTP-Deploy-Action@110f9186c050f71550953127052e77650219c287 # v4.4.0
         with:
-          server: ${{ secrets.STAGING_FTP_SERVER }}
-          username: ${{ secrets.STAGING_FTP_USERNAME }}
+          server: ${{ secrets.STAGING_FTP_HOST }}
+          username: ${{ secrets.STAGING_FTP_USER }}
           password: ${{ secrets.STAGING_FTP_PASSWORD }}
-          protocol: ftps
-          local-dir: ./deploy-extracted/wp-content/
-          server-dir: ${{ secrets.STAGING_FTP_SERVER_DIR }}
-          dangerous-clean-slate: false # never delete remote files absent locally (uploads/, other plugins) -- files here are only themes/psindustrial and plugins/psindustrial-core
+          protocol: ftp
+          local-dir: ./deploy-extracted/wp-content/themes/psindustrial/
+          server-dir: ${{ secrets.STAGING_FTP_PATH }}themes/psindustrial/
+          dangerous-clean-slate: false
+
+      - name: Deploy PS Industrial core plugin
+        uses: SamKirkland/FTP-Deploy-Action@110f9186c050f71550953127052e77650219c287 # v4.4.0
+        with:
+          server: ${{ secrets.STAGING_FTP_HOST }}
+          username: ${{ secrets.STAGING_FTP_USER }}
+          password: ${{ secrets.STAGING_FTP_PASSWORD }}
+          protocol: ftp
+          local-dir: ./deploy-extracted/wp-content/plugins/psindustrial-core/
+          server-dir: ${{ secrets.STAGING_FTP_PATH }}plugins/psindustrial-core/
+          dangerous-clean-slate: false
 
   deploy-production:
     name: Deploy to production
     needs: build
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    environment: production # requires manual approval + restricted to main, configured on the repo
+
+    environment:
+      name: production
+
     steps:
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           name: deploy-package
           path: dist/staging/
-      - name: Locate and extract the package
+
+      - name: Locate and extract package
         run: |
           zip_file=$(find dist/staging -maxdepth 1 -name '*.zip' | head -n1)
           echo "Deploying $zip_file"
           mkdir -p deploy-extracted
           unzip -q "$zip_file" -d deploy-extracted
-      - name: Deploy wp-content over FTP
+
+      - name: Deploy PS Industrial theme
         uses: SamKirkland/FTP-Deploy-Action@110f9186c050f71550953127052e77650219c287 # v4.4.0
         with:
-          server: ${{ secrets.PRODUCTION_FTP_SERVER }}
-          username: ${{ secrets.PRODUCTION_FTP_USERNAME }}
+          server: ${{ secrets.PRODUCTION_FTP_HOST }}
+          username: ${{ secrets.PRODUCTION_FTP_USER }}
           password: ${{ secrets.PRODUCTION_FTP_PASSWORD }}
-          protocol: ftps
-          local-dir: ./deploy-extracted/wp-content/
-          server-dir: ${{ secrets.PRODUCTION_FTP_SERVER_DIR }}
-          dangerous-clean-slate: false # never delete remote files absent locally (uploads/, other plugins) -- files here are only themes/psindustrial and plugins/psindustrial-core
+          protocol: ftp
+          local-dir: ./deploy-extracted/wp-content/themes/psindustrial/
+          server-dir: ${{ secrets.PRODUCTION_FTP_PATH }}themes/psindustrial/
+          dangerous-clean-slate: false
+
+      - name: Deploy PS Industrial core plugin
+        uses: SamKirkland/FTP-Deploy-Action@110f9186c050f71550953127052e77650219c287 # v4.4.0
+        with:
+          server: ${{ secrets.PRODUCTION_FTP_HOST }}
+          username: ${{ secrets.PRODUCTION_FTP_USER }}
+          password: ${{ secrets.PRODUCTION_FTP_PASSWORD }}
+          protocol: ftp
+          local-dir: ./deploy-extracted/wp-content/plugins/psindustrial-core/
+          server-dir: ${{ secrets.PRODUCTION_FTP_PATH }}plugins/psindustrial-core/
+          dangerous-clean-slate: false
