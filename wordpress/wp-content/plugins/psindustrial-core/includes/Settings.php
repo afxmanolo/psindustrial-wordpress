@@ -59,9 +59,22 @@ final class Settings {
 		if ( $clean['whatsapp_enabled'] && '' === $clean['whatsapp_number'] ) { add_settings_error( 'psi_site_settings', 'psi_number_required', __( 'Indique un número antes de activar WhatsApp.', 'psindustrial-core' ) ); return $old; }
 		return $clean;
 	}
+	/**
+	 * The one place that turns whatsapp_number/whatsapp_message into a real wa.me link --
+	 * theme code never builds this URL itself (single source of truth, per Settings.php's own
+	 * existing role). Strips anything but digits (spaces, +, dashes, parentheses, any other
+	 * character) rather than trusting the stored value is already in the strict +NNNNNNNN
+	 * shape sanitize() currently enforces at save time: this is what actually makes the button
+	 * safe even if that save-time format ever changes, or a value reaches the option some
+	 * other way. Never used to relax sanitize()'s own validation, which is unchanged.
+	 */
 	public static function whatsapp_url(): string {
 		$settings = self::get();
-		return $settings['whatsapp_enabled'] && preg_match( '/^\+[1-9][0-9]{7,14}$/D', $settings['whatsapp_number'] ) ? 'https://wa.me/' . substr( $settings['whatsapp_number'], 1 ) . '?text=' . rawurlencode( $settings['whatsapp_message'] ) : '';
+		if ( ! $settings['whatsapp_enabled'] ) { return ''; }
+		$digits = preg_replace( '/[^0-9]/', '', (string) $settings['whatsapp_number'] );
+		if ( '' === $digits ) { return ''; }
+		$url = 'https://wa.me/' . $digits;
+		return '' !== $settings['whatsapp_message'] ? $url . '?text=' . rawurlencode( $settings['whatsapp_message'] ) : $url;
 	}
 	public static function render(): void {
 		if ( ! current_user_can( 'psi_edit_contact_settings' ) ) {
