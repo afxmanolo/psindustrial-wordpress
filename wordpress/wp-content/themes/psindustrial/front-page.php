@@ -47,7 +47,7 @@ $slides = array(
   <?php echo \PSIndustrial\Theme\home_image( 'quienes1.jpg', __( 'Quiénes somos', 'psindustrial' ), '(min-width: 992px) 380px, 90vw' ); ?>
   <div><h2><?php esc_html_e( 'Acerca de nosotros', 'psindustrial' ); ?></h2><p><?php esc_html_e( 'Empresa dedicada a la venta, instalación y mantenimiento de puertas automáticas para diferentes sectores de la industria.', 'psindustrial' ); ?></p>
   <?php $about = \PSIndustrial\Theme\published_page_url( 'nosotros' ); if ( $about ) : ?><a class="home-about-button" href="<?php echo esc_url( $about ); ?>"><?php esc_html_e( 'Conócenos', 'psindustrial' ); ?> <span aria-hidden="true">→</span></a><?php endif; ?>
-  <a href="<?php echo esc_url( $catalog ); ?>"><?php esc_html_e( 'Nuestros servicios', 'psindustrial' ); ?> <span aria-hidden="true">▸</span></a></div>
+  <?php $soluciones = \PSIndustrial\Theme\published_page_url( 'soluciones' ); if ( $soluciones ) : ?><a href="<?php echo esc_url( $soluciones ); ?>"><?php esc_html_e( 'Nuestros servicios', 'psindustrial' ); ?> <span aria-hidden="true">▸</span></a><?php endif; ?></div>
  </div></section>
 </main>
 <?php get_footer(); ?>

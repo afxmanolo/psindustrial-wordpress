@@ -31,12 +31,17 @@
 .contact-honeypot { position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden; }
 .contact-result { border-left:3px solid var(--psi-accent); padding:10px; margin-bottom:20px; font-size:14px; line-height:24px; }
 .privacy-copy h2 { font-size:24px; color:var(--psi-primary); }
+.soluciones-cards { list-style:none; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:60px; margin:0; padding:0; text-align:center; }
+.soluciones-cards img { display:block; width:100%; height:auto; border-radius:6px; }
+.soluciones-card-title { display:block; margin-top:30px; font-size:28px; line-height:30px; font-weight:500; color:var(--psi-primary); }
+.soluciones-cards p { margin:10px 0 0; }
 @media(max-width:991px) {
  .institutional-hero { min-height:300px; padding:40px 0; }
  .institutional-body { padding-top:60px; padding-bottom:120px; }
  .about-institutional, .contact-institutional { grid-template-columns:1fr; gap:40px; padding-inline:15px; }
  .about-institutional > img { max-width:600px; margin:auto; }
  .institutional-form { padding:40px; }
+ .soluciones-cards { grid-template-columns:repeat(2,minmax(0,1fr)); gap:40px; }
 }
 @media(max-width:575px) {
  .institutional-hero { min-height:260px; }
@@ -45,4 +50,5 @@
  .institutional-form { padding:25px 20px; }
  .contact-detail { gap:12px; }
  .contact-detail > img { width:60px; height:60px; }
+ .soluciones-cards { grid-template-columns:1fr; gap:35px; }
 }

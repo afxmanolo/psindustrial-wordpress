@@ -18,12 +18,16 @@ $check( 'publish' === get_post_status( 134 ), 'Authorized Nosotros Page publishe
 $check( 'publish' === get_page_by_path( 'contacto' )?->post_status, 'Contacto Page published' );
 $check( 'draft' === get_page_by_path( 'politica-privacidad' )?->post_status, 'Privacy remains draft' );
 $check( '' === \PSIndustrial\Theme\institutional_privacy_url(), 'Draft privacy has no public navigation URL' );
-foreach ( array( 'nosotros', 'contacto' ) as $slug ) {
+foreach ( array( 'nosotros', 'contacto', 'soluciones', 'marcas' ) as $slug ) {
  $url = get_permalink( get_page_by_path( $slug ) );
  $response = wp_remote_get( $url ); $body = wp_remote_retrieve_body( $response );
  $check( 200 === wp_remote_retrieve_response_code( $response ), $slug . ': real HTTP 200' );
  $check( str_contains( $body, esc_url( get_permalink( 134 ) ) ) && str_contains( $body, esc_url( get_permalink( get_page_by_path( 'contacto' ) ) ) ), $slug . ': native institutional navigation URLs' );
- $check( ! preg_match( '/4771763046|4791071234|wa\.me|api\.whatsapp|Teléfono pendiente/u', $body ), $slug . ': no ambiguous phone, WhatsApp or phone placeholder' );
+ // 4791071234 is the client-confirmed staging phone (2026-09-24, superseding the prior
+ // audit's "unconfirmed" status) and is now expected to appear; the OLD DB placeholder
+ // (4774103773) and legacy's own superseded number (4771763046) must never resurface, and
+ // WhatsApp stays out of scope (number still unconfirmed) exactly as before.
+ $check( ! preg_match( '/4771763046|4774103773|wa\.me|api\.whatsapp|Teléfono pendiente/u', $body ), $slug . ': no stale phone, WhatsApp or phone placeholder' );
 }
 add_filter( 'pre_wp_mail', static function() use ( &$sent ) { ++$sent; return false; } );
 $response = wp_remote_post( get_permalink( get_page_by_path( 'contacto' ) ), array( 'body' => array( 'psi_contact_name' => 'Prueba', 'psi_contact_email' => 'example@example.org', 'psi_contact_message' => '', 'psi_contact_website' => '', '_wpnonce' => 'invalid', 'started' => '0', 'signature' => 'invalid' ) ) );
@@ -48,7 +52,7 @@ show_admin_bar( false );
 add_action( 'get_header', static function() { if ( did_action( 'get_header' ) > 1 ) { include get_theme_file_path( 'header.php' ); } } );
 add_action( 'get_footer', static function() { if ( did_action( 'get_footer' ) > 1 ) { include get_theme_file_path( 'footer.php' ); } } );
 $preview = $argv[1] ?? ''; if ( $preview && ! is_dir( $preview ) ) { mkdir( $preview, 0700, true ); }
-foreach ( array( 'nosotros' => 'Nosotros', 'contacto' => 'Contacto', 'politica-privacidad' => 'Política de privacidad' ) as $slug => $title ) {
+foreach ( array( 'nosotros' => 'Nosotros', 'contacto' => 'Contacto', 'politica-privacidad' => 'Política de privacidad', 'soluciones' => 'Soluciones', 'marcas' => 'Marcas' ) as $slug => $title ) {
  $page = get_page_by_path( $slug );
  // Missing Pages represented only in process for template previews, never persisted.
  $post = $page ?: new WP_Post( (object) array( 'ID' => 0, 'post_type' => 'page', 'post_name' => $slug, 'post_title' => $title, 'post_status' => 'draft', 'post_content' => '', 'post_parent' => 0, 'post_author' => 0, 'post_date' => '2026-09-21 00:00:00', 'filter' => 'raw' ) );
@@ -68,10 +72,43 @@ foreach ( array( 'nosotros' => 'Nosotros', 'contacto' => 'Contacto', 'politica-p
   $check( 3 === $x->query( '//label[@for="psi-name" or @for="psi-email" or @for="psi-message"]' )->length, 'Accessible field labels' );
   $check( 1 === $x->query( '//address' )->length && 0 === $x->query( '//iframe' )->length, 'Verified address; no invented map or third-party embed' );
   $check( 2 === $x->query( '//main//a[starts-with(@href,"mailto:")]' )->length, 'Two source-confirmed contact emails' );
-  $check( 0 === $x->query( '//main//a[starts-with(@href,"tel:")]' )->length, 'Contradictory phone not selected automatically' );
+  $telLinks = $x->query( '//main//a[starts-with(@href,"tel:")]' );
+  $check( 1 === $telLinks->length, 'Client-confirmed phone now shown, exactly once' );
+  $check( 1 === $telLinks->length && 'tel:4791071234' === $telLinks->item( 0 )->getAttribute( 'href' ), 'Phone tel: href matches the confirmed Settings number' );
+  $check( 1 === $x->query( '//address[contains(.,"Irapuato")]' )->length, 'Address sourced from Settings, same value as footer' );
  }
  if ( 'politica-privacidad' === $slug ) { $check( str_contains( $html, 'LEGAL_CONTENT_PENDING' ) && ! str_contains( $html, 'NOMBRE EMPRESA' ) && ! str_contains( $html, 'dermafest' ), 'Legal gaps flagged, no fabricated or unrelated policy' ); }
- if ( 'nosotros' === $slug ) { $check( ! str_contains( $html, '8k+' ) && ! str_contains( $html, '9k+' ), 'Commented-out metrics not resurrected from imported markup' ); }
+ if ( 'nosotros' === $slug ) {
+  $check( ! str_contains( $html, '8k+' ) && ! str_contains( $html, '9k+' ), 'Commented-out metrics not resurrected from imported markup' );
+  $button = $x->query( '//a[@class="institutional-button"]' );
+  $check( 1 === $button->length && untrailingslashit( $button->item( 0 )->getAttribute( 'href' ) ) === untrailingslashit( get_permalink( get_page_by_path( 'soluciones' ) ) ), 'Ver servicios links to the real Soluciones Page, not the global product archive' );
+ }
+ if ( 'soluciones' === $slug ) {
+  $cards = $x->query( '//ul[@class="soluciones-cards"]/li' );
+  $check( 3 === $cards->length, 'Exactly the three legacy Soluciones cards: Industrial, Residencial, Marcas' );
+  $expected = array(
+   'Industrial' => untrailingslashit( get_term_link( \PSIndustrial\Core\Migration\Identity::find( array( 'target_type' => 'psi_categoria', 'entity_key' => 'category:1' ) ), 'psi_categoria' ) ),
+   'Residencial' => untrailingslashit( get_term_link( \PSIndustrial\Core\Migration\Identity::find( array( 'target_type' => 'psi_categoria', 'entity_key' => 'category:7' ) ), 'psi_categoria' ) ),
+   'Marcas' => untrailingslashit( get_permalink( get_page_by_path( 'marcas' ) ) ),
+  );
+  foreach ( $expected as $label => $link ) {
+   $titleLink = $x->query( '//a[@class="soluciones-card-title" and text()="' . $label . '"]' );
+   $check( 1 === $titleLink->length && untrailingslashit( $titleLink->item( 0 )->getAttribute( 'href' ) ) === $link, "Card '$label' links to its real, resolved destination" );
+  }
+  $check( 3 === $x->query( '//ul[@class="soluciones-cards"]//img' )->length, 'All three historical card images render' );
+ }
+ if ( 'marcas' === $slug ) {
+  $brandLinks = $x->query( '//ul[@class="home-brand-grid"]/li/a' );
+  $check( 12 === $brandLinks->length, 'All twelve real psi_marca brands are listed, none hardcoded' );
+  $allValid = true;
+  foreach ( $brandLinks as $anchor ) {
+   $href = $anchor->getAttribute( 'href' );
+   $termSlug = basename( untrailingslashit( (string) wp_parse_url( $href, PHP_URL_PATH ) ) );
+   $term = get_term_by( 'slug', $termSlug, 'psi_marca' );
+   if ( ! $term || untrailingslashit( get_term_link( $term ) ) !== untrailingslashit( $href ) ) { $allValid = false; }
+  }
+  $check( $allValid, 'Every brand link is a real, resolvable psi_marca term, never a single individual brand standing in for all' );
+ }
  if ( $preview ) { file_put_contents( $preview . '/' . $slug . '.html', $html ); }
 }
 $check( $sent === 0, 'No real or mocked mail calls during tests' );

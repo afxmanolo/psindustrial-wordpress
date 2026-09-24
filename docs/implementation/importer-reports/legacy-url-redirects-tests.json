@@ -2,7 +2,7 @@
     "passed": true,
     "checks": [
         {
-            "test": "Sanity: the generated legacy URL map has a real, non-trivial number of rules (got 131)",
+            "test": "Sanity: the generated legacy URL map has a real, non-trivial number of rules (got 133)",
             "passed": true
         },
         {
@@ -78,11 +78,11 @@
             "passed": true
         },
         {
-            "test": "Sanity: at least one currently-live destination was actually checked (48)",
+            "test": "Sanity: at least one currently-live destination was actually checked (50)",
             "passed": true
         },
         {
-            "test": "No live destination in the whole table is itself a legacy .php path or another rule key -- redirect chains\/loops are structurally impossible, checked across all 131 rules",
+            "test": "No live destination in the whole table is itself a legacy .php path or another rule key -- redirect chains\/loops are structurally impossible, checked across all 133 rules",
             "passed": true
         },
         {

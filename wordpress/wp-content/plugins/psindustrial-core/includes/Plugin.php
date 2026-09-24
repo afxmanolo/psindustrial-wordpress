@@ -21,6 +21,7 @@ final class Plugin {
 		CategoriesMigration::boot();
 		IdentityHashRebaseline::boot();
 		MojibakeContentMigration::boot();
+		InstitutionalContentMigration::boot();
 	}
 	public static function activate(): void {
 		Content::register();

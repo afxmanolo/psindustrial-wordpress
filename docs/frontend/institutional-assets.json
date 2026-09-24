@@ -52,5 +52,59 @@
         "sha256": "db664113f893fdcedbedf5180437f796faa1d623cc05aff2f5d66073f33a2bdd"
       }
     ]
+  },
+  "puerta432.jpg": {
+    "source": "legacy/public/images/puerta432.jpg",
+    "sha256": "89985092a942575637985f370ee8ff7215e9107e90db9931af2bd85f2d7bf301",
+    "variants": [
+      {
+        "file": "assets/images/institutional/puerta432-480.webp",
+        "width": 480,
+        "height": 381,
+        "sha256": "12ec0d090dba121abb9de2fb519ea1123a67d389a020199438327944d918efbf"
+      },
+      {
+        "file": "assets/images/institutional/puerta432-800.webp",
+        "width": 800,
+        "height": 635,
+        "sha256": "7c462e8cdba502ed8ba6d178bb486d5181fcb5f42e91c0b493c6cddfc08ef7e5"
+      }
+    ]
+  },
+  "operadores.jpg": {
+    "source": "legacy/public/images/operadores.jpg",
+    "sha256": "a39f73066d336fc9d5b5f93b86845c7ca4401e4d6b35cbe306cf5e5dd21f092d",
+    "variants": [
+      {
+        "file": "assets/images/institutional/operadores-480.webp",
+        "width": 480,
+        "height": 381,
+        "sha256": "ed0134034530b4ee1d6c463a9211b28c6555bcf4adcf5b190a024717b6c47f8f"
+      },
+      {
+        "file": "assets/images/institutional/operadores-800.webp",
+        "width": 800,
+        "height": 635,
+        "sha256": "9f7d96bb39a011f3bfb7159a384eace03234634c653317d88d6cf7c2f6943645"
+      }
+    ]
+  },
+  "marcas.png": {
+    "source": "legacy/public/images/marcas.png",
+    "sha256": "0c3bb1c24d214dff4b76b0d07c801d770975b26a4ef139b2d038b66fd2d9e916",
+    "variants": [
+      {
+        "file": "assets/images/institutional/marcas-soluciones-480.webp",
+        "width": 480,
+        "height": 381,
+        "sha256": "8eeef827509282b95a8b2926f8be81ee0c43910d77a1662f35d3a5eac24ca9f9"
+      },
+      {
+        "file": "assets/images/institutional/marcas-soluciones-800.webp",
+        "width": 800,
+        "height": 635,
+        "sha256": "1d2c5c279937fc5deaa5a4fcf5181966b69192e60e285a20b5f6f7b08d1b0821"
+      }
+    ]
   }
 }

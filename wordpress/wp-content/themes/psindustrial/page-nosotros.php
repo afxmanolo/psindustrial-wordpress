@@ -7,6 +7,6 @@
  <p class="about-lead"><?php esc_html_e( 'Empresa dedicada a la venta, instalación y mantenimiento de puertas automáticas para diferentes sectores de la industria.', 'psindustrial' ); ?></p>
  <p><?php esc_html_e( 'Contamos con más de 25 años de experiencia, nos especializamos en la fabricación de puertas y ventanas de alta calidad, utilizando materiales como aluminio y acero inoxidable.', 'psindustrial' ); ?></p>
  <p><?php esc_html_e( 'Nos destacamos por ofrecer soluciones personalizadas para cada cliente, abarcando tanto proyectos residenciales como industriales, asegurando productos que garanticen funcionalidad y diseño, además de tecnología avanzada.', 'psindustrial' ); ?></p>
- <a class="institutional-button" href="<?php echo esc_url( get_post_type_archive_link( 'psi_producto' ) ); ?>"><?php esc_html_e( 'Ver servicios', 'psindustrial' ); ?> <span aria-hidden="true">→</span></a></div>
+ <?php $soluciones = \PSIndustrial\Theme\published_page_url( 'soluciones' ); if ( $soluciones ) : ?><a class="institutional-button" href="<?php echo esc_url( $soluciones ); ?>"><?php esc_html_e( 'Ver servicios', 'psindustrial' ); ?> <span aria-hidden="true">→</span></a><?php endif; ?></div>
 </section></main>
 <?php get_footer(); ?>
