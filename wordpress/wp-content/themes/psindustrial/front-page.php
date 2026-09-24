@@ -31,13 +31,12 @@ $slides = array(
  </div></section>
  <section class="home-products" aria-labelledby="home-products-title">
   <div class="home-products-heading psi-container"><h2 id="home-products-title"><?php esc_html_e( 'Conoce nuestros Productos', 'psindustrial' ); ?></h2></div>
-  <?php foreach ( $data['sections'] as $i => $family ) : ?>
+  <?php foreach ( \PSIndustrial\Theme\home_category_sections() as $i => $family ) : ?>
   <section class="home-family<?php echo $family['reverse'] ? ' is-reversed' : ''; echo $family['pattern'] ? ' has-pattern' : ''; ?>" aria-labelledby="home-family-<?php echo (int) $i; ?>">
    <div class="psi-container home-family-grid">
     <div class="home-family-copy"><h3 id="home-family-<?php echo (int) $i; ?>"><?php echo esc_html( $family['title'] ); ?></h3>
-     <ul><?php foreach ( $family['labels'] as $label ) : ?><li><span aria-hidden="true">+</span> <?php echo esc_html( $label ); ?></li><?php endforeach; ?></ul>
-     <?php $family_url = \PSIndustrial\Theme\home_family_url( $family['slug'] ); ?>
-     <a class="home-outline-button" href="<?php echo esc_url( $family_url ?: $catalog ); ?>"<?php if ( ! $family_url ) : ?> aria-label="<?php esc_attr_e( 'Ver todos los productos del catálogo', 'psindustrial' ); ?>"<?php endif; ?>><?php esc_html_e( 'Ver todos', 'psindustrial' ); ?> <span aria-hidden="true">→</span></a>
+     <ul><?php foreach ( $family['children'] as $child ) : ?><li><a href="<?php echo esc_url( $child['link'] ); ?>"><span aria-hidden="true">+</span> <?php echo esc_html( $child['label'] ); ?></a></li><?php endforeach; ?></ul>
+     <a class="home-outline-button" href="<?php echo esc_url( $family['link'] ); ?>"><?php esc_html_e( 'Ver todos', 'psindustrial' ); ?> <span aria-hidden="true">→</span></a>
     </div>
     <div class="home-family-image<?php echo $family['narrow'] ? ' is-narrow' : ''; ?>"><?php echo \PSIndustrial\Theme\home_image( $family['image'], $family['title'], '(min-width: 992px) 480px, 90vw' ); ?></div>
    </div>

@@ -4,103 +4,20 @@ defined( 'ABSPATH' ) || exit;
 // Verified historical Home presentation, not taxonomy or migration data.
 function home_data(): array {
 	return array(
+		// Title, parent/child relationships and "Ver todos" destination all come from the
+		// real psi_categoria hierarchy now (home_category_sections()) -- legacy_id (1-7,
+		// CategoriesMigration's own MENU_ORDER roots) is the only thing needed to find which
+		// term. What's left here is presentation the taxonomy has no opinion on: which theme
+		// image, and the reverse/narrow/pattern layout flags -- verified historical Home
+		// composition, never category data.
 		'sections' => array(
-			array(
-				'title' => 'Industriales',
-				'slug' => 'industrial',
-				'image' => 'industrial-home.jpg',
-				'labels' => array(
-					'Puertas Seccionales',
-					'Operadores para puerta corrediza',
-					'Operadores para puerta abatible',
-					'Operadores para puertas seccionales y cortinas enrollables',
-					'Cortinas enrollables',
-					'Puertas rápidas',
-					'Tiras plásticas',
-				),
-				'reverse' => false,
-				'narrow' => false,
-				'pattern' => false,
-			),
-			array(
-				'title' => 'Comercial',
-				'slug' => 'comercial',
-				'image' => 'home-comercial.jpg',
-				'labels' => array(
-					'Fraccionamientos y Condominios',
-					'Estacionamientos',
-					'Centros comerciales y hoteles',
-					'Accesorios y dispositivos de control de acceso y seguridad',
-				),
-				'reverse' => true,
-				'narrow' => false,
-				'pattern' => true,
-			),
-			array(
-				'title' => 'Equipos y Accesorios para Anden de Carga',
-				'slug' => 'equipos-y-accesorios-para-anden-de-carga',
-				'image' => 'equipos-accesorios-anden-carga.jpeg',
-				'labels' => array(
-					'Rampa Niveladora',
-					'Labio de elevación para anden de carga',
-					'Retenedores de vehiculos',
-					'Sellos para anden',
-					'Bumpers, semaforos y cepillos para rampa niveladora',
-				),
-				'reverse' => false,
-				'narrow' => false,
-				'pattern' => false,
-			),
-			array(
-				'title' => 'Puertas peatonales de Salida de Emergencia',
-				'slug' => 'puertas-peatonales-de-salida-de-emergencia',
-				'image' => 'salida-emergencia.png',
-				'labels' => array(
-					'Puertas peatonales estandar y reforzada',
-					'Puertas tipo Louver y holandesa',
-				),
-				'reverse' => true,
-				'narrow' => true,
-				'pattern' => true,
-			),
-			array(
-				'title' => 'Puertas peatonales contra Incendio, Contra Explosión y Blindadas',
-				'slug' => 'puertas-peatonales-contra-incendio-contra-explosia%c2%b3n-y-blindadas',
-				'image' => 'PuertasIncendios.jpeg',
-				'labels' => array(
-					'Contra incendio',
-					'Contra explosión',
-					'Blindada',
-				),
-				'reverse' => false,
-				'narrow' => false,
-				'pattern' => false,
-			),
-			array(
-				'title' => 'Puertas peatonales para Hospitales',
-				'slug' => 'puertas-peatonales-para-hospitales',
-				'image' => 'puerta-metalica-hospital.jpg',
-				'labels' => array(
-					'Puertas peatonales rayos X',
-				),
-				'reverse' => true,
-				'narrow' => true,
-				'pattern' => true,
-			),
-			array(
-				'title' => 'Residenciales',
-				'slug' => 'residenciales',
-				'image' => 'residencial-2.png',
-				'labels' => array(
-					'Puertas residenciales',
-					'Operadores para puerta corrediza',
-					'Operadores para puerta abatible',
-					'Operadores para puertas ascendentes',
-				),
-				'reverse' => false,
-				'narrow' => false,
-				'pattern' => true,
-			),
+			array( 'legacy_id' => 1, 'image' => 'industrial-home.jpg', 'reverse' => false, 'narrow' => false, 'pattern' => false ),
+			array( 'legacy_id' => 2, 'image' => 'home-comercial.jpg', 'reverse' => true, 'narrow' => false, 'pattern' => true ),
+			array( 'legacy_id' => 3, 'image' => 'equipos-accesorios-anden-carga.jpeg', 'reverse' => false, 'narrow' => false, 'pattern' => false ),
+			array( 'legacy_id' => 4, 'image' => 'salida-emergencia.png', 'reverse' => true, 'narrow' => true, 'pattern' => true ),
+			array( 'legacy_id' => 5, 'image' => 'PuertasIncendios.jpeg', 'reverse' => false, 'narrow' => false, 'pattern' => false ),
+			array( 'legacy_id' => 6, 'image' => 'puerta-metalica-hospital.jpg', 'reverse' => true, 'narrow' => true, 'pattern' => true ),
+			array( 'legacy_id' => 7, 'image' => 'residencial-2.png', 'reverse' => false, 'narrow' => false, 'pattern' => true ),
 		),
 		// 'brands' is no longer a static list here -- see home_brands() in
 		// home-presentation.php, sourced live from psi_marca terms. The WebP variants
