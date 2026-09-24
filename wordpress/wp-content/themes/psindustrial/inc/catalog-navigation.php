@@ -13,12 +13,16 @@ function catalog_navigation( bool $all_categories = false ): array {
 		if ( is_wp_error( $terms ) ) { continue; }
 		$terms = array_values( array_filter( $terms, static fn( $term ) => 'public' === get_term_meta( $term->term_id, '_psi_public_state', true ) ) );
 		$public_ids = wp_list_pluck( $terms, 'term_id' );
-		// Preserve the static header's order for the unambiguous existing family slugs.
-		$order = array( 'industrial', 'comercial', 'equipos-y-accesorios-para-anden-de-carga', 'puertas-peatonales-de-salida-de-emergencia', 'puertas-peatonales-contra-incendio-contra-explosia%c2%b3n-y-blindadas', 'puertas-peatonales-para-hospitales', 'residenciales' );
+		// _psi_category_menu_order (CategoriesMigration) preserves legacy/public/header.php's
+		// exact "Soluciones" order for its 7 top-level roots; a term without an explicit order
+		// (any child, or a future category never covered by that migration) sorts after all of
+		// them, in whatever order get_terms() returned it -- same fallback behaviour the prior
+		// hardcoded slug list already had for anything it didn't name.
 		if ( 'psi_categoria' === $taxonomy ) {
-			usort( $terms, static function( $a, $b ) use ( $order ) {
-				$ai = array_search( $a->slug, $order, true ); $bi = array_search( $b->slug, $order, true );
-				return ( false === $ai ? 99 : $ai ) <=> ( false === $bi ? 99 : $bi );
+			usort( $terms, static function( $a, $b ) {
+				$ao = get_term_meta( $a->term_id, '_psi_category_menu_order', true );
+				$bo = get_term_meta( $b->term_id, '_psi_category_menu_order', true );
+				return ( '' === $ao ? PHP_INT_MAX : (int) $ao ) <=> ( '' === $bo ? PHP_INT_MAX : (int) $bo );
 			} );
 		}
 		foreach ( $terms as $term ) {

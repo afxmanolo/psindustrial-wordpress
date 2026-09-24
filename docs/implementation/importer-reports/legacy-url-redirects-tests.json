@@ -34,11 +34,15 @@
             "passed": true
         },
         {
-            "test": "Fixture: category term 245 (blindadas.php) is genuinely in review right now",
+            "test": "A real mapping rule exists for blindadas.php (proves the mechanism reaches taxonomy targets)",
             "passed": true
         },
         {
-            "test": "A real mapping rule exists for blindadas.php (proves the mechanism reaches taxonomy targets)",
+            "test": "Fixture: category term 245 (blindadas.php) is genuinely public right now (CategoriesMigration)",
+            "passed": true
+        },
+        {
+            "test": "Sanity: the toggle above actually took effect",
             "passed": true
         },
         {
@@ -74,11 +78,215 @@
             "passed": true
         },
         {
-            "test": "Sanity: at least one currently-live destination was actually checked (18)",
+            "test": "Sanity: at least one currently-live destination was actually checked (48)",
             "passed": true
         },
         {
             "test": "No live destination in the whole table is itself a legacy .php path or another rule key -- redirect chains\/loops are structurally impossible, checked across all 131 rules",
+            "passed": true
+        },
+        {
+            "test": "Structural: the map entry for category:39 carries no wp_id at all",
+            "passed": true
+        },
+        {
+            "test": "Structural: it carries entity_key=category:39 instead",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: bft.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: blindadas.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: blue-giant.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: centros-comerciales.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: clopay.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: comercial.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: contra-exposion.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: cortinas-enrollables-industriales.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: dockman.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: doorlock.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: equipos-y-accesorios-para-anden-de-carga.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: estacionamientos.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: fraccionamientos-y-condominios.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: glg-porte-industriali.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: industrial.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: infraca-quality-doors.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: kelley.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: labio-elevacion-anden-carga.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: lift-master.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: operadores-para-puerta-corrediza-industrial.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: operadores-para-puertas-ascendentes.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: operadores-puerta-abatible-industrial.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: operadores-puertas-seccionales-cortinas.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: overhead-door.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: puerta-contra-incendio.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: puertas-peatonales-hospitales.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: puertas-peatonales-rayos-x.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: puertas-peatonales-tipo-holandesa.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: puertas-rapidas.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: puertas-salida-emergencia.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: puertas-seccionales-industriales.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: puertas-y-fijos-louver.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: puertasresidenciales.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: rampa-niveladora.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: receptor-para-control-vehiculos.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: residencial.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: retenedores-de-vehiculos.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: rytec.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: sellos-para-anden.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: semaforos-senalizaciones-para-anden.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: tiras-plasticas.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: every taxonomy rule resolves by entity_key, never wp_id: wayne-dalton.php",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:39 genuinely resolves to a real term in this environment right now",
+            "passed": true
+        },
+        {
+            "test": "The legacy URL resolves to THIS environment's real, current term -- whatever its numeric id happens to be here",
+            "passed": true
+        },
+        {
+            "test": "destination() ignores a present-but-wrong wp_id entirely and still resolves correctly by entity_key alone",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:1 resolves to a real term",
+            "passed": true
+        },
+        {
+            "test": "Same property holds generally, not just for category:39: category:1",
+            "passed": true
+        },
+        {
+            "test": "Fixture: brand:3 resolves to a real term",
+            "passed": true
+        },
+        {
+            "test": "Same property holds generally, not just for category:39: brand:3",
             "passed": true
         },
         {

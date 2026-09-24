@@ -1,0 +1,669 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "safeDeleteTestTerm() refuses a real category term (no fixture slug\/meta) instead of deleting it",
+            "passed": true
+        },
+        {
+            "test": "Sanity: Industrial genuinely still exists after that refused call",
+            "passed": true
+        },
+        {
+            "test": "safeDeleteTestTerm() refuses a term with the fixture slug prefix but no fixture meta marker",
+            "passed": true
+        },
+        {
+            "test": "Once both signals are present, safeDeleteTestTerm() does delete -- this fixture cleans itself up",
+            "passed": true
+        },
+        {
+            "test": "CategoriesMigration::run() is a no-op once already applied (idempotent)",
+            "passed": true
+        },
+        {
+            "test": "Fixture: exactly 36 approved legacy_ids (38 category-master.csv rows minus the 2 UNKNOWN-confidence ones, 25 and 26)",
+            "passed": true
+        },
+        {
+            "test": "Fixture: exactly 7 top-level roots carry an explicit menu order",
+            "passed": true
+        },
+        {
+            "test": "Fixture: 34 of the 36 approved legacy_ids have a real, already-imported WordPress term today (37\/38 do not yet -- a real, pre-existing slug collision against 11\/12, unrelated to this migration, never invented or fixed here)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:1 (term 66)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:2 (term 219)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:3 (term 220)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:4 (term 221)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:5 (term 222)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:6 (term 223)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:7 (term 224)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:8 (term 67)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:9 (term 225)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:10 (term 226)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:11 (term 227)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:12 (term 228)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:13 (term 229)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:14 (term 230)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:16 (term 231)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:17 (term 232)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:18 (term 233)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:19 (term 234)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:20 (term 235)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:21 (term 236)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:22 (term 237)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:23 (term 238)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:24 (term 239)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:27 (term 240)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:28 (term 241)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:29 (term 242)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:30 (term 243)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:31 (term 244)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:32 (term 245)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:33 (term 246)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:34 (term 247)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:35 (term 248)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:36 (term 249)",
+            "passed": true
+        },
+        {
+            "test": "Migration published category:39 (term 333)",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct legacy header.php order for category:1",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct legacy header.php order for category:2",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct legacy header.php order for category:3",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct legacy header.php order for category:4",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct legacy header.php order for category:5",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct legacy header.php order for category:6",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct legacy header.php order for category:7",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:1 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:1",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:2 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:2",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:3 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:3",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:4 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:4",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:5 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:5",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:6 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:6",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:7 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:7",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:8 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:8",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:9 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:9",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:10 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:10",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:11 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:11",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:12 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:12",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:13 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:13",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:14 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:14",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:16 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:16",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:17 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:17",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:18 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:18",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:19 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:19",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:20 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:20",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:21 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:21",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:22 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:22",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:23 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:23",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:24 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:24",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:27 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:27",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:28 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:28",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:29 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:29",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:30 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:30",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:31 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:31",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:32 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:32",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:33 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:33",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:34 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:34",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:35 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:35",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:36 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:36",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:39 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Newly-published category still predicts UNCHANGED, not CONFLICT: category:39",
+            "passed": true
+        },
+        {
+            "test": "Pre-existing slug collision correctly still CONFLICT, never silently hidden: category:37",
+            "passed": true
+        },
+        {
+            "test": "Pre-existing slug collision correctly still CONFLICT, never silently hidden: category:38",
+            "passed": true
+        },
+        {
+            "test": "catalog_navigation() no longer hardcodes the category slug order array",
+            "passed": true
+        },
+        {
+            "test": "catalog_navigation() still queries with hide_empty=false",
+            "passed": true
+        },
+        {
+            "test": "catalog_navigation() sources order from term meta, not a literal array",
+            "passed": true
+        },
+        {
+            "test": "catalog_navigation() top-level categories appear in the exact legacy header.php order (legacy_id 1..7)",
+            "passed": true
+        },
+        {
+            "test": "Fixture: Industrial genuinely has zero associated products (published or not) right now",
+            "passed": true
+        },
+        {
+            "test": "A category with zero associated products still appears in catalog_navigation() -- hide_empty=false is real",
+            "passed": true
+        },
+        {
+            "test": "Link is the real get_term_link() for: Industrial",
+            "passed": true
+        },
+        {
+            "test": "Link is never a placeholder href=#: Industrial",
+            "passed": true
+        },
+        {
+            "test": "Link is the real get_term_link() for: Comercial",
+            "passed": true
+        },
+        {
+            "test": "Link is never a placeholder href=#: Comercial",
+            "passed": true
+        },
+        {
+            "test": "Link is the real get_term_link() for: Equipos y Accesorios para Anden de Carga",
+            "passed": true
+        },
+        {
+            "test": "Link is never a placeholder href=#: Equipos y Accesorios para Anden de Carga",
+            "passed": true
+        },
+        {
+            "test": "Link is the real get_term_link() for: Puertas peatonales de Salida de Emergencia",
+            "passed": true
+        },
+        {
+            "test": "Link is never a placeholder href=#: Puertas peatonales de Salida de Emergencia",
+            "passed": true
+        },
+        {
+            "test": "Link is the real get_term_link() for: Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "passed": true
+        },
+        {
+            "test": "Link is never a placeholder href=#: Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "passed": true
+        },
+        {
+            "test": "Link is the real get_term_link() for: Puertas peatonales para Hospitales",
+            "passed": true
+        },
+        {
+            "test": "Link is never a placeholder href=#: Puertas peatonales para Hospitales",
+            "passed": true
+        },
+        {
+            "test": "Link is the real get_term_link() for: Residenciales",
+            "passed": true
+        },
+        {
+            "test": "Link is never a placeholder href=#: Residenciales",
+            "passed": true
+        },
+        {
+            "test": "Fixture terms resolve: Comercial (root) and Estacionamientos (its real child)",
+            "passed": true
+        },
+        {
+            "test": "Estacionamientos is genuinely a child of Comercial in real WordPress term data (not asserted, read)",
+            "passed": true
+        },
+        {
+            "test": "catalog_navigation() (header mode) shows only top-level roots -- matches the legacy header.php dropdown exactly (7 flat items, no nesting), never arbitrarily flattens the taxonomy by also listing children there",
+            "passed": true
+        },
+        {
+            "test": "Child category archive renders 200 (got 200)",
+            "passed": true
+        },
+        {
+            "test": "Fixture: simulated query state genuinely reports is_tax() for Estacionamientos",
+            "passed": true
+        },
+        {
+            "test": "catalog_navigation(all_categories=true) includes the real child while its own page is being rendered -- reachable via real WordPress structure, never hardcoded",
+            "passed": true
+        },
+        {
+            "test": "Archive for a category with a real published product renders 200 (got 200)",
+            "passed": true
+        },
+        {
+            "test": "Archive with products renders the real product grid, not the empty-state message",
+            "passed": true
+        },
+        {
+            "test": "Archive for a category with zero products renders 200, never 404 for being empty (got 200)",
+            "passed": true
+        },
+        {
+            "test": "Empty category archive shows the real, shared \"no products published\" message",
+            "passed": true
+        },
+        {
+            "test": "Legacy industrial.php -> 301 -> real Industrial canonical (got 301 http:\/\/localhost\/psindustrial-wordpress\/wordpress\/categoria\/industrial\/)",
+            "passed": true
+        },
+        {
+            "test": "Legacy \/productos\/categoria\/1\/industrial\/ -> 301 -> real Industrial canonical (got 301 http:\/\/localhost\/psindustrial-wordpress\/wordpress\/categoria\/industrial\/)",
+            "passed": true
+        },
+        {
+            "test": "Legacy \/1\/categoria\/industrial\/ -> 301 -> real Industrial canonical (got 301 http:\/\/localhost\/psindustrial-wordpress\/wordpress\/categoria\/industrial\/)",
+            "passed": true
+        },
+        {
+            "test": "The slug segment is decorative, exactly like the original legacy rewrite -- never validated against the current slug",
+            "passed": true
+        },
+        {
+            "test": "Canonical destination is not itself a redirect source (no chain): \/industrial",
+            "passed": true
+        },
+        {
+            "test": "Canonical destination is not itself a redirect source (no chain): \/industrial",
+            "passed": true
+        },
+        {
+            "test": "Canonical destination is not itself a redirect source (no chain): \/industrial",
+            "passed": true
+        },
+        {
+            "test": "An unknown legacy category id resolves to null, never an invented destination",
+            "passed": true
+        },
+        {
+            "test": "category:25 (UNKNOWN confidence, no WordPress term) resolves to null -- never invented",
+            "passed": true
+        },
+        {
+            "test": "The combined CategoriaId+MarcaId pattern is intentionally never handled -- a single term canonical cannot represent both, so no destination is guessed",
+            "passed": true
+        },
+        {
+            "test": "Synthetic fixture term created",
+            "passed": true
+        },
+        {
+            "test": "Sanity: the fixture carries both pieces of evidence safeDeleteTestTerm() will require before it may be deleted",
+            "passed": true
+        },
+        {
+            "test": "A term nothing has published is correctly NOT public",
+            "passed": true
+        },
+        {
+            "test": "A non-public category archive still 404s (got 404) -- TermPolicy::template_redirect guard is untouched",
+            "passed": true
+        },
+        {
+            "test": "A non-public term never appears in catalog_navigation(), including all_categories mode",
+            "passed": true
+        },
+        {
+            "test": "An anonymous get_terms() call never returns a non-public term",
+            "passed": true
+        },
+        {
+            "test": "This entire suite (including live HTTP requests and the migration re-run) creates\/deletes only its own synthetic fixture term -- net zero posts\/terms",
+            "passed": true
+        }
+    ]
+}

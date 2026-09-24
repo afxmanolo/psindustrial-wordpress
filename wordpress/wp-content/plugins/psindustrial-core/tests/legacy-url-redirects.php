@@ -36,9 +36,34 @@ use PSIndustrial\Core\Migration\Storage;
 		$assert( null === LegacyUrls::resolve( '/operadores-puerta-abatible.php', true ), 'Q07 landing mapping exists but the Page is draft: no redirect invented' );
 
 		// ============================================================ known category mapping (not yet public -> KEEP_PENDING, never invented)
-		$assert( 'review' === get_term_meta( 245, '_psi_public_state', true ), 'Fixture: category term 245 (blindadas.php) is genuinely in review right now' );
+		// Term 245 (blindadas.php, category:32) was the original real, still-review fixture
+		// here; CategoriesMigration (2026-09-23, dynamic "Soluciones" menu) has since
+		// published every real category, itself the correct, intended outcome, not a bug --
+		// so no genuinely non-public category with a real map entry exists anymore to read
+		// live. Reversibly toggle this one real term back to review for the duration of this
+		// check only (never created/deleted, restored in `finally` even if an assertion
+		// throws) to keep exercising the real mapping rule + real destination() taxonomy
+		// branch, as close to this file's own "real object" fixtures as the current data
+		// still allows.
+		//
+		// TermEditor::guard() (update_term_metadata filter) deliberately refuses to
+		// un-publish an already-public term (real safety: never silently drop a live public
+		// URL) unless the acting user has psi_manage_routes -- a real capability this file's
+		// otherwise-anonymous checks never need elsewhere, so it is granted only around this
+		// one reversible toggle, exactly the scope the write itself requires.
 		$assert( isset( $map['blindadas.php'] ), 'A real mapping rule exists for blindadas.php (proves the mechanism reaches taxonomy targets)' );
-		$assert( null === LegacyUrls::resolve( '/blindadas.php', true ), 'Category mapping exists but the term is review, not public: no redirect' );
+		$assert( 'public' === get_term_meta( 245, '_psi_public_state', true ), 'Fixture: category term 245 (blindadas.php) is genuinely public right now (CategoriesMigration)' );
+		wp_set_current_user( get_users( array( 'role' => 'administrator', 'number' => 1 ) )[0]->ID );
+		update_term_meta( 245, '_psi_public_state', 'review' );
+		wp_set_current_user( 0 );
+		try {
+			$assert( 'review' === get_term_meta( 245, '_psi_public_state', true ), 'Sanity: the toggle above actually took effect' );
+			$assert( null === LegacyUrls::resolve( '/blindadas.php', true ), 'Category mapping exists but the term is review, not public: no redirect' );
+		} finally {
+			wp_set_current_user( get_users( array( 'role' => 'administrator', 'number' => 1 ) )[0]->ID );
+			update_term_meta( 245, '_psi_public_state', 'public' );
+			wp_set_current_user( 0 );
+		}
 
 		// ============================================================ pending taxonomy / unresolved page -> no redirect invented
 		$assert( ! isset( $map['puertas-blindadas.php'] ), 'A genuinely unresolved legacy file (KEEP_REVIEW, no owner) has no rule at all in the generated map' );
@@ -57,13 +82,14 @@ use PSIndustrial\Core\Migration\Storage;
 		// ============================================================ redirect loop / chain -> impossible (structural, across the whole table)
 		// Every rule key ends in .php (already proven above); every live destination below
 		// is checked to never itself be a .php path or another rule key, so a request can
-		// never bounce through this layer twice, let alone loop.
+		// never bounce through this layer twice, let alone loop. Goes through the real,
+		// public resolve() for every single rule key (never a hand-rolled re-implementation
+		// of destination()'s per-wp_type branches, which would silently drift out of sync --
+		// exactly what happened here once already when psi_categoria/psi_marca stopped
+		// carrying wp_id).
 		$chainOrLoopFound = false; $destinationsChecked = 0;
-		foreach ( $map as $file => $rule ) {
-			$dest = null;
-			if ( 'site_root' === $rule['wp_type'] ) { $dest = home_url( '/' ); }
-			elseif ( in_array( $rule['wp_type'], array( 'page', 'psi_producto' ), true ) && 'publish' === get_post_status( $rule['wp_id'] ) ) { $dest = get_permalink( $rule['wp_id'] ); }
-			elseif ( in_array( $rule['wp_type'], array( 'psi_categoria', 'psi_marca' ), true ) && \PSIndustrial\Core\TermPolicy::is_public( $rule['wp_id'] ) ) { $link = get_term_link( $rule['wp_id'], $rule['wp_type'] ); $dest = is_wp_error( $link ) ? null : $link; }
+		foreach ( array_keys( $map ) as $file ) {
+			$dest = LegacyUrls::resolve( $file, true );
 			if ( null === $dest ) { continue; }
 			$destinationsChecked++;
 			$destBasename = basename( (string) wp_parse_url( $dest, PHP_URL_PATH ) );
@@ -71,6 +97,46 @@ use PSIndustrial\Core\Migration\Storage;
 		}
 		$assert( $destinationsChecked > 0, 'Sanity: at least one currently-live destination was actually checked (' . $destinationsChecked . ')' );
 		$assert( false === $chainOrLoopFound, 'No live destination in the whole table is itself a legacy .php path or another rule key -- redirect chains/loops are structurally impossible, checked across all ' . count( $map ) . ' rules' );
+
+		// ============================================================ portability: taxonomy destinations resolve by identity, never a stored term_id
+		// The real incident this proves against: category:39 was term_id 250 originally,
+		// accidentally deleted and recreated locally as 333 during this project's own test
+		// development (documented in this session's report). Staging was never touched by
+		// that accident and most likely still has 250 for the same category. The exact same
+		// checked-in code -- this file's own data/legacy-url-map.php among it -- has to
+		// redirect correctly on both, which means it can never read a stored term_id for a
+		// taxonomy rule at all.
+		$assert( ! array_key_exists( 'wp_id', $map['operadores-para-puertas-ascendentes.php'] ), 'Structural: the map entry for category:39 carries no wp_id at all' );
+		$assert( 'category:39' === $map['operadores-para-puertas-ascendentes.php']['entity_key'], 'Structural: it carries entity_key=category:39 instead' );
+		foreach ( $map as $file => $rule ) {
+			if ( in_array( $rule['wp_type'], array( 'psi_categoria', 'psi_marca' ), true ) ) {
+				$assert( ! array_key_exists( 'wp_id', $rule ) && isset( $rule['entity_key'] ), "Structural: every taxonomy rule resolves by entity_key, never wp_id: $file" );
+			}
+		}
+		$realTermId = \PSIndustrial\Core\Migration\Identity::find( array( 'target_type' => 'psi_categoria', 'entity_key' => 'category:39' ) );
+		$assert( $realTermId > 0, 'Fixture: category:39 genuinely resolves to a real term in this environment right now' );
+		$expectedCanonical = get_term_link( $realTermId, 'psi_categoria' );
+		$destination = LegacyUrls::resolve( '/operadores-para-puertas-ascendentes.php', true );
+		$assert( untrailingslashit( $destination ) === untrailingslashit( $expectedCanonical ), 'The legacy URL resolves to THIS environment\'s real, current term -- whatever its numeric id happens to be here' );
+		// Behavioural proof, not just structural: destination() (private -- Reflection) is
+		// handed a rule with a deliberately wrong wp_id sitting right next to the correct
+		// entity_key. If wp_id mattered at all, this would resolve to nonsense or throw; it
+		// must resolve to the exact same real canonical as above, proving wp_id is never even
+		// read for a taxonomy rule, the strongest form of "does not depend on a fixed term_id"
+		// -- no real database mutation, no simulated environment, needed to prove it.
+		$ref = new ReflectionMethod( LegacyUrls::class, 'destination' );
+		$ref->setAccessible( true );
+		$spoofed = $ref->invoke( null, array( 'wp_type' => 'psi_categoria', 'entity_key' => 'category:39', 'wp_id' => 999999999 ) );
+		$assert( untrailingslashit( $spoofed ) === untrailingslashit( $expectedCanonical ), 'destination() ignores a present-but-wrong wp_id entirely and still resolves correctly by entity_key alone' );
+		// And the same property for a second, independent category and a brand -- never a
+		// one-off special case for category:39 alone.
+		foreach ( array( array( 'psi_categoria', 'category:1', 'industrial' ), array( 'psi_marca', 'brand:3', 'clopay' ) ) as [ $taxonomy, $entityKey, $slug ] ) {
+			$realId = \PSIndustrial\Core\Migration\Identity::find( array( 'target_type' => $taxonomy, 'entity_key' => $entityKey ) );
+			$assert( $realId > 0, "Fixture: $entityKey resolves to a real term" );
+			$expected = get_term_link( $realId, $taxonomy );
+			$spoofed = $ref->invoke( null, array( 'wp_type' => $taxonomy, 'entity_key' => $entityKey, 'wp_id' => 888888888 ) );
+			$assert( untrailingslashit( $spoofed ) === untrailingslashit( $expected ), "Same property holds generally, not just for category:39: $entityKey" );
+		}
 
 		// ============================================================ real end-to-end HTTP checks (matches tests/smoke.php's own pattern)
 		// admin/API/assets never touched is exercised directly below via a real wp-admin request.
