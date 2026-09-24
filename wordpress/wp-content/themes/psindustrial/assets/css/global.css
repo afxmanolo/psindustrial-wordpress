@@ -105,3 +105,11 @@
 .psi-site:not(.psi-has-hero) main { padding-bottom:150px; }
 .catalog-footer-description { max-width:90%; margin:20px 0 0; color:white; font-size:20px; line-height:24px; }
 @media(max-width:991px) { .psi-site:not(.psi-has-hero) .catalog-site-header { background:white; } }
+/* Global floating WhatsApp button (legacy/public/css/custom.css's own .whatsapp: fixed
+   60x60px, 20px from bottom/right, #25d366, circular, z-index:100 -- same values here, plus a
+   discrete shadow this task asked for). Flex-centering the icon replaces legacy's manual
+   margin-top:13px with an equivalent, more robust result; no visual redesign. */
+.psi-whatsapp-button { position:fixed; width:60px; height:60px; bottom:20px; right:20px; background-color:#25d366; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(0,0,0,.25); z-index:100; transition:background-color .15s ease; }
+.psi-whatsapp-button:hover { background-color:#20bd5a; }
+.psi-whatsapp-button:focus-visible { outline:3px solid var(--psi-primary); outline-offset:3px; }
+@media(max-width:575px) { .psi-whatsapp-button { width:52px; height:52px; bottom:15px; right:15px; } .psi-whatsapp-button svg { width:28px; height:28px; } }
