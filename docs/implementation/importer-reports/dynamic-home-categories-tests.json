@@ -1,0 +1,845 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "CategoriesMigration::run() is a no-op once already applied (idempotent)",
+            "passed": true
+        },
+        {
+            "test": "Fixture: this is the v2 migration (adds SIBLING_ORDER on top of v1's public-state + root order)",
+            "passed": true
+        },
+        {
+            "test": "Fixture: exactly 27 real children carry an explicit sibling order (36 approved legacy_ids - 7 roots - 2 without a real term, 37\/38)",
+            "passed": true
+        },
+        {
+            "test": "All 7 real, public root categories produce a Home section",
+            "passed": true
+        },
+        {
+            "test": "Section title is a real psi_categoria term: Industrial",
+            "passed": true
+        },
+        {
+            "test": "Section resolves its real parent term: Industrial",
+            "passed": true
+        },
+        {
+            "test": "Section lists exactly the parent's real direct children, no more\/fewer: Industrial (got 7, expected 7)",
+            "passed": true
+        },
+        {
+            "test": "Child count matches the audited real hierarchy (legacy_id 1): 7",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Puertas Seccionales of Industrial",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Puertas Seccionales",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Operadores para puerta corrediza of Industrial",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Operadores para puerta corrediza",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Operadores para puerta abatible of Industrial",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Operadores para puerta abatible",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Operadores para puertas seccionales y cortinas enrollables of Industrial",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Operadores para puertas seccionales y cortinas enrollables",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Cortinas enrollables of Industrial",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Cortinas enrollables",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Puertas rÃ¡pidas of Industrial",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Puertas rÃ¡pidas",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Tiras plÃ¡sticas of Industrial",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Tiras plÃ¡sticas",
+            "passed": true
+        },
+        {
+            "test": "Section title is a real psi_categoria term: Comercial",
+            "passed": true
+        },
+        {
+            "test": "Section resolves its real parent term: Comercial",
+            "passed": true
+        },
+        {
+            "test": "Section lists exactly the parent's real direct children, no more\/fewer: Comercial (got 4, expected 4)",
+            "passed": true
+        },
+        {
+            "test": "Child count matches the audited real hierarchy (legacy_id 2): 4",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Fraccionamientos y Condominios of Comercial",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Fraccionamientos y Condominios",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Estacionamientos of Comercial",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Estacionamientos",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Centros comerciales y hoteles of Comercial",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Centros comerciales y hoteles",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Accesorios y dispositivos de control de acceso y seguridad of Comercial",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Accesorios y dispositivos de control de acceso y seguridad",
+            "passed": true
+        },
+        {
+            "test": "Section title is a real psi_categoria term: Equipos y Accesorios para Anden de Carga",
+            "passed": true
+        },
+        {
+            "test": "Section resolves its real parent term: Equipos y Accesorios para Anden de Carga",
+            "passed": true
+        },
+        {
+            "test": "Section lists exactly the parent's real direct children, no more\/fewer: Equipos y Accesorios para Anden de Carga (got 5, expected 5)",
+            "passed": true
+        },
+        {
+            "test": "Child count matches the audited real hierarchy (legacy_id 3): 5",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Rampa Niveladora of Equipos y Accesorios para Anden de Carga",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Rampa Niveladora",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Labio de elevaciÃ³n para anden de carga of Equipos y Accesorios para Anden de Carga",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Labio de elevaciÃ³n para anden de carga",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Retenedores de vehiculos of Equipos y Accesorios para Anden de Carga",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Retenedores de vehiculos",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Sellos para Anden of Equipos y Accesorios para Anden de Carga",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Sellos para Anden",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Semaforos y seÃ±alizaciones para anden of Equipos y Accesorios para Anden de Carga",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Semaforos y seÃ±alizaciones para anden",
+            "passed": true
+        },
+        {
+            "test": "Section title is a real psi_categoria term: Puertas peatonales de Salida de Emergencia",
+            "passed": true
+        },
+        {
+            "test": "Section resolves its real parent term: Puertas peatonales de Salida de Emergencia",
+            "passed": true
+        },
+        {
+            "test": "Section lists exactly the parent's real direct children, no more\/fewer: Puertas peatonales de Salida de Emergencia (got 4, expected 4)",
+            "passed": true
+        },
+        {
+            "test": "Child count matches the audited real hierarchy (legacy_id 4): 4",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Puerta estÃ¡ndar of Puertas peatonales de Salida de Emergencia",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Puerta estÃ¡ndar",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Puerta estÃ¡ndar reforzada of Puertas peatonales de Salida de Emergencia",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Puerta estÃ¡ndar reforzada",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Puerta y fijos Louver of Puertas peatonales de Salida de Emergencia",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Puerta y fijos Louver",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Puerta Holandesa of Puertas peatonales de Salida de Emergencia",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Puerta Holandesa",
+            "passed": true
+        },
+        {
+            "test": "Section title is a real psi_categoria term: Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "passed": true
+        },
+        {
+            "test": "Section resolves its real parent term: Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "passed": true
+        },
+        {
+            "test": "Section lists exactly the parent's real direct children, no more\/fewer: Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas (got 3, expected 3)",
+            "passed": true
+        },
+        {
+            "test": "Child count matches the audited real hierarchy (legacy_id 5): 3",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Puertas contra incendio of Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Puertas contra incendio",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Puerta contra explosion of Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Puerta contra explosion",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Puertas blindadas of Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Puertas blindadas",
+            "passed": true
+        },
+        {
+            "test": "Section title is a real psi_categoria term: Puertas peatonales para Hospitales",
+            "passed": true
+        },
+        {
+            "test": "Section resolves its real parent term: Puertas peatonales para Hospitales",
+            "passed": true
+        },
+        {
+            "test": "Section lists exactly the parent's real direct children, no more\/fewer: Puertas peatonales para Hospitales (got 2, expected 2)",
+            "passed": true
+        },
+        {
+            "test": "Child count matches the audited real hierarchy (legacy_id 6): 2",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Puertas contra rayos x of Puertas peatonales para Hospitales",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Puertas contra rayos x",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Puerta para hospital of Puertas peatonales para Hospitales",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Puerta para hospital",
+            "passed": true
+        },
+        {
+            "test": "Section title is a real psi_categoria term: Residenciales",
+            "passed": true
+        },
+        {
+            "test": "Section resolves its real parent term: Residenciales",
+            "passed": true
+        },
+        {
+            "test": "Section lists exactly the parent's real direct children, no more\/fewer: Residenciales (got 2, expected 2)",
+            "passed": true
+        },
+        {
+            "test": "Child count matches the audited real hierarchy (legacy_id 7): 2",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Puertas residenciales of Residenciales",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Puertas residenciales",
+            "passed": true
+        },
+        {
+            "test": "Child is a real, direct child of this exact parent: Operadores para puertas ascendentes of Residenciales",
+            "passed": true
+        },
+        {
+            "test": "Child link is the real get_term_link(): Operadores para puertas ascendentes",
+            "passed": true
+        },
+        {
+            "test": "A child with zero products (Puerta Holandesa, disabled in legacy) still appears -- hide_empty=false is real, not a product-count check",
+            "passed": true
+        },
+        {
+            "test": "Ver todos never falls back to the global catalog: Industrial",
+            "passed": true
+        },
+        {
+            "test": "Ver todos never falls back to the global catalog: Comercial",
+            "passed": true
+        },
+        {
+            "test": "Ver todos never falls back to the global catalog: Equipos y Accesorios para Anden de Carga",
+            "passed": true
+        },
+        {
+            "test": "Ver todos never falls back to the global catalog: Puertas peatonales de Salida de Emergencia",
+            "passed": true
+        },
+        {
+            "test": "Ver todos never falls back to the global catalog: Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "passed": true
+        },
+        {
+            "test": "Ver todos never falls back to the global catalog: Puertas peatonales para Hospitales",
+            "passed": true
+        },
+        {
+            "test": "Ver todos never falls back to the global catalog: Residenciales",
+            "passed": true
+        },
+        {
+            "test": "Parent link is never a placeholder: Industrial",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Puertas Seccionales",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Operadores para puerta corrediza",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Operadores para puerta abatible",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Operadores para puertas seccionales y cortinas enrollables",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Cortinas enrollables",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Puertas rÃ¡pidas",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Tiras plÃ¡sticas",
+            "passed": true
+        },
+        {
+            "test": "Parent link is never a placeholder: Comercial",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Fraccionamientos y Condominios",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Estacionamientos",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Centros comerciales y hoteles",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Accesorios y dispositivos de control de acceso y seguridad",
+            "passed": true
+        },
+        {
+            "test": "Parent link is never a placeholder: Equipos y Accesorios para Anden de Carga",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Rampa Niveladora",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Labio de elevaciÃ³n para anden de carga",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Retenedores de vehiculos",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Sellos para Anden",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Semaforos y seÃ±alizaciones para anden",
+            "passed": true
+        },
+        {
+            "test": "Parent link is never a placeholder: Puertas peatonales de Salida de Emergencia",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Puerta estÃ¡ndar",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Puerta estÃ¡ndar reforzada",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Puerta y fijos Louver",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Puerta Holandesa",
+            "passed": true
+        },
+        {
+            "test": "Parent link is never a placeholder: Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Puertas contra incendio",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Puerta contra explosion",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Puertas blindadas",
+            "passed": true
+        },
+        {
+            "test": "Parent link is never a placeholder: Puertas peatonales para Hospitales",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Puertas contra rayos x",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Puerta para hospital",
+            "passed": true
+        },
+        {
+            "test": "Parent link is never a placeholder: Residenciales",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Puertas residenciales",
+            "passed": true
+        },
+        {
+            "test": "Child link is never a placeholder: Operadores para puertas ascendentes",
+            "passed": true
+        },
+        {
+            "test": "Industrial children are in the exact legacy Home order",
+            "passed": true
+        },
+        {
+            "test": "Comercial children are in the exact legacy Home order",
+            "passed": true
+        },
+        {
+            "test": "Salida de Emergencia children: the 2 grouped legacy links split into their real categories in reading order, then the legacy-disabled Holandesa last",
+            "passed": true
+        },
+        {
+            "test": "Contra Incendio children are in the exact legacy Home order",
+            "passed": true
+        },
+        {
+            "test": "Residenciales children: real order preserved with 37\/38 (no WordPress term) correctly absent, never invented",
+            "passed": true
+        },
+        {
+            "test": "Root order values are untouched by writing sibling order to children (shared meta key, no cross-contamination)",
+            "passed": true
+        },
+        {
+            "test": "catalog_navigation() (header\/footer) still shows exactly the 7 roots, in the same order, unaffected by children now also carrying _psi_category_menu_order",
+            "passed": true
+        },
+        {
+            "test": "Parent archive still renders 200: Industrial",
+            "passed": true
+        },
+        {
+            "test": "Zero-product child archive still renders 200: Puerta Holandesa",
+            "passed": true
+        },
+        {
+            "test": "Legacy industrial.php still 301s (LegacyUrls untouched by this task)",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:1 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:1",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:2 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:2",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:3 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:3",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:4 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:4",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:5 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:5",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:6 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:6",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:7 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:7",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:8 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:8",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:11 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:11",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:12 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:12",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:13 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:13",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:14 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:14",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:17 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:17",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:16 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:16",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:9 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:9",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:18 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:18",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:19 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:19",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:20 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:20",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:10 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:10",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:21 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:21",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:22 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:22",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:23 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:23",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:24 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:24",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:27 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:27",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:28 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:28",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:30 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:30",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:29 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:29",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:33 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:33",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:31 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:31",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:32 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:32",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:34 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:34",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:35 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:35",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:36 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:36",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:39 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Section category still predicts UNCHANGED after gaining a sibling order, not CONFLICT: category:39",
+            "passed": true
+        },
+        {
+            "test": "Home page renders 200",
+            "passed": true
+        },
+        {
+            "test": "Home page HTML still contains all 7 family sections",
+            "passed": true
+        },
+        {
+            "test": "Rendered Home HTML actually contains the real, resolved parent link",
+            "passed": true
+        },
+        {
+            "test": "This entire suite (including live HTTP requests and the migration re-run) creates no posts\/terms",
+            "passed": true
+        }
+    ]
+}
