@@ -534,11 +534,11 @@
             "passed": true
         },
         {
-            "test": "Link is the real get_term_link() for: Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "test": "Link is the real get_term_link() for: Puertas peatonales contra Incendio, Contra Explosión y Blindadas",
             "passed": true
         },
         {
-            "test": "Link is never a placeholder href=#: Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "test": "Link is never a placeholder href=#: Puertas peatonales contra Incendio, Contra Explosión y Blindadas",
             "passed": true
         },
         {
