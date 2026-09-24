@@ -1,7 +1,12 @@
 <?php
 /** Reconciled from docs/seo/redirect-map.csv -- see docs/seo/url-compatibility.md.
- * legacy .php filename (no leading slash) => a destination rule. Two shapes:
+ * legacy .php filename (no leading slash) => a destination rule. Three shapes:
  *  - {wp_type: 'page'|'psi_producto', wp_id: int} -- a real, environment-specific post ID.
+ *  - {wp_type: 'page', page_path: string} -- e.g. 'soluciones'. The portable alternative to
+ *    wp_id for a Page created by a versioned migration (InstitutionalContentMigration) rather
+ *    than reconciled by hand for one specific environment: LegacyUrls::destination() resolves
+ *    it via get_page_by_path() at request time, so the exact same rule works regardless of
+ *    which post_id that Page happens to have on local vs. staging vs. production.
  *  - {wp_type: 'psi_categoria'|'psi_marca', entity_key: string} -- e.g. 'category:39',
  *    'brand:4'. NEVER a wp_id for these two: a term_id is auto-increment and
  *    environment-specific (local/staging/production each assign their own; a real term in
@@ -15,7 +20,8 @@
  * redirecting -- this table only says a destination has been DEMONSTRATED, never that it is
  * live yet. No generator script currently reproduces this file from the CSV; edits here are
  * reconciled by hand against docs/seo/redirect-map.csv's wordpress_object_id/source_identity
- * columns (or, for entity_key, this environment's own _psi_source_keys, never invented). */
+ * columns (or, for entity_key/page_path, this environment's own _psi_source_keys / the Page's
+ * own slug, never invented). */
 return array(
 	'1500-revolving-door.php' => array( 'wp_type' => 'psi_producto', 'wp_id' => 1155 ),
 	'accesorios.php' => array( 'wp_type' => 'psi_producto', 'wp_id' => 1121 ),
@@ -68,6 +74,7 @@ return array(
 	'lift-master.php' => array( 'wp_type' => 'psi_marca', 'entity_key' => 'brand:11' ),
 	'light-communication-system-lcs.php' => array( 'wp_type' => 'psi_producto', 'wp_id' => 1169 ),
 	'luxo-robusto-e-incansable-para-servicios-intensivos-para-hojas-de-hasta-5-m.php' => array( 'wp_type' => 'psi_producto', 'wp_id' => 1170 ),
+	'marcas.php' => array( 'wp_type' => 'page', 'page_path' => 'marcas' ),
 	'nosotros.php' => array( 'wp_type' => 'page', 'wp_id' => 134 ),
 	'operador-comercial-rhx.php' => array( 'wp_type' => 'psi_producto', 'wp_id' => 1113 ),
 	'operador-para-cortina-enrrollable-rsx.php' => array( 'wp_type' => 'psi_producto', 'wp_id' => 1146 ),
@@ -138,6 +145,7 @@ return array(
 	'sg-onixx-600.php' => array( 'wp_type' => 'psi_producto', 'wp_id' => 1177 ),
 	'shelter-abrigo-estacionario-blue-giant.php' => array( 'wp_type' => 'psi_producto', 'wp_id' => 1117 ),
 	'smart-puertas-rapidas-enrollables-de-sectores-intercambiables-con-motor-externo.php' => array( 'wp_type' => 'psi_producto', 'wp_id' => 1178 ),
+	'soluciones.php' => array( 'wp_type' => 'page', 'page_path' => 'soluciones' ),
 	'sprint-automatizaciones-para-puertas-peatonales-pequenas-dimensiones.php' => array( 'wp_type' => 'psi_producto', 'wp_id' => 1179 ),
 	'star1000-receptor-comercial.php' => array( 'wp_type' => 'psi_producto', 'wp_id' => 1180 ),
 	'star4-vehicle-restraint.php' => array( 'wp_type' => 'psi_producto', 'wp_id' => 1119 ),

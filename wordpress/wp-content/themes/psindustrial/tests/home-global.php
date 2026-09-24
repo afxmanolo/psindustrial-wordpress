@@ -64,12 +64,33 @@ $check( $assets_ok, 'All rendered theme images exist' );
 foreach ( $x->query( '//a[@class="home-hero-cta"]' ) as $link ) { $check( $link->getAttribute( 'href' ) === get_post_type_archive_link( 'psi_producto' ), 'Hero CTA uses real WP archive' ); }
 $check( str_contains( $html, 'catalog-site-header' ) && str_contains( $html, 'catalog-site-footer' ), 'Approved shell reused globally' );
 $check( str_contains( $html, '¡Platícanos de tu proyecto!' ), 'Red footer CTA retained' );
+// Header "Soluciones" and Home's own "Nuestros servicios" (legacy/public/index.php lines
+// 373-375 confirm this exact button targeted soluciones.php, same as Nosotros' "Ver
+// servicios") both now resolve to the real Soluciones Page instead of falling back to the
+// global product archive. Legacy's header text itself was a dead href="#" (dropdown toggle
+// only, confirmed from both header.php and headerv1.php) -- restoring that placeholder would
+// violate this project's own no-href="#" rule, so it now points at the real, semantically
+// matching Soluciones Page instead (2026-09-24).
+$solucionesUrl = untrailingslashit( get_permalink( get_page_by_path( 'soluciones' ) ) );
+$navSoluciones = $x->query( '//li[contains(@class,"menu-item-has-children")]/a[text()="Soluciones"]' );
+$check( 1 === $navSoluciones->length && untrailingslashit( $navSoluciones->item( 0 )->getAttribute( 'href' ) ) === $solucionesUrl, 'Header "Soluciones" links to the real Soluciones Page, not the product archive' );
+$homeServiciosLink = $x->query( '//a[text()="Nuestros servicios "]' );
+if ( 0 === $homeServiciosLink->length ) { $homeServiciosLink = $x->query( '//a[contains(text(),"Nuestros servicios")]' ); }
+$check( 1 === $homeServiciosLink->length && untrailingslashit( $homeServiciosLink->item( 0 )->getAttribute( 'href' ) ) === $solucionesUrl, 'Home "Nuestros servicios" links to the real Soluciones Page, same legacy target as Nosotros' );
+// The hero slider's own "Ver más" CTA (a separate, already-approved element from an earlier,
+// closed phase -- see the existing 'Hero CTA uses real WP archive' check below) is
+// deliberately left untouched by this fix; it is not the "Ver servicios"/"Nuestros servicios"
+// button this task audited.
+// Footer contact data now sourced from Settings with client-confirmed values (2026-09-24),
+// replacing the stale placeholder that used to live in psi_site_settings.
+$check( ! preg_match( '/contacto@contacto\.com|4774103773/', $html ), 'Footer never shows the old placeholder email or phone' );
+$check( str_contains( $html, 'administracion@puertasyserviciosindustriales.com' ) && str_contains( $html, '479 107 12 34' ) && str_contains( $html, 'Blvd. Estrella #323 local 5-A, Fracc. Estrella, C.P. 36566, Irapuato, Gto.' ), 'Footer shows the confirmed CTA email, phone and address' );
 $check( str_contains( $html, 'assets/css/global.css' ) && str_contains( $html, 'assets/css/home.css' ) && ! str_contains( $html, 'assets/css/catalog.css' ), 'Home loads shared + Home CSS only' );
 $archive = wp_remote_retrieve_body( wp_remote_get( get_post_type_archive_link( 'psi_producto' ) ) );
 $check( str_contains( $archive, 'assets/css/global.css' ) && str_contains( $archive, 'assets/css/catalog.css' ) && ! str_contains( $archive, 'assets/js/home.js' ), 'Catalog does not load slider or Home styles' );
 $check( ! str_contains( $html, 'vendors.min.js' ) && ! str_contains( $html, 'swiper.js' ) && ! str_contains( $html, 'recaptcha/api.js' ), 'No legacy framework or tracking dependencies copied' );
 // Render the existing draft Page in memory; never publish or mutate it.
-$page = get_posts( array( 'post_type' => 'page', 'post_status' => 'any', 'numberposts' => 1, 'post__not_in' => array_filter( array_map( static fn( $slug ) => get_page_by_path( $slug )?->ID, array( 'nosotros', 'contacto', 'politica-privacidad' ) ) ) ) )[0];
+$page = get_posts( array( 'post_type' => 'page', 'post_status' => 'any', 'numberposts' => 1, 'post__not_in' => array_filter( array_map( static fn( $slug ) => get_page_by_path( $slug )?->ID, array( 'nosotros', 'contacto', 'politica-privacidad', 'soluciones', 'marcas' ) ) ) ) )[0];
 $q = new WP_Query( array( 'page_id' => $page->ID, 'post_status' => 'any' ) );
 $GLOBALS['wp_query'] = $GLOBALS['wp_the_query'] = $q;
 ob_start(); include get_theme_file_path( 'page.php' ); $page_html = ob_get_clean();

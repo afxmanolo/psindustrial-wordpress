@@ -21,3 +21,7 @@ No hay mapa/embed en las tres páginas institucionales auditadas. No se añade o
 Las opciones existentes contienen `4774103773`, WhatsApp `+524774103773` deshabilitado y `contacto@contacto.com`; dirección y destinatario de formulario vacíos. No están confirmadas por las fuentes institucionales. El footer aprobado continúa leyendo esas opciones, sin cambios silenciosos.
 
 Contacto presenta los dos emails demostrados y la dirección; omite por completo el bloque de teléfono, sin placeholder público. No se selecciona ningún WhatsApp. El cliente debe confirmar teléfono, WhatsApp y contactos definitivos, y el destinatario antes de habilitar correo en producción. La creación/publicación posterior de las Pages institucionales cuenta con autorización específica; esta auditoría no cambia las opciones de contacto.
+
+## Resolución — 2026-09-24
+
+Cliente confirmó (staging): dirección igual a la ya consistente arriba; teléfono "479 107 12 34" (mismos dígitos que el candidato `footerv1.php` de esta auditoría, ahora confirmado, no el `477 176 3046` de legacy ni el `4774103773` que tenía la opción); `administracion@puertasyserviciosindustriales.com` confirmado como CTA/destinatario del formulario. `psi_site_settings` actualizado en consecuencia (`contact_address`, `contact_phone`, `contact_email`, `mail_recipient`); Contacto ahora muestra el bloque de Teléfono. WhatsApp sigue sin confirmar y fuera de alcance. Detalle en `institutional-frontend.md` (sección 2026-09-24).
