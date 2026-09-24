@@ -74,19 +74,19 @@
             "passed": true
         },
         {
-            "test": "Child is a real, direct child of this exact parent: Puertas rÃ¡pidas of Industrial",
+            "test": "Child is a real, direct child of this exact parent: Puertas rápidas of Industrial",
             "passed": true
         },
         {
-            "test": "Child link is the real get_term_link(): Puertas rÃ¡pidas",
+            "test": "Child link is the real get_term_link(): Puertas rápidas",
             "passed": true
         },
         {
-            "test": "Child is a real, direct child of this exact parent: Tiras plÃ¡sticas of Industrial",
+            "test": "Child is a real, direct child of this exact parent: Tiras plásticas of Industrial",
             "passed": true
         },
         {
-            "test": "Child link is the real get_term_link(): Tiras plÃ¡sticas",
+            "test": "Child link is the real get_term_link(): Tiras plásticas",
             "passed": true
         },
         {
@@ -162,11 +162,11 @@
             "passed": true
         },
         {
-            "test": "Child is a real, direct child of this exact parent: Labio de elevaciÃ³n para anden de carga of Equipos y Accesorios para Anden de Carga",
+            "test": "Child is a real, direct child of this exact parent: Labio de elevación para anden de carga of Equipos y Accesorios para Anden de Carga",
             "passed": true
         },
         {
-            "test": "Child link is the real get_term_link(): Labio de elevaciÃ³n para anden de carga",
+            "test": "Child link is the real get_term_link(): Labio de elevación para anden de carga",
             "passed": true
         },
         {
@@ -186,11 +186,11 @@
             "passed": true
         },
         {
-            "test": "Child is a real, direct child of this exact parent: Semaforos y seÃ±alizaciones para anden of Equipos y Accesorios para Anden de Carga",
+            "test": "Child is a real, direct child of this exact parent: Semaforos y señalizaciones para anden of Equipos y Accesorios para Anden de Carga",
             "passed": true
         },
         {
-            "test": "Child link is the real get_term_link(): Semaforos y seÃ±alizaciones para anden",
+            "test": "Child link is the real get_term_link(): Semaforos y señalizaciones para anden",
             "passed": true
         },
         {
@@ -210,19 +210,19 @@
             "passed": true
         },
         {
-            "test": "Child is a real, direct child of this exact parent: Puerta estÃ¡ndar of Puertas peatonales de Salida de Emergencia",
+            "test": "Child is a real, direct child of this exact parent: Puerta estándar of Puertas peatonales de Salida de Emergencia",
             "passed": true
         },
         {
-            "test": "Child link is the real get_term_link(): Puerta estÃ¡ndar",
+            "test": "Child link is the real get_term_link(): Puerta estándar",
             "passed": true
         },
         {
-            "test": "Child is a real, direct child of this exact parent: Puerta estÃ¡ndar reforzada of Puertas peatonales de Salida de Emergencia",
+            "test": "Child is a real, direct child of this exact parent: Puerta estándar reforzada of Puertas peatonales de Salida de Emergencia",
             "passed": true
         },
         {
-            "test": "Child link is the real get_term_link(): Puerta estÃ¡ndar reforzada",
+            "test": "Child link is the real get_term_link(): Puerta estándar reforzada",
             "passed": true
         },
         {
@@ -242,15 +242,15 @@
             "passed": true
         },
         {
-            "test": "Section title is a real psi_categoria term: Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "test": "Section title is a real psi_categoria term: Puertas peatonales contra Incendio, Contra Explosión y Blindadas",
             "passed": true
         },
         {
-            "test": "Section resolves its real parent term: Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "test": "Section resolves its real parent term: Puertas peatonales contra Incendio, Contra Explosión y Blindadas",
             "passed": true
         },
         {
-            "test": "Section lists exactly the parent's real direct children, no more\/fewer: Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas (got 3, expected 3)",
+            "test": "Section lists exactly the parent's real direct children, no more\/fewer: Puertas peatonales contra Incendio, Contra Explosión y Blindadas (got 3, expected 3)",
             "passed": true
         },
         {
@@ -258,7 +258,7 @@
             "passed": true
         },
         {
-            "test": "Child is a real, direct child of this exact parent: Puertas contra incendio of Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "test": "Child is a real, direct child of this exact parent: Puertas contra incendio of Puertas peatonales contra Incendio, Contra Explosión y Blindadas",
             "passed": true
         },
         {
@@ -266,7 +266,7 @@
             "passed": true
         },
         {
-            "test": "Child is a real, direct child of this exact parent: Puerta contra explosion of Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "test": "Child is a real, direct child of this exact parent: Puerta contra explosion of Puertas peatonales contra Incendio, Contra Explosión y Blindadas",
             "passed": true
         },
         {
@@ -274,7 +274,7 @@
             "passed": true
         },
         {
-            "test": "Child is a real, direct child of this exact parent: Puertas blindadas of Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "test": "Child is a real, direct child of this exact parent: Puertas blindadas of Puertas peatonales contra Incendio, Contra Explosión y Blindadas",
             "passed": true
         },
         {
@@ -366,7 +366,7 @@
             "passed": true
         },
         {
-            "test": "Ver todos never falls back to the global catalog: Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "test": "Ver todos never falls back to the global catalog: Puertas peatonales contra Incendio, Contra Explosión y Blindadas",
             "passed": true
         },
         {
@@ -402,11 +402,11 @@
             "passed": true
         },
         {
-            "test": "Child link is never a placeholder: Puertas rÃ¡pidas",
+            "test": "Child link is never a placeholder: Puertas rápidas",
             "passed": true
         },
         {
-            "test": "Child link is never a placeholder: Tiras plÃ¡sticas",
+            "test": "Child link is never a placeholder: Tiras plásticas",
             "passed": true
         },
         {
@@ -438,7 +438,7 @@
             "passed": true
         },
         {
-            "test": "Child link is never a placeholder: Labio de elevaciÃ³n para anden de carga",
+            "test": "Child link is never a placeholder: Labio de elevación para anden de carga",
             "passed": true
         },
         {
@@ -450,7 +450,7 @@
             "passed": true
         },
         {
-            "test": "Child link is never a placeholder: Semaforos y seÃ±alizaciones para anden",
+            "test": "Child link is never a placeholder: Semaforos y señalizaciones para anden",
             "passed": true
         },
         {
@@ -458,11 +458,11 @@
             "passed": true
         },
         {
-            "test": "Child link is never a placeholder: Puerta estÃ¡ndar",
+            "test": "Child link is never a placeholder: Puerta estándar",
             "passed": true
         },
         {
-            "test": "Child link is never a placeholder: Puerta estÃ¡ndar reforzada",
+            "test": "Child link is never a placeholder: Puerta estándar reforzada",
             "passed": true
         },
         {
@@ -474,7 +474,7 @@
             "passed": true
         },
         {
-            "test": "Parent link is never a placeholder: Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",
+            "test": "Parent link is never a placeholder: Puertas peatonales contra Incendio, Contra Explosión y Blindadas",
             "passed": true
         },
         {

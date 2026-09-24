@@ -20,6 +20,7 @@ final class Plugin {
 		BrandsMigration::boot();
 		CategoriesMigration::boot();
 		IdentityHashRebaseline::boot();
+		MojibakeContentMigration::boot();
 	}
 	public static function activate(): void {
 		Content::register();

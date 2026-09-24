@@ -72,12 +72,12 @@ use PSIndustrial\Core\Migration\{Storage, Identity, Planner};
 
 		// ============================================================ 8: order matches the real legacy/public/index-estatico.php evidence
 		// Expected labels are the REAL, live term names for each legacy_id in the audited
-		// legacy order (never a hardcoded literal copy): the source data has known encoding
-		// artifacts on accented characters (e.g. category:17's real name renders as "Puertas
-		// rÃ¡pidas", not "Puertas rápidas") -- comparing real name to real name is what proves
-		// the ORDER property here, without an unrelated encoding question tripping a literal-
-		// string comparison up, exactly like tests/dynamic-categories-menu.php's own fix for
-		// the identical class of issue.
+		// legacy order (never a hardcoded literal copy): several carried known mojibake
+		// encoding artifacts on accented characters (e.g. category:17's name rendered as
+		// "Puertas rÃ¡pidas" until MojibakeContentMigration corrected it, 2026-09-24) --
+		// comparing real name to real name is what proves the ORDER property here regardless
+		// of whether the underlying text is ever corrupted again, exactly like
+		// tests/dynamic-categories-menu.php's own fix for the identical class of issue.
 		$namesByLegacyId = static function( array $legacyIds ): array {
 			return array_map( static fn( $lid ) => get_term( Identity::find( array( 'target_type' => 'psi_categoria', 'entity_key' => "category:$lid" ) ) )->name, $legacyIds );
 		};

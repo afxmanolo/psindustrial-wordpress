@@ -127,11 +127,12 @@ use PSIndustrial\Core\Migration\{Storage, Identity, Planner};
 		$categoryItems = array();
 		foreach ( $nav as $item ) { $term = get_term_by( 'name', $item['label'], 'psi_categoria' ); if ( $term ) { $categoryItems[] = $item; } }
 		// Built from the real, live term names for legacy_id 1..7 (never a hardcoded literal
-		// copy of those names): the source data has known encoding artifacts on accented
-		// characters (e.g. category:5's real stored name renders as "ExplosiÃ³n", not
-		// "Explosión") -- a byte-identical DB round-trip on both sides is what actually proves
-		// the ORDER property this asserts, without that unrelated encoding question tripping a
-		// literal-string comparison up.
+		// copy of those names): several carried known mojibake encoding artifacts on accented
+		// characters (e.g. category:5's name rendered as "ExplosiÃ³n" until
+		// MojibakeContentMigration corrected it, 2026-09-24) -- a byte-identical DB round-trip
+		// on both sides is what actually proves the ORDER property this asserts, staying
+		// correct regardless of whether the underlying text is ever corrupted again, without a
+		// literal-string comparison depending on that unrelated question either way.
 		$expectedRootNames = array_map( static fn( $legacyId ) => get_term( $termByLegacyId[ $legacyId ] )->name, array( 1, 2, 3, 4, 5, 6, 7 ) );
 		$assert( $expectedRootNames === array_column( $categoryItems, 'label' ), 'catalog_navigation() top-level categories appear in the exact legacy header.php order (legacy_id 1..7)' );
 

@@ -1,10 +1,10 @@
 {
     "manifest_version": 1,
     "transform_version": "1.0.0",
-    "run_id": "4c1f0fb3-b207-4c05-a9a1-f9166c090990",
+    "run_id": "4fa187a5-9ae0-4fa2-bdb3-8e7d7d3014a7",
     "scope": "full",
     "environment_id": "76989ec9c283b0d2ce7c5b26a91ddee7b2c247efd5bed3f32e4663502a461efc",
-    "created_at": "2026-09-24T06:37:42+00:00",
+    "created_at": "2026-09-24T08:05:23+00:00",
     "mode": "DRY_RUN",
     "status": "VALIDATED",
     "cursor": 0,
@@ -27,7 +27,7 @@
         "docs\/implementation\/pdf-security-review\/pdf-approvals.json": "1671edc5ab1eefbd43bf6e65358a922039739fea9e77a2a4ac5bbe10d1e0f54c",
         "docs\/implementation\/pdf-security-review\/sanitization-audit.json": "b868a4fd3fb10966643c11d86b61ced7504f67a244c78ac0673925922d232d47"
     },
-    "plan_hash": "52550b0c435668477ce28279fb0ce3544060dacb061d9a7f79974d748476292e",
+    "plan_hash": "9bcbfa918a59bd55ef122872f0b17553f73d695940c8f852ba6feee4d8367e94",
     "summary": {
         "total": 2399,
         "actions": {

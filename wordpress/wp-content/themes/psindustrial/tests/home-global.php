@@ -42,20 +42,15 @@ $check( 0 === $x->query( '//ul[@class="home-brand-grid"]//a[@href="#" or @href="
 $check( 7 === $x->query( '//section[contains(concat(" ",@class," ")," home-family ")]' )->length, 'Seven legacy commercial families' );
 $check( 3 === $x->query( '//section[contains(@class,"is-reversed")]' )->length, 'Alternating family composition preserved' );
 $check( str_contains( $html, 'Conoce nuestros Productos' ) && str_contains( $html, 'Acerca de nosotros' ), 'Verified Home content, no invented marketing sections' );
-// Three places on this page now render real psi_categoria term names instead of hand-typed,
-// cleanly-encoded copy: the header "Soluciones" dropdown (.sub-menu) and footer link list
-// (.catalog-footer-links) -- both catalog_navigation(), dynamic since the earlier
-// dynamic-categories-menu work -- and the .home-family "+ label" lines/titles (dynamic since
-// this same session's Home category sections). Some real terms carry known, pre-existing
-// encoding artifacts inherited from the legacy SQL dump (e.g. "Puertas rÃ¡pidas"), already
-// documented throughout this project's migration docs, not something this task invents or
-// could fix here without reopening the importer. The rest of the page (hero copy, headings,
-// "Acerca de nosotros", CTAs, contact info) is still fully hardcoded, verified copy, so the
-// check stays strict there.
-$dynamicTaxonomyTextAncestor = 'ancestor::*[contains(concat(" ",@class," ")," sub-menu ") or contains(concat(" ",@class," ")," catalog-footer-links ") or contains(concat(" ",@class," ")," home-family ")]';
-$textOutsideDynamicTaxonomyText = '';
-foreach ( $x->query( '//body//text()[not(' . $dynamicTaxonomyTextAncestor . ')]' ) as $node ) { $textOutsideDynamicTaxonomyText .= $node->nodeValue; }
-$check( ! str_contains( $textOutsideDynamicTaxonomyText, 'Ã' ) && ! str_contains( $textOutsideDynamicTaxonomyText, "\xef\xbf\xbd" ), 'No mojibake in the still-hardcoded parts of the historical Home text' );
+// Header dropdown (.sub-menu), footer link list (.catalog-footer-links) and .home-family
+// "+ label" lines/titles all render real psi_categoria term names since earlier this project
+// (dynamic-categories-menu, then this session's Home category sections). Between those two
+// sessions the real terms briefly carried known mojibake encoding artifacts (e.g. "Puertas
+// rÃ¡pidas"), which needed this check scoped away from those three areas for a time --
+// MojibakeContentMigration (2026-09-24) has since corrected every one of them at the source,
+// so the check applies to the WHOLE page again, no exclusion needed. If new taxonomy content
+// is ever imported with the same historical corruption, this check will correctly catch it.
+$check( ! str_contains( $html, 'Ã' ) && ! str_contains( $html, "\xef\xbf\xbd" ), 'No mojibake anywhere on the historical Home page' );
 $check( 0 === $x->query( '//a[@href="#" or @href=""]' )->length, 'No empty or placeholder URLs' );
 $check( 1 === $x->query( '//img[@fetchpriority="high" and @loading="eager"]' )->length, 'Only first hero is LCP priority, never lazy' );
 $check( 0 === $x->query( '//img[not(@width) or not(@height) or not(@alt)]' )->length, 'All images have dimensions and alt attributes' );

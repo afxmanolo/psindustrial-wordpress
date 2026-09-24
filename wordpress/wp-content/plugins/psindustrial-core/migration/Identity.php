@@ -72,6 +72,24 @@ final class Identity {
   foreach ( $meta as $key => $values ) { if ( ! str_starts_with( $key, '_psi_import_' ) && ! in_array( $key, self::EDITORIAL_META_KEYS, true ) && ( str_starts_with( $key, '_psi_' ) || in_array( $key, array( '_thumbnail_id','_wp_attachment_image_alt','_wp_attached_file' ), true ) ) ) { $value['meta'][ $key ] = array_map( 'maybe_unserialize', $values ); } }
   ksort( $value['meta'] ); return $value;
  }
+ /**
+  * True when a resolved target's current WordPress-side content still matches the
+  * target_hash the importer last recorded for it -- the exact test prediction()'s CONFLICT
+  * branch performs, factored out because it is also the correct, complete integrity check on
+  * its own for any caller that only needs "has this drifted from what was last applied",
+  * never the full CREATE/CONFLICT/UNCHANGED/UPDATE classification. Unlike prediction(), never
+  * needs $e['source_hash']/$e['decision_hash'] (a full Planner plan entry) -- only
+  * $e['target_type'] and $e['entity_key'], both already portable, environment-agnostic
+  * identity a caller can supply directly. False for a target that does not exist at all
+  * (self::find() returns 0) -- nothing to check the integrity of. Added 2026-09-25 for
+  * MojibakeContentMigration, which needs exactly this and nothing a full plan would add.
+  */
+ public static function is_intact( array $e ): bool {
+  $id = self::find( $e );
+  if ( ! $id ) { return false; }
+  $state = self::get( $e, $id, '_psi_import_state' );
+  return is_array( $state ) && ! empty( $state['target_hash'] ) && hash_equals( $state['target_hash'], Storage::hash( self::snapshot( $e, $id ) ) );
+ }
  public static function prediction( array $e ): string {
   $id = self::find( $e ); $ledger = Storage::read( self::ledger( $e ) );
   if ( ! $id ) {
@@ -83,8 +101,8 @@ final class Identity {
    }
    return 'CREATE';
   }
+  if ( ! self::is_intact( $e ) ) { return 'CONFLICT'; }
   $state = self::get( $e, $id, '_psi_import_state' );
-  if ( ! is_array( $state ) || empty( $state['target_hash'] ) || ! hash_equals( $state['target_hash'], Storage::hash( self::snapshot( $e, $id ) ) ) ) { return 'CONFLICT'; }
   return ( $state['source_hash'] === $e['source_hash'] && $state['decision_hash'] === $e['decision_hash'] ) ? 'UNCHANGED' : ( 'attachment' === $e['target_type'] ? 'CONFLICT' : 'UPDATE' );
  }
 }
