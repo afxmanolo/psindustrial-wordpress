@@ -24,13 +24,23 @@ final class Identity {
   * to be excluded together before a live snapshot matched its recorded target_hash again --
   * neither alone was sufficient, so both are named here, explicitly.
   *
+  * _psi_category_menu_order (added alongside CategoriesMigration) is the same kind of value
+  * for psi_categoria that _psi_brand_home_order is for psi_marca -- a presentation-order
+  * integer, never written by the importer, never part of any target_hash recorded before this
+  * key existed, so excluding it here changes nothing for any past hash; it only has to be
+  * listed before CategoriesMigration ever writes it, which it is.
+  *
+  * _psi_public_state applies to BOTH taxonomies already (TermPolicy gates psi_categoria and
+  * psi_marca identically), so CategoriesMigration reuses this same entry -- no separate key
+  * needed for categories.
+  *
   * Deliberately narrow and explicit, never a blanket "_psi_* is presentational" rule: every
   * OTHER _psi_* key stays part of identity, on purpose. In particular _psi_logo_id is never
   * added here -- which image actually represents a term is CONTENT, not presentation
   * (exactly like a product's _psi_datasheets/gallery), so a human changing it must keep
   * producing CONFLICT, the same protection every other content field already gets.
   */
- private const EDITORIAL_META_KEYS = array( '_psi_public_state', '_psi_brand_home_order' );
+ private const EDITORIAL_META_KEYS = array( '_psi_public_state', '_psi_brand_home_order', '_psi_category_menu_order' );
  public static function term( array $e ): bool { return in_array( $e['target_type'], array( 'psi_categoria','psi_marca' ), true ); }
  public static function get( array $e, int $id, string $key ): mixed { return self::term( $e ) ? get_term_meta( $id, $key, true ) : get_post_meta( $id, $key, true ); }
  public static function set( array $e, int $id, string $key, mixed $value ): void {
