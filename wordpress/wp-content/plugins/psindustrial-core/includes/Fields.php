@@ -1,6 +1,5 @@
 <?php
 namespace PSIndustrial\Core;
-use PSIndustrial\Core\Migration\PdfApprovals;
 defined( 'ABSPATH' ) || exit;
 
 final class Fields {
@@ -100,15 +99,17 @@ final class Fields {
 	}
 	/**
 	 * A PDF datasheet is valid on Media::valid()'s own merits, OR when it is the EXACT,
-	 * already human-reviewed PdfApprovals Group B exception recorded for that attachment:
-	 * gated by the attachment's OWN recorded legacy path (_psi_import_origin, written once
-	 * at import time, never guessed here) and its CURRENT on-disk sha256 -- never by
-	 * filename or attachment id alone. Mirrors Runner::approved_datasheets_override()'s
-	 * per-item check (the one-time import-write fix for the same gap, see
-	 * docs/implementation/full-local-import/21-recovery-execution-result.md), so an
-	 * approved attachment stays valid on every later admin/REST edit, not only at the
-	 * moment of import. Never touches Media::valid()/Fields::guard() for any other field;
-	 * an attachment with no matching approval stays rejected exactly as before.
+	 * already human-reviewed PdfSafeExceptions Group B exception recorded for that
+	 * attachment: gated by the attachment's OWN recorded legacy path (_psi_import_origin,
+	 * written once at import time, never guessed here) and its CURRENT on-disk sha256 --
+	 * never by filename or attachment id alone. Deliberately uses PdfSafeExceptions (a
+	 * deployable data/pdf-safe-exceptions.php lookup), never Migration\PdfApprovals: the
+	 * latter resolves against the local-only migration source tree via Sources::safe(),
+	 * which does not exist in staging/production and throws SOURCE_NOT_FOUND there -- see
+	 * PdfSafeExceptions's own docblock. So an approved attachment stays valid on every
+	 * later admin/REST edit, in every environment, not only at the moment of import on a
+	 * local migration box. Never touches Media::valid()/Fields::guard() for any other
+	 * field; an attachment with no matching approval stays rejected exactly as before.
 	 */
 	private static function datasheet_valid( int $attachment_id ): bool {
 		if ( Media::valid( $attachment_id, 'pdf' ) ) {
@@ -120,7 +121,7 @@ final class Fields {
 		if ( '' === $legacy_path || 'application/pdf' !== get_post_mime_type( $attachment_id ) || ! $file || ! is_file( $file ) ) {
 			return false;
 		}
-		return PdfApprovals::isApprovedFalsePositive( $legacy_path, hash_file( 'sha256', $file ) );
+		return PdfSafeExceptions::isApproved( $legacy_path, hash_file( 'sha256', $file ) );
 	}
 	public static function sanitize( string $key, mixed $value ): mixed {
 		if ( is_wp_error( self::validate( $key, $value ) ) ) { return $value; } // Guards reject invalid values, never coerce them into valid IDs.

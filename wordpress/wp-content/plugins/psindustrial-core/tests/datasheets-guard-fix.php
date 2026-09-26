@@ -6,7 +6,10 @@
  * `_psi_datasheets` via Media::valid() alone, with no PdfApprovals awareness, so an
  * already-legitimate Group B PDF attachment failed every subsequent admin/REST save, not
  * only the one-time import write (reported live against sql:productos:77, WordPress post
- * 1372, "Operador de puerta comercial RHX ®").
+ * 1372, "Operador de puerta comercial RHX ®"). Fields::datasheet_valid() was later
+ * re-pointed from Migration\PdfApprovals to the portable PdfSafeExceptions (staging hit
+ * SOURCE_NOT_FOUND: the former needs the local-only migration source tree) -- see
+ * tests/pdf-safe-exceptions-portable.php for that specific fix's own dedicated coverage.
  *
  * Strictly non-mutating: approved_datasheets_override() and datasheet_valid() are both pure
  * predicates (no writes of their own), reached via Reflection since they stay private. Uses
@@ -18,6 +21,7 @@ require dirname( __DIR__, 4 ) . '/wp-load.php';
 use PSIndustrial\Core\Migration\{Storage,PdfApprovals,Planner};
 use PSIndustrial\Core\Media;
 use PSIndustrial\Core\Fields;
+use PSIndustrial\Core\PdfSafeExceptions;
 (static function(): void {
  $checks = array();
  $assert = static function( bool $value, string $label ) use ( &$checks ): void { $checks[] = array( 'test' => $label, 'passed' => $value ); if ( ! $value ) { throw new RuntimeException( $label ); } };
@@ -104,11 +108,14 @@ use PSIndustrial\Core\Fields;
 
   // ============================================================ Fields::datasheet_valid(): the runtime-edit fix for the SAME gap
   // Closes the gap left open by design when approved_datasheets_override() was added (see
-  // this file's own docblock): Fields.php now has its OWN narrowly-scoped PdfApprovals
-  // fallback for `_psi_datasheets`, sourced ONLY from the attachment's own recorded
-  // `_psi_import_origin` (never a caller-supplied path, never guessed), so an approved
-  // Group B attachment stays valid on every later admin/REST save -- not only at the
-  // moment of import. Media::valid() itself is never touched (reconfirmed below).
+  // this file's own docblock): Fields.php now has its OWN narrowly-scoped fallback for
+  // `_psi_datasheets`, sourced ONLY from the attachment's own recorded `_psi_import_origin`
+  // (never a caller-supplied path, never guessed), so an approved Group B attachment stays
+  // valid on every later admin/REST save -- not only at the moment of import. Deliberately
+  // via PdfSafeExceptions (the deployable, portable lookup -- see its own docblock and
+  // tests/pdf-safe-exceptions-portable.php), never Migration\PdfApprovals: the latter needs
+  // Sources::safe()/the local migration source tree, which does not exist in staging/
+  // production. Media::valid() itself is never touched (reconfirmed below).
   $datasheetValid = static function( int $attachmentId ) {
    $m = new ReflectionMethod( \PSIndustrial\Core\Fields::class, 'datasheet_valid' );
    $m->setAccessible( true );
@@ -116,20 +123,23 @@ use PSIndustrial\Core\Fields;
   };
   $assert( true === $datasheetValid( $groupBId ), 'Fields::datasheet_valid(): the real Group B attachment is valid via its own recorded legacy path + approval' );
   $assert( true === Fields::validate( '_psi_datasheets', array( array( 'attachment_id' => $groupBId, 'label' => 'x', 'language' => '' ) ), $postId ), 'Fields::validate() itself now accepts this real Group B datasheet -- the exact write Gutenberg performs on every save' );
-  $assert( true === $datasheetValid( $groupAId ), 'Fields::datasheet_valid(): Group A (sanitized) attachment stays valid, purely via Media::valid(), never touches PdfApprovals' );
+  $assert( true === $datasheetValid( $groupAId ), 'Fields::datasheet_valid(): Group A (sanitized) attachment stays valid, purely via Media::valid(), never touches PdfSafeExceptions' );
   $assert( false === $datasheetValid( $imageId ), 'Fields::datasheet_valid(): an ordinary non-PDF attachment stays rejected -- wrong mime, no approval, never approved by proximity' );
-  $assert( false === PdfApprovals::isApprovedFalsePositive( $groupBLegacyPath, $dangerousHash ), 'Real dangerous PDF bytes are never an approved exception for the Group B path -- datasheet_valid() relies on this same exact-hash-gated predicate, never a looser rule' );
+  $assert( false === PdfSafeExceptions::isApproved( $groupBLegacyPath, $dangerousHash ), 'Real dangerous PDF bytes are never an approved exception for the Group B path -- datasheet_valid() relies on this same exact-hash-gated predicate, never a looser rule' );
 
-  // Fields::guard() itself: still the real gate, only its per-item PDF predicate changed.
+  // Fields.php: the real gate, only its per-item PDF predicate changed, and it no longer
+  // depends on the migration namespace at all for this check.
   $source = file_get_contents( dirname( __DIR__ ) . '/includes/Fields.php' );
   $assert( str_contains( $source, 'self::datasheet_valid(' ), 'Fields::validate() routes _psi_datasheets through datasheet_valid(), never a bare, unaware Media::valid() call' );
   $assert( str_contains( $source, 'Media::valid( $attachment_id' ), 'datasheet_valid() itself still checks the real, unmodified Media::valid() first -- never skips it' );
+  $assert( str_contains( $source, 'PdfSafeExceptions::isApproved(' ), 'datasheet_valid() uses the portable PdfSafeExceptions lookup' );
+  $assert( ! str_contains( $source, 'PdfApprovals::' ) && ! str_contains( $source, 'use PSIndustrial\\Core\\Migration' ), 'Fields.php no longer imports or calls Migration\\PdfApprovals -- zero local-source dependency for this check (mentioning it in an explanatory comment is fine)' );
 
   // Media::valid() itself remains completely unmodified: still a pure content-integrity
-  // predicate, with no PdfApprovals awareness baked into the general function every OTHER
+  // predicate, with no approvals awareness baked into the general function every OTHER
   // caller (Runner.php, PartialPdfRepair.php) also relies on.
   $mediaSource = file_get_contents( dirname( __DIR__ ) . '/includes/Media.php' );
-  $assert( ! str_contains( $mediaSource, 'PdfApprovals' ), 'Media::valid() itself is never touched -- it stays a pure content-integrity predicate, with no PdfApprovals awareness of its own' );
+  $assert( ! str_contains( $mediaSource, 'PdfApprovals' ) && ! str_contains( $mediaSource, 'PdfSafeExceptions' ), 'Media::valid() itself is never touched -- it stays a pure content-integrity predicate, with no approvals awareness of its own' );
   $assert( false === Media::valid( $groupBId, 'pdf' ), 'Re-confirmed: Media::valid() alone still returns false for this exact attachment -- only Fields::datasheet_valid() layers the approval on top' );
 
   // ============================================================ integration: plan reproducibility unchanged
