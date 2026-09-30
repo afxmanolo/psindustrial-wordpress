@@ -66,8 +66,8 @@ use PSIndustrial\Core\Migration\Storage;
 		}
 
 		// ============================================================ pending taxonomy / unresolved page -> no redirect invented
-		$assert( ! isset( $map['puertas-blindadas.php'] ), 'A genuinely unresolved legacy file (KEEP_REVIEW, no owner) has no rule at all in the generated map' );
-		$assert( null === LegacyUrls::resolve( '/puertas-blindadas.php', true ), 'No rule exists: resolve() returns null, never a guessed destination' );
+		$assert( ! isset( $map['__psi_unknown_legacy__.php'] ), 'An unknown PHP path has no rule in the map' );
+		$assert( null === LegacyUrls::resolve( '/__psi_unknown_legacy__.php', true ), 'No rule exists: resolve() returns null, never a guessed destination' );
 
 		// ============================================================ unknown .php -> 404 (no rule, ever)
 		$assert( ! isset( $map['this-file-never-existed-in-any-source-xyz.php'] ), 'A made-up filename has no rule' );
