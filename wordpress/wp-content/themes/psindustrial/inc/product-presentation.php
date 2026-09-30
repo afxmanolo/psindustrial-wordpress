@@ -73,3 +73,13 @@ function product_datasheets( int $post_id ): array {
 	}
 	return array_values( $result );
 }
+
+/** Preserve horizontal brand artwork; never request the cropped thumbnail size. */
+function brand_logo( \WP_Term $term ): string {
+    $id = (int) get_term_meta( $term->term_id, '_psi_logo_id', true );
+    return product_image( $id ) ? wp_get_attachment_image( $id, 'medium', false, array( 'class' => 'product-brand-logo', 'alt' => '', 'loading' => 'lazy' ) ) : '';
+}
+function product_brands( int $id ): array {
+    $terms = get_the_terms( $id, 'psi_marca' );
+    return is_array( $terms ) ? $terms : array();
+}

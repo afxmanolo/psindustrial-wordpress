@@ -40,7 +40,7 @@ final class Identity {
   * (exactly like a product's _psi_datasheets/gallery), so a human changing it must keep
   * producing CONFLICT, the same protection every other content field already gets.
   */
- private const EDITORIAL_META_KEYS = array( '_psi_public_state', '_psi_brand_home_order', '_psi_category_menu_order' );
+ private const EDITORIAL_META_KEYS = array( '_psi_public_state', '_psi_brand_home_order', '_psi_category_menu_order', '_psi_category_home_order' );
  public static function term( array $e ): bool { return in_array( $e['target_type'], array( 'psi_categoria','psi_marca' ), true ); }
  public static function get( array $e, int $id, string $key ): mixed { return self::term( $e ) ? get_term_meta( $id, $key, true ) : get_post_meta( $id, $key, true ); }
  public static function set( array $e, int $id, string $key, mixed $value ): void {

@@ -8,16 +8,16 @@ function home_data(): array {
 		// real psi_categoria hierarchy now (home_category_sections()) -- legacy_id (1-7,
 		// CategoriesMigration's own MENU_ORDER roots) is the only thing needed to find which
 		// term. What's left here is presentation the taxonomy has no opinion on: which theme
-		// image, and the reverse/narrow/pattern layout flags -- verified historical Home
+		// image and the narrow layout flag (alternation is calculated after sorting) -- verified historical Home
 		// composition, never category data.
 		'sections' => array(
-			array( 'legacy_id' => 1, 'image' => 'industrial-home.jpg', 'reverse' => false, 'narrow' => false, 'pattern' => false ),
-			array( 'legacy_id' => 2, 'image' => 'home-comercial.jpg', 'reverse' => true, 'narrow' => false, 'pattern' => true ),
-			array( 'legacy_id' => 3, 'image' => 'equipos-accesorios-anden-carga.jpeg', 'reverse' => false, 'narrow' => false, 'pattern' => false ),
-			array( 'legacy_id' => 4, 'image' => 'salida-emergencia.png', 'reverse' => true, 'narrow' => true, 'pattern' => true ),
-			array( 'legacy_id' => 5, 'image' => 'PuertasIncendios.jpeg', 'reverse' => false, 'narrow' => false, 'pattern' => false ),
-			array( 'legacy_id' => 6, 'image' => 'puerta-metalica-hospital.jpg', 'reverse' => true, 'narrow' => true, 'pattern' => true ),
-			array( 'legacy_id' => 7, 'image' => 'residencial-2.png', 'reverse' => false, 'narrow' => false, 'pattern' => true ),
+			array( 'legacy_id' => 1, 'image' => 'industrial-home.jpg', 'narrow' => false ),
+			array( 'legacy_id' => 2, 'image' => 'home-comercial.jpg', 'narrow' => false ),
+			array( 'legacy_id' => 3, 'image' => 'equipos-accesorios-anden-carga.jpeg', 'narrow' => false ),
+			array( 'legacy_id' => 4, 'image' => 'salida-emergencia.png', 'narrow' => true ),
+			array( 'legacy_id' => 5, 'image' => 'PuertasIncendios.jpeg', 'narrow' => false ),
+			array( 'legacy_id' => 6, 'image' => 'puerta-metalica-hospital.jpg', 'narrow' => true ),
+			array( 'legacy_id' => 7, 'image' => 'residencial-2.png', 'narrow' => false ),
 		),
 		// 'brands' is no longer a static list here -- see home_brands() in
 		// home-presentation.php, sourced live from psi_marca terms. The WebP variants

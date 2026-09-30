@@ -2,10 +2,7 @@
 defined( 'ABSPATH' ) || exit;
 $id = absint( $args['product_id'] ?? get_the_ID() );
 $images = \PSIndustrial\Theme\product_images( $id );
-$terms = get_the_terms( $id, 'psi_categoria' );
-if ( is_tax( 'psi_categoria' ) && is_array( $terms ) ) {
-	$terms = array_filter( $terms, static fn( $term ) => $term->term_id !== get_queried_object_id() );
-}
+$brands = \PSIndustrial\Theme\product_brands( $id );
 ?>
 <article class="product-card">
 	<a class="product-card-link" href="<?php echo esc_url( get_permalink( $id ) ); ?>">
@@ -15,6 +12,6 @@ if ( is_tax( 'psi_categoria' ) && is_array( $terms ) ) {
 		</span><?php endif; ?>
 		<h2><?php echo esc_html( get_the_title( $id ) ); ?></h2>
 	</a>
-	<?php if ( $terms && ! is_wp_error( $terms ) ) : ?><p class="product-card-categories"><?php echo esc_html( implode( ' · ', wp_list_pluck( $terms, 'name' ) ) ); ?></p><?php endif; ?>
+	<?php foreach ( $brands as $brand ) : ?><p class="product-card-brand"><?php echo \PSIndustrial\Theme\brand_logo( $brand ); ?><span><?php echo esc_html( $brand->name ); ?></span></p><?php endforeach; ?>
 	<?php if ( has_excerpt( $id ) ) : ?><p><?php echo esc_html( wp_trim_words( get_the_excerpt( $id ), 24 ) ); ?></p><?php endif; ?>
 </article>

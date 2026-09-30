@@ -5,13 +5,14 @@
  get_header();
  $error = Contact::$error; $values = Contact::$values; $started = time();
  $settings = Settings::get();
+ $public_emails = Settings::public_emails();
 ?>
 <main id="main" class="institutional-main">
 <?php get_template_part( 'template-parts/components/institutional-heading', null, array( 'title' => __( 'Contacto', 'psindustrial' ) ) ); ?>
 <section class="institutional-body psi-container contact-institutional">
  <div class="contact-details"><p class="contact-eyebrow"><?php esc_html_e( 'Ponte en contacto con nosotros', 'psindustrial' ); ?></p><h2><?php esc_html_e( '¿Necesitas ayuda? ¡Contáctanos ahora!', 'psindustrial' ); ?></h2>
  <?php if ( ! empty( $settings['contact_phone'] ) ) : ?><div class="contact-detail"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/institutional/contact-160.webp' ) ); ?>" width="80" height="80" alt="" loading="lazy"><div><h3><?php esc_html_e( 'Teléfono', 'psindustrial' ); ?></h3><a href="<?php echo esc_url( 'tel:' . preg_replace( '/[^+0-9]/', '', $settings['contact_phone'] ) ); ?>"><?php echo esc_html( $settings['contact_phone'] ); ?></a></div></div><?php endif; ?>
- <div class="contact-detail"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/institutional/contact-04-160.webp' ) ); ?>" width="80" height="80" alt="" loading="lazy"><div><h3><?php esc_html_e( 'Email', 'psindustrial' ); ?></h3><a href="mailto:overheaddoor@hotmail.com">overheaddoor@hotmail.com</a><br><a href="mailto:vicenteaguilarleon@gmail.com">vicenteaguilarleon@gmail.com</a></div></div>
+ <?php if ( $public_emails ) : ?><div class="contact-detail"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/institutional/contact-04-160.webp' ) ); ?>" width="80" height="80" alt="" loading="lazy"><div><h3><?php esc_html_e( 'Email', 'psindustrial' ); ?></h3><?php foreach ( $public_emails as $email ) : ?><a href="<?php echo esc_url( 'mailto:' . $email ); ?>"><?php echo esc_html( $email ); ?></a><br><?php endforeach; ?></div></div><?php endif; ?>
  <?php if ( ! empty( $settings['contact_address'] ) ) : ?><div class="contact-detail"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/institutional/contact-03-160.webp' ) ); ?>" width="80" height="80" alt="" loading="lazy"><div><h3><?php esc_html_e( 'Dirección', 'psindustrial' ); ?></h3><address><?php echo esc_html( $settings['contact_address'] ); ?></address></div></div><?php endif; ?>
  </div>
  <div class="institutional-form"><h2><?php esc_html_e( 'Envíanos un mensaje', 'psindustrial' ); ?></h2>

@@ -19,6 +19,7 @@ final class Plugin {
 		LegacyUrls::boot();
 		BrandsMigration::boot();
 		CategoriesMigration::boot();
+		HomeOrderMigration::boot();
 		IdentityHashRebaseline::boot();
 		MojibakeContentMigration::boot();
 		InstitutionalContentMigration::boot();

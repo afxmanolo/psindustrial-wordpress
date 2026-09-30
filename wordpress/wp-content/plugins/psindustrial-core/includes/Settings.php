@@ -4,7 +4,7 @@ defined( 'ABSPATH' ) || exit;
 
 final class Settings {
 	public static function defaults(): array {
-		return array( 'whatsapp_number' => '', 'whatsapp_message' => '', 'whatsapp_enabled' => false, 'contact_phone' => '', 'contact_email' => '', 'contact_address' => '', 'mail_recipient' => '' );
+		return array( 'whatsapp_number' => '', 'whatsapp_message' => '', 'whatsapp_enabled' => false, 'contact_phone' => '', 'contact_email' => '', 'contact_email_secondary' => '', 'contact_address' => '', 'mail_recipient' => '' );
 	}
 	public static function get(): array {
 		return wp_parse_args( (array) get_option( 'psi_site_settings', array() ), self::defaults() );
@@ -50,7 +50,7 @@ final class Settings {
 				add_settings_error( 'psi_site_settings', 'psi_phone', __( 'WhatsApp debe usar formato internacional, por ejemplo + seguido del código de país y número.', 'psindustrial-core' ) );
 				return $old;
 			}
-			if ( in_array( $key, array( 'contact_email', 'mail_recipient' ), true ) && '' !== $text && ! is_email( $text ) ) {
+			if ( in_array( $key, array( 'contact_email', 'contact_email_secondary', 'mail_recipient' ), true ) && '' !== $text && ! is_email( $text ) ) {
 				add_settings_error( 'psi_site_settings', 'psi_email', __( 'El correo de contacto no es válido.', 'psindustrial-core' ) );
 				return $old;
 			}
@@ -76,7 +76,15 @@ final class Settings {
 		$url = 'https://wa.me/' . $digits;
 		return '' !== $settings['whatsapp_message'] ? $url . '?text=' . rawurlencode( $settings['whatsapp_message'] ) : $url;
 	}
-	public static function render(): void {
+	public static function public_emails(): array {
+        $settings = self::get(); $emails = array();
+        foreach ( array( 'contact_email', 'contact_email_secondary' ) as $key ) {
+            $email = trim( (string) ( $settings[ $key ] ?? '' ) );
+            if ( is_email( $email ) && ! isset( $emails[ strtolower( $email ) ] ) ) { $emails[ strtolower( $email ) ] = $email; }
+        }
+        return array_values( $emails );
+    }
+    public static function render(): void {
 		if ( ! current_user_can( 'psi_edit_contact_settings' ) ) {
 			return;
 		}
@@ -85,7 +93,8 @@ final class Settings {
 			'whatsapp_number' => __( 'WhatsApp (formato internacional)', 'psindustrial-core' ),
 			'whatsapp_message' => __( 'Mensaje de WhatsApp', 'psindustrial-core' ),
 			'contact_phone' => __( 'Teléfono de contacto', 'psindustrial-core' ),
-			'contact_email' => __( 'Correo de contacto', 'psindustrial-core' ),
+			'contact_email' => __( 'Correo público principal', 'psindustrial-core' ),
+			'contact_email_secondary' => __( 'Correo público secundario', 'psindustrial-core' ),
 			'contact_address' => __( 'Dirección pública (opcional)', 'psindustrial-core' ),
 		);
 		if ( current_user_can( 'manage_options' ) ) { $labels['mail_recipient'] = __( 'Destinatario del futuro formulario (sólo administrador)', 'psindustrial-core' ); }
@@ -97,7 +106,7 @@ final class Settings {
 		echo '<p><input type="hidden" name="psi_site_settings[whatsapp_enabled]" value="0"><label><input type="checkbox" name="psi_site_settings[whatsapp_enabled]" value="1" ' . checked( $values['whatsapp_enabled'], true, false ) . '>' . esc_html__( 'Activar enlace de WhatsApp', 'psindustrial-core' ) . '</label></p>';
 		echo '<table class="form-table">';
 		foreach ( $labels as $key => $label ) {
-			printf( '<tr><th scope="row"><label for="%1$s">%2$s</label></th><td><input class="regular-text" id="%1$s" type="%3$s" name="psi_site_settings[%1$s]" value="%4$s"></td></tr>', esc_attr( $key ), esc_html( $label ), 'contact_email' === $key ? 'email' : 'text', esc_attr( $values[ $key ] ) );
+			printf( '<tr><th scope="row"><label for="%1$s">%2$s</label></th><td><input class="regular-text" id="%1$s" type="%3$s" name="psi_site_settings[%1$s]" value="%4$s"></td></tr>', esc_attr( $key ), esc_html( $label ), in_array( $key, array( 'contact_email', 'contact_email_secondary', 'mail_recipient' ), true ) ? 'email' : 'text', esc_attr( $values[ $key ] ) );
 		}
 		echo '</table>';
 		submit_button();

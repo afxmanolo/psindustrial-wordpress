@@ -23,12 +23,10 @@ defined( 'ABSPATH' ) || exit;
  * guard bypass and never a separate silent-draft-then-force-republish step.
  *
  * SETTINGS: GLOBAL contact data only -- address, phone, the CTA/footer email and the private
- * form-delivery recipient. The two additional emails shown on the Contacto page itself
- * (overheaddoor@hotmail.com, vicenteaguilarleon@gmail.com) are page-specific literals in
- * page-contacto.php, not part of this or any other "single source of truth", and this
- * migration never touches them -- see docs/frontend/institutional-frontend.md for that
- * distinction spelled out. A field is only ever written when its CURRENT value is empty or
- * matches a known historical placeholder (KNOWN_PLACEHOLDERS below); a legitimate value an
+ * form-delivery recipient. Round 1 adds a separately versioned public_emails() step,
+ * replacing the old page-specific literals with Settings::public_emails(). The original
+ * step below remains unchanged. A field is only written when empty or matching a known
+ * historical placeholder; a legitimate value an
  * administrator already entered on that environment is left alone and reported
  * skipped_existing, never silently replaced. mail_recipient additionally requires the
  * visiting user to actually hold manage_options -- Settings::sanitize() itself already
@@ -46,8 +44,10 @@ defined( 'ABSPATH' ) || exit;
  * a resolved status (migrated/already_set/skipped_existing) and every page is created/reused --
  * short-circuiting all future runs once true, exactly like MojibakeContentMigration.
  */
+// Round 1 supersedes the historical page-specific email literals with Settings::public_emails().
 final class InstitutionalContentMigration {
 	public const VERSION = 1;
+	public const PUBLIC_EMAILS_VERSION = 1;
 
 	/** field => the specific stale value known to already be sitting in psi_site_settings on
 	 * at least one real environment (this local one) -- never touched again once corrected, but
@@ -86,6 +86,7 @@ final class InstitutionalContentMigration {
 
 	public static function boot(): void {
 		add_action( 'admin_init', array( self::class, 'run' ) );
+		add_action( 'admin_init', array( self::class, 'public_emails' ), 20 );
 	}
 
 	/** @return array{settings: array<string,string>, pages: array<string,array>} current report. */
@@ -100,7 +101,25 @@ final class InstitutionalContentMigration {
 		return $report;
 	}
 
-	private static function all_resolved( array $report ): bool {
+	/** Independent round-1 step: never reruns Page publication or changes mail_recipient. */
+    public static function public_emails(): array {
+        $version = 'psi_public_emails_migration_version';
+        if ( (int) get_option( $version, 0 ) >= self::PUBLIC_EMAILS_VERSION ) { return Settings::public_emails(); }
+        if ( ! current_user_can( 'manage_options' ) ) { return array(); }
+        $current = Settings::get();
+        $next = self::public_email_values( $current );
+        if ( $next !== $current ) { update_option( 'psi_site_settings', Settings::sanitize( array_intersect_key( $next, array_flip( array( 'contact_email', 'contact_email_secondary' ) ) ) ) ); }
+        if ( Settings::get() === $next ) { update_option( $version, self::PUBLIC_EMAILS_VERSION, false ); }
+        return Settings::public_emails();
+    }
+    public static function public_email_values( array $current ): array {
+        if ( in_array( $current['contact_email'] ?? '', array( '', 'contacto@contacto.com', 'administracion@puertasyserviciosindustriales.com' ), true ) ) {
+            $current['contact_email'] = 'overheaddoor@hotmail.com';
+        }
+        if ( '' === ( $current['contact_email_secondary'] ?? '' ) ) { $current['contact_email_secondary'] = 'vicenteaguilarleon@gmail.com'; }
+        return $current;
+    }
+    private static function all_resolved( array $report ): bool {
 		foreach ( $report['settings'] as $status ) { if ( 'pending_capability' === $status ) { return false; } }
 		foreach ( $report['pages'] as $page ) { if ( 'error' === $page['status'] ) { return false; } }
 		return true;
