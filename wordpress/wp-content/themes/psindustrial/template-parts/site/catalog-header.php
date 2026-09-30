@@ -2,8 +2,7 @@
 <header class="catalog-site-header">
 	<div class="psi-container catalog-header-inner">
 		<a class="catalog-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-			<img class="catalog-logo-light" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/logo-white@2x.png' ) ); ?>" width="304" height="210" alt="<?php esc_attr_e( 'PSI · Puertas y Servicios Industriales', 'psindustrial' ); ?>">
-			<img class="catalog-logo-dark" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/logo-black-big@2x.png' ) ); ?>" width="356" height="241" alt="<?php esc_attr_e( 'PSI · Puertas y Servicios Industriales', 'psindustrial' ); ?>">
+			<img class="catalog-logo-color" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/logo-black-big@2x.png' ) ); ?>" width="356" height="241" alt="<?php esc_attr_e( 'PSI · Puertas y Servicios Industriales', 'psindustrial' ); ?>">
 		</a>
 		<button class="nav-toggle" type="button" hidden aria-controls="site-navigation" aria-expanded="true"><?php esc_html_e( 'Menú', 'psindustrial' ); ?></button>
 		<nav id="site-navigation" aria-label="<?php esc_attr_e( 'Navegación principal', 'psindustrial' ); ?>">
@@ -18,7 +17,7 @@
                     <?php $soluciones = \PSIndustrial\Theme\published_page_url( 'soluciones' ); ?>
                     <?php if ( $soluciones ) : ?><a href="<?php echo esc_url( $soluciones ); ?>"><?php esc_html_e( 'Soluciones', 'psindustrial' ); ?></a><?php else : ?><span class="nav-link"><?php esc_html_e( 'Soluciones', 'psindustrial' ); ?></span><?php endif; ?>
                     <ul class="sub-menu">
-                        <?php foreach ( \PSIndustrial\Theme\catalog_navigation() as $item ) : ?>
+                        <?php foreach ( \PSIndustrial\Theme\header_solutions_navigation() as $item ) : ?>
                         <li><a href="<?php echo esc_url( $item['url'] ); ?>"<?php if ( $item['active'] ) : ?> aria-current="page"<?php endif; ?>><?php echo esc_html( $item['label'] ); ?></a></li>
                         <?php endforeach; ?>
                     </ul>

@@ -84,7 +84,7 @@ $check( 1 === $homeServiciosLink->length && untrailingslashit( $homeServiciosLin
 // Footer contact data now sourced from Settings with client-confirmed values (2026-09-24),
 // replacing the stale placeholder that used to live in psi_site_settings.
 $check( ! preg_match( '/contacto@contacto\.com|4774103773/', $html ), 'Footer never shows the old placeholder email or phone' );
-$check( str_contains( $html, 'administracion@puertasyserviciosindustriales.com' ) && str_contains( $html, '479 107 12 34' ) && str_contains( $html, 'Blvd. Estrella #323 local 5-A, Fracc. Estrella, C.P. 36566, Irapuato, Gto.' ), 'Footer shows the confirmed CTA email, phone and address' );
+$check( str_contains( $html, 'overheaddoor@hotmail.com' ) && str_contains( $html, 'vicenteaguilarleon@gmail.com' ) && str_contains( $html, '479 107 12 34' ) && str_contains( $html, 'Blvd. Estrella #323 local 5-A, Fracc. Estrella, C.P. 36566, Irapuato, Gto.' ), 'Footer shows the confirmed public CTA emails, phone and address' );
 $check( str_contains( $html, 'assets/css/global.css' ) && str_contains( $html, 'assets/css/home.css' ) && ! str_contains( $html, 'assets/css/catalog.css' ), 'Home loads shared + Home CSS only' );
 $archive = wp_remote_retrieve_body( wp_remote_get( get_post_type_archive_link( 'psi_producto' ) ) );
 $check( str_contains( $archive, 'assets/css/global.css' ) && str_contains( $archive, 'assets/css/catalog.css' ) && ! str_contains( $archive, 'assets/js/home.js' ), 'Catalog does not load slider or Home styles' );

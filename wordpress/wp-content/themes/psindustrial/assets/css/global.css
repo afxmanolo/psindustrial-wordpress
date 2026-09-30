@@ -16,9 +16,9 @@
 .catalog-site-header { position:absolute; inset:0 0 auto; z-index:10; }
 .admin-bar .catalog-site-header { top:32px; }
 .catalog-header-inner { display:flex; align-items:center; justify-content:space-between; gap:30px; min-height:155px; padding-inline:30px; }
-.catalog-logo { display:block; flex-shrink:0; }
+.catalog-logo { display:block; flex-shrink:0; padding:8px 12px; background:#fff; border-radius:3px; }
 .catalog-logo img { display:block; height:95px; width:auto; }
-.catalog-logo .catalog-logo-dark { display:none; }
+
 .catalog-site-header nav ul { display:flex; align-items:center; list-style:none; padding:0; margin:0; gap:40px; }
 .catalog-site-header nav a, .catalog-site-header .navigation-pending { color:var(--psi-white); font-size:17px; font-weight:400; margin:0; }
 .catalog-site-header nav a:hover { color:var(--psi-white); text-decoration:underline; text-underline-offset:6px; }
@@ -71,8 +71,8 @@
 .catalog-site-header { position:relative; background:white; }
 .admin-bar .catalog-site-header { top:0; }
 .catalog-header-inner { min-height:105px; padding:12px 15px; flex-wrap:wrap; gap:15px; }
-.catalog-logo .catalog-logo-light { display:none; }
-.catalog-logo .catalog-logo-dark { display:block; height:75px; }
+.catalog-logo { padding:0; background:transparent; }
+.catalog-logo img { height:75px; }
 .catalog-site-header .nav-toggle:not([hidden]) { display:block; border:1px solid var(--psi-primary); background:white; color:var(--psi-primary); padding:8px 14px; }
 .catalog-site-header #site-navigation { flex-basis:100%; }
 .catalog-site-header #site-navigation[hidden] { display:none; }
@@ -113,3 +113,8 @@
 .psi-whatsapp-button:hover { background-color:#20bd5a; }
 .psi-whatsapp-button:focus-visible { outline:3px solid var(--psi-primary); outline-offset:3px; }
 @media(max-width:575px) { .psi-whatsapp-button { width:52px; height:52px; bottom:15px; right:15px; } .psi-whatsapp-button svg { width:28px; height:28px; } }
+
+.catalog-public-emails { display:flex; flex-direction:column; min-width:0; overflow-wrap:anywhere; }
+.catalog-footer-cta .icon-mail { margin-right:8px; }
+
+.catalog-public-emails br { display:none; }

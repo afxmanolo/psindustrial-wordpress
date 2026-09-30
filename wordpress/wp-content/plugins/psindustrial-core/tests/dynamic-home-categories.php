@@ -32,11 +32,11 @@ use PSIndustrial\Core\Migration\{Storage, Identity, Planner};
 
 		// ============================================================ 1/2/3/4/5: real parent, real direct children, real links, empty ones included
 		$sections = \PSIndustrial\Theme\home_category_sections();
+        // Child assertions are keyed by legacy identity, independent of editorial Home position.
+        $byLegacy = array_column( $sections, null, 'legacy_id' );
+        $sections = array_values( array_replace( array_fill_keys( range( 1, 7 ), null ), $byLegacy ) );
 		$assert( 7 === count( $sections ), 'All 7 real, public root categories produce a Home section' );
-		// Keyed by legacy_id (always ASCII-safe), not section title text (one real title has
-		// a known encoding artifact) -- home_category_sections() iterates home_data()'s
-		// sections in legacy_id 1..7 order, so position i here is always legacy_id i+1,
-		// exactly like the order assertions below already rely on.
+		// Reindexed by legacy_id above: child hierarchy assertions stay independent of Home ordering.
 		$expectedChildCountsByPosition = array( 7, 4, 5, 4, 3, 2, 2 ); // audited counts for legacy_id 1..7
 		foreach ( $sections as $i => $section ) {
 			$parent = get_term_by( 'name', $section['title'], 'psi_categoria' );

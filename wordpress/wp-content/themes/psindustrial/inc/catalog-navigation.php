@@ -36,11 +36,22 @@ function catalog_navigation( bool $all_categories = false ): array {
 	return $items;
 }
 
+/** Header-only roots: reuse Home's editorial selection/order without changing other menus. */
+function header_solutions_navigation(): array {
+	$items = array();
+	foreach ( home_category_sections() as $section ) {
+		$term = get_term( $section['term_id'], 'psi_categoria' );
+		if ( ! $term || is_wp_error( $term ) || 0 !== (int) $term->parent ) { continue; }
+		$items[] = array( 'term_id' => $term->term_id, 'label' => $term->name, 'url' => $section['link'], 'active' => is_tax( 'psi_categoria', $term->term_id ) );
+	}
+	return $items;
+}
+
 function catalog_contact_url(): string {
 	$url = published_page_url( 'contacto' );
 	if ( $url ) { return $url; }
-	$settings = class_exists( \PSIndustrial\Core\Settings::class ) ? \PSIndustrial\Core\Settings::get() : array();
-	return ! empty( $settings['contact_email'] ) && is_email( $settings['contact_email'] ) ? 'mailto:' . $settings['contact_email'] : '';
+	$emails = class_exists( \PSIndustrial\Core\Settings::class ) ? \PSIndustrial\Core\Settings::public_emails() : array();
+	return $emails ? 'mailto:' . $emails[0] : '';
 }
 
 /** Invalid placeholder links and unpublished entities are not public navigation. */

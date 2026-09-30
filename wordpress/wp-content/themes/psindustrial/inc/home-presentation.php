@@ -15,8 +15,8 @@ function home_image( string $name, string $alt, string $sizes = '100vw', bool $p
 /**
  * Home "Conoce nuestros Productos" family sections, sourced from real psi_categoria parent/
  * child terms -- never a hardcoded labels/slug list. home_data()['sections'] keeps only what
- * cannot be derived from the taxonomy (which theme image, and the reverse/narrow/pattern
- * layout flags -- pure presentation, not category data). For each configured root:
+ * cannot be derived from the taxonomy (which theme image, and the narrow
+ * layout flag -- pure presentation, not category data). Roots are sorted by editorial _psi_category_home_order; reverse/pattern follow final visual position. For each configured root:
  *  - resolved via Identity::find() by legacy_id, exactly like CategoriesMigration itself,
  *    portable across environments and never a hardcoded term_id;
  *  - 'link' is get_term_link() on the PARENT -- "Ver todos" always goes to the real parent
@@ -56,15 +56,21 @@ function home_category_sections(): array {
 		}
 
 		$sections[] = array(
+			'term_id' => $parent->term_id,
 			'title' => $parent->name,
 			'link' => $link,
 			'children' => $children,
 			'image' => $config['image'],
-			'reverse' => $config['reverse'],
+			'reverse' => false,
+            'home_order' => metadata_exists( 'term', $parentId, '_psi_category_home_order' ) ? (int) get_term_meta( $parentId, '_psi_category_home_order', true ) : PHP_INT_MAX,
+            'legacy_id' => $config['legacy_id'],
 			'narrow' => $config['narrow'],
-			'pattern' => $config['pattern'],
+			'pattern' => false,
 		);
 	}
+    usort( $sections, static fn( $a, $b ) => ( $a['home_order'] <=> $b['home_order'] ) ?: ( $a['legacy_id'] <=> $b['legacy_id'] ) );
+    foreach ( $sections as $position => &$section ) { $section['reverse'] = $position % 2 === 1; $section['pattern'] = $position % 2 === 1 || $position === 6; }
+    unset( $section );
 	return $sections;
 }
 
