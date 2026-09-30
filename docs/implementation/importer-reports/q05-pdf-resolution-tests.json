@@ -1,0 +1,269 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "Twin resolves to a sanitized substitute (same hash already approved -> reuse approval): fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "Parent path still resolves independently: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Same content under another path -> correct traceability: identical sanitized substitute reused, not regenerated (fichas\/puerta-424.pdf == system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0)",
+            "passed": true
+        },
+        {
+            "test": "Sanitized substitute file exists on disk: fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanitized substitute's own hash matches its recorded hash: fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanitized result passes normal Media::file_valid(): fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "Twin and parent legacy files are genuinely byte-identical on disk: fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "Twin resolves to a sanitized substitute (same hash already approved -> reuse approval): fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "Parent path still resolves independently: system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Same content under another path -> correct traceability: identical sanitized substitute reused, not regenerated (fichas\/puerta-430.pdf == system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0)",
+            "passed": true
+        },
+        {
+            "test": "Sanitized substitute file exists on disk: fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanitized substitute's own hash matches its recorded hash: fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanitized result passes normal Media::file_valid(): fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "Twin and parent legacy files are genuinely byte-identical on disk: fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "Twin resolves to a sanitized substitute (same hash already approved -> reuse approval): fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "Parent path still resolves independently: system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Same content under another path -> correct traceability: identical sanitized substitute reused, not regenerated (fichas\/puerta-seccional-418.pdf == system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22)",
+            "passed": true
+        },
+        {
+            "test": "Sanitized substitute file exists on disk: fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanitized substitute's own hash matches its recorded hash: fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanitized result passes normal Media::file_valid(): fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "Twin and parent legacy files are genuinely byte-identical on disk: fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "Twin resolves to a sanitized substitute (same hash already approved -> reuse approval): fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "Parent path still resolves independently: system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Same content under another path -> correct traceability: identical sanitized substitute reused, not regenerated (fichas\/puerta-521.pdf == system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae)",
+            "passed": true
+        },
+        {
+            "test": "Sanitized substitute file exists on disk: fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanitized substitute's own hash matches its recorded hash: fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanitized result passes normal Media::file_valid(): fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "Twin and parent legacy files are genuinely byte-identical on disk: fichas\/puerta-521.pdf",
+            "passed": true
+        },
+        {
+            "test": "Benign \/EmbeddedFile (new content, own sanitization run): fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanitized copy contains no dangerous-pattern byte sequence: fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "Sanitized result passes normal Media::file_valid(): fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "Original legacy file remains byte-identical (never modified): fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "Exact false positive -> hash-approved exception: fichas\/commercial-aluminum-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Original bytes genuinely still trip the raw regex on their own (real exception, not coincidence): fichas\/commercial-aluminum-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Exact false positive -> hash-approved exception: fichas\/Kelley-Hydraulic-Dock-Leveler-Brochure_web.pdf",
+            "passed": true
+        },
+        {
+            "test": "Original bytes genuinely still trip the raw regex on their own (real exception, not coincidence): fichas\/Kelley-Hydraulic-Dock-Leveler-Brochure_web.pdf",
+            "passed": true
+        },
+        {
+            "test": "Exact false positive -> hash-approved exception: fichas\/moovi50rm.pdf",
+            "passed": true
+        },
+        {
+            "test": "Original bytes genuinely still trip the raw regex on their own (real exception, not coincidence): fichas\/moovi50rm.pdf",
+            "passed": true
+        },
+        {
+            "test": "Exact false positive -> hash-approved exception: fichas\/rolling-steel-doors-610-620-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Original bytes genuinely still trip the raw regex on their own (real exception, not coincidence): fichas\/rolling-steel-doors-610-620-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Exact false positive -> hash-approved exception: fichas\/StrongArm_HVR303_Brochure_Spanish.pdf",
+            "passed": true
+        },
+        {
+            "test": "Original bytes genuinely still trip the raw regex on their own (real exception, not coincidence): fichas\/StrongArm_HVR303_Brochure_Spanish.pdf",
+            "passed": true
+        },
+        {
+            "test": "Exact false positive -> hash-approved exception: system\/files\/images\/productos\/800c352920fab91fa561da8cbc0cda7af293ddbf",
+            "passed": true
+        },
+        {
+            "test": "Original bytes genuinely still trip the raw regex on their own (real exception, not coincidence): system\/files\/images\/productos\/800c352920fab91fa561da8cbc0cda7af293ddbf",
+            "passed": true
+        },
+        {
+            "test": "Benign declared action -> distinct classification from a pure false positive: fichas\/Icaro-smart-AC-Aes.pdf",
+            "passed": true
+        },
+        {
+            "test": "Benign declared action -> distinct classification from a pure false positive: fichas\/Clopay-3720-07.pdf",
+            "passed": true
+        },
+        {
+            "test": "Benign declared action -> distinct classification from a pure false positive: fichas\/CMDC-0524SP-14-1.pdf",
+            "passed": true
+        },
+        {
+            "test": "Benign declared action -> distinct classification from a pure false positive: fichas\/CMDC-3717-3718-11.pdf",
+            "passed": true
+        },
+        {
+            "test": "Benign declared action -> distinct classification from a pure false positive: fichas\/lisos.pdf",
+            "passed": true
+        },
+        {
+            "test": "Wrong hash on an otherwise-approved Q05 path is blocked (approval does not apply): fichas\/commercial-aluminum-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Wrong hash on an otherwise-approved Q05 path is blocked (approval does not apply): fichas\/Icaro-smart-AC-Aes.pdf",
+            "passed": true
+        },
+        {
+            "test": "Modified bytes on a Group A twin are blocked, not silently substituted",
+            "passed": true
+        },
+        {
+            "test": "An unapproved PDF with a real \/Launch action is still rejected by the unmodified check",
+            "passed": true
+        },
+        {
+            "test": "A dangerous file never matches an approval by pretending to be an approved path with a different hash",
+            "passed": true
+        },
+        {
+            "test": "Synthetic dangerous-PDF fixture deleted after the check",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:fichas\/lisos.pdf",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:fichas\/Icaro-smart-AC-Aes.pdf",
+            "passed": true
+        },
+        {
+            "test": "Q05-resolved file still REVIEW for an unrelated reason (ownership, not security): asset:fichas\/Icaro-smart-AC-Aes.pdf",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:fichas\/commercial-aluminum-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "At least one Q05-resolved file demonstrably still REVIEW due to a second, unrelated blocker",
+            "passed": true
+        },
+        {
+            "test": "Q05 resolves the dual-blocked file's security classification on its own merits, independent of Q06's ownership decision",
+            "passed": true
+        },
+        {
+            "test": "pdf-approvals.json: 15 group_a_sanitization entries (5 original + 10 added under Q05)",
+            "passed": true
+        },
+        {
+            "test": "pdf-approvals.json: 24 group_b_exception entries (2 original + 22 added under Q05)",
+            "passed": true
+        },
+        {
+            "test": "No duplicate legacy_path across the whole approvals file (each entry individually hash+path-gated)",
+            "passed": true
+        },
+        {
+            "test": "Full DRY RUN with Q05 active still changes nothing in the database",
+            "passed": true
+        }
+    ]
+}

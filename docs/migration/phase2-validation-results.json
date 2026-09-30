@@ -1,0 +1,23 @@
+{
+  "integrity": {
+    "legacy": {
+      "files_before": 3862,
+      "files_after": 3862,
+      "differences": []
+    },
+    "wordpress": {
+      "files_before": 0,
+      "files_after": 0,
+      "differences": []
+    }
+  },
+  "csv_validation": "PASS",
+  "product_rows": 165,
+  "category_rows": 38,
+  "brand_rows": 12,
+  "content_rows": 617,
+  "media_rows": 1531,
+  "url_rows": 901,
+  "brand_unresolved": 28,
+  "brand_zero_strong": 88
+}

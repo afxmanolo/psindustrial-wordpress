@@ -1,0 +1,43 @@
+{
+  "version": 3,
+  "settings": {
+    "layout": {
+      "contentSize": "760px",
+      "wideSize": "1120px"
+    },
+    "color": {
+      "custom": false,
+      "palette": [
+        {
+          "slug": "ink",
+          "name": "Tinta",
+          "color": "#172b3a"
+        },
+        {
+          "slug": "paper",
+          "name": "Papel",
+          "color": "#ffffff"
+        }
+      ]
+    },
+    "typography": {
+      "fontSizes": [
+        {
+          "slug": "small",
+          "name": "Pequeño",
+          "size": "0.875rem"
+        },
+        {
+          "slug": "medium",
+          "name": "Normal",
+          "size": "1rem"
+        },
+        {
+          "slug": "large",
+          "name": "Grande",
+          "size": "1.5rem"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,816 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "Fixture list sizes match the documented 52 (14+13+10+11+4)",
+            "passed": true
+        },
+        {
+            "test": "Total FAILED fixture = 52",
+            "passed": true
+        },
+        {
+            "test": "Fixture: 10 original CONFLICT entity_keys",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/Clopay-3720-07.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/CMDC-0524SP-14-1.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/CMDC-3717-3718-11.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/commercial-aluminum-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/Cortina-serie-610-620.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/Kelley-Hydraulic-Dock-Leveler-Brochure_web.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/lisos.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/moovi50rm.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/rhx-commercial-operator-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/rolling-steel-doors-610-620-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: asset:fichas\/StrongArm_HVR303_Brochure_Spanish.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:65",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:66",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:67",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:68",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:69",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:70",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:71",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:72",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:73",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: static:puerta-seccional-de-acero-thermacore-595-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:5",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:6",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:7",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:17",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:18",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:19",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:22",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:24",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:44",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:77",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:95",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:1",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:46",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:47",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: sql:productos:48",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: category:37",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: category:38",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: php:cortinas-enrollables-de-aluminio.php",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: php:index-estatico.php",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: php:index-resp.php",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: php:index.php",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: php:politica-privacidad.php",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: php:puertas-de-garaje-aisladas.php",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: php:puertas-enrollables-de-garage.php",
+            "passed": true
+        },
+        {
+            "test": "Fixture entity_key still resolves in a freshly-built plan: php:tiras-plasticas-hawaianas.php",
+            "passed": true
+        },
+        {
+            "test": "Fixture: at least one entity is currently UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "APPLIED: never retried (asset:fichas\/13.0.Folleto-Operador-AccessPRO-FS1000-SPEED-hoja-tecnica.pdf)",
+            "passed": true
+        },
+        {
+            "test": "UNCHANGED: never retried (asset:fichas\/13.0.Folleto-Operador-AccessPRO-FS1000-SPEED-hoja-tecnica.pdf)",
+            "passed": true
+        },
+        {
+            "test": "REVIEW: never retried (asset:fichas\/13.0.Folleto-Operador-AccessPRO-FS1000-SPEED-hoja-tecnica (1).pdf)",
+            "passed": true
+        },
+        {
+            "test": "SKIP: never retried (asset:fonts\/bootstrap-icons.woff)",
+            "passed": true
+        },
+        {
+            "test": "Legitimate original CONFLICT never retried: category:37",
+            "passed": true
+        },
+        {
+            "test": "Legitimate original CONFLICT never retried: category:38",
+            "passed": true
+        },
+        {
+            "test": "Legitimate original CONFLICT never retried: php:cortinas-enrollables-de-aluminio.php",
+            "passed": true
+        },
+        {
+            "test": "Legitimate original CONFLICT never retried: php:index-estatico.php",
+            "passed": true
+        },
+        {
+            "test": "Legitimate original CONFLICT never retried: php:index-resp.php",
+            "passed": true
+        },
+        {
+            "test": "Legitimate original CONFLICT never retried: php:index.php",
+            "passed": true
+        },
+        {
+            "test": "Legitimate original CONFLICT never retried: php:politica-privacidad.php",
+            "passed": true
+        },
+        {
+            "test": "Legitimate original CONFLICT never retried: php:puertas-de-garaje-aisladas.php",
+            "passed": true
+        },
+        {
+            "test": "Legitimate original CONFLICT never retried: php:puertas-enrollables-de-garage.php",
+            "passed": true
+        },
+        {
+            "test": "Legitimate original CONFLICT never retried: php:tiras-plasticas-hawaianas.php",
+            "passed": true
+        },
+        {
+            "test": "Direct Group A cause correctly identified: asset:system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:system\/files\/images\/productos\/639b9801fe440dcd2179c23cca14401710c5e7e0 (DIRECT_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group A cause correctly identified: asset:system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:system\/files\/images\/productos\/7ab52eec612af22d23a62f849479371ebf1c2f22 (DIRECT_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group A cause correctly identified: asset:system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:system\/files\/images\/productos\/3af12bf12f61eda51a19d1e8af3cefc05878f484 (DIRECT_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group A cause correctly identified: asset:system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:system\/files\/images\/productos\/7baea774c5fc4abe3735d40fdf16e84f1e3521ef (DIRECT_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group A cause correctly identified: asset:system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:system\/files\/images\/productos\/7cf4babfab2712e41d6fd1c050f5c31b604c97ae (DIRECT_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group A cause correctly identified: asset:fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/puerta-424.pdf (DIRECT_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group A cause correctly identified: asset:fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/puerta-430.pdf (DIRECT_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group A cause correctly identified: asset:fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/puerta-seccional-418.pdf (DIRECT_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group A cause correctly identified: asset:fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/puerta-seccional-422.pdf (DIRECT_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group A cause correctly identified: asset:fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/puerta-seccional-426.pdf (DIRECT_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group A cause correctly identified: asset:fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/puerta-seccional-432.pdf (DIRECT_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group A cause correctly identified: asset:fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/puerta-thermacore-593.pdf (DIRECT_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group A cause correctly identified: asset:fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/puerta-thermacore-594.pdf (DIRECT_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group A cause correctly identified: asset:fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/puerta-thermacore-595.pdf (DIRECT_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group B cause correctly identified: asset:system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:system\/files\/images\/productos\/3e620ed84c43c5de234ae437f58f7083e93f6b8d (DIRECT_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group B cause correctly identified: asset:system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:system\/files\/images\/productos\/98b07de6dca4ad402a37385c485fb6999d5c3323 (DIRECT_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group B cause correctly identified: asset:fichas\/Clopay-3720-07.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/Clopay-3720-07.pdf (DIRECT_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group B cause correctly identified: asset:fichas\/CMDC-0524SP-14-1.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/CMDC-0524SP-14-1.pdf (DIRECT_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group B cause correctly identified: asset:fichas\/CMDC-3717-3718-11.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/CMDC-3717-3718-11.pdf (DIRECT_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group B cause correctly identified: asset:fichas\/commercial-aluminum-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/commercial-aluminum-door-systems-brochure.pdf (DIRECT_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group B cause correctly identified: asset:fichas\/Cortina-serie-610-620.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/Cortina-serie-610-620.pdf (DIRECT_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group B cause correctly identified: asset:fichas\/Kelley-Hydraulic-Dock-Leveler-Brochure_web.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/Kelley-Hydraulic-Dock-Leveler-Brochure_web.pdf (DIRECT_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group B cause correctly identified: asset:fichas\/lisos.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/lisos.pdf (DIRECT_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group B cause correctly identified: asset:fichas\/moovi50rm.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/moovi50rm.pdf (DIRECT_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group B cause correctly identified: asset:fichas\/rhx-commercial-operator-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/rhx-commercial-operator-brochure.pdf (DIRECT_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group B cause correctly identified: asset:fichas\/rolling-steel-doors-610-620-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/rolling-steel-doors-610-620-brochure.pdf (DIRECT_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Direct Group B cause correctly identified: asset:fichas\/StrongArm_HVR303_Brochure_Spanish.pdf",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: asset:fichas\/StrongArm_HVR303_Brochure_Spanish.pdf (DIRECT_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-A cause correctly identified: sql:productos:65",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:65 (CASCADE_FROM_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-A cause correctly identified: sql:productos:66",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:66 (CASCADE_FROM_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-A cause correctly identified: sql:productos:67",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:67 (CASCADE_FROM_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-A cause correctly identified: sql:productos:68",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:68 (CASCADE_FROM_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-A cause correctly identified: sql:productos:69",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:69 (CASCADE_FROM_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-A cause correctly identified: sql:productos:70",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:70 (CASCADE_FROM_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-A cause correctly identified: sql:productos:71",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:71 (CASCADE_FROM_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-A cause correctly identified: sql:productos:72",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:72 (CASCADE_FROM_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-A cause correctly identified: sql:productos:73",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:73 (CASCADE_FROM_PDF_A) -> CONFLICT_NOT_OWN_STALE_ATTEMPT",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-A cause correctly identified: static:puerta-seccional-de-acero-thermacore-595-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: static:puerta-seccional-de-acero-thermacore-595-uso-pesado.php (CASCADE_FROM_PDF_A) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-B cause correctly identified: sql:productos:5",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:5 (CASCADE_FROM_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-B cause correctly identified: sql:productos:6",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:6 (CASCADE_FROM_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-B cause correctly identified: sql:productos:7",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:7 (CASCADE_FROM_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-B cause correctly identified: sql:productos:17",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:17 (CASCADE_FROM_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-B cause correctly identified: sql:productos:18",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:18 (CASCADE_FROM_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-B cause correctly identified: sql:productos:19",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:19 (CASCADE_FROM_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-B cause correctly identified: sql:productos:22",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:22 (CASCADE_FROM_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-B cause correctly identified: sql:productos:24",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:24 (CASCADE_FROM_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-B cause correctly identified: sql:productos:44",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:44 (CASCADE_FROM_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-B cause correctly identified: sql:productos:77",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:77 (CASCADE_FROM_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Cascade-from-B cause correctly identified: sql:productos:95",
+            "passed": true
+        },
+        {
+            "test": "Fixed-cause FAILED entity is either still retryable or has one of the two known, understood real-recovery outcomes, never an unexplained rejection: sql:productos:95 (CASCADE_FROM_PDF_B) -> ALREADY_APPLIED_ELSEWHERE_NOW_UNCHANGED",
+            "passed": true
+        },
+        {
+            "test": "Category-conflict cascade correctly identified, never silently fixed: sql:productos:1",
+            "passed": true
+        },
+        {
+            "test": "Legitimate-conflict-cascade FAILED entity stays non-retryable: sql:productos:1 (LEGITIMATE_CATEGORY_CONFLICT)",
+            "passed": true
+        },
+        {
+            "test": "Category-conflict cascade correctly identified, never silently fixed: sql:productos:46",
+            "passed": true
+        },
+        {
+            "test": "Legitimate-conflict-cascade FAILED entity stays non-retryable: sql:productos:46 (LEGITIMATE_CATEGORY_CONFLICT)",
+            "passed": true
+        },
+        {
+            "test": "Category-conflict cascade correctly identified, never silently fixed: sql:productos:47",
+            "passed": true
+        },
+        {
+            "test": "Legitimate-conflict-cascade FAILED entity stays non-retryable: sql:productos:47 (LEGITIMATE_CATEGORY_CONFLICT)",
+            "passed": true
+        },
+        {
+            "test": "Category-conflict cascade correctly identified, never silently fixed: sql:productos:48",
+            "passed": true
+        },
+        {
+            "test": "Legitimate-conflict-cascade FAILED entity stays non-retryable: sql:productos:48 (LEGITIMATE_CATEGORY_CONFLICT)",
+            "passed": true
+        },
+        {
+            "test": "Zero OTHER among the 52 fixture FAILED entities (classification is exhaustive)",
+            "passed": true
+        },
+        {
+            "test": "Exactly 48 of the 52 FAILED fixture entities are retryable (got 48)",
+            "passed": true
+        },
+        {
+            "test": "Sanity: the synthetic fixture itself genuinely classifies as DIRECT_PDF_B (integrity + pdf_approval_type both line up)",
+            "passed": true
+        },
+        {
+            "test": "Sanity: no real WordPress object exists for this synthetic entity_key",
+            "passed": true
+        },
+        {
+            "test": "Synthetic stale-INTENT-ledger fixture correctly recognised as our own aborted attempt, eligible for retry: RETRYABLE_FAILED_ATTEMPT_STALE_INTENT_LEDGER",
+            "passed": true
+        },
+        {
+            "test": "Synthetic ledger and staged asset both cleaned up, no trace left behind",
+            "passed": true
+        },
+        {
+            "test": "A source_hash drift since the first run blocks retry, precisely labelled",
+            "passed": true
+        },
+        {
+            "test": "A decision_hash drift since the first run blocks retry, precisely labelled",
+            "passed": true
+        },
+        {
+            "test": "Synthetic entity with a stale ledger from an UNRELATED run_id is never retried",
+            "passed": true
+        },
+        {
+            "test": "Never misclassified as our own stale attempt when the ledger run_id differs",
+            "passed": true
+        },
+        {
+            "test": "Synthetic ledger cleaned up, no trace left behind",
+            "passed": true
+        },
+        {
+            "test": "retry_preflight() is read-only: zero DB mutation, even for a missing plan",
+            "passed": true
+        },
+        {
+            "test": "retry_preflight() honestly reports the pruned run as ok=false\/plan_exists blocker, never fabricates a result",
+            "passed": true
+        },
+        {
+            "test": "retry_failed_resolved_only() short-circuits to a no-op once plan[retry][status]===COMPLETE",
+            "passed": true
+        },
+        {
+            "test": "retry_failed_resolved_only() seals its retry set on first build, refuses to silently substitute a different one later",
+            "passed": true
+        },
+        {
+            "test": "retry_failed_resolved_only() requires the post-first-import backup to still be present",
+            "passed": true
+        },
+        {
+            "test": "The retryable-cause allowlist is exactly the four fixed-bug causes, never a bare default",
+            "passed": true
+        }
+    ],
+    "root_causes": {
+        "DIRECT_PDF_A": 14,
+        "DIRECT_PDF_B": 13,
+        "CASCADE_FROM_PDF_A": 10,
+        "CASCADE_FROM_PDF_B": 11,
+        "LEGITIMATE_CATEGORY_CONFLICT": 4
+    }
+}

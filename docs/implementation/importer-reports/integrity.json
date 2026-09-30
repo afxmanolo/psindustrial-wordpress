@@ -1,0 +1,11 @@
+{
+  "files": 3862,
+  "baseline_files": 3862,
+  "matches_baseline": true,
+  "added": [],
+  "removed": [],
+  "changed": [],
+  "legacy_database_connection_used": false,
+  "wordpress_target_database": "psindustrial_wp_dev",
+  "full_real_import": false
+}

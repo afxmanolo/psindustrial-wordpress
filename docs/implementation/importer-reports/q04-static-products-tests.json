@@ -1,0 +1,881 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "Two full DRY RUNs change nothing in the database",
+            "passed": true
+        },
+        {
+            "test": "A full plan remains impossible to execute, Q04 included",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: static:1500-revolving-door.php",
+            "passed": true
+        },
+        {
+            "test": "1500-revolving-door.php approved as CREATE_FROM_STATIC under Q04",
+            "passed": true
+        },
+        {
+            "test": "Target type is psi_producto, not a Page",
+            "passed": true
+        },
+        {
+            "test": "Q04 identity exists as a product, with unchanged imported snapshot and no recreation",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:1500-revolving-door.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:1500-revolving-door.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:1500-revolving-door.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:bix-al-antena-externa-433-mhz.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:bix-al-antena-externa-433-mhz.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:bix-al-antena-externa-433-mhz.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:com-programadores-digitales-y-rotativos.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:com-programadores-digitales-y-rotativos.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:com-programadores-digitales-y-rotativos.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:cross-3e.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:cross-3e.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:cross-3e.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:detector-de-masas-max-eagle.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:detector-de-masas-max-eagle.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:detector-de-masas-max-eagle.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:ditec-neos-y-neos.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:ditec-neos-y-neos.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:ditec-neos-y-neos.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:dod-automatizacion-compacto-y-potente-para-portones-seccionales-correderos-y-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:dod-automatizacion-compacto-y-potente-para-portones-seccionales-correderos-y-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:dod-automatizacion-compacto-y-potente-para-portones-seccionales-correderos-y-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:dura-glide-20003000-puerta.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:dura-glide-20003000-puerta.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:dura-glide-20003000-puerta.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:fotoceldas.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:fotoceldas.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:fotoceldas.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:gol-transmisores-de-cuatro-canales.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:gol-transmisores-de-cuatro-canales.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:gol-transmisores-de-cuatro-canales.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:lab-4-fotocelulas-de-rayos-infrarrojos.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:lab-4-fotocelulas-de-rayos-infrarrojos.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:lab-4-fotocelulas-de-rayos-infrarrojos.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:lab-9-detectores-de-volumen-de-metal-loop.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:lab-9-detectores-de-volumen-de-metal-loop.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:lab-9-detectores-de-volumen-de-metal-loop.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:lan-4-sistema-de-teclado-con-combinacion-digital.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:lan-4-sistema-de-teclado-con-combinacion-digital.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:lan-4-sistema-de-teclado-con-combinacion-digital.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:lan-7-sistema-de-mando-de-proximidad-de-tarjetas-con-tecnologia-transponder.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:lan-7-sistema-de-mando-de-proximidad-de-tarjetas-con-tecnologia-transponder.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:lan-7-sistema-de-mando-de-proximidad-de-tarjetas-con-tecnologia-transponder.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:light-communication-system-lcs.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:light-communication-system-lcs.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:light-communication-system-lcs.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:luxo-robusto-e-incansable-para-servicios-intensivos-para-hojas-de-hasta-5-m.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:luxo-robusto-e-incansable-para-servicios-intensivos-para-hojas-de-hasta-5-m.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:luxo-robusto-e-incansable-para-servicios-intensivos-para-hojas-de-hasta-5-m.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:magic-fuerza-del-operador.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:magic-fuerza-del-operador.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:magic-fuerza-del-operador.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:pas-sensores-volumetricos.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:pas-sensores-volumetricos.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:pas-sensores-volumetricos.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:puerta-seccional-de-acero-thermacore-595-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:puerta-seccional-de-acero-thermacore-595-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:puerta-seccional-de-acero-thermacore-595-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:qik-barreras-automaticas-de-hasta-58-m.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:qik-barreras-automaticas-de-hasta-58-m.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:qik-barreras-automaticas-de-hasta-58-m.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:retenedores-de-vehiculos-automatico.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:retenedores-de-vehiculos-automatico.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:retenedores-de-vehiculos-automatico.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:sector-puertas-rapidas-enrollables-de-sectores-intercambiables-y-contrapesos.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:sector-puertas-rapidas-enrollables-de-sectores-intercambiables-y-contrapesos.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:sector-puertas-rapidas-enrollables-de-sectores-intercambiables-y-contrapesos.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:sector-reset.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:sector-reset.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:sector-reset.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:sg-onixx-600.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:sg-onixx-600.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:sg-onixx-600.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:smart-puertas-rapidas-enrollables-de-sectores-intercambiables-con-motor-externo.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:smart-puertas-rapidas-enrollables-de-sectores-intercambiables-con-motor-externo.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:smart-puertas-rapidas-enrollables-de-sectores-intercambiables-con-motor-externo.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:sprint-automatizaciones-para-puertas-peatonales-pequenas-dimensiones.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:sprint-automatizaciones-para-puertas-peatonales-pequenas-dimensiones.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:sprint-automatizaciones-para-puertas-peatonales-pequenas-dimensiones.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:star1000-receptor-comercial.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:star1000-receptor-comercial.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:star1000-receptor-comercial.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:traffic.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:traffic.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:traffic.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:upper-up8e-barreras-automaticas-de-hasta-8-m.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:upper-up8e-barreras-automaticas-de-hasta-8-m.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:upper-up8e-barreras-automaticas-de-hasta-8-m.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:wel-aotmatizacion-de-puertas-peatonales-pequena-y-robusta.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:wel-aotmatizacion-de-puertas-peatonales-pequena-y-robusta.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:wel-aotmatizacion-de-puertas-peatonales-pequena-y-robusta.php",
+            "passed": true
+        },
+        {
+            "test": "No category is ever auto-assigned to a Q04 product: static:xel-5-selector-de-llave.php",
+            "passed": true
+        },
+        {
+            "test": "No brand is ever auto-assigned to a Q04 product: static:xel-5-selector-de-llave.php",
+            "passed": true
+        },
+        {
+            "test": "Planner's own data payload also carries no category\/brand: static:xel-5-selector-de-llave.php",
+            "passed": true
+        },
+        {
+            "test": "Static product content is preserved (non-empty extracted body)",
+            "passed": true
+        },
+        {
+            "test": "Static product name is preserved verbatim from static-product-supplement.csv",
+            "passed": true
+        },
+        {
+            "test": "Static product media is preserved (its own images column)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:images\/revolving.jpg",
+            "passed": true
+        },
+        {
+            "test": "Static product's own media independently approved",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:1500-revolving-door.php",
+            "passed": true
+        },
+        {
+            "test": "The equivalent php: PRODUCT_PAGE entry is SKIP, never a Page",
+            "passed": true
+        },
+        {
+            "test": "No double enumeration across the full static-product-supplement.csv set (32 resolved, 0 double-created)",
+            "passed": true
+        },
+        {
+            "test": "A large majority of the 32 static_product rows resolve (>=25, got 32)",
+            "passed": true
+        },
+        {
+            "test": "Static product and its retired page share the exact same legacy_url (one physical file, one canonical destination)",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/puerta-thermacore-595.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/Retenedor-de-vehiculos-automatico.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/2025-08-21_16h18_34.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/bix.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/com.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/cross-3e.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/cross18.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/dab.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/detector.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/ditecc.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/dod.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/fotoceldas.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/lan.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/lan7.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/lazo.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/lin2.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/pas.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/puerta595t.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/qik.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/revolving.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/rolli.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/sector.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/sector1.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/semaforo.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/smart.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/splus.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/sprint.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/star100.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/thermacore-sectional-door-593-wide.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/tpr.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/traffic.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/upper.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/xel5.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/zen.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:1500-revolving-door.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:bix-al-antena-externa-433-mhz.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:com-programadores-digitales-y-rotativos.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:cross-3e.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:detector-de-masas-max-eagle.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:ditec-neos-y-neos.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:dod-automatizacion-compacto-y-potente-para-portones-seccionales-correderos-y-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:dura-glide-20003000-puerta.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:fotoceldas.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:gol-transmisores-de-cuatro-canales.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:lab-4-fotocelulas-de-rayos-infrarrojos.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:lab-9-detectores-de-volumen-de-metal-loop.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:lan-4-sistema-de-teclado-con-combinacion-digital.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:lan-7-sistema-de-mando-de-proximidad-de-tarjetas-con-tecnologia-transponder.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:light-communication-system-lcs.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:luxo-robusto-e-incansable-para-servicios-intensivos-para-hojas-de-hasta-5-m.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:magic-fuerza-del-operador.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:pas-sensores-volumetricos.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:puerta-seccional-de-acero-thermacore-595-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:qik-barreras-automaticas-de-hasta-58-m.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:retenedores-de-vehiculos-automatico.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:sector-puertas-rapidas-enrollables-de-sectores-intercambiables-y-contrapesos.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:sector-reset.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:sg-onixx-600.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:smart-puertas-rapidas-enrollables-de-sectores-intercambiables-con-motor-externo.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:sprint-automatizaciones-para-puertas-peatonales-pequenas-dimensiones.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:star1000-receptor-comercial.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:traffic.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:upper-up8e-barreras-automaticas-de-hasta-8-m.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:wel-aotmatizacion-de-puertas-peatonales-pequena-y-robusta.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: static:xel-5-selector-de-llave.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:1500-revolving-door.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:automatismos-para-cancelas-cubic.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:bix-al-antena-externa-433-mhz.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:com-programadores-digitales-y-rotativos.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:cross-3e.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:detector-de-masas-max-eagle.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:ditec-neos-y-neos.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:dod-automatizacion-compacto-y-potente-para-portones-seccionales-correderos-y-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:dura-glide-20003000-puerta.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:fotoceldas.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:gol-transmisores-de-cuatro-canales.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:lab-4-fotocelulas-de-rayos-infrarrojos.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:lab-9-detectores-de-volumen-de-metal-loop.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:lan-4-sistema-de-teclado-con-combinacion-digital.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:lan-7-sistema-de-mando-de-proximidad-de-tarjetas-con-tecnologia-transponder.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:light-communication-system-lcs.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:luxo-robusto-e-incansable-para-servicios-intensivos-para-hojas-de-hasta-5-m.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:magic-fuerza-del-operador.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:pas-sensores-volumetricos.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:puerta-seccional-de-acero-thermacore-595-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:qik-barreras-automaticas-de-hasta-58-m.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:retenedores-de-vehiculos-automatico.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:sector-puertas-rapidas-enrollables-de-sectores-intercambiables-y-contrapesos.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:sector-reset.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:sg-onixx-600.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:smart-puertas-rapidas-enrollables-de-sectores-intercambiables-con-motor-externo.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:sprint-automatizaciones-para-puertas-peatonales-pequenas-dimensiones.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:star1000-receptor-comercial.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:traffic.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:upper-up8e-barreras-automaticas-de-hasta-8-m.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:wel-aotmatizacion-de-puertas-peatonales-pequena-y-robusta.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:xel-5-selector-de-llave.php",
+            "passed": true
+        },
+        {
+            "test": "A meaningful number of Q04 rows checked for stability (97)",
+            "passed": true
+        },
+        {
+            "test": "Sanity: static-product-supplement.csv rows carry no legacy_product_id (no SQL row to accidentally merge with)",
+            "passed": true
+        },
+        {
+            "test": "Sanity: a known Q03 group file is not also a static_product candidate",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: static:dura-glide-20003000-puerta.php",
+            "passed": true
+        },
+        {
+            "test": "Static product with only a documented missing-media reference proceeds as a draft: dura-glide-20003000-puerta.php",
+            "passed": true
+        },
+        {
+            "test": "Its gallery excludes only the missing image, never fabricates a replacement: dura-glide-20003000-puerta.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: missing:images\/dura.jpg",
+            "passed": true
+        },
+        {
+            "test": "The missing reference itself stays separately, explicitly tracked as REVIEW: dura-glide-20003000-puerta.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: static:magic-fuerza-del-operador.php",
+            "passed": true
+        },
+        {
+            "test": "Static product with only a documented missing-media reference proceeds as a draft: magic-fuerza-del-operador.php",
+            "passed": true
+        },
+        {
+            "test": "Its gallery excludes only the missing image, never fabricates a replacement: magic-fuerza-del-operador.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: missing:images\/magic.jpg",
+            "passed": true
+        },
+        {
+            "test": "The missing reference itself stays separately, explicitly tracked as REVIEW: magic-fuerza-del-operador.php",
+            "passed": true
+        }
+    ]
+}

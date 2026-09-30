@@ -1,0 +1,905 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "A full plan remains impossible to execute, Q03-A included",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:5",
+            "passed": true
+        },
+        {
+            "test": "cortina-en-aluminio-serie-511-521.php: id 5 consolidates",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:88",
+            "passed": true
+        },
+        {
+            "test": "id 88 (spacing variant) absorbed, no independent product",
+            "passed": true
+        },
+        {
+            "test": "Title is the natural winner's own name, unmodified",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:39",
+            "passed": true
+        },
+        {
+            "test": "rapida-apilable.php: id 39 (proper case, more complete) consolidates",
+            "passed": true
+        },
+        {
+            "test": "Title keeps the proper-case, more complete documented form, never the all-caps abbreviation",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:105",
+            "passed": true
+        },
+        {
+            "test": "rolli-zip.php: id 105 (corrected spelling) consolidates",
+            "passed": true
+        },
+        {
+            "test": "Title uses the id that ALREADY carries the correct spelling in its own legacy record, never a rewrite",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:40",
+            "passed": true
+        },
+        {
+            "test": "id 40 (the typo) is the absorbed sibling, not the winner",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:62",
+            "passed": true
+        },
+        {
+            "test": "puerta-seccional-de-acero-thermacore-serie-592.php: id 62 (fuller documented title) consolidates",
+            "passed": true
+        },
+        {
+            "test": "Title is the fuller, already-documented form",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:101",
+            "passed": true
+        },
+        {
+            "test": "fast-seal-high-performance-door.php: id 101 (fuller documented title) consolidates",
+            "passed": true
+        },
+        {
+            "test": "Title keeps the fuller documented form",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:17",
+            "passed": true
+        },
+        {
+            "test": "energy-series...: id 17 (documents 3 more model numbers) consolidates",
+            "passed": true
+        },
+        {
+            "test": "Title keeps the fuller documented form; the extra model numbers are copied from an EXISTING legacy record, never invented",
+            "passed": true
+        },
+        {
+            "test": "Sanity: description is IDENTICAL between the two -- no content is lost by preferring the fuller title",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:51",
+            "passed": true
+        },
+        {
+            "test": "labio-de-elevacion-mecanico-dockman.php: id 51 (neutral title) consolidates",
+            "passed": true
+        },
+        {
+            "test": "Title is exactly id 51's own documented (neutral) name, byte for byte",
+            "passed": true
+        },
+        {
+            "test": "Title is the NEUTRAL form -- \"Dockman\" is never appended to the free-text title",
+            "passed": true
+        },
+        {
+            "test": "Sanity: it is specifically id 143's OWN documented name that mentions Dockman, confirming the title choice is deliberate, not incidental",
+            "passed": true
+        },
+        {
+            "test": "Brand IS assigned via taxonomy (Dockman, brand_id=10, CONFIRMED on the winning record) -- the restriction was only about the TITLE text, never the taxonomy",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:143",
+            "passed": true
+        },
+        {
+            "test": "id 143 (title mentions Dockman) is the absorbed sibling",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 1",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 3",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 4",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 6",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 7",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 9",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 10",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 11",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 12",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 13",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 14",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 15",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 16",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 18",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 19",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 20",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 21",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 22",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 23",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 24",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 25",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 26",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 27",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 28",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 29",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 30",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 31",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 32",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 33",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 34",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 35",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 37",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 38",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 41",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 42",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 43",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 44",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 45",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 46",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 47",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 48",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 49",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 50",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 52",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 53",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 54",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 55",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 56",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 57",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 58",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 59",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 60",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 61",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 63",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 64",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 65",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 66",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 67",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 68",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 69",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 70",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 71",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 72",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 73",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 74",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 75",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 76",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 77",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 78",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 79",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 80",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 81",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 82",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 83",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 84",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 85",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 86",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 87",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 89",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 90",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 91",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 92",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 93",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 94",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 95",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 96",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 97",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 98",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 99",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 100",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 102",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 103",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 106",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 107",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 108",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 109",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 110",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 111",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 112",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 113",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 114",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 115",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 116",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 117",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 118",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 119",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 120",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 121",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 122",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 123",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 124",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 125",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 126",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 127",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 128",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 129",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 130",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 131",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 132",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 133",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 134",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 135",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 136",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 137",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 138",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 139",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 140",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 141",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 142",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 144",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 145",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 146",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 147",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 148",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 149",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 150",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 151",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 152",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 153",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 154",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 155",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 156",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 157",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 158",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 159",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 160",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 161",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 162",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 163",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 164",
+            "passed": true
+        },
+        {
+            "test": "Product outside the 7 approved groups never receives a Q03-A decision: 165",
+            "passed": true
+        },
+        {
+            "test": "Checked a large number of off-list products (151), none touched by Q03-A",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/CMDC-3717-3718-11.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/commercial-aluminum-door-systems-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/Fast-Seal_LIT020520_ES-2.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/INFRACA-RÁPIDA-APILABLE.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/M-28R.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/Minidock.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/Rollizip-Technical-Specifications-15.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/sectional-thermacore-doors-592-599-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/apilable.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/apilable2.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/cortina-aluminio.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/Ditec-reset-imagen.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/energy.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/fast.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/fasts.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/labio.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/minidock.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/Rolli-Zip-1.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/sectional-steel-thermacore-door-592.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:system\/files\/images\/productos\/0486010282e4b5e4164ef8bb0576b0e931ddc9ed",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:system\/files\/images\/productos\/2dba2794d3274a4845e24aa81c28cf40da541f62",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:system\/files\/images\/productos\/59ca6b73479b3fcde81f96439976896bad94b750",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:system\/files\/images\/productos\/626b58db888990c04a7f855e6c03da8fa9fe5460",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:system\/files\/images\/productos\/67d4a229ade458e06d088099546a7185387b2fd3",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:system\/files\/images\/productos\/8ffd98efe5201d900181b34107af50002abe8ed8",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:2",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:5",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:8",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:17",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:36",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:39",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:40",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:51",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:62",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:88",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:101",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:104",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:105",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:143",
+            "passed": true
+        },
+        {
+            "test": "A meaningful number of Q03-A rows checked for stability (39)",
+            "passed": true
+        },
+        {
+            "test": "Exactly 7 winners and 7 losers across the 7 Q03-A groups (winners=7 losers=7)",
+            "passed": true
+        }
+    ]
+}

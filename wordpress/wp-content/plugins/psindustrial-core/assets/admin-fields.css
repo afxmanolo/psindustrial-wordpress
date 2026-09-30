@@ -1,0 +1,9 @@
+.psi-media-list { padding: 0; list-style: none; }
+.psi-media-list li { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; padding: .7rem; border: 1px solid #c3c4c7; background: #fff; margin-bottom: .5rem; }
+.psi-media-list img { width: 80px; height: 70px; object-fit: contain; }
+.psi-media-list input[type=url] { min-width: min(320px, 90%); }
+#psi-related { display: block; min-width: min(400px, 95%); }
+.psi-media-list label { display: inline-flex; flex-wrap: wrap; align-items: center; gap: .3rem; }
+.column-psi_image { width: 60px; }
+.column-psi_pdf { width: 75px; }
+body.post-type-psi_producto .editor-post-panel__row:has(.editor-post-parent__panel-dropdown) { display: none; }

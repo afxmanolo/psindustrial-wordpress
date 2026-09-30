@@ -1,0 +1,3397 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "UI exclusion requires the exact proven path and hash, not a name pattern",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:1",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:2",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:3",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:4",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:5",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:6",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:7",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:8",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:9",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:10",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:11",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:12",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:13",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:14",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:15",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:16",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:17",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:18",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:19",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:20",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:21",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:22",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:23",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:24",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:25",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:26",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:27",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:28",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:29",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:30",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:31",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:32",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:33",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:34",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:35",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:36",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:37",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:38",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:39",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:40",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:41",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:42",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:43",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:44",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:45",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:46",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:47",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:48",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:49",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:50",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:51",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:52",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:53",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:54",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:55",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:56",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:57",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:58",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:59",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:60",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:61",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:62",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:63",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:64",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:65",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:66",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:67",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:68",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:69",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:70",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:71",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:72",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:73",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:74",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:75",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:76",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:77",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:78",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:79",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:80",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:81",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:82",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:83",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:84",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:85",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:86",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:87",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:88",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:89",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:90",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:91",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:92",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:93",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:94",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:95",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:96",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:97",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:98",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:99",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:100",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:101",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:102",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:103",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:104",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:105",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:106",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:107",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:108",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:109",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:110",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:111",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:112",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:113",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:114",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:115",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:116",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:117",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:118",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:119",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:120",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:121",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:122",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:123",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:124",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:125",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:126",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:127",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:128",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:129",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:130",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:131",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:132",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:133",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:134",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:135",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:136",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:137",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:138",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:139",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:140",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:141",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:142",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:143",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:144",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:145",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:146",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:147",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:148",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:149",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:150",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:151",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:152",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:153",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:154",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:155",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:156",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:157",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:158",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:159",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:160",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:161",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:162",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:163",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:164",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: sql:productos:165",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:1500-revolving-door.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:automatismos-para-cancelas-cubic.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:bix-al-antena-externa-433-mhz.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:com-programadores-digitales-y-rotativos.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:cross-3e.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:detector-de-masas-max-eagle.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:ditec-neos-y-neos.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:dod-automatizacion-compacto-y-potente-para-portones-seccionales-correderos-y-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:dura-glide-20003000-puerta.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:fotoceldas.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:gol-transmisores-de-cuatro-canales.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:lab-4-fotocelulas-de-rayos-infrarrojos.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:lab-9-detectores-de-volumen-de-metal-loop.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:lan-4-sistema-de-teclado-con-combinacion-digital.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:lan-7-sistema-de-mando-de-proximidad-de-tarjetas-con-tecnologia-transponder.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:light-communication-system-lcs.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:luxo-robusto-e-incansable-para-servicios-intensivos-para-hojas-de-hasta-5-m.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:magic-fuerza-del-operador.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:pas-sensores-volumetricos.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:puerta-seccional-de-acero-thermacore-595-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:qik-barreras-automaticas-de-hasta-58-m.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:retenedores-de-vehiculos-automatico.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:sector-puertas-rapidas-enrollables-de-sectores-intercambiables-y-contrapesos.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:sector-reset.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:sg-onixx-600.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:smart-puertas-rapidas-enrollables-de-sectores-intercambiables-con-motor-externo.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:sprint-automatizaciones-para-puertas-peatonales-pequenas-dimensiones.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:star1000-receptor-comercial.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:traffic.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:upper-up8e-barreras-automaticas-de-hasta-8-m.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:wel-aotmatizacion-de-puertas-peatonales-pequena-y-robusta.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: static:xel-5-selector-de-llave.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:1500-revolving-door.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:accesorios.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:accesspro-fs1000speed.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:automatismos-para-cancelas-cubic.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:back-seccionales.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:barreras-estacionamiento-moovi50rm.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:bft-resp.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:bft.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:bix-al-antena-externa-433-mhz.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:blindadas.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:blue-giant.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:categorias.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:centros-comerciales.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:clopay.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:coleccion-classic.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:coleccion-modern-steel.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:com-programadores-digitales-y-rotativos.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:comercial.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:contacto.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:contra-exposion.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:contra-incendio.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:cortina-de-seguridad-670.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:cortina-de-seguridad-671.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:cortina-en-aluminio-serie-511-521.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:cortina-europea.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:cortina-plana.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:cortina-serie-600.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:cortina-serie-610.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:cortina-serie-620.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:cortina-serie-625.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:cortina-serie-630.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:cortina-serie-790-cw.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:cortinas-enrollables-de-aluminio.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:cortinas-enrollables-industriales.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:cortinas-ventiladas-685.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:cross-3e.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:detector-de-masas-max-eagle.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:ditec-neos-y-neos.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:dockman.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:dod-automatizacion-compacto-y-potente-para-portones-seccionales-correderos-y-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:doorlock.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:dura-glide-20003000-puerta.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:energy-series-with-intellicore-37171-3-4.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:energy-series-with-intellicore-3720-3724-3722.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:enviaContacto.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:equipos-y-accesorios-para-anden-de-carga.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:estacionamientos.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:fast-seal-high-performance-door.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:fire-rated-doors-firestar-models-700-700c.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:footer.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:footerv1.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:fotoceldas.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:fraccionamientos-y-condominios.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:glg-porte-industriali.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:gol-transmisores-de-cuatro-canales.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:header.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:headerv1.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:icaro-smart.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:iconos-marcas.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:iconos-marcasv1.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:index-estatico.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:index-resp.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:index.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:industrial.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:infraca-quality-doors.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:kelley.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:kronos-puertas-rapidas-de-sectores-modulares-autorreparable.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:lab-4-fotocelulas-de-rayos-infrarrojos.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:lab-9-detectores-de-volumen-de-metal-loop.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:labio-de-elevacion-mecanico-dockman.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:labio-elevacion-anden-carga.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:lan-4-sistema-de-teclado-con-combinacion-digital.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:lan-7-sistema-de-mando-de-proximidad-de-tarjetas-con-tecnologia-transponder.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:lift-master-mod-h.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:lift-master.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:liftmaster-modh.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:light-communication-system-lcs.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:links-menu-marcas.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:links-menu-marcasv1.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:links-menu.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:links-menuv1.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:luxo-robusto-e-incansable-para-servicios-intensivos-para-hojas-de-hasta-5-m.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:magic-fuerza-del-operador.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:marcas.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:marcasv1.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:menu-marcas.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:menu-marcasv1.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:menu-seccionales.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:menu-soluciones.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:menu-solucionesv1.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:nosotros.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:operador-comercial-rhx.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:operador-para-cortina-enrrollable-rsx.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:operador-para-perfilados-comerciales-jst.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:operador-para-perfilados-comerciales-sel.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:operadores-para-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:operadores-para-puerta-corrediza-industrial.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:operadores-para-puertas-ascendentes.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:operadores-para-puertas-corredizas-residenciales.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:operadores-para-puertas-de-mostrador-cdo.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:operadores-puerta-abatible-industrial.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:operadores-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:operadores-puerta-corrediza-residencial.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:operadores-puertas-ascendentes.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:operadores-puertas-seccionales-cortinas.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:overhead-door.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:p45-7-piston-hidraulico-para-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:pas-sensores-volumetricos.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:phobos-n-piston-electromecanico.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:politica-privacidad.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:predadoor-nxt-door.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:productos.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puert-seccional-de-acero-sin-aislamiento-430-uso-medio.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-contra-explosion.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-contra-incendio.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-de-acero-acanalado-modelos-524.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-de-acero-acanalado.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-estandar-reforzada.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-estandar.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-holandesa.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-para-hospital.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-seccionabl-acero-perfiles-422-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-seccional-de-acero-perfiles-418.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-seccional-de-acero-perfiles-432-uso-medio.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-seccional-de-acero-sin-aislamiento-416-uso-muy-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-seccional-de-acero-sin-aislamiento-424-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-seccional-de-acero-thermacore-593-uso-medio.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-seccional-de-acero-thermacore-594-uso-medio.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-seccional-de-acero-thermacore-595-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-seccional-de-acero-thermacore-599-uso-muy-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-seccional-de-acero-thermacore-serie-592.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puerta-y-fijos-louver.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-blindadas.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-contra-incendio.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-contra-rayos-x.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-de-garaje-aisladas.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-enrollables-de-garage.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-industriales-dockman.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-peatonales-estandar-y-reforzada.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-peatonales-hospitales.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-peatonales-rayos-x.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-peatonales-tipo-holandesa.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-rapidas-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-rapidas.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-residenciales.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-salida-emergencia.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-seccionales-de-acero-aisladas-thermospan-modelo-150.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-seccionales-de-acero-aisladas-thermospan.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-seccionales-de-acero-modelo-2415.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-seccionales-de-acero-perfiles-426.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-seccionales-de-acero-sin-aislamiento-420-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-seccionales-de-acero-thermacore-598-uso-liviano.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-seccionales-de-aluminio-521.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-seccionales-industriales.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertas-y-fijos-louver.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:puertasresidenciales.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:q-silent-max-eagle-3-4-hp.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:qik-barreras-automaticas-de-hasta-58-m.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:rampa-niveladora-mecanica-blue-giant.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:rampa-niveladora.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:rampas-de-anden-hidraulicas-kelley.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:rampas-de-anden-hidraulicas.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:rampas-de-anden-mecanicas.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:rapida-apilable.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:rapida-enrollable-industrial.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:receptor-para-control-vehiculos.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:residencial.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:retenedor-de-vehiculos.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:retenedor-vehiculos-hvr303.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:retenedores-de-vehiculos-automatico.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:retenedores-de-vehiculos.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:rolli-zip.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:rytec.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:sector-puertas-rapidas-enrollables-de-sectores-intercambiables-y-contrapesos.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:sector-reset.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:sellos-de-anden.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:sellos-nacionales.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:sellos-para-anden-shelter-de-soporte-flexible.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:sellos-para-anden.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:semaforos-senalizaciones-para-anden.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:serie-620.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:serie-x130-motor-para-cortina-oculto.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:sg-onixx-600.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:shelter-abrigo-estacionario-blue-giant.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:smart-puertas-rapidas-enrollables-de-sectores-intercambiables-con-motor-externo.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:soluciones.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:sprint-automatizaciones-para-puertas-peatonales-pequenas-dimensiones.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:star1000-receptor-comercial.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:star4-vehicle-restraint.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:tiras-plasticas-hawaianas.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:tiras-plasticas.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:traffic.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:upper-up8e-barreras-automaticas-de-hasta-8-m.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:vertigo.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:wayne-dalton.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:wel-aotmatizacion-de-puertas-peatonales-pequena-y-robusta.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:xel-5-selector-de-llave.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/get_oauth_token.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-af.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-ar.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-as.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-az.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-ba.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-be.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-bg.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-bn.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-ca.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-cs.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-da.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-de.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-el.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-eo.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-es.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-et.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-fa.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-fi.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-fo.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-fr.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-gl.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-he.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-hi.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-hr.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-hu.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-hy.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-id.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-it.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-ja.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-ka.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-ko.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-lt.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-lv.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-mg.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-mn.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-ms.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-nb.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-nl.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-pl.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-pt.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-pt_br.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-ro.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-ru.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-si.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-sk.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-sl.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-sr.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-sr_latn.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-sv.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-tl.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-tr.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-uk.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-ur.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-vi.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-zh.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/language\/phpmailer.lang-zh_cn.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/src\/DSNConfigurator.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/src\/Exception.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/src\/OAuth.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/src\/OAuthTokenProvider.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/src\/PHPMailer.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/src\/POP3.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:PHPMailer\/src\/SMTP.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:sendMail\/sendMail.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/ajax\/CreateStateSelect.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/Categorias\/edit.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/Categorias\/list.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/Categorias.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/footer.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/footer_iframe.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/google_mapper.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/header.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/header_iframe.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/includes\/footer.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/includes\/header.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/includes\/plugins\/datatables\/extensions\/Scroller\/examples\/data\/ssp.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/index.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/main.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/Marcas\/edit.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/Marcas\/list.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/Marcas.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/menu.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/Productos\/edit.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/Productos\/list.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/Productos.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/user\/edit.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/user\/list.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/user\/user_login.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/backoffice\/user.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/Categorias.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/common.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/debug.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/file.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/index.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/_DB.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Application.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Authentification.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Banamex.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Config.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/DB\/Connections\/LocalHostDB.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/DB\/DAO\/_AdvancedDAO.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/DB\/DAO\/_FileDAO.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/DB\/DAO\/_GenericDAO.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/DB\/DAO\/AdvancedDAO.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/DB\/DAO\/FileDAO.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/DB\/DAO\/GenericDAO.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/DB\/DAO\/Timestampable.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/DB\/DBConnection.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/DB\/DBStrategy.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/DB\/MySQLStrategy.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/DB.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/DBPEAR.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/ExcelWriter.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/ExceptionHandler.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Exceptions\/ClassNotFoundException.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Exceptions\/ErrorException2.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Exceptions\/MySQLException.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Exceptions\/SQLException.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Exceptions\/WrongDataTypeException.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/Calendar\/CalendarApplication.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/Calendar\/CalendarLanguage.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/Calendar\/CalendarLanguageSpanish.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/Calendar\/CalendarMonthDayColoring.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/Calendar\/CalendarMonthDayView.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/Calendar\/CalendarMonthSmallView.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/Calendar\/CalendarMonthView.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/Calendar\/CalendarTools.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/Calendar\/CalendarView.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/Calendar\/DB\/CalendarEventsDAO.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/ListPanel\/Action.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/ListPanel\/Decorator\/Decorator.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/ListPanel\/Decorator\/Pager.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/ListPanel\/Decorator\/PagerTemplate.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/ListPanel\/Decorator\/RowActions.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/ListPanel\/Decorator\/RowActionsTemplate.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/ListPanel\/Decorator\/Searcher.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/ListPanel\/Decorator\/SearcherTemplate.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/ListPanel\/Decorator\/Sorter.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/ListPanel\/Decorator\/SorterTemplate.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/ListPanel\/Decorator\/TemplateDecorator.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/ListPanel\/ListPanel.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/GUI\/ListPanel\/Template.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/IO\/FileApplication.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/IO\/FileSaver.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/IO\/FileViewer.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/IO\/ImageFileApplication.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/IO\/ImageFileViewer.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/LoginApplication.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Mailer.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/NestedException.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Objeto.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/PaymentGateway\/PayFlow\/Exception.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/PaymentGateway\/PayFlow\/Pro\/Result\/Approved.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/PaymentGateway\/PayFlow\/Pro\/Result\/Declined.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/PaymentGateway\/PayFlow\/Pro\/Transaction\/RecurrentBilling.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/PaymentGateway\/PayFlow\/Pro\/Transaction.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/PaymentGateway\/PayFlow\/Pro.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/PaymentGateway\/PayFlow.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/PaymentGateway\/USAePay\/Check.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/PaymentGateway\/USAePay\/CreditCard.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/PaymentGateway\/USAePay\/RecurrentBilling.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/PaymentGateway\/USAePay\/Result\/Approved.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/PaymentGateway\/USAePay\/Result\/Declined.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/PaymentGateway\/USAePay.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/PayPalPro.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/PermissionStrategy.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/RestHTTP.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Security\/Authentification.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Security\/CaptchaSecurityImage.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Util\/CountryISOCodes.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Util\/Date.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Util\/Email.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Util\/FriendlyURL.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Util\/HTML.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Util\/Server.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Util\/SocialNetwork.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Util\/State\/MXState.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Util\/State\/USState.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Util\/State.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Util\/String.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Util\/USStates.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/ErrorHandler.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Exception.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/FileTester.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/Address\/CountryCode.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/Address\/ZipCode.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/AlwaysNotValid.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/Date\/YYYYMMDD.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/Date.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/Email.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/Equal.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/FileUpload\/Excel.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/FileUpload\/FLV.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/FileUpload\/Image.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/FileUpload\/iPodM4V.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/FileUpload\/MPG4.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/FileUpload\/PDF.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/FileUpload\/PPT.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/FileUpload\/Word.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/FileUpload.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/NotEmpty.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/NotEqual.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/Numeric\/Between.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/Numeric\/Float.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/Numeric\/Integer.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/Numeric\/Unsigned.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/Numeric\/UnsignedFloat.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/Numeric\/UnsignedInteger.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/Numeric.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/RegEx.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/ReturnFalse.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/String\/NoHTML.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test\/String.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Test.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/Tester.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator\/TestException.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/CoreLibrary\/Validator.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Entity\/Search\/Result\/Video.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Entity\/Util\/VideoArray.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Entity\/Video.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Net\/URL2.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Request2\/Adapter\/Curl.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Request2\/Adapter\/Mock.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Request2\/Adapter\/Socket.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Request2\/Adapter.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Request2\/ConnectionException.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Request2\/CookieJar.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Request2\/Exception.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Request2\/LogicException.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Request2\/MessageException.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Request2\/MultipartBody.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Request2\/NotImplementedException.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Request2\/Observer\/Log.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Request2\/Observer\/UncompressingDownload.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Request2\/Response.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Request2\/SocketWrapper.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Request2\/SOCKS5.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/HTTP\/Request2.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Nusoap\/nusoap-respaldo.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Nusoap\/nusoap.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Nusoap\/nusoap0.7.3.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/DB\/common.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/DB\/dbase.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/DB\/fbsql.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/DB\/ibase.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/DB\/ifx.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/DB\/msql.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/DB\/mssql.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/DB\/mysql.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/DB\/mysqli.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/DB\/oci8.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/DB\/odbc.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/DB\/pgsql.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/DB\/sqlite.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/DB\/storage.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/DB\/sybase.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/DB.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/PEAR.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/Savant3\/Error.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/Savant3\/Exception.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/Savant3\/Filter.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/Savant3\/Plugin.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/Savant3\/resources\/Savant3_Filter_trimwhitespace.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/Savant3\/resources\/Savant3_Plugin_ahref.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/Savant3\/resources\/Savant3_Plugin_date.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/Savant3\/resources\/Savant3_Plugin_htmlAttribs.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/Savant3\/resources\/Savant3_Plugin_image.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PEAR\/Savant3.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PhpMailer\/class.PHPMailer.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PhpMailer\/class.pop3.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PhpMailer\/class.smtp.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PhpMailer\/language\/phpmailer.lang-en.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/PhpMailer\/language\/phpmailer.lang-es.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Access\/Categorias.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Access\/Marcas.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Access\/Productos.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Access\/User.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Access.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Categorias.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/IdsHandler.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/ImageHandler.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Marcas.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Productos.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Search\/Result\/Categorias.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Search\/Result\/fileManagment.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Search\/Result\/Marcas.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Search\/Result\/Productos.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Search\/Result\/User.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Search\/Result.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Search.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/User.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Util\/CategoriasArray.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Util\/CategoriasIterator.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Util\/File.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Util\/fileManagmentArray.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Util\/fileManagmentIterator.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Util\/FileUpload.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Util\/MarcasArray.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Util\/MarcasIterator.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Util\/ProductosArray.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Util\/ProductosIterator.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Util\/UserArray.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity\/Util\/UserIterator.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Entity.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/FrontEnd\/BO\/Authentification.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/FrontEnd\/BO\/Categorias.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/FrontEnd\/BO\/Marcas.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/FrontEnd\/BO\/Productos.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/FrontEnd\/BO\/User.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/FrontEnd\/BO.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/FrontEnd\/FO\/Authentification.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/FrontEnd\/FO\/Categorias.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/FrontEnd\/FO\/Marcas.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/FrontEnd\/FO\/Productos.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/FrontEnd\/FO.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/FrontEnd\/Util\/Session.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/FrontEnd\/Util\/UserSession.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Savant.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/Savant_php2.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Categorias.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Application\/Categorias.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Application\/Exception.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Application\/FileManagement.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Application\/Form.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Application\/IdsHandler.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Application\/ImageHandler.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Application\/LanguageManager.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Application\/Marcas.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Application\/Productos.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Application\/Security\/Authentication.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Application\/Security\/Exception.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Application\/User.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Application.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/DAO\/Categorias.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/DAO\/File.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/DAO\/Marcas.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/DAO\/Permission.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/DAO\/Productos.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/DAO\/User.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/DAO.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/DB\/Exception.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/DB.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/IO\/FileApplication.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Util\/EntityManager.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Validator\/Categorias.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Validator\/Exception.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Validator\/File\/Excel.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Validator\/File\/Image.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Validator\/File\/MP3.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Validator\/File\/Pdf.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Validator\/File\/Word.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Validator\/File.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Validator\/Marcas.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Validator\/Productos.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Validator\/Test\/UniqueClusterEmail.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Validator\/Test\/UniqueProfileEmail.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Validator\/User.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Core\/Validator.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/IdHandler.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/ImageHandler.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Marcas.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Productos.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/Security.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/ProjectLibrary\/SDO\/User.class.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Exception.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Loader\/Exception.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Loader\/PluginLoader\/Exception.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Loader\/PluginLoader\/Interface.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Loader\/PluginLoader.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Loader.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Locale\/Data\/Translation.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Locale\/Data.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Locale\/Exception.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Locale\/Format.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Locale\/Math\/Exception.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Locale\/Math\/PhpMath.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Locale\/Math.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Locale.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Translate\/Adapter\/Array.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Translate\/Adapter\/Csv.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Translate\/Adapter\/Gettext.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Translate\/Adapter\/Qt.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Translate\/Adapter\/Tbx.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Translate\/Adapter\/Tmx.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Translate\/Adapter\/Xliff.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Translate\/Adapter\/XmlTm.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Translate\/Adapter.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Translate\/Exception.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/libs\/Zend\/Translate.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/Marcas.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/Productos.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/AudioMain.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/AudioMultimedia.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/AudioView.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/BenefitsMain.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/BenefitsView.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/CategoriasMain.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/CategoriasView.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/ClusterMain.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/ClusterView.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/InventarioLogMain.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/InventarioLogView.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/InventarioMain.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/InventarioSucursalMain.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/InventarioSucursalView.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/InventarioView.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/LogMain.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/LogView.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/MarcasMain.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/MarcasView.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/ProductosMain.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/ProductosView.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/ReporteMain.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/ReporteView.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/RequisicionesMain.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/RequisicionesView.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/SucursalesMain.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: php:system\/view\/SucursalesView.php",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: missing:images\/dura.jpg",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: missing:images\/magic.jpg",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: missing:fichas\/INFRACA-RÁPIDA-APILABLE.pdf",
+            "passed": true
+        },
+        {
+            "test": "UI button absent from planned editorial relationships: missing:fichas\/FICHATECNICASELLOSSOLMMERS.pdf",
+            "passed": true
+        },
+        {
+            "test": "Exact eligible or completed identity 5",
+            "passed": true
+        },
+        {
+            "test": "Exact eligible or completed identity 6",
+            "passed": true
+        },
+        {
+            "test": "Exact eligible or completed identity 7",
+            "passed": true
+        },
+        {
+            "test": "Exact eligible or completed identity 17",
+            "passed": true
+        },
+        {
+            "test": "Exact eligible or completed identity 18",
+            "passed": true
+        },
+        {
+            "test": "Exact eligible or completed identity 19",
+            "passed": true
+        },
+        {
+            "test": "Exact eligible or completed identity 22",
+            "passed": true
+        },
+        {
+            "test": "Exact eligible or completed identity 24",
+            "passed": true
+        },
+        {
+            "test": "Exact eligible or completed identity 44",
+            "passed": true
+        },
+        {
+            "test": "Exact eligible or completed identity 77",
+            "passed": true
+        },
+        {
+            "test": "Exact eligible or completed identity 95",
+            "passed": true
+        },
+        {
+            "test": "Own partial + exact PDF-B is repairable",
+            "passed": true
+        },
+        {
+            "test": "Reject other run",
+            "passed": true
+        },
+        {
+            "test": "Reject wrong wp_id",
+            "passed": true
+        },
+        {
+            "test": "Reject changed source",
+            "passed": true
+        },
+        {
+            "test": "Reject wrong attachment",
+            "passed": true
+        },
+        {
+            "test": "Reject wrong PDF hash",
+            "passed": true
+        },
+        {
+            "test": "Reject missing approval",
+            "passed": true
+        },
+        {
+            "test": "Reject human edit",
+            "passed": true
+        },
+        {
+            "test": "Reject replaced object",
+            "passed": true
+        },
+        {
+            "test": "Reject REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Reject SKIP",
+            "passed": true
+        },
+        {
+            "test": "Reject editorial conflict",
+            "passed": true
+        },
+        {
+            "test": "Complete product is a no-op",
+            "passed": true
+        },
+        {
+            "test": "Second attempt remains a no-op",
+            "passed": true
+        },
+        {
+            "test": "Native WordPress metadata physically persisted; not merely true from prefilter",
+            "passed": true
+        },
+        {
+            "test": "Second write creates no duplicate metadata",
+            "passed": true
+        },
+        {
+            "test": "Invalid attachment rejected after scoped filter removed",
+            "passed": true
+        },
+        {
+            "test": "Rejected write preserves real PDF relation",
+            "passed": true
+        }
+    ]
+}

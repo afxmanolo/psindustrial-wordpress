@@ -1,0 +1,210 @@
+[
+  {
+    "file": "batch-recovery-model.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 93.7,
+    "output": "{\"passed\":true,\"checks\":96}",
+    "stderr": ""
+  },
+  {
+    "file": "datasheets-guard-fix.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 27.3,
+    "output": "{\"passed\":true,\"checks\":16}",
+    "stderr": ""
+  },
+  {
+    "file": "editorial-decisions.php",
+    "passed": false,
+    "exit_code": 1,
+    "seconds": 24.7,
+    "output": "",
+    "stderr": "Pure-duplicate group: image union deduplicated to 2 (not 3 raw, not 6 across both members): count=1\n"
+  },
+  {
+    "file": "full-local-import-execution.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 36.4,
+    "output": "{\"passed\":true,\"checks\":34}",
+    "stderr": ""
+  },
+  {
+    "file": "full-local-import-preflight.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 22.5,
+    "output": "{\"passed\":true,\"checks\":1058,\"full_run_id\":\"ab3d13ce-2350-41b2-bff3-c7e049a0f2cd\",\"baseline\":{\"REVIEW\":339,\"UNCHANGED\":510,\"SKIP\":1535,\"CONFLICT\":11,\"CREATE\":4}}",
+    "stderr": ""
+  },
+  {
+    "file": "importer.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 13.8,
+    "output": "{\"passed\":true,\"checks\":67,\"subset_runs\":[\"bf2239fb-d3ff-4c85-a5f3-5d496e927486\",\"3926ed20-aedb-48a7-895e-127c447337a8\"]}",
+    "stderr": ""
+  },
+  {
+    "file": "partial-pdf-repair.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 13.9,
+    "output": "{\"passed\":true,\"checks\":848,\"error\":null}",
+    "stderr": ""
+  },
+  {
+    "file": "pdf-approvals.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 16.4,
+    "output": "{\"passed\":true,\"checks\":310,\"full_run_id\":\"165846b3-ce05-4923-87ba-a0884c11add4\",\"review_before_pdf_phase\":950,\"review_after\":339}",
+    "stderr": ""
+  },
+  {
+    "file": "pdf-runtime-fix.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 23.0,
+    "output": "{\"passed\":true,\"checks\":41}",
+    "stderr": ""
+  },
+  {
+    "file": "policy.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 13.9,
+    "output": "{\"passed\":true,\"checks\":6102,\"full_run_id\":\"c1f783bd-7311-4523-9216-b8e3e3bf0969\",\"review_before\":1949,\"review_after\":339}",
+    "stderr": ""
+  },
+  {
+    "file": "q01-content-ownership.php",
+    "passed": false,
+    "exit_code": 1,
+    "seconds": 24.8,
+    "output": "",
+    "stderr": "page -> product: page-sourced images (beyond PMR-only) reach the product gallery\n"
+  },
+  {
+    "file": "q03-brand-unresolved.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 24.6,
+    "output": "{\"passed\":true,\"checks\":55,\"full_run_id\":\"8a894b03-1260-4232-ae35-5f9a9262e773\"}",
+    "stderr": ""
+  },
+  {
+    "file": "q03-kelley.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 24.4,
+    "output": "{\"passed\":true,\"checks\":27,\"full_run_id\":\"d658ff52-abb5-48ef-b354-e75a6109de07\"}",
+    "stderr": ""
+  },
+  {
+    "file": "q03-multi-category.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 25.3,
+    "output": "{\"passed\":true,\"checks\":275,\"full_run_id\":\"9b72834c-77bc-4085-8d03-f7b2f1c89119\",\"review_after\":339}",
+    "stderr": ""
+  },
+  {
+    "file": "q03-name-consolidation.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 24.6,
+    "output": "{\"passed\":true,\"checks\":225,\"full_run_id\":\"373f510c-0343-4b5a-af09-6d28fe69b18b\"}",
+    "stderr": ""
+  },
+  {
+    "file": "q04-static-products.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 25.4,
+    "output": "{\"passed\":true,\"checks\":219,\"full_run_id\":\"d0d88eba-8147-4431-9e4a-a549dc69808f\",\"static_resolved\":32,\"review_after\":339}",
+    "stderr": ""
+  },
+  {
+    "file": "q05-pdf-resolution.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 27.3,
+    "output": "{\"passed\":true,\"checks\":66,\"still_review_due_to_second_blocker\":1}",
+    "stderr": ""
+  },
+  {
+    "file": "q07-landings.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 24.7,
+    "output": "{\"passed\":true,\"checks\":113,\"full_run_id\":\"c48480bd-43f1-412a-9a62-caf3fa74b3be\",\"review_after\":339}",
+    "stderr": ""
+  },
+  {
+    "file": "q10-category-cleanup.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 25.4,
+    "output": "{\"passed\":true,\"checks\":23,\"full_run_id\":\"9c3bfddf-ef3d-4e41-b840-37926d884528\",\"review_after\":339}",
+    "stderr": ""
+  },
+  {
+    "file": "q11-missing-media.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 25.7,
+    "output": "{\"passed\":true,\"checks\":31,\"full_run_id\":\"5f7d1096-81fd-4506-8535-3dc6d7f54dbc\",\"review_after\":339}",
+    "stderr": ""
+  },
+  {
+    "file": "q13-media-alias.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 24.7,
+    "output": "{\"passed\":true,\"checks\":14,\"full_run_id\":\"1e1f68c4-5b66-478d-9e6e-077a0c0fcccb\",\"review_after\":339}",
+    "stderr": ""
+  },
+  {
+    "file": "recovery-model.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 83.4,
+    "output": "{\"passed\":true,\"checks\":2497,\"recovery_run_id\":\"b53d1d4a-438d-41f8-b899-81dba2b5f291\"}",
+    "stderr": ""
+  },
+  {
+    "file": "retry-model.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 15.6,
+    "output": "{\"passed\":true,\"checks\":201,\"root_causes\":{\"DIRECT_PDF_A\":14,\"DIRECT_PDF_B\":13,\"CASCADE_FROM_PDF_A\":10,\"CASCADE_FROM_PDF_B\":11,\"LEGITIMATE_CATEGORY_CONFLICT\":4}}",
+    "stderr": "root causes: {\"DIRECT_PDF_A\":14,\"DIRECT_PDF_B\":13,\"CASCADE_FROM_PDF_A\":10,\"CASCADE_FROM_PDF_B\":11,\"LEGITIMATE_CATEGORY_CONFLICT\":4}\n"
+  },
+  {
+    "file": "run-snapshot-retention.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 3.3,
+    "output": "{\"passed\":true,\"checks\":55}",
+    "stderr": ""
+  },
+  {
+    "file": "runner-media-validation.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 25.4,
+    "output": "{\"passed\":true,\"checks\":82,\"review_after\":339}",
+    "stderr": ""
+  },
+  {
+    "file": "smoke.php",
+    "passed": true,
+    "exit_code": 0,
+    "seconds": 7.1,
+    "output": "\n            \"test\": \"Native term write preserves public parent and saves allowed description\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"Manager cannot delete terms\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"Manager cannot withdraw public brand\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"HTTP 404 http://localhost/psindustrial-wordpress/wordpress/categoria/psi-smoke-3n2pxrwb-child/\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"Anonymous cannot read review term through REST\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"Anonymous REST list excludes review terms\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"Manager settings sanitized; private recipient protected\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"Settings API uses scoped permission\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"Settings API stores sanitized option\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"WhatsApp URL derives from single settings source\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"Option guard preserves Administrator recipient on real manager write\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"Administrator cannot create category cycle\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"Even Administrator cannot delete referenced media\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"MIME bytes reject fake PDF upload\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"Reject executable double extension\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"Gallery cannot duplicate featured image\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"Create native revision with metadata\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"Restore editorial metadata from revision\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"Review category can be deliberately published\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"Category archive excludes automatically inherited child products\",\n            \"passed\": true\n        },\n        {\n            \"test\": \"Negative image IDs are rejected rather than coerced\",\n            \"passed\": true\n        }\n    ]\n}\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,169 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "IdentityHashRebaseline::run() is a no-op once already applied (idempotent)",
+            "passed": true
+        },
+        {
+            "test": "Migration version recorded",
+            "passed": true
+        },
+        {
+            "test": "Fixture: brand:1 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Editorial-only brand term predicts UNCHANGED, not CONFLICT: brand:1",
+            "passed": true
+        },
+        {
+            "test": "Fixture: brand:2 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Editorial-only brand term predicts UNCHANGED, not CONFLICT: brand:2",
+            "passed": true
+        },
+        {
+            "test": "Fixture: brand:3 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Editorial-only brand term predicts UNCHANGED, not CONFLICT: brand:3",
+            "passed": true
+        },
+        {
+            "test": "Fixture: brand:4 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Editorial-only brand term predicts UNCHANGED, not CONFLICT: brand:4",
+            "passed": true
+        },
+        {
+            "test": "Fixture: brand:5 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Editorial-only brand term predicts UNCHANGED, not CONFLICT: brand:5",
+            "passed": true
+        },
+        {
+            "test": "Fixture: brand:6 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Editorial-only brand term predicts UNCHANGED, not CONFLICT: brand:6",
+            "passed": true
+        },
+        {
+            "test": "Fixture: brand:7 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Editorial-only brand term predicts UNCHANGED, not CONFLICT: brand:7",
+            "passed": true
+        },
+        {
+            "test": "Fixture: brand:8 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Editorial-only brand term predicts UNCHANGED, not CONFLICT: brand:8",
+            "passed": true
+        },
+        {
+            "test": "Fixture: brand:9 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Editorial-only brand term predicts UNCHANGED, not CONFLICT: brand:9",
+            "passed": true
+        },
+        {
+            "test": "Fixture: brand:10 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Editorial-only brand term predicts UNCHANGED, not CONFLICT: brand:10",
+            "passed": true
+        },
+        {
+            "test": "Fixture: brand:11 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Editorial-only brand term predicts UNCHANGED, not CONFLICT: brand:11",
+            "passed": true
+        },
+        {
+            "test": "Fixture: brand:12 resolves in a freshly-built plan",
+            "passed": true
+        },
+        {
+            "test": "Editorial-only brand term predicts UNCHANGED, not CONFLICT: brand:12",
+            "passed": true
+        },
+        {
+            "test": "Fixture: brand:2 is genuinely, currently public (a real editorial change, not a hypothetical)",
+            "passed": true
+        },
+        {
+            "test": "Fixture: brand:2 genuinely has a _psi_brand_home_order value set (a real editorial change, not a hypothetical)",
+            "passed": true
+        },
+        {
+            "test": "EDITORIAL: _psi_public_state is structurally absent from the hashed meta, despite being genuinely set to a non-default value",
+            "passed": true
+        },
+        {
+            "test": "EDITORIAL: _psi_brand_home_order is structurally absent from the hashed meta, despite being genuinely set",
+            "passed": true
+        },
+        {
+            "test": "IDENTITY: _psi_logo_id (real brand content, never editorial) remains part of the hashed meta",
+            "passed": true
+        },
+        {
+            "test": "Sanity: brand:2 live snapshot matches its recorded target_hash right now (rebaselined correctly)",
+            "passed": true
+        },
+        {
+            "test": "IDENTITY: a simulated name change still mismatches the recorded hash -- still CONFLICT, never silently tolerated",
+            "passed": true
+        },
+        {
+            "test": "IDENTITY: a simulated _psi_logo_id change still mismatches the recorded hash -- still CONFLICT, never silently tolerated",
+            "passed": true
+        },
+        {
+            "test": "EDITORIAL: forcing _psi_public_state back to review changes nothing -- confirms it is genuinely excluded, not just coincidentally absent",
+            "passed": true
+        },
+        {
+            "test": "Synthetic fixture term created",
+            "passed": true
+        },
+        {
+            "test": "Mixed drift (editorial + genuine content change) is correctly left untouched by rebaseline_term(), never laundered",
+            "passed": true
+        },
+        {
+            "test": "target_hash is provably unchanged when non-editorial drift is also present",
+            "passed": true
+        },
+        {
+            "test": "Pure editorial-only drift (once the non-editorial field is back to its recorded value) IS rebaselined",
+            "passed": true
+        },
+        {
+            "test": "target_hash was actually updated for the pure-editorial-drift case",
+            "passed": true
+        },
+        {
+            "test": "This suite creates\/deletes only its own synthetic fixture term -- net zero posts\/terms",
+            "passed": true
+        }
+    ]
+}

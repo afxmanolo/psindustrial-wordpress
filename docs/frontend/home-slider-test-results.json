@@ -1,0 +1,50 @@
+{
+  "passed": 11,
+  "failed": 0,
+  "checks": [
+    {
+      "test": "First slide visible, others hidden, autoplay scheduled",
+      "passed": true
+    },
+    {
+      "test": "Autoplay advances once and reschedules",
+      "passed": true
+    },
+    {
+      "test": "Manual indicators select the requested slide",
+      "passed": true
+    },
+    {
+      "test": "Keyboard wraps and restores focus to active control",
+      "passed": true
+    },
+    {
+      "test": "Pause cancels automatic rotation; resume schedules",
+      "passed": true
+    },
+    {
+      "test": "Reduced motion disables automatic rotation but allows manual slides",
+      "passed": true
+    },
+    {
+      "test": "Changing reduced motion cancels pending timer",
+      "passed": true
+    },
+    {
+      "test": "Focus and hover suspend autoplay",
+      "passed": true
+    },
+    {
+      "test": "Hidden document cancels autoplay",
+      "passed": true
+    },
+    {
+      "test": "Horizontal touch swipe changes slide",
+      "passed": true
+    },
+    {
+      "test": "Vertical touch gesture preserves slide",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "A full plan remains impossible to execute, Q03-E included",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:24",
+            "passed": true
+        },
+        {
+            "test": "id 24 is the consolidated Kelley winner",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:139",
+            "passed": true
+        },
+        {
+            "test": "id 139 is absorbed into id 24, no independent product",
+            "passed": true
+        },
+        {
+            "test": "Title is exactly id 24's own documented name, byte for byte",
+            "passed": true
+        },
+        {
+            "test": "Title never carries id 139's Blue-Giant-contaminated text",
+            "passed": true
+        },
+        {
+            "test": "Sanity: id 139's OWN documented name genuinely contains the other product's name -- confirms this is a real, not a hypothetical, copy\/paste artifact",
+            "passed": true
+        },
+        {
+            "test": "Sanity: id 24 and id 139 share byte-identical description text",
+            "passed": true
+        },
+        {
+            "test": "Sanity: id 24 and id 139 share at least one identical image path",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:3",
+            "passed": true
+        },
+        {
+            "test": "id 3 stays in plain REVIEW",
+            "passed": true
+        },
+        {
+            "test": "id 3 receives NO Q03 decision of any kind -- not consolidated, not skipped, not enriched",
+            "passed": true
+        },
+        {
+            "test": "id 3 has no decision object at all from any source layer",
+            "passed": true
+        },
+        {
+            "test": "Policy::CATEGORY_CONFLICT_PRODUCTS still lists id 3 -- this phase did not disable or weaken that safeguard",
+            "passed": true
+        },
+        {
+            "test": "Policy::CATEGORY_CONFLICT_PRODUCTS still has exactly its original single entry -- nothing added, nothing removed",
+            "passed": true
+        },
+        {
+            "test": "Kelley: brand left unresolved out of caution (id 139 carries a pre-existing Policy::BRAND_CONFLICT_PRODUCTS flag), despite id 24's own strong Kelley signal",
+            "passed": true
+        },
+        {
+            "test": "Sanity: id 139 is indeed in the pre-existing BRAND_CONFLICT_PRODUCTS registry -- the caution has a documented basis",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:rampas-de-anden-hidraulicas-kelley.php",
+            "passed": true
+        },
+        {
+            "test": "The page retires via Q01, citing the Q03-E winner -- reusing the exact existing ownership logic, not a new one",
+            "passed": true
+        },
+        {
+            "test": "Page's own reason cites id 24 (the actual MERGE winner) as owner",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/Kelley-Hydraulic-Dock-Leveler-Brochure_web.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/rampak.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:24",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:139",
+            "passed": true
+        },
+        {
+            "test": "A meaningful number of Q03-E rows checked for stability (4)",
+            "passed": true
+        },
+        {
+            "test": "id 3 stays REVIEW identically across repeated runs too",
+            "passed": true
+        }
+    ]
+}

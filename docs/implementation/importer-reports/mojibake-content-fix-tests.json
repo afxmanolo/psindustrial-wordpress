@@ -1,0 +1,805 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "ExplosiÃ³n -> Explosión",
+            "passed": true
+        },
+        {
+            "test": "Ã± -> ñ",
+            "passed": true
+        },
+        {
+            "test": "Common accent recovered: Ã¡ -> á",
+            "passed": true
+        },
+        {
+            "test": "Common accent recovered: Ã© -> é",
+            "passed": true
+        },
+        {
+            "test": "Common accent recovered: Ã­ -> í",
+            "passed": true
+        },
+        {
+            "test": "Common accent recovered: Ã³ -> ó",
+            "passed": true
+        },
+        {
+            "test": "Common accent recovered: Ãº -> ú",
+            "passed": true
+        },
+        {
+            "test": "Smart punctuation recovered unambiguously: ‘test’",
+            "passed": true
+        },
+        {
+            "test": "Smart punctuation recovered unambiguously: “test”",
+            "passed": true
+        },
+        {
+            "test": "Smart punctuation recovered unambiguously: café – bar",
+            "passed": true
+        },
+        {
+            "test": "Smart punctuation recovered unambiguously: wow…",
+            "passed": true
+        },
+        {
+            "test": "Already-correct UTF-8 stays byte-for-byte identical (untouched): Explosión",
+            "passed": true
+        },
+        {
+            "test": "Already-correct UTF-8 stays byte-for-byte identical (untouched): Tiras plásticas",
+            "passed": true
+        },
+        {
+            "test": "Already-correct UTF-8 stays byte-for-byte identical (untouched): Café ñoño",
+            "passed": true
+        },
+        {
+            "test": "Plain ASCII never touched: 'plain ascii text'",
+            "passed": true
+        },
+        {
+            "test": "Plain ASCII never touched: 'Puertas Seccionales'",
+            "passed": true
+        },
+        {
+            "test": "Plain ASCII never touched: ''",
+            "passed": true
+        },
+        {
+            "test": "Re-running the fixer on already-fixed text is a no-op",
+            "passed": true
+        },
+        {
+            "test": "Unrepresentable codepoint (emoji) is refused, never silently substituted",
+            "passed": true
+        },
+        {
+            "test": "1: MojibakeContentMigration.php's actual code never calls Storage::guard()",
+            "passed": true
+        },
+        {
+            "test": "2: MojibakeContentMigration.php's actual code never references Planner at all (not imported, not called)",
+            "passed": true
+        },
+        {
+            "test": "run() reports on all 31 approved targets",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:9 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:13 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:14 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:23 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:37 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:38 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:39 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:41 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:51 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:52 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:53 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:56 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:78 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:85 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:101 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:105 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:146 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:148 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:17 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:19 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:22 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:24 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:6 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): sql:productos:77 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): category:5 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): category:16 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): category:17 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): category:21 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): category:24 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): category:27 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "6\/7: target reached a terminal, resolved status (idempotent re-run changes nothing further): category:28 -> already_clean",
+            "passed": true
+        },
+        {
+            "test": "Fixture: 24 approved posts + 7 approved terms",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:9",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:13",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:14",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:23",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:37",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:38",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:39",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:41",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:51",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:52",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:53",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:56",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:78",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:85",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:101",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:105",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:146",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:148",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:17",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:19",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:22",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:24",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:6",
+            "passed": true
+        },
+        {
+            "test": "Approved post key is an entity_key, never a bare numeric id: sql:productos:77",
+            "passed": true
+        },
+        {
+            "test": "Approved term key is an entity_key, never a bare numeric id: category:5",
+            "passed": true
+        },
+        {
+            "test": "Approved term key is an entity_key, never a bare numeric id: category:16",
+            "passed": true
+        },
+        {
+            "test": "Approved term key is an entity_key, never a bare numeric id: category:17",
+            "passed": true
+        },
+        {
+            "test": "Approved term key is an entity_key, never a bare numeric id: category:21",
+            "passed": true
+        },
+        {
+            "test": "Approved term key is an entity_key, never a bare numeric id: category:24",
+            "passed": true
+        },
+        {
+            "test": "Approved term key is an entity_key, never a bare numeric id: category:27",
+            "passed": true
+        },
+        {
+            "test": "Approved term key is an entity_key, never a bare numeric id: category:28",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:9 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:9",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:9",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:13 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:13",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:13",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:14 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:14",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:14",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:23 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:23",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:23",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:37 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:37",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:37",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:38 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:38",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:38",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:39 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:39",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:39",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:41 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:41",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:41",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:51 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:51",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:51",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:52 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:52",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:52",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:53 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:53",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:53",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:56 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:56",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:56",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:78 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:78",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:78",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:85 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:85",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:85",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:101 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:101",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:101",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:105 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:105",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:105",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:146 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:146",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:146",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:148 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:148",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:148",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:17 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:17",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:17",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:19 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:19",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:19",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:22 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:22",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:22",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:24 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:24",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:24",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:6 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:6",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:6",
+            "passed": true
+        },
+        {
+            "test": "Fixture: sql:productos:77 resolves to a real post",
+            "passed": true
+        },
+        {
+            "test": "Post title has no remaining mojibake signature: sql:productos:77",
+            "passed": true
+        },
+        {
+            "test": "4\/6: post is_intact() again after fix + reseal: sql:productos:77",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:5 resolves to a real term",
+            "passed": true
+        },
+        {
+            "test": "Term name has no remaining mojibake signature: category:5.name",
+            "passed": true
+        },
+        {
+            "test": "Term description has no remaining mojibake signature: category:5.description",
+            "passed": true
+        },
+        {
+            "test": "4\/6: term is_intact() again after fix + reseal: category:5",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:16 resolves to a real term",
+            "passed": true
+        },
+        {
+            "test": "Term name has no remaining mojibake signature: category:16.name",
+            "passed": true
+        },
+        {
+            "test": "4\/6: term is_intact() again after fix + reseal: category:16",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:17 resolves to a real term",
+            "passed": true
+        },
+        {
+            "test": "Term name has no remaining mojibake signature: category:17.name",
+            "passed": true
+        },
+        {
+            "test": "4\/6: term is_intact() again after fix + reseal: category:17",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:21 resolves to a real term",
+            "passed": true
+        },
+        {
+            "test": "Term name has no remaining mojibake signature: category:21.name",
+            "passed": true
+        },
+        {
+            "test": "4\/6: term is_intact() again after fix + reseal: category:21",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:24 resolves to a real term",
+            "passed": true
+        },
+        {
+            "test": "Term name has no remaining mojibake signature: category:24.name",
+            "passed": true
+        },
+        {
+            "test": "4\/6: term is_intact() again after fix + reseal: category:24",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:27 resolves to a real term",
+            "passed": true
+        },
+        {
+            "test": "Term name has no remaining mojibake signature: category:27.name",
+            "passed": true
+        },
+        {
+            "test": "4\/6: term is_intact() again after fix + reseal: category:27",
+            "passed": true
+        },
+        {
+            "test": "Fixture: category:28 resolves to a real term",
+            "passed": true
+        },
+        {
+            "test": "Term name has no remaining mojibake signature: category:28.name",
+            "passed": true
+        },
+        {
+            "test": "4\/6: term is_intact() again after fix + reseal: category:28",
+            "passed": true
+        },
+        {
+            "test": "Slug is byte-for-byte unchanged despite the name\/description fix",
+            "passed": true
+        },
+        {
+            "test": "Post slug is byte-for-byte unchanged despite the title fix",
+            "passed": true
+        },
+        {
+            "test": "Legacy redirect for the corrected category still resolves to its real, current canonical",
+            "passed": true
+        },
+        {
+            "test": "Corrected category archive renders 200",
+            "passed": true
+        },
+        {
+            "test": "Rendered page shows the corrected text, never the mojibake original",
+            "passed": true
+        },
+        {
+            "test": "A simulated, genuinely different future post_title still mismatches the recorded hash -- still CONFLICT, post_title keeps its Identity protection",
+            "passed": true
+        },
+        {
+            "test": "A simulated, genuinely different future term name still mismatches the recorded hash -- still CONFLICT, name\/description keep their Identity protection",
+            "passed": true
+        },
+        {
+            "test": "Synthetic CONFLICT fixture term created",
+            "passed": true
+        },
+        {
+            "test": "Fixture: synthetic term genuinely fails is_intact() (simulated real prior drift) before the migration touches it",
+            "passed": true
+        },
+        {
+            "test": "5\/8: target_hash mismatch -> process() reports skipped_conflict, never attempts the write",
+            "passed": true
+        },
+        {
+            "test": "8: the term name was NOT modified",
+            "passed": true
+        },
+        {
+            "test": "8: target_hash was NOT re-sealed -- still the stale value, the drift is not legitimized",
+            "passed": true
+        },
+        {
+            "test": "Fixture: synthetic term genuinely is_intact() before the migration touches it",
+            "passed": true
+        },
+        {
+            "test": "3: entity_key resolved to this environment's real, current physical id -- never a value the migration itself stored or assumed",
+            "passed": true
+        },
+        {
+            "test": "4: target_hash match -> process() permits and performs the repair",
+            "passed": true
+        },
+        {
+            "test": "The term was actually corrected",
+            "passed": true
+        },
+        {
+            "test": "6: corrected object is is_intact() again -- the new target_hash is valid for its own new content",
+            "passed": true
+        },
+        {
+            "test": "7: a second attempt on the same, now-corrected target finds nothing left to fix, changes nothing",
+            "passed": true
+        },
+        {
+            "test": "7: name is unchanged by the second attempt",
+            "passed": true
+        },
+        {
+            "test": "Sanity: post_title\/name\/description were never added to EDITORIAL_META_KEYS",
+            "passed": true
+        },
+        {
+            "test": "Only the one synthetic fixture term was created (still present, deleted in finally below) -- zero other posts\/terms changed",
+            "passed": true
+        }
+    ]
+}

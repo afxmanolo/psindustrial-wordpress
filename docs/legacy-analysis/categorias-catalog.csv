@@ -1,0 +1,39 @@
+﻿categorias_id,nombre,descripcion,imagen,padre_id
+1,Industrial,Industriales,,
+2,Comercial,Comerciales,,
+3,Equipos y Accesorios para Anden de Carga,Equipos y Accesorios para Anden de Carga,,
+4,Puertas peatonales de Salida de Emergencia,Puertas peatonales de Salida de Emergencia,,
+5,"Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas","Puertas peatonales contra Incendio, Contra ExplosiÃ³n y Blindadas",,
+6,Puertas peatonales para Hospitales,Puertas peatonales para Hospitales,,
+7,Residenciales,Residenciales,,
+8,Puertas Seccionales,Puertas Seccionales,11,1
+9,Fraccionamientos y Condominios,Fraccionamientos y Condominios,15,2
+10,Rampa Niveladora,,36,3
+11,Operadores para puerta corrediza,,44,1
+12,Operadores para puerta abatible,,48,1
+13,Operadores para puertas seccionales y cortinas enrollables,,52,1
+14,Cortinas enrollables,,56,1
+16,Tiras plÃ¡sticas,,64,1
+17,Puertas rÃ¡pidas,,68,1
+18,Estacionamientos,,72,2
+19,Centros comerciales y hoteles,,76,2
+20,Accesorios y dispositivos de control de acceso y seguridad,,80,2
+21,Labio de elevaciÃ³n para anden de carga,,84,3
+22,Retenedores de vehiculos,,88,3
+23,Sellos para Anden,,92,3
+24,Semaforos y seÃ±alizaciones para anden,,96,3
+25,"Bumpers, semaforos y cepillos para rampa niveladora",,,3
+26,Puertas contra incendio,,100,0
+27,Puerta estÃ¡ndar,,104,4
+28,Puerta estÃ¡ndar reforzada,,108,4
+29,Puerta Holandesa,,112,4
+30,Puerta y fijos Louver,,120,4
+31,Puerta contra explosion,,124,5
+32,Puertas blindadas,,128,5
+33,Puertas contra incendio,,132,5
+34,Puertas contra rayos x,,136,6
+35,Puerta para hospital,,144,6
+36,Puertas residenciales,,148,7
+37,Operadores para puerta corrediza,,152,7
+38,Operadores para puerta abatible,,156,7
+39,Operadores para puertas ascendentes,,160,7

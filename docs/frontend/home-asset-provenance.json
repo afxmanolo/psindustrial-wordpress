@@ -1,0 +1,280 @@
+{
+  "banner1.jpg": {
+    "source": "legacy/public/images/banner1.jpg",
+    "source_sha256": "4bc014975343535716668557e35bb56c8da81ffd1902d59cb4eea9408826e162",
+    "variants": [
+      {
+        "path": "assets/images/home/banner1-640.webp",
+        "sha256": "26dc1b5a4ecb5244da35946a1e45a35b420d737fa9b653b9e19bd21f191f29f1"
+      },
+      {
+        "path": "assets/images/home/banner1-1280.webp",
+        "sha256": "563922fa8ccc43395dbe1f4a5dbacd12a92bcc064ce3a4d376c1f35ffd752867"
+      },
+      {
+        "path": "assets/images/home/banner1-1920.webp",
+        "sha256": "9db889d77304ae262924f9cc7323354c135978f64b2f83f6331b1bfc4c7d0e8b"
+      }
+    ]
+  },
+  "banner2.jpg": {
+    "source": "legacy/public/images/banner2.jpg",
+    "source_sha256": "f93298d1854aead799c3a1e1f976a252db6c04609fcc2ede59a9f37ae349e3b3",
+    "variants": [
+      {
+        "path": "assets/images/home/banner2-640.webp",
+        "sha256": "18014ea72855face5caad2b3629e59f404d9a69c04d00963032d9d24fdd5529c"
+      },
+      {
+        "path": "assets/images/home/banner2-1280.webp",
+        "sha256": "8597113316dd60b1156b625514ad02f039e13f0f34f645eb4bc9f5a736b0b4fa"
+      },
+      {
+        "path": "assets/images/home/banner2-1920.webp",
+        "sha256": "4da7c1c088c779f70a120fd67cdbd5ab9ad69c2147f460c45980eb4e93d921dd"
+      }
+    ]
+  },
+  "banner3.jpeg": {
+    "source": "legacy/public/images/banner3.jpeg",
+    "source_sha256": "d167c40c0a90d773d8f1cfa30b95853e36b169f3b91399be1299f13d42f2a482",
+    "variants": [
+      {
+        "path": "assets/images/home/banner3-640.webp",
+        "sha256": "466cfd78ff0056b7743ef506afeaef24c2d58aaa55dd99cab8b90808a2fe5d1c"
+      },
+      {
+        "path": "assets/images/home/banner3-1280.webp",
+        "sha256": "5db44b9e9c06cd0fa32f02050a7deebdb514847f3fa4ea62ba274f6db8bf4056"
+      }
+    ]
+  },
+  "banner4.jpg": {
+    "source": "legacy/public/images/banner4.jpg",
+    "source_sha256": "1d5ee34dde909d9ac42174d80359b75d3e2ef1ed10fe7b54d2745c10881d9bd6",
+    "variants": [
+      {
+        "path": "assets/images/home/banner4-640.webp",
+        "sha256": "6ed22e759d3182c172d73c05a05fde95afa6850ea88bd619c9748b761abfa96b"
+      },
+      {
+        "path": "assets/images/home/banner4-1280.webp",
+        "sha256": "a916c3456b71808c68461b1775605c3502abe731a248fbe622c897d68ecfd2c4"
+      },
+      {
+        "path": "assets/images/home/banner4-1920.webp",
+        "sha256": "3c6c09058d617f9b527e2d7243ed3511832baefb5b597ab485090cdbc1b573bc"
+      }
+    ]
+  },
+  "home-bg-01.jpg": {
+    "source": "legacy/public/images/home-bg-01.jpg",
+    "source_sha256": "7c9fd799c6adb019065b6e5eecd6577ee9b7f38e818d9e094e7795c79502fda3",
+    "variants": [
+      {
+        "path": "assets/images/home/home-bg-01-100.webp",
+        "sha256": "5a8ebe8f7a47fa904c693642499d3fbcae9854fe597adcd827c49cc05cd93cb0"
+      }
+    ]
+  },
+  "quienes1.jpg": {
+    "source": "legacy/public/images/quienes1.jpg",
+    "source_sha256": "ff7ca7816862d97929d7e9ccbb276bd78c49b638b12eb835b5e6439dbe2d54f0",
+    "variants": [
+      {
+        "path": "assets/images/home/quienes1-539.webp",
+        "sha256": "4d4e7ce3404352cc4997ad239921e3cd2c88fe410c8818a2ebe949f36bc41056"
+      }
+    ]
+  },
+  "industrial-home.jpg": {
+    "source": "legacy/public/images/industrial-home.jpg",
+    "source_sha256": "5719d8dbb52e32356f4db1fb9c626936d889aac3b21887eb69145821fd7182b4",
+    "variants": [
+      {
+        "path": "assets/images/home/industrial-home-670.webp",
+        "sha256": "120f8d7447a5fce25b55db48ada6c0b0a81984d75c1a3ee5864644ad803b39a0"
+      }
+    ]
+  },
+  "home-comercial.jpg": {
+    "source": "legacy/public/images/home-comercial.jpg",
+    "source_sha256": "12c74b2a81f15f8ed8c3c5f1211367d8b969c2c219b1e9f8c570ae7a55c2d374",
+    "variants": [
+      {
+        "path": "assets/images/home/home-comercial-600.webp",
+        "sha256": "bb227052fddcb766feee0e3cbce3415516918681d13ff9642a523d91398142a0"
+      }
+    ]
+  },
+  "equipos-accesorios-anden-carga.jpeg": {
+    "source": "legacy/public/images/equipos-accesorios-anden-carga.jpeg",
+    "source_sha256": "a3d2ced9486056908bb6e2dbc54f3c7c35783e1e6572879af9075cc7c5372ba1",
+    "variants": [
+      {
+        "path": "assets/images/home/equipos-accesorios-anden-carga-670.webp",
+        "sha256": "898cb68754c22435e07205602df30e315e18cd0d6040817bc071b3936c23dc26"
+      }
+    ]
+  },
+  "salida-emergencia.png": {
+    "source": "legacy/public/images/salida-emergencia.png",
+    "source_sha256": "36cbd8db2fceef33508ae0095a685338ef3aadb52a0caf64d5c3f0380f64cd6f",
+    "variants": [
+      {
+        "path": "assets/images/home/salida-emergencia-150.webp",
+        "sha256": "a0e86b35a29fa0233222f466ed0d1c87b7f18f716d6bd18e5d8adf05ab37a170"
+      }
+    ]
+  },
+  "PuertasIncendios.jpeg": {
+    "source": "legacy/public/images/PuertasIncendios.jpeg",
+    "source_sha256": "40db8926349179c5ab735abf4401842bb60f6bd9f5b0682ea9909ad569ae1a9f",
+    "variants": [
+      {
+        "path": "assets/images/home/PuertasIncendios-960.webp",
+        "sha256": "8ef9aeff4d23e96eb8cc5b851b93e9284c2472398fcfcb69a10ca136b0366e30"
+      }
+    ]
+  },
+  "puerta-metalica-hospital.jpg": {
+    "source": "legacy/public/images/puerta-metalica-hospital.jpg",
+    "source_sha256": "23e6ede7c9dc5fe93f013e80cb3deeb6c6d48e04c7d1df70f2fc5c9b90c4e0d9",
+    "variants": [
+      {
+        "path": "assets/images/home/puerta-metalica-hospital-196.webp",
+        "sha256": "0b41578c05003c09a02eadf150389f9fbdab4f70ab9c8a7735304d4613af21d2"
+      }
+    ]
+  },
+  "residencial-2.png": {
+    "source": "legacy/public/images/residencial-2.png",
+    "source_sha256": "b0f4cc3dbc62ed1ccd15bbf25c72934d64d7725d6c9a394f45c4f35d8fcb6967",
+    "variants": [
+      {
+        "path": "assets/images/home/residencial-2-600.webp",
+        "sha256": "0e5d4685bf2929b5d07df9dd4b71871e819cb9badb2b132e83438a6eb61a9a4a"
+      }
+    ]
+  },
+  "tg.png": {
+    "source": "legacy/public/images/tg.png",
+    "source_sha256": "e35d64230b9f55656ea1a1b11e5def6c8570d539d9bc70eb20ef864668fad405",
+    "variants": [
+      {
+        "path": "assets/images/home/tg-500.webp",
+        "sha256": "2c78b8975b64ba2a60efe17ba84aa6ba9ceee342c001ae7b0225659c05f3f9df"
+      }
+    ]
+  },
+  "wayne-dayton.png": {
+    "source": "legacy/public/images/wayne-dayton.png",
+    "source_sha256": "4891a24e3058a072f2fc95025d61f870e39313500e4d4cf7a596cabaf1ead961",
+    "variants": [
+      {
+        "path": "assets/images/home/wayne-dayton-500.webp",
+        "sha256": "ccdb0ff05aca6aff0f93726432789ae67d82343752f24e93aea296c4892e498b"
+      }
+    ]
+  },
+  "clopay.png": {
+    "source": "legacy/public/images/clopay.png",
+    "source_sha256": "ed413c1909a7344c4da7ad96762f12c624b6933debe62950e1deac166a5455cf",
+    "variants": [
+      {
+        "path": "assets/images/home/clopay-500.webp",
+        "sha256": "c9ede57d03cf92b8a40eb192173d1ba6016601a0ce0c686616fa88a5367c676b"
+      }
+    ]
+  },
+  "blue.png": {
+    "source": "legacy/public/images/blue.png",
+    "source_sha256": "f6bd405f9972e7ac65099158e447b92f8a59907abcde6b12952f58ad6497d50b",
+    "variants": [
+      {
+        "path": "assets/images/home/blue-500.webp",
+        "sha256": "3ce83cb299e1a62a6f29b8fc1f2d8ba93dce070ed72ebb4dd2efe95d80d15772"
+      }
+    ]
+  },
+  "kelley.png": {
+    "source": "legacy/public/images/kelley.png",
+    "source_sha256": "0f34c8e7feeba659621ddf44ba689881887ce28ee8af6a36225f627777ab1c72",
+    "variants": [
+      {
+        "path": "assets/images/home/kelley-500.webp",
+        "sha256": "eb09061fbe16337e6afb3bf5d7f1ce2b02dfbb1dc27c03181923692b2137a285"
+      }
+    ]
+  },
+  "door.png": {
+    "source": "legacy/public/images/door.png",
+    "source_sha256": "0e3989fcba0dbd0c885df1794f41421b64d3328892866ff43f6d28b426cfb17d",
+    "variants": [
+      {
+        "path": "assets/images/home/door-500.webp",
+        "sha256": "2343cd9680d4811bc4cf1a2564abc602c54ca360e03825374b95a82e6346658c"
+      }
+    ]
+  },
+  "rytec.png": {
+    "source": "legacy/public/images/rytec.png",
+    "source_sha256": "70025e2ed15beb5cd603e9eeafbc402aa3888318c0eb96eb65a5bc309b85f208",
+    "variants": [
+      {
+        "path": "assets/images/home/rytec-500.webp",
+        "sha256": "dd1971fb3cb97fd5a574dc6e6de9c6e4a200bd34f0a24817181f6e23f8db9ada"
+      }
+    ]
+  },
+  "infraca.png": {
+    "source": "legacy/public/images/infraca.png",
+    "source_sha256": "2736a5b917542b130f07f43f10dd985dd0d636648c69d28a96559cb6d496658a",
+    "variants": [
+      {
+        "path": "assets/images/home/infraca-500.webp",
+        "sha256": "378c1a6357ceb80144fd68d1a22d6bfb43a884a6297dbc6598cbd691332d7883"
+      }
+    ]
+  },
+  "glg-porte-industriali.png": {
+    "source": "legacy/public/images/glg-porte-industriali.png",
+    "source_sha256": "ba622b483b1b0c8c1a8916f6636b9ac7fd2ee80ba586e9353b57dcb259337dfb",
+    "variants": [
+      {
+        "path": "assets/images/home/glg-porte-industriali-500.webp",
+        "sha256": "9c40aaf452148cc1a88cd06779cd5ece905d11c7e729d667d6ff7abf34fa6c31"
+      }
+    ]
+  },
+  "dockman.png": {
+    "source": "legacy/public/images/dockman.png",
+    "source_sha256": "4e042af377ab4037eaf79cc29b6598bd090c7b13c40d38e1e8d673a9180c652a",
+    "variants": [
+      {
+        "path": "assets/images/home/dockman-500.webp",
+        "sha256": "74bd856823ed17f6ed971a4f08ee9ee474126c562f490871dc14c5108132264f"
+      }
+    ]
+  },
+  "lift-master.png": {
+    "source": "legacy/public/images/lift-master.png",
+    "source_sha256": "21bcfd90dd51b6c0ad6755352c46937cfcea4c7886a85b1b76dd1daffe093874",
+    "variants": [
+      {
+        "path": "assets/images/home/lift-master-500.webp",
+        "sha256": "1281c520cc81d5e2868b9b0dd3f9223aca3b226b5613a77aa6ae8b84eb1dda57"
+      }
+    ]
+  },
+  "bft.png": {
+    "source": "legacy/public/images/bft.png",
+    "source_sha256": "46ccac170004f8ccf2b33c66eda0fbed7c8ee587f105403dc8a0ed676b10d4c2",
+    "variants": [
+      {
+        "path": "assets/images/home/bft-500.webp",
+        "sha256": "7ef5e7902bfb32d503aeb520c81a178c2a6fd80299a2290595f7ce7d4375f584"
+      }
+    ]
+  }
+}

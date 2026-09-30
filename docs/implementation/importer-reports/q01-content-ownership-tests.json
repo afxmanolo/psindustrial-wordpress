@@ -1,0 +1,1329 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "Two full DRY RUNs change nothing in the database",
+            "passed": true
+        },
+        {
+            "test": "A full plan remains impossible to execute, Q01 included",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:fichas\/cdx-commercial-operator-sellsheet.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:fichas\/Cortina-serie-610-620.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:fichas\/operador-cortina.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:fichas\/puerta-430.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:fichas\/puerta-seccional-418.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:fichas\/puerta-seccional-422.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:fichas\/puerta-seccional-426.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:fichas\/puerta-seccional-432.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:fichas\/puerta-thermacore-593.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:fichas\/puerta-thermacore-594.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:fichas\/rhx-commercial-operator-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:fichas\/rolling-sheet-doors-790-780-770-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:fichas\/security-grilles-670-671-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:fichas\/security-grilles-670-671-brochure1.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/bft.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/blue.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/clopay.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/comercial.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/cortina-670.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/cortina-670t.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/cortina-671.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/cortina-671t.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/dockman.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/door.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/glg-porte-industriali.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/hospital.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/industrial-brown-sectional-steel-model-424-432.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/infraca.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/kelley.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/lift-master.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/model-426-white-finish-insulated.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/ocx.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/puerta-418.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/puerta-418t.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/puerta-422t.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/puerta-430.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/puerta-430t.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/puerta-432.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/puerta-metalica-hospital.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/puerta432.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/puerta593.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/puerta593t.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/puerta594.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/puerta594t.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/puerta598t.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/puerta599.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/rhx.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/rolling-service-doors-610.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/rolling-sheet-770-2.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/rsx.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/rytec.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/sectional-steel-models-422-426.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/serie_790_001.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/STRONGARMHVR303.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/t424.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/wayne-dayton.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:images\/windload-thermacore-525-wide.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/0184eae287e99a553941e98f9ff70f71139ed643",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/0d4439f5ba46973f404b8a9eaf3c6ed102faad54",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/158ffcb904bc82f2a7d2ec143de37e00730d04bd",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/393bf5523829b0a76434527d0737623ed3951b63",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/3ba01a39dd2e04651a35a7f2a8c2aab034f58f33",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/3d3f8a7b58fad15cba55a19e1f7dcbd97e37ab41",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/41081b9e7f1bbdd04b5550ad18403fe44052b75e",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/41fac25bf3c4f3389882019d1f274fd418b8facb",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/43d4232e7c8e46a381f607bdcb65a691c4321389",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/4c235320c6c73cff73a7e701b74b8e5fd0417378",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/6ca19dacd9993636b6638cf308a1c4490bb0af98",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/7c5b21262bddc72229429752adac241d7198c038",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/8ca911b748068c9bef002de96ef743ecefb9886b",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/9022847e37c72e9a2de76dcdf7c2e22b08cf6cb0",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/a15d5cd1cf67dc7a304a8ebe8c9e28a866e7eda2",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/b0c2e45b23cfd147f3f8bbf7f05a34104ff032f8",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/b365a092cbf80ef1af6e99fc3cddc76b0ceb8112",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/bf4d3b2ae60542c4ed05927730f7cc762263f31c",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/c46d19fe3eb462f51d4f636a3a4719ea6e8922c5",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/c8f93030259cd6eb5436a8b4dc88516a8a82cf03",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/cbc5bbf8df505223c1069122842fed702f8be8d8",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/dea67750c58a9beeb1e4bf0140e4b97863635cfa",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/ed615bddda8aa301e393e1768b31a2d694243038",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/categorias\/f843a4b04170cefcd1c70500fdf0f79819e89148",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/productos\/0026e2b69ea6b2f5307ae424596371c7610f2fd8",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/productos\/0a1a154b062113c629a1f2b1c58638408479ba39",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/productos\/13e3c3675402a845e35768698348384af696499f",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/productos\/72df998778c03bc863d043d89ff44bd56b0095ab",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/productos\/a7febe38bfa295bb6907789a9d0f008c6319b962",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: asset:system\/files\/images\/productos\/cd8dcba8c3cdd3597f73eff14285d6e0c759fda1",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:2",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:3",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:4",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:5",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:6",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:7",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:9",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:10",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:11",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:12",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:13",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:14",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:16",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:17",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:18",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:19",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:20",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:21",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:22",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:23",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:24",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:29",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:30",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:31",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:32",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:34",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:36",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:37",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:38",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: category:39",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: brand:2",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: brand:3",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: brand:4",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: brand:5",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: brand:6",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: brand:7",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: brand:8",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: brand:9",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: brand:10",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: brand:11",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: brand:12",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:34",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:65",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:66",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:68",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:69",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:70",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:71",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:72",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:73",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:74",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:75",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:77",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:85",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:86",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:92",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:95",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:97",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:98",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:146",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: sql:productos:148",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:accesorios.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:accesspro-fs1000speed.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:barreras-estacionamiento-moovi50rm.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:bft.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:blindadas.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:blue-giant.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:centros-comerciales.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:clopay.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:coleccion-classic.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:coleccion-modern-steel.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:comercial.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:contra-exposion.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:cortina-de-seguridad-670.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:cortina-de-seguridad-671.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:cortina-en-aluminio-serie-511-521.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:cortina-europea.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:cortina-plana.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:cortina-serie-600.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:cortina-serie-610.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:cortina-serie-620.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:cortina-serie-625.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:cortina-serie-630.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:cortina-serie-790-cw.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:cortinas-enrollables-industriales.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:cortinas-ventiladas-685.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:dockman.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:doorlock.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:energy-series-with-intellicore-37171-3-4.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:energy-series-with-intellicore-3720-3724-3722.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:equipos-y-accesorios-para-anden-de-carga.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:estacionamientos.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:fast-seal-high-performance-door.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:fire-rated-doors-firestar-models-700-700c.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:fraccionamientos-y-condominios.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:glg-porte-industriali.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:icaro-smart.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:industrial.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:infraca-quality-doors.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:kelley.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:kronos-puertas-rapidas-de-sectores-modulares-autorreparable.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:labio-de-elevacion-mecanico-dockman.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:labio-elevacion-anden-carga.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:lift-master-mod-h.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:lift-master.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:liftmaster-modh.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:operador-comercial-rhx.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:operador-para-cortina-enrrollable-rsx.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:operador-para-perfilados-comerciales-jst.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:operador-para-perfilados-comerciales-sel.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:operadores-para-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:operadores-para-puerta-corrediza-industrial.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:operadores-para-puertas-ascendentes.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:operadores-para-puertas-corredizas-residenciales.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:operadores-para-puertas-de-mostrador-cdo.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:operadores-puerta-abatible-industrial.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:operadores-puertas-seccionales-cortinas.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:overhead-door.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:p45-7-piston-hidraulico-para-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:phobos-n-piston-electromecanico.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:predadoor-nxt-door.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puert-seccional-de-acero-sin-aislamiento-430-uso-medio.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puerta-contra-explosion.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puerta-contra-incendio.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puerta-de-acero-acanalado-modelos-524.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puerta-de-acero-acanalado.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puerta-holandesa.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puerta-para-hospital.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puerta-seccionabl-acero-perfiles-422-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puerta-seccional-de-acero-perfiles-418.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puerta-seccional-de-acero-perfiles-432-uso-medio.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puerta-seccional-de-acero-sin-aislamiento-416-uso-muy-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puerta-seccional-de-acero-sin-aislamiento-424-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puerta-seccional-de-acero-thermacore-593-uso-medio.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puerta-seccional-de-acero-thermacore-594-uso-medio.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puerta-seccional-de-acero-thermacore-599-uso-muy-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puerta-seccional-de-acero-thermacore-serie-592.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puerta-y-fijos-louver.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puertas-blindadas.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puertas-contra-rayos-x.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puertas-peatonales-hospitales.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puertas-peatonales-rayos-x.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puertas-peatonales-tipo-holandesa.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puertas-rapidas.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puertas-salida-emergencia.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puertas-seccionales-de-acero-aisladas-thermospan-modelo-150.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puertas-seccionales-de-acero-aisladas-thermospan.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puertas-seccionales-de-acero-modelo-2415.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puertas-seccionales-de-acero-perfiles-426.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puertas-seccionales-de-acero-sin-aislamiento-420-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puertas-seccionales-de-acero-thermacore-598-uso-liviano.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puertas-seccionales-industriales.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puertas-y-fijos-louver.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:puertasresidenciales.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:q-silent-max-eagle-3-4-hp.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:rampa-niveladora-mecanica-blue-giant.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:rampa-niveladora.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:rampas-de-anden-hidraulicas-kelley.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:rampas-de-anden-hidraulicas.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:rampas-de-anden-mecanicas.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:rapida-apilable.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:rapida-enrollable-industrial.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:receptor-para-control-vehiculos.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:residencial.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:retenedor-de-vehiculos.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:retenedor-vehiculos-hvr303.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:retenedores-de-vehiculos.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:rolli-zip.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:rytec.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:sellos-de-anden.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:sellos-para-anden-shelter-de-soporte-flexible.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:sellos-para-anden.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:semaforos-senalizaciones-para-anden.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:serie-620.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:serie-x130-motor-para-cortina-oculto.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:shelter-abrigo-estacionario-blue-giant.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:star4-vehicle-restraint.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:tiras-plasticas.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:vertigo.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical mapping\/ownership: php:wayne-dalton.php",
+            "passed": true
+        },
+        {
+            "test": "A meaningful number of Q01 rows were checked for stability (269)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:puerta-seccional-de-acero-sin-aislamiento-424-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:65",
+            "passed": true
+        },
+        {
+            "test": "page -> product: no separate Page is planned",
+            "passed": true
+        },
+        {
+            "test": "page -> product: content belongs to the product (unambiguous)",
+            "passed": true
+        },
+        {
+            "test": "page -> product: page-sourced PDF reaches the product gallery",
+            "passed": true
+        },
+        {
+            "test": "page -> product: the product's own real photography reaches its gallery",
+            "passed": true
+        },
+        {
+            "test": "page -> product: the hash-verified \"ver ficha\" UI button is excluded, never treated as product photography",
+            "passed": true
+        },
+        {
+            "test": "page -> product: no duplicate images within the merged gallery",
+            "passed": true
+        },
+        {
+            "test": "page -> product: no image in the final gallery is ever a known UI asset: asset:images\/industrial-brown-sectional-steel-model-424-432.jpg",
+            "passed": true
+        },
+        {
+            "test": "page -> product: no image in the final gallery is ever a known UI asset: asset:images\/t424.png",
+            "passed": true
+        },
+        {
+            "test": "page -> product: category unchanged from the underlying R-P01 policy decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:puertas-seccionales-industriales.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: category:8",
+            "passed": true
+        },
+        {
+            "test": "page -> category: no separate Page is planned",
+            "passed": true
+        },
+        {
+            "test": "page -> category: category itself resolves",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:fraccionamientos-y-condominios.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: category:9",
+            "passed": true
+        },
+        {
+            "test": "page -> category (unshadowed): no separate Page is planned",
+            "passed": true
+        },
+        {
+            "test": "page -> category (unshadowed): content belongs to the category",
+            "passed": true
+        },
+        {
+            "test": "page -> category: supported field (image) transfers from image_file_id",
+            "passed": true
+        },
+        {
+            "test": "unsupported field: a category never receives a gallery field the term model does not have (Fields.php\/TermEditor.php define only a single image slot)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:clopay.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: brand:3",
+            "passed": true
+        },
+        {
+            "test": "page -> brand: no separate Page is planned",
+            "passed": true
+        },
+        {
+            "test": "page -> brand: content belongs to the brand",
+            "passed": true
+        },
+        {
+            "test": "page -> brand: supported field (logo) transfers from brand-master.csv:logo",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:system\/files\/images\/categorias\/9022847e37c72e9a2de76dcdf7c2e22b08cf6cb0",
+            "passed": true
+        },
+        {
+            "test": "media owned only by a page becomes an approved migration of its own",
+            "passed": true
+        },
+        {
+            "test": "No path appears twice in a product's own image list: asset:images\/industrial-brown-sectional-steel-model-424-432.jpg",
+            "passed": true
+        },
+        {
+            "test": "No path appears twice in a product's own image list: asset:images\/t424.png",
+            "passed": true
+        },
+        {
+            "test": "Duplicate binary media is not duplicated in the gallery (path=images\/industrial-brown-sectional-steel-model-424-432.jpg, hash=87765af7e439ce26ec19c79feb37614bc30668ec0c8cfa9ed620a1410b7fef22)",
+            "passed": true
+        },
+        {
+            "test": "Duplicate binary media is not duplicated in the gallery (path=images\/t424.png, hash=742d3cc9bd1a8dacc429ddd50abb995a9e629920297604ed62a3534bef489aa8)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:accesspro-fs1000speed.php",
+            "passed": true
+        },
+        {
+            "test": "accesspro-fs1000speed.php now retires via Q01, citing the Q03-GLOBAL winner (sql:productos:1)",
+            "passed": true
+        },
+        {
+            "test": "Page's own reason cites the actual Q03 winner as owner",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:puertas-contra-incendio.php",
+            "passed": true
+        },
+        {
+            "test": "puertas-contra-incendio.php (Q03-GLOBAL approved, but its winner has no extractable content) is left untouched, KEEP_REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:puertas-peatonales-estandar-y-reforzada.php",
+            "passed": true
+        },
+        {
+            "test": "A page shared by two categories is left untouched, KEEP_REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:marcas.php",
+            "passed": true
+        },
+        {
+            "test": "No documented\/approved single owner -> KEEP_REVIEW: php:marcas.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:soluciones.php",
+            "passed": true
+        },
+        {
+            "test": "No documented\/approved single owner -> KEEP_REVIEW: php:soluciones.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:contra-incendio.php",
+            "passed": true
+        },
+        {
+            "test": "No documented\/approved single owner -> KEEP_REVIEW: php:contra-incendio.php",
+            "passed": true
+        },
+        {
+            "test": "Sanity: the Q03 sample group is genuinely not one of the 26 Q02 groups",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:1",
+            "passed": true
+        },
+        {
+            "test": "Q03 group member carries no Q01\/Q02 decision: sql:productos:1",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:109",
+            "passed": true
+        },
+        {
+            "test": "Q03 group member carries no Q01\/Q02 decision: sql:productos:109",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:110",
+            "passed": true
+        },
+        {
+            "test": "Q03 group member carries no Q01\/Q02 decision: sql:productos:110",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:114",
+            "passed": true
+        },
+        {
+            "test": "Q03 group member carries no Q01\/Q02 decision: sql:productos:114",
+            "passed": true
+        },
+        {
+            "test": "Q01-resolved page entry retains its legacy_url for future URL mapping: php:puerta-seccional-de-acero-sin-aislamiento-424-uso-pesado.php",
+            "passed": true
+        },
+        {
+            "test": "Q01-resolved page entry retains its legacy_url for future URL mapping: php:fraccionamientos-y-condominios.php",
+            "passed": true
+        },
+        {
+            "test": "Q01-resolved page entry retains its legacy_url for future URL mapping: php:clopay.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:fichas\/puerta-424.pdf",
+            "passed": true
+        },
+        {
+            "test": "A Q05-approved PDF additionally unlocked by Q01 ownership resolution reaches MIGRATE",
+            "passed": true
+        }
+    ]
+}

@@ -1,0 +1,129 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "Two full DRY RUNs change nothing in the database",
+            "passed": true
+        },
+        {
+            "test": "A full plan remains impossible to execute, Q11 included",
+            "passed": true
+        },
+        {
+            "test": "editorial-decisions.json declares exactly 4 Q11 cases",
+            "passed": true
+        },
+        {
+            "test": "INFRACA case classified as a reference-encoding resolution",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: missing:fichas\/INFRACA-RÁPIDA-APILABLE.pdf",
+            "passed": true
+        },
+        {
+            "test": "INFRACA missing-media stub entity is SKIP (superseded by the real file)",
+            "passed": true
+        },
+        {
+            "test": "INFRACA resolved_path is a real, valid file whose current hash matches the recorded evidence",
+            "passed": true
+        },
+        {
+            "test": "INFRACA referenced and resolved paths are byte-different strings (the whole point: same visual name, different encoding)",
+            "passed": true
+        },
+        {
+            "test": "Sanity: a fabricated similar-looking filename has no Q11 case at all",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: missing:images\/dura.jpg",
+            "passed": true
+        },
+        {
+            "test": "dura.jpg registered explicitly as MISSING_SOURCE_FILE, still REVIEW",
+            "passed": true
+        },
+        {
+            "test": "The nonexistent file itself is never marked MIGRATE",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: static:dura-glide-20003000-puerta.php",
+            "passed": true
+        },
+        {
+            "test": "Dura-Glide product proceeds as a draft despite its missing optional image",
+            "passed": true
+        },
+        {
+            "test": "Dura-Glide gallery correctly excludes only the missing image, never fabricates a replacement",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: missing:images\/magic.jpg",
+            "passed": true
+        },
+        {
+            "test": "magic.jpg registered explicitly as MISSING_SOURCE_FILE, still REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: static:magic-fuerza-del-operador.php",
+            "passed": true
+        },
+        {
+            "test": "Magic product proceeds as a draft despite its missing optional image",
+            "passed": true
+        },
+        {
+            "test": "Magic gallery correctly excludes only the missing image",
+            "passed": true
+        },
+        {
+            "test": "Product status (CREATE_FROM_STATIC) and its missing-media status (REVIEW) are tracked as genuinely separate entities\/actions",
+            "passed": true
+        },
+        {
+            "test": "NOT approved as the same document as SELLOSSOLMMER.pdf by name similarity (explicitly forbidden)",
+            "passed": true
+        },
+        {
+            "test": "SELLOSSOLMMER resolution: resolved_path is real and hash-verified",
+            "passed": true
+        },
+        {
+            "test": "SELLOSSOLMMER resolution rests on a pre-existing SQL\/PMR cross-reference to product 150, not on name similarity",
+            "passed": true
+        },
+        {
+            "test": "The SQL original's own recorded hash matches the resolved file's current hash",
+            "passed": true
+        },
+        {
+            "test": "fichas\/SELLOSSOLMMER.pdf is confirmed a different document by hash (the name-similarity trap correctly avoided)",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: missing:images\/dura.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: missing:images\/magic.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: missing:fichas\/INFRACA-RÁPIDA-APILABLE.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: missing:fichas\/FICHATECNICASELLOSSOLMMERS.pdf",
+            "passed": true
+        },
+        {
+            "test": "All 4 Q11 missing-media stub rows checked for stability (got 4)",
+            "passed": true
+        }
+    ]
+}

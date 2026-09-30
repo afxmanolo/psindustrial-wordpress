@@ -1,0 +1,638 @@
+{
+    "manifest_version": 1,
+    "transform_version": "1.0.0",
+    "run_id": "ca0be2d6-d619-422f-b569-d16e877acd20",
+    "scope": "subset",
+    "environment_id": "76989ec9c283b0d2ce7c5b26a91ddee7b2c247efd5bed3f32e4663502a461efc",
+    "created_at": "2026-09-17T19:53:07+00:00",
+    "mode": "DRY_RUN",
+    "status": "VALIDATED",
+    "cursor": 0,
+    "sources": {
+        "docs\/migration\/product-master.csv": "6c2bd7cecf5fa8e6565fd895de46c698b676ede616c1a32244d348fa32a09d1f",
+        "docs\/migration\/category-master.csv": "2c49030856865e12c73da9f1068200836229de49ca165807b332a40cfa561754",
+        "docs\/migration\/brand-master.csv": "b8aa62aa200fc33b5bfae09ff9fd319f895a6e94735e533ba57ce4010ac9d32c",
+        "docs\/migration\/content-master.csv": "0764717945f966578f77a61c2394125fb1ec1f2b3b2483a3720ec87c944ccec2",
+        "docs\/migration\/media-master.csv": "0b3920aec830bc9929564890eb6fb9a55eb2fe59a9e840919ed39b796d6db384",
+        "docs\/migration\/product-media-relations.csv": "0dcb800c5560d7bb2e058d775ac2447dedf4e72fbd0a3dd4b202c4da7a1f4f70",
+        "docs\/migration\/static-product-supplement.csv": "f09fdc8cbc64a8bebe8bc6c0bc2b5f70d4286ba36e64c804ee015b9b9f1b90bf",
+        "docs\/migration\/canonical-candidate-groups.csv": "757caf2c6e43a40829cb8d48acc1eaa9651fd44eb93bca4e9faf1114f1a1b504",
+        "docs\/migration\/media-usage-evidence.csv": "0dd4b519755d52eb605976cc502f77ec21b96fd127a02dd9437be7d78ac3f553",
+        "docs\/migration\/missing-media-references.csv": "174b203cabc1f2fc7fe5d902fe0e277e885d6d53f0bf817b1691a72f64405edb",
+        "docs\/migration\/page-source-evidence.json": "b0de25d6c428bbefea037328b57536077087273a8e9a2ecf4c5141f0ed0d9717",
+        "legacy\/database\/psindustrial_db.sql": "6ecebb2c1437ad8b2cf305a5824fd7b169db3dd5e9b2bdd5181108e58022d51a",
+        "legacy\/public\/puerta34_administrador.sql": "9ebb9974d99169568870d6115719dda6a5fd2a67902a0a5550e968ef34227f3f",
+        "docs\/seo\/url-master.csv": "19f3e9632c15dab3fb953e7ebedb547c50429976f7c0c0e9839480b88a6a7de7"
+    },
+    "plan_hash": "57a54836f4b3cb7ee98d5c5ce95c3665451b80965db829f7dcb405a01c512fdc",
+    "summary": {
+        "total": 17,
+        "actions": {
+            "CREATE": 15,
+            "REVIEW": 2
+        },
+        "types": {
+            "media": {
+                "CREATE": 8
+            },
+            "category": {
+                "CREATE": 2
+            },
+            "brand": {
+                "CREATE": 1
+            },
+            "product": {
+                "REVIEW": 2,
+                "CREATE": 2
+            },
+            "static_product": {
+                "CREATE": 1
+            },
+            "page": {
+                "CREATE": 1
+            }
+        }
+    },
+    "entries": [
+        {
+            "manifest_version": 1,
+            "entity_key": "asset:fichas\/puerta-420.pdf",
+            "source_key": "asset:fichas\/puerta-420.pdf",
+            "source_namespace": "asset",
+            "source_type": "media",
+            "content_type": "media",
+            "legacy_id": "",
+            "legacy_file": "fichas\/puerta-420.pdf",
+            "legacy_url": "",
+            "source_keys": [
+                "asset:fichas\/puerta-420.pdf",
+                "asset:system\/files\/images\/productos\/9856266836c012c90673224e9379a1a7f4b32389",
+                "file:676"
+            ],
+            "action": "MIGRATE",
+            "status": "PLANNED",
+            "wordpress_id": 0,
+            "confidence": "CONFIRMED",
+            "notes": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Uso explícito en ficha o directorio; bytes y tipo se validan. Para ensayo, dos rutas con mismos bytes y asociación al producto64 comparten adjunto; preservar ambas referencias, sin borrar\/rerutear origen.",
+            "dependencies": [],
+            "approval_ref": "Prompt 6: ensayo privado; subset-decisions.json:asset:fichas\/puerta-420.pdf",
+            "field_ownership": "importer-controlled draft fields; manual edits block whole object",
+            "warnings": [],
+            "binary_aliases": [
+                "system\/files\/images\/productos\/9856266836c012c90673224e9379a1a7f4b32389"
+            ],
+            "source_hash": "8dff5c04fd3132c332696b1ba1228d64073c827d98256c601b857dba38853e9f",
+            "decision_hash": "73c834e3e9f6a9d15f17776b63f403f44da7b6d9f7194f8ff8080b54c289fc88",
+            "target_type": "attachment",
+            "planned_result": "CREATE"
+        },
+        {
+            "manifest_version": 1,
+            "entity_key": "asset:images\/2025-08-21_11h53_44.png",
+            "source_key": "asset:images\/2025-08-21_11h53_44.png",
+            "source_namespace": "asset",
+            "source_type": "media",
+            "content_type": "media",
+            "legacy_id": "",
+            "legacy_file": "images\/2025-08-21_11h53_44.png",
+            "legacy_url": "",
+            "source_keys": [
+                "asset:images\/2025-08-21_11h53_44.png"
+            ],
+            "action": "MIGRATE",
+            "status": "PLANNED",
+            "wordpress_id": 0,
+            "confidence": "CONFIRMED",
+            "notes": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Uso explícito en ficha o directorio; bytes y tipo se validan.",
+            "dependencies": [],
+            "approval_ref": "Prompt 6: ensayo privado; subset-decisions.json:asset:images\/2025-08-21_11h53_44.png",
+            "field_ownership": "importer-controlled draft fields; manual edits block whole object",
+            "warnings": [],
+            "binary_aliases": [],
+            "source_hash": "87c39ea4f5f032f469d006feb5adecfac5b05452357d528be75ad3e2f745eacd",
+            "decision_hash": "13aef6530c9667c6d16f248b30fd026d12f0c29892f63f0ca2957720ead5f3e7",
+            "target_type": "attachment",
+            "planned_result": "CREATE"
+        },
+        {
+            "manifest_version": 1,
+            "entity_key": "asset:images\/piso.jpg",
+            "source_key": "asset:images\/piso.jpg",
+            "source_namespace": "asset",
+            "source_type": "media",
+            "content_type": "media",
+            "legacy_id": "",
+            "legacy_file": "images\/piso.jpg",
+            "legacy_url": "",
+            "source_keys": [
+                "asset:images\/piso.jpg"
+            ],
+            "action": "MIGRATE",
+            "status": "PLANNED",
+            "wordpress_id": 0,
+            "confidence": "CONFIRMED",
+            "notes": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Uso explícito en ficha o directorio; bytes y tipo se validan.",
+            "dependencies": [],
+            "approval_ref": "Prompt 6: ensayo privado; subset-decisions.json:asset:images\/piso.jpg",
+            "field_ownership": "importer-controlled draft fields; manual edits block whole object",
+            "warnings": [],
+            "binary_aliases": [],
+            "source_hash": "15b4be9e599c97232bb6aedb12a4f83b3ef79cbfde1c98e31640a9c32b0abae6",
+            "decision_hash": "13aef6530c9667c6d16f248b30fd026d12f0c29892f63f0ca2957720ead5f3e7",
+            "target_type": "attachment",
+            "planned_result": "CREATE"
+        },
+        {
+            "manifest_version": 1,
+            "entity_key": "asset:images\/puerta-420.jpg",
+            "source_key": "asset:images\/puerta-420.jpg",
+            "source_namespace": "asset",
+            "source_type": "media",
+            "content_type": "media",
+            "legacy_id": "",
+            "legacy_file": "images\/puerta-420.jpg",
+            "legacy_url": "",
+            "source_keys": [
+                "asset:images\/puerta-420.jpg"
+            ],
+            "action": "MIGRATE",
+            "status": "PLANNED",
+            "wordpress_id": 0,
+            "confidence": "CONFIRMED",
+            "notes": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Uso explícito en ficha o directorio; bytes y tipo se validan.",
+            "dependencies": [],
+            "approval_ref": "Prompt 6: ensayo privado; subset-decisions.json:asset:images\/puerta-420.jpg",
+            "field_ownership": "importer-controlled draft fields; manual edits block whole object",
+            "warnings": [],
+            "binary_aliases": [],
+            "source_hash": "45c0a1d4837e0eab5cd3ca4722454a83971d93523de46b8bf3dc9c1bdfb3c644",
+            "decision_hash": "13aef6530c9667c6d16f248b30fd026d12f0c29892f63f0ca2957720ead5f3e7",
+            "target_type": "attachment",
+            "planned_result": "CREATE"
+        },
+        {
+            "manifest_version": 1,
+            "entity_key": "asset:images\/puerta-420t.png",
+            "source_key": "asset:images\/puerta-420t.png",
+            "source_namespace": "asset",
+            "source_type": "media",
+            "content_type": "media",
+            "legacy_id": "",
+            "legacy_file": "images\/puerta-420t.png",
+            "legacy_url": "",
+            "source_keys": [
+                "asset:images\/puerta-420t.png"
+            ],
+            "action": "MIGRATE",
+            "status": "PLANNED",
+            "wordpress_id": 0,
+            "confidence": "CONFIRMED",
+            "notes": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Uso explícito en ficha o directorio; bytes y tipo se validan.",
+            "dependencies": [],
+            "approval_ref": "Prompt 6: ensayo privado; subset-decisions.json:asset:images\/puerta-420t.png",
+            "field_ownership": "importer-controlled draft fields; manual edits block whole object",
+            "warnings": [],
+            "binary_aliases": [],
+            "source_hash": "159594003874ddee4d90232193d52ff86961c5687710971d2a3856e054fe8a58",
+            "decision_hash": "13aef6530c9667c6d16f248b30fd026d12f0c29892f63f0ca2957720ead5f3e7",
+            "target_type": "attachment",
+            "planned_result": "CREATE"
+        },
+        {
+            "manifest_version": 1,
+            "entity_key": "asset:images\/sectional-steel-door-416.jpg",
+            "source_key": "asset:images\/sectional-steel-door-416.jpg",
+            "source_namespace": "asset",
+            "source_type": "media",
+            "content_type": "media",
+            "legacy_id": "",
+            "legacy_file": "images\/sectional-steel-door-416.jpg",
+            "legacy_url": "",
+            "source_keys": [
+                "asset:images\/sectional-steel-door-416.jpg"
+            ],
+            "action": "MIGRATE",
+            "status": "PLANNED",
+            "wordpress_id": 0,
+            "confidence": "CONFIRMED",
+            "notes": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Uso explícito en ficha o directorio; bytes y tipo se validan.",
+            "dependencies": [],
+            "approval_ref": "Prompt 6: ensayo privado; subset-decisions.json:asset:images\/sectional-steel-door-416.jpg",
+            "field_ownership": "importer-controlled draft fields; manual edits block whole object",
+            "warnings": [],
+            "binary_aliases": [],
+            "source_hash": "907e77262a55381a80d1a23caad1c3d897263ccc1f00881fc8d2d00e2b1db6c2",
+            "decision_hash": "13aef6530c9667c6d16f248b30fd026d12f0c29892f63f0ca2957720ead5f3e7",
+            "target_type": "attachment",
+            "planned_result": "CREATE"
+        },
+        {
+            "manifest_version": 1,
+            "entity_key": "asset:images\/tg.png",
+            "source_key": "asset:images\/tg.png",
+            "source_namespace": "asset",
+            "source_type": "media",
+            "content_type": "media",
+            "legacy_id": "",
+            "legacy_file": "images\/tg.png",
+            "legacy_url": "",
+            "source_keys": [
+                "asset:images\/tg.png"
+            ],
+            "action": "MIGRATE",
+            "status": "PLANNED",
+            "wordpress_id": 0,
+            "confidence": "CONFIRMED",
+            "notes": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Uso explícito en ficha o directorio; bytes y tipo se validan.",
+            "dependencies": [],
+            "approval_ref": "Prompt 6: ensayo privado; subset-decisions.json:asset:images\/tg.png",
+            "field_ownership": "importer-controlled draft fields; manual edits block whole object",
+            "warnings": [],
+            "binary_aliases": [],
+            "source_hash": "b2aca41a743971d951e14f6fbf876ed83b16354f8e76eff3097b55c4715e6a5b",
+            "decision_hash": "13aef6530c9667c6d16f248b30fd026d12f0c29892f63f0ca2957720ead5f3e7",
+            "target_type": "attachment",
+            "planned_result": "CREATE"
+        },
+        {
+            "manifest_version": 1,
+            "entity_key": "asset:system\/files\/images\/categorias\/59ca6b73479b3fcde81f96439976896bad94b750",
+            "source_key": "asset:system\/files\/images\/categorias\/59ca6b73479b3fcde81f96439976896bad94b750",
+            "source_namespace": "asset",
+            "source_type": "media",
+            "content_type": "media",
+            "legacy_id": "",
+            "legacy_file": "system\/files\/images\/categorias\/59ca6b73479b3fcde81f96439976896bad94b750",
+            "legacy_url": "",
+            "source_keys": [
+                "asset:system\/files\/images\/categorias\/59ca6b73479b3fcde81f96439976896bad94b750",
+                "file:11"
+            ],
+            "action": "MIGRATE",
+            "status": "PLANNED",
+            "wordpress_id": 0,
+            "confidence": "CONFIRMED",
+            "notes": "Ensayo local: categoría8 imagen file11, firma JPEG y hash deben coincidir; copia con extensión, fuente intacta.",
+            "dependencies": [],
+            "approval_ref": "Prompt 6: ensayo privado; subset-decisions.json:asset:system\/files\/images\/categorias\/59ca6b73479b3fcde81f96439976896bad94b750",
+            "field_ownership": "importer-controlled draft fields; manual edits block whole object",
+            "warnings": [],
+            "binary_aliases": [],
+            "source_hash": "b87014251ef09d993acae88b6a14bbb6afc3e68880d21eb14e5f91716290cb7d",
+            "decision_hash": "187f4af26cc6ef67a237d2667db94b0ab7f224cb9f35b6fddca737efccecd8d5",
+            "target_type": "attachment",
+            "planned_result": "CREATE"
+        },
+        {
+            "manifest_version": 1,
+            "entity_key": "category:1",
+            "source_key": "category:1",
+            "source_namespace": "category",
+            "source_type": "category",
+            "content_type": "category",
+            "legacy_id": "1",
+            "legacy_file": "industrial.php",
+            "legacy_url": "https:\/\/puertasyserviciosindustriales.com\/industrial.php",
+            "source_keys": [
+                "category:1"
+            ],
+            "action": "MIGRATE",
+            "status": "PLANNED",
+            "wordpress_id": 0,
+            "confidence": "STRONG_INFERENCE",
+            "notes": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo.",
+            "dependencies": [],
+            "approval_ref": "Prompt 6: ensayo privado; subset-decisions.json:category:1",
+            "field_ownership": "importer-controlled draft fields; manual edits block whole object",
+            "warnings": [],
+            "source_file_hash": "70c5db3d68b74b86dd7e65f7a37c0b2b7a5890fa3b109d589696e9e538152e2c",
+            "source_hash": "bcb8b8f18e85108e52f29f7e63ba79f50cc1c2b2fac8faa361d17d3991e315ab",
+            "decision_hash": "97b2baf1ad4185c0e34fb196331363474a85b3d44e848f4dcb042a035be5cd29",
+            "target_type": "psi_categoria",
+            "planned_result": "CREATE"
+        },
+        {
+            "manifest_version": 1,
+            "entity_key": "category:8",
+            "source_key": "category:8",
+            "source_namespace": "category",
+            "source_type": "category",
+            "content_type": "category",
+            "legacy_id": "8",
+            "legacy_file": "puertas-seccionales-industriales.php",
+            "legacy_url": "https:\/\/puertasyserviciosindustriales.com\/puertas-seccionales-industriales.php",
+            "source_keys": [
+                "category:8"
+            ],
+            "action": "MIGRATE",
+            "status": "PLANNED",
+            "wordpress_id": 0,
+            "confidence": "STRONG_INFERENCE",
+            "notes": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Padre coincide SQL y navegación.",
+            "dependencies": [
+                "category:1",
+                "asset:system\/files\/images\/categorias\/59ca6b73479b3fcde81f96439976896bad94b750"
+            ],
+            "approval_ref": "Prompt 6: ensayo privado; subset-decisions.json:category:8",
+            "field_ownership": "importer-controlled draft fields; manual edits block whole object",
+            "warnings": [],
+            "source_file_hash": "97d3b75390d2ae60b5fd8339a6492fcd9766a90fdda852a3c5f3522175b99784",
+            "source_hash": "d9e7fa4f561c2c4fb8f1154406457aecdc749edbbf6955e7ba9fb35cd023dc99",
+            "decision_hash": "30685060e5db2c5a3f935c8156de3728762fda5766f5956429e42a2a89fba151",
+            "target_type": "psi_categoria",
+            "planned_result": "CREATE"
+        },
+        {
+            "manifest_version": 1,
+            "entity_key": "brand:1",
+            "source_key": "brand:1",
+            "source_namespace": "brand",
+            "source_type": "brand",
+            "content_type": "brand",
+            "legacy_id": "1",
+            "legacy_file": "overhead-door.php",
+            "legacy_url": "https:\/\/puertasyserviciosindustriales.com\/overhead-door.php",
+            "source_keys": [
+                "brand:1"
+            ],
+            "action": "MIGRATE",
+            "status": "PLANNED",
+            "wordpress_id": 0,
+            "confidence": "UNKNOWN",
+            "notes": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Logo explícito marcas.php:34.",
+            "dependencies": [
+                "asset:images\/tg.png"
+            ],
+            "approval_ref": "Prompt 6: ensayo privado; subset-decisions.json:brand:1",
+            "field_ownership": "importer-controlled draft fields; manual edits block whole object",
+            "warnings": [],
+            "source_file_hash": "dd6305522092453334fc52b2d39c76def8baa81f6c07a9cd7530a41ad38dbfd5",
+            "source_hash": "c5dfad80cf8726ca4a32d03b6d5d0e8742387f5e7dacb9684a505687f251fa13",
+            "decision_hash": "7183a53b215a5353bf248f8ddf52b3440ee1faf724e32ee2c9ad93ba66526a9d",
+            "target_type": "psi_marca",
+            "planned_result": "CREATE"
+        },
+        {
+            "manifest_version": 1,
+            "entity_key": "sql:productos:3",
+            "source_key": "sql:productos:3",
+            "source_namespace": "sql",
+            "source_type": "product",
+            "content_type": "product",
+            "legacy_id": "3",
+            "legacy_file": "rampas-de-anden-hidraulicas-kelley.php",
+            "legacy_url": "https:\/\/puertasyserviciosindustriales.com\/rampas-de-anden-hidraulicas-kelley.php",
+            "source_keys": [
+                "sql:productos:3"
+            ],
+            "action": "REVIEW",
+            "status": "PLANNED",
+            "wordpress_id": 0,
+            "confidence": "STRONG_INFERENCE",
+            "notes": "Maestro REVIEW: identidad, duplicado o excepción editorial; no fusionar ni descartar automáticamente.",
+            "dependencies": [],
+            "approval_ref": "",
+            "field_ownership": "importer-controlled draft fields; manual edits block whole object",
+            "warnings": [],
+            "source_file_hash": "e4d36491b637ea5e4f702192fbc1d00e7f6a92c97d3f40b6e2c04058b602cdac",
+            "legacy_date": "2025-10-01",
+            "source_hash": "2aef733ac1d38af28c91e23eaecdeea05eb7d6bac52f0227603542058042b5a5",
+            "decision_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "target_type": "psi_producto",
+            "planned_result": "REVIEW"
+        },
+        {
+            "manifest_version": 1,
+            "entity_key": "sql:productos:63",
+            "source_key": "sql:productos:63",
+            "source_namespace": "sql",
+            "source_type": "product",
+            "content_type": "product",
+            "legacy_id": "63",
+            "legacy_file": "puerta-seccional-de-acero-sin-aislamiento-416-uso-muy-pesado.php",
+            "legacy_url": "https:\/\/puertasyserviciosindustriales.com\/puerta-seccional-de-acero-sin-aislamiento-416-uso-muy-pesado.php",
+            "source_keys": [
+                "sql:productos:63"
+            ],
+            "action": "MIGRATE",
+            "status": "PLANNED",
+            "wordpress_id": 0,
+            "confidence": "STRONG_INFERENCE",
+            "notes": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Ficha única, sin merge; marca según título\/directorio, STRONG_INFERENCE, no certificación comercial.",
+            "dependencies": [
+                "category:8",
+                "brand:1",
+                "asset:images\/sectional-steel-door-416.jpg",
+                "asset:images\/2025-08-21_11h53_44.png"
+            ],
+            "approval_ref": "Prompt 6: ensayo privado; subset-decisions.json:sql:productos:63",
+            "field_ownership": "importer-controlled draft fields; manual edits block whole object",
+            "warnings": [
+                "Borrador: revisar extracción, títulos, tablas y enlaces antes de publicar; SEO\/rutas sin activar."
+            ],
+            "source_file_hash": "76d7c7ddb03ac05c7e86a3ef99e6dfcbd60743d0d67cc2a797b892a607418846",
+            "seo_evidence": {
+                "title": "Puertas seccionales de acero sin aislamiento 416 (uso muy pesado) | Overhead Door | Marcas ",
+                "headers": [
+                    {
+                        "level": "1",
+                        "text": "Puertas seccionales de acero",
+                        "line": 20
+                    },
+                    {
+                        "level": "2",
+                        "text": "sin aislamiento 416 (uso muy pesado)",
+                        "line": 22
+                    }
+                ],
+                "description": "Productos Puertas seccionales de acero sin aislamiento 416 (uso muy pesado) Marca Overhead Door"
+            },
+            "legacy_date": "2025-10-23",
+            "source_hash": "bf635f78b53f520e7208664138c724b0825819cd88d5b4b0e658b66130b184eb",
+            "decision_hash": "7ec9234737dc878a0d7d4e0eb843b188226ad7ee9ad558698b40261eac00b537",
+            "target_type": "psi_producto",
+            "planned_result": "CREATE"
+        },
+        {
+            "manifest_version": 1,
+            "entity_key": "sql:productos:64",
+            "source_key": "sql:productos:64",
+            "source_namespace": "sql",
+            "source_type": "product",
+            "content_type": "product",
+            "legacy_id": "64",
+            "legacy_file": "puertas-seccionales-de-acero-sin-aislamiento-420-uso-pesado.php",
+            "legacy_url": "https:\/\/puertasyserviciosindustriales.com\/puertas-seccionales-de-acero-sin-aislamiento-420-uso-pesado.php",
+            "source_keys": [
+                "sql:productos:64"
+            ],
+            "action": "MIGRATE",
+            "status": "PLANNED",
+            "wordpress_id": 0,
+            "confidence": "STRONG_INFERENCE",
+            "notes": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Ficha única, sin merge; marca según título\/directorio, STRONG_INFERENCE, no certificación comercial.",
+            "dependencies": [
+                "category:8",
+                "brand:1",
+                "asset:images\/puerta-420.jpg",
+                "asset:images\/puerta-420t.png",
+                "asset:fichas\/puerta-420.pdf"
+            ],
+            "approval_ref": "Prompt 6: ensayo privado; subset-decisions.json:sql:productos:64",
+            "field_ownership": "importer-controlled draft fields; manual edits block whole object",
+            "warnings": [
+                "Borrador: revisar extracción, títulos, tablas y enlaces antes de publicar; SEO\/rutas sin activar."
+            ],
+            "source_file_hash": "a0a65341b2f6cdf121860b8a1b2e2f850fbedae8c01a41765b6b1bd4b2635c1e",
+            "seo_evidence": {
+                "title": "Puertas seccionales de acero sin aislamiento 420 (uso pesado) | Overhead Door | Marcas ",
+                "headers": [
+                    {
+                        "level": "1",
+                        "text": "Puertas seccionales de acero",
+                        "line": 20
+                    },
+                    {
+                        "level": "2",
+                        "text": "Puertas seccionales de acero sin aislamiento 420 (uso pesado)",
+                        "line": 22
+                    }
+                ],
+                "description": "Productos Puertas seccionales de acero sin aislamiento 420 (uso pesado) Marca Overhead Door"
+            },
+            "legacy_date": "2025-10-23",
+            "source_hash": "3b96a29d8e6bebc3e2cc110099732402ccaf944e6537fe5d2c34659b6c88fa37",
+            "decision_hash": "dcfc7f94dec6ab882597a89f82891939b842e98387f3ec6caccc0b322f671d86",
+            "target_type": "psi_producto",
+            "planned_result": "CREATE"
+        },
+        {
+            "manifest_version": 1,
+            "entity_key": "sql:productos:165",
+            "source_key": "sql:productos:165",
+            "source_namespace": "sql",
+            "source_type": "product",
+            "content_type": "product",
+            "legacy_id": "165",
+            "legacy_file": "",
+            "legacy_url": "",
+            "source_keys": [
+                "sql:productos:165"
+            ],
+            "action": "REVIEW",
+            "status": "PLANNED",
+            "wordpress_id": 0,
+            "confidence": "UNKNOWN",
+            "notes": "Maestro REVIEW: identidad, duplicado o excepción editorial; no fusionar ni descartar automáticamente.",
+            "dependencies": [],
+            "approval_ref": "",
+            "field_ownership": "importer-controlled draft fields; manual edits block whole object",
+            "warnings": [],
+            "legacy_date": "2026-03-11",
+            "source_hash": "c996e023aaace24c3e39bca959e04bbed52a542e19e157252e4a0cbe17b9b9e2",
+            "decision_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "target_type": "psi_producto",
+            "planned_result": "REVIEW"
+        },
+        {
+            "manifest_version": 1,
+            "entity_key": "static:automatismos-para-cancelas-cubic.php",
+            "source_key": "static:automatismos-para-cancelas-cubic.php",
+            "source_namespace": "static",
+            "source_type": "static_product",
+            "content_type": "static_product",
+            "legacy_id": "",
+            "legacy_file": "automatismos-para-cancelas-cubic.php",
+            "legacy_url": "https:\/\/puertasyserviciosindustriales.com\/automatismos-para-cancelas-cubic.php",
+            "source_keys": [
+                "static:automatismos-para-cancelas-cubic.php"
+            ],
+            "action": "CREATE_FROM_STATIC",
+            "status": "PLANNED",
+            "wordpress_id": 0,
+            "confidence": "UNKNOWN",
+            "notes": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Texto CUBIC extraído del PHP; marca\/categoría permanecen vacías según suplemento.",
+            "dependencies": [
+                "asset:images\/piso.jpg"
+            ],
+            "approval_ref": "Prompt 6: ensayo privado; subset-decisions.json:static:automatismos-para-cancelas-cubic.php",
+            "field_ownership": "importer-controlled draft fields; manual edits block whole object",
+            "warnings": [
+                "Borrador: revisar extracción, títulos, tablas y enlaces antes de publicar; SEO\/rutas sin activar.",
+                "Sin marca: no inferir fabricante."
+            ],
+            "source_file_hash": "3855b5343ae213037ccb7f312ea02c3a75e038c52506eeb91a4a34207f20d1b1",
+            "seo_evidence": {
+                "title": "",
+                "headers": [
+                    {
+                        "level": "1",
+                        "text": "CUBIC Automatismos ocultos al piso.",
+                        "line": 17
+                    },
+                    {
+                        "level": "5",
+                        "text": "CUBIC Automatismos ocultos al piso.",
+                        "line": 35
+                    }
+                ]
+            },
+            "source_hash": "189d1deb3e9af456161ed2321ad5137e8ca887a318fe9832566b5b4c7c49e74c",
+            "decision_hash": "623e20d5021c93b165dbcda0d5f81bbd7409b33ee0c2a57656ca9c756d889b03",
+            "target_type": "psi_producto",
+            "planned_result": "CREATE"
+        },
+        {
+            "manifest_version": 1,
+            "entity_key": "php:nosotros.php",
+            "source_key": "php:nosotros.php",
+            "source_namespace": "php",
+            "source_type": "page",
+            "content_type": "page",
+            "legacy_id": "",
+            "legacy_file": "nosotros.php",
+            "legacy_url": "https:\/\/puertasyserviciosindustriales.com\/nosotros.php",
+            "source_keys": [
+                "php:nosotros.php"
+            ],
+            "action": "MIGRATE",
+            "status": "PLANNED",
+            "wordpress_id": 0,
+            "confidence": "UNKNOWN",
+            "notes": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. INSTITUTIONAL_PAGE; Page en borrador.",
+            "dependencies": [],
+            "approval_ref": "Prompt 6: ensayo privado; subset-decisions.json:php:nosotros.php",
+            "field_ownership": "importer-controlled draft fields; manual edits block whole object",
+            "warnings": [
+                "Borrador: revisar extracción, títulos, tablas y enlaces antes de publicar; SEO\/rutas sin activar."
+            ],
+            "source_file_hash": "fc792198edf545f27b3bdb61839996107cd513e8e4677509ca8d4c5c21f0c74a",
+            "seo_evidence": {
+                "title": "Nosotros | Quiénes somos ",
+                "headers": [
+                    {
+                        "level": "1",
+                        "text": "Nosotros",
+                        "line": 11
+                    },
+                    {
+                        "level": "2",
+                        "text": "Quiénes somos",
+                        "line": 12
+                    },
+                    {
+                        "level": "3",
+                        "text": "Empresa dedicada a la venta, instalación y mantenimiento de puertas automáticas para diferentes sectores de la industria.",
+                        "line": 27
+                    }
+                ],
+                "description": "Contamos con más de 15 años de experiencia, nos especializamos en la fabricación de puertas y ventanas de alta calidad, utilizando materiales como aluminio y acero inoxidable."
+            },
+            "source_hash": "8cf38ff927015599381db0771af7ff71bcc4ea3eea91d7879f2e7413dfc46bd9",
+            "decision_hash": "a36b704163ff2f5a19beaf37f8802ac130427450245a3c3cdd19d492797b46b9",
+            "target_type": "page",
+            "planned_result": "CREATE"
+        }
+    ],
+    "results": []
+}

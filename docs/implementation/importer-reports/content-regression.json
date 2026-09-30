@@ -1,0 +1,485 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "test": "Active theme and plugin",
+      "passed": true
+    },
+    {
+      "test": "CPT and taxonomy contracts",
+      "passed": true
+    },
+    {
+      "test": "Administrator capabilities",
+      "passed": true
+    },
+    {
+      "test": "Create synthetic term 0",
+      "passed": true
+    },
+    {
+      "test": "Create synthetic term 1",
+      "passed": true
+    },
+    {
+      "test": "Create synthetic term 2",
+      "passed": true
+    },
+    {
+      "test": "Create synthetic term 3",
+      "passed": true
+    },
+    {
+      "test": "REST create product and relations",
+      "passed": true
+    },
+    {
+      "test": "Create synthetic Page",
+      "passed": true
+    },
+    {
+      "test": "Create synthetic media .png",
+      "passed": true
+    },
+    {
+      "test": "Create synthetic media -hero.png",
+      "passed": true
+    },
+    {
+      "test": "Create synthetic media .pdf",
+      "passed": true
+    },
+    {
+      "test": "REST persist all product fields and featured image",
+      "passed": true
+    },
+    {
+      "test": "Round trip _psi_h1",
+      "passed": true
+    },
+    {
+      "test": "Round trip _psi_primary_category_id",
+      "passed": true
+    },
+    {
+      "test": "Round trip _psi_gallery_ids",
+      "passed": true
+    },
+    {
+      "test": "Round trip _psi_datasheets",
+      "passed": true
+    },
+    {
+      "test": "Round trip _psi_videos",
+      "passed": true
+    },
+    {
+      "test": "Brand logo REST round trip",
+      "passed": true
+    },
+    {
+      "test": "Reject PDF as logo",
+      "passed": true
+    },
+    {
+      "test": "Reject image as technical PDF",
+      "passed": true
+    },
+    {
+      "test": "Reject unassigned primary category",
+      "passed": true
+    },
+    {
+      "test": "Reject multiple brands via REST",
+      "passed": true
+    },
+    {
+      "test": "Restore original brand on invalid native write",
+      "passed": true
+    },
+    {
+      "test": "Reject invalid metabox nonce",
+      "passed": true
+    },
+    {
+      "test": "Sanitize metabox and preserve absent fields",
+      "passed": true
+    },
+    {
+      "test": "Reject unsupported video host",
+      "passed": true
+    },
+    {
+      "test": "Parse approved YouTube URL",
+      "passed": true
+    },
+    {
+      "test": "Reject invalid contact setting without mutation",
+      "passed": true
+    },
+    {
+      "test": "Locate front-page.php",
+      "passed": true
+    },
+    {
+      "test": "Locate page.php",
+      "passed": true
+    },
+    {
+      "test": "Locate single-psi_producto.php",
+      "passed": true
+    },
+    {
+      "test": "Locate archive-psi_producto.php",
+      "passed": true
+    },
+    {
+      "test": "Locate taxonomy-psi_categoria.php",
+      "passed": true
+    },
+    {
+      "test": "Locate taxonomy-psi_marca.php",
+      "passed": true
+    },
+    {
+      "test": "Locate 404.php",
+      "passed": true
+    },
+    {
+      "test": "HTTP 200 http://localhost/psindustrial-wordpress/wordpress/",
+      "passed": true
+    },
+    {
+      "test": "Template marker class=\"home ",
+      "passed": true
+    },
+    {
+      "test": "HTTP 200 http://localhost/psindustrial-wordpress/wordpress/psi-smoke-ngmyaida-page/",
+      "passed": true
+    },
+    {
+      "test": "Template marker page-id-169",
+      "passed": true
+    },
+    {
+      "test": "HTTP 200 http://localhost/psindustrial-wordpress/wordpress/producto/psi-smoke-ngmyaida/",
+      "passed": true
+    },
+    {
+      "test": "Template marker single-psi_producto",
+      "passed": true
+    },
+    {
+      "test": "HTTP 200 http://localhost/psindustrial-wordpress/wordpress/productos/",
+      "passed": true
+    },
+    {
+      "test": "Template marker post-type-archive-psi_producto",
+      "passed": true
+    },
+    {
+      "test": "HTTP 200 http://localhost/psindustrial-wordpress/wordpress/categoria/psi-smoke-ngmyaida-0/",
+      "passed": true
+    },
+    {
+      "test": "Template marker tax-psi_categoria",
+      "passed": true
+    },
+    {
+      "test": "HTTP 200 http://localhost/psindustrial-wordpress/wordpress/marca/psi-smoke-ngmyaida-1/",
+      "passed": true
+    },
+    {
+      "test": "Template marker tax-psi_marca",
+      "passed": true
+    },
+    {
+      "test": "HTTP 404 http://localhost/psindustrial-wordpress/wordpress/psi-smoke-NgmYaIDA-missing/",
+      "passed": true
+    },
+    {
+      "test": "Template marker error404",
+      "passed": true
+    },
+    {
+      "test": "HTTP 200 http://localhost/psindustrial-wordpress/wordpress/wp-content/uploads/2026/09/psi-smoke-NgmYaIDA.pdf",
+      "passed": true
+    },
+    {
+      "test": "HTTP 403 http://localhost/psindustrial-wordpress/wordpress/.local/debug.log",
+      "passed": true
+    },
+    {
+      "test": "Anonymous cannot edit product",
+      "passed": true
+    },
+    {
+      "test": "Create temporary subscriber",
+      "passed": true
+    },
+    {
+      "test": "Subscriber cannot edit product metadata",
+      "passed": true
+    },
+    {
+      "test": "Subscriber cannot edit brand logo",
+      "passed": true
+    },
+    {
+      "test": "Create temporary content manager",
+      "passed": true
+    },
+    {
+      "test": "Manager allowed edit_psi_productos",
+      "passed": true
+    },
+    {
+      "test": "Manager allowed publish_psi_productos",
+      "passed": true
+    },
+    {
+      "test": "Manager allowed edit_pages",
+      "passed": true
+    },
+    {
+      "test": "Manager allowed publish_pages",
+      "passed": true
+    },
+    {
+      "test": "Manager allowed upload_files",
+      "passed": true
+    },
+    {
+      "test": "Manager allowed psi_edit_media",
+      "passed": true
+    },
+    {
+      "test": "Manager allowed psi_manage_categories",
+      "passed": true
+    },
+    {
+      "test": "Manager allowed psi_manage_brands",
+      "passed": true
+    },
+    {
+      "test": "Manager allowed psi_edit_contact_settings",
+      "passed": true
+    },
+    {
+      "test": "Manager denied manage_options",
+      "passed": true
+    },
+    {
+      "test": "Manager denied edit_posts",
+      "passed": true
+    },
+    {
+      "test": "Manager denied delete_posts",
+      "passed": true
+    },
+    {
+      "test": "Manager denied install_plugins",
+      "passed": true
+    },
+    {
+      "test": "Manager denied edit_plugins",
+      "passed": true
+    },
+    {
+      "test": "Manager denied edit_themes",
+      "passed": true
+    },
+    {
+      "test": "Manager denied edit_users",
+      "passed": true
+    },
+    {
+      "test": "Manager denied create_users",
+      "passed": true
+    },
+    {
+      "test": "Manager denied update_core",
+      "passed": true
+    },
+    {
+      "test": "Manager denied export",
+      "passed": true
+    },
+    {
+      "test": "Manager denied unfiltered_html",
+      "passed": true
+    },
+    {
+      "test": "Manager denied psi_manage_migration",
+      "passed": true
+    },
+    {
+      "test": "Manager denied psi_manage_routes",
+      "passed": true
+    },
+    {
+      "test": "Manager denied psi_manage_structure",
+      "passed": true
+    },
+    {
+      "test": "Manager denied psi_delete_categories",
+      "passed": true
+    },
+    {
+      "test": "Manager denied psi_delete_brands",
+      "passed": true
+    },
+    {
+      "test": "Manager edits another author product",
+      "passed": true
+    },
+    {
+      "test": "Manager edits Page",
+      "passed": true
+    },
+    {
+      "test": "Manager edits shared attachment through REST",
+      "passed": true
+    },
+    {
+      "test": "Manager cannot delete media or public product",
+      "passed": true
+    },
+    {
+      "test": "REST media deletion denied",
+      "passed": true
+    },
+    {
+      "test": "REST published product slug protected",
+      "passed": true
+    },
+    {
+      "test": "REST withdrawal of public Page denied",
+      "passed": true
+    },
+    {
+      "test": "Native write preserves public route and status",
+      "passed": true
+    },
+    {
+      "test": "Cannot publish before review",
+      "passed": true
+    },
+    {
+      "test": "Manager creates incomplete draft",
+      "passed": true
+    },
+    {
+      "test": "Manager may delete own draft",
+      "passed": true
+    },
+    {
+      "test": "Manager publishes reviewed product without invented brand",
+      "passed": true
+    },
+    {
+      "test": "Related product cannot reference itself",
+      "passed": true
+    },
+    {
+      "test": "Private source metadata protected from manager",
+      "passed": true
+    },
+    {
+      "test": "Manager creates child category and metadata",
+      "passed": true
+    },
+    {
+      "test": "Hierarchy and safe default review state",
+      "passed": true
+    },
+    {
+      "test": "Manager cannot move public category",
+      "passed": true
+    },
+    {
+      "test": "Native term write preserves public parent and saves allowed description",
+      "passed": true
+    },
+    {
+      "test": "Manager cannot delete terms",
+      "passed": true
+    },
+    {
+      "test": "Manager cannot withdraw public brand",
+      "passed": true
+    },
+    {
+      "test": "HTTP 404 http://localhost/psindustrial-wordpress/wordpress/categoria/psi-smoke-ngmyaida-child/",
+      "passed": true
+    },
+    {
+      "test": "Anonymous cannot read review term through REST",
+      "passed": true
+    },
+    {
+      "test": "Anonymous REST list excludes review terms",
+      "passed": true
+    },
+    {
+      "test": "Manager settings sanitized; private recipient protected",
+      "passed": true
+    },
+    {
+      "test": "Settings API uses scoped permission",
+      "passed": true
+    },
+    {
+      "test": "Settings API stores sanitized option",
+      "passed": true
+    },
+    {
+      "test": "WhatsApp URL derives from single settings source",
+      "passed": true
+    },
+    {
+      "test": "Option guard preserves Administrator recipient on real manager write",
+      "passed": true
+    },
+    {
+      "test": "Administrator cannot create category cycle",
+      "passed": true
+    },
+    {
+      "test": "Even Administrator cannot delete referenced media",
+      "passed": true
+    },
+    {
+      "test": "MIME bytes reject fake PDF upload",
+      "passed": true
+    },
+    {
+      "test": "Reject executable double extension",
+      "passed": true
+    },
+    {
+      "test": "Gallery cannot duplicate featured image",
+      "passed": true
+    },
+    {
+      "test": "Create native revision with metadata",
+      "passed": true
+    },
+    {
+      "test": "Restore editorial metadata from revision",
+      "passed": true
+    },
+    {
+      "test": "Review category can be deliberately published",
+      "passed": true
+    },
+    {
+      "test": "Category archive excludes automatically inherited child products",
+      "passed": true
+    },
+    {
+      "test": "Negative image IDs are rejected rather than coerced",
+      "passed": true
+    }
+  ]
+}

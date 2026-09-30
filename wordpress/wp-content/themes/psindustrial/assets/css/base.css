@@ -1,0 +1,21 @@
+/* Temporary bootstrap styles, not the legacy visual reconstruction. */
+:root { color-scheme: light; font-family: system-ui, sans-serif; color: #172b3a; background: #fff; line-height: 1.6; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.shell { width: min(1120px, 92%); margin-inline: auto; }
+main { min-height: 65vh; padding-block: 2rem; }
+a { color: #154f72; }
+a:focus-visible, button:focus-visible { outline: 3px solid #a55000; outline-offset: 4px; }
+img { max-width: 100%; height: auto; }
+.site-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid #ccd5db; padding-block: 1rem; }
+.site-title { font-weight: 700; text-decoration: none; }
+nav a { margin-inline-end: 1rem; }
+nav ul { display: flex; flex-wrap: wrap; gap: 1rem; list-style: none; padding: 0; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 1.5rem; }
+.product-card { border: 1px solid #ccd5db; border-radius: .3rem; padding: 1rem; }
+.site-footer { border-top: 1px solid #ccd5db; font-size: .9rem; padding-block: 1rem; }
+.skip-link { position: absolute; inset-inline-start: -10000px; }
+.skip-link:focus { inset-inline-start: 1rem; top: 1rem; background: #fff; padding: 1rem; z-index: 10; }
+button { font: inherit; }
+@media (min-width: 700px) { .nav-toggle { display: none; } #site-navigation[hidden] { display: block; } }
+

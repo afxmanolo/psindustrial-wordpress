@@ -1,0 +1,1105 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "Two full DRY RUNs change nothing in the database",
+            "passed": true
+        },
+        {
+            "test": "A full plan remains impossible to execute, Q03 included",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:1",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:109",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:110",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:114",
+            "passed": true
+        },
+        {
+            "test": "Group accesspro-fs1000speed.php: exactly one winner entity",
+            "passed": true
+        },
+        {
+            "test": "Group accesspro-fs1000speed.php: every other member is SKIP, citing the winner",
+            "passed": true
+        },
+        {
+            "test": "Group accesspro-fs1000speed.php: no member left stranded in plain REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:10",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:93",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:127",
+            "passed": true
+        },
+        {
+            "test": "Group cortina-serie-600.php: exactly one winner entity",
+            "passed": true
+        },
+        {
+            "test": "Group cortina-serie-600.php: every other member is SKIP, citing the winner",
+            "passed": true
+        },
+        {
+            "test": "Group cortina-serie-600.php: no member left stranded in plain REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:28",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:118",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:129",
+            "passed": true
+        },
+        {
+            "test": "Group puertas-blindadas.php: exactly one winner entity",
+            "passed": true
+        },
+        {
+            "test": "Group puertas-blindadas.php: every other member is SKIP, citing the winner",
+            "passed": true
+        },
+        {
+            "test": "Group puertas-blindadas.php: no member left stranded in plain REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:29",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:116",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:130",
+            "passed": true
+        },
+        {
+            "test": "Blocked group puertas-contra-incendio.php: ALL members stay plain REVIEW, none orphaned as SKIP citing a non-existent winner",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:31",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:119",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:131",
+            "passed": true
+        },
+        {
+            "test": "Blocked group puerta-estandar.php: ALL members stay plain REVIEW, none orphaned as SKIP citing a non-existent winner",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:32",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:120",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:132",
+            "passed": true
+        },
+        {
+            "test": "Blocked group puerta-estandar-reforzada.php: ALL members stay plain REVIEW, none orphaned as SKIP citing a non-existent winner",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:33",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:122",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:133",
+            "passed": true
+        },
+        {
+            "test": "Group puerta-holandesa.php: exactly one winner entity",
+            "passed": true
+        },
+        {
+            "test": "Group puerta-holandesa.php: every other member is SKIP, citing the winner",
+            "passed": true
+        },
+        {
+            "test": "Group puerta-holandesa.php: no member left stranded in plain REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:35",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:121",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:134",
+            "passed": true
+        },
+        {
+            "test": "Group puerta-y-fijos-louver.php: exactly one winner entity",
+            "passed": true
+        },
+        {
+            "test": "Group puerta-y-fijos-louver.php: every other member is SKIP, citing the winner",
+            "passed": true
+        },
+        {
+            "test": "Group puerta-y-fijos-louver.php: no member left stranded in plain REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:44",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:123",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:125",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:135",
+            "passed": true
+        },
+        {
+            "test": "Group barreras-estacionamiento-moovi50rm.php: exactly one winner entity",
+            "passed": true
+        },
+        {
+            "test": "Group barreras-estacionamiento-moovi50rm.php: every other member is SKIP, citing the winner",
+            "passed": true
+        },
+        {
+            "test": "Group barreras-estacionamiento-moovi50rm.php: no member left stranded in plain REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:47",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:80",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:113",
+            "passed": true
+        },
+        {
+            "test": "Group p45-7-piston-hidraulico-para-puerta-abatible.php: exactly one winner entity",
+            "passed": true
+        },
+        {
+            "test": "Group p45-7-piston-hidraulico-para-puerta-abatible.php: every other member is SKIP, citing the winner",
+            "passed": true
+        },
+        {
+            "test": "Group p45-7-piston-hidraulico-para-puerta-abatible.php: no member left stranded in plain REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:48",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:79",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:112",
+            "passed": true
+        },
+        {
+            "test": "Group lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php: exactly one winner entity",
+            "passed": true
+        },
+        {
+            "test": "Group lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php: every other member is SKIP, citing the winner",
+            "passed": true
+        },
+        {
+            "test": "Group lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php: no member left stranded in plain REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:49",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:76",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:124",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:126",
+            "passed": true
+        },
+        {
+            "test": "Group icaro-smart.php: exactly one winner entity",
+            "passed": true
+        },
+        {
+            "test": "Group icaro-smart.php: every other member is SKIP, citing the winner",
+            "passed": true
+        },
+        {
+            "test": "Group icaro-smart.php: no member left stranded in plain REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:54",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:89",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:136",
+            "passed": true
+        },
+        {
+            "test": "Group cortina-plana.php: exactly one winner entity",
+            "passed": true
+        },
+        {
+            "test": "Group cortina-plana.php: every other member is SKIP, citing the winner",
+            "passed": true
+        },
+        {
+            "test": "Group cortina-plana.php: no member left stranded in plain REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:55",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:90",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:137",
+            "passed": true
+        },
+        {
+            "test": "Group cortina-europea.php: exactly one winner entity",
+            "passed": true
+        },
+        {
+            "test": "Group cortina-europea.php: every other member is SKIP, citing the winner",
+            "passed": true
+        },
+        {
+            "test": "Group cortina-europea.php: no member left stranded in plain REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:78",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:84",
+            "passed": true
+        },
+        {
+            "test": "Group operador-para-perfilados-comerciales-sel.php: exactly one winner entity",
+            "passed": true
+        },
+        {
+            "test": "Group operador-para-perfilados-comerciales-sel.php: every other member is SKIP, citing the winner",
+            "passed": true
+        },
+        {
+            "test": "Group operador-para-perfilados-comerciales-sel.php: no member left stranded in plain REVIEW",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:96",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:128",
+            "passed": true
+        },
+        {
+            "test": "Group cortinas-ventiladas-685.php: exactly one winner entity",
+            "passed": true
+        },
+        {
+            "test": "Group cortinas-ventiladas-685.php: every other member is SKIP, citing the winner",
+            "passed": true
+        },
+        {
+            "test": "Group cortinas-ventiladas-685.php: no member left stranded in plain REVIEW",
+            "passed": true
+        },
+        {
+            "test": "13 of the 16 Q03-GLOBAL groups consolidate (13)",
+            "passed": true
+        },
+        {
+            "test": "3 of the 16 Q03-GLOBAL groups correctly refuse (no static body to extract) (3)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:28",
+            "passed": true
+        },
+        {
+            "test": "puertas-blindadas.php winner (id 28) is MERGE",
+            "passed": true
+        },
+        {
+            "test": "Category UNION is 19+32 (both demonstrated sections), never the winner's scalar alone",
+            "passed": true
+        },
+        {
+            "test": "Sanity: source data already documents both categories for id 28",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:49",
+            "passed": true
+        },
+        {
+            "test": "icaro-smart.php: 3-category union correct (9|11|18)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:1",
+            "passed": true
+        },
+        {
+            "test": "accesspro-fs1000speed.php member 1 has a decision (no stranded member)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:109",
+            "passed": true
+        },
+        {
+            "test": "accesspro-fs1000speed.php member 109 has a decision (no stranded member)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:110",
+            "passed": true
+        },
+        {
+            "test": "accesspro-fs1000speed.php member 110 has a decision (no stranded member)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:114",
+            "passed": true
+        },
+        {
+            "test": "accesspro-fs1000speed.php member 114 has a decision (no stranded member)",
+            "passed": true
+        },
+        {
+            "test": "accesspro-fs1000speed.php (4 legacy rows) produces exactly ONE psi_producto entity, never four",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:44",
+            "passed": true
+        },
+        {
+            "test": "MOOVI: identity still consolidates",
+            "passed": true
+        },
+        {
+            "test": "MOOVI: brand is NOT auto-assigned despite brand_id agreement, because Policy::BRAND_CONFLICT_PRODUCTS flags these ids",
+            "passed": true
+        },
+        {
+            "test": "MOOVI: field_provenance records BRAND_UNRESOLVED_Q09",
+            "passed": true
+        },
+        {
+            "test": "Sanity: id 44 is genuinely in Policy::BRAND_CONFLICT_PRODUCTS",
+            "passed": true
+        },
+        {
+            "test": "Policy::brand_conflict_products() accessor returns exactly the same list as the private constant",
+            "passed": true
+        },
+        {
+            "test": "accesspro-fs1000speed.php: no primary_category key invented",
+            "passed": true
+        },
+        {
+            "test": "accesspro-fs1000speed.php: no breadcrumb_category key invented",
+            "passed": true
+        },
+        {
+            "test": "accesspro-fs1000speed.php: no SEO primary taxonomy meta invented",
+            "passed": true
+        },
+        {
+            "test": "cortina-serie-600.php: no primary_category key invented",
+            "passed": true
+        },
+        {
+            "test": "cortina-serie-600.php: no breadcrumb_category key invented",
+            "passed": true
+        },
+        {
+            "test": "cortina-serie-600.php: no SEO primary taxonomy meta invented",
+            "passed": true
+        },
+        {
+            "test": "puertas-blindadas.php: no primary_category key invented",
+            "passed": true
+        },
+        {
+            "test": "puertas-blindadas.php: no breadcrumb_category key invented",
+            "passed": true
+        },
+        {
+            "test": "puertas-blindadas.php: no SEO primary taxonomy meta invented",
+            "passed": true
+        },
+        {
+            "test": "puerta-holandesa.php: no primary_category key invented",
+            "passed": true
+        },
+        {
+            "test": "puerta-holandesa.php: no breadcrumb_category key invented",
+            "passed": true
+        },
+        {
+            "test": "puerta-holandesa.php: no SEO primary taxonomy meta invented",
+            "passed": true
+        },
+        {
+            "test": "puerta-y-fijos-louver.php: no primary_category key invented",
+            "passed": true
+        },
+        {
+            "test": "puerta-y-fijos-louver.php: no breadcrumb_category key invented",
+            "passed": true
+        },
+        {
+            "test": "puerta-y-fijos-louver.php: no SEO primary taxonomy meta invented",
+            "passed": true
+        },
+        {
+            "test": "barreras-estacionamiento-moovi50rm.php: no primary_category key invented",
+            "passed": true
+        },
+        {
+            "test": "barreras-estacionamiento-moovi50rm.php: no breadcrumb_category key invented",
+            "passed": true
+        },
+        {
+            "test": "barreras-estacionamiento-moovi50rm.php: no SEO primary taxonomy meta invented",
+            "passed": true
+        },
+        {
+            "test": "p45-7-piston-hidraulico-para-puerta-abatible.php: no primary_category key invented",
+            "passed": true
+        },
+        {
+            "test": "p45-7-piston-hidraulico-para-puerta-abatible.php: no breadcrumb_category key invented",
+            "passed": true
+        },
+        {
+            "test": "p45-7-piston-hidraulico-para-puerta-abatible.php: no SEO primary taxonomy meta invented",
+            "passed": true
+        },
+        {
+            "test": "lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php: no primary_category key invented",
+            "passed": true
+        },
+        {
+            "test": "lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php: no breadcrumb_category key invented",
+            "passed": true
+        },
+        {
+            "test": "lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php: no SEO primary taxonomy meta invented",
+            "passed": true
+        },
+        {
+            "test": "icaro-smart.php: no primary_category key invented",
+            "passed": true
+        },
+        {
+            "test": "icaro-smart.php: no breadcrumb_category key invented",
+            "passed": true
+        },
+        {
+            "test": "icaro-smart.php: no SEO primary taxonomy meta invented",
+            "passed": true
+        },
+        {
+            "test": "cortina-plana.php: no primary_category key invented",
+            "passed": true
+        },
+        {
+            "test": "cortina-plana.php: no breadcrumb_category key invented",
+            "passed": true
+        },
+        {
+            "test": "cortina-plana.php: no SEO primary taxonomy meta invented",
+            "passed": true
+        },
+        {
+            "test": "cortina-europea.php: no primary_category key invented",
+            "passed": true
+        },
+        {
+            "test": "cortina-europea.php: no breadcrumb_category key invented",
+            "passed": true
+        },
+        {
+            "test": "cortina-europea.php: no SEO primary taxonomy meta invented",
+            "passed": true
+        },
+        {
+            "test": "operador-para-perfilados-comerciales-sel.php: no primary_category key invented",
+            "passed": true
+        },
+        {
+            "test": "operador-para-perfilados-comerciales-sel.php: no breadcrumb_category key invented",
+            "passed": true
+        },
+        {
+            "test": "operador-para-perfilados-comerciales-sel.php: no SEO primary taxonomy meta invented",
+            "passed": true
+        },
+        {
+            "test": "cortinas-ventiladas-685.php: no primary_category key invented",
+            "passed": true
+        },
+        {
+            "test": "cortinas-ventiladas-685.php: no breadcrumb_category key invented",
+            "passed": true
+        },
+        {
+            "test": "cortinas-ventiladas-685.php: no SEO primary taxonomy meta invented",
+            "passed": true
+        },
+        {
+            "test": "Sanity: all 3 puertas-blindadas.php rows already share exactly one legacy URL",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/13.0.Folleto-Operador-AccessPRO-FS1000-SPEED-hoja-tecnica.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/CORTINA-EUROPEA.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/CORTINA-PLANA.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/moovi50rm.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/pistones-hidraulicos-lux.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/pistones-hidraulicos-p457.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/Puerta-Blindada1.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/Puerta-Holandesa-Door-Lock.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/rmx-commercial-operator-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/rolling-service-doors-600-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/security-grilles-681-685-brochure.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:fichas\/Ventana-blindad-y-pasa-documentos.pdf",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/2025-08-21_12h27_43.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/accesspro.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/blindada.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/blindada3.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/blindadas.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/cortina-685.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/cortina.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/cortina2.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/cortina_europea.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/detalle_plana.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/europea.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/forma.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/holandesa.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/Icaro.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/louver1.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/louver2.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/lux2b.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/moovi50rm.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/p4.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/p457.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/puerta-holandesa.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/rmx.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/serie-600.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/serie_600.png",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:system\/files\/images\/productos\/178b1ba338c75e76a62f9528efc0c0d4fc58398a",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:system\/files\/images\/productos\/3d2afaf79288b7dc59b91253693d2e7c5bb079ed",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:system\/files\/images\/productos\/4c235320c6c73cff73a7e701b74b8e5fd0417378",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:system\/files\/images\/productos\/a55fa2df012da03804394e857fc5e09ed6a69191",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:system\/files\/images\/productos\/e6d8a9c021af46599e25526f7afa2c9689eba705",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:1",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:10",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:28",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:33",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:35",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:44",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:47",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:48",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:49",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:54",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:55",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:76",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:78",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:79",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:80",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:84",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:89",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:90",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:93",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:96",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:109",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:110",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:112",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:113",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:114",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:118",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:121",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:122",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:123",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:124",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:125",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:126",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:127",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:128",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:129",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:133",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:134",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:135",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:136",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: sql:productos:137",
+            "passed": true
+        },
+        {
+            "test": "A meaningful number of Q03-GLOBAL rows checked for stability (81)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:3",
+            "passed": true
+        },
+        {
+            "test": "id 3 (a different Q03 sub-decision) never receives a Q03-GLOBAL decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:24",
+            "passed": true
+        },
+        {
+            "test": "id 24 (a different Q03 sub-decision) never receives a Q03-GLOBAL decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:139",
+            "passed": true
+        },
+        {
+            "test": "id 139 (a different Q03 sub-decision) never receives a Q03-GLOBAL decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:6",
+            "passed": true
+        },
+        {
+            "test": "id 6 (a different Q03 sub-decision) never receives a Q03-GLOBAL decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:16",
+            "passed": true
+        },
+        {
+            "test": "id 16 (a different Q03 sub-decision) never receives a Q03-GLOBAL decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:20",
+            "passed": true
+        },
+        {
+            "test": "id 20 (a different Q03 sub-decision) never receives a Q03-GLOBAL decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:107",
+            "passed": true
+        },
+        {
+            "test": "id 107 (a different Q03 sub-decision) never receives a Q03-GLOBAL decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:150",
+            "passed": true
+        },
+        {
+            "test": "id 150 (Q09 territory, not any Q03 group) untouched by Q03",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:33",
+            "passed": true
+        },
+        {
+            "test": "puerta-holandesa.php: id 33 (oldest, non-empty, AGREED across all 3) remains winner",
+            "passed": true
+        },
+        {
+            "test": "accesspro-fs1000speed.php: winner (id 1) is never the empty-description member when a populated sibling exists",
+            "passed": true
+        },
+        {
+            "test": "cortina-serie-600.php: winner (id 10) is never the empty-description member when a populated sibling exists",
+            "passed": true
+        },
+        {
+            "test": "puertas-blindadas.php: winner (id 28) is never the empty-description member when a populated sibling exists",
+            "passed": true
+        },
+        {
+            "test": "puerta-holandesa.php: winner (id 33) is never the empty-description member when a populated sibling exists",
+            "passed": true
+        },
+        {
+            "test": "puerta-y-fijos-louver.php: winner (id 35) is never the empty-description member when a populated sibling exists",
+            "passed": true
+        },
+        {
+            "test": "barreras-estacionamiento-moovi50rm.php: winner (id 44) is never the empty-description member when a populated sibling exists",
+            "passed": true
+        },
+        {
+            "test": "p45-7-piston-hidraulico-para-puerta-abatible.php: winner (id 47) is never the empty-description member when a populated sibling exists",
+            "passed": true
+        },
+        {
+            "test": "lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php: winner (id 48) is never the empty-description member when a populated sibling exists",
+            "passed": true
+        },
+        {
+            "test": "icaro-smart.php: winner (id 49) is never the empty-description member when a populated sibling exists",
+            "passed": true
+        },
+        {
+            "test": "cortina-plana.php: winner (id 54) is never the empty-description member when a populated sibling exists",
+            "passed": true
+        },
+        {
+            "test": "cortina-europea.php: winner (id 55) is never the empty-description member when a populated sibling exists",
+            "passed": true
+        },
+        {
+            "test": "operador-para-perfilados-comerciales-sel.php: winner (id 78) is never the empty-description member when a populated sibling exists",
+            "passed": true
+        },
+        {
+            "test": "cortinas-ventiladas-685.php: winner (id 96) is never the empty-description member when a populated sibling exists",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:28",
+            "passed": true
+        },
+        {
+            "test": "puertas-blindadas.php: 3 genuinely different non-empty descriptions -> CONFLICT, recorded honestly",
+            "passed": true
+        },
+        {
+            "test": "CONFLICT never claims a single source_id (nothing was synthesized or picked)",
+            "passed": true
+        },
+        {
+            "test": "Identity still consolidates despite the description conflict (the two are separate axes)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:33",
+            "passed": true
+        },
+        {
+            "test": "puerta-holandesa.php: identical non-empty descriptions -> AGREED with a definite source",
+            "passed": true
+        }
+    ]
+}

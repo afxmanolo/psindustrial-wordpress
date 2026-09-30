@@ -1,0 +1,241 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "A Page missing at its path is created",
+            "passed": true
+        },
+        {
+            "test": "The created Page is genuinely published (Editorial guard satisfied via meta_input, not bypassed)",
+            "passed": true
+        },
+        {
+            "test": "The created Page carries _psi_review_state=approved, the same guard every other publish respects",
+            "passed": true
+        },
+        {
+            "test": "Title and a real non-empty excerpt were set",
+            "passed": true
+        },
+        {
+            "test": "A second resolution of the same slug reuses the existing Page, never creates a duplicate",
+            "passed": true
+        },
+        {
+            "test": "Exactly one Page exists at that path in the database, not two",
+            "passed": true
+        },
+        {
+            "test": "Two independently-created Pages get two different, environment-assigned post IDs -- neither is fixed\/expected",
+            "passed": true
+        },
+        {
+            "test": "Sanity: the real Soluciones Page (this environment: ID 2048) is a third, independent ID from both fixtures -- proves IDs are read, never assumed",
+            "passed": true
+        },
+        {
+            "test": "Fixture: the real 'soluciones' Page already exists on this environment (created 2026-09-24, before this portability fix)",
+            "passed": true
+        },
+        {
+            "test": "resolve_page() correctly recognizes the real, already-existing 'soluciones' Page and reuses it rather than creating a second one",
+            "passed": true
+        },
+        {
+            "test": "Fixture: the real 'marcas' Page already exists on this environment (created 2026-09-24, before this portability fix)",
+            "passed": true
+        },
+        {
+            "test": "resolve_page() correctly recognizes the real, already-existing 'marcas' Page and reuses it rather than creating a second one",
+            "passed": true
+        },
+        {
+            "test": "published_page_url('soluciones') matches this environment's real, current permalink",
+            "passed": true
+        },
+        {
+            "test": "Structural: inc\/soluciones.php never hardcodes the local post IDs 2048\/2049",
+            "passed": true
+        },
+        {
+            "test": "Structural: inc\/soluciones.php never calls get_permalink() with a literal id -- always published_page_url()\/get_term_link()",
+            "passed": true
+        },
+        {
+            "test": "Structural: page-nosotros.php never hardcodes the local post IDs 2048\/2049",
+            "passed": true
+        },
+        {
+            "test": "Structural: page-nosotros.php never calls get_permalink() with a literal id -- always published_page_url()\/get_term_link()",
+            "passed": true
+        },
+        {
+            "test": "Structural: front-page.php never hardcodes the local post IDs 2048\/2049",
+            "passed": true
+        },
+        {
+            "test": "Structural: front-page.php never calls get_permalink() with a literal id -- always published_page_url()\/get_term_link()",
+            "passed": true
+        },
+        {
+            "test": "Structural: template-parts\/site\/catalog-header.php never hardcodes the local post IDs 2048\/2049",
+            "passed": true
+        },
+        {
+            "test": "Structural: template-parts\/site\/catalog-header.php never calls get_permalink() with a literal id -- always published_page_url()\/get_term_link()",
+            "passed": true
+        },
+        {
+            "test": "Fixture: a rule exists for soluciones.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: the soluciones.php rule carries no wp_id at all",
+            "passed": true
+        },
+        {
+            "test": "Structural: it carries page_path='soluciones' instead",
+            "passed": true
+        },
+        {
+            "test": "Fixture: a rule exists for marcas.php",
+            "passed": true
+        },
+        {
+            "test": "Structural: the marcas.php rule carries no wp_id at all",
+            "passed": true
+        },
+        {
+            "test": "Structural: it carries page_path='marcas' instead",
+            "passed": true
+        },
+        {
+            "test": "destination() ignores a present-but-wrong wp_id for a page_path rule and still resolves correctly",
+            "passed": true
+        },
+        {
+            "test": "Real HTTP: \/soluciones.php still 301s to the real current Page, resolved by path",
+            "passed": true
+        },
+        {
+            "test": "Real HTTP: \/marcas.php still 301s to the real current Page, resolved by path",
+            "passed": true
+        },
+        {
+            "test": "Empty contact_address is migrated (item 8)",
+            "passed": true
+        },
+        {
+            "test": "Known placeholder contact_phone (4774103773) is migrated (item 8)",
+            "passed": true
+        },
+        {
+            "test": "Known placeholder contact_email (contacto@contacto.com) is migrated (item 8)",
+            "passed": true
+        },
+        {
+            "test": "A legitimate, already-set mail_recipient is left alone, not silently overwritten (item 9)",
+            "passed": true
+        },
+        {
+            "test": "The migrated contact_address actually holds the client-confirmed value",
+            "passed": true
+        },
+        {
+            "test": "The untouched mail_recipient still holds the legitimate value it had before this run, not the target and not empty",
+            "passed": true
+        },
+        {
+            "test": "Fixture: a temporary psi_gestor user was created for this proof only",
+            "passed": true
+        },
+        {
+            "test": "Fixture: psi_gestor genuinely lacks manage_options",
+            "passed": true
+        },
+        {
+            "test": "mail_recipient is not migrated by a visitor without manage_options -- reported pending_capability, not silently skipped or forced",
+            "passed": true
+        },
+        {
+            "test": "The other placeholder fields still migrate under psi_gestor -- the capability gate is scoped to mail_recipient alone",
+            "passed": true
+        },
+        {
+            "test": "mail_recipient genuinely was not written to the option",
+            "passed": true
+        },
+        {
+            "test": "The same still-empty field is picked up and migrated as soon as a real Administrator is the one running it -- retried, not stuck",
+            "passed": true
+        },
+        {
+            "test": "Sanity: real settings are restored to exactly their pre-test value before exercising run() for real",
+            "passed": true
+        },
+        {
+            "test": "Running the real migration twice in a row produces an identical report -- the second run changes nothing",
+            "passed": true
+        },
+        {
+            "test": "Against this environment's already-correct real settings, contact_address resolves to already_set\/skipped_existing, never migrated again",
+            "passed": true
+        },
+        {
+            "test": "Against this environment's already-correct real settings, contact_phone resolves to already_set\/skipped_existing, never migrated again",
+            "passed": true
+        },
+        {
+            "test": "Against this environment's already-correct real settings, contact_email resolves to already_set\/skipped_existing, never migrated again",
+            "passed": true
+        },
+        {
+            "test": "Against this environment's already-correct real settings, mail_recipient resolves to already_set\/skipped_existing, never migrated again",
+            "passed": true
+        },
+        {
+            "test": "Against this environment's already-existing real Pages, soluciones resolves to reused, never created again",
+            "passed": true
+        },
+        {
+            "test": "Against this environment's already-existing real Pages, marcas resolves to reused, never created again",
+            "passed": true
+        },
+        {
+            "test": "Version gate is set once every field\/page is resolved",
+            "passed": true
+        },
+        {
+            "test": "Structural: never gated by Storage::guard() (local-dev-only by design)",
+            "passed": true
+        },
+        {
+            "test": "Structural: never depends on the legacy importer machinery",
+            "passed": true
+        },
+        {
+            "test": "Structural: never gated by environment type -- runs the same on local\/staging\/production",
+            "passed": true
+        },
+        {
+            "test": "Structural: registered on admin_init, a real authenticated admin-area request",
+            "passed": true
+        },
+        {
+            "test": "Structural: page-contacto.php still sources contact data from Settings::get()",
+            "passed": true
+        },
+        {
+            "test": "Structural: catalog-footer.php still sources contact data from Settings::get()",
+            "passed": true
+        },
+        {
+            "test": "Real settings end this suite exactly as they started it",
+            "passed": true
+        },
+        {
+            "test": "No net posts\/terms remain from this suite -- fixture pages and the fixture user were fully cleaned up",
+            "passed": true
+        }
+    ]
+}

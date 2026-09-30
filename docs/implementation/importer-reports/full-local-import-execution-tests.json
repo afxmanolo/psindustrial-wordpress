@@ -1,0 +1,141 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "Full-local execution requires explicit confirmation",
+            "passed": true
+        },
+        {
+            "test": "The SUBSET phrase never authorizes a full-scope plan",
+            "passed": true
+        },
+        {
+            "test": "The FULL phrase never authorizes execution via the subset method either",
+            "passed": true
+        },
+        {
+            "test": "Confirmation phrase must match exactly (trailing space rejected)",
+            "passed": true
+        },
+        {
+            "test": "Sanity: no backup exists yet for this fresh run_id",
+            "passed": true
+        },
+        {
+            "test": "Database backup taken automatically before the first mutation",
+            "passed": true
+        },
+        {
+            "test": "Uploads backup taken automatically before the first mutation",
+            "passed": true
+        },
+        {
+            "test": "CREATE-eligible entry (MIGRATE action, brand-new identity) executes successfully",
+            "passed": true
+        },
+        {
+            "test": "Synthetic fixture created via real WordPress APIs",
+            "passed": true
+        },
+        {
+            "test": "Full-local execution never publishes -- created as draft",
+            "passed": true
+        },
+        {
+            "test": "A REVIEW-action entry never creates a post\/term\/attachment, even inside an otherwise-executed full-local batch",
+            "passed": true
+        },
+        {
+            "test": "REVIEW row is walked over (cursor advances, logged) but never applied -- its own action never silently becomes SKIP or CREATE",
+            "passed": true
+        },
+        {
+            "test": "The CREATE sibling in the SAME batch still executed normally alongside the preserved REVIEW row",
+            "passed": true
+        },
+        {
+            "test": "SKIP row never creates anything",
+            "passed": true
+        },
+        {
+            "test": "MERGE row executes via the identical mechanism as subset -- one object, multiple source identities",
+            "passed": true
+        },
+        {
+            "test": "First call processes exactly `limit` entries and persists status=RUNNING, cursor=2",
+            "passed": true
+        },
+        {
+            "test": "Snapshot persisted mid-run",
+            "passed": true
+        },
+        {
+            "test": "Persisted snapshot reflects the interruption point exactly",
+            "passed": true
+        },
+        {
+            "test": "Resumed execution reaches the end without needing a fresh plan or losing progress",
+            "passed": true
+        },
+        {
+            "test": "Interrupted-then-resumed batch created exactly 5 distinct objects, never duplicating the first 2",
+            "passed": true
+        },
+        {
+            "test": "Second call on an already-COMPLETE run short-circuits, unchanged",
+            "passed": true
+        },
+        {
+            "test": "Second execution on a completed run creates no posts and touches no options -- true no-op",
+            "passed": true
+        },
+        {
+            "test": "A changed source_hash against an unmodified destination updates in place -- never a duplicate object",
+            "passed": true
+        },
+        {
+            "test": "A human-edited destination blocks automatic overwrite -- marked CONFLICT, never silently applied",
+            "passed": true
+        },
+        {
+            "test": "The human edit survives the conflicting execution attempt untouched",
+            "passed": true
+        },
+        {
+            "test": "An unrecognised (entity-level) injected failure is caught, marked FAILED, and the batch still completes -- never aborts the whole run",
+            "passed": true
+        },
+        {
+            "test": "A FATAL_ERROR_CODES-listed failure propagates out of batch_full_local_resolved_only() instead of being swallowed",
+            "passed": true
+        },
+        {
+            "test": "Cursor stopped exactly at the entry BEFORE the fatal one -- the fatal entry itself and everything after it were never attempted",
+            "passed": true
+        },
+        {
+            "test": "At most the one successful entry before the fatal one has a result recorded",
+            "passed": true
+        },
+        {
+            "test": "Neither the fatal entry nor anything scheduled after it was created",
+            "passed": true
+        },
+        {
+            "test": "Rollback fixture created successfully before being rolled back",
+            "passed": true
+        },
+        {
+            "test": "rollback_created() now accepts a full-scope run via the exact same mechanism as subset",
+            "passed": true
+        },
+        {
+            "test": "The rolled-back synthetic fixture no longer exists",
+            "passed": true
+        },
+        {
+            "test": "Rollback touched only synthetic test: keys, never a real catalogue entity key",
+            "passed": true
+        }
+    ]
+}

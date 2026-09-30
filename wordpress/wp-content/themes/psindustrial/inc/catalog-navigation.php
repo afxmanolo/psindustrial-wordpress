@@ -1,0 +1,65 @@
+<?php
+namespace PSIndustrial\Theme;
+defined( 'ABSPATH' ) || exit;
+
+/** Presentation of existing public destinations; never changes editorial approval. */
+function catalog_navigation( bool $all_categories = false ): array {
+	$items = array();
+	$url = get_post_type_archive_link( 'psi_producto' );
+	if ( $url ) { $items[] = array( 'label' => __( 'Productos', 'psindustrial' ), 'url' => $url, 'active' => is_post_type_archive( 'psi_producto' ), 'icon' => 'briefcase' ); }
+	foreach ( array( 'psi_categoria', 'psi_marca' ) as $taxonomy ) {
+		if ( $all_categories && is_tax( 'psi_marca' ) && 'psi_categoria' === $taxonomy ) { continue; }
+		$terms = get_terms( array( 'taxonomy' => $taxonomy, 'hide_empty' => false ) );
+		if ( is_wp_error( $terms ) ) { continue; }
+		$terms = array_values( array_filter( $terms, static fn( $term ) => 'public' === get_term_meta( $term->term_id, '_psi_public_state', true ) ) );
+		$public_ids = wp_list_pluck( $terms, 'term_id' );
+		// _psi_category_menu_order (CategoriesMigration) preserves legacy/public/header.php's
+		// exact "Soluciones" order for its 7 top-level roots; a term without an explicit order
+		// (any child, or a future category never covered by that migration) sorts after all of
+		// them, in whatever order get_terms() returned it -- same fallback behaviour the prior
+		// hardcoded slug list already had for anything it didn't name.
+		if ( 'psi_categoria' === $taxonomy ) {
+			usort( $terms, static function( $a, $b ) {
+				$ao = get_term_meta( $a->term_id, '_psi_category_menu_order', true );
+				$bo = get_term_meta( $b->term_id, '_psi_category_menu_order', true );
+				return ( '' === $ao ? PHP_INT_MAX : (int) $ao ) <=> ( '' === $bo ? PHP_INT_MAX : (int) $bo );
+			} );
+		}
+		foreach ( $terms as $term ) {
+			if ( 'psi_categoria' === $taxonomy && in_array( (int) $term->parent, $public_ids, true ) && ! ( $all_categories && is_tax( $taxonomy, $term->term_id ) ) ) { continue; }
+			$url = get_term_link( $term );
+			if ( is_wp_error( $url ) ) { continue; }
+			$icons = array( 'industrial' => 'briefcase', 'comercial' => 'bag', 'equipos-y-accesorios-para-anden-de-carga' => 'truck', 'puertas-peatonales-de-salida-de-emergencia' => 'users', 'puertas-peatonales-para-hospitales' => 'plus', 'residenciales' => 'home' );
+			$items[] = array( 'label' => $term->name, 'url' => $url, 'active' => is_tax( $taxonomy, $term->term_id ), 'icon' => 'psi_marca' === $taxonomy ? 'star' : ( $icons[ $term->slug ] ?? 'disc' ) );
+		}
+	}
+	return $items;
+}
+
+/** Header-only roots: reuse Home's editorial selection/order without changing other menus. */
+function header_solutions_navigation(): array {
+	$items = array();
+	foreach ( home_category_sections() as $section ) {
+		$term = get_term( $section['term_id'], 'psi_categoria' );
+		if ( ! $term || is_wp_error( $term ) || 0 !== (int) $term->parent ) { continue; }
+		$items[] = array( 'term_id' => $term->term_id, 'label' => $term->name, 'url' => $section['link'], 'active' => is_tax( 'psi_categoria', $term->term_id ) );
+	}
+	return $items;
+}
+
+function catalog_contact_url(): string {
+	$url = published_page_url( 'contacto' );
+	if ( $url ) { return $url; }
+	$emails = class_exists( \PSIndustrial\Core\Settings::class ) ? \PSIndustrial\Core\Settings::public_emails() : array();
+	return $emails ? 'mailto:' . $emails[0] : '';
+}
+
+/** Invalid placeholder links and unpublished entities are not public navigation. */
+add_filter( 'wp_nav_menu_objects', static function( array $items, $args ): array {
+	if ( ! in_array( $args->theme_location ?? '', array( 'primary', 'catalog_sidebar', 'brand_sidebar' ), true ) ) { return $items; }
+	return array_values( array_filter( $items, static function( $item ) {
+		if ( ! $item->url || '#' === $item->url ) { return false; }
+		if ( 'taxonomy' === $item->type && in_array( $item->object, array( 'psi_categoria', 'psi_marca' ), true ) ) { return 'public' === get_term_meta( $item->object_id, '_psi_public_state', true ); }
+		return 'post_type' !== $item->type || 'publish' === get_post_status( $item->object_id );
+	} ) );
+}, 10, 2 );

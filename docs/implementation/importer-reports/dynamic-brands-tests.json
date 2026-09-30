@@ -1,0 +1,513 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "BrandsMigration::run() is a no-op once already applied (idempotent)",
+            "passed": true
+        },
+        {
+            "test": "Exactly the 12 historical brand terms exist",
+            "passed": true
+        },
+        {
+            "test": "Term is one of the 12 historical brands: BFT",
+            "passed": true
+        },
+        {
+            "test": "Migration set this brand public: BFT",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct historical home order for: BFT",
+            "passed": true
+        },
+        {
+            "test": "Term is one of the 12 historical brands: Blue Giant",
+            "passed": true
+        },
+        {
+            "test": "Migration set this brand public: Blue Giant",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct historical home order for: Blue Giant",
+            "passed": true
+        },
+        {
+            "test": "Term is one of the 12 historical brands: Clopay",
+            "passed": true
+        },
+        {
+            "test": "Migration set this brand public: Clopay",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct historical home order for: Clopay",
+            "passed": true
+        },
+        {
+            "test": "Term is one of the 12 historical brands: Dockman",
+            "passed": true
+        },
+        {
+            "test": "Migration set this brand public: Dockman",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct historical home order for: Dockman",
+            "passed": true
+        },
+        {
+            "test": "Term is one of the 12 historical brands: Doorlock",
+            "passed": true
+        },
+        {
+            "test": "Migration set this brand public: Doorlock",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct historical home order for: Doorlock",
+            "passed": true
+        },
+        {
+            "test": "Term is one of the 12 historical brands: GLG Porter Industriali",
+            "passed": true
+        },
+        {
+            "test": "Migration set this brand public: GLG Porter Industriali",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct historical home order for: GLG Porter Industriali",
+            "passed": true
+        },
+        {
+            "test": "Term is one of the 12 historical brands: Infraca Quality Doors",
+            "passed": true
+        },
+        {
+            "test": "Migration set this brand public: Infraca Quality Doors",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct historical home order for: Infraca Quality Doors",
+            "passed": true
+        },
+        {
+            "test": "Term is one of the 12 historical brands: Kelley",
+            "passed": true
+        },
+        {
+            "test": "Migration set this brand public: Kelley",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct historical home order for: Kelley",
+            "passed": true
+        },
+        {
+            "test": "Term is one of the 12 historical brands: LiftMaster",
+            "passed": true
+        },
+        {
+            "test": "Migration set this brand public: LiftMaster",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct historical home order for: LiftMaster",
+            "passed": true
+        },
+        {
+            "test": "Term is one of the 12 historical brands: Overhead Door",
+            "passed": true
+        },
+        {
+            "test": "Migration set this brand public: Overhead Door",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct historical home order for: Overhead Door",
+            "passed": true
+        },
+        {
+            "test": "Term is one of the 12 historical brands: Rytec",
+            "passed": true
+        },
+        {
+            "test": "Migration set this brand public: Rytec",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct historical home order for: Rytec",
+            "passed": true
+        },
+        {
+            "test": "Term is one of the 12 historical brands: Wayne Dalton",
+            "passed": true
+        },
+        {
+            "test": "Migration set this brand public: Wayne Dalton",
+            "passed": true
+        },
+        {
+            "test": "Migration set the correct historical home order for: Wayne Dalton",
+            "passed": true
+        },
+        {
+            "test": "home-data.php no longer hardcodes the static brand list",
+            "passed": true
+        },
+        {
+            "test": "front-page.php sources brands from home_brands(), not a static array",
+            "passed": true
+        },
+        {
+            "test": "home_brands() returns all 12 (hide_empty=false honored): got 12",
+            "passed": true
+        },
+        {
+            "test": "LiftMaster (0 products, any status) still appears: hide_empty=false is real, not just a product-count check",
+            "passed": true
+        },
+        {
+            "test": "home_brands() preserves the exact historical order, not alphabetical\/term_id order",
+            "passed": true
+        },
+        {
+            "test": "Brand link is the real get_term_link() for: Overhead Door",
+            "passed": true
+        },
+        {
+            "test": "Brand link is never a placeholder href=#: Overhead Door",
+            "passed": true
+        },
+        {
+            "test": "Logo asset for Overhead Door actually resolves to a real file on disk: C:\\laragon\\www\\psindustrial-wordpress\\wordpress\/wp-content\/themes\/psindustrial\/assets\/images\/home\/tg-500.webp",
+            "passed": true
+        },
+        {
+            "test": "Brand link is the real get_term_link() for: Wayne Dalton",
+            "passed": true
+        },
+        {
+            "test": "Brand link is never a placeholder href=#: Wayne Dalton",
+            "passed": true
+        },
+        {
+            "test": "Logo asset for Wayne Dalton actually resolves to a real file on disk: C:\\laragon\\www\\psindustrial-wordpress\\wordpress\/wp-content\/themes\/psindustrial\/assets\/images\/home\/wayne-dayton-500.webp",
+            "passed": true
+        },
+        {
+            "test": "Brand link is the real get_term_link() for: Clopay",
+            "passed": true
+        },
+        {
+            "test": "Brand link is never a placeholder href=#: Clopay",
+            "passed": true
+        },
+        {
+            "test": "Logo asset for Clopay actually resolves to a real file on disk: C:\\laragon\\www\\psindustrial-wordpress\\wordpress\/wp-content\/themes\/psindustrial\/assets\/images\/home\/clopay-500.webp",
+            "passed": true
+        },
+        {
+            "test": "Brand link is the real get_term_link() for: Blue Giant",
+            "passed": true
+        },
+        {
+            "test": "Brand link is never a placeholder href=#: Blue Giant",
+            "passed": true
+        },
+        {
+            "test": "Logo asset for Blue Giant actually resolves to a real file on disk: C:\\laragon\\www\\psindustrial-wordpress\\wordpress\/wp-content\/themes\/psindustrial\/assets\/images\/home\/blue-500.webp",
+            "passed": true
+        },
+        {
+            "test": "Brand link is the real get_term_link() for: Kelley",
+            "passed": true
+        },
+        {
+            "test": "Brand link is never a placeholder href=#: Kelley",
+            "passed": true
+        },
+        {
+            "test": "Logo asset for Kelley actually resolves to a real file on disk: C:\\laragon\\www\\psindustrial-wordpress\\wordpress\/wp-content\/themes\/psindustrial\/assets\/images\/home\/kelley-500.webp",
+            "passed": true
+        },
+        {
+            "test": "Brand link is the real get_term_link() for: Doorlock",
+            "passed": true
+        },
+        {
+            "test": "Brand link is never a placeholder href=#: Doorlock",
+            "passed": true
+        },
+        {
+            "test": "Logo asset for Doorlock actually resolves to a real file on disk: C:\\laragon\\www\\psindustrial-wordpress\\wordpress\/wp-content\/themes\/psindustrial\/assets\/images\/home\/door-500.webp",
+            "passed": true
+        },
+        {
+            "test": "Brand link is the real get_term_link() for: Rytec",
+            "passed": true
+        },
+        {
+            "test": "Brand link is never a placeholder href=#: Rytec",
+            "passed": true
+        },
+        {
+            "test": "Logo asset for Rytec actually resolves to a real file on disk: C:\\laragon\\www\\psindustrial-wordpress\\wordpress\/wp-content\/themes\/psindustrial\/assets\/images\/home\/rytec-500.webp",
+            "passed": true
+        },
+        {
+            "test": "Brand link is the real get_term_link() for: Infraca Quality Doors",
+            "passed": true
+        },
+        {
+            "test": "Brand link is never a placeholder href=#: Infraca Quality Doors",
+            "passed": true
+        },
+        {
+            "test": "Logo asset for Infraca Quality Doors actually resolves to a real file on disk: C:\\laragon\\www\\psindustrial-wordpress\\wordpress\/wp-content\/themes\/psindustrial\/assets\/images\/home\/infraca-500.webp",
+            "passed": true
+        },
+        {
+            "test": "Brand link is the real get_term_link() for: GLG Porter Industriali",
+            "passed": true
+        },
+        {
+            "test": "Brand link is never a placeholder href=#: GLG Porter Industriali",
+            "passed": true
+        },
+        {
+            "test": "Logo asset for GLG Porter Industriali actually resolves to a real file on disk: C:\\laragon\\www\\psindustrial-wordpress\\wordpress\/wp-content\/themes\/psindustrial\/assets\/images\/home\/glg-porte-industriali-500.webp",
+            "passed": true
+        },
+        {
+            "test": "Brand link is the real get_term_link() for: Dockman",
+            "passed": true
+        },
+        {
+            "test": "Brand link is never a placeholder href=#: Dockman",
+            "passed": true
+        },
+        {
+            "test": "Logo asset for Dockman actually resolves to a real file on disk: C:\\laragon\\www\\psindustrial-wordpress\\wordpress\/wp-content\/themes\/psindustrial\/assets\/images\/home\/dockman-500.webp",
+            "passed": true
+        },
+        {
+            "test": "Brand link is the real get_term_link() for: LiftMaster",
+            "passed": true
+        },
+        {
+            "test": "Brand link is never a placeholder href=#: LiftMaster",
+            "passed": true
+        },
+        {
+            "test": "Logo asset for LiftMaster actually resolves to a real file on disk: C:\\laragon\\www\\psindustrial-wordpress\\wordpress\/wp-content\/themes\/psindustrial\/assets\/images\/home\/lift-master-500.webp",
+            "passed": true
+        },
+        {
+            "test": "Brand link is the real get_term_link() for: BFT",
+            "passed": true
+        },
+        {
+            "test": "Brand link is never a placeholder href=#: BFT",
+            "passed": true
+        },
+        {
+            "test": "Logo asset for BFT actually resolves to a real file on disk: C:\\laragon\\www\\psindustrial-wordpress\\wordpress\/wp-content\/themes\/psindustrial\/assets\/images\/home\/bft-500.webp",
+            "passed": true
+        },
+        {
+            "test": "Fixture terms resolve: Clopay (has products) and LiftMaster (has none)",
+            "passed": true
+        },
+        {
+            "test": "Archive for a brand with real product relationships renders 200 (got 200)",
+            "passed": true
+        },
+        {
+            "test": "Archive for LiftMaster (zero products) renders 200, never 404 for being empty (got 200)",
+            "passed": true
+        },
+        {
+            "test": "Empty brand archive shows the real \"no products published\" message",
+            "passed": true
+        },
+        {
+            "test": "Legacy \/productos\/marca\/3\/clopay\/ -> 301 -> real Clopay canonical (got 301 http:\/\/localhost\/psindustrial-wordpress\/wordpress\/marca\/clopay\/)",
+            "passed": true
+        },
+        {
+            "test": "The slug segment is decorative, exactly like the original legacy rewrite (id 3 alone resolves Clopay) -- never validated against the current slug",
+            "passed": true
+        },
+        {
+            "test": "The pre-existing .php legacy mapping for Clopay still resolves to the same real canonical",
+            "passed": true
+        },
+        {
+            "test": "Pattern mapping resolves to the real canonical for Overhead Door",
+            "passed": true
+        },
+        {
+            "test": "Existing .php mapping resolves to the SAME real canonical for Overhead Door (no divergence between the two legacy schemes)",
+            "passed": true
+        },
+        {
+            "test": "Canonical destination for Overhead Door is not itself a redirect source (no chain): \/overhead-door",
+            "passed": true
+        },
+        {
+            "test": "Pattern mapping resolves to the real canonical for Wayne Dalton",
+            "passed": true
+        },
+        {
+            "test": "Existing .php mapping resolves to the SAME real canonical for Wayne Dalton (no divergence between the two legacy schemes)",
+            "passed": true
+        },
+        {
+            "test": "Canonical destination for Wayne Dalton is not itself a redirect source (no chain): \/wayne-dalton",
+            "passed": true
+        },
+        {
+            "test": "Pattern mapping resolves to the real canonical for Clopay",
+            "passed": true
+        },
+        {
+            "test": "Existing .php mapping resolves to the SAME real canonical for Clopay (no divergence between the two legacy schemes)",
+            "passed": true
+        },
+        {
+            "test": "Canonical destination for Clopay is not itself a redirect source (no chain): \/clopay",
+            "passed": true
+        },
+        {
+            "test": "Pattern mapping resolves to the real canonical for Blue Giant",
+            "passed": true
+        },
+        {
+            "test": "Existing .php mapping resolves to the SAME real canonical for Blue Giant (no divergence between the two legacy schemes)",
+            "passed": true
+        },
+        {
+            "test": "Canonical destination for Blue Giant is not itself a redirect source (no chain): \/blue-giant",
+            "passed": true
+        },
+        {
+            "test": "Pattern mapping resolves to the real canonical for Kelley",
+            "passed": true
+        },
+        {
+            "test": "Existing .php mapping resolves to the SAME real canonical for Kelley (no divergence between the two legacy schemes)",
+            "passed": true
+        },
+        {
+            "test": "Canonical destination for Kelley is not itself a redirect source (no chain): \/kelley",
+            "passed": true
+        },
+        {
+            "test": "Pattern mapping resolves to the real canonical for Doorlock",
+            "passed": true
+        },
+        {
+            "test": "Existing .php mapping resolves to the SAME real canonical for Doorlock (no divergence between the two legacy schemes)",
+            "passed": true
+        },
+        {
+            "test": "Canonical destination for Doorlock is not itself a redirect source (no chain): \/doorlock",
+            "passed": true
+        },
+        {
+            "test": "Pattern mapping resolves to the real canonical for Rytec",
+            "passed": true
+        },
+        {
+            "test": "Existing .php mapping resolves to the SAME real canonical for Rytec (no divergence between the two legacy schemes)",
+            "passed": true
+        },
+        {
+            "test": "Canonical destination for Rytec is not itself a redirect source (no chain): \/rytec",
+            "passed": true
+        },
+        {
+            "test": "Pattern mapping resolves to the real canonical for Infraca Quality Doors",
+            "passed": true
+        },
+        {
+            "test": "Existing .php mapping resolves to the SAME real canonical for Infraca Quality Doors (no divergence between the two legacy schemes)",
+            "passed": true
+        },
+        {
+            "test": "Canonical destination for Infraca Quality Doors is not itself a redirect source (no chain): \/infraca-quality-doors",
+            "passed": true
+        },
+        {
+            "test": "Pattern mapping resolves to the real canonical for GLG Porter Industriali",
+            "passed": true
+        },
+        {
+            "test": "Existing .php mapping resolves to the SAME real canonical for GLG Porter Industriali (no divergence between the two legacy schemes)",
+            "passed": true
+        },
+        {
+            "test": "Canonical destination for GLG Porter Industriali is not itself a redirect source (no chain): \/glg-porter-industriali",
+            "passed": true
+        },
+        {
+            "test": "Pattern mapping resolves to the real canonical for Dockman",
+            "passed": true
+        },
+        {
+            "test": "Existing .php mapping resolves to the SAME real canonical for Dockman (no divergence between the two legacy schemes)",
+            "passed": true
+        },
+        {
+            "test": "Canonical destination for Dockman is not itself a redirect source (no chain): \/dockman",
+            "passed": true
+        },
+        {
+            "test": "Pattern mapping resolves to the real canonical for LiftMaster",
+            "passed": true
+        },
+        {
+            "test": "Existing .php mapping resolves to the SAME real canonical for LiftMaster (no divergence between the two legacy schemes)",
+            "passed": true
+        },
+        {
+            "test": "Canonical destination for LiftMaster is not itself a redirect source (no chain): \/liftmaster",
+            "passed": true
+        },
+        {
+            "test": "Pattern mapping resolves to the real canonical for BFT",
+            "passed": true
+        },
+        {
+            "test": "Existing .php mapping resolves to the SAME real canonical for BFT (no divergence between the two legacy schemes)",
+            "passed": true
+        },
+        {
+            "test": "Canonical destination for BFT is not itself a redirect source (no chain): \/bft",
+            "passed": true
+        },
+        {
+            "test": "An unknown legacy brand id resolves to null, never an invented destination",
+            "passed": true
+        },
+        {
+            "test": "A non-numeric id never matches the pattern",
+            "passed": true
+        },
+        {
+            "test": "Extra path segments never match the pattern",
+            "passed": true
+        },
+        {
+            "test": "\/legacy\/public\/.htaccess still contains the original brand rewrite rule this test derived its pattern from -- read-only, never modified",
+            "passed": true
+        },
+        {
+            "test": "This entire suite (including live HTTP requests and the migration re-run) creates no posts\/terms -- the only writes ever made were the one-time BrandsMigration run, already applied before this suite started",
+            "passed": true
+        }
+    ]
+}

@@ -1,0 +1,457 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "test": "Two full DRY RUNs change nothing in the database",
+            "passed": true
+        },
+        {
+            "test": "A full plan remains impossible to execute, Q07 included",
+            "passed": true
+        },
+        {
+            "test": "editorial-decisions.json declares exactly 9 Q07 landings",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:cortinas-enrollables-de-aluminio.php",
+            "passed": true
+        },
+        {
+            "test": "Landing approved as a Page: cortinas-enrollables-de-aluminio.php",
+            "passed": true
+        },
+        {
+            "test": "Target type is page, never psi_producto\/psi_categoria\/psi_marca: cortinas-enrollables-de-aluminio.php",
+            "passed": true
+        },
+        {
+            "test": "Unimported landing remains an evidenced slug collision, never silently merged: cortinas-enrollables-de-aluminio.php",
+            "passed": true
+        },
+        {
+            "test": "Landing content preserved (non-empty extracted body), own text never copied from a product: cortinas-enrollables-de-aluminio.php",
+            "passed": true
+        },
+        {
+            "test": "Legacy URL mapping present on the landing entry: cortinas-enrollables-de-aluminio.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:operadores-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "Landing approved as a Page: operadores-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "Target type is page, never psi_producto\/psi_categoria\/psi_marca: operadores-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "Existing landing identity is a Page; human edits block overwrite: operadores-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "Landing content preserved (non-empty extracted body), own text never copied from a product: operadores-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "Legacy URL mapping present on the landing entry: operadores-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:operadores-puerta-corrediza-residencial.php",
+            "passed": true
+        },
+        {
+            "test": "Landing approved as a Page: operadores-puerta-corrediza-residencial.php",
+            "passed": true
+        },
+        {
+            "test": "Target type is page, never psi_producto\/psi_categoria\/psi_marca: operadores-puerta-corrediza-residencial.php",
+            "passed": true
+        },
+        {
+            "test": "Existing landing identity is a Page; human edits block overwrite: operadores-puerta-corrediza-residencial.php",
+            "passed": true
+        },
+        {
+            "test": "Landing content preserved (non-empty extracted body), own text never copied from a product: operadores-puerta-corrediza-residencial.php",
+            "passed": true
+        },
+        {
+            "test": "Legacy URL mapping present on the landing entry: operadores-puerta-corrediza-residencial.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:operadores-puertas-ascendentes.php",
+            "passed": true
+        },
+        {
+            "test": "Landing approved as a Page: operadores-puertas-ascendentes.php",
+            "passed": true
+        },
+        {
+            "test": "Target type is page, never psi_producto\/psi_categoria\/psi_marca: operadores-puertas-ascendentes.php",
+            "passed": true
+        },
+        {
+            "test": "Existing landing identity is a Page; human edits block overwrite: operadores-puertas-ascendentes.php",
+            "passed": true
+        },
+        {
+            "test": "Landing content preserved (non-empty extracted body), own text never copied from a product: operadores-puertas-ascendentes.php",
+            "passed": true
+        },
+        {
+            "test": "Legacy URL mapping present on the landing entry: operadores-puertas-ascendentes.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:puertas-de-garaje-aisladas.php",
+            "passed": true
+        },
+        {
+            "test": "Landing approved as a Page: puertas-de-garaje-aisladas.php",
+            "passed": true
+        },
+        {
+            "test": "Target type is page, never psi_producto\/psi_categoria\/psi_marca: puertas-de-garaje-aisladas.php",
+            "passed": true
+        },
+        {
+            "test": "Unimported landing remains an evidenced slug collision, never silently merged: puertas-de-garaje-aisladas.php",
+            "passed": true
+        },
+        {
+            "test": "Landing content preserved (non-empty extracted body), own text never copied from a product: puertas-de-garaje-aisladas.php",
+            "passed": true
+        },
+        {
+            "test": "Legacy URL mapping present on the landing entry: puertas-de-garaje-aisladas.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:puertas-enrollables-de-garage.php",
+            "passed": true
+        },
+        {
+            "test": "Landing approved as a Page: puertas-enrollables-de-garage.php",
+            "passed": true
+        },
+        {
+            "test": "Target type is page, never psi_producto\/psi_categoria\/psi_marca: puertas-enrollables-de-garage.php",
+            "passed": true
+        },
+        {
+            "test": "Unimported landing remains an evidenced slug collision, never silently merged: puertas-enrollables-de-garage.php",
+            "passed": true
+        },
+        {
+            "test": "Landing content preserved (non-empty extracted body), own text never copied from a product: puertas-enrollables-de-garage.php",
+            "passed": true
+        },
+        {
+            "test": "Legacy URL mapping present on the landing entry: puertas-enrollables-de-garage.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:puertas-rapidas-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "Landing approved as a Page: puertas-rapidas-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "Target type is page, never psi_producto\/psi_categoria\/psi_marca: puertas-rapidas-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "Existing landing identity is a Page; human edits block overwrite: puertas-rapidas-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "Landing content preserved (non-empty extracted body), own text never copied from a product: puertas-rapidas-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "Legacy URL mapping present on the landing entry: puertas-rapidas-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:puertas-residenciales.php",
+            "passed": true
+        },
+        {
+            "test": "Landing approved as a Page: puertas-residenciales.php",
+            "passed": true
+        },
+        {
+            "test": "Target type is page, never psi_producto\/psi_categoria\/psi_marca: puertas-residenciales.php",
+            "passed": true
+        },
+        {
+            "test": "Existing landing identity is a Page; human edits block overwrite: puertas-residenciales.php",
+            "passed": true
+        },
+        {
+            "test": "Landing content preserved (non-empty extracted body), own text never copied from a product: puertas-residenciales.php",
+            "passed": true
+        },
+        {
+            "test": "Legacy URL mapping present on the landing entry: puertas-residenciales.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:tiras-plasticas-hawaianas.php",
+            "passed": true
+        },
+        {
+            "test": "Landing approved as a Page: tiras-plasticas-hawaianas.php",
+            "passed": true
+        },
+        {
+            "test": "Target type is page, never psi_producto\/psi_categoria\/psi_marca: tiras-plasticas-hawaianas.php",
+            "passed": true
+        },
+        {
+            "test": "Unimported landing remains an evidenced slug collision, never silently merged: tiras-plasticas-hawaianas.php",
+            "passed": true
+        },
+        {
+            "test": "Landing content preserved (non-empty extracted body), own text never copied from a product: tiras-plasticas-hawaianas.php",
+            "passed": true
+        },
+        {
+            "test": "Legacy URL mapping present on the landing entry: tiras-plasticas-hawaianas.php",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:cortinas-enrollables-de-aluminio.php",
+            "passed": true
+        },
+        {
+            "test": "Sampled landing content plausibly reflects its own page, not a generic\/product body",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:images\/cortinas.jpg",
+            "passed": true
+        },
+        {
+            "test": "Exclusive landing media independently approved",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:cortinas-enrollables-de-aluminio.php",
+            "passed": true
+        },
+        {
+            "test": "Exclusive media listed on the landing's own decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:images\/access.jpg",
+            "passed": true
+        },
+        {
+            "test": "Media shared only among sibling landings is still approved",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:operadores-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "Shared sibling media listed on operadores-puerta-abatible.php\\'s own decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:operadores-puerta-corrediza-residencial.php",
+            "passed": true
+        },
+        {
+            "test": "Shared sibling media listed on operadores-puerta-corrediza-residencial.php\\'s own decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:operadores-puertas-ascendentes.php",
+            "passed": true
+        },
+        {
+            "test": "Shared sibling media listed on operadores-puertas-ascendentes.php\\'s own decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:images\/banner1.jpg",
+            "passed": true
+        },
+        {
+            "test": "A media path with a stronger\/contradictory claim (sitewide banner) is never decided by Q07",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:cortinas-enrollables-de-aluminio.php",
+            "passed": true
+        },
+        {
+            "test": "Sitewide banner never listed on landing cortinas-enrollables-de-aluminio.php\\'s own decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:operadores-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "Sitewide banner never listed on landing operadores-puerta-abatible.php\\'s own decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:operadores-puerta-corrediza-residencial.php",
+            "passed": true
+        },
+        {
+            "test": "Sitewide banner never listed on landing operadores-puerta-corrediza-residencial.php\\'s own decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:operadores-puertas-ascendentes.php",
+            "passed": true
+        },
+        {
+            "test": "Sitewide banner never listed on landing operadores-puertas-ascendentes.php\\'s own decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:puertas-de-garaje-aisladas.php",
+            "passed": true
+        },
+        {
+            "test": "Sitewide banner never listed on landing puertas-de-garaje-aisladas.php\\'s own decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:puertas-enrollables-de-garage.php",
+            "passed": true
+        },
+        {
+            "test": "Sitewide banner never listed on landing puertas-enrollables-de-garage.php\\'s own decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:puertas-rapidas-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "Sitewide banner never listed on landing puertas-rapidas-enrollables.php\\'s own decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:puertas-residenciales.php",
+            "passed": true
+        },
+        {
+            "test": "Sitewide banner never listed on landing puertas-residenciales.php\\'s own decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: php:tiras-plasticas-hawaianas.php",
+            "passed": true
+        },
+        {
+            "test": "Sitewide banner never listed on landing tiras-plasticas-hawaianas.php\\'s own decision",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: asset:fichas\/13.0.Folleto-Operador-AccessPRO-FS1000-SPEED-hoja-tecnica.pdf",
+            "passed": true
+        },
+        {
+            "test": "A PDF also referenced by a real PRODUCT_PAGE is never claimed by a landing",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/access.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/aisladas.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/cortinas.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/enrollable.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/enrollable2.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/industrial32.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/residencial.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: asset:images\/silent.jpg",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:cortinas-enrollables-de-aluminio.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:operadores-puerta-abatible.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:operadores-puerta-corrediza-residencial.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:operadores-puertas-ascendentes.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:puertas-de-garaje-aisladas.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:puertas-enrollables-de-garage.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:puertas-rapidas-enrollables.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:puertas-residenciales.php",
+            "passed": true
+        },
+        {
+            "test": "Repeated execution -> identical result: php:tiras-plasticas-hawaianas.php",
+            "passed": true
+        },
+        {
+            "test": "A meaningful number of Q07 rows checked for stability (17)",
+            "passed": true
+        },
+        {
+            "test": "Entry exists: sql:productos:1",
+            "passed": true
+        },
+        {
+            "test": "Sanity: an unrelated Q03 product carries no Q07 decision",
+            "passed": true
+        }
+    ]
+}

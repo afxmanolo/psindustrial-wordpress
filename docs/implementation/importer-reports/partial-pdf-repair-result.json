@@ -1,0 +1,72 @@
+{
+    "backup": "postimport-backup-postimport-f14897f9-a2c4-4c9b-942f-937ef390036c.json",
+    "results": [
+        {
+            "source_key": "sql:productos:5",
+            "wordpress_id": 1360,
+            "status": "REPAIRED",
+            "second_attempt": "UNCHANGED"
+        },
+        {
+            "source_key": "sql:productos:6",
+            "wordpress_id": 1361,
+            "status": "REPAIRED",
+            "second_attempt": "UNCHANGED"
+        },
+        {
+            "source_key": "sql:productos:7",
+            "wordpress_id": 1367,
+            "status": "REPAIRED",
+            "second_attempt": "UNCHANGED"
+        },
+        {
+            "source_key": "sql:productos:17",
+            "wordpress_id": 1354,
+            "status": "REPAIRED",
+            "second_attempt": "UNCHANGED"
+        },
+        {
+            "source_key": "sql:productos:18",
+            "wordpress_id": 1355,
+            "status": "REPAIRED",
+            "second_attempt": "UNCHANGED"
+        },
+        {
+            "source_key": "sql:productos:19",
+            "wordpress_id": 1356,
+            "status": "REPAIRED",
+            "second_attempt": "UNCHANGED"
+        },
+        {
+            "source_key": "sql:productos:22",
+            "wordpress_id": 1357,
+            "status": "REPAIRED",
+            "second_attempt": "UNCHANGED"
+        },
+        {
+            "source_key": "sql:productos:24",
+            "wordpress_id": 1358,
+            "status": "REPAIRED",
+            "second_attempt": "UNCHANGED"
+        },
+        {
+            "source_key": "sql:productos:44",
+            "wordpress_id": 1359,
+            "status": "REPAIRED",
+            "second_attempt": "UNCHANGED"
+        },
+        {
+            "source_key": "sql:productos:77",
+            "wordpress_id": 1372,
+            "status": "REPAIRED",
+            "second_attempt": "UNCHANGED"
+        },
+        {
+            "source_key": "sql:productos:95",
+            "wordpress_id": 1373,
+            "status": "REPAIRED",
+            "second_attempt": "UNCHANGED"
+        }
+    ],
+    "protected_post_unchanged": true
+}

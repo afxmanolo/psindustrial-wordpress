@@ -1,0 +1,104 @@
+{
+  "scope": "LOCAL_DRAFT_REHEARSAL_ONLY",
+  "authorization": "Prompt 6 autoriza seleccionar un subset de prueba; no certifica identidad comercial, publicación ni exclusión. Terms review; posts draft/pending review.",
+  "review_examples": [
+    "sql:productos:3",
+    "sql:productos:165"
+  ],
+  "entities": {
+    "asset:images/tg.png": {
+      "action": "MIGRATE",
+      "reason": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Uso explícito en ficha o directorio; bytes y tipo se validan."
+    },
+    "asset:images/sectional-steel-door-416.jpg": {
+      "action": "MIGRATE",
+      "reason": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Uso explícito en ficha o directorio; bytes y tipo se validan."
+    },
+    "asset:images/2025-08-21_11h53_44.png": {
+      "action": "MIGRATE",
+      "reason": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Uso explícito en ficha o directorio; bytes y tipo se validan."
+    },
+    "asset:images/puerta-420.jpg": {
+      "action": "MIGRATE",
+      "reason": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Uso explícito en ficha o directorio; bytes y tipo se validan."
+    },
+    "asset:images/puerta-420t.png": {
+      "action": "MIGRATE",
+      "reason": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Uso explícito en ficha o directorio; bytes y tipo se validan."
+    },
+    "asset:fichas/puerta-420.pdf": {
+      "action": "MIGRATE",
+      "reason": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Uso explícito en ficha o directorio; bytes y tipo se validan. Para ensayo, dos rutas con mismos bytes y asociación al producto64 comparten adjunto; preservar ambas referencias, sin borrar/rerutear origen.",
+      "binary_aliases": [
+        "system/files/images/productos/9856266836c012c90673224e9379a1a7f4b32389"
+      ]
+    },
+    "asset:images/piso.jpg": {
+      "action": "MIGRATE",
+      "reason": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Uso explícito en ficha o directorio; bytes y tipo se validan."
+    },
+    "category:1": {
+      "action": "MIGRATE",
+      "slug": "industrial",
+      "reason": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo."
+    },
+    "category:8": {
+      "action": "MIGRATE",
+      "slug": "puertas-seccionales",
+      "parent": "category:1",
+      "reason": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Padre coincide SQL y navegación.",
+      "image": "asset:system/files/images/categorias/59ca6b73479b3fcde81f96439976896bad94b750"
+    },
+    "brand:1": {
+      "action": "MIGRATE",
+      "slug": "overhead-door",
+      "image": "asset:images/tg.png",
+      "reason": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Logo explícito marcas.php:34."
+    },
+    "sql:productos:63": {
+      "action": "MIGRATE",
+      "categories": [
+        "category:8"
+      ],
+      "brand": "brand:1",
+      "images": [
+        "asset:images/sectional-steel-door-416.jpg",
+        "asset:images/2025-08-21_11h53_44.png"
+      ],
+      "pdfs": [],
+      "reason": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Ficha única, sin merge; marca según título/directorio, STRONG_INFERENCE, no certificación comercial."
+    },
+    "sql:productos:64": {
+      "action": "MIGRATE",
+      "categories": [
+        "category:8"
+      ],
+      "brand": "brand:1",
+      "images": [
+        "asset:images/puerta-420.jpg",
+        "asset:images/puerta-420t.png"
+      ],
+      "pdfs": [
+        "asset:fichas/puerta-420.pdf"
+      ],
+      "reason": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Ficha única, sin merge; marca según título/directorio, STRONG_INFERENCE, no certificación comercial."
+    },
+    "static:automatismos-para-cancelas-cubic.php": {
+      "action": "CREATE_FROM_STATIC",
+      "images": [
+        "asset:images/piso.jpg"
+      ],
+      "reason": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. Texto CUBIC extraído del PHP; marca/categoría permanecen vacías según suplemento."
+    },
+    "php:nosotros.php": {
+      "action": "MIGRATE",
+      "name": "Nosotros",
+      "slug": "nosotros",
+      "reason": "Ensayo técnico privado autorizado en Prompt 6; no aprobación del catálogo productivo. INSTITUTIONAL_PAGE; Page en borrador."
+    },
+    "asset:system/files/images/categorias/59ca6b73479b3fcde81f96439976896bad94b750": {
+      "action": "MIGRATE",
+      "reason": "Ensayo local: categoría8 imagen file11, firma JPEG y hash deben coincidir; copia con extensión, fuente intacta."
+    }
+  }
+}
