@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
  *    docs/seo/redirect-map.csv) for legacy `.php` files, matched by exact basename.
  *  - legacy friendly-URL id patterns confirmed from the legacy .htaccess itself --
  *    `/productos/marca/{id}/{slug}/`, `/productos/categoria/{id}/{slug}/` and
- *    `/{id}/categoria/{slug}/` -- matched by regex.
+ *    `/{id}/categoria/{slug}/`, `/{id}/producto/{slug}/` -- matched by regex.
  *
  * A psi_categoria/psi_marca destination is ALWAYS resolved through Identity::find() at
  * request time, from entity_key (e.g. 'category:39'), never from a stored numeric term_id --
@@ -21,7 +21,8 @@ defined( 'ABSPATH' ) || exit;
  * session's own test development came back as a different id than staging has; the flat map
  * had briefly captured that one local id, which destination() now never trusts. psi_producto
  * rules still carry a plain wp_id and share this same environment-specific-ID characteristic
- * in principle -- out of scope here, products are not part of this task.
+ * in principle. Existing wp_id rules remain unchanged; newly evidenced product rules and
+ * numeric legacy routes resolve source aliases through the existing Identity::find().
  *
  * A 'page' rule may instead carry page_path (e.g. 'soluciones') rather than wp_id, resolved
  * through get_page_by_path() at request time -- the same portable-identity principle applied
@@ -58,19 +59,22 @@ final class LegacyUrls {
 	 */
 	public static function resolve( string $path, bool $is404 ): ?string {
 		if ( ! $is404 ) { return null; }
+		$path = (string) wp_parse_url( $path, PHP_URL_PATH );
 		$rule = self::map()[ basename( $path ) ] ?? null;
-		if ( $rule ) { return self::destination( $rule ); }
-
-		$legacyId = self::brand_legacy_id_from_path( $path );
-		if ( null !== $legacyId ) {
-			return self::destination( array( 'wp_type' => 'psi_marca', 'entity_key' => 'brand:' . $legacyId ) );
+		if ( ! $rule && preg_match( '#/(\d+)/producto/[^/]*/?$#', $path, $match ) ) {
+			// Legacy .htaccess productId; the slug was decorative. Source aliases include merged IDs.
+			$rule = array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:' . (int) $match[1] );
 		}
-
-		$legacyId = self::category_legacy_id_from_path( $path );
-		if ( null !== $legacyId ) {
-			return self::destination( array( 'wp_type' => 'psi_categoria', 'entity_key' => 'category:' . $legacyId ) );
+		if ( ! $rule && null !== ( $id = self::brand_legacy_id_from_path( $path ) ) ) {
+			$rule = array( 'wp_type' => 'psi_marca', 'entity_key' => 'brand:' . $id );
 		}
-		return null;
+		if ( ! $rule && null !== ( $id = self::category_legacy_id_from_path( $path ) ) ) {
+			$rule = array( 'wp_type' => 'psi_categoria', 'entity_key' => 'category:' . $id );
+		}
+		if ( ! $rule ) { return null; }
+		$destination = self::destination( $rule );
+		if ( ! $destination || untrailingslashit( $path ) === untrailingslashit( (string) wp_parse_url( $destination, PHP_URL_PATH ) ) ) { return null; }
+		return $destination;
 	}
 
 	/**
@@ -141,7 +145,14 @@ final class LegacyUrls {
 			return $id && 'publish' === get_post_status( $id ) ? get_permalink( $id ) : null;
 		}
 		if ( 'psi_producto' === $rule['wp_type'] ) {
-			return 'publish' === get_post_status( $rule['wp_id'] ) ? get_permalink( $rule['wp_id'] ) : null;
+			try {
+				if ( ! isset( $rule['wp_id'] ) && empty( $rule['entity_key'] ) ) { return null; }
+				$id = isset( $rule['wp_id'] ) ? (int) $rule['wp_id'] : \PSIndustrial\Core\Migration\Identity::find( array( 'target_type' => 'psi_producto', 'entity_key' => $rule['entity_key'] ?? '' ) );
+			} catch ( \RuntimeException $error ) { return null; }
+			$post = $id > 0 ? get_post( $id ) : null;
+			if ( ! $post || 'psi_producto' !== $post->post_type || 'publish' !== $post->post_status ) { return null; }
+			$link = get_permalink( $post );
+			return is_string( $link ) && in_array( wp_parse_url( $link, PHP_URL_SCHEME ), array( 'http', 'https' ), true ) && wp_validate_redirect( $link, '' ) === $link ? $link : null;
 		}
 		if ( in_array( $rule['wp_type'], array( 'psi_categoria', 'psi_marca' ), true ) ) {
 			$termId = \PSIndustrial\Core\Migration\Identity::find( array( 'target_type' => $rule['wp_type'], 'entity_key' => $rule['entity_key'] ) );

@@ -1,0 +1,200 @@
+legacy_path,origin,classification_before,rule_after,evidence
+/1500-revolving-door.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1155}",Existing exact map; public status checked at runtime
+/accesorios.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1121}",Existing exact map; public status checked at runtime
+/accesspro-fs1000speed.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/automatismos-para-cancelas-cubic.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 133}",Existing exact map; public status checked at runtime
+/back-seccionales.php,DIRECT_FILE,INTENTIONAL_404,{},"Clasificación LEGACY_INTERNAL: infraestructura interna del CMS legacy, nunca fue contenido público"
+/barreras-estacionamiento-moovi50rm.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:44""}",product-master.csv IDs 44|123|125|135; all aliases converge in _psi_source_keys -> 1359 (draft)
+/bft-resp.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/bft.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_marca"", ""entity_key"": ""brand:12""}",Existing exact map; public status checked at runtime
+/bix-al-antena-externa-433-mhz.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1156}",Existing exact map; public status checked at runtime
+/blindadas.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:32""}",Existing exact map; public status checked at runtime
+/blue-giant.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_marca"", ""entity_key"": ""brand:4""}",Existing exact map; public status checked at runtime
+/categorias.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"Clasificación UTILITY (Q12, sin decisión editorial todavía): controlador/endpoint, no página de contenido fija"
+/centros-comerciales.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:19""}",Existing exact map; public status checked at runtime
+/clopay.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_marca"", ""entity_key"": ""brand:3""}",Existing exact map; public status checked at runtime
+/coleccion-classic.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1110}",Existing exact map; public status checked at runtime
+/coleccion-modern-steel.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:6""}",product-master.csv IDs 6|16|20|107; all aliases converge in _psi_source_keys -> 1361 (draft)
+/com-programadores-digitales-y-rotativos.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1157}",Existing exact map; public status checked at runtime
+/comercial.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:2""}",Existing exact map; public status checked at runtime
+/contacto.php,DIRECT_FILE,COVERED,"{""wp_type"": ""page"", ""wp_id"": 1481}",Existing exact map; public status checked at runtime
+/contra-exposion.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:31""}",Existing exact map; public status checked at runtime
+/contra-incendio.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/cortina-de-seguridad-670.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1149}",Existing exact map; public status checked at runtime
+/cortina-de-seguridad-671.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1150}",Existing exact map; public status checked at runtime
+/cortina-en-aluminio-serie-511-521.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:5""}",product-master.csv IDs 5|88; all aliases converge in _psi_source_keys -> 1360 (draft)
+/cortina-europea.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:55""}",product-master.csv IDs 55|90|137; all aliases converge in _psi_source_keys -> 1139 (draft)
+/cortina-plana.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:54""}",product-master.csv IDs 54|89|136; all aliases converge in _psi_source_keys -> 1138 (draft)
+/cortina-serie-600.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:10""}",product-master.csv IDs 10|93|127; all aliases converge in _psi_source_keys -> 1111 (draft)
+/cortina-serie-610.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1373}",Existing exact map; public status checked at runtime
+/cortina-serie-620.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1367}",Existing exact map; public status checked at runtime
+/cortina-serie-625.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1109}",Existing exact map; public status checked at runtime
+/cortina-serie-630.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1112}",Existing exact map; public status checked at runtime
+/cortina-serie-790-cw.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1147}",Existing exact map; public status checked at runtime
+/cortinas-enrollables-de-aluminio.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"LEGITIMATE_SLUG_CONFLICT: entidad en conflicto de slug preexistente (uno de los conflictos editoriales protegidos); requiere decisión humana antes de poder crear cualquier objeto, nunca se resuelve automáticamente"
+/cortinas-enrollables-industriales.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:14""}",Existing exact map; public status checked at runtime
+/cortinas-ventiladas-685.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:96""}",product-master.csv IDs 96|128; all aliases converge in _psi_source_keys -> 1148 (draft)
+/cross-3e.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1158}",Existing exact map; public status checked at runtime
+/detector-de-masas-max-eagle.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1159}",Existing exact map; public status checked at runtime
+/ditec-neos-y-neos.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1160}",Existing exact map; public status checked at runtime
+/dockman.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_marca"", ""entity_key"": ""brand:10""}",Existing exact map; public status checked at runtime
+/dod-automatizacion-compacto-y-potente-para-portones-seccionales-correderos-y-enrollables.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1161}",Existing exact map; public status checked at runtime
+/doorlock.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_marca"", ""entity_key"": ""brand:6""}",Existing exact map; public status checked at runtime
+/dura-glide-20003000-puerta.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/energy-series-with-intellicore-37171-3-4.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:17""}",product-master.csv IDs 2|17; all aliases converge in _psi_source_keys -> 1354 (draft)
+/energy-series-with-intellicore-3720-3724-3722.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1356}",Existing exact map; public status checked at runtime
+/enviaContacto.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"Clasificación UTILITY (Q12, sin decisión editorial todavía): controlador/endpoint, no página de contenido fija"
+/equipos-y-accesorios-para-anden-de-carga.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:3""}",Existing exact map; public status checked at runtime
+/estacionamientos.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:18""}",Existing exact map; public status checked at runtime
+/fast-seal-high-performance-door.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:101""}",product-master.csv IDs 36|101; all aliases converge in _psi_source_keys -> 1151 (draft)
+/fire-rated-doors-firestar-models-700-700c.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1114}",Existing exact map; public status checked at runtime
+/footer.php,DIRECT_FILE,INTENTIONAL_404,{},"Clasificación LEGACY_INTERNAL: infraestructura interna del CMS legacy, nunca fue contenido público"
+/footerv1.php,DIRECT_FILE,INTENTIONAL_404,{},"Clasificación LEGACY_INTERNAL: infraestructura interna del CMS legacy, nunca fue contenido público"
+/fotoceldas.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1163}",Existing exact map; public status checked at runtime
+/fraccionamientos-y-condominios.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:9""}",Existing exact map; public status checked at runtime
+/glg-porte-industriali.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_marca"", ""entity_key"": ""brand:9""}",Existing exact map; public status checked at runtime
+/gol-transmisores-de-cuatro-canales.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1164}",Existing exact map; public status checked at runtime
+/header.php,DIRECT_FILE,INTENTIONAL_404,{},"Clasificación LEGACY_INTERNAL: infraestructura interna del CMS legacy, nunca fue contenido público"
+/headerv1.php,DIRECT_FILE,INTENTIONAL_404,{},"Clasificación LEGACY_INTERNAL: infraestructura interna del CMS legacy, nunca fue contenido público"
+/icaro-smart.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:49""}",product-master.csv IDs 49|76|124|126; all aliases converge in _psi_source_keys -> 1134 (draft)
+/iconos-marcas.php,DIRECT_FILE,INTENTIONAL_404,{},"Clasificación LEGACY_INTERNAL: infraestructura interna del CMS legacy, nunca fue contenido público"
+/iconos-marcasv1.php,DIRECT_FILE,INTENTIONAL_404,{},"Clasificación LEGACY_INTERNAL: infraestructura interna del CMS legacy, nunca fue contenido público"
+/index-estatico.php,DIRECT_FILE,COVERED,"{""wp_type"": ""site_root"", ""wp_id"": 0}",Existing exact map; public status checked at runtime
+/index-resp.php,DIRECT_FILE,COVERED,"{""wp_type"": ""site_root"", ""wp_id"": 0}",Existing exact map; public status checked at runtime
+/index.php,DIRECT_FILE,COVERED,"{""wp_type"": ""site_root"", ""wp_id"": 0}",Existing exact map; public status checked at runtime
+/industial.php,INTERNAL_LINK,AMBIGUOUS_OR_NO_EQUIVALENT,{},No approved exact owner; not guessed from filename
+/industrial.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:1""}",Existing exact map; public status checked at runtime
+/infraca-quality-doors.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_marca"", ""entity_key"": ""brand:8""}",Existing exact map; public status checked at runtime
+/kelley.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_marca"", ""entity_key"": ""brand:5""}",Existing exact map; public status checked at runtime
+/kronos-puertas-rapidas-de-sectores-modulares-autorreparable.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1130}",Existing exact map; public status checked at runtime
+/lab-4-fotocelulas-de-rayos-infrarrojos.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1165}",Existing exact map; public status checked at runtime
+/lab-9-detectores-de-volumen-de-metal-loop.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1166}",Existing exact map; public status checked at runtime
+/labio-de-elevacion-mecanico-dockman.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:51""}",product-master.csv IDs 51|143; all aliases converge in _psi_source_keys -> 1135 (draft)
+/labio-elevacion-anden-carga.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:21""}",Existing exact map; public status checked at runtime
+/lan-4-sistema-de-teclado-con-combinacion-digital.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1167}",Existing exact map; public status checked at runtime
+/lan-7-sistema-de-mando-de-proximidad-de-tarjetas-con-tecnologia-transponder.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1168}",Existing exact map; public status checked at runtime
+/lift-master-mod-h.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:43""}",product-master.csv IDs 43|81; all aliases converge in _psi_source_keys -> 1132 (draft)
+/lift-master.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_marca"", ""entity_key"": ""brand:11""}",Existing exact map; public status checked at runtime
+/liftmaster-modh.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/light-communication-system-lcs.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1169}",Existing exact map; public status checked at runtime
+/links-menu-marcas.php,DIRECT_FILE,INTENTIONAL_404,{},"Clasificación LEGACY_INTERNAL: infraestructura interna del CMS legacy, nunca fue contenido público"
+/links-menu-marcasv1.php,DIRECT_FILE,INTENTIONAL_404,{},"Clasificación LEGACY_INTERNAL: infraestructura interna del CMS legacy, nunca fue contenido público"
+/links-menu.php,DIRECT_FILE,INTENTIONAL_404,{},"Clasificación LEGACY_INTERNAL: infraestructura interna del CMS legacy, nunca fue contenido público"
+/links-menuv1.php,DIRECT_FILE,INTENTIONAL_404,{},"Clasificación LEGACY_INTERNAL: infraestructura interna del CMS legacy, nunca fue contenido público"
+/lux-2b-y-lux-gv-piston-hidraulico-para-puerta-abatible.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/luxo-robusto-e-incansable-para-servicios-intensivos-para-hojas-de-hasta-5-m.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1170}",Existing exact map; public status checked at runtime
+/magic-fuerza-del-operador.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/marcas.php,DIRECT_FILE,COVERED,"{""wp_type"": ""page"", ""page_path"": ""marcas""}",Existing exact map; public status checked at runtime
+/marcasv1.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/menu-marcas.php,DIRECT_FILE,INTENTIONAL_404,{},"Clasificación LEGACY_INTERNAL: infraestructura interna del CMS legacy, nunca fue contenido público"
+/menu-marcasv1.php,DIRECT_FILE,INTENTIONAL_404,{},"Clasificación LEGACY_INTERNAL: infraestructura interna del CMS legacy, nunca fue contenido público"
+/menu-seccionales.php,DIRECT_FILE,INTENTIONAL_404,{},"Clasificación LEGACY_INTERNAL: infraestructura interna del CMS legacy, nunca fue contenido público"
+/menu-soluciones.php,DIRECT_FILE,INTENTIONAL_404,{},"Clasificación LEGACY_INTERNAL: infraestructura interna del CMS legacy, nunca fue contenido público"
+/menu-solucionesv1.php,DIRECT_FILE,INTENTIONAL_404,{},"Clasificación LEGACY_INTERNAL: infraestructura interna del CMS legacy, nunca fue contenido público"
+/nosotros.php,DIRECT_FILE,COVERED,"{""wp_type"": ""page"", ""wp_id"": 134}",Existing exact map; public status checked at runtime
+/operador-comercial-rhx.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1113}",Existing exact map; public status checked at runtime
+/operador-para-cortina-enrrollable-rsx.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1146}",Existing exact map; public status checked at runtime
+/operador-para-perfilados-comerciales-jst.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1372}",Existing exact map; public status checked at runtime
+/operador-para-perfilados-comerciales-sel.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:78""}",product-master.csv IDs 78|84; all aliases converge in _psi_source_keys -> 1144 (draft)
+/operadores-para-puerta-abatible.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},EDITORIAL_MAPPING target (category:38) has no real WordPress object yet
+/operadores-para-puerta-corrediza-industrial.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:11""}",Existing exact map; public status checked at runtime
+/operadores-para-puertas-ascendentes.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:39""}",Existing exact map; public status checked at runtime
+/operadores-para-puertas-corredizas-residenciales.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},EDITORIAL_MAPPING target (category:37) has no real WordPress object yet
+/operadores-para-puertas-de-mostrador-cdo.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1145}",Existing exact map; public status checked at runtime
+/operadores-puerta-abatible-industrial.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:12""}",Existing exact map; public status checked at runtime
+/operadores-puerta-abatible.php,DIRECT_FILE,COVERED,"{""wp_type"": ""page"", ""wp_id"": 1186}",Existing exact map; public status checked at runtime
+/operadores-puerta-corrediza-residencial.php,DIRECT_FILE,COVERED,"{""wp_type"": ""page"", ""wp_id"": 1187}",Existing exact map; public status checked at runtime
+/operadores-puertas-ascendentes.php,DIRECT_FILE,COVERED,"{""wp_type"": ""page"", ""wp_id"": 1188}",Existing exact map; public status checked at runtime
+/operadores-puertas-seccionales-cortinas.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:13""}",Existing exact map; public status checked at runtime
+/overhead-door.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_marca"", ""entity_key"": ""brand:1""}",Existing exact map; public status checked at runtime
+/p45-7-piston-hidraulico-para-puerta-abatible.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/pas-sensores-volumetricos.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1172}",Existing exact map; public status checked at runtime
+/phobos-n-piston-electromecanico.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},EDITORIAL_MAPPING target (sql:productos:46) has no real WordPress object yet
+/politica-privacidad.php,DIRECT_FILE,COVERED,"{""wp_type"": ""page"", ""wp_id"": 1482}",Existing exact map; public status checked at runtime
+/predadoor-nxt-door.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1127}",Existing exact map; public status checked at runtime
+/productos.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"Clasificación UTILITY (Q12, sin decisión editorial todavía): controlador/endpoint, no página de contenido fija"
+/puert-seccional-de-acero-sin-aislamiento-430-uso-medio.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1363}",Existing exact map; public status checked at runtime
+/puerta-contra-explosion.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1120}",Existing exact map; public status checked at runtime
+/puerta-contra-incendio.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:5""}",Existing exact map; public status checked at runtime
+/puerta-de-acero-acanalado-modelos-524.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1355}",Existing exact map; public status checked at runtime
+/puerta-de-acero-acanalado.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1355}",Existing exact map; public status checked at runtime
+/puerta-estandar-reforzada.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/puerta-estandar.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/puerta-holandesa.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:33""}",product-master.csv IDs 33|122|133; all aliases converge in _psi_source_keys -> 1124 (draft)
+/puerta-para-hospital.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1125}",Existing exact map; public status checked at runtime
+/puerta-seccionabl-acero-perfiles-422-uso-pesado.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1366}",Existing exact map; public status checked at runtime
+/puerta-seccional-de-acero-perfiles-418.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1365}",Existing exact map; public status checked at runtime
+/puerta-seccional-de-acero-perfiles-432-uso-medio.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1369}",Existing exact map; public status checked at runtime
+/puerta-seccional-de-acero-sin-aislamiento-416-uso-muy-pesado.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 131}",Existing exact map; public status checked at runtime
+/puerta-seccional-de-acero-sin-aislamiento-424-uso-pesado.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1362}",Existing exact map; public status checked at runtime
+/puerta-seccional-de-acero-thermacore-593-uso-medio.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1370}",Existing exact map; public status checked at runtime
+/puerta-seccional-de-acero-thermacore-594-uso-medio.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1371}",Existing exact map; public status checked at runtime
+/puerta-seccional-de-acero-thermacore-595-uso-pesado.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1374}",Existing exact map; public status checked at runtime
+/puerta-seccional-de-acero-thermacore-599-uso-muy-pesado.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1143}",Existing exact map; public status checked at runtime
+/puerta-seccional-de-acero-thermacore-serie-592.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:62""}",product-master.csv IDs 8|62; all aliases converge in _psi_source_keys -> 1141 (draft)
+/puerta-y-fijos-louver.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:35""}",product-master.csv IDs 35|121|134; all aliases converge in _psi_source_keys -> 1126 (draft)
+/puertas-blindadas.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:28""}",product-master.csv IDs 28|118|129; all aliases converge in _psi_source_keys -> 1122 (draft)
+/puertas-contra-incendio.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/puertas-contra-rayos-x.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1123}",Existing exact map; public status checked at runtime
+/puertas-de-garaje-aisladas.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"LEGITIMATE_SLUG_CONFLICT: entidad en conflicto de slug preexistente (uno de los conflictos editoriales protegidos); requiere decisión humana antes de poder crear cualquier objeto, nunca se resuelve automáticamente"
+/puertas-enrollables-de-garage.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"LEGITIMATE_SLUG_CONFLICT: entidad en conflicto de slug preexistente (uno de los conflictos editoriales protegidos); requiere decisión humana antes de poder crear cualquier objeto, nunca se resuelve automáticamente"
+/puertas-industriales-dockman.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/puertas-peatonales-estandar-y-reforzada.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/puertas-peatonales-hospitales.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:6""}",Existing exact map; public status checked at runtime
+/puertas-peatonales-rayos-x.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:34""}",Existing exact map; public status checked at runtime
+/puertas-peatonales-tipo-holandesa.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:29""}",Existing exact map; public status checked at runtime
+/puertas-rapidas-enrollables.php,DIRECT_FILE,COVERED,"{""wp_type"": ""page"", ""wp_id"": 1189}",Existing exact map; public status checked at runtime
+/puertas-rapidas.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:17""}",Existing exact map; public status checked at runtime
+/puertas-residenciales.php,DIRECT_FILE,COVERED,"{""wp_type"": ""page"", ""wp_id"": 1190}",Existing exact map; public status checked at runtime
+/puertas-salida-emergencia.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:4""}",Existing exact map; public status checked at runtime
+/puertas-seccionales-de-acero-aisladas-thermospan-modelo-150.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:14""}",product-master.csv IDs 14|57; all aliases converge in _psi_source_keys -> 1115 (draft)
+/puertas-seccionales-de-acero-aisladas-thermospan.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/puertas-seccionales-de-acero-modelo-2415.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1116}",Existing exact map; public status checked at runtime
+/puertas-seccionales-de-acero-perfiles-426.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1368}",Existing exact map; public status checked at runtime
+/puertas-seccionales-de-acero-sin-aislamiento-420-uso-pesado.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 132}",Existing exact map; public status checked at runtime
+/puertas-seccionales-de-acero-thermacore-598-uso-liviano.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1142}",Existing exact map; public status checked at runtime
+/puertas-seccionales-de-aluminio-521.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:67""}",product-master.csv IDs 67; all aliases converge in _psi_source_keys -> 1364 (draft)
+/puertas-seccionales-industriales.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:8""}",Existing exact map; public status checked at runtime
+/puertas-y-fijos-louver.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:30""}",Existing exact map; public status checked at runtime
+/puertasresidenciales.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:36""}",Existing exact map; public status checked at runtime
+/q-silent-max-eagle-3-4-hp.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/qik-barreras-automaticas-de-hasta-58-m.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1173}",Existing exact map; public status checked at runtime
+/rampa-niveladora-mecanica-blue-giant.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1118}",Existing exact map; public status checked at runtime
+/rampa-niveladora.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:10""}",Existing exact map; public status checked at runtime
+/rampas-de-anden-hidraulicas-kelley.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/rampas-de-anden-hidraulicas.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1137}",Existing exact map; public status checked at runtime
+/rampas-de-anden-mecanicas.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1140}",Existing exact map; public status checked at runtime
+/rapida-apilable.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:39""}",product-master.csv IDs 39|104; all aliases converge in _psi_source_keys -> 1129 (draft)
+/rapida-enrollable-industrial.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1128}",Existing exact map; public status checked at runtime
+/receptor-para-control-vehiculos.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:20""}",Existing exact map; public status checked at runtime
+/residencial.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:7""}",Existing exact map; public status checked at runtime
+/retenedor-de-vehiculos.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1357}",Existing exact map; public status checked at runtime
+/retenedor-vehiculos-hvr303.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1153}",Existing exact map; public status checked at runtime
+/retenedores-de-vehiculos-automatico.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1174}",Existing exact map; public status checked at runtime
+/retenedores-de-vehiculos.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:22""}",Existing exact map; public status checked at runtime
+/rolli-zip.php,DIRECT_FILE,MISSING_WITH_DEMONSTRATED_TARGET,"{""wp_type"": ""psi_producto"", ""entity_key"": ""sql:productos:105""}",product-master.csv IDs 40|105; all aliases converge in _psi_source_keys -> 1152 (draft)
+/rytec.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_marca"", ""entity_key"": ""brand:7""}",Existing exact map; public status checked at runtime
+/sector-puertas-rapidas-enrollables-de-sectores-intercambiables-y-contrapesos.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1175}",Existing exact map; public status checked at runtime
+/sector-reset.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1176}",Existing exact map; public status checked at runtime
+/sellos-de-anden.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1136}",Existing exact map; public status checked at runtime
+/sellos-nacionales.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"q01-q04-url-mapping.csv: KEEP_REVIEW, sin propietario aprobado todavía"
+/sellos-para-anden-shelter-de-soporte-flexible.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1154}",Existing exact map; public status checked at runtime
+/sellos-para-anden.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:23""}",Existing exact map; public status checked at runtime
+/semaforos-senalizaciones-para-anden.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:24""}",Existing exact map; public status checked at runtime
+/serie-620.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1367}",Existing exact map; public status checked at runtime
+/serie-x130-motor-para-cortina-oculto.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1133}",Existing exact map; public status checked at runtime
+/sg-onixx-600.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1177}",Existing exact map; public status checked at runtime
+/shelter-abrigo-estacionario-blue-giant.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1117}",Existing exact map; public status checked at runtime
+/smart-puertas-rapidas-enrollables-de-sectores-intercambiables-con-motor-externo.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1178}",Existing exact map; public status checked at runtime
+/soluciones.php,DIRECT_FILE,COVERED,"{""wp_type"": ""page"", ""page_path"": ""soluciones""}",Existing exact map; public status checked at runtime
+/sprint-automatizaciones-para-puertas-peatonales-pequenas-dimensiones.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1179}",Existing exact map; public status checked at runtime
+/star1000-receptor-comercial.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1180}",Existing exact map; public status checked at runtime
+/star4-vehicle-restraint.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1119}",Existing exact map; public status checked at runtime
+/tiras-plasticas-hawaianas.php,DIRECT_FILE,AMBIGUOUS_OR_NO_EQUIVALENT,{},"LEGITIMATE_SLUG_CONFLICT: entidad en conflicto de slug preexistente (uno de los conflictos editoriales protegidos); requiere decisión humana antes de poder crear cualquier objeto, nunca se resuelve automáticamente"
+/tiras-plasticas.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_categoria"", ""entity_key"": ""category:16""}",Existing exact map; public status checked at runtime
+/traffic.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1181}",Existing exact map; public status checked at runtime
+/upper-up8e-barreras-automaticas-de-hasta-8-m.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1182}",Existing exact map; public status checked at runtime
+/vertigo.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1131}",Existing exact map; public status checked at runtime
+/wayne-dalton.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_marca"", ""entity_key"": ""brand:2""}",Existing exact map; public status checked at runtime
+/wel-aotmatizacion-de-puertas-peatonales-pequena-y-robusta.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1183}",Existing exact map; public status checked at runtime
+/xel-5-selector-de-llave.php,DIRECT_FILE,COVERED,"{""wp_type"": ""psi_producto"", ""wp_id"": 1184}",Existing exact map; public status checked at runtime
