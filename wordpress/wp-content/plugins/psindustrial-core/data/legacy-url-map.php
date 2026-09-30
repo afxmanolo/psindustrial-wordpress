@@ -2,6 +2,8 @@
 /** Reconciled from docs/seo/redirect-map.csv -- see docs/seo/url-compatibility.md.
  * legacy .php filename (no leading slash) => a destination rule. Three shapes:
  *  - {wp_type: 'page'|'psi_producto', wp_id: int} -- a real, environment-specific post ID.
+ *  - {wp_type: 'psi_producto', entity_key: string} -- additional proven roots; resolves
+ *    the existing source identity/aliases without relying on an environment's post ID.
  *  - {wp_type: 'page', page_path: string} -- e.g. 'soluciones'. The portable alternative to
  *    wp_id for a Page created by a versioned migration (InstitutionalContentMigration) rather
  *    than reconciled by hand for one specific environment: LegacyUrls::destination() resolves
@@ -156,4 +158,26 @@ return array(
 	'wayne-dalton.php' => array( 'wp_type' => 'psi_marca', 'entity_key' => 'brand:2' ),
 	'wel-aotmatizacion-de-puertas-peatonales-pequena-y-robusta.php' => array( 'wp_type' => 'psi_producto', 'wp_id' => 1183 ),
 	'xel-5-selector-de-llave.php' => array( 'wp_type' => 'psi_producto', 'wp_id' => 1184 ),
+	// Additional root URLs: docs/seo/legacy-root-coverage.csv; no publication implied.
+	'barreras-estacionamiento-moovi50rm.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:44' ),
+	'coleccion-modern-steel.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:6' ),
+	'cortina-en-aluminio-serie-511-521.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:5' ),
+	'cortina-europea.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:55' ),
+	'cortina-plana.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:54' ),
+	'cortina-serie-600.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:10' ),
+	'cortinas-ventiladas-685.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:96' ),
+	'energy-series-with-intellicore-37171-3-4.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:17' ),
+	'fast-seal-high-performance-door.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:101' ),
+	'icaro-smart.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:49' ),
+	'labio-de-elevacion-mecanico-dockman.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:51' ),
+	'lift-master-mod-h.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:43' ),
+	'operador-para-perfilados-comerciales-sel.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:78' ),
+	'puerta-holandesa.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:33' ),
+	'puerta-seccional-de-acero-thermacore-serie-592.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:62' ),
+	'puerta-y-fijos-louver.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:35' ),
+	'puertas-blindadas.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:28' ),
+	'puertas-seccionales-de-acero-aisladas-thermospan-modelo-150.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:14' ),
+	'puertas-seccionales-de-aluminio-521.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:67' ),
+	'rapida-apilable.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:39' ),
+	'rolli-zip.php' => array( 'wp_type' => 'psi_producto', 'entity_key' => 'sql:productos:105' ),
 );
