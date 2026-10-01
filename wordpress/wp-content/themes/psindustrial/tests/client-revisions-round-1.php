@@ -77,7 +77,7 @@ add_filter( 'get_the_terms', $no_brand, 99, 3 ); $check( ! str_contains( $render
 $response = wp_remote_get( home_url( '/' ) ); $html = wp_remote_retrieve_body( $response );
 $dom = new DOMDocument(); @$dom->loadHTML( $html ); $x = new DOMXPath( $dom );
 $check( 1 === $x->query( '//header//a[contains(@class,"catalog-logo")]/img[contains(@src,"logo-black-big")]' )->length && 0 === $x->query( '//header//img[contains(@src,"logo-white")]' )->length, 'One color header logo, no white header asset' );
-$check( 1 === $x->query( '//footer//img[contains(@src,"logo-white")]' )->length, 'Footer white logo preserved' );
+$check( 1 === $x->query( '//footer//img[contains(@src,"logo-black-big")]' )->length, 'Footer institutional logo (round 2)' );
 $check( 2 === $x->query( '//div[@class="catalog-footer-cta"]//a[starts-with(@href,"mailto:")]' )->length && 1 === $x->query( '//div[@class="catalog-footer-cta"]//i[contains(@class,"icon-mail")]' )->length, 'CTA two email links and local mail icon' );
 $check( 4 === $x->query( '//footer//a[starts-with(@href,"mailto:")]' )->length, 'Both emails in CTA and footer contacts' );
 $contact = file_get_contents( get_theme_file_path( 'page-contacto.php' ) );

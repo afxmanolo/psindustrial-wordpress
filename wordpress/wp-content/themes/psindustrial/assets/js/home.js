@@ -3,6 +3,7 @@
  const slider = document.querySelector('.home-slider');
  if (!slider) return;
  const slides = [...slider.querySelectorAll('.home-slide')];
+ if (slides.length < 2) return;
  const dots = [...slider.querySelectorAll('.home-slide-dot')];
  const controls = slider.querySelector('.home-slider-controls');
  const pause = slider.querySelector('.home-slider-pause');

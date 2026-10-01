@@ -4,10 +4,10 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
 const code = fs.readFileSync(require('node:path').join(__dirname, '../assets/js/home.js'), 'utf8');
-function environment(reduced = false) {
+function environment(reduced = false, count = 4) {
  const element = () => ({hidden:false, attributes:{}, events:{}, dataset:{pause:'Pause',play:'Play'}, classList:{add(){}},
   setAttribute(k,v){this.attributes[k]=v;}, addEventListener(k,f){this.events[k]=f;}, focus(){this.focused=true;}});
- const slides = Array.from({length:4},element), dots = Array.from({length:4},element), pause = element(), controls = element(), root = element();
+ const slides = Array.from({length:count},element), dots = Array.from({length:count},element), pause = element(), controls = element(), root = element();
  root.querySelectorAll = s => s === '.home-slide' ? slides : dots;
  root.querySelector = s => s === '.home-slider-controls' ? controls : pause;
  root.contains = e => dots.includes(e) || e === pause;
@@ -19,6 +19,7 @@ function environment(reduced = false) {
 }
 const checks=[];
 const test=(name,f)=>{try{f();checks.push({test:name,passed:true});}catch(e){checks.push({test:name,passed:false,error:e.message});}};
+test('Zero and one slide never schedule autoplay',()=>{for(const count of [0,1]){const e=environment(false,count);assert.equal(e.scheduled(),false);}});
 test('First slide visible, others hidden, autoplay scheduled',()=>{const e=environment();assert.equal(e.active(),0);assert.equal(e.slides.filter(s=>!s.hidden).length,1);assert(e.scheduled());});
 test('Autoplay advances once and reschedules',()=>{const e=environment();e.tick();assert.equal(e.active(),1);assert(e.scheduled());});
 test('Manual indicators select the requested slide',()=>{const e=environment();e.dots[2].events.click();assert.equal(e.active(),2);assert.equal(e.dots[2].attributes['aria-pressed'],'true');});
