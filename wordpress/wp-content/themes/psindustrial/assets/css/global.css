@@ -40,7 +40,8 @@
 .catalog-site-footer { padding-block:70px; background:var(--psi-primary) url('../images/demo-marketing-footer-dot.svg') center top; color:#9ca1b1; font-size:15px; }
 .catalog-footer-columns { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:30px; }
 .catalog-footer-columns > * { min-width:0; overflow-wrap:anywhere; }
-.catalog-footer-logo img { height:100px; width:auto; }
+.catalog-footer-logo { display:inline-block; padding:8px 12px; border-radius:3px; background:#fff; max-width:100%; }
+.catalog-footer-logo img { display:block; height:100px; width:auto; max-width:100%; object-fit:contain; }
 .catalog-site-footer h2 { color:white; font-size:20px; font-weight:500; margin:0 0 15px; }
 .catalog-site-footer a { color:white; }
 .catalog-footer-cta { display:grid; grid-template-columns:1fr 1.4fr; align-items:center; gap:25px; padding:45px 7%; background:var(--psi-accent); border-radius:6px; color:white; margin-top:-120px; margin-bottom:70px; }
