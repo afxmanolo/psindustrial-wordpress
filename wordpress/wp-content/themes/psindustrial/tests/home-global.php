@@ -57,10 +57,12 @@ $check( 0 === $x->query( '//img[not(@width) or not(@height) or not(@alt)]' )->le
 $check( 24 === $x->query( '//main//img[@srcset and @sizes]' )->length, 'Home artwork has responsive source metadata' );
 $assets_ok = true;
 foreach ( $x->query( '//img' ) as $image ) {
- $relative = str_replace( get_theme_file_uri() . '/', '', $image->getAttribute( 'src' ) );
- if ( ! is_file( get_theme_file_path( $relative ) ) ) { $assets_ok = false; }
+ $src = $image->getAttribute( 'src' );
+ if ( str_starts_with( $src, get_theme_file_uri() . '/' ) ) { $path = get_theme_file_path( substr( $src, strlen( get_theme_file_uri() . '/' ) ) ); }
+ else { $uploads = wp_upload_dir(); $path = str_starts_with( $src, $uploads['baseurl'] . '/' ) ? $uploads['basedir'] . substr( $src, strlen( $uploads['baseurl'] ) ) : ''; }
+ if ( ! $path || ! is_file( $path ) ) { $assets_ok = false; }
 }
-$check( $assets_ok, 'All rendered theme images exist' );
+$check( $assets_ok, 'All rendered theme and Media Library images exist' );
 foreach ( $x->query( '//a[@class="home-hero-cta"]' ) as $link ) { $check( $link->getAttribute( 'href' ) === get_post_type_archive_link( 'psi_producto' ), 'Hero CTA uses real WP archive' ); }
 $check( str_contains( $html, 'catalog-site-header' ) && str_contains( $html, 'catalog-site-footer' ), 'Approved shell reused globally' );
 $check( str_contains( $html, '¡Platícanos de tu proyecto!' ), 'Red footer CTA retained' );

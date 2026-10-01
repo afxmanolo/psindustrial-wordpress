@@ -5,6 +5,8 @@ defined( 'ABSPATH' ) || exit;
 final class Plugin {
 	public static function boot(): void {
 		Roles::boot();
+		Slides::boot();
+		SlidesMigration::boot();
 		Media::boot();
 		Editorial::boot();
 		AdminList::boot();
