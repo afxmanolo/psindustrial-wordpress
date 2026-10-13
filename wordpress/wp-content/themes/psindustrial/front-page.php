@@ -21,7 +21,9 @@ $catalog = get_post_type_archive_link( 'psi_producto' );
      <ul><?php foreach ( $family['children'] as $child ) : ?><li><a href="<?php echo esc_url( $child['link'] ); ?>"><span aria-hidden="true">+</span> <?php echo esc_html( $child['label'] ); ?></a></li><?php endforeach; ?></ul>
      <a class="home-outline-button" href="<?php echo esc_url( $family['link'] ); ?>"><?php esc_html_e( 'Ver todos', 'psindustrial' ); ?> <span aria-hidden="true">→</span></a>
     </div>
-    <div class="home-family-image<?php echo $family['narrow'] ? ' is-narrow' : ''; ?>"><?php echo \PSIndustrial\Theme\home_image( $family['image'], $family['title'], '(min-width: 992px) 480px, 90vw' ); ?></div>
+    <?php if ( $family['image_id'] && wp_attachment_is_image( $family['image_id'] ) ) : ?>
+    <div class="home-family-image<?php echo $family['narrow'] ? ' is-narrow' : ''; ?>"><?php echo wp_get_attachment_image( $family['image_id'], 'full', false, array( 'alt'=>$family['title'], 'sizes'=>'(min-width: 992px) 480px, 90vw', 'loading'=>'lazy' ) ); ?></div>
+    <?php endif; ?>
    </div>
   </section>
   <?php endforeach; ?>
