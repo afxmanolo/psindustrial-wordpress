@@ -15,7 +15,7 @@ function home_image( string $name, string $alt, string $sizes = '100vw', bool $p
 /**
  * Home "Conoce nuestros Productos" family sections, sourced from real psi_categoria parent/
  * child terms -- never a hardcoded labels/slug list. home_data()['sections'] keeps only what
- * cannot be derived from the taxonomy (which theme image, and the narrow
+ * cannot be derived from the taxonomy (the narrow
  * layout flag -- pure presentation, not category data). Roots are sorted by editorial _psi_category_home_order; reverse/pattern follow final visual position. For each configured root:
  *  - resolved via Identity::find() by legacy_id, exactly like CategoriesMigration itself,
  *    portable across environments and never a hardcoded term_id;
@@ -30,7 +30,7 @@ function home_image( string $name, string $alt, string $sizes = '100vw', bool $p
  * partial section, no fallback to the global catalog) -- matches home_brands()' own
  * never-invent-a-destination posture.
  *
- * @return array<int, array{title: string, link: string, children: array<int, array{label: string, link: string}>, image: string, reverse: bool, narrow: bool, pattern: bool}>
+ * @return array<int, array{title: string, link: string, children: array<int, array{label: string, link: string}>, image_id: int, reverse: bool, narrow: bool, pattern: bool}>
  */
 function home_category_sections(): array {
 	$sections = array();
@@ -60,7 +60,7 @@ function home_category_sections(): array {
 			'title' => $parent->name,
 			'link' => $link,
 			'children' => $children,
-			'image' => $config['image'],
+			'image_id' => (int) get_term_meta( $parentId, '_psi_category_home_image_id', true ),
 			'reverse' => false,
             'home_order' => metadata_exists( 'term', $parentId, '_psi_category_home_order' ) ? (int) get_term_meta( $parentId, '_psi_category_home_order', true ) : PHP_INT_MAX,
             'legacy_id' => $config['legacy_id'],

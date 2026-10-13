@@ -22,6 +22,8 @@ final class Plugin {
 		BrandsMigration::boot();
 		CategoriesMigration::boot();
 		HomeOrderMigration::boot();
+		HomeCategoryImage::boot();
+		HomeImagesMigration::boot();
 		IdentityHashRebaseline::boot();
 		MojibakeContentMigration::boot();
 		InstitutionalContentMigration::boot();

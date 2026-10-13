@@ -48,7 +48,7 @@ final class Media {
 			foreach ( (array) get_post_meta( $post->ID, '_psi_datasheets', true ) as $pdf ) { if ( is_array( $pdf ) && (int) ( $pdf['attachment_id'] ?? 0 ) === $id ) { return true; } }
 			if ( ( $url && str_contains( $post->post_content, $url ) ) || preg_match( '/(?:wp-image-|\"id\"\s*:\s*)' . $id . '\b/', $post->post_content ) ) { return true; }
 		}
-		foreach ( array( 'psi_categoria' => '_psi_image_id', 'psi_marca' => '_psi_logo_id' ) as $tax => $key ) {
+		foreach ( array( array( 'psi_categoria', '_psi_image_id' ), array( 'psi_marca', '_psi_logo_id' ), array( 'psi_categoria', '_psi_category_home_image_id' ) ) as [ $tax, $key ] ) {
 			$terms = get_terms( array( 'taxonomy' => $tax, 'hide_empty' => false, 'psi_include_review' => true, 'meta_key' => $key, 'meta_value' => $id, 'fields' => 'ids' ) );
 			if ( ! is_wp_error( $terms ) && $terms ) { return true; }
 		}
