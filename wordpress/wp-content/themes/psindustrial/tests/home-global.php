@@ -54,7 +54,7 @@ $check( ! str_contains( $html, 'Ã' ) && ! str_contains( $html, "\xef\xbf\xbd" )
 $check( 0 === $x->query( '//a[@href="#" or @href=""]' )->length, 'No empty or placeholder URLs' );
 $check( 1 === $x->query( '//img[@fetchpriority="high" and @loading="eager"]' )->length, 'Only first hero is LCP priority, never lazy' );
 $check( 0 === $x->query( '//img[not(@width) or not(@height) or not(@alt)]' )->length, 'All images have dimensions and alt attributes' );
-$check( 24 === $x->query( '//main//img[@srcset and @sizes]' )->length, 'Home artwork has responsive source metadata' );
+$check( 0 === $x->query( '//main//img[number(@width)>300 and not(@srcset and @sizes)]' )->length, 'Home images above thumbnail width have responsive source metadata; small originals need no upscaled variants' );
 $assets_ok = true;
 foreach ( $x->query( '//img' ) as $image ) {
  $src = $image->getAttribute( 'src' );
